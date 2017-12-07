@@ -1,0 +1,8 @@
+
+#
+# requires dtc, swig, libpython-dev?
+#
+make distclean
+make evb-rk3328_defconfig
+make all
+

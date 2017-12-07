@@ -1,0 +1,14 @@
+
+dd status=progress if=/dev/zero of=system.img bs=1M count=0 seek=2000 status=none
+dd status=progress  if=idbloader.img of=system.img seek=64 conv=fsync,notrunc status=none
+dd status=progress  if=u-boot.img of=system.img seek=16384 conv=fsync,notrunc status=none
+dd status=progress  if=trust.img of=system.img seek=24576 conv=fsync,notrunc status=none
+parted -s system.img mklabel gpt
+parted -s system.img unit s mkpart loader1 64 8063
+parted -s system.img unit s mkpart reserved1 8064 8191
+parted -s system.img unit s mkpart reserved2 8192 16383
+parted -s system.img unit s mkpart loader2 16384 24575
+parted -s system.img unit s mkpart atf 24576 32767
+parted -s system.img unit s mkpart reserved3 32768 262143
+parted -s system.img unit s mkpart root 262144 100%
+parted -s system.img set 7 boot on
