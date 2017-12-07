@@ -1,0 +1,389 @@
+[    0.000000] Booting Linux on physical CPU 0x500
+[    0.000000] Linux version 4.14.2-1-ARCH (builduser@leming) (gcc version 7.2.0 (GCC)) #1 SMP Mon Nov 27 01:36:26 UTC 2017
+[    0.000000] CPU: ARMv7 Processor [410fc0d1] revision 1 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Google Speedy
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 48 MiB at 0x7d000000
+[    0.000000] On node 0 totalpages: 524288
+[    0.000000] free_area_init_node: node 0, pgdat c1400140, node_mem_map eedf9000
+[    0.000000]   Normal zone: 1728 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 196608 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 327680 pages, LIFO batch:31
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 17 pages/cpu @eed87000 s37388 r8192 d24052 u69632
+[    0.000000] pcpu-alloc: s37388 r8192 d24052 u69632 alloc=17*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 522560
+[    0.000000] Kernel command line: cros_secure console=tty0 init=/sbin/init root=PARTUUID=22786261-0771-3a4c-9283-d8f819e29eeb/PARTNROFF=1 rootwait rw noinitrd 
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 2006760K/2097152K available (11264K kernel code, 1036K rwdata, 4676K rodata, 2048K init, 901K bss, 41240K reserved, 49152K cma-reserved, 1260544K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000002] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000007] Switching to timer-based delay loop, resolution 41ns
+[    0.001479] Console: colour dummy device 80x30
+[    0.001595] console [tty0] enabled
+[    0.001613] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.001622] pid_max: default: 32768 minimum: 301
+[    0.001690] Security Framework initialized
+[    0.001754] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001764] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002082] CPU: Testing write buffer coherency: ok
+[    0.002220] CPU0: thread -1, cpu 0, socket 5, mpidr 80000500
+[    0.002434] Setting up static identity map for 0x100000 - 0x1000a0
+[    0.003142] Hierarchical SRCU implementation.
+[    0.003799] smp: Bringing up secondary CPUs ...
+[    0.005106] CPU1: thread -1, cpu 1, socket 5, mpidr 80000501
+[    0.006405] CPU2: thread -1, cpu 2, socket 5, mpidr 80000502
+[    0.007689] CPU3: thread -1, cpu 3, socket 5, mpidr 80000503
+[    0.007720] smp: Brought up 1 node, 4 CPUs
+[    0.007739] SMP: Total of 4 processors activated (192.00 BogoMIPS).
+[    0.007744] CPU: All CPU(s) started in SVC mode.
+[    0.008249] devtmpfs: initialized
+[    0.012559] VFP support v0.3: implementor 41 architecture 3 part 30 variant d rev 0
+[    0.012666] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.012679] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.013279] xor: measuring software checksum speed
+[    0.051984]    arm4regs  :  3780.000 MB/sec
+[    0.092003]    8regs     :  2912.000 MB/sec
+[    0.132026]    32regs    :  2832.000 MB/sec
+[    0.172043]    neon      :  5430.000 MB/sec
+[    0.172048] xor: using function: neon (5430.000 MB/sec)
+[    0.172113] pinctrl core: initialized pinctrl subsystem
+[    0.172813] NET: Registered protocol family 16
+[    0.173563] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.174215] cpuidle: using governor menu
+[    0.174655] No ATAGs?
+[    0.174699] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.174710] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.175101] Serial: AMBA PL011 UART driver
+[    0.252235] raid6: int32x1  gen()   416 MB/s
+[    0.320153] raid6: int32x1  xor()   397 MB/s
+[    0.388218] raid6: int32x2  gen()   500 MB/s
+[    0.456206] raid6: int32x2  xor()   496 MB/s
+[    0.524281] raid6: int32x4  gen()   663 MB/s
+[    0.592241] raid6: int32x4  xor()   527 MB/s
+[    0.660272] raid6: int32x8  gen()   784 MB/s
+[    0.728305] raid6: int32x8  xor()   517 MB/s
+[    0.796322] raid6: neonx1   gen()  1486 MB/s
+[    0.864348] raid6: neonx1   xor()  1828 MB/s
+[    0.932404] raid6: neonx2   gen()  1835 MB/s
+[    1.000414] raid6: neonx2   xor()  2474 MB/s
+[    1.068438] raid6: neonx4   gen()  2763 MB/s
+[    1.136465] raid6: neonx4   xor()  2712 MB/s
+[    1.204505] raid6: neonx8   gen()  2679 MB/s
+[    1.272530] raid6: neonx8   xor()  2415 MB/s
+[    1.272535] raid6: using algorithm neonx4 gen() 2763 MB/s
+[    1.272540] raid6: .... xor() 2712 MB/s, rmw enabled
+[    1.272545] raid6: using neon recovery algorithm
+[    1.274120] vcc_5v: supplied by vccsys
+[    1.274139] vcc33_sys: supplied by vccsys
+[    1.274155] vcc50_hdmi: supplied by vcc_5v
+[    1.274361] panel_regulator: supplied by vcc33_sys
+[    1.274572] backlight_regulator: supplied by vcc33_sys
+[    1.275933] iommu: Adding device ff930000.vop to group 0
+[    1.275958] iommu: Adding device ff940000.vop to group 1
+[    1.276492] vgaarb: loaded
+[    1.276768] SCSI subsystem initialized
+[    1.276853] libata version 3.00 loaded.
+[    1.276917] usbcore: registered new interface driver usbfs
+[    1.276938] usbcore: registered new interface driver hub
+[    1.276965] usbcore: registered new device driver usb
+[    1.277558] media: Linux media interface: v0.10
+[    1.277573] Linux video capture interface: v2.00
+[    1.277594] pps_core: LinuxPPS API ver. 1 registered
+[    1.277600] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.277610] PTP clock support registered
+[    1.277622] EDAC MC: Ver: 3.0.0
+[    1.277938] Advanced Linux Sound Architecture Driver Initialized.
+[    1.278099] NetLabel: Initializing
+[    1.278106] NetLabel:  domain hash size = 128
+[    1.278110] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.278139] NetLabel:  unlabeled traffic allowed by default
+[    1.278293] clocksource: Switched to clocksource arch_sys_counter
+[    1.278354] VFS: Disk quotas dquot_6.6.0
+[    1.278382] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    1.280913] NET: Registered protocol family 2
+[    1.281169] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    1.281200] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.281256] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.281301] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.281319] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.281398] NET: Registered protocol family 1
+[    1.281560] RPC: Registered named UNIX socket transport module.
+[    1.281568] RPC: Registered udp transport module.
+[    1.281572] RPC: Registered tcp transport module.
+[    1.281577] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.281584] PCI: CLS 0 bytes, default 64
+[    1.282008] hw perfevents: enabled with armv7_cortex_a12 PMU driver, 7 counters available
+[    1.282865] workingset: timestamp_bits=14 max_order=19 bucket_order=5
+[    1.283965] zbud: loaded
+[    1.284536] NFS: Registering the id_resolver key type
+[    1.284554] Key type id_resolver registered
+[    1.284559] Key type id_legacy registered
+[    1.284567] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.286447] Key type asymmetric registered
+[    1.286476] bounce: pool size: 64 pages
+[    1.286503] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    1.286555] io scheduler noop registered
+[    1.286560] io scheduler deadline registered
+[    1.286633] io scheduler cfq registered (default)
+[    1.286639] io scheduler mq-deadline registered
+[    1.286644] io scheduler kyber registered
+[    1.286701] io scheduler bfq registered
+[    1.294040] dma-pl330 ff250000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    1.294054] dma-pl330 ff250000.dma-controller: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-20 Num_Events-16
+[    1.294264] dma-pl330 ffb20000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    1.294274] dma-pl330 ffb20000.dma-controller: 	DBUFF-64x8bytes Num_Chans-5 Num_Peri-6 Num_Events-10
+[    1.296280] Serial: 8250/16550 driver, 6 ports, IRQ sharing disabled
+[    1.297072] ff180000.serial: ttyS0 at MMIO 0xff180000 (irq = 38, base_baud = 3000000) is a 16550A
+[    1.297312] ff190000.serial: ttyS1 at MMIO 0xff190000 (irq = 39, base_baud = 1500000) is a 16550A
+[    1.297539] ff690000.serial: ttyS2 at MMIO 0xff690000 (irq = 40, base_baud = 1500000) is a 16550A
+[    1.297968] Serial: AMBA driver
+[    1.302234] loop: module loaded
+[    1.302783] Loading iSCSI transport class v2.0-870.
+[    1.302930] iscsi: registered transport (tcp)
+[    1.309916] cros-ec-spi spi0.0: Chrome EC device registered
+[    1.310496] m25p80 spi2.0: gd25q32 (4096 Kbytes)
+[    1.311517] libphy: Fixed MDIO Bus: probed
+[    1.312771] dwc2 ff540000.usb: ff540000.usb supply vusb_d not found, using dummy regulator
+[    1.312801] dwc2 ff540000.usb: ff540000.usb supply vusb_a not found, using dummy regulator
+[    1.430374] dwc2 ff540000.usb: DWC OTG Controller
+[    1.430391] dwc2 ff540000.usb: new USB bus registered, assigned bus number 1
+[    1.430407] dwc2 ff540000.usb: irq 43, io mem 0xff540000
+[    1.430541] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.430549] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.430556] usb usb1: Product: DWC OTG Controller
+[    1.430562] usb usb1: Manufacturer: Linux 4.14.2-1-ARCH dwc2_hsotg
+[    1.430567] usb usb1: SerialNumber: ff540000.usb
+[    1.430755] hub 1-0:1.0: USB hub found
+[    1.430772] hub 1-0:1.0: 1 port detected
+[    1.430968] dwc2 ff580000.usb: ff580000.usb supply vusb_d not found, using dummy regulator
+[    1.430992] dwc2 ff580000.usb: ff580000.usb supply vusb_a not found, using dummy regulator
+[    1.441113] dwc2 ff580000.usb: DWC OTG Controller
+[    1.441127] dwc2 ff580000.usb: new USB bus registered, assigned bus number 2
+[    1.441139] dwc2 ff580000.usb: irq 44, io mem 0xff580000
+[    1.441241] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.441248] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.441255] usb usb2: Product: DWC OTG Controller
+[    1.441261] usb usb2: Manufacturer: Linux 4.14.2-1-ARCH dwc2_hsotg
+[    1.441266] usb usb2: SerialNumber: ff580000.usb
+[    1.441414] hub 2-0:1.0: USB hub found
+[    1.441428] hub 2-0:1.0: 1 port detected
+[    1.441834] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.441841] ehci-pci: EHCI PCI platform driver
+[    1.441857] ehci-platform: EHCI generic platform driver
+[    1.441935] ehci-platform ff500000.usb: EHCI Host Controller
+[    1.441948] ehci-platform ff500000.usb: new USB bus registered, assigned bus number 3
+[    1.442014] ehci-platform ff500000.usb: irq 42, io mem 0xff500000
+[    1.454302] ehci-platform ff500000.usb: USB 2.0 started, EHCI 1.00
+[    1.454361] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.454369] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.454376] usb usb3: Product: EHCI Host Controller
+[    1.454381] usb usb3: Manufacturer: Linux 4.14.2-1-ARCH ehci_hcd
+[    1.454387] usb usb3: SerialNumber: ff500000.usb
+[    1.454532] hub 3-0:1.0: USB hub found
+[    1.454546] hub 3-0:1.0: 1 port detected
+[    1.454719] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    1.454764] ehci-omap: OMAP-EHCI Host Controller driver
+[    1.454821] ehci-orion: EHCI orion driver
+[    1.454887] ehci-exynos: EHCI EXYNOS driver
+[    1.454952] tegra-ehci: Tegra EHCI driver
+[    1.455019] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.455030] ohci-pci: OHCI PCI platform driver
+[    1.455051] ohci-platform: OHCI generic platform driver
+[    1.455130] ohci-exynos: OHCI EXYNOS driver
+[    1.455379] usbcore: registered new interface driver uas
+[    1.455412] usbcore: registered new interface driver usb-storage
+[    1.455428] usbcore: registered new interface driver ums-cypress
+[    1.455443] usbcore: registered new interface driver ums_eneub6250
+[    1.455458] usbcore: registered new interface driver ums-freecom
+[    1.455473] usbcore: registered new interface driver ums-isd200
+[    1.455489] usbcore: registered new interface driver ums-usbat
+[    1.456617] input: cros_ec as /devices/platform/ff110000.spi/spi_master/spi0/spi0.0/ff110000.spi:ec@0:keyboard-controller/input/input0
+[    1.459423] i2c /dev entries driver
+[    1.460140] rk3x-i2c ff140000.i2c: Initialized RK3xxx I2C bus at f08df000
+[    1.460657] rk3x-i2c ff160000.i2c: Initialized RK3xxx I2C bus at f08e1000
+[    1.460873] rk3x-i2c ff170000.i2c: Initialized RK3xxx I2C bus at f08e3000
+[    1.461376] rk808 0-001b: chip id: 0x0
+[    1.463811] rk808-regulator rk808-regulator: there is no dvs0 gpio
+[    1.463822] rk808-regulator rk808-regulator: there is no dvs1 gpio
+[    1.463847] DCDC_REG1: supplied by vcc33_sys
+[    1.464459] DCDC_REG2: supplied by vcc33_sys
+[    1.464935] DCDC_REG3: supplied by vcc33_sys
+[    1.465013] DCDC_REG4: supplied by vcc33_sys
+[    1.465322] LDO_REG1: supplied by vcc_5v
+[    1.466447] LDO_REG2: supplied by vcc_5v
+[    1.466637] LDO_REG3: supplied by vcc33_sys
+[    1.467540] LDO_REG4: supplied by vcc_5v
+[    1.467820] LDO_REG5: supplied by vcc_5v
+[    1.468099] LDO_REG6: supplied by vcc33_sys
+[    1.468893] LDO_REG7: supplied by vcc33_sys
+[    1.469677] LDO_REG8: supplied by vcc_5v
+[    1.469817] vcc33_ccd: Bringing 1800000uV into 3300000-3300000uV
+[    1.470759] SWITCH_REG1: supplied by vcc33_sys
+[    1.470914] SWITCH_REG2: supplied by vcc_18
+[    1.473366] rk808-rtc rk808-rtc: rtc core: registered rk808-rtc as rtc0
+[    1.473683] rk3x-i2c ff650000.i2c: Initialized RK3xxx I2C bus at f08e5000
+[    1.474012] rk3x-i2c ff660000.i2c: Initialized RK3xxx I2C bus at f08e7000
+[    1.476502] rockchip-thermal ff280000.tsadc: Missing rockchip,grf property
+[    1.478691] sdhci: Secure Digital Host Controller Interface driver
+[    1.478701] sdhci: Copyright(c) Pierre Ossman
+[    1.479143] Synopsys Designware Multimedia Card Interface Driver
+[    1.479693] dwmmc_rockchip ff0c0000.dwmmc: IDMAC supports 32-bit address mode.
+[    1.479733] dwmmc_rockchip ff0c0000.dwmmc: Using internal DMA controller.
+[    1.479743] dwmmc_rockchip ff0c0000.dwmmc: Version ID is 270a
+[    1.479764] dwmmc_rockchip ff0c0000.dwmmc: DW MMC controller at irq 30,32 bit host data width,256 deep fifo
+[    1.479841] dwmmc_rockchip ff0c0000.dwmmc: Got CD GPIO
+[    1.498352] mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    1.518616] dwmmc_rockchip ff0d0000.dwmmc: IDMAC supports 32-bit address mode.
+[    1.518645] dwmmc_rockchip ff0d0000.dwmmc: Using internal DMA controller.
+[    1.518655] dwmmc_rockchip ff0d0000.dwmmc: Version ID is 270a
+[    1.518673] dwmmc_rockchip ff0d0000.dwmmc: DW MMC controller at irq 31,32 bit host data width,256 deep fifo
+[    1.518744] dwmmc_rockchip ff0d0000.dwmmc: allocated mmc-pwrseq
+[    1.518751] mmc_host mmc1: card is non-removable.
+[    1.538334] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    1.559280] dwmmc_rockchip ff0f0000.dwmmc: IDMAC supports 32-bit address mode.
+[    1.559306] dwmmc_rockchip ff0f0000.dwmmc: Using internal DMA controller.
+[    1.559316] dwmmc_rockchip ff0f0000.dwmmc: Version ID is 270a
+[    1.559334] dwmmc_rockchip ff0f0000.dwmmc: DW MMC controller at irq 32,32 bit host data width,256 deep fifo
+[    1.559373] dwmmc_rockchip ff0f0000.dwmmc: allocated mmc-pwrseq
+[    1.559380] mmc_host mmc2: card is non-removable.
+[    1.578329] mmc_host mmc2: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    1.579283] mmc_host mmc0: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[    1.596559] mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+[    1.598042] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[    1.598669] VUB300 Driver rom wait states = 1C irqpoll timeout = 0400
+[    1.598815] usbcore: registered new interface driver vub300
+[    1.598838] usbcore: registered new interface driver ushc
+[    1.599205] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.600032] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.600125] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.600232] usbcore: registered new interface driver usbhid
+[    1.600237] usbhid: USB HID core driver
+[    1.604193] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[    1.609008] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[    1.619046] cros-ec-ctl cros-ec-ctl.0.auto: device does not support reading the console log
+[    1.620057] cros-ec-ctl cros-ec-ctl.0.auto: cannot get EC features: 0/1
+[    1.621992] NET: Registered protocol family 10
+[    1.622837] Segment Routing with IPv6
+[    1.622870] mip6: Mobile IPv6
+[    1.622877] NET: Registered protocol family 17
+[    1.622942] Key type dns_resolver registered
+[    1.623039] ThumbEE CPU extension supported.
+[    1.623047] Registering SWP/SWPB emulation handler
+[    1.623239] registered taskstats version 1
+[    1.623270] zswap: loaded using pool lzo/zbud
+[    1.623852] Btrfs loaded, crc32c=crc32c-generic
+[    1.630765] input: gpio-keys as /devices/platform/gpio-keys/input/input1
+[    1.632212] rk808-rtc rk808-rtc: setting system clock to 2017-11-29 19:23:43 UTC (1511983423)
+[    1.632224] sr_init: No PMIC hook to init smartreflex
+[    1.632304] sr_init: platform driver register failed for SR
+[    1.632667] vcc18_lcd: supplied by vcc_18
+[    1.632707] panel_regulator: disabling
+[    1.632714] backlight_regulator: disabling
+[    1.632723] ALSA device list:
+[    1.632727]   No soundcards found.
+[    1.768853] elan_i2c 4-0015: Elan Touchpad: Module ID: 0x0061, Firmware: 0x0001, Sample: 0x0002, IAP: 0x0009
+[    1.769020] input: Elan Touchpad as /devices/platform/ff160000.i2c/i2c-4/4-0015/input/input2
+[    1.769070] Waiting for root device PARTUUID=22786261-0771-3a4c-9283-d8f819e29eeb/PARTNROFF=1...
+[    1.770040] elan_i2c 4-0015: invalid report id data (ff)
+[    1.771545] mmc_host mmc1: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[    1.771868] mmc_host mmc2: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[    1.914402] dwmmc_rockchip ff0c0000.dwmmc: Successfully tuned phase to 199
+[    1.914417] mmc0: new ultra high speed SDR104 SDHC card at address 59b4
+[    1.914617] mmcblk0: mmc0:59b4 NCard 29.9 GiB 
+[    1.919495]  mmcblk0: p1 p2 p3 p4
+[    1.930305] usb 3-1: new high-speed USB device number 2 using ehci-platform
+[    1.934762] EXT4-fs (mmcblk0p2): couldn't mount as ext3 due to feature incompatibilities
+[    1.935214] EXT4-fs (mmcblk0p2): couldn't mount as ext2 due to feature incompatibilities
+[    1.962328] dwmmc_rockchip ff0d0000.dwmmc: Successfully tuned phase to 201
+[    1.963306] mmc1: new ultra high speed SDR104 SDIO card at address 0001
+[    2.071129] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    2.071157] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    2.071236] dwmmc_rockchip ff0f0000.dwmmc: Successfully tuned phase to 173
+[    2.072851] mmc2: new HS200 MMC card at address 0001
+[    2.073045] mmcblk2: mmc2:0001 HAG2e 14.7 GiB 
+[    2.073162] mmcblk2boot0: mmc2:0001 HAG2e partition 1 4.00 MiB
+[    2.073269] mmcblk2boot1: mmc2:0001 HAG2e partition 2 4.00 MiB
+[    2.073373] mmcblk2rpmb: mmc2:0001 HAG2e partition 3 4.00 MiB
+[    2.075512] devtmpfs: mounted
+[    2.076309] Freeing unused kernel memory: 2048K
+[    2.217482] usb 3-1: New USB device found, idVendor=04f2, idProduct=b53a
+[    2.217497] usb 3-1: New USB device strings: Mfr=3, Product=1, SerialNumber=2
+[    2.217504] usb 3-1: Product: USB2.0 HD UVC WebCam
+[    2.217509] usb 3-1: Manufacturer: Generic
+[    2.217514] usb 3-1: SerialNumber: 200901010001
+[    2.350499] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.366260] systemd[1]: systemd 235 running in system mode. (+PAM -AUDIT -SELINUX -IMA -APPARMOR +SMACK -SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN default-hierarchy=hybrid)
+[    2.366583] systemd[1]: Detected architecture arm.
+[    2.368068] systemd[1]: Set hostname to <alarm>.
+[    2.579429] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    2.579632] systemd[1]: Reached target Remote File Systems.
+[    2.579788] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    2.580785] systemd[1]: Created slice User and Session Slice.
+[    2.580954] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    2.581042] systemd[1]: Reached target Paths.
+[    2.581128] systemd[1]: Reached target Local Encrypted Volumes.
+[    2.714035] systemd-journald[152]: Received request to flush runtime journal from PID 1
+[    3.060232] random: crng init done
+[    4.724670] mousedev: PS/2 mouse device common for all mice
+[    4.790142] tpm_i2c_infineon 1-0020: 1.2 TPM (device-id 0x1A)
+[    4.861540] rk3288-crypto ff8a0000.cypto-controller: Crypto Accelerator successfully registered
+[    4.925602] uvcvideo: Found UVC 1.00 device USB2.0 HD UVC WebCam (04f2:b53a)
+[    4.930472] uvcvideo 3-1:1.0: Entity type for entity Realtek Extended Controls Unit was not initialized!
+[    4.930487] uvcvideo 3-1:1.0: Entity type for entity Extension 4 was not initialized!
+[    4.930496] uvcvideo 3-1:1.0: Entity type for entity Processing 2 was not initialized!
+[    4.930503] uvcvideo 3-1:1.0: Entity type for entity Camera 1 was not initialized!
+[    4.930624] input: USB2.0 HD UVC WebCam: USB2.0 HD as /devices/platform/ff500000.usb/usb3/3-1/3-1:1.0/input/input3
+[    4.930755] usbcore: registered new interface driver uvcvideo
+[    4.930761] USB Video Class driver (1.1.1)
+[    5.011980] max98090 2-0010: MAX98090 REVID=0x43
+[    5.014391] max98090 2-0010: use default 2.8v micbias
+[    5.019362] rockchip-snd-max98090 sound: HiFi <-> ff890000.i2s mapping ok
+[    5.028390] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    5.028478] sbs-battery 20-000b: sbs-battery: battery gas gauge device registered
+[    5.029958] input: VEYRON-I2S Headset Jack as /devices/platform/sound/sound/card0/input4
+[    5.103434] rockchip-drm display-subsystem: bound ff930000.vop (ops vop_component_ops [rockchipdrm])
+[    5.103609] rockchip-drm display-subsystem: bound ff940000.vop (ops vop_component_ops [rockchipdrm])
+[    5.114285] i2c i2c-21: of_i2c: modalias failure on /dp@ff970000/ports
+[    5.114322] i2c i2c-21: Failed to create I2C device for /dp@ff970000/ports
+[    5.114405] rockchip-drm display-subsystem: bound ff970000.dp (ops rockchip_dp_component_ops [rockchipdrm])
+[    5.114520] dwhdmi-rockchip ff980000.hdmi: Detected HDMI TX controller v2.00a with HDCP (DWC MHL PHY)
+[    5.118892] rockchip-drm display-subsystem: bound ff980000.hdmi (ops dw_hdmi_rockchip_ops [rockchipdrm])
+[    5.118911] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    5.118918] [drm] No driver support for vblank timestamp query.
+[    5.159914] brcmfmac: brcmf_fw_map_chip_to_name: using brcm/brcmfmac4354-sdio.bin for chip 0x004354(17236) rev 0x000001
+[    5.160239] usbcore: registered new interface driver brcmfmac
+[    5.223448] Bluetooth: Core ver 2.22
+[    5.224232] NET: Registered protocol family 31
+[    5.224235] Bluetooth: HCI device and connection manager initialized
+[    5.224243] Bluetooth: HCI socket layer initialized
+[    5.224247] Bluetooth: L2CAP socket layer initialized
+[    5.224262] Bluetooth: SCO socket layer initialized
+[    5.234380] rockchip-dp ff970000.dp: Link Training Clock Recovery success
+[    5.236662] rockchip-dp ff970000.dp: Link Training success!
+[    5.244077] Bluetooth: Generic Bluetooth SDIO driver ver 0.1
+[    5.251285] brcmfmac: brcmf_c_preinit_dcmds: Firmware version = wl0: Apr 11 2014 14:12:39 version 7.10.82.48 (r466822) FWID 01-60fbf745
+[    5.360439] rockchip-dp ff970000.dp: Timeout of video streamclk ok
+[    5.360441] rockchip-dp ff970000.dp: unable to config video
+[    5.381620] Console: switching to colour frame buffer device 170x48
+[    5.405190] rockchip-drm display-subsystem: fb0:  frame buffer device
+[    5.427169] [drm] Initialized rockchip 1.0.0 20140818 for display-subsystem on minor 0
+[    5.478330] Registered IR keymap rc-cec
+[    5.478429] rc rc0: RC for dw_hdmi as /devices/platform/ff980000.hdmi/rc/rc0
+[    5.478511] input: RC for dw_hdmi as /devices/platform/ff980000.hdmi/rc/rc0/input5
+[  111.752556] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[  119.256288] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[  124.222900] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready

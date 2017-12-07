@@ -1,0 +1,4667 @@
+
+?       - alias for 'help'
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootefi - Boots an EFI payload from memory
+bootelf - Boot from an ELF image in memory
+booti   - boot arm64 Linux Image image from memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootvx  - Boot vxWorks from an ELF image
+bootz   - boot Linux zImage image from memory
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+ethsw   - Ethernet l2 switch commands
+exit    - exit script
+ext2load- load binary file from a Ext2 filesystem
+ext2ls  - list files in a directory (default /)
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+gpt     - GUID Partition Table
+help    - print command description/usage
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mw      - memory write (fill)
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+part    - disk partition related commands
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+pxe     - commands to get and boot from pxe files
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+sf      - SPI flash sub-system
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+sspi    - SPI utility command
+sysboot - command to get and boot from syslinux files
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+=> printenv
+arch=arm
+baudrate=1500000
+board=rock64_rk3328
+board_name=rock64_rk3328
+boot_a_script=load ${devtype} ${devnum}:${distro_bootpart} ${scriptaddr} ${prefix}${script}; source ${scriptaddr}
+boot_efi_binary=load ${devtype} ${devnum}:${distro_bootpart} ${kernel_addr_r} efi/boot/bootaa64.efi; if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r};else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi
+boot_extlinux=sysboot ${devtype} ${devnum}:${distro_bootpart} any ${scriptaddr} ${prefix}extlinux/extlinux.conf
+boot_mode=normal
+boot_net_usb_start=usb start
+boot_prefixes=/ /boot/
+boot_script_dhcp=boot.scr.uimg
+boot_scripts=boot.scr.uimg boot.scr
+boot_targets=mmc0 mmc1 usb0 pxe dhcp 
+bootcmd=run distro_bootcmd
+bootcmd_dhcp=run boot_net_usb_start; if dhcp ${scriptaddr} ${boot_script_dhcp}; then source ${scriptaddr}; fi;setenv efi_fdtfile ${fdtfile}; setenv efi_old_vci ${bootp_vci};setenv efi_old_arch ${bootp_arch};setenv bootp_vci PXEClient:Arch:00011:UNDI:003000;setenv bootp_arch 0xb;if dhcp ${kernel_addr_r}; then tftpboot ${fdt_addr_r} dtb/${efi_fdtfile};if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r}; else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi;fi;setenv bootp_vci ${efi_old_vci};setenv bootp_arch ${efi_old_arch};setenv efi_fdtfile;setenv efi_old_arch;setenv efi_old_vci;
+bootcmd_mmc0=setenv devnum 0; run mmc_boot
+bootcmd_mmc1=setenv devnum 1; run mmc_boot
+bootcmd_pxe=run boot_net_usb_start; dhcp; if pxe get; then pxe boot; fi
+bootcmd_usb0=setenv devnum 0; run usb_boot
+bootdelay=2
+cpu=armv8
+cpuid#=55524b5030393030330000000017111d
+distro_bootcmd=for target in ${boot_targets}; do run bootcmd_${target}; done
+efi_dtb_prefixes=/ /dtb/ /dtb/current/
+eth1addr=82:1d:da:1f:fd:51
+ethaddr=82:1d:da:1f:fd:31
+fdt_addr_r=0x01f00000
+fdtcontroladdr=fcf1eb70
+fdtfile=rockchip/rk3328-rock64.dtb
+kernel_addr_r=0x02000000
+load_efi_dtb=load ${devtype} ${devnum}:${distro_bootpart} ${fdt_addr_r} ${prefix}${efi_fdtfile}
+mmc_boot=if mmc dev ${devnum}; then setenv devtype mmc; run scan_dev_for_boot_part; fi
+partitions=uuid_disk=${uuid_gpt_disk};name=loader1,start=32K,size=4000K,uuid=${uuid_gpt_loader1};name=reserved1,size=64K,uuid=${uuid_gpt_reserved1};name=reserved2,size=4M,uuid=${uuid_gpt_reserved2};name=loader2,size=4MB,uuid=${uuid_gpt_loader2};name=atf,size=4M,uuid=${uuid_gpt_atf};name=boot,size=112M,bootable,uuid=${uuid_gpt_boot};name=rootfs,size=-,uuid=B921B045-1DF0-41C3-AF44-4C6F280D3FAE;
+pxefile_addr_r=0x00600000
+ramdisk_addr_r=0x04000000
+scan_dev_for_boot=echo Scanning ${devtype} ${devnum}:${distro_bootpart}...; for prefix in ${boot_prefixes}; do run scan_dev_for_extlinux; run scan_dev_for_scripts; done;run scan_dev_for_efi;
+scan_dev_for_boot_part=part list ${devtype} ${devnum} -bootable devplist; env exists devplist || setenv devplist 1; for distro_bootpart in ${devplist}; do if fstype ${devtype} ${devnum}:${distro_bootpart} bootfstype; then run scan_dev_for_boot; fi; done
+scan_dev_for_efi=setenv efi_fdtfile ${fdtfile}; for prefix in ${efi_dtb_prefixes}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${efi_fdtfile}; then run load_efi_dtb; fi;done;if test -e ${devtype} ${devnum}:${distro_bootpart} efi/boot/bootaa64.efi; then echo Found EFI removable media binary efi/boot/bootaa64.efi; run boot_efi_binary; echo EFI LOAD FAILED: continuing...; fi; setenv efi_fdtfile
+scan_dev_for_extlinux=if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}extlinux/extlinux.conf; then echo Found ${prefix}extlinux/extlinux.conf; run boot_extlinux; echo SCRIPT FAILED: continuing...; fi
+scan_dev_for_scripts=for script in ${boot_scripts}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${script}; then echo Found U-Boot script ${prefix}${script}; run boot_a_script; echo SCRIPT FAILED: continuing...; fi; done
+scriptaddr=0x00500000
+serial#=2ddb74eed0071ba
+soc=rockchip
+stderr=serial@ff130000
+stdin=serial@ff130000
+stdout=serial@ff130000
+usb_boot=usb start; if usb dev ${devnum}; then setenv devtype usb; run scan_dev_for_boot_part; fi
+vendor=rockchip
+
+Environment size: 4141/8188 bytes
+=> ls
+ls - list files in a directory (default /)
+
+Usage:
+ls <interface> [<dev[:part]> [directory]]
+    - List files in directory 'directory' of partition 'part' on
+      device type 'interface' instance 'dev'.
+=> he
+?       - alias for 'help'
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootefi - Boots an EFI payload from memory
+bootelf - Boot from an ELF image in memory
+booti   - boot arm64 Linux Image image from memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootvx  - Boot vxWorks from an ELF image
+bootz   - boot Linux zImage image from memory
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+ethsw   - Ethernet l2 switch commands
+exit    - exit script
+ext2load- load binary file from a Ext2 filesystem
+ext2ls  - list files in a directory (default /)
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+gpt     - GUID Partition Table
+help    - print command description/usage
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mw      - memory write (fill)
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+part    - disk partition related commands
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+pxe     - commands to get and boot from pxe files
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+sf      - SPI flash sub-system
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+sspi    - SPI utility command
+sysboot - command to get and boot from syslinux files
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+=> 
+?       - alias for 'help'
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootefi - Boots an EFI payload from memory
+bootelf - Boot from an ELF image in memory
+booti   - boot arm64 Linux Image image from memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootvx  - Boot vxWorks from an ELF image
+bootz   - boot Linux zImage image from memory
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+ethsw   - Ethernet l2 switch commands
+exit    - exit script
+ext2load- load binary file from a Ext2 filesystem
+ext2ls  - list files in a directory (default /)
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+gpt     - GUID Partition Table
+help    - print command description/usage
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mw      - memory write (fill)
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+part    - disk partition related commands
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+pxe     - commands to get and boot from pxe files
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+sf      - SPI flash sub-system
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+sspi    - SPI utility command
+sysboot - command to get and boot from syslinux files
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+=> mii info
+PHY 0x00: OUI = 0x0732, Model = 0x11, Rev = 0x06, 100baseT, HDX
+PHY 0x01: OUI = 0x0732, Model = 0x11, Rev = 0x06, 100baseT, HDX
+=> printenv
+arch=arm
+baudrate=1500000
+board=rock64_rk3328
+board_name=rock64_rk3328
+boot_a_script=load ${devtype} ${devnum}:${distro_bootpart} ${scriptaddr} ${prefix}${script}; source ${scriptaddr}
+boot_efi_binary=load ${devtype} ${devnum}:${distro_bootpart} ${kernel_addr_r} efi/boot/bootaa64.efi; if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r};else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi
+boot_extlinux=sysboot ${devtype} ${devnum}:${distro_bootpart} any ${scriptaddr} ${prefix}extlinux/extlinux.conf
+boot_mode=normal
+boot_net_usb_start=usb start
+boot_prefixes=/ /boot/
+boot_script_dhcp=boot.scr.uimg
+boot_scripts=boot.scr.uimg boot.scr
+boot_targets=mmc0 mmc1 usb0 pxe dhcp 
+bootcmd=run distro_bootcmd
+bootcmd_dhcp=run boot_net_usb_start; if dhcp ${scriptaddr} ${boot_script_dhcp}; then source ${scriptaddr}; fi;setenv efi_fdtfile ${fdtfile}; setenv efi_old_vci ${bootp_vci};setenv efi_old_arch ${bootp_arch};setenv bootp_vci PXEClient:Arch:00011:UNDI:003000;setenv bootp_arch 0xb;if dhcp ${kernel_addr_r}; then tftpboot ${fdt_addr_r} dtb/${efi_fdtfile};if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r}; else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi;fi;setenv bootp_vci ${efi_old_vci};setenv bootp_arch ${efi_old_arch};setenv efi_fdtfile;setenv efi_old_arch;setenv efi_old_vci;
+bootcmd_mmc0=setenv devnum 0; run mmc_boot
+bootcmd_mmc1=setenv devnum 1; run mmc_boot
+bootcmd_pxe=run boot_net_usb_start; dhcp; if pxe get; then pxe boot; fi
+bootcmd_usb0=setenv devnum 0; run usb_boot
+bootdelay=2
+cpu=armv8
+cpuid#=55524b5030393030330000000017111d
+distro_bootcmd=for target in ${boot_targets}; do run bootcmd_${target}; done
+efi_dtb_prefixes=/ /dtb/ /dtb/current/
+eth1addr=82:1d:da:1f:fd:51
+ethaddr=82:1d:da:1f:fd:31
+fdt_addr_r=0x01f00000
+fdtcontroladdr=fcf1eb70
+fdtfile=rockchip/rk3328-rock64.dtb
+kernel_addr_r=0x02000000
+load_efi_dtb=load ${devtype} ${devnum}:${distro_bootpart} ${fdt_addr_r} ${prefix}${efi_fdtfile}
+mmc_boot=if mmc dev ${devnum}; then setenv devtype mmc; run scan_dev_for_boot_part; fi
+partitions=uuid_disk=${uuid_gpt_disk};name=loader1,start=32K,size=4000K,uuid=${uuid_gpt_loader1};name=reserved1,size=64K,uuid=${uuid_gpt_reserved1};name=reserved2,size=4M,uuid=${uuid_gpt_reserved2};name=loader2,size=4MB,uuid=${uuid_gpt_loader2};name=atf,size=4M,uuid=${uuid_gpt_atf};name=boot,size=112M,bootable,uuid=${uuid_gpt_boot};name=rootfs,size=-,uuid=B921B045-1DF0-41C3-AF44-4C6F280D3FAE;
+pxefile_addr_r=0x00600000
+ramdisk_addr_r=0x04000000
+scan_dev_for_boot=echo Scanning ${devtype} ${devnum}:${distro_bootpart}...; for prefix in ${boot_prefixes}; do run scan_dev_for_extlinux; run scan_dev_for_scripts; done;run scan_dev_for_efi;
+scan_dev_for_boot_part=part list ${devtype} ${devnum} -bootable devplist; env exists devplist || setenv devplist 1; for distro_bootpart in ${devplist}; do if fstype ${devtype} ${devnum}:${distro_bootpart} bootfstype; then run scan_dev_for_boot; fi; done
+scan_dev_for_efi=setenv efi_fdtfile ${fdtfile}; for prefix in ${efi_dtb_prefixes}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${efi_fdtfile}; then run load_efi_dtb; fi;done;if test -e ${devtype} ${devnum}:${distro_bootpart} efi/boot/bootaa64.efi; then echo Found EFI removable media binary efi/boot/bootaa64.efi; run boot_efi_binary; echo EFI LOAD FAILED: continuing...; fi; setenv efi_fdtfile
+scan_dev_for_extlinux=if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}extlinux/extlinux.conf; then echo Found ${prefix}extlinux/extlinux.conf; run boot_extlinux; echo SCRIPT FAILED: continuing...; fi
+scan_dev_for_scripts=for script in ${boot_scripts}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${script}; then echo Found U-Boot script ${prefix}${script}; run boot_a_script; echo SCRIPT FAILED: continuing...; fi; done
+scriptaddr=0x00500000
+serial#=2ddb74eed0071ba
+soc=rockchip
+stderr=serial@ff130000
+stdin=serial@ff130000
+stdout=serial@ff130000
+usb_boot=usb start; if usb dev ${devnum}; then setenv devtype usb; run scan_dev_for_boot_part; fi
+vendor=rockchip
+
+Environment size: 4141/8188 bytes
+=> mmcinfo
+Card did not respond to voltage select!
+mmc_init: -95, time 10
+=> mmc dev
+Card did not respond to voltage select!
+mmc_init: -95, time 10
+=> mmc dev 1
+switch to partitions #0, OK
+mmc1 is current device
+=> mmc  info
+Device: rksdmmc@ff500000
+Manufacturer ID: 27
+OEM: 5048
+Name: SD16G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 14.4 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+=> he mii
+mii - MII utility commands
+
+Usage:
+mii device                            - list available devices
+mii device <devname>                  - set current device
+mii info   <addr>                     - display MII PHY info
+mii read   <addr> <reg>               - read  MII PHY <addr> register <reg>
+mii write  <addr> <reg> <data>        - write MII PHY <addr> register <reg>
+mii modify <addr> <reg> <data> <mask> - modify MII PHY <addr> register <reg>
+                                        updating bits identified in <mask>
+mii dump   <addr> <reg>               - pretty-print <addr> <reg> (0-5 only)
+Addr and/or reg may be ranges, e.g. 2-7.
+=> mii dump
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+
+=> mii dump 0 5
+5.     (40a1)                 -- Autonegotiation partner abilities register --
+  (8000:0000) 5.15    =     0    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0000) 5.10    =     0    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0000) 5. 8    =     0    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0000) 5. 6    =     0    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+=> mii dev 1
+No such device: 1
+=> 
+No such device: 1
+=> mii dev
+MII devices: 'ethernet@ff540000' 
+Current device: 'ethernet@ff540000'
+=> miiinfo
+Unknown command 'miiinfo' - try 'help'
+=> mii info
+PHY 0x00: OUI = 0x0732, Model = 0x11, Rev = 0x06, 100baseT, HDX
+PHY 0x01: OUI = 0x0732, Model = 0x11, Rev = 0x06, 100baseT, HDX
+=> mii dump 0-1 0-5
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+1.     (79a9)                 -- PHY status register --
+  (8000:0000) 1.15    =     0    100BASE-T4 able
+  (4000:4000) 1.14    =     1    100BASE-X  full duplex able
+  (2000:2000) 1.13    =     1    100BASE-X  half duplex able
+  (1000:1000) 1.12    =     1    10 Mbps    full duplex able
+  (0800:0800) 1.11    =     1    10 Mbps    half duplex able
+  (0400:0000) 1.10    =     0    100BASE-T2 full duplex able
+  (0200:0000) 1. 9    =     0    100BASE-T2 half duplex able
+  (0100:0100) 1. 8    =     1    extended status
+  (0080:0080) 1. 7    =     1    (reserved)
+  (0040:0000) 1. 6    =     0    MF preamble suppression
+  (0020:0020) 1. 5    =     1    A/N complete
+  (0010:0000) 1. 4    =     0    remote fault
+  (0008:0008) 1. 3    =     1    A/N able
+  (0004:0000) 1. 2    =     0    link status
+  (0002:0000) 1. 1    =     0    jabber detect
+  (0001:0001) 1. 0    =     1    extended capabilities
+
+2.     (001c)                 -- PHY ID 1 register --
+  (ffff:001c) 2.15- 0 =    28    OUI portion
+
+3.     (c916)                 -- PHY ID 2 register --
+  (fc00:c800) 3.15-10 =    50    OUI portion
+  (03f0:0110) 3. 9- 4 =    17    manufacturer part number
+  (000f:0006) 3. 3- 0 =     6    manufacturer rev. number
+
+4.     (01e1)                 -- Autonegotiation advertisement register --
+  (8000:0000) 4.15    =     0    next page able
+  (4000:0000) 4.14    =     0    (reserved)
+  (2000:0000) 4.13    =     0    remote fault
+  (1000:0000) 4.12    =     0    (reserved)
+  (0800:0000) 4.11    =     0    asymmetric pause
+  (0400:0000) 4.10    =     0    pause enable
+  (0200:0000) 4. 9    =     0    100BASE-T4 able
+  (0100:0100) 4. 8    =     1    100BASE-TX full duplex able
+  (0080:0080) 4. 7    =     1    100BASE-TX able
+  (0040:0040) 4. 6    =     1    10BASE-T   full duplex able
+  (0020:0020) 4. 5    =     1    10BASE-T   able
+  (001f:0001) 4. 4- 0 =     1    selector = IEEE 802.3
+
+5.     (40a1)                 -- Autonegotiation partner abilities register --
+  (8000:0000) 5.15    =     0    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0000) 5.10    =     0    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0000) 5. 8    =     0    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0000) 5. 6    =     0    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+1.     (79ad)                 -- PHY status register --
+  (8000:0000) 1.15    =     0    100BASE-T4 able
+  (4000:4000) 1.14    =     1    100BASE-X  full duplex able
+  (2000:2000) 1.13    =     1    100BASE-X  half duplex able
+  (1000:1000) 1.12    =     1    10 Mbps    full duplex able
+  (0800:0800) 1.11    =     1    10 Mbps    half duplex able
+  (0400:0000) 1.10    =     0    100BASE-T2 full duplex able
+  (0200:0000) 1. 9    =     0    100BASE-T2 half duplex able
+  (0100:0100) 1. 8    =     1    extended status
+  (0080:0080) 1. 7    =     1    (reserved)
+  (0040:0000) 1. 6    =     0    MF preamble suppression
+  (0020:0020) 1. 5    =     1    A/N complete
+  (0010:0000) 1. 4    =     0    remote fault
+  (0008:0008) 1. 3    =     1    A/N able
+  (0004:0004) 1. 2    =     1    link status
+  (0002:0000) 1. 1    =     0    jabber detect
+  (0001:0001) 1. 0    =     1    extended capabilities
+
+2.     (001c)                 -- PHY ID 1 register --
+  (ffff:001c) 2.15- 0 =    28    OUI portion
+
+3.     (c916)                 -- PHY ID 2 register --
+  (fc00:c800) 3.15-10 =    50    OUI portion
+  (03f0:0110) 3. 9- 4 =    17    manufacturer part number
+  (000f:0006) 3. 3- 0 =     6    manufacturer rev. number
+
+4.     (01e1)                 -- Autonegotiation advertisement register --
+  (8000:0000) 4.15    =     0    next page able
+  (4000:0000) 4.14    =     0    (reserved)
+  (2000:0000) 4.13    =     0    remote fault
+  (1000:0000) 4.12    =     0    (reserved)
+  (0800:0000) 4.11    =     0    asymmetric pause
+  (0400:0000) 4.10    =     0    pause enable
+  (0200:0000) 4. 9    =     0    100BASE-T4 able
+  (0100:0100) 4. 8    =     1    100BASE-TX full duplex able
+  (0080:0080) 4. 7    =     1    100BASE-TX able
+  (0040:0040) 4. 6    =     1    10BASE-T   full duplex able
+  (0020:0020) 4. 5    =     1    10BASE-T   able
+  (001f:0001) 4. 4- 0 =     1    selector = IEEE 802.3
+
+5.     (40a1)                 -- Autonegotiation partner abilities register --
+  (8000:0000) 5.15    =     0    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0000) 5.10    =     0    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0000) 5. 8    =     0    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0000) 5. 6    =     0    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+=> 
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+1.     (79a9)                 -- PHY status register --
+  (8000:0000) 1.15    =     0    100BASE-T4 able
+  (4000:4000) 1.14    =     1    100BASE-X  full duplex able
+  (2000:2000) 1.13    =     1    100BASE-X  half duplex able
+  (1000:1000) 1.12    =     1    10 Mbps    full duplex able
+  (0800:0800) 1.11    =     1    10 Mbps    half duplex able
+  (0400:0000) 1.10    =     0    100BASE-T2 full duplex able
+  (0200:0000) 1. 9    =     0    100BASE-T2 half duplex able
+  (0100:0100) 1. 8    =     1    extended status
+  (0080:0080) 1. 7    =     1    (reserved)
+  (0040:0000) 1. 6    =     0    MF preamble suppression
+  (0020:0020) 1. 5    =     1    A/N complete
+  (0010:0000) 1. 4    =     0    remote fault
+  (0008:0008) 1. 3    =     1    A/N able
+  (0004:0000) 1. 2    =     0    link status
+  (0002:0000) 1. 1    =     0    jabber detect
+  (0001:0001) 1. 0    =     1    extended capabilities
+
+2.     (001c)                 -- PHY ID 1 register --
+  (ffff:001c) 2.15- 0 =    28    OUI portion
+
+3.     (c916)                 -- PHY ID 2 register --
+  (fc00:c800) 3.15-10 =    50    OUI portion
+  (03f0:0110) 3. 9- 4 =    17    manufacturer part number
+  (000f:0006) 3. 3- 0 =     6    manufacturer rev. number
+
+4.     (01e1)                 -- Autonegotiation advertisement register --
+  (8000:0000) 4.15    =     0    next page able
+  (4000:0000) 4.14    =     0    (reserved)
+  (2000:0000) 4.13    =     0    remote fault
+  (1000:0000) 4.12    =     0    (reserved)
+  (0800:0000) 4.11    =     0    asymmetric pause
+  (0400:0000) 4.10    =     0    pause enable
+  (0200:0000) 4. 9    =     0    100BASE-T4 able
+  (0100:0100) 4. 8    =     1    100BASE-TX full duplex able
+  (0080:0080) 4. 7    =     1    100BASE-TX able
+  (0040:0040) 4. 6    =     1    10BASE-T   full duplex able
+  (0020:0020) 4. 5    =     1    10BASE-T   able
+  (001f:0001) 4. 4- 0 =     1    selector = IEEE 802.3
+
+5.     (c5e1)                 -- Autonegotiation partner abilities register --
+  (8000:8000) 5.15    =     1    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0400) 5.10    =     1    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0100) 5. 8    =     1    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0040) 5. 6    =     1    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+1.     (79ad)                 -- PHY status register --
+  (8000:0000) 1.15    =     0    100BASE-T4 able
+  (4000:4000) 1.14    =     1    100BASE-X  full duplex able
+  (2000:2000) 1.13    =     1    100BASE-X  half duplex able
+  (1000:1000) 1.12    =     1    10 Mbps    full duplex able
+  (0800:0800) 1.11    =     1    10 Mbps    half duplex able
+  (0400:0000) 1.10    =     0    100BASE-T2 full duplex able
+  (0200:0000) 1. 9    =     0    100BASE-T2 half duplex able
+  (0100:0100) 1. 8    =     1    extended status
+  (0080:0080) 1. 7    =     1    (reserved)
+  (0040:0000) 1. 6    =     0    MF preamble suppression
+  (0020:0020) 1. 5    =     1    A/N complete
+  (0010:0000) 1. 4    =     0    remote fault
+  (0008:0008) 1. 3    =     1    A/N able
+  (0004:0004) 1. 2    =     1    link status
+  (0002:0000) 1. 1    =     0    jabber detect
+  (0001:0001) 1. 0    =     1    extended capabilities
+
+2.     (001c)                 -- PHY ID 1 register --
+  (ffff:001c) 2.15- 0 =    28    OUI portion
+
+3.     (c916)                 -- PHY ID 2 register --
+  (fc00:c800) 3.15-10 =    50    OUI portion
+  (03f0:0110) 3. 9- 4 =    17    manufacturer part number
+  (000f:0006) 3. 3- 0 =     6    manufacturer rev. number
+
+4.     (01e1)                 -- Autonegotiation advertisement register --
+  (8000:0000) 4.15    =     0    next page able
+  (4000:0000) 4.14    =     0    (reserved)
+  (2000:0000) 4.13    =     0    remote fault
+  (1000:0000) 4.12    =     0    (reserved)
+  (0800:0000) 4.11    =     0    asymmetric pause
+  (0400:0000) 4.10    =     0    pause enable
+  (0200:0000) 4. 9    =     0    100BASE-T4 able
+  (0100:0100) 4. 8    =     1    100BASE-TX full duplex able
+  (0080:0080) 4. 7    =     1    100BASE-TX able
+  (0040:0040) 4. 6    =     1    10BASE-T   full duplex able
+  (0020:0020) 4. 5    =     1    10BASE-T   able
+  (001f:0001) 4. 4- 0 =     1    selector = IEEE 802.3
+
+5.     (c5e1)                 -- Autonegotiation partner abilities register --
+  (8000:8000) 5.15    =     1    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0400) 5.10    =     1    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0100) 5. 8    =     1    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0040) 5. 6    =     1    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+=> 
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+1.     (79ad)                 -- PHY status register --
+  (8000:0000) 1.15    =     0    100BASE-T4 able
+  (4000:4000) 1.14    =     1    100BASE-X  full duplex able
+  (2000:2000) 1.13    =     1    100BASE-X  half duplex able
+  (1000:1000) 1.12    =     1    10 Mbps    full duplex able
+  (0800:0800) 1.11    =     1    10 Mbps    half duplex able
+  (0400:0000) 1.10    =     0    100BASE-T2 full duplex able
+  (0200:0000) 1. 9    =     0    100BASE-T2 half duplex able
+  (0100:0100) 1. 8    =     1    extended status
+  (0080:0080) 1. 7    =     1    (reserved)
+  (0040:0000) 1. 6    =     0    MF preamble suppression
+  (0020:0020) 1. 5    =     1    A/N complete
+  (0010:0000) 1. 4    =     0    remote fault
+  (0008:0008) 1. 3    =     1    A/N able
+  (0004:0004) 1. 2    =     1    link status
+  (0002:0000) 1. 1    =     0    jabber detect
+  (0001:0001) 1. 0    =     1    extended capabilities
+
+2.     (001c)                 -- PHY ID 1 register --
+  (ffff:001c) 2.15- 0 =    28    OUI portion
+
+3.     (c916)                 -- PHY ID 2 register --
+  (fc00:c800) 3.15-10 =    50    OUI portion
+  (03f0:0110) 3. 9- 4 =    17    manufacturer part number
+  (000f:0006) 3. 3- 0 =     6    manufacturer rev. number
+
+4.     (01e1)                 -- Autonegotiation advertisement register --
+  (8000:0000) 4.15    =     0    next page able
+  (4000:0000) 4.14    =     0    (reserved)
+  (2000:0000) 4.13    =     0    remote fault
+  (1000:0000) 4.12    =     0    (reserved)
+  (0800:0000) 4.11    =     0    asymmetric pause
+  (0400:0000) 4.10    =     0    pause enable
+  (0200:0000) 4. 9    =     0    100BASE-T4 able
+  (0100:0100) 4. 8    =     1    100BASE-TX full duplex able
+  (0080:0080) 4. 7    =     1    100BASE-TX able
+  (0040:0040) 4. 6    =     1    10BASE-T   full duplex able
+  (0020:0020) 4. 5    =     1    10BASE-T   able
+  (001f:0001) 4. 4- 0 =     1    selector = IEEE 802.3
+
+5.     (c5e1)                 -- Autonegotiation partner abilities register --
+  (8000:8000) 5.15    =     1    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0400) 5.10    =     1    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0100) 5. 8    =     1    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0040) 5. 6    =     1    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+0.     (1040)                 -- PHY control register --
+  (8000:0000) 0.15    =     0    reset
+  (4000:0000) 0.14    =     0    loopback
+  (2040:0040) 0. 6,13 =   b10    speed selection = 1000 Mbps
+  (1000:1000) 0.12    =     1    A/N enable
+  (0800:0000) 0.11    =     0    power-down
+  (0400:0000) 0.10    =     0    isolate
+  (0200:0000) 0. 9    =     0    restart A/N
+  (0100:0000) 0. 8    =     0    duplex = half
+  (0080:0000) 0. 7    =     0    collision test enable
+  (003f:0000) 0. 5- 0 =     0    (reserved)
+
+1.     (79ad)                 -- PHY status register --
+  (8000:0000) 1.15    =     0    100BASE-T4 able
+  (4000:4000) 1.14    =     1    100BASE-X  full duplex able
+  (2000:2000) 1.13    =     1    100BASE-X  half duplex able
+  (1000:1000) 1.12    =     1    10 Mbps    full duplex able
+  (0800:0800) 1.11    =     1    10 Mbps    half duplex able
+  (0400:0000) 1.10    =     0    100BASE-T2 full duplex able
+  (0200:0000) 1. 9    =     0    100BASE-T2 half duplex able
+  (0100:0100) 1. 8    =     1    extended status
+  (0080:0080) 1. 7    =     1    (reserved)
+  (0040:0000) 1. 6    =     0    MF preamble suppression
+  (0020:0020) 1. 5    =     1    A/N complete
+  (0010:0000) 1. 4    =     0    remote fault
+  (0008:0008) 1. 3    =     1    A/N able
+  (0004:0004) 1. 2    =     1    link status
+  (0002:0000) 1. 1    =     0    jabber detect
+  (0001:0001) 1. 0    =     1    extended capabilities
+
+2.     (001c)                 -- PHY ID 1 register --
+  (ffff:001c) 2.15- 0 =    28    OUI portion
+
+3.     (c916)                 -- PHY ID 2 register --
+  (fc00:c800) 3.15-10 =    50    OUI portion
+  (03f0:0110) 3. 9- 4 =    17    manufacturer part number
+  (000f:0006) 3. 3- 0 =     6    manufacturer rev. number
+
+4.     (01e1)                 -- Autonegotiation advertisement register --
+  (8000:0000) 4.15    =     0    next page able
+  (4000:0000) 4.14    =     0    (reserved)
+  (2000:0000) 4.13    =     0    remote fault
+  (1000:0000) 4.12    =     0    (reserved)
+  (0800:0000) 4.11    =     0    asymmetric pause
+  (0400:0000) 4.10    =     0    pause enable
+  (0200:0000) 4. 9    =     0    100BASE-T4 able
+  (0100:0100) 4. 8    =     1    100BASE-TX full duplex able
+  (0080:0080) 4. 7    =     1    100BASE-TX able
+  (0040:0040) 4. 6    =     1    10BASE-T   full duplex able
+  (0020:0020) 4. 5    =     1    10BASE-T   able
+  (001f:0001) 4. 4- 0 =     1    selector = IEEE 802.3
+
+5.     (c5e1)                 -- Autonegotiation partner abilities register --
+  (8000:8000) 5.15    =     1    next page able
+  (4000:4000) 5.14    =     1    acknowledge
+  (2000:0000) 5.13    =     0    remote fault
+  (1000:0000) 5.12    =     0    (reserved)
+  (0800:0000) 5.11    =     0    asymmetric pause able
+  (0400:0400) 5.10    =     1    pause able
+  (0200:0000) 5. 9    =     0    100BASE-T4 able
+  (0100:0100) 5. 8    =     1    100BASE-X full duplex able
+  (0080:0080) 5. 7    =     1    100BASE-TX able
+  (0040:0040) 5. 6    =     1    10BASE-T full duplex able
+  (0020:0020) 5. 5    =     1    10BASE-T able
+  (001f:0001) 5. 4- 0 =     1    selector = IEEE 802.3
+
+
+=> reset
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1e7f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1e68c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1e74c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1e860
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1e530 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1e3cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1e48c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1e5a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1e270 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1e10c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1e1cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1e2e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1dfb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1de4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1df0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1e020
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1dcf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1db8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1dc4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1dd60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1da30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1d8cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1d98c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1daa0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1d770 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1d60c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1d6cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1d7e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1d4b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1d34c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1d40c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1d520
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1d1f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1d08c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1d14c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1d260
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1cf30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1cdcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1ce8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1cfa0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1cc70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1cb0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1cbcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1cce0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1c9b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1c84c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1c90c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1ca20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1c6f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1c58c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1c64c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1c760
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1c430 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1c2cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1c38c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1c4a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1c170 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1c00c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1c0cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1c1e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1beb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1bd4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1be0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1bf20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1bbf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1ba8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1bb4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1bc60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1b930 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1b7cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1b88c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1b9a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1b670 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1b50c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1b5cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1b6e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1b3b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1b24c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1b30c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1b420
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1b0f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1af8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1b04c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1b160
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1ae30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1accc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1ad8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1aea0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1ab70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1aa0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1aacc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1abe0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1a8b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1a74c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1a80c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1a920
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1a5f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1a48c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1a54c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1a660
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1a330 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1a1cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1a28c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1a3a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf1a070 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf19f0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf19fcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf1a0e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf19db0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf19c4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf19d0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf19e20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf19af0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1998c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf19a4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf19b60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf19830 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf196cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1978c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf198a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf19570 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1940c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf194cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf195e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf192b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1914c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1920c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf19320
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf18ff0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf18e8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf18f4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf19060
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf18d30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf18bcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf18c8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf18da0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf18a70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1890c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf189cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf18ae0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf187b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1864c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1870c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf18820
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf184f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1838c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1844c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf18560
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf18230 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf180cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1818c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf182a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf17f70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf17e0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf17ecc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf17fe0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf17cb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf17b4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf17c0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf17d20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf179f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1788c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1794c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf17a60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf17730 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf175cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1768c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf177a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf17470 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1730c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf173cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf174e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf171b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1704c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1710c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf17220
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf16ef0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf16d8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf16e4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf16f60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf16c30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf16acc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf16b8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf16ca0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf16970 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1680c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf168cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf169e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf166b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1654c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1660c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf16720
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf163f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1628c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1634c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf16460
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf16130 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf15fcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1608c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf161a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf15e70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf15d0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf15dcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf15ee0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf15bb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf15a4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf15b0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf15c20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf158f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1578c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1584c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf15960
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf15630 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf154cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1558c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf156a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf15370 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1520c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf152cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf153e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf150b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf14f4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1500c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf15120
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf14df0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf14c8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf14d4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf14e60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf14b30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf149cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf14a8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf14ba0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf14870 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1470c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf147cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf148e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf145b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1444c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1450c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf14620
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf142f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1418c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1424c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf14360
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf14030 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf13ecc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf13f8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf140a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf13d70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf13c0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf13ccc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf13de0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf13ab0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1394c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf13a0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf13b20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf137f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1368c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1374c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf13860
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf13530 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf133cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1348c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf135a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf13270 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1310c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf131cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf132e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf12fb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf12e4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf12f0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf13020
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf12cf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf12b8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf12c4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf12d60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf12a30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf128cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1298c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf12aa0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf12770 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1260c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf126cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf127e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf124b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1234c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1240c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf12520
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf121f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1208c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1214c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf12260
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf11f30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf11dcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf11e8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf11fa0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf11c70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf11b0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf11bcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf11ce0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf119b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1184c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1190c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf11a20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf116f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1158c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1164c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf11760
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf11430 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf112cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1138c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf114a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf11170 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1100c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf110cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf111e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf10eb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf10d4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf10e0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf10f20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf10bf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf10a8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf10b4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf10c60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf10930 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf107cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1088c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf109a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf10670 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1050c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf105cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf106e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf103b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf1024c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1030c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf10420
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf100f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0ff8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf1004c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf10160
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0fe30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0fccc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0fd8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0fea0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0fb70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0fa0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0facc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0fbe0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0f8b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0f74c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0f80c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0f920
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0f5f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0f48c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0f54c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0f660
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0f330 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0f1cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0f28c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0f3a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0f070 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0ef0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0efcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0f0e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0edb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0ec4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0ed0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0ee20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0eaf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0e98c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0ea4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0eb60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0e830 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0e6cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0e78c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0e8a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0e570 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0e40c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0e4cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0e5e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0e2b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0e14c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0e20c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0e320
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0dff0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0de8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0df4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0e060
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0dd30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0dbcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0dc8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0dda0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0da70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0d90c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0d9cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0dae0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0d7b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0d64c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0d70c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0d820
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0d4f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0d38c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0d44c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0d560
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0d230 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0d0cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0d18c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0d2a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0cf70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0ce0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0cecc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0cfe0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0ccb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0cb4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0cc0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0cd20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0c9f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0c88c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0c94c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0ca60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0c730 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0c5cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0c68c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0c7a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0c470 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0c30c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0c3cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0c4e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0c1b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0c04c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0c10c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0c220
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0bef0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0bd8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0be4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0bf60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0bc30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0bacc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0bb8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0bca0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0b970 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0b80c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0b8cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0b9e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0b6b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0b54c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0b60c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0b720
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0b3f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0b28c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0b34c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0b460
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0b130 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0afcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0b08c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0b1a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0ae70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0ad0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0adcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0aee0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0abb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0aa4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0ab0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0ac20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0a8f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0a78c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0a84c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0a960
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0a630 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0a4cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0a58c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0a6a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0a370 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0a20c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0a2cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0a3e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf0a0b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf09f4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0a00c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf0a120
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf09df0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf09c8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf09d4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf09e60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf09b30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf099cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf09a8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf09ba0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf09870 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0970c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf097cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf098e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf095b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0944c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0950c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf09620
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf092f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0918c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0924c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf09360
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf09030 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf08ecc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf08f8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf090a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf08d70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf08c0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf08ccc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf08de0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf08ab0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0894c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf08a0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf08b20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf087f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0868c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0874c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf08860
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf08530 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf083cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0848c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf085a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf08270 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0810c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf081cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf082e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf07fb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf07e4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf07f0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf08020
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf07cf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf07b8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf07c4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf07d60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf07a30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf078cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0798c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf07aa0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf07770 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0760c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf076cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf077e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf074b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0734c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0740c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf07520
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf071f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0708c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0714c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf07260
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf06f30 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf06dcc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf06e8c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf06fa0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf06c70 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf06b0c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf06bcc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf06ce0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf069b0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0684c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0690c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf06a20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf066f0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0658c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0664c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf06760
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf06430 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf062cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0638c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf064a0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf06170 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf0600c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf060cc x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf061e0
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf05eb0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf05d4c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf05e0c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf05f20
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf05bf0 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf05a8c
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf05b4c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf05c60
+
+Resetting CPU ...
+
+"Synchronous Abort" handler, esr 0x96000044
+ELR:     fef5295c
+LR:      fef52930
+x0 : 00001443000040c8 x1 : 000000000000eca8
+x2 : 00000000ff440000 x3 : 0000000000000002
+x4 : 00000000fcf05930 x5 : 0000000000000000
+x6 : 00000000fcf248e3 x7 : 0000000000000064
+x8 : 0000000000000003 x9 : 0000000000000008
+x10: 0000000000000054 x11: 00000000fcf057cc
+x12: 00000000fcf1eb70 x13: 0000000000001e84
+x14: 00000000fcf0588c x15: 00000000fcf1eb70
+x16: 00000000ca621b30 x17: 0000000015e93bdc
+x18: 00000000fcf25e10 x19: 0000000000000000
+x20: 0000000000000000 x21: 0000000000000000
+x22: 00000000fcf28e90 x23: 00000000fefb49c0
+x24: 0000000000000001 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000000000000
+x28: 00000000fcf28ed0 x29: 00000000fcf059a0
+
+Resetting CPU ...
+
+DDR version 1.06 20170424
+In
+LPDDR3
+786MHz
+Bus Width=32 Col=11 Bank=8 Row=15/15 CS=2 Die Bus-Width=32 Size=4096MB
+ddrconfig:7
+OUT
+Boot1 Release Time: 2017-05-18, version: 2.43
+ChipType = 0x11, 128
+emmc reinit
+emmc reinit
+SdmmcInit=2 20
+SdmmcInit=0 0
+BootCapSize=0
+UserCapSize=14756MB
+FwPartOffset=2000 , 0
+StorageInit ok = 49007
+Raw SecureMode = 0
+SecureInit read PBA: 0x4
+SecureInit read PBA: 0x404
+SecureInit read PBA: 0x804
+SecureInit read PBA: 0xc04
+SecureInit read PBA: 0x1004
+SecureInit ret = 0, SecureMode = 0
+LoadTrustBL
+No find bl30.bin
+No find bl32.bin
+Load uboot, ReadLba = 2000
+Load OK, addr=0x200000, size=0x9268c
+RunBL31 0x10000
+NOTICE:  BL31: v1.3(debug):f947c7e
+NOTICE:  BL31: Built : 09:28:45, May 31 2017
+NOTICE:  BL31:Rockchip release version: v1.3
+INFO:    ARM GICv2 driver initialized
+INFO:    Using opteed sec cpu_context!
+INFO:    boot cpu mask: 1
+INFO:    plat_rockchip_pmu_init: pd status 0xe
+INFO:    BL31: Initializing runtime services
+WARNING: No OPTEE provided by BL2 boot loader, Booting device without OPTEE initialization. SMC`s destined for OPTEE will return SMC_UNK
+ERROR:   Error initializing runtime service opteed_fast
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x200000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2017.09-rc4-g22993de (Sep 14 2017 - 21:57:17 +0000), Build: jenkins-linux-build-rock-64-118
+
+Model: Pine64 Rock64
+DRAM:  4 GiB
+MMC:   rksdmmc@ff500000: 1, rksdmmc@ff520000: 0
+*** Warning - bad CRC, using default environment
+
+In:    serial@ff130000
+Out:   serial@ff130000
+Err:   serial@ff130000
+Model: Pine64 Rock64
+Net:   eth0: ethernet@ff540000
+Hit any key to stop autoboot:  2  1  0 
+Card did not respond to voltage select!
+mmc_init: -95, time 10
+switch to partitions #0, OK
+mmc1 is current device
+Scanning mmc 1:6...
+Found /extlinux/extlinux.conf
+Retrieving file: /extlinux/extlinux.conf
+reading /extlinux/extlinux.conf
+255 bytes read in 6 ms (41 KiB/s)
+1:	kernel-4.4
+Retrieving file: /initrd.img
+reading /initrd.img
+2173330 bytes read in 132 ms (15.7 MiB/s)
+Retrieving file: /Image
+reading /Image
+25815552 bytes read in 1467 ms (16.8 MiB/s)
+append: earlycon=uart8250,mmio32,0xff130000 rw root=LABEL=rootfs rootwait rootfstype=ext4 init=/sbin/init coherent_pool=1M ethaddr=82:1d:da:1f:fd:31 eth1addr=82:1d:da:1f:fd:51 serial=2ddb74eed0071ba
+Retrieving file: /dtb
+reading /dtb
+35146 bytes read in 8 ms (4.2 MiB/s)
+## Flattened Device Tree blob at 01f00000
+   Booting using the fdt blob at 0x1f00000
+   Loading Ramdisk to fcd08000, end fcf1a992 ... OK
+   Loading Device Tree to 00000000fccfc000, end 00000000fcd07949 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.0-rc2 (koo@localhost.localdomain) (gcc version 7.2.0 (crosstool-NG crosstool-ng-1.23.0-275-g891f90d)) #2 SMP PREEMPT Tue Dec 5 20:07:11 MST 2017
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Pine64 Rock64
+[    0.000000] earlycon: uart8250 at MMIO32 0x00000000ff130000 (options '')
+[    0.000000] bootconsole [uart8250] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 16 MiB at 0x00000000fe000000
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x00000000feffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0xfdfbea80-0xfdfc057f]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000200000-0x00000000feffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000200000-0x00000000feffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000200000-0x00000000feffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 23 pages/cpu @ffff8000fdf5f000 s55832 r8192 d30184 u94208
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1027656
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: earlycon=uart8250,mmio32,0xff130000 rw root=LABEL=rootfs rootwait rootfstype=ext4 init=/sbin/init coherent_pool=1M ethaddr=82:1d:da:1f:fd:31 eth1addr=82:1d:da:1f:fd:51 serial=2ddb74eed0071ba
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 4065340K/4175872K available (15932K kernel code, 1594K rwdata, 6420K rodata, 1216K init, 536K bss, 94148K reserved, 16384K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000009010000   ( 15936 KB)
+[    0.000000]     .rodata : 0xffff000009010000 - 0xffff000009660000   (  6464 KB)
+[    0.000000]       .init : 0xffff000009660000 - 0xffff000009790000   (  1216 KB)
+[    0.000000]       .data : 0xffff000009790000 - 0xffff00000991ea00   (  1595 KB)
+[    0.000000]        .bss : 0xffff00000991ea00 - 0xffff0000099a4c78   (   537 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7fd000 - 0xffff7dfffec00000   (  4108 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000008000 - 0xffff7e0003fc0000   (    63 MB actual)
+[    0.000000]     memory  : 0xffff800000200000 - 0xffff8000ff000000   (  4078 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000006] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.001801] Console: colour dummy device 80x25
+[    0.002260] console [tty0] enabled
+[    0.002592] bootconsole [uart8250] disabled
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.0-rc2 (koo@localhost.localdomain) (gcc version 7.2.0 (crosstool-NG crosstool-ng-1.23.0-275-g891f90d)) #2 SMP PREEMPT Tue Dec 5 20:07:11 MST 2017
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: Pine64 Rock64
+[    0.000000] earlycon: uart8250 at MMIO32 0x00000000ff130000 (options '')
+[    0.000000] bootconsole [uart8250] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 16 MiB at 0x00000000fe000000
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x00000000feffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0xfdfbea80-0xfdfc057f]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000200000-0x00000000feffffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000200000-0x00000000feffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000200000-0x00000000feffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 23 pages/cpu @ffff8000fdf5f000 s55832 r8192 d30184 u94208
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1027656
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: earlycon=uart8250,mmio32,0xff130000 rw root=LABEL=rootfs rootwait rootfstype=ext4 init=/sbin/init coherent_pool=1M ethaddr=82:1d:da:1f:fd:31 eth1addr=82:1d:da:1f:fd:51 serial=2ddb74eed0071ba
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 4065340K/4175872K available (15932K kernel code, 1594K rwdata, 6420K rodata, 1216K init, 536K bss, 94148K reserved, 16384K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0xffff000008080000 - 0xffff000009010000   ( 15936 KB)
+[    0.000000]     .rodata : 0xffff000009010000 - 0xffff000009660000   (  6464 KB)
+[    0.000000]       .init : 0xffff000009660000 - 0xffff000009790000   (  1216 KB)
+[    0.000000]       .data : 0xffff000009790000 - 0xffff00000991ea00   (  1595 KB)
+[    0.000000]        .bss : 0xffff00000991ea00 - 0xffff0000099a4c78   (   537 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7fd000 - 0xffff7dfffec00000   (  4108 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000008000 - 0xffff7e0003fc0000   (    63 MB actual)
+[    0.000000]     memory  : 0xffff800000200000 - 0xffff8000ff000000   (  4078 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000006] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.001801] Console: colour dummy device 80x25
+[    0.002260] console [tty0] enabled
+[    0.002592] bootconsole [uart8250] disabled
+[    0.003057] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.003090] pid_max: default: 32768 minimum: 301
+[    0.003219] Security Framework initialized
+[    0.005490] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.006648] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.006735] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.006791] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.022393] ASID allocator initialised with 65536 entries
+[    0.030381] Hierarchical SRCU implementation.
+[    0.040151] EFI services will not be available.
+[    0.046454] smp: Bringing up secondary CPUs ...
+[    0.074620] Detected VIPT I-cache on CPU1
+[    0.074678] CPU1: Booted secondary processor [410fd034]
+[    0.102703] Detected VIPT I-cache on CPU2
+[    0.102751] CPU2: Booted secondary processor [410fd034]
+[    0.130790] Detected VIPT I-cache on CPU3
+[    0.130837] CPU3: Booted secondary processor [410fd034]
+[    0.130925] smp: Brought up 1 node, 4 CPUs
+[    0.131015] SMP: Total of 4 processors activated.
+[    0.131034] CPU features: detected feature: 32-bit EL0 Support
+[    0.131237] CPU: All CPU(s) started at EL2
+[    0.131278] alternatives: patching kernel code
+[    0.133317] devtmpfs: initialized
+[    0.143386] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.143486] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.144434] xor: measuring software checksum speed
+[    0.182866]    8regs     :  1153.000 MB/sec
+[    0.222917]    8regs_prefetch:  1027.000 MB/sec
+[    0.262971]    32regs    :  1415.000 MB/sec
+[    0.303026]    32regs_prefetch:  1190.000 MB/sec
+[    0.303045] xor: using function: 32regs (1415.000 MB/sec)
+[    0.303072] pinctrl core: initialized pinctrl subsystem
+[    0.305076] DMI not present or invalid.
+[    0.305568] NET: Registered protocol family 16
+[    0.315097] cpuidle: using governor menu
+[    0.316572] vdso: 2 pages (1 code @ ffff000009016000, 1 data @ ffff000009795000)
+[    0.316617] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.318139] DMA: preallocated 1024 KiB pool for atomic allocations
+[    0.318719] Serial: AMBA PL011 UART driver
+[    0.366998] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.435591] raid6: int64x1  gen()   191 MB/s
+[    0.503651] raid6: int64x1  xor()   178 MB/s
+[    0.571828] raid6: int64x2  gen()   326 MB/s
+[    0.639990] raid6: int64x2  xor()   267 MB/s
+[    0.708103] raid6: int64x4  gen()   513 MB/s
+[    0.776243] raid6: int64x4  xor()   356 MB/s
+[    0.844544] raid6: int64x8  gen()   490 MB/s
+[    0.912473] raid6: int64x8  xor()   370 MB/s
+[    0.980735] raid6: neonx1   gen()   351 MB/s
+[    1.048651] raid6: neonx1   xor()   366 MB/s
+[    1.116833] raid6: neonx2   gen()   568 MB/s
+[    1.184882] raid6: neonx2   xor()   571 MB/s
+[    1.252932] raid6: neonx4   gen()   755 MB/s
+[    1.321060] raid6: neonx4   xor()   712 MB/s
+[    1.389158] raid6: neonx8   gen()   831 MB/s
+[    1.457238] raid6: neonx8   xor()   762 MB/s
+[    1.457257] raid6: using algorithm neonx8 gen() 831 MB/s
+[    1.457275] raid6: .... xor() 762 MB/s, rmw enabled
+[    1.457294] raid6: using neon recovery algorithm
+[    1.457758] ACPI: Interpreter disabled.
+[    1.460481] vcc_host_5v: supplied by vcc_sys
+[    1.460596] vcc_host1_5v: supplied by vcc_sys
+[    1.461474] vgaarb: loaded
+[    1.461851] SCSI subsystem initialized
+[    1.462524] usbcore: registered new interface driver usbfs
+[    1.462634] usbcore: registered new interface driver hub
+[    1.462779] usbcore: registered new device driver usb
+[    1.463681] media: Linux media interface: v0.10
+[    1.463755] Linux video capture interface: v2.00
+[    1.463891] pps_core: LinuxPPS API ver. 1 registered
+[    1.463914] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.463970] PTP clock support registered
+[    1.464208] EDAC MC: Ver: 3.0.0
+[    1.464686] dmi: Firmware registration failed.
+[    1.465050] Advanced Linux Sound Architecture Driver Initialized.
+[    1.465593] Bluetooth: Core ver 2.22
+[    1.465672] NET: Registered protocol family 31
+[    1.465692] Bluetooth: HCI device and connection manager initialized
+[    1.465719] Bluetooth: HCI socket layer initialized
+[    1.465741] Bluetooth: L2CAP socket layer initialized
+[    1.465783] Bluetooth: SCO socket layer initialized
+[    1.466388] NetLabel: Initializing
+[    1.466413] NetLabel:  domain hash size = 128
+[    1.466430] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.466555] NetLabel:  unlabeled traffic allowed by default
+[    1.467656] clocksource: Switched to clocksource arch_sys_counter
+[    1.467885] VFS: Disk quotas dquot_6.6.0
+[    1.467967] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.468159] pnp: PnP ACPI: disabled
+[    1.477406] NET: Registered protocol family 2
+[    1.478180] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.478752] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    1.479512] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.480108] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.480294] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.480716] NET: Registered protocol family 1
+[    1.481148] RPC: Registered named UNIX socket transport module.
+[    1.481174] RPC: Registered udp transport module.
+[    1.481192] RPC: Registered tcp transport module.
+[    1.481209] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.481440] Trying to unpack rootfs image as initramfs...
+[    1.658731] Freeing initrd memory: 2120K
+[    1.660222] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    1.660545] kvm [1]: 8-bit VMID
+[    1.660568] kvm [1]: IDMAP page: 2ff8000
+[    1.660586] kvm [1]: HYP VA range: 800000000000:ffffffffffff
+[    1.661803] kvm [1]: Hyp mode initialized successfully
+[    1.661953] kvm [1]: vgic-v2@ff814000
+[    1.662084] kvm [1]: vgic interrupt IRQ1
+[    1.662114] kvm [1]: virtual timer IRQ4
+[    1.665725] audit: initializing netlink subsys (disabled)
+[    1.665924] audit: type=2000 audit(1.660:1): state=initialized audit_enabled=0 res=1
+[    1.666455] workingset: timestamp_bits=44 max_order=20 bucket_order=0
+[    1.676644] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.677626] NFS: Registering the id_resolver key type
+[    1.677677] Key type id_resolver registered
+[    1.677696] Key type id_legacy registered
+[    1.677730] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.677752] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[    1.678960] fuse init (API version 7.26)
+[    1.679785] 9p: Installing v9fs 9p2000 file system support
+[    1.688720] NET: Registered protocol family 38
+[    1.688854] Key type asymmetric registered
+[    1.689128] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    1.689316] io scheduler noop registered
+[    1.689669] io scheduler cfq registered (default)
+[    1.689695] io scheduler mq-deadline registered
+[    1.689713] io scheduler kyber registered
+[    1.706315] dma-pl330 ff1f0000.dmac: Loaded driver for PL330 DMAC-241330
+[    1.706355] dma-pl330 ff1f0000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-20 Num_Events-16
+[    1.714570] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.716969] ff130000.serial: ttyS2 at MMIO 0xff130000 (irq = 12, base_baud = 1500000) is a 16550A
+[    1.808277] console [ttyS2] enabled
+[    1.809792] SuperH (H)SCI(F) driver initialized
+[    1.810736] msm_serial: driver initialized
+[    1.832713] brd: module loaded
+[    1.841008] loop: module loaded
+[    1.862700] rockchip-spi ff190000.spi: Failed to request TX DMA channel
+[    1.863314] rockchip-spi ff190000.spi: Failed to request RX DMA channel
+[    1.864729] m25p80 spi0.0: found gd25q128, expected m25p128
+[    1.866956] m25p80 spi0.0: gd25q128 (16384 Kbytes)
+[    1.871094] 6 ofpart partitions found on MTD device spi0.0
+[    1.871604] Creating 6 MTD partitions on "spi0.0":
+[    1.872146] 0x000000000000-0x000000008000 : "system"
+[    1.873817] 0x000000008000-0x000000400000 : "loader"
+[    1.875331] 0x000000400000-0x0000007c0000 : "reserved"
+[    1.876930] 0x0000007c0000-0x000000800000 : "vendor"
+[    1.878440] 0x000000800000-0x000000c00000 : "uboot"
+[    1.879991] 0x000000c00000-0x000001000000 : "atf"
+[    1.884143] libphy: Fixed MDIO Bus: probed
+[    1.885923] tun: Universal TUN/TAP device driver, 1.6
+[    1.888047] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    1.888586] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.889197] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    1.889824] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.890388] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    1.891093] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    1.892238] sky2: driver version 1.30
+[    1.894466] rk_gmac-dwmac ff540000.ethernet: PTP uses main clock
+[    1.895130] rk_gmac-dwmac ff540000.ethernet: clock input or output? (input).
+[    1.895813] rk_gmac-dwmac ff540000.ethernet: TX delay(0x26).
+[    1.896331] rk_gmac-dwmac ff540000.ethernet: RX delay(0x11).
+[    1.896850] rk_gmac-dwmac ff540000.ethernet: integrated PHY? (no).
+[    1.897519] rk_gmac-dwmac ff540000.ethernet: clock input from PHY
+[    1.903085] rk_gmac-dwmac ff540000.ethernet: init for RGMII
+[    1.903662] stmmac - user ID: 0x10, Synopsys ID: 0x35
+[    1.904127] rk_gmac-dwmac ff540000.ethernet: Ring mode enabled
+[    1.904657] rk_gmac-dwmac ff540000.ethernet: DMA HW capability register supported
+[    1.905332] rk_gmac-dwmac ff540000.ethernet: Normal descriptors
+[    1.905868] rk_gmac-dwmac ff540000.ethernet: RX Checksum Offload Engine supported
+[    1.906543] rk_gmac-dwmac ff540000.ethernet: COE Type 2
+[    1.907016] rk_gmac-dwmac ff540000.ethernet: TX Checksum insertion supported
+[    1.907884] rk_gmac-dwmac ff540000.ethernet: Wake-Up On Lan supported
+[    1.908522] rk_gmac-dwmac ff540000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    2.008326] libphy: stmmac: probed
+[    2.008661] RTL8211F Gigabit Ethernet stmmac-0:00: attached PHY driver [RTL8211F Gigabit Ethernet] (mii_bus:phy_addr=stmmac-0:00, irq=POLL)
+[    2.009783] RTL8211F Gigabit Ethernet stmmac-0:01: attached PHY driver [RTL8211F Gigabit Ethernet] (mii_bus:phy_addr=stmmac-0:01, irq=POLL)
+[    2.011776] rk_gmac-dwmac ff550000.ethernet: PTP uses main clock
+[    2.012462] rk_gmac-dwmac ff550000.ethernet: clock input or output? (output).
+[    2.013112] rk_gmac-dwmac ff550000.ethernet: Can not read property: tx_delay.
+[    2.013757] rk_gmac-dwmac ff550000.ethernet: set tx_delay to 0x30
+[    2.014308] rk_gmac-dwmac ff550000.ethernet: Can not read property: rx_delay.
+[    2.014952] rk_gmac-dwmac ff550000.ethernet: set rx_delay to 0x10
+[    2.015519] rk_gmac-dwmac ff550000.ethernet: integrated PHY? (yes).
+[    2.016233] rk_gmac-dwmac ff550000.ethernet: cannot get clock clk_mac_refout
+[    2.021907] rk_gmac-dwmac ff550000.ethernet: init for RMII
+[    2.059715] stmmac - user ID: 0x10, Synopsys ID: 0x35
+[    2.060179] rk_gmac-dwmac ff550000.ethernet: Ring mode enabled
+[    2.060708] rk_gmac-dwmac ff550000.ethernet: DMA HW capability register supported
+[    2.061384] rk_gmac-dwmac ff550000.ethernet: Normal descriptors
+[    2.061918] rk_gmac-dwmac ff550000.ethernet: RX Checksum Offload Engine supported
+[    2.062593] rk_gmac-dwmac ff550000.ethernet: COE Type 2
+[    2.063067] rk_gmac-dwmac ff550000.ethernet: TX Checksum insertion supported
+[    2.063718] rk_gmac-dwmac ff550000.ethernet: Wake-Up On Lan supported
+[    2.064339] rk_gmac-dwmac ff550000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    2.065188] libphy: stmmac: probed
+[    2.070447] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.071220] usbcore: registered new interface driver pegasus
+[    2.071840] usbcore: registered new interface driver rtl8150
+[    2.072430] usbcore: registered new interface driver r8152
+[    2.072982] usbcore: registered new interface driver asix
+[    2.073540] usbcore: registered new interface driver ax88179_178a
+[    2.074147] usbcore: registered new interface driver cdc_ether
+[    2.074740] usbcore: registered new interface driver dm9601
+[    2.075304] usbcore: registered new interface driver CoreChips
+[    2.075939] usbcore: registered new interface driver smsc75xx
+[    2.076530] usbcore: registered new interface driver smsc95xx
+[    2.077126] usbcore: registered new interface driver net1080
+[    2.077700] usbcore: registered new interface driver plusb
+[    2.078257] usbcore: registered new interface driver cdc_subset
+[    2.078852] usbcore: registered new interface driver MOSCHIP usb-ethernet driver
+[    2.079608] usbcore: registered new interface driver cdc_ncm
+[    2.080374] VFIO - User Level meta-driver version: 0.3
+[    2.084837] dwc2 ff580000.usb: ff580000.usb supply vusb_d not found, using dummy regulator
+[    2.085673] dwc2 ff580000.usb: ff580000.usb supply vusb_a not found, using dummy regulator
+[    2.099933] dwc2 ff580000.usb: DWC OTG Controller
+[    2.100408] dwc2 ff580000.usb: new USB bus registered, assigned bus number 1
+[    2.101080] dwc2 ff580000.usb: irq 21, io mem 0xff580000
+[    2.102450] hub 1-0:1.0: USB hub found
+[    2.102846] hub 1-0:1.0: 1 port detected
+[    2.104489] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.105090] ehci-pci: EHCI PCI platform driver
+[    2.105569] ehci-platform: EHCI generic platform driver
+[    2.108423] ehci-platform ff5c0000.usb: EHCI Host Controller
+[    2.108978] ehci-platform ff5c0000.usb: new USB bus registered, assigned bus number 2
+[    2.110157] ehci-platform ff5c0000.usb: irq 22, io mem 0xff5c0000
+[    2.123669] ehci-platform ff5c0000.usb: USB 2.0 started, EHCI 1.00
+[    2.125032] hub 2-0:1.0: USB hub found
+[    2.125426] hub 2-0:1.0: 1 port detected
+[    2.126284] ehci-orion: EHCI orion driver
+[    2.126870] ehci-exynos: EHCI EXYNOS driver
+[    2.127415] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    2.128128] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.128731] ohci-pci: OHCI PCI platform driver
+[    2.129236] ohci-platform: OHCI generic platform driver
+[    2.130038] ohci-platform ff5d0000.usb: Generic Platform OHCI controller
+[    2.130666] ohci-platform ff5d0000.usb: new USB bus registered, assigned bus number 3
+[    2.131724] ohci-platform ff5d0000.usb: irq 23, io mem 0xff5d0000
+[    2.196476] hub 3-0:1.0: USB hub found
+[    2.196868] hub 3-0:1.0: 1 port detected
+[    2.197732] ohci-exynos: OHCI EXYNOS driver
+[    2.198800] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.199329] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 4
+[    2.200917] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x02010010
+[    2.201756] xhci-hcd xhci-hcd.0.auto: irq 157, io mem 0xff600000
+[    2.203098] hub 4-0:1.0: USB hub found
+[    2.203491] hub 4-0:1.0: 1 port detected
+[    2.204392] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.204911] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 5
+[    2.205688] usb usb5: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.207122] hub 5-0:1.0: USB hub found
+[    2.207518] hub 5-0:1.0: 1 port detected
+[    2.208705] usbcore: registered new interface driver uas
+[    2.209378] usbcore: registered new interface driver usb-storage
+[    2.214340] i2c /dev entries driver
+[    2.217857] rk808 1-0018: chip id: 0x8050
+[    2.226394] rk808-regulator rk808-regulator: there is no dvs0 gpio
+[    2.226977] rk808-regulator rk808-regulator: there is no dvs1 gpio
+[    2.227569] DCDC_REG1: mapping for mode 1 not defined
+[    2.228295] DCDC_REG1: mapping for mode 2 not defined
+[    2.228837] DCDC_REG1: supplied by vcc_sys
+[    2.231767] DCDC_REG2: mapping for mode 1 not defined
+[    2.232240] DCDC_REG2: mapping for mode 2 not defined
+[    2.232764] DCDC_REG2: supplied by vcc_sys
+[    2.234684] DCDC_REG3: mapping for mode 1 not defined
+[    2.235152] DCDC_REG3: mapping for mode 2 not defined
+[    2.235736] DCDC_REG3: supplied by vcc_sys
+[    2.236375] DCDC_REG4: mapping for mode 1 not defined
+[    2.236843] DCDC_REG4: mapping for mode 2 not defined
+[    2.237361] DCDC_REG4: supplied by vcc_sys
+[    2.238965] LDO_REG1: supplied by vcc_io
+[    2.242735] LDO_REG2: supplied by vcc_io
+[    2.246535] LDO_REG3: supplied by vcc_sys
+[    2.260753] rk808-rtc rk808-rtc: rtc core: registered rk808-rtc as rtc0
+[    2.264276] input: rk805 pwrkey as /devices/platform/ff160000.i2c/i2c-1/1-0018/rk805-pwrkey/input/input0
+[    2.265504] rk3x-i2c ff160000.i2c: Initialized RK3xxx I2C bus at ffff00000a015000
+[    2.267676] IR NEC protocol handler initialized
+[    2.268101] IR RC5(x/sz) protocol handler initialized
+[    2.268556] IR RC6 protocol handler initialized
+[    2.268965] IR JVC protocol handler initialized
+[    2.269374] IR Sony protocol handler initialized
+[    2.269791] IR SANYO protocol handler initialized
+[    2.270216] IR Sharp protocol handler initialized
+[    2.270641] IR MCE Keyboard/mouse protocol handler initialized
+[    2.271167] IR XMP protocol handler initialized
+[    2.276252] Bluetooth: HCI UART driver ver 2.3
+[    2.279417] pwrseq_simple: probe of sdio-pwrseq failed with error -16
+[    2.280252] sdhci: Secure Digital Host Controller Interface driver
+[    2.280807] sdhci: Copyright(c) Pierre Ossman
+[    2.281468] Synopsys Designware Multimedia Card Interface Driver
+[    2.282882] dwmmc_rockchip ff520000.dwmmc: 'num-slots' was deprecated.
+[    2.283592] dwmmc_rockchip ff520000.dwmmc: IDMAC supports 32-bit address mode.
+[    2.284449] dwmmc_rockchip ff520000.dwmmc: Using internal DMA controller.
+[    2.285058] dwmmc_rockchip ff520000.dwmmc: Version ID is 270a
+[    2.285608] dwmmc_rockchip ff520000.dwmmc: DW MMC controller at irq 17,32 bit host data width,256 deep fifo
+[    2.286529] mmc_host mmc0: card is non-removable.
+[    2.303678] mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    2.324658] dwmmc_rockchip ff500000.dwmmc: 'num-slots' was deprecated.
+[    2.325461] dwmmc_rockchip ff500000.dwmmc: IDMAC supports 32-bit address mode.
+[    2.326443] dwmmc_rockchip ff500000.dwmmc: Using internal DMA controller.
+[    2.327082] dwmmc_rockchip ff500000.dwmmc: Version ID is 270a
+[    2.327745] dwmmc_rockchip ff500000.dwmmc: DW MMC controller at irq 18,32 bit host data width,256 deep fifo
+[    2.328758] vcc_sd: supplied by vcc_io
+[    2.329475] dwmmc_rockchip ff500000.dwmmc: Got CD GPIO
+[    2.347729] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    2.359743] mmc_host mmc0: Bus speed (slot 0) = 300000Hz (slot req 300000Hz, actual 300000HZ div = 0)
+[    2.369224] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.377499] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.385706] usbcore: registered new interface driver usbhid
+[    2.386209] usbhid: USB HID core driver
+[    2.389655] Netfilter messages via NETLINK v0.30.
+[    2.390106] nfnl_acct: registering with nfnetlink.
+[    2.390722] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    2.391447] ctnetlink v0.93: registering with nfnetlink.
+[    2.392065] nf_tables: (c) 2007-2009 Patrick McHardy <kaber@trash.net>
+[    2.392843] xt_time: kernel timezone is -0000
+[    2.393241] IPVS: Registered protocols ()
+[    2.393891] IPVS: Connection hash table configured (size=4096, memory=64Kbytes)
+[    2.394736] IPVS: ipvs loaded.
+[    2.395033] IPVS: [rr] scheduler registered.
+[    2.395584] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.396344] Initializing XFRM netlink socket
+[    2.397077] NET: Registered protocol family 10
+[    2.399188] Segment Routing with IPv6
+[    2.399577] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.400437] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.401460] NET: Registered protocol family 17
+[    2.401921] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    2.403071] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    2.403605] Bluetooth: HIDP socket layer initialized
+[    2.404176] 8021q: 802.1Q VLAN Support v1.8
+[    2.404595] 9pnet: Installing 9P2000 support
+[    2.405048] Key type dns_resolver registered
+[    2.406174] registered taskstats version 1
+[    2.407531] Btrfs loaded, crc32c=crc32c-generic
+[    2.410507] mmc_host mmc1: Bus speed (slot 0) = 50000000Hz (slot req 50000000Hz, actual 50000000HZ div = 0)
+[    2.411464] mmc1: new high speed SDHC card at address 0007
+[    2.412401] mmcblk1: mmc1:0007 SD16G 14.4 GiB 
+[    2.415715] mmc_host mmc0: Bus speed (slot 0) = 200000Hz (slot req 200000Hz, actual 200000HZ div = 0)
+[    2.416546] rk808-rtc rk808-rtc: setting system clock to 2017-12-06 09:59:56 UTC (1512554396)
+[    2.418078] ALSA device list:
+[    2.418346]   No soundcards found.
+[    2.418887] of_dma_request_slave_channel: dma-names property of node '/serial@ff130000' missing or empty
+[    2.419754] ttyS2 - failed to request DMA
+[    2.420530] Freeing unused kernel memory: 1216K
+Loading, please wait...
+[    2.422880]  mmcblk1: p1 p2 p3 p4 p5 p6 p7
+[    2.452156] systemd-udevd[1941]: starting version 215
+[    2.483772] mmc_host mmc0: Bus speed (slot 0) = 100000Hz (slot req 100000Hz, actual 100000HZ div = 0)
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... done.
+Begin: Waiting for root file system ... [    3.343705] usb 1-1: new high-speed USB device number 2 using dwc2
+[    3.827127] usb-storage 1-1:1.0: USB Mass Storage device detected
+[    3.829084] scsi host0: usb-storage 1-1:1.0
+Begin: Running /scripts/local-block ... done.
+Begin: Running /scripts/local-block ... done.
+[    4.853598] scsi 0:0:0:0: Direct-Access              Patriot Memory   PMAP PQ: 0 ANSI: 4
+Begin: Running /scripts/local-block ... done.
+[    6.592524] sd 0:0:0:0: [sda] 60604416 512-byte logical blocks: (31.0 GB/28.9 GiB)
+[    6.595068] sd 0:0:0:0: [sda] Write Protect is off
+[    6.597366] sd 0:0:0:0: [sda] No Caching mode page found
+[    6.597866] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[    6.630275]  sda: sda1
+[    6.636881] sd 0:0:0:0: [sda] Attached SCSI removable disk
+Begin: Running /scripts/local-block ... done.
+Begin: Running /scripts/local-block ... done.
+Begin: Running /scripts/local-block ... done.
+done.
+Begin: Will now check root file system ... fsck from util-linux 2.25.2
+fsck: error 2 (No such file or directory) while executing fsck.ext4 for /dev/sda1
+fsck exited with status code 8
+done.
+Warning: File system check failed but did not detect errors
+[   16.625129] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+[   19.542708] systemd[1]: systemd 235 running in system mode. (+PAM -AUDIT -SELINUX -IMA -APPARMOR +SMACK -SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN default-hierarchy=hybrid)
+[   19.544988] systemd[1]: Detected architecture arm64.
+
+Welcome to Arch Linux ARM!
+
+[   19.569177] systemd[1]: Set hostname to <rock64>.
+[   19.732271] random: crng init done
+[   20.205227] systemd[1]: File /usr/lib/systemd/system/systemd-journald.service:33 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[   20.206803] systemd[1]: Proceeding WITHOUT firewalling in effect!
+[   20.234246] systemd[1]: File /usr/lib/systemd/system/systemd-udevd.service:32 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[   20.235806] systemd[1]: Proceeding WITHOUT firewalling in effect!
+[   20.456631] systemd[1]: File /usr/lib/systemd/system/systemd-logind.service:34 configures an IP firewall (IPAddressDeny=any), but the local system does not support BPF/cgroup based firewalling.
+[   20.458191] systemd[1]: Proceeding WITHOUT firewalling in effect!
+[   20.533474] systemd[1]: Reached target Remote Encrypted Volumes.
+[  OK  ] Reached target Remote Encrypted Volumes.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Created slice System Slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+         Mounting Kernel Debug File System...
+[  OK  ] Listening on LVM2 metadata daemon socket.
+[  OK  ] Listening on Device-mapper event daemon FIFOs.
+[  OK  ] Listening on Journal Audit Socket.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Reached target Swap.
+         Mounting Temporary Directory (/tmp)...
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Listening on Process Core Dump Socket.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Reached target Slices.
+[  OK  ] Listening on udev Control Socket.
+         Mounting POSIX Message Queue File System...
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on Network Service Netlink Socket.
+         Mounting Huge Pages File System...
+[  OK  ] Listening on Journal Socket.
+         Starting Create list of required st…ce nodes for the current kernel...
+         Starting Journal Service...
+         Mounting Kernel Configuration File System...
+         Starting Remount Root and Kernel File Systems...
+         Starting Apply Kernel Variables...
+         Starting udev Coldplug all Devices...
+         Mounting FUSE Control File System...
+[  OK  ] Mounted Temporary Directory (/tmp).
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Mounted Kernel Configuration File System.
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Started Create list of required sta…vice nodes for the current kernel.
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Load/Save Random Seed...
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Journal Service.
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Load/Save Random Seed.
+[   21.259613] systemd-journald[2018]: Received request to flush runtime journal from PID 1
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Local File Systems (Pre).
+[  OK  ] Reached target Containers.
+[  OK  ] Started udev Kernel Device Manager.
+         Starting Network Service...
+[  OK  ] Found device /dev/ttyS2.
+[  OK  ] Found device /dev/disk/by-label/boot.
+         Mounting /boot/efi...
+[  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[   29.169281] FAT-fs (mmcblk1p6): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[  OK  ] Mounted /boot/efi.
+[  OK  ] Reached target Local File Systems.
+[  OK  ] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started Entropy Harvesting Daemon.
+[  OK  ] Started D-Bus System Message Bus.
+[   31.549555] RTL8211F Gigabit Ethernet stmmac-0:00: attached PHY driver [RTL8211F Gigabit Ethernet] (mii_bus:phy_addr=stmmac-0:00, irq=POLL)
+         Starting Login Service...
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[   31.651711] rk_gmac-dwmac ff540000.ethernet eth0: PTP not supported by HW
+[   31.652511] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Daily man-db cache update.
+[  OK  ] Started Daily verification of password and group files.
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Reached target Timers.
+[  OK  ] Started Network Service.
+[  OK  ] Reached target Network.
+         Starting Permit User Sessions...
+         Starting Network Name Resolution...
+[  OK  ] Started OpenSSH Daemon.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Login Service.
+[  OK  ] Started Serial Getty on ttyS2.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+[  OK  ] Reached target Host and Network Name Lookups.
+
+Arch Linux 4.14.0-rc2 (ttyS2)
+
+rock64 login: [   35.745391] rk_gmac-dwmac ff540000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   35.746219] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+root
+Password: 
+[   44.176154] audit: type=1006 audit(1512554438.256:2): pid=2074 uid=0 old-auid=4294967295 auid=0 tty=ttyS2 old-ses=4294967295 ses=1 res=1
+[   44.263913] audit: type=1006 audit(1512554438.344:3): pid=2077 uid=0 old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2 res=1
+Last login: Wed Dec  6 09:47:02 on ttyS2
+[root@rock64 ~]# 
+[root@rock64 ~]# 
+[root@rock64 ~]# ping 192.168.0.1
+connect: Network is unreachable
+[root@rock64 ~]# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::801d:daff:fe1f:fd31  prefixlen 64  scopeid 0x20<link>
+        ether 82:1d:da:1f:fd:31  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23  bytes 3269 (3.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 11  bytes 932 (932.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 11  bytes 932 (932.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@rock64 ~]# ifconfig eth0 192.168.0.45
+[root@rock64 ~]# ping 192.168.0.1
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+
+--- 192.168.0.1 ping statistics ---
+7 packets transmitted, 0 received, 100% packet loss, time 6131ms
+
+[root@rock64 ~]# ssh 192.168.0.13
+ssh: connect to host 192.168.0.13 port 22: No route to host
+[root@rock64 ~]# ssh 192.168.0.13ping 192.168.0.1
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
+
+--- 192.168.0.1 ping statistics ---
+13 packets transmitted, 0 received, 100% packet loss, time 12293ms
+
+[root@rock64 ~]# ping 192.168.0.1
+PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
