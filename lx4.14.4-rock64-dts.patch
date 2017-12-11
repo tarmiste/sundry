@@ -1,0 +1,58 @@
+diff -Naur orig/arch/arm64/boot/dts/rockchip/rk3328.dtsi chg/arch/arm64/boot/dts/rockchip/rk3328.dtsi
+--- orig/arch/arm64/boot/dts/rockchip/rk3328.dtsi	2017-12-05 03:26:38.000000000 -0700
++++ chg/arch/arm64/boot/dts/rockchip/rk3328.dtsi	2017-12-11 12:48:24.982744250 -0700
+@@ -543,6 +543,29 @@
+ 		status = "disabled";
+ 	};
+ 
++	gpu: gpu at ff300000 {
++		compatible = "rockchip,rk3328-mali", "arm,mali-450";
++		reg = <0x0 0xff300000 0x0 0x40000>;
++		interrupts = <GIC_SPI 90 IRQ_TYPE_LEVEL_HIGH>,
++			     <GIC_SPI 87 IRQ_TYPE_LEVEL_HIGH>,
++			     <GIC_SPI 93 IRQ_TYPE_LEVEL_HIGH>,
++			     <GIC_SPI 88 IRQ_TYPE_LEVEL_HIGH>,
++			     <GIC_SPI 89 IRQ_TYPE_LEVEL_HIGH>,
++			     <GIC_SPI 91 IRQ_TYPE_LEVEL_HIGH>,
++			     <GIC_SPI 92 IRQ_TYPE_LEVEL_HIGH>;
++		interrupt-names = "gp",
++				  "gpmmu",
++				  "pp",
++				  "pp0",
++				  "ppmmu0",
++				  "pp1",
++				  "ppmmu1";
++		clocks = <&cru ACLK_GPU>, <&cru ACLK_GPU>;
++		clock-names = "bus", "core";
++		resets = <&cru SRST_GPU_A>;
++		status = "disabled";
++	};
++
+ 	h265e_mmu: iommu@ff330200 {
+ 		compatible = "rockchip,iommu";
+ 		reg = <0x0 0xff330200 0 0x100>;
+diff -Naur orig/arch/arm64/boot/dts/rockchip/rk3328-rock64.dts chg/arch/arm64/boot/dts/rockchip/rk3328-rock64.dts
+--- orig/arch/arm64/boot/dts/rockchip/rk3328-rock64.dts	2017-12-05 03:26:38.000000000 -0700
++++ chg/arch/arm64/boot/dts/rockchip/rk3328-rock64.dts	2017-12-11 12:48:24.982744250 -0700
+@@ -144,6 +144,10 @@
+ 	status = "okay";
+ };
+ 
++&gpu {
++	status = "okay";
++};
++
+ &i2c1 {
+ 	status = "okay";
+ 
+diff -Naur orig/Documentation/devicetree/bindings/gpu/arm,mali-utgard.txt chg/Documentation/devicetree/bindings/gpu/arm,mali-utgard.txt
+--- orig/Documentation/devicetree/bindings/gpu/arm,mali-utgard.txt	2017-12-05 03:26:38.000000000 -0700
++++ chg/Documentation/devicetree/bindings/gpu/arm,mali-utgard.txt	2017-12-11 12:53:35.982735016 -0700
+@@ -13,6 +13,7 @@
+       + allwinner,sun50i-h5-mali
+       + amlogic,meson-gxbb-mali
+       + amlogic,meson-gxl-mali
++      + rockchip,rk3328-mali
+       + stericsson,db8500-mali
+ 
+   - reg: Physical base address and length of the GPU registers
