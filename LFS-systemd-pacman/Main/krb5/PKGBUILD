@@ -45,7 +45,7 @@ build() {
               --enable-dns-for-realm   \
               --with-system-verto=no   \
               --enable-dns-for-realm   \
-              --with-ldap
+              --without-ldap
    make
 }
 
