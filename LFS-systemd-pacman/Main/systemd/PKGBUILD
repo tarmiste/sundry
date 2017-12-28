@@ -1,6 +1,6 @@
 # Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
 pkgname=systemd
-pkgver=232
+pkgver=234
 pkgrel=1
 pkgdesc="The systemd package contains programs for controlling the startup, running, and shutdown of the system."
 arch=('i686' 'x86_64')

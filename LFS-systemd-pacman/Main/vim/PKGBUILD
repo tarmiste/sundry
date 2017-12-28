@@ -9,7 +9,7 @@
 
 pkgbase=vim
 pkgname=('vim' 'gvim' 'vim-runtime')
-pkgver=8.0.1415
+pkgver=8.0.586
 _versiondir=80
 pkgrel=1
 url='http://www.vim.org'

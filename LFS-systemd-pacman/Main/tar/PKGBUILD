@@ -4,7 +4,7 @@
 # Contributor: Andreas Radke <andyrtr@archlinux.org>
 
 pkgname=tar
-pkgver=1.30
+pkgver=1.29
 pkgrel=1
 pkgdesc='Utility used to store, backup, and transport files'
 arch=('x86_64')

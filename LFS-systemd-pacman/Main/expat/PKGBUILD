@@ -1,7 +1,7 @@
 # Maintainer:  DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
 
 pkgname=expat
-pkgver=2.2.4
+pkgver=2.2.3
 pkgrel=1
 pkgdesc="The Expat package contains a stream oriented C library for parsing XML."
 arch=('x86_64')

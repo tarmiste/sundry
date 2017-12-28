@@ -1,7 +1,7 @@
 # Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
 
 pkgname=linux-api-headers
-pkgver=4.13.1
+pkgver=4.12.7
 pkgrel=1
 pkgdesc="The Linux API Headers expose the kernel's API for use by Glibc."
 arch=('i686' 'x86_64')

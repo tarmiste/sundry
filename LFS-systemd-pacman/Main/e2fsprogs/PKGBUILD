@@ -3,7 +3,7 @@
 # Contributor: judd <jvinet@zeroflux.org>
 
 pkgname=e2fsprogs
-pkgver=1.43.7
+pkgver=1.43.5
 pkgrel=1
 pkgdesc="Ext2/3/4 filesystem utilities"
 arch=('x86_64')
