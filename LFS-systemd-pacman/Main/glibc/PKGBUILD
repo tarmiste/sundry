@@ -1,0 +1,189 @@
+# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
+
+pkgname=glibc
+pkgver=2.26
+#pkgext="adc7e06"
+#pkgver="${pkgverbase}+${pkgext}"
+pkgrel=1
+pkgdesc="The Glibc package contains the main C library. This library provides the basic routines for allocating memory, searching directories, opening and closing files, reading and writing files, string handling, pattern matching, arithmetic, and so on."
+arch=('x86_64')
+url="http://www.gnu.org/software/libc/"
+groups=('core')
+license=('GPL')
+install='glibc.install'
+makedepends=('bash'
+             'binutils'
+             'coreutils'
+             'diffutils'
+             'gawk'
+             'gcc'
+             'gettext'
+             'grep'
+             'gzip'
+             'linux-api-headers'
+             'make'
+             'perl'
+             'sed'
+             'texinfo')
+depends=('rootfs')
+options=('staticlibs')
+backup=('etc/ld.so.cache'
+        'etc/ld.so.conf'
+        'etc/locale.gen'
+        'etc/nscd.conf'
+        'etc/nsswitch.conf')
+source=("https://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${pkgver}.tar.xz"
+        "http://www.linuxfromscratch.org/patches/downloads/${pkgname}/${pkgname}-${pkgver}-fhs-1.patch"
+        "locale.gen.txt"
+        "locale-gen"
+        "nsswitch.conf")
+
+prepare(){
+  #srcdir is used internally
+  test "z${sourcesdir}" == "z" && sourcesdir=${srcdir} && unset srcdir
+
+  cd "${sourcesdir}/${pkgname}-${pkgver}"
+  patch -Np1 -i "${sourcesdir}/${pkgname}-${pkgver}-fhs-1.patch"
+  mkdir build
+}
+
+build(){
+  #srcdir is used internally
+  test "z${sourcesdir}" == "z" && sourcesdir="${srcdir}" && unset srcdir
+
+  # remove hardening options for building libraries - thanks Arch Linux!
+  CFLAGS=${CFLAGS/-fstack-protector-strong/}
+  CPPFLAGS=${CPPFLAGS/-D_FORTIFY_SOURCE=2/}
+
+  cd "${sourcesdir}/${pkgname}-${pkgver}/build"
+
+  # In chroot, uncomment the following three lines to avoid invalid paths
+  # in debug symbols, however, you will also need to guard "make -k" to avoid
+  # an incorrect replacment of the real /usr/include/limits.h
+  # _gccver=$(gcc --version | grep -o "[0-9]\.[0-9]\.[0-9]")
+  # GCC_INCDIR="/usr/lib/gcc/${CARCH}/${_gccver}/include"
+  # CC="gcc -isystem $GCC_INCDIR -isystem /usr/include" \
+  ../configure                                        \
+      --prefix=/usr                                   \
+      --disable-werror                                \
+      --enable-kernel=3.2.0                           \
+      --enable-stack-protector=strong                 \
+      libc_cv_slibdir=/lib
+  make
+}
+
+check(){
+  #srcdir is used internally in the glibc makefile
+  test "z${sourcesdir}" == "z" && sourcesdir="${srcdir}" && unset srcdir
+
+  cd "${sourcesdir}/${pkgname}-${pkgver}/build"
+  make -k check || true
+
+  # Get test rusults together into one file
+  for file in `find . -name "*.sum"`
+  do
+    cat $file >> tests-summary
+  done
+  _FAILCOUNT=`grep -c "^FAIL" tests-summary`
+  #Number of failures is different based mostly on processor
+  # x86_64=6 on rebuild while using headers that match running kerenel
+
+  # four math tests (math/test-double{,-vlen{2,4}} and math/test-idouble) are
+  # known to fail on completed system
+
+  # elf/tst-protected1{a,b} will alsways fail due to newer binutils
+
+  # posix/tst-getaddrinfo4 will always fail during bootstrap (no inetutils)
+
+  # tst/tst-cputimer1 and rt/tst-cpuclock2 will sometimes fail due to timing
+  # issues on some archs (more frequently in guest VMs, but not limited to)
+
+  # malloc/tst-malloc-usable and nptl/tst-cleanupx4 are known to fail in some
+  # instances
+
+  # Just make sure number of tests is no more than the known 12 failures
+  test x"${_FAILCOUNT}" != "x" || _FAILCOUNT="0"
+  test "${_FAILCOUNT}" -lt "13" || exit 1
+}
+
+package(){
+
+  #srcdir is used internally
+  test "z${sourcesdir}" == "z" && sourcesdir=${srcdir} && unset srcdir
+
+  # locale-gen taken from Arch Linux
+  install -vdm755 "${pkgdir}/usr/bin"
+  install -vm755 "${sourcesdir}/locale-gen" "${pkgdir}/usr/bin"
+  install -vdm755 "${pkgdir}/etc"
+  install -vm644 "${sourcesdir}/locale.gen.txt" "${pkgdir}/etc/locale.gen"
+  # uncommet locales by default required for LFS testsuites
+  echo "# These locales are requried for LFS testsuites, do not comment out" \
+       >> "${pkgdir}/etc/locale.gen"
+  echo "cs_CZ.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "de_DE ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "de_DE@euro ISO-8859-15" >> "${pkgdir}/etc/locale.gen"
+  echo "de_DE.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "en_GB.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "en_HK ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "en_PH ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "en_US ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "en_US.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "es_MX ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "fa_IR UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "fr_FR ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "fr_FR@euro ISO-8859-15" >> "${pkgdir}/etc/locale.gen"
+  echo "fr_FR.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "it_IT ISO-8859-1" >> "${pkgdir}/etc/locale.gen"
+  echo "it_IT.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "ja_JP EUC-JP" >> "${pkgdir}/etc/locale.gen"
+  echo "ru_RU.KOI8-R KOI8-R" >> "${pkgdir}/etc/locale.gen"
+  echo "ru_RU.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "tr_TR.UTF-8 UTF-8" >> "${pkgdir}/etc/locale.gen"
+  echo "zh_CN.GB18030 GB18030" >> "${pkgdir}/etc/locale.gen"
+  echo "" >> "${pkgdir}/etc/locale.gen"
+  # Supply a list of all available locales
+  sed -e '1,3d' -e 's|/| |g' -e 's|\\| |g' -e 's|^|#|g' \
+    ${sourcesdir}/${pkgname}-${pkgver}/localedata/SUPPORTED \
+    >> "${pkgdir}/etc/locale.gen"
+
+  # install distributed files
+  install -vdm755 ${pkgdir}/usr/lib/{locale,systemd/system,tmpfiles.d}
+  install -vdm755 ${pkgdir}/var/cache/nscd
+  install -vm644 ${sourcesdir}/${pkgname}-${pkgver}/nscd/nscd.conf \
+                 ${pkgdir}/etc/nscd.conf
+  install -vm644 ${sourcesdir}/${pkgname}-${pkgver}/nscd/nscd.service \
+                 ${pkgdir}/usr/lib/systemd/system
+  install -vm644 ${sourcesdir}/${pkgname}-${pkgver}/nscd/nscd.tmpfiles \
+                 ${pkgdir}/usr/lib/tmpfiles.d/nscd.conf
+  install -vm644 ${sourcesdir}/nsswitch.conf ${pkgdir}/etc
+
+  # Create ld.so.conf
+  cat >> "${pkgdir}/etc/ld.so.conf" << "EOF"
+# Begin /etc/ld.so.conf
+/usr/local/lib
+/opt/lib
+
+# Add an include directory
+include /etc/ld.so.conf.d/*.conf
+
+EOF
+  install -vdm755 "${pkgdir}/etc/ld.so.conf.d"
+
+  # Finally do the installation from the temporary destination
+  cd "${sourcesdir}/${pkgname}-${pkgver}/build"  
+  make DESTDIR="${pkgdir}" install
+
+  # Remove unneeded static libs (a lot are actually required)
+  rm "${pkgdir}"/usr/lib/lib{anl,BrokenLocale,mvec,nsl,resolv,rt,util}.a
+
+  # Install compatibility and lsb symlinks for x86_64
+  install -vdm755 "${pkgdir}/lib64"
+  ln -s ../lib/ld-linux-x86-64.so.2 "${pkgdir}/lib64"
+  ln -s ../lib/ld-linux-x86-64.so.2 "${pkgdir}/lib64/ld-lsb-x86-64.so.3"
+}
+
+sha256sums=('e54e0a934cd2bc94429be79da5e9385898d2306b9eaf3c92d5a77af96190f6bd'
+            '643552db030e2f2d7ffde4f558e0f5f83d3fabf34a2e0e56ebdb49750ac27b0d'
+            'd42648cea552ba5353a32e264686e992263289d5cc86207314dffc54ab514981'
+            '83f108f915863c7ed0338e2d3e8f2e071a531a090ef8f8b2eb3a956a3c4f04d7'
+            '100d9b725b1148614cd97dc385f47871a0675a3e89ea2d938f28ef98dc7720b1')

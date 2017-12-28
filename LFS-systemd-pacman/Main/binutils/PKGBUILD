@@ -1,0 +1,64 @@
+# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
+
+pkgname=binutils
+pkgver=2.29
+pkgrel=1
+arch=('x86_64')
+pkgdesc="The Binutils package contains a linker, an assembler, and other tools for handling object files."
+url="http://www.gnu.org/software/${pkgname}/"
+license=('GPL')
+groups=('core')
+depends=('glibc'
+         'zlib')
+makedepends=('bash'
+             'binutils'
+             'coreutils'
+             'diffutils'
+             'file'
+             'gawk'
+             'gcc'
+             'grep'
+             'make'
+             'perl'
+             'sed'
+             'texinfo')
+source=("http://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${pkgver}.tar.bz2")
+
+prepare(){
+  cd "${pkgname}-${pkgver}"
+  # Kill $CPP and $CPPFLAGS when testing header files (Thanks Arch Linux)
+  sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" libiberty/configure
+  mkdir -v build
+}
+
+build(){ 
+  cd "${pkgname}-${pkgver}/build"
+  ../configure --prefix=/usr       \
+               --enable-gold       \
+               --enable-ld=default \
+               --enable-plugins    \
+               --enable-shared     \
+               --disable-werror    \
+               --with-system-zlib
+  # Make sure build environment is sane before wasting time
+  make configure-host
+
+  make tooldir=/usr
+}
+
+check(){
+  cd "${pkgname}-${pkgver}/build"
+  make LDFLAGS="" -k check 2>&1 | tee test.log || true
+  # one test fails and four error with new kenerl headers
+  failures=`grep "tests failed" test.log | cut -d " " -f 1`
+  if test "${failures}" != "1"; then
+    echo "Unexpected test failures..." && exit 1
+  fi
+}
+
+package(){
+  cd "${pkgname}-${pkgver}/build"
+  make DESTDIR="${pkgdir}" tooldir=/usr install
+}
+
+sha256sums=('29a29549869039aad75fdf507ac30366da5ad0b974fbff4a8e7148dbf4f40ebf')

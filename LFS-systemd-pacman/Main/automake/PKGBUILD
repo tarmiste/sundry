@@ -1,0 +1,53 @@
+# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
+
+pkgname=automake
+pkgver=1.15.1
+pkgrel=1
+pkgdesc="The Automake package contains programs for generating Makefiles for use with Autoconf."
+arch=('any')
+url="http://www.gnu.org/software/${pkgname}/"
+groups=('core')
+license=('GPL')
+makedepends=('bash'
+             'coreutils'
+             'gettext'
+             'grep'
+             'm4'
+             'make'
+             'perl'
+             'sed'
+             'texinfo')
+depends=('autoconf')
+checkdepends=('gcc'
+              'libtool')
+optdepends=('dejagnu: additional test suite coverage'
+            'python: additional test suite coverage'
+            'gcc-fortran: additional test suite coverage'
+            'jdk: additional test suite coverage'
+            'vala: additional test suite coverage'
+            'emacs: additional test suite coverage'
+            'cscope: additional test suite coverage')
+source=("http://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${pkgver}.tar.xz")
+
+build(){
+  cd "${pkgname}-${pkgver}"
+  ./configure --prefix=/usr \
+              --docdir="/usr/share/doc/${pkgname}-${pkgver}"
+  make
+}
+
+check(){
+  cd "${pkgname}-${pkgver}"
+  # skip faulty python test
+  sed -i "/instmany-python.sh/d" Makefile.in
+  # skip tests that fail with new flex
+  #sed -i "s:./configure:LEXLIB=/usr/lib/libfl.a &:" t/lex-{clean,depend}-cxx.sh
+  make -j4 check
+}
+
+package(){
+  cd "${pkgname}-${pkgver}"
+  make DESTDIR="${pkgdir}" install
+}
+
+sha256sums=('af6ba39142220687c500f79b4aa2f181d9b24e4f8d8ec497cea4ba26c64bedaf')
