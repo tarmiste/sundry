@@ -63,3 +63,10 @@ tar
 texinfo
 vim
 licenses
+
+#
+# non systemd packages:
+# eudev XYZ 3.2.2
+# sysklogd XYZ 1.5.1
+# sysvinit XYZ 2.88dsf
+# udev-lfs XYZ udev-lfs-20140408
