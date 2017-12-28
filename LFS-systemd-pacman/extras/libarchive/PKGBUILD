@@ -8,16 +8,7 @@ arch=('i686' 'x86_64')
 url="http://libarchive.org/"
 license=('BSD')
 groups=('core')
-depends=('acl'
-         'attr'
-         'bzip2'
-         'expat'
-         'libxml2'
-         'lz4'
-         'lzo'
-         'openssl'
-         'xz'
-         'zlib')
+depends=('acl' 'attr' 'bzip2' 'expat' 'libxml2' 'lz4' 'lzo' 'openssl' 'xz' 'zlib')
 source=("http://${pkgname}.org/downloads/${pkgname}-${pkgver}.tar.gz")
 
 build() {

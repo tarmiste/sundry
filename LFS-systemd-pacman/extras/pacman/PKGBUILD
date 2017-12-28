@@ -8,15 +8,9 @@ arch=('i686' 'x86_64')
 url="http://www.archlinux.org/pacman/"
 license=('GPL')
 groups=('core')
-depends=('bash'
-         'curl'
-         'glibc'
-         'gpgme'
-         'libarchive')
-makedepends=('asciidoc'
-             'libxslt')
-checkdepends=('python2'
-              'fakeroot')
+depends=('bash' 'curl' 'glibc' 'gpgme' 'libarchive')
+makedepends=('asciidoc' 'libxslt')
+checkdepends=('python2' 'fakeroot')
 backup=('etc/pacman.conf'
         'etc/makepkg.conf')
 options=('strip'

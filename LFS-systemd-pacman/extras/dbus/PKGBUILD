@@ -8,19 +8,8 @@ arch=('x86_64')
 url="http://www.freedesktop.org/wiki/Software/${pkgname}"
 groups=('core')
 license=('GPL')
-makedepends=('bash'
-             'binutils'
-             'coreutils'
-             'diffutils'
-             'gawk'
-             'gcc'
-             'grep'
-             'make'
-             'sed'
-             'util-linux')
-depends=('glibc'
-         'systemd'
-         'libx11')
+makedepends=('bash' 'binutils' 'coreutils' 'diffutils' 'gawk' 'gcc' 'grep' 'make' 'sed' 'util-linux')
+depends=('glibc' 'systemd' 'libx11')
 optdepends=('doxygen: generate additional documentation'
             'xmlto: generate additional documentation'
             'ducktype: generate additional documentation'

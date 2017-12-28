@@ -8,11 +8,7 @@ url="http://${_pkgname}.sourceforge.net/"
 groups=('core')
 license=('GPL')
 depends=('bash')
-makedepends=('gcc'
-             'grep'
-             'make'
-             'sed'
-             'texinfo')
+makedepends=('gcc' 'grep' 'make' 'sed' 'texinfo')
 source=("https://github.com/libcheck/${pkgname}/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.gz")
 build(){
   cd ${pkgname}-${pkgver}

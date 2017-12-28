@@ -7,12 +7,7 @@ arch=('i686' 'x86_64')
 url="http://www.gnu.org/software/${pkgname}/"
 license=('GPL')
 groups=('core')
-makedepends=('bash'
-             'binutils'
-             'coreutils'
-             'gcc'
-             'glibc'
-             'make')
+makedepends=('bash' 'binutils' 'coreutils' 'gcc' 'glibc' 'make')
 depends=('glibc'
          'systemd'
          $( pacman -Q db >/dev/null 2>&1 && echo 'db' )

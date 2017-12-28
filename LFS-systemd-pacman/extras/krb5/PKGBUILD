@@ -8,9 +8,7 @@ arch=('i686' 'x86_64')
 url="http://web.mit.edu/kerberos/"
 license=('custom')
 groups=('core')
-depends=('e2fsprogs'
-         'openldap'
-         'keyutils')
+depends=('e2fsprogs' 'openldap' 'keyutils')
 makedepends=('perl')
 backup=('etc/krb5.conf'
         'var/lib/krb5kdc/kdc.conf')

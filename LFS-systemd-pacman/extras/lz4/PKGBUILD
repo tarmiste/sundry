@@ -9,8 +9,7 @@ url='https://github.com/Cyan4973/lz4'
 license=('GPL2')
 groups=('core')
 checkdepends=('diffutils')
-depends=('glibc'
-         'gcc')
+depends=('glibc' 'gcc')
 source=("lz4-${pkgver}.tar.gz::https://github.com/Cyan4973/lz4/archive/v${pkgver}.tar.gz")
 
 build() {

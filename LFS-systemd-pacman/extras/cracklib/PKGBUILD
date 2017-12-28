@@ -9,12 +9,7 @@ url="http://www.gnu.org/software/cracklib"
 license=('GPL3')
 groups=('core')
 depends=('glibc')
-makedepends=('bash'
-             'binutils'
-             'coreutils'
-             'gcc'
-             'grep'
-             'make')
+makedepends=('bash' 'binutils' 'coreutils' 'gcc' 'grep' 'make')
 source=("https://github.com/${pkgname}/${pkgname}/releases/download/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.gz"
         "https://github.com/${pkgname}/${pkgname}/releases/download/${pkgname}-${pkgver}/${pkgname}-words-${pkgver}.gz")        
 install="cracklib.install"

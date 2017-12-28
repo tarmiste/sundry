@@ -9,14 +9,7 @@ url="https://sourceforge.net/projects/pcre/"
 license=('GPL3')
 groups=('core')
 depends=('glibc')
-makedepends=('bash'
-             'binutils'
-             'coreutils'
-             'gcc'
-             'gettext'
-             'grep'
-             'make'
-             'texinfo')
+makedepends=('bash' 'binutils' 'coreutils' 'gcc' 'gettext' 'grep' 'make' 'texinfo')
 source=("https://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.bz2")        
 
 build(){
