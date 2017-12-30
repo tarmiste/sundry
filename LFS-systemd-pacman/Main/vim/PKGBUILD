@@ -31,7 +31,7 @@ sha512sums=('f8f7f9babf7bca50bb5e80b85ca3d74172c3da783b3a2b13f67cce802f01974fe74
             '1e06e981691b17662fd0fddac5c00c87c920d1b4a1cbb6191c42d57cc40b00af12710e26b22fcfc0901bb8142b15f6a04aa65cec2d9b3bb9d5a06cb650d3ab9c')
 
 prepare() {
-  (cd vim-${pkgver}/src
+  (cd vim${_versiondir}/src
     # define the place for the global (g)vimrc file (set to /etc/vimrc)
     sed -i 's|^.*\(#define SYS_.*VIMRC_FILE.*"\) .*$|\1|' feature.h
     sed -i 's|^.*\(#define VIMRC_FILE.*"\) .*$|\1|' feature.h
@@ -42,7 +42,7 @@ prepare() {
 
 build() {
   msg2 "Building vim..."
-  (cd vim-${pkgver}
+  (cd vim${_versiondir}/src
     ./configure \
       --prefix=/usr \
       --localstatedir=/var/lib/vim \
@@ -89,7 +89,7 @@ build() {
 }
 
 check() {
-  cd vim-${pkgver}
+  cd vim${_versiondir}/src
   TERM=xterm make -j1 test
 }
 
@@ -97,7 +97,7 @@ package_vim-runtime() {
   pkgdesc='Runtime for vim and gvim'
   backup=('etc/vimrc')
 
-  cd vim-${pkgver}
+  cd vim${_versiondir}/src
 
   make -j1 VIMRCLOC=/etc DESTDIR="${pkgdir}" install
   # man and bin files belong to 'vim'
