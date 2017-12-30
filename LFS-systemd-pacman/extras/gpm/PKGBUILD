@@ -10,9 +10,9 @@ url="http://www.nico.schottelius.org/software/gpm/"
 license=('GPL')
 depends=('bash' 'procps-ng')
 options=('!makeflags')
-source=(http://www.nico.schottelius.org/software/gpm/archives/${pkgname}-${pkgver}.tar.lzma
+source=(http://www.nico.schottelius.org/software/gpm/archives/${pkgname}-${pkgver}.tar.bz2
         gpm.sh gpm.service)
-sha1sums=('8d9f3655c80ce7667d31ede2a100b44986480369'
+sha1sums=('08aaceddf7976b98ad3c43143012d3b89a296a40'
           '94447c6f8bfadd062efa1a747a597426f339d13e'
           'f9bde96eb9c78da9f225bcf40822647f6592cf23')
 

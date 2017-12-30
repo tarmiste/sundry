@@ -49,7 +49,7 @@ optdepends=('axtls: use axtls instead of OpenSSL for SSL support'
 options=('strip'
          'debug')
 _confargs=""
-source=("http://${pkgname}.haxx.se/download/${pkgname}-${pkgver}.lzma")
+source=("http://${pkgname}.haxx.se/download/${pkgname}-${pkgver}.tar.lzma")
 
 build() {
   #Handle optional deps
