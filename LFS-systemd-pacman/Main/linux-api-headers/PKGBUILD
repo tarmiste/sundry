@@ -36,4 +36,4 @@ package(){
   cp -rv dest/include/* ${pkgdir}/usr/include
 }
 
-sha256sums=('decee7a2de34aea921fce3e7934f520790fe43176de29bd9718a84419ca6e1ce')
+sha256sums=('7ec25c6eb5f2c6c4e0ef554600caa950cb18386334fd4af8ae97dced7981be93')
