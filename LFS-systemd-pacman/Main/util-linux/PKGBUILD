@@ -4,8 +4,8 @@
 # Contributor: judd <jvinet@zeroflux.org>
 
 pkgbase=util-linux
-pkgname=(util-linux libutil-linux)
-_pkgmajor=2.31
+pkgname=(util-linux)
+_pkgmajor=2.30
 pkgver=${_pkgmajor}.1
 pkgrel=1
 pkgdesc="Miscellaneous system utilities for Linux"
@@ -33,19 +33,18 @@ sha256sums=('1a51b16fa9cd51d26ef9ab52d2f1de12403b810fc8252bf7d478df91b3cddf11'
 
 build() {
   cd "$pkgbase-$pkgver"
-
-  ./configure --prefix=/usr \
-              --libdir=/usr/lib \
-              --bindir=/usr/bin \
-              --localstatedir=/run \
-              --enable-fs-paths-extra=/usr/bin \
-              --enable-raw \
-              --enable-vipw \
-              --enable-newgrp \
-              --enable-chfn-chsh \
-              --enable-write \
-              --enable-mesg \
-              --with-python=3
+  #mkdir -pv ${pkgdir}/var/lib/hwclock
+  ./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \
+            --docdir=/usr/share/doc/util-linux-2.30.1 \
+            --disable-chfn-chsh  \
+            --disable-login      \
+            --disable-nologin    \
+            --disable-su         \
+            --disable-setpriv    \
+            --disable-runuser    \
+            --disable-pylibmount \
+            --disable-static     \
+            --without-python
 
   make
 }
@@ -54,7 +53,7 @@ package_util-linux() {
   conflicts=('eject' 'zramctl' 'rfkill')
   provides=('eject' 'zramctl' 'rfkill')
   replaces=('zramctl' 'rfkill')
-  depends=('pam' 'shadow' 'coreutils' 'libsystemd' 'libcap-ng' 'libutil-linux')
+  depends=('pam' 'shadow' 'coreutils' 'libsystemd' 'libcap-ng' )
   optdepends=('python: python bindings to libmount')
   groups=('base' 'base-devel')
   backup=(etc/pam.d/chfn
@@ -66,45 +65,4 @@ package_util-linux() {
   cd "$pkgbase-$pkgver"
 
   make DESTDIR="$pkgdir" install
-
-  # setuid chfn and chsh
-  chmod 4755 "$pkgdir"/usr/bin/{newgrp,ch{sh,fn}}
-
-  # install PAM files for login-utils
-  install -Dm644 "$srcdir/pam-common" "$pkgdir/etc/pam.d/chfn"
-  install -m644 "$srcdir/pam-common" "$pkgdir/etc/pam.d/chsh"
-  install -m644 "$srcdir/pam-login" "$pkgdir/etc/pam.d/login"
-  install -m644 "$srcdir/pam-su" "$pkgdir/etc/pam.d/su"
-  install -m644 "$srcdir/pam-su" "$pkgdir/etc/pam.d/su-l"
-
-  # TODO(dreisner): offer this upstream?
-  sed -i '/ListenStream/ aRuntimeDirectory=uuidd' "$pkgdir/usr/lib/systemd/system/uuidd.socket"
-
-  # adjust for usrmove
-  # TODO(dreisner): fix configure.ac upstream so that this isn't needed
-  cd "$pkgdir"
-  mv {,usr/}sbin/* usr/bin
-  rmdir sbin usr/sbin
-
-  ### runtime libs are shipped as part of libutil-linux
-  rm "$pkgdir"/usr/lib/lib*.{a,so}*
-
-  ### install systemd-sysusers
-  install -Dm644 "$srcdir/util-linux.sysusers" \
-    "$pkgdir/usr/lib/sysusers.d/util-linux.conf"
-
-  install -Dm644 "$srcdir/60-rfkill.rules" \
-    "$pkgdir/usr/lib/udev/rules.d/60-rfkill.rules"
-
-  install -Dm644 "$srcdir/rfkill-unblock_.service" \
-    "$pkgdir/usr/lib/systemd/system/rfkill-unblock@.service"
-  install -Dm644 "$srcdir/rfkill-block_.service" \
-    "$pkgdir/usr/lib/systemd/system/rfkill-block@.service"
-}
-
-package_libutil-linux() {
-  pkgdesc="util-linux runtime libraries"
-  provides=('libblkid.so' 'libfdisk.so' 'libmount.so' 'libsmartcols.so' 'libuuid.so')
-
-  make -C "$pkgbase-$pkgver" DESTDIR="$pkgdir" install-usrlib_execLTLIBRARIES
 }
