@@ -23,7 +23,7 @@ validpgpkeys=('EAF669B31E31E1DECBD11513DDBC579DAB37FBA9') # Gavin Smith
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr
+  ./configure --prefix=/usr --disable-static
   make
 }
 
