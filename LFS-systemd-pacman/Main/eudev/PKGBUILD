@@ -10,10 +10,13 @@ groups=('core')
 license=('GPL')
 makedepends=('binutils'
              'coreutils'
+             'gawk'
              'gcc'
              'glibc'
+             'grep'
+             'gperf'
              'make'
-             'patch')
+             'sed')
 depends=('glibc')
 source=("http://dev.gentoo.org/~blueness/${pkgname}/${pkgname}-${pkgver}.tar.gz"
         "http://anduin.linuxfromscratch.org/LFS/udev-lfs-20140408.tar.bz2")
