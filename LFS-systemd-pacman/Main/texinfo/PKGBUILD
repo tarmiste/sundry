@@ -15,7 +15,7 @@ depends=(ncurses gzip perl sh)
 source=(https://ftp.gnu.org/pub/gnu/$pkgname/$pkgname-$pkgver.tar.xz{,.sig}
         texinfo-install.hook
         texinfo-remove.hook)
-md5sums=('3715197e62e0e07f85860b3d7aab55ed'
+md5sums=('2a676c8339efe6ddea0f1cb52e626d15'
          'SKIP'
          '9a98fb162650ff3065f9a4ebec22db36'
          '5590fb3ef9ec309c98f5a4d85eca49da')

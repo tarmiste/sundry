@@ -49,8 +49,7 @@ backup=('etc/dbus-1/system.d/org.freedesktop.systemd1.conf'
         'etc/systemd/user.conf'
         'etc/udev/udev.conf')
 install=systemd.install
-source=("http://anduin.linuxfromscratch.org/sources/other/${pkgname}/${pkgname}-${pkgver}.tar.xz"
-        "http://www.linuxfromscratch.org/patches/downloads/${pkgname}/${pkgname}-${pkgver}-gperf_size_t-1.patch")
+source=("http://anduin.linuxfromscratch.org/sources/other/${pkgname}/${pkgname}-${pkgver}.tar.xz")
 
 prepare(){
   cd "${pkgname}-${pkgver}"
@@ -102,5 +101,4 @@ password required pam_deny.so
 EOF
 }
 
-sha256sums=('71a48202057dc53ea7a3caa1e28f97ed19bd45fb1d4b7487ee8fcc1d4cad6a39'
-            'f37f8501d564c014de73dfb2f248ca643ede4edb770982f0418735410e13cbe1')
+sha256sums=('6f658abbac658631988c9d116b6c93fab870b8634dec3b3fd29bb2a130b4a5cf')

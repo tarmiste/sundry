@@ -15,7 +15,7 @@ depends=('glibc' 'acl' 'attr')
 options=('!emptydirs')
 validpgpkeys=('325F650C4C2B6AD58807327A3602B07F55D0C732') # Sergey Poznyakoff
 source=("https://ftp.gnu.org/gnu/$pkgname/$pkgname-$pkgver.tar.xz"{,.sig})
-md5sums=('2d01c6cd1387be98f57a0ec4e6e35826'
+md5sums=('a1802fec550baaeecff6c381629653ef'
          'SKIP')
 
 prepare() {
