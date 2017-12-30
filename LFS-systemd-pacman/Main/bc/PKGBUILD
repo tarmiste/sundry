@@ -34,6 +34,7 @@ sed -e '1   s/^/{"/' \
 sed -e '$ s/$/0}/' \
     -i libmath.h
 EOF
+###XXX more goo from LFS?j
 }
 
 build(){

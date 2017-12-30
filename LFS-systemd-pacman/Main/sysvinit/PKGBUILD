@@ -1,0 +1,32 @@
+# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
+
+pkgname=sysvinit
+pkgver=2.88dsf
+pkgrel=1
+pkgdesc="The Sysvinit package contains programs for controlling the startup, running, and shutdown of the system."
+arch=('x86_64')
+url="http://savannah.nongnu.org/projects/sysvinit"
+groups=('core')
+license=('GPL')
+makedepends=('binutils'
+             'coreutils'
+             'gcc'
+             'make'
+             'sed')
+depends=('glibc')
+source=("http://download.savannah.gnu.org/releases/${pkgname}/${pkgname}-${pkgver}.tar.bz2"
+        "http://www.linuxfromscratch.org/patches/downloads/${pkgname}/${pkgname}-${pkgver}-consolidated-1.patch")
+
+build(){
+  cd "${pkgname}-${pkgver}"
+  patch -Np1 -i "${srcdir}/${pkgname}-${pkgver}-consolidated-1.patch"
+  make -C src
+}
+
+package(){
+  cd "${pkgname}-${pkgver}"
+  make -C src ROOT="${pkgdir}" install
+}
+
+sha256sums=('60bbc8c1e1792056e23761d22960b30bb13eccc2cabff8c7310a01f4d5df1519'
+            'e9b6fcf9c59873ca024b856f895e1e322a483db221a37400775d4e0b2bc842ac')
