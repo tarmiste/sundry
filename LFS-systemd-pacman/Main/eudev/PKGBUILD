@@ -1,0 +1,56 @@
+# Maintainer: DJ Lucas <dj_AT_linuxfromscratch_DOT_org>
+
+pkgname=eudev
+pkgver=3.2.2
+pkgrel=1
+pkgdesc="The Eudev package contains programs for dynamic creation of device nodes."
+arch=('x86_64')
+url="http://www.infodrom.org/projects/eudev"
+groups=('core')
+license=('GPL')
+makedepends=('binutils'
+             'coreutils'
+             'gcc'
+             'glibc'
+             'make'
+             'patch')
+depends=('glibc')
+source=("http://dev.gentoo.org/~blueness/${pkgname}/${pkgname}-${pkgver}.tar.gz"
+        "http://anduin.linuxfromscratch.org/LFS/udev-lfs-20140408.tar.bz2")
+
+build(){
+  cd "${pkgname}-${pkgver}"
+  sed -r -i 's|/usr(/bin/test)|\1|' test/udev-test.pl
+  sed -i '/keyboard_lookup_key/d' src/udev/udev-builtin-keyboard.c
+cat > config.cache << "EOF"
+HAVE_BLKID=1
+BLKID_LIBS="-lblkid"
+BLKID_CFLAGS="-I/tools/include"
+EOF
+   ./configure --prefix=/usr           \
+            --bindir=/sbin          \
+            --sbindir=/sbin         \
+            --libdir=/usr/lib       \
+            --sysconfdir=/etc       \
+            --libexecdir=/lib       \
+            --with-rootprefix=      \
+            --with-rootlibdir=/lib  \
+            --enable-manpages       \
+            --disable-static        \
+            --config-cache
+
+
+   LIBRARY_PATH=/tools/lib make
+   mkdir -pv ${pkgdir}/lib/udev/rules.d
+   mkdir -pv ${pkgdir}/etc/udev/rules.d
+}
+
+package(){
+  cd "${pkgname}-${pkgver}"
+#  make LD_LIBRARY_PATH=/tools/lib install
+#  tar -xvf ../udev-lfs-20140408.tar.bz2
+#  make -f udev-lfs-20140408/Makefile.lfs install
+}
+
+sha256sums=('3e4c56ec2fc1854afd0a31f3affa48f922c62d40ee12a0c1a4b4f152ef5b0f63'
+            'd72618f575ad43b9216f47801c31fdf4c1e6d8167f5a235b9e2fcd94dc2d4fc7')
