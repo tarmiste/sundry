@@ -32,18 +32,14 @@ prepare() {
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
-	./configure \
-		--prefix=/usr \
-		--exec-prefix=/ \
-		--sysconfdir=/etc \
-		--libdir=/usr/lib \
-		--bindir=/usr/bin \
-		--sbindir=/usr/bin \
-		--enable-watch8bit \
-		--with-systemd \
-		--disable-kill \
+        ./configure --prefix=/usr                            \
+            --exec-prefix=                           \
+            --libdir=/usr/lib                        \
+            --docdir=/usr/share/doc/procps-ng-3.3.12 \
+            --disable-static                         \
+            --disable-kill                           \
+            --with-systemd
 
-	# kill is provided by util-linux
 
 	make
 }
@@ -51,4 +47,7 @@ build() {
 package() {
 	cd "${srcdir}/${pkgname}-${pkgver}"
 	make DESTDIR="${pkgdir}" install
+        mkdir -pv ${pkgdir}/lib
+        mv -v ${pkgdir}/usr/lib/libprocps.so.* ${pkgdir}/lib
+        ln -sfv ../../lib/$(readlink /usr/lib/libprocps.so) ${pkgdir}/usr/lib/libprocps.so
 }
