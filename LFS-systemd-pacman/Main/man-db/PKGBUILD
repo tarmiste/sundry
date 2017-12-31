@@ -37,15 +37,14 @@ prepare() {
 
 build() {
   cd ${pkgname}-${pkgver}
-  ./configure --prefix=/usr \
-    --sbindir=/usr/bin \
-    --sysconfdir=/etc \
-    --libexecdir=/usr/lib \
-    --with-db=gdbm \
-    --disable-setuid \
-    --enable-cache-owner=root \
-    --enable-mandirs=GNU \
-    --with-sections="1 n l 8 3 0 2 5 4 9 6 7"
+  ./configure --prefix=/usr                        \
+    --docdir=/usr/share/doc/man-db-2.7.6.1 \
+    --sysconfdir=/etc                    \
+    --disable-setuid                     \
+    --enable-cache-owner=bin             \
+    --with-browser=/usr/bin/lynx         \
+    --with-vgrind=/usr/bin/vgrind        \
+    --with-grap=/usr/bin/grap
   make
 }
 
@@ -57,17 +56,4 @@ check() {
 package() {
   cd ${pkgname}-${pkgver}
   make DESTDIR=${pkgdir} install
-
-  # part of groff pkg
-  rm -f ${pkgdir}/usr/bin/zsoelim
-
-  # script from LFS to convert manpages, see
-  # http://www.linuxfromscratch.org/lfs/view/6.4/chapter06/man-db.html
-  install -D -m755 ${srcdir}/convert-mans  ${pkgdir}/usr/bin/convert-mans
-
-  # install man-db update timer
-  install -D -m644 ${srcdir}/man-db.timer ${pkgdir}/usr/lib/systemd/system/man-db.timer
-  install -D -m644 ${srcdir}/man-db.service ${pkgdir}/usr/lib/systemd/system/man-db.service
-  install -d -m755 ${pkgdir}/usr/lib/systemd/system/multi-user.target.wants
-  ln -s ../man-db.timer ${pkgdir}//usr/lib/systemd/system/multi-user.target.wants/man-db.timer
 }
