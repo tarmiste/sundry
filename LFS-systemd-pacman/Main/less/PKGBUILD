@@ -19,7 +19,7 @@ md5sums=('dcc8bf183a83b362d37fe9ef8df1fb60'
 
 build() {
   cd $pkgname-$pkgver
-  sh configure --prefix=/usr --sysconfdir=/etc --with-regex=pcre
+  sh configure --prefix=/usr --sysconfdir=/etc
   make
 }
 
@@ -27,5 +27,3 @@ package() {
   cd $pkgname-$pkgver
   make DESTDIR="$pkgdir" install
 }
-
-# vim:set ts=2 sw=2 et:

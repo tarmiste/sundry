@@ -16,7 +16,8 @@ validpgpkeys=('AC0A4FF12611B6FCCF01C111393587D97D86500B') # Colin Watson <cjwats
 
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr
+  #./configure --prefix=/usr
+  PKG_CONFIG_PATH=/tools/lib/pkgconfig ./configure --prefix=/usr
   make
 }
 

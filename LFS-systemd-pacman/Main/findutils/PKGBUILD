@@ -16,13 +16,10 @@ sha1sums=('f18e8aaee3f3d4173a1f598001003be8706d28b0')
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
-  # Don't build or install locate because we use mlocate,
-  # which is a secure version of locate.
-  sed -i '/^SUBDIRS/s/locate//' Makefile.in
+  # Suppress a test which on some machines can loop forever:
+  sed -i 's/test-lock..EXEEXT.//' tests/Makefile.in
 
-  ./configure --prefix=/usr
-  # don't build locate, but the docs want a file in there.
-  make -C locate dblocation.texi
+  ./configure --prefix=/usr --localstatedir=/var/lib/locate
   make
 }
 

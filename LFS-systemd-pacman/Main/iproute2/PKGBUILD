@@ -36,28 +36,23 @@ sha256sums=('2e0a4c4262d9f6c169885a6e16c4c5c5f1ef6fd57b6a0e7b41f42be5bb6ebd7d'
 prepare() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
-  # set correct fhs structure
-  patch -Np1 -i "${srcdir}/0001-make-iproute2-fhs-compliant.patch"
+  sed -i /ARPD/d Makefile
+  sed -i 's/arpd.8//' man/man8/Makefile
+  rm -v doc/arpd.sgml
+  sed -i 's/m_ipt.o//' tc/Makefile
 
   # do not treat warnings as errors
   sed -i 's/-Werror//' Makefile
-
 }
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-
-  ./configure
+  #./configure
   make
 }
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-
-  make DESTDIR="${pkgdir}" SBINDIR="/usr/bin" install
-
-  # libnetlink isn't installed, install it FS#19385
-  install -Dm0644 include/libnetlink.h "${pkgdir}/usr/include/libnetlink.h"
-  install -Dm0644 lib/libnetlink.a "${pkgdir}/usr/lib/libnetlink.a"
+  make DOCDIR=/usr/share/doc/iproute2-.12.0 DESTDIR="${pkgdir}" SBINDIR="/usr/bin" install
 }
 

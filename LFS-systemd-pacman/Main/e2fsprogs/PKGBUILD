@@ -21,39 +21,44 @@ sha256sums=('261f3d9ade383fbf032a19140c9c25e998cc0f71a1ae686614fb3ae0eb955a17'
             'cc45386c1d71f438ad648fd7971e49e3074ad9dbacf9dd3a5b4cb61fd294ecbb')
 
 
-prepare() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-
-  # Remove unnecessary init.d directory
-  sed -i '/init\.d/s|^|#|' misc/Makefile.in
-}
-
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
-  ./configure --prefix=/usr --with-root-prefix="" --libdir=/usr/lib \
-      --sbindir=/usr/bin --enable-elf-shlibs --disable-fsck --disable-uuidd \
-      --disable-libuuid --disable-libblkid
-
+  mkdir -pv build
+  cd build
+  if [ -d /tools ]
+  then
+    LIBS=-L/tools/lib                    \
+    CFLAGS=-I/tools/include              \
+    PKG_CONFIG_PATH=/tools/lib/pkgconfig \
+  fi
+  ../configure --prefix=/usr           \
+             --bindir=/bin           \
+             --with-root-prefix=""   \
+             --enable-elf-shlibs     \
+             --disable-libblkid      \
+             --disable-libuuid       \
+             --disable-uuidd         \
+             --disable-fsck
   make
 }
 
 package() {
   unset MAKEFLAGS
-
   cd "${srcdir}/${pkgname}-${pkgver}"
-  make DESTDIR="${pkgdir}" install install-libs
+  cd build
+  #ln -sfv /tools/lib/lib{blk,uu}id.so.1 lib
+  #make LD_LIBRARY_PATH=/tools/lib check
 
-  sed -i -e 's/^AWK=.*/AWK=awk/' "${pkgdir}/usr/bin/compile_et"
+  make DESTDIR="${pkgdir}" install
+  make DESTDIR="${pkgdir}" install-libs
 
-  # remove references to build directory
-  sed -i -e 's#^SS_DIR=.*#SS_DIR="/usr/share/ss"#' "${pkgdir}/usr/bin/mk_cmds"
-  sed -i -e 's#^ET_DIR=.*#ET_DIR="/usr/share/et"#' "${pkgdir}/usr/bin/compile_et"
+  chmod -v u+w ${pkgdir}/usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
 
-  # remove static libraries with a shared counterpart
-  rm "${pkgdir}"/usr/lib/lib{com_err,e2p,ext2fs,ss}.a
-
-  # install MIT license
-  install -Dm644 "${srcdir}/MIT-LICENSE" \
-    "${pkgdir}/usr/share/licenses/${pkgname}/MIT-LICENSE"
+  gunzip -v ${pkgdir}/usr/share/info/libext2fs.info.gz
+  install-info --dir-file=${pkgdir}/usr/share/info/dir ${pkgdir}/usr/share/info/libext2fs.info
+  
+  makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo
+  install -v -m644 doc/com_err.info ${pkgdir}/usr/share/info
+  install-info --dir-file=${pkgdir}/usr/share/info/dir ${pkgdir}/usr/share/info/com_err.info
 }
