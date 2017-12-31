@@ -45,6 +45,7 @@ check() {
 package() {
   cd $pkgname-$pkgver
   make DESTDIR="$pkgdir" install
+  make -C doc DESTDIR="$pkgdir" install-html docdir=${pkgdir}/usr/share/doc/tar-1.29
 }
 
 # vim:set ts=2 sw=2 et:
