@@ -9,7 +9,7 @@ source=(${pkgname}-${pkgver}.tar.xz)
 
 build() {
     cd "${pkgname}-${pkgver}"
-    GCC=gcc ./configure --prefix=/usr
+    CC=gcc ./configure --prefix=/usr
     make
 }
 
