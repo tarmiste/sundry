@@ -35,7 +35,8 @@ package() {
     for lib in ncurses form panel menu ; do
 	rm -vf                    ${pkgdir}/usr/lib/lib${lib}.so
 	echo "INPUT(-l${lib}w)" > ${pkgdir}/usr/lib/lib${lib}.so
-	ln -sfv ${lib}w.pc        ${pkgdir}/usr/lib/pkgconfig/${lib}.pc
+	#ln -sfv ${lib}w.pc        ${pkgdir}/usr/lib/pkgconfig/${lib}.pc
+	ln -sfv ${lib}w.pc        ${pkgdir}/usr/share/pkgconfig/${lib}.pc
     done
 
     rm -vf                      ${pkgdir}/usr/lib/libcursesw.so
