@@ -1,0 +1,20 @@
+Sun Dec 31 14:32:52 MST 2017
+
+KB: 1614256	/mnt/lfs81tools
+
+mkdir: created directory ‘/mnt/lfs81tools/dev’
+mkdir: created directory ‘/mnt/lfs81tools/proc’
+mkdir: created directory ‘/mnt/lfs81tools/sys’
+mkdir: created directory ‘/mnt/lfs81tools/run’
+mount: /dev bound on /mnt/lfs81tools/dev.
+mount: devpts mounted on /mnt/lfs81tools/dev/pts.
+mount: proc mounted on /mnt/lfs81tools/proc.
+mount: sysfs mounted on /mnt/lfs81tools/sys.
+mount: tmpfs mounted on /mnt/lfs81tools/run.
+
+
+Totalseconds: 1
+
+
+KB: 1614256	/mnt/lfs81tools
+

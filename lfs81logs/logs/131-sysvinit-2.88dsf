@@ -1,0 +1,163 @@
+Mon Jan  1 06:41:18 GMT 2018
+
+KB: 2912676	/
+
+patching file src/Makefile
+patching file src/init.c
+patching file src/shutdown.c
+make[1]: Entering directory '/sources/sysvinit-2.88dsf/src'
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o init.o init.c
+init.c: In function 'startup':
+init.c:1214:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (!(ch->flags & XECUTED)) ch->flags |= WAITING;
+       ^
+init.c:1215:3: note: here
+   case KBREQUEST:
+   ^~~~
+init.c:1219:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (ch->flags & XECUTED) break;
+       ^
+init.c:1220:3: note: here
+   case ONDEMAND:
+   ^~~~
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE -DINIT_MAIN -c -o init_utmp.o utmp.c
+cc   init.o init_utmp.o    -o init
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o halt.o halt.c
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o ifdown.o ifdown.c
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o hddown.o hddown.c
+hddown.c: In function 'do_standby_disk':
+hddown.c:234:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   if ((ret = ioctl(fd, HDIO_DRIVE_CMD, &flush1)) == 0)
+      ^
+hddown.c:237:2: note: here
+  default:
+  ^~~~~~~
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o utmp.o utmp.c
+cc   halt.o ifdown.o hddown.o utmp.o reboot.h   -o halt
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o shutdown.o shutdown.c
+shutdown.c: In function 'main':
+shutdown.c:594:13: warning: In the GNU C Library, "major" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "major", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "major", you should undefine it after including <sys/types.h>.
+    if (major(st.st_rdev) != 4 ||
+             ^~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                                    
+shutdown.c:595:13: warning: In the GNU C Library, "minor" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "minor", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "minor", you should undefine it after including <sys/types.h>.
+        minor(st.st_rdev) > 63) continue;
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                            
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o dowall.o dowall.c
+dowall.c: In function 'wall':
+dowall.c:154:10: warning: variable 'tp' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  FILE   *tp;
+          ^~
+dowall.c:163:8: warning: variable 'fd' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  int   fd, flags;
+        ^~
+cc   shutdown.o dowall.o utmp.o reboot.h   -o shutdown
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o runlevel.o runlevel.c
+cc   runlevel.o   -o runlevel
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE    killall5.c   -o killall5
+killall5.c: In function 'readproc':
+killall5.c:612:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if ((p->nfs = check4nfs(path, buf)))
+       ^
+killall5.c:614:3: note: here
+   case DO_STAT:
+   ^~~~
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE    fstab-decode.c   -o fstab-decode
+cc -ansi -O2 -fomit-frame-pointer -W -Wall -D_GNU_SOURCE   -c -o bootlogd.o bootlogd.c
+bootlogd.c: In function 'consolename':
+bootlogd.c:254:13: warning: In the GNU C Library, "major" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "major", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "major", you should undefine it after including <sys/types.h>.
+  if (major(st.st_rdev) != 5 || minor(st.st_rdev) != 1) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                            
+bootlogd.c:254:13: warning: In the GNU C Library, "minor" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "minor", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "minor", you should undefine it after including <sys/types.h>.
+  if (major(st.st_rdev) != 5 || minor(st.st_rdev) != 1) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                            
+bootlogd.c:261:13: warning: In the GNU C Library, "major" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "major", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "major", you should undefine it after including <sys/types.h>.
+     "%d:%d under /dev\n", major(st.st_rdev), minor(st.st_rdev));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                    
+bootlogd.c:261:13: warning: In the GNU C Library, "minor" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "minor", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "minor", you should undefine it after including <sys/types.h>.
+bootlogd.c:273:13: warning: In the GNU C Library, "major" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "major", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "major", you should undefine it after including <sys/types.h>.
+     "%d:%d under /dev\n", major(kdev), minor(kdev));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                
+bootlogd.c:273:13: warning: In the GNU C Library, "minor" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "minor", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "minor", you should undefine it after including <sys/types.h>.
+cc   bootlogd.o  -lutil -o bootlogd
+make[1]: Leaving directory '/sources/sysvinit-2.88dsf/src'
+make[1]: Entering directory '/sources/sysvinit-2.88dsf/src'
+install -m 755 -d  /sbin/
+for i in ; do \
+		install -o root -g root -m 755 $i /bin/ ; \
+	done
+for i in init halt shutdown runlevel killall5 fstab-decode bootlogd; do \
+		install -o root -g root -m 755 $i /sbin/ ; \
+	done
+for i in ; do \
+		install -o root -g root -m 755 $i /usr/bin/ ; \
+	done
+# install -m 755 -d /etc/
+# install -o root -g root -m 755 initscript.sample /etc/
+ln -sf halt /sbin/reboot
+ln -sf halt /sbin/poweroff
+ln -sf init /sbin/telinit
+install -m 755 -d /usr/include/
+install -o root -g root -m 644 initreq.h /usr/include/
+install -m 755 -d /usr/share/man/man5/
+install -m 755 -d /usr/share/man/man8/
+for i in ; do \
+		install -o root -g root -m 644 ../man/$i /usr/share/man/man1/; \
+	done
+for i in initscript.5 inittab.5; do \
+		install -o root -g root -m 644 ../man/$i /usr/share/man/man5/; \
+	done
+for i in halt.8 init.8 killall5.8  poweroff.8 reboot.8 runlevel.8 shutdown.8 telinit.8 fstab-decode.8 bootlogd.8; do \
+		install -o root -g root -m 644 ../man/$i /usr/share/man/man8/; \
+	done
+#
+# This part is skipped on Debian systems, the
+# debian.preinst script takes care of it.
+Creating /dev/initctl
+make[1]: Leaving directory '/sources/sysvinit-2.88dsf/src'
+
+
+Totalseconds: 2
+
+
+KB: 2913820	/
+

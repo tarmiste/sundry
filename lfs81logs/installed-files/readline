@@ -1,0 +1,37 @@
+/lib/libhistory.so.7	17	root:root	777	libhistory.so.7.0
+/lib/libhistory.so.7.0	143184	root:root	555	
+/lib/libreadline.so.7	18	root:root	777	libreadline.so.7.0
+/lib/libreadline.so.7.0	921176	root:root	555	
+/usr/include/readline/chardefs.h	4697	root:root	644	
+/usr/include/readline/history.h	10627	root:root	644	
+/usr/include/readline/keymaps.h	3163	root:root	644	
+/usr/include/readline/readline.h	38933	root:root	644	
+/usr/include/readline/rlconf.h	2830	root:root	644	
+/usr/include/readline/rlstdc.h	1835	root:root	644	
+/usr/include/readline/rltypedefs.h	3193	root:root	644	
+/usr/include/readline/tilde.h	3046	root:root	644	
+/usr/lib/libhistory.so	25	root:root	777	../../lib/libhistory.so.7
+/usr/lib/libreadline.so	26	root:root	777	../../lib/libreadline.so.7
+/usr/share/doc/readline-7.0/CHANGES	65553	root:root	644	
+/usr/share/doc/readline-7.0/INSTALL	12304	root:root	644	
+/usr/share/doc/readline-7.0/README	8028	root:root	644	
+/usr/share/doc/readline-7.0/history.dvi	69092	root:root	644	
+/usr/share/doc/readline-7.0/history.html	100970	root:root	644	
+/usr/share/doc/readline-7.0/history.pdf	201610	root:root	644	
+/usr/share/doc/readline-7.0/history.ps	391398	root:root	644	
+/usr/share/doc/readline-7.0/history_3.ps	46299	root:root	644	
+/usr/share/doc/readline-7.0/readline.dvi	310188	root:root	644	
+/usr/share/doc/readline-7.0/readline.html	363094	root:root	644	
+/usr/share/doc/readline-7.0/readline.pdf	389589	root:root	644	
+/usr/share/doc/readline-7.0/readline.ps	738335	root:root	644	
+/usr/share/doc/readline-7.0/readline_3.ps	93454	root:root	644	
+/usr/share/doc/readline-7.0/rluserman.dvi	109432	root:root	644	
+/usr/share/doc/readline-7.0/rluserman.html	123758	root:root	644	
+/usr/share/doc/readline-7.0/rluserman.pdf	226783	root:root	644	
+/usr/share/doc/readline-7.0/rluserman.ps	436348	root:root	644	
+/usr/share/info/dir	75919	root:root	644	
+/usr/share/info/history.info	61089	root:root	644	
+/usr/share/info/readline.info	226612	root:root	644	
+/usr/share/info/rluserman.info	85788	root:root	644	
+/usr/share/man/man3/history.3	22402	root:root	644	
+/usr/share/man/man3/readline.3	46976	root:root	644	
