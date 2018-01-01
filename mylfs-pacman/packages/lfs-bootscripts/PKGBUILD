@@ -12,6 +12,14 @@ inputrc
 network 
 profile)
 
+md5sums=('d4992527d67f28e2d0c12e3495422eab'
+         '680723f0829e4b76845859f984dc878a'
+         '0d80233ecec41028dbc3b8e647c08200'
+         'fbcc905d78f8738db569c9fbb21782aa'
+         '2ca09cd10bcc4f6adb0c5b1521bfdb7e'
+         '0266259e6ea8fa01ef6213cd3cbfeb85'
+         'd5499968dc7f60b841f41bd5a6e150b3')
+
 package() {
     cd "${pkgname}-${pkgver}"
     make DESTDIR=${pkgdir} install
