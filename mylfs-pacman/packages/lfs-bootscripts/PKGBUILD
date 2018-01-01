@@ -3,9 +3,23 @@ pkgver=20170626
 pkgrel=1
 pkgdesc="scripts to start/stop the LFS system at bootup/shutdown"
 arch=('x86_64')
-source=(${pkgname}-${pkgver}.tar.bz2)
+source=(
+http://www.linuxfromscratch.org/lfs/downloads/8.1/${pkgname}-${pkgver}.tar.bz2 
+clock 
+fstab 
+inittab 
+inputrc 
+network 
+profile)
 
 package() {
     cd "${pkgname}-${pkgver}"
     make DESTDIR=${pkgdir} install
+    mkdir -pv ${pkgdir}/etc/sysconfig
+    cp ${srcdir}/clock ${pkgdir}/etc/sysconfig
+    cp ${srcdir}/fstab ${pkgdir}/etc
+    cp ${srcdir}/inittab ${pkgdir}/etc
+    cp ${srcdir}/inputrc ${pkgdir}/etc
+    cp ${srcdir}/network ${pkgdir}/etc/sysconfig
+    cp ${srcdir}/profile ${pkgdir}/etc
 }
