@@ -14,6 +14,12 @@ install=glibc.install
 
 prepare() {
     cd "${pkgname}-${pkgver}"
+    if [ -f /usr/include/limits.h ]
+    then
+        echo => This package will not build if /usr/include/limits.h exists.
+        exit 1
+    fi
+
     patch -Np1 -i ../glibc-2.26-fhs-1.patch
 }
 
