@@ -52,6 +52,14 @@ package() {
     touch ${pkgdir}/etc/ld.so.conf
     make install_root=${pkgdir} install
 
+    case $(uname -m) in
+    x86_64) 
+      install -vdm755 ${pkgdir}/lib64 
+      ln -sfv ../lib/ld-linux-x86-64.so.2 ${pkgdir}/lib64
+      ln -sfv ../lib/ld-linux-x86-64.so.2 ${pkgdir}/lib64/ld-lsb-x86-64.so.3 
+     ;;
+    esac
+
     install -v -dm755 ${pkgdir}/etc/nsdc
     install -v -m644 ${srcdir}/${pkgname}-${pkgver}/nscd/nscd.conf ${pkgdir}/etc/nscd.conf
     install -v -dm755 ${pkgdir}/var/cache/nscd
