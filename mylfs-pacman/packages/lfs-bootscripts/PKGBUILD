@@ -42,4 +42,6 @@ package() {
     cp ${srcdir}/inputrc ${pkgdir}/etc
     cp ${srcdir}/shells ${pkgdir}/etc
     cp ${srcdir}/fstab ${pkgdir}/etc
+    cp ${srcdir}/lfs-release ${pkgdir}/etc
+    cp ${srcdir}/lsb-release ${pkgdir}/etc
 }
