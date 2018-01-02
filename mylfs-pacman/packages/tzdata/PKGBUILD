@@ -26,4 +26,5 @@ package() {
     cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
     zic -d $ZONEINFO -p America/New_York
     unset ZONEINFO
+    cp -v ${pkgdir}/usr/share/zoneinfo/GMT ${pkgdir}/etc/localtime
 }

@@ -60,7 +60,7 @@ package() {
      ;;
     esac
 
-    install -v -dm755 ${pkgdir}/etc/nsdc
+    #install -v -dm755 ${pkgdir}/etc/nsdc
     install -v -m644 ${srcdir}/${pkgname}-${pkgver}/nscd/nscd.conf ${pkgdir}/etc/nscd.conf
     install -v -dm755 ${pkgdir}/var/cache/nscd
 

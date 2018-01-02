@@ -49,6 +49,8 @@ package(){
   chgrp -v utmp ${pkgdir}/var/log/lastlog
   chmod -v 664  ${pkgdir}/var/log/lastlog
   chmod -v 600  ${pkgdir}/var/log/btmp
+  ln -sv bash ${pkgdir}/bin/sh
+
 }
 sha256sums=('8cfa7e89d3f2b6298d2892ce59e5617b916d6df672135d72a8ed029fa88408e1'
             '1690f4982e5836aef1858ee84885c723bc056a040416bdb5f52196807de3fcad')
