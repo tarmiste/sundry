@@ -14,7 +14,9 @@ inittab
 inputrc
 profile
 resolv.conf
-shells)
+shells
+lfs-release
+lsb-release)
 
 md5sums=('d4992527d67f28e2d0c12e3495422eab'
          '680723f0829e4b76845859f984dc878a'
@@ -26,7 +28,9 @@ md5sums=('d4992527d67f28e2d0c12e3495422eab'
          '2ca09cd10bcc4f6adb0c5b1521bfdb7e'
          'd5499968dc7f60b841f41bd5a6e150b3'
          'fa0849c01bfc631b9072b68e130c7483'
-         '2ed0cf9d92e8a8fa49a41918b8a0207f')
+         '2ed0cf9d92e8a8fa49a41918b8a0207f'
+         '64d33a2184a7fa244ae83c6fafad6cb9'
+         '2e757740196a62e1dcd5bb456a094aed')
 
 package() {
     cd "${pkgname}-${pkgver}"
