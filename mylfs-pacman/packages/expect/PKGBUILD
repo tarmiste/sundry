@@ -6,9 +6,9 @@ arch=('x86_64')
 url="http://expect.sourceforge.net/"
 groups=('core')
 license=('GPL')
-depends=('tcl' 'gcc' 'glibc')
-optdepends=('tk')
-makedepends=('bash' 'coreutils' 'diffutils' 'grep' 'make' 'patch' 'sed' )
+#depends=('tcl' 'gcc' 'glibc')
+#optdepends=('tk')
+#makedepends=('bash' 'coreutils' 'diffutils' 'grep' 'make' 'patch' 'sed' )
 source=("http://prdownloads.sourceforge.net/${pkgname}/${pkgname}${pkgver}.tar.gz")
 
 build() {

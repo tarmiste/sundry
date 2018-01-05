@@ -6,8 +6,8 @@ arch=('x86_64')
 url="http://www.gnu.org/software/dejagnu"
 groups=('core')
 license=('GPL')
-depends=( 'expect')
-makedepends=('bash' 'coreutils' 'diffutils' 'gcc' 'grep' 'make' 'sed' )
+#depends=( 'expect')
+#makedepends=('bash' 'coreutils' 'diffutils' 'gcc' 'grep' 'make' 'sed' )
 source=("ftp://ftp.gnu.org/pub/gnu/dejagnu/${pkgname}-${pkgver}.tar.gz")
 
 build() {
