@@ -7,7 +7,7 @@ BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
 mkdir -p $SRC_DIR
 mkdir -p $BUILD_DIR
 
-cd $SRC_DIR
+cd $SRC_DIR     ###### Getting source
 
 PACKAGE=openldap-2.4.45.tgz
 if [[ ! -f $PACKAGE ]] ; then
@@ -32,7 +32,7 @@ fi
 [[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PATCH $BUILD_DIR
 
 
-cd $BUILD_DIR
+cd $BUILD_DIR        ##### Unpacking source
 find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
 case $PACKAGE in
   *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
@@ -60,6 +60,7 @@ case $PACKAGE in
      cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
      ;;
 esac
+#######  Building package
 cd $UNPACKDIR
 
 patch -Np1 -i ../openldap-2.4.45-consolidated-1.patch &&

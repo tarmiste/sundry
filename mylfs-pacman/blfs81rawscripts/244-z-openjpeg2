@@ -7,7 +7,7 @@ BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
 mkdir -p $SRC_DIR
 mkdir -p $BUILD_DIR
 
-cd $SRC_DIR
+cd $SRC_DIR     ###### Getting source
 
 PACKAGE=openjpeg-2.3.0.tar.gz
 if [[ ! -f $PACKAGE ]] ; then
@@ -21,7 +21,7 @@ fi
 echo "6a1f8aaa1fe55d2088e3a9c942e0f698  $PACKAGE" | md5sum -c -
 
 
-cd $BUILD_DIR
+cd $BUILD_DIR        ##### Unpacking source
 find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
 case $PACKAGE in
   *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
@@ -49,6 +49,7 @@ case $PACKAGE in
      cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
      ;;
 esac
+#######  Building package
 cd $UNPACKDIR
 
 mkdir -v build &&

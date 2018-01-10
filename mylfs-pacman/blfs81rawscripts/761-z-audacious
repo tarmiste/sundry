@@ -7,7 +7,7 @@ BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
 mkdir -p $SRC_DIR
 mkdir -p $BUILD_DIR
 
-cd $SRC_DIR
+cd $SRC_DIR     ###### Getting source
 
 PACKAGE=audacious-3.9.tar.bz2
 if [[ ! -f $PACKAGE ]] ; then
@@ -33,7 +33,7 @@ echo "fe467c4dcee8abbf571e69ed980a56b6  $PACKAGE1" | md5sum -c -
 [[ "$SRC_DIR" != "$BUILD_DIR" ]] && ln -sf $SRC_DIR/$PACKAGE1 $BUILD_DIR
 
 
-cd $BUILD_DIR
+cd $BUILD_DIR        ##### Unpacking source
 find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
 case $PACKAGE in
   *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
@@ -61,6 +61,7 @@ case $PACKAGE in
      cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
      ;;
 esac
+#######  Building package
 cd $UNPACKDIR
 
 TPUT=/bin/true ./configure --prefix=/usr \
@@ -72,7 +73,7 @@ ROOT_EOF
 sudo /sbin/ldconfig
 
 
-cd $BUILD_DIR
+cd $BUILD_DIR        ##### Unpacking source
 find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
 case $PACKAGE in
   *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
@@ -100,6 +101,7 @@ case $PACKAGE in
      cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
      ;;
 esac
+#######  Building package
 cd $UNPACKDIR
 
 TPUT=/bin/true ./configure --prefix=/usr --disable-wavpack &&

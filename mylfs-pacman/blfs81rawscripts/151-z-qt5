@@ -7,7 +7,7 @@ BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
 mkdir -p $SRC_DIR
 mkdir -p $BUILD_DIR
 
-cd $SRC_DIR
+cd $SRC_DIR     ###### Getting source
 
 PACKAGE=qt-everywhere-src-5.10.0.tar.xz
 if [[ ! -f $PACKAGE ]] ; then
@@ -26,7 +26,7 @@ mkdir /opt/qt-5.10.0
 ln -sfnv qt-5.10.0 /opt/qt5
 ROOT_EOF
 
-cd $BUILD_DIR
+cd $BUILD_DIR        ##### Unpacking source
 find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
 case $PACKAGE in
   *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
@@ -54,6 +54,7 @@ case $PACKAGE in
      cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
      ;;
 esac
+#######  Building package
 cd $UNPACKDIR
 
 ./configure -prefix $QT5PREFIX                          \

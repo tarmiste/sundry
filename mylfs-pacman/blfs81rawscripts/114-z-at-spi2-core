@@ -7,7 +7,7 @@ BUILD_DIR=${BUILD_ROOT}${BUILD_SUBDIRS:+/${PKG_DIR}}
 mkdir -p $SRC_DIR
 mkdir -p $BUILD_DIR
 
-cd $SRC_DIR
+cd $SRC_DIR     ###### Getting source
 
 PACKAGE=at-spi2-core-2.26.2.tar.xz
 if [[ ! -f $PACKAGE ]] ; then
@@ -22,7 +22,7 @@ fi
 echo "4a042e4c801fdb793788b749eab21485  $PACKAGE" | md5sum -c -
 
 
-cd $BUILD_DIR
+cd $BUILD_DIR        ##### Unpacking source
 find . -maxdepth 1 -mindepth 1 -type d | xargs sudo rm -rf
 case $PACKAGE in
   *.tar.gz|*.tar.bz2|*.tar.xz|*.tgz|*.tar.lzma)
@@ -50,6 +50,7 @@ case $PACKAGE in
      cp $(find . -mindepth 1 -maxdepth 1 -type l) $UNPACKDIR
      ;;
 esac
+#######  Building package
 cd $UNPACKDIR
 
 ./configure --prefix=/usr \
