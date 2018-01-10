@@ -1,1 +1,4 @@
 #gptfdisk
+pkgname=(gptfdisk)
+pkgver=XYZVER
+pkgrel=1

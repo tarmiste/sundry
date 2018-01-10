@@ -1,1 +1,4 @@
 #gst10-libav
+pkgname=(gst10-libav)
+pkgver=XYZVER
+pkgrel=1

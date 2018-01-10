@@ -1,1 +1,4 @@
 #util-macros
+pkgname=(util-macros)
+pkgver=XYZVER
+pkgrel=1

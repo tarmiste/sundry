@@ -1,1 +1,4 @@
 #cairomm
+pkgname=(cairomm)
+pkgver=XYZVER
+pkgrel=1

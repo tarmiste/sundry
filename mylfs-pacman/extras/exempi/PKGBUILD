@@ -1,1 +1,4 @@
 #exempi
+pkgname=(exempi)
+pkgver=XYZVER
+pkgrel=1

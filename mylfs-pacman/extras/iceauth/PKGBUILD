@@ -1,1 +1,4 @@
 #iceauth
+pkgname=(iceauth)
+pkgver=XYZVER
+pkgrel=1

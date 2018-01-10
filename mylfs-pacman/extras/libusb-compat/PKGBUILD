@@ -1,1 +1,4 @@
 #libusb-compat
+pkgname=(libusb-compat)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #gwenview5
+pkgname=(gwenview5)
+pkgver=XYZVER
+pkgrel=1

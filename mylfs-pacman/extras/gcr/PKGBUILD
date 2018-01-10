@@ -1,1 +1,4 @@
 #gcr
+pkgname=(gcr)
+pkgver=XYZVER
+pkgrel=1

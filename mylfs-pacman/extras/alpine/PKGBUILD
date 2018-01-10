@@ -1,1 +1,4 @@
 #alpine
+pkgname=(alpine)
+pkgver=XYZVER
+pkgrel=1

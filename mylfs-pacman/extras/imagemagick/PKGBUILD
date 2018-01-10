@@ -1,1 +1,4 @@
 #imagemagick
+pkgname=(imagemagick)
+pkgver=XYZVER
+pkgrel=1

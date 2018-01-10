@@ -1,1 +1,4 @@
 #perl-file-which
+pkgname=(perl-file-which)
+pkgver=XYZVER
+pkgrel=1

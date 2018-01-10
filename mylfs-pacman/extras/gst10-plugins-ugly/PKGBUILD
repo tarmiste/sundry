@@ -1,1 +1,4 @@
 #gst10-plugins-ugly
+pkgname=(gst10-plugins-ugly)
+pkgver=XYZVER
+pkgrel=1

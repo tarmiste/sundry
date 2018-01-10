@@ -1,1 +1,4 @@
 #exim
+pkgname=(exim)
+pkgver=XYZVER
+pkgrel=1

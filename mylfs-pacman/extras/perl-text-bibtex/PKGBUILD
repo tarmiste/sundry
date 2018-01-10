@@ -1,1 +1,4 @@
 #perl-text-bibtex
+pkgname=(perl-text-bibtex)
+pkgver=XYZVER
+pkgrel=1

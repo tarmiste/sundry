@@ -1,1 +1,4 @@
 #xfburn
+pkgname=(xfburn)
+pkgver=XYZVER
+pkgrel=1

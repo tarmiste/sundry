@@ -1,1 +1,4 @@
 #mailx
+pkgname=(mailx)
+pkgver=XYZVER
+pkgrel=1

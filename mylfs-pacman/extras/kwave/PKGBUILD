@@ -1,1 +1,4 @@
 #kwave
+pkgname=(kwave)
+pkgver=XYZVER
+pkgrel=1

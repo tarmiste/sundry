@@ -1,1 +1,4 @@
 #gavl
+pkgname=(gavl)
+pkgver=XYZVER
+pkgrel=1

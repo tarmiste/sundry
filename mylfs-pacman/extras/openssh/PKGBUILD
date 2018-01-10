@@ -1,1 +1,4 @@
 #openssh
+pkgname=(openssh)
+pkgver=XYZVER
+pkgrel=1

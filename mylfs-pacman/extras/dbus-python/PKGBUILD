@@ -1,1 +1,4 @@
 #dbus-python
+pkgname=(dbus-python)
+pkgver=XYZVER
+pkgrel=1

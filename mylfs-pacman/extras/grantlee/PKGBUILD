@@ -1,1 +1,4 @@
 #grantlee
+pkgname=(grantlee)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #lxqt-policykit
+pkgname=(lxqt-policykit)
+pkgver=XYZVER
+pkgrel=1

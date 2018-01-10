@@ -1,1 +1,4 @@
 #soundtouch
+pkgname=(soundtouch)
+pkgver=XYZVER
+pkgrel=1

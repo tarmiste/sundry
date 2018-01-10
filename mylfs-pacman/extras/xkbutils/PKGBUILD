@@ -1,1 +1,4 @@
 #xkbutils
+pkgname=(xkbutils)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #rpcbind
+pkgname=(rpcbind)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #icewm
+pkgname=(icewm)
+pkgver=XYZVER
+pkgrel=1

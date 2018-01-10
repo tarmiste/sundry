@@ -1,1 +1,4 @@
 #libXpm
+pkgname=(libXpm)
+pkgver=XYZVER
+pkgrel=1

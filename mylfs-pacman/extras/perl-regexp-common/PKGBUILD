@@ -1,1 +1,4 @@
 #perl-regexp-common
+pkgname=(perl-regexp-common)
+pkgver=XYZVER
+pkgrel=1

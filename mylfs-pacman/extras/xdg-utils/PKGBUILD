@@ -1,1 +1,4 @@
 #xdg-utils
+pkgname=(xdg-utils)
+pkgver=XYZVER
+pkgrel=1

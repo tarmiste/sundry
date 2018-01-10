@@ -1,1 +1,4 @@
 #json-glib
+pkgname=(json-glib)
+pkgver=XYZVER
+pkgrel=1

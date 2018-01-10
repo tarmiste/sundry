@@ -1,1 +1,4 @@
 #gnumeric
+pkgname=(gnumeric)
+pkgver=XYZVER
+pkgrel=1

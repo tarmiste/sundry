@@ -1,1 +1,4 @@
 #alsa-lib
+pkgname=(alsa-lib)
+pkgver=XYZVER
+pkgrel=1

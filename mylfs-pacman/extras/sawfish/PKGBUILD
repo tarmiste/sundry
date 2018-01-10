@@ -1,1 +1,4 @@
 #sawfish
+pkgname=(sawfish)
+pkgver=XYZVER
+pkgrel=1

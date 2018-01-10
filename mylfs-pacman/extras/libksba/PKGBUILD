@@ -1,1 +1,4 @@
 #libksba
+pkgname=(libksba)
+pkgver=XYZVER
+pkgrel=1

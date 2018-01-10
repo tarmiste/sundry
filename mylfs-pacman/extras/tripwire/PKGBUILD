@@ -1,1 +1,4 @@
 #tripwire
+pkgname=(tripwire)
+pkgver=XYZVER
+pkgrel=1

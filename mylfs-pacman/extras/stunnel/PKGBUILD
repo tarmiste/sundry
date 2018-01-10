@@ -1,1 +1,4 @@
 #stunnel
+pkgname=(stunnel)
+pkgver=XYZVER
+pkgrel=1

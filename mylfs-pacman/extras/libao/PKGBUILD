@@ -1,1 +1,4 @@
 #libao
+pkgname=(libao)
+pkgver=XYZVER
+pkgrel=1

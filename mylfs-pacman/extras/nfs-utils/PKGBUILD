@@ -1,1 +1,4 @@
 #nfs-utils
+pkgname=(nfs-utils)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #thunderbird
+pkgname=(thunderbird)
+pkgver=XYZVER
+pkgrel=1

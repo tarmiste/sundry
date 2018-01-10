@@ -1,1 +1,4 @@
 #xorg-env
+pkgname=(xorg-env)
+pkgver=XYZVER
+pkgrel=1

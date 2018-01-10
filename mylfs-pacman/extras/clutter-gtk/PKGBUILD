@@ -1,1 +1,4 @@
 #clutter-gtk
+pkgname=(clutter-gtk)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libSM
+pkgname=(libSM)
+pkgver=XYZVER
+pkgrel=1

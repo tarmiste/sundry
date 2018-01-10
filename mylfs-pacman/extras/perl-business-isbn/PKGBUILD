@@ -1,1 +1,4 @@
 #perl-business-isbn
+pkgname=(perl-business-isbn)
+pkgver=XYZVER
+pkgrel=1

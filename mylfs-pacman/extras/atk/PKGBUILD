@@ -1,1 +1,4 @@
 #atk
+pkgname=(atk)
+pkgver=XYZVER
+pkgrel=1

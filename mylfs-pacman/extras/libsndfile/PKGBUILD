@@ -1,1 +1,4 @@
 #libsndfile
+pkgname=(libsndfile)
+pkgver=XYZVER
+pkgrel=1

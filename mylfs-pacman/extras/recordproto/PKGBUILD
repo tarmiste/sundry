@@ -1,1 +1,4 @@
 #recordproto
+pkgname=(recordproto)
+pkgver=XYZVER
+pkgrel=1

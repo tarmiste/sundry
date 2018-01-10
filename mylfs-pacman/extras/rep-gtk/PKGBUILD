@@ -1,1 +1,4 @@
 #rep-gtk
+pkgname=(rep-gtk)
+pkgver=XYZVER
+pkgrel=1

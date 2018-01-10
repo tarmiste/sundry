@@ -1,1 +1,4 @@
 #xrdb
+pkgname=(xrdb)
+pkgver=XYZVER
+pkgrel=1

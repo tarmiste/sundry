@@ -1,1 +1,4 @@
 #bridgeutils
+pkgname=(bridgeutils)
+pkgver=XYZVER
+pkgrel=1

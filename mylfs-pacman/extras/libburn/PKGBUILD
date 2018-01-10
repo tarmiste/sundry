@@ -1,1 +1,4 @@
 #libburn
+pkgname=(libburn)
+pkgver=XYZVER
+pkgrel=1

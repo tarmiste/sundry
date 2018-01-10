@@ -1,1 +1,4 @@
 #libiodbc
+pkgname=(libiodbc)
+pkgver=XYZVER
+pkgrel=1

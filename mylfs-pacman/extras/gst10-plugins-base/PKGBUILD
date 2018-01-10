@@ -1,1 +1,4 @@
 #gst10-plugins-base
+pkgname=(gst10-plugins-base)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libmbim
+pkgname=(libmbim)
+pkgver=XYZVER
+pkgrel=1

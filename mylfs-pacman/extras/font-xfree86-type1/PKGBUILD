@@ -1,1 +1,4 @@
 #font-xfree86-type1
+pkgname=(font-xfree86-type1)
+pkgver=XYZVER
+pkgrel=1

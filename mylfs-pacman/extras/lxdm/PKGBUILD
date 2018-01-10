@@ -1,1 +1,4 @@
 #lxdm
+pkgname=(lxdm)
+pkgver=XYZVER
+pkgrel=1

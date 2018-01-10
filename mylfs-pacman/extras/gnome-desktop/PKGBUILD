@@ -1,1 +1,4 @@
 #gnome-desktop
+pkgname=(gnome-desktop)
+pkgver=XYZVER
+pkgrel=1

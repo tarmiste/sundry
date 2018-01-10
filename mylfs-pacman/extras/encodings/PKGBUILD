@@ -1,1 +1,4 @@
 #encodings
+pkgname=(encodings)
+pkgver=XYZVER
+pkgrel=1

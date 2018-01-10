@@ -1,1 +1,4 @@
 #perl-unicode-linebreak
+pkgname=(perl-unicode-linebreak)
+pkgver=XYZVER
+pkgrel=1

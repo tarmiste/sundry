@@ -1,1 +1,4 @@
 #libpeas
+pkgname=(libpeas)
+pkgver=XYZVER
+pkgrel=1

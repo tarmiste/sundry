@@ -1,1 +1,4 @@
 #gnome-video-effects
+pkgname=(gnome-video-effects)
+pkgver=XYZVER
+pkgrel=1

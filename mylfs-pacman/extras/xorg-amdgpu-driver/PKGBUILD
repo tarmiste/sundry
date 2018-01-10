@@ -1,1 +1,4 @@
 #xorg-amdgpu-driver
+pkgname=(xorg-amdgpu-driver)
+pkgver=XYZVER
+pkgrel=1

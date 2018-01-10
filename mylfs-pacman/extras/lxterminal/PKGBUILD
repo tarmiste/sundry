@@ -1,1 +1,4 @@
 #lxterminal
+pkgname=(lxterminal)
+pkgver=XYZVER
+pkgrel=1

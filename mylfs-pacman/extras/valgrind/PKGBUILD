@@ -1,1 +1,4 @@
 #valgrind
+pkgname=(valgrind)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #seahorse
+pkgname=(seahorse)
+pkgver=XYZVER
+pkgrel=1

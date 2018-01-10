@@ -1,1 +1,4 @@
 #font-misc-ethiopic
+pkgname=(font-misc-ethiopic)
+pkgver=XYZVER
+pkgrel=1

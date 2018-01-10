@@ -1,1 +1,4 @@
 #font-alias
+pkgname=(font-alias)
+pkgver=XYZVER
+pkgrel=1

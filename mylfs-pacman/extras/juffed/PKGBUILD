@@ -1,1 +1,4 @@
 #juffed
+pkgname=(juffed)
+pkgver=XYZVER
+pkgrel=1

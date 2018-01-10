@@ -1,1 +1,4 @@
 #dbus-glib
+pkgname=(dbus-glib)
+pkgver=XYZVER
+pkgrel=1

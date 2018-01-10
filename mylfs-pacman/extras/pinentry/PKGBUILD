@@ -1,1 +1,4 @@
 #pinentry
+pkgname=(pinentry)
+pkgver=XYZVER
+pkgrel=1

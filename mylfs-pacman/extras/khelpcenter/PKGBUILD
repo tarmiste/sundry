@@ -1,1 +1,4 @@
 #khelpcenter
+pkgname=(khelpcenter)
+pkgver=XYZVER
+pkgrel=1

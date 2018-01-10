@@ -1,1 +1,4 @@
 #libraw
+pkgname=(libraw)
+pkgver=XYZVER
+pkgrel=1

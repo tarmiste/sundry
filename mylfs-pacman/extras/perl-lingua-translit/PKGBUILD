@@ -1,1 +1,4 @@
 #perl-lingua-translit
+pkgname=(perl-lingua-translit)
+pkgver=XYZVER
+pkgrel=1

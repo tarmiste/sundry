@@ -1,1 +1,4 @@
 #libXi
+pkgname=(libXi)
+pkgver=XYZVER
+pkgrel=1

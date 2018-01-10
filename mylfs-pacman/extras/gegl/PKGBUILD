@@ -1,1 +1,4 @@
 #gegl
+pkgname=(gegl)
+pkgver=XYZVER
+pkgrel=1

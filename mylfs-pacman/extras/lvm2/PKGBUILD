@@ -1,1 +1,4 @@
 #lvm2
+pkgname=(lvm2)
+pkgver=XYZVER
+pkgrel=1

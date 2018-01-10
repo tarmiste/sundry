@@ -1,1 +1,4 @@
 #xine-ui
+pkgname=(xine-ui)
+pkgver=XYZVER
+pkgrel=1

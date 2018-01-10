@@ -1,1 +1,4 @@
 #libwnck2
+pkgname=(libwnck2)
+pkgver=XYZVER
+pkgrel=1

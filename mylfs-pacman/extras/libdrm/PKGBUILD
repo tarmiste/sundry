@@ -1,1 +1,4 @@
 #libdrm
+pkgname=(libdrm)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #scons
+pkgname=(scons)
+pkgver=XYZVER
+pkgrel=1

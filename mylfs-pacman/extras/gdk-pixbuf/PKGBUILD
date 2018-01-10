@@ -1,1 +1,4 @@
 #gdk-pixbuf
+pkgname=(gdk-pixbuf)
+pkgver=XYZVER
+pkgrel=1

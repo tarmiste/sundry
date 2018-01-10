@@ -1,1 +1,4 @@
 #xterm2
+pkgname=(xterm2)
+pkgver=XYZVER
+pkgrel=1

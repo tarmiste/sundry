@@ -1,1 +1,4 @@
 #lxappearance
+pkgname=(lxappearance)
+pkgver=XYZVER
+pkgrel=1

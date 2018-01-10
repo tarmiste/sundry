@@ -1,1 +1,4 @@
 #konsole5
+pkgname=(konsole5)
+pkgver=XYZVER
+pkgrel=1

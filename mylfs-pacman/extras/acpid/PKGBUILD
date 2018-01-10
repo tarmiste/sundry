@@ -1,1 +1,4 @@
 #acpid
+pkgname=(acpid)
+pkgver=XYZVER
+pkgrel=1

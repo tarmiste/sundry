@@ -1,1 +1,4 @@
 #xbitmaps
+pkgname=(xbitmaps)
+pkgver=XYZVER
+pkgrel=1

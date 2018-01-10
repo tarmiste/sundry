@@ -1,1 +1,4 @@
 #qpdf
+pkgname=(qpdf)
+pkgver=XYZVER
+pkgrel=1

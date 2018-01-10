@@ -1,1 +1,4 @@
 #libkcddb
+pkgname=(libkcddb)
+pkgver=XYZVER
+pkgrel=1

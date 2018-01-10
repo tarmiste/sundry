@@ -1,1 +1,4 @@
 #sysstat
+pkgname=(sysstat)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #xsetroot
+pkgname=(xsetroot)
+pkgver=XYZVER
+pkgrel=1

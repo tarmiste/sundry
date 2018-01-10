@@ -1,1 +1,4 @@
 #apache-ant
+pkgname=(apache-ant)
+pkgver=XYZVER
+pkgrel=1

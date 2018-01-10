@@ -1,1 +1,4 @@
 #libblockdev
+pkgname=(libblockdev)
+pkgver=XYZVER
+pkgrel=1

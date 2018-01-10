@@ -1,1 +1,4 @@
 #libcdio
+pkgname=(libcdio)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #sendmail
+pkgname=(sendmail)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #xmodmap
+pkgname=(xmodmap)
+pkgver=XYZVER
+pkgrel=1

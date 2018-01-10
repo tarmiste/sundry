@@ -1,1 +1,4 @@
 #elfutils
+pkgname=(elfutils)
+pkgver=XYZVER
+pkgrel=1

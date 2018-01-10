@@ -1,1 +1,4 @@
 #perl-encode-hanextra
+pkgname=(perl-encode-hanextra)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #dvd-rw-tools
+pkgname=(dvd-rw-tools)
+pkgver=XYZVER
+pkgrel=1

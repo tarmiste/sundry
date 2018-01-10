@@ -1,1 +1,4 @@
 #pyxdg
+pkgname=(pyxdg)
+pkgver=XYZVER
+pkgrel=1

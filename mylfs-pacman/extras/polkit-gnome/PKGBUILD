@@ -1,1 +1,4 @@
 #polkit-gnome
+pkgname=(polkit-gnome)
+pkgver=XYZVER
+pkgrel=1

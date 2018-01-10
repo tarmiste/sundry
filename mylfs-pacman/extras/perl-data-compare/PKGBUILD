@@ -1,1 +1,4 @@
 #perl-data-compare
+pkgname=(perl-data-compare)
+pkgver=XYZVER
+pkgrel=1

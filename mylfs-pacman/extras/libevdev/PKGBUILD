@@ -1,1 +1,4 @@
 #libevdev
+pkgname=(libevdev)
+pkgver=XYZVER
+pkgrel=1

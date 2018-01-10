@@ -1,1 +1,4 @@
 #jasper
+pkgname=(jasper)
+pkgver=XYZVER
+pkgrel=1

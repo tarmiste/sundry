@@ -1,1 +1,4 @@
 #qemu
+pkgname=(qemu)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #ristretto
+pkgname=(ristretto)
+pkgver=XYZVER
+pkgrel=1

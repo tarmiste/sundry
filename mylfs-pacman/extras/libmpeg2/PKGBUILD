@@ -1,1 +1,4 @@
 #libmpeg2
+pkgname=(libmpeg2)
+pkgver=XYZVER
+pkgrel=1

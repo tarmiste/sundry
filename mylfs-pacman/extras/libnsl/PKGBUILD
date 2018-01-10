@@ -1,1 +1,4 @@
 #libnsl
+pkgname=(libnsl)
+pkgver=XYZVER
+pkgrel=1

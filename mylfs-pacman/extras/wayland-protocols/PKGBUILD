@@ -1,1 +1,4 @@
 #wayland-protocols
+pkgname=(wayland-protocols)
+pkgver=XYZVER
+pkgrel=1

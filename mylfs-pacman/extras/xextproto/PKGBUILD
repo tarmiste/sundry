@@ -1,1 +1,4 @@
 #xextproto
+pkgname=(xextproto)
+pkgver=XYZVER
+pkgrel=1

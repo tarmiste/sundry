@@ -1,1 +1,4 @@
 #expect
+pkgname=(expect)
+pkgver=XYZVER
+pkgrel=1

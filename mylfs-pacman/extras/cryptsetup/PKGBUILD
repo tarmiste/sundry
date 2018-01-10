@@ -1,1 +1,4 @@
 #cryptsetup
+pkgname=(cryptsetup)
+pkgver=XYZVER
+pkgrel=1

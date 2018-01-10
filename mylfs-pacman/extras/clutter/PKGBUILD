@@ -1,1 +1,4 @@
 #clutter
+pkgname=(clutter)
+pkgver=XYZVER
+pkgrel=1

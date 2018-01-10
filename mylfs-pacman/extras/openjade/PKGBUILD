@@ -1,1 +1,4 @@
 #openjade
+pkgname=(openjade)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #taglib
+pkgname=(taglib)
+pkgver=XYZVER
+pkgrel=1

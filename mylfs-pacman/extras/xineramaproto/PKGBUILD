@@ -1,1 +1,4 @@
 #xineramaproto
+pkgname=(xineramaproto)
+pkgver=XYZVER
+pkgrel=1

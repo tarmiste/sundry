@@ -1,1 +1,4 @@
 #xcb-util-cursor
+pkgname=(xcb-util-cursor)
+pkgver=XYZVER
+pkgrel=1

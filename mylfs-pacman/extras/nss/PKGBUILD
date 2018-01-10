@@ -1,1 +1,4 @@
 #nss
+pkgname=(nss)
+pkgver=XYZVER
+pkgrel=1

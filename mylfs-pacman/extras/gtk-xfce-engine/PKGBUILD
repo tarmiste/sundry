@@ -1,1 +1,4 @@
 #gtk-xfce-engine
+pkgname=(gtk-xfce-engine)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #glibmm
+pkgname=(glibmm)
+pkgver=XYZVER
+pkgrel=1

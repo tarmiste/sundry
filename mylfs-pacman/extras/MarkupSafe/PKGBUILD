@@ -1,1 +1,4 @@
 #MarkupSafe
+pkgname=(MarkupSafe)
+pkgver=XYZVER
+pkgrel=1

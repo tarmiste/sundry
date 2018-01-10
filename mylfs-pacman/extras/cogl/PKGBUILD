@@ -1,1 +1,4 @@
 #cogl
+pkgname=(cogl)
+pkgver=XYZVER
+pkgrel=1

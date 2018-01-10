@@ -1,1 +1,4 @@
 #clucene
+pkgname=(clucene)
+pkgver=XYZVER
+pkgrel=1

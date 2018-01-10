@@ -1,1 +1,4 @@
 #libXt
+pkgname=(libXt)
+pkgver=XYZVER
+pkgrel=1

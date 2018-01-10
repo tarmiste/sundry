@@ -1,1 +1,4 @@
 #fltk
+pkgname=(fltk)
+pkgver=XYZVER
+pkgrel=1

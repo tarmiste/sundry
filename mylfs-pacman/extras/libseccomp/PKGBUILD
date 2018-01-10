@@ -1,1 +1,4 @@
 #libseccomp
+pkgname=(libseccomp)
+pkgver=XYZVER
+pkgrel=1

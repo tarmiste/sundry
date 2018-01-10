@@ -1,1 +1,4 @@
 #geoclue2
+pkgname=(geoclue2)
+pkgver=XYZVER
+pkgrel=1

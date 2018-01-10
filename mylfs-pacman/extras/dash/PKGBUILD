@@ -1,1 +1,4 @@
 #dash
+pkgname=(dash)
+pkgver=XYZVER
+pkgrel=1

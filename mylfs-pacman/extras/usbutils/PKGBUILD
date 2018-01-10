@@ -1,1 +1,4 @@
 #usbutils
+pkgname=(usbutils)
+pkgver=XYZVER
+pkgrel=1

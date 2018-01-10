@@ -1,1 +1,4 @@
 #faac
+pkgname=(faac)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #js38
+pkgname=(js38)
+pkgver=XYZVER
+pkgrel=1

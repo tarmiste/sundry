@@ -1,1 +1,4 @@
 #glib-networking
+pkgname=(glib-networking)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #alsa-tools
+pkgname=(alsa-tools)
+pkgver=XYZVER
+pkgrel=1

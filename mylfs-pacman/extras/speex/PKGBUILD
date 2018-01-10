@@ -1,1 +1,4 @@
 #speex
+pkgname=(speex)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #postfix
+pkgname=(postfix)
+pkgver=XYZVER
+pkgrel=1

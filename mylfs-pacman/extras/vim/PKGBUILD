@@ -1,1 +1,4 @@
 #vim
+pkgname=(vim)
+pkgver=XYZVER
+pkgrel=1

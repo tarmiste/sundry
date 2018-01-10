@@ -1,1 +1,4 @@
 #xbacklight
+pkgname=(xbacklight)
+pkgver=XYZVER
+pkgrel=1

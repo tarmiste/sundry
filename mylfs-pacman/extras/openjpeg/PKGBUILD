@@ -1,1 +1,4 @@
 #openjpeg
+pkgname=(openjpeg)
+pkgver=XYZVER
+pkgrel=1

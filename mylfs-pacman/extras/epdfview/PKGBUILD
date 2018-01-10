@@ -1,1 +1,4 @@
 #epdfview
+pkgname=(epdfview)
+pkgver=XYZVER
+pkgrel=1

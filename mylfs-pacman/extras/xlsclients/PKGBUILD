@@ -1,1 +1,4 @@
 #xlsclients
+pkgname=(xlsclients)
+pkgver=XYZVER
+pkgrel=1

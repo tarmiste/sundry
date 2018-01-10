@@ -1,1 +1,4 @@
 #inputproto
+pkgname=(inputproto)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #phonon
+pkgname=(phonon)
+pkgver=XYZVER
+pkgrel=1

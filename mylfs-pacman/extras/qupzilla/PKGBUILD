@@ -1,1 +1,4 @@
 #qupzilla
+pkgname=(qupzilla)
+pkgver=XYZVER
+pkgrel=1

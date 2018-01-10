@@ -1,1 +1,4 @@
 #xfconf
+pkgname=(xfconf)
+pkgver=XYZVER
+pkgrel=1

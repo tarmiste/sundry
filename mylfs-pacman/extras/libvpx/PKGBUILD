@@ -1,1 +1,4 @@
 #libvpx
+pkgname=(libvpx)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #xscreensaver
+pkgname=(xscreensaver)
+pkgver=XYZVER
+pkgrel=1

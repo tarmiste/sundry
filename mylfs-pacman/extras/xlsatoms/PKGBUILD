@@ -1,1 +1,4 @@
 #xlsatoms
+pkgname=(xlsatoms)
+pkgver=XYZVER
+pkgrel=1

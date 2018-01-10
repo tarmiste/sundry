@@ -1,1 +1,4 @@
 #pcmanfm
+pkgname=(pcmanfm)
+pkgver=XYZVER
+pkgrel=1

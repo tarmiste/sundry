@@ -1,1 +1,4 @@
 #lxinput
+pkgname=(lxinput)
+pkgver=XYZVER
+pkgrel=1

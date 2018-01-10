@@ -1,1 +1,4 @@
 #fcron
+pkgname=(fcron)
+pkgver=XYZVER
+pkgrel=1

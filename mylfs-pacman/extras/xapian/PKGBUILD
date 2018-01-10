@@ -1,1 +1,4 @@
 #xapian
+pkgname=(xapian)
+pkgver=XYZVER
+pkgrel=1

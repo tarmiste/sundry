@@ -1,1 +1,4 @@
 #wv
+pkgname=(wv)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #initd-tools
+pkgname=(initd-tools)
+pkgver=XYZVER
+pkgrel=1

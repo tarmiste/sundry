@@ -1,1 +1,4 @@
 #alsa-firmware
+pkgname=(alsa-firmware)
+pkgver=XYZVER
+pkgrel=1

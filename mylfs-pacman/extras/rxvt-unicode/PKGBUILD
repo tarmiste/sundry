@@ -1,1 +1,4 @@
 #rxvt-unicode
+pkgname=(rxvt-unicode)
+pkgver=XYZVER
+pkgrel=1

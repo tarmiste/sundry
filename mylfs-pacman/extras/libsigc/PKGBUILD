@@ -1,1 +1,4 @@
 #libsigc
+pkgname=(libsigc)
+pkgver=XYZVER
+pkgrel=1

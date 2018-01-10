@@ -1,1 +1,4 @@
 #vsftpd
+pkgname=(vsftpd)
+pkgver=XYZVER
+pkgrel=1

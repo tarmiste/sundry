@@ -1,1 +1,4 @@
 #libbytesize
+pkgname=(libbytesize)
+pkgver=XYZVER
+pkgrel=1

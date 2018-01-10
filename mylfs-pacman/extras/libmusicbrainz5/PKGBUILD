@@ -1,1 +1,4 @@
 #libmusicbrainz5
+pkgname=(libmusicbrainz5)
+pkgver=XYZVER
+pkgrel=1

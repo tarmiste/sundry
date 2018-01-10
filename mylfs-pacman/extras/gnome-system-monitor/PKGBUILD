@@ -1,1 +1,4 @@
 #gnome-system-monitor
+pkgname=(gnome-system-monitor)
+pkgver=XYZVER
+pkgrel=1

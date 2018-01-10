@@ -1,1 +1,4 @@
 #scrnsaverproto
+pkgname=(scrnsaverproto)
+pkgver=XYZVER
+pkgrel=1

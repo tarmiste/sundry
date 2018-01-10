@@ -1,1 +1,4 @@
 #perl-autovivification
+pkgname=(perl-autovivification)
+pkgver=XYZVER
+pkgrel=1

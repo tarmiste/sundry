@@ -1,1 +1,4 @@
 #libdmx
+pkgname=(libdmx)
+pkgver=XYZVER
+pkgrel=1

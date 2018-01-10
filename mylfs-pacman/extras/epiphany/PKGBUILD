@@ -1,1 +1,4 @@
 #epiphany
+pkgname=(epiphany)
+pkgver=XYZVER
+pkgrel=1

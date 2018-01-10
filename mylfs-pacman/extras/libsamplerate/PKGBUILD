@@ -1,1 +1,4 @@
 #libsamplerate
+pkgname=(libsamplerate)
+pkgver=XYZVER
+pkgrel=1

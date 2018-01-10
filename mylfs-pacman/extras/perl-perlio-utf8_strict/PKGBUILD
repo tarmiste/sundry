@@ -1,1 +1,4 @@
 #perl-perlio-utf8_strict
+pkgname=(perl-perlio-utf8_strict)
+pkgver=XYZVER
+pkgrel=1

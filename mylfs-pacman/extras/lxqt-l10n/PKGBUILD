@@ -1,1 +1,4 @@
 #lxqt-l10n
+pkgname=(lxqt-l10n)
+pkgver=XYZVER
+pkgrel=1

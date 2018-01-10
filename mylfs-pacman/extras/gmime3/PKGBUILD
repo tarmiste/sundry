@@ -1,1 +1,4 @@
 #gmime3
+pkgname=(gmime3)
+pkgver=XYZVER
+pkgrel=1

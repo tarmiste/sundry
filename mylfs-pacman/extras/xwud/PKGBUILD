@@ -1,1 +1,4 @@
 #xwud
+pkgname=(xwud)
+pkgver=XYZVER
+pkgrel=1

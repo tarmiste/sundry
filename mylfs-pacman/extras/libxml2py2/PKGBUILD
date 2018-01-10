@@ -1,1 +1,4 @@
 #libxml2py2
+pkgname=(libxml2py2)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #tcl
+pkgname=(tcl)
+pkgver=XYZVER
+pkgrel=1

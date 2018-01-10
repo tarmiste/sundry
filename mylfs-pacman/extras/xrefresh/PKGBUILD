@@ -1,1 +1,4 @@
 #xrefresh
+pkgname=(xrefresh)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #lxqt-config
+pkgname=(lxqt-config)
+pkgver=XYZVER
+pkgrel=1

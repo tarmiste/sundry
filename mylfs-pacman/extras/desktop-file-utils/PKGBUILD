@@ -1,1 +1,4 @@
 #desktop-file-utils
+pkgname=(desktop-file-utils)
+pkgver=XYZVER
+pkgrel=1

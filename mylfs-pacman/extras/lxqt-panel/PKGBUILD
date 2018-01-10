@@ -1,1 +1,4 @@
 #lxqt-panel
+pkgname=(lxqt-panel)
+pkgver=XYZVER
+pkgrel=1

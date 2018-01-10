@@ -1,1 +1,4 @@
 #perl-file-basedir
+pkgname=(perl-file-basedir)
+pkgver=XYZVER
+pkgrel=1

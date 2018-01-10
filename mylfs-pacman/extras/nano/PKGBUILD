@@ -1,1 +1,4 @@
 #nano
+pkgname=(nano)
+pkgver=XYZVER
+pkgrel=1

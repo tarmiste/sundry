@@ -1,1 +1,4 @@
 #colord
+pkgname=(colord)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libgcrypt
+pkgname=(libgcrypt)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libass
+pkgname=(libass)
+pkgver=XYZVER
+pkgrel=1

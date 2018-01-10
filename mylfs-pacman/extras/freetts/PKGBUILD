@@ -1,1 +1,4 @@
 #freetts
+pkgname=(freetts)
+pkgver=XYZVER
+pkgrel=1

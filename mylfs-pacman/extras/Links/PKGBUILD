@@ -1,1 +1,4 @@
 #Links
+pkgname=(Links)
+pkgver=XYZVER
+pkgrel=1

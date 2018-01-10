@@ -1,1 +1,4 @@
 #kdenlive5
+pkgname=(kdenlive5)
+pkgver=XYZVER
+pkgrel=1

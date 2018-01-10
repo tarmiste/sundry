@@ -1,1 +1,4 @@
 #midori
+pkgname=(midori)
+pkgver=XYZVER
+pkgrel=1

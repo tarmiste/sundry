@@ -1,1 +1,4 @@
 #tigervnc
+pkgname=(tigervnc)
+pkgver=XYZVER
+pkgrel=1

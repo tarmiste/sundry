@@ -1,1 +1,4 @@
 #dejagnu
+pkgname=(dejagnu)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libsysstat
+pkgname=(libsysstat)
+pkgver=XYZVER
+pkgrel=1

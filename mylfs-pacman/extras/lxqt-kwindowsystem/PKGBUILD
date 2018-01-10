@@ -1,1 +1,4 @@
 #lxqt-kwindowsystem
+pkgname=(lxqt-kwindowsystem)
+pkgver=XYZVER
+pkgrel=1

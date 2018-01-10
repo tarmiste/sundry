@@ -1,1 +1,4 @@
 #obex-data-server
+pkgname=(obex-data-server)
+pkgver=XYZVER
+pkgrel=1

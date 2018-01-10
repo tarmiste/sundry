@@ -1,1 +1,4 @@
 #gst10-plugins-bad
+pkgname=(gst10-plugins-bad)
+pkgver=XYZVER
+pkgrel=1

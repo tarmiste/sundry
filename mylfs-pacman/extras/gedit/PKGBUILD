@@ -1,1 +1,4 @@
 #gedit
+pkgname=(gedit)
+pkgver=XYZVER
+pkgrel=1

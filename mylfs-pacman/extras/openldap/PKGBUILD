@@ -1,1 +1,4 @@
 #openldap
+pkgname=(openldap)
+pkgver=XYZVER
+pkgrel=1

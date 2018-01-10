@@ -1,1 +1,4 @@
 #xfce4-power-manager
+pkgname=(xfce4-power-manager)
+pkgver=XYZVER
+pkgrel=1

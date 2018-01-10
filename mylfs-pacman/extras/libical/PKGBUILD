@@ -1,1 +1,4 @@
 #libical
+pkgname=(libical)
+pkgver=XYZVER
+pkgrel=1

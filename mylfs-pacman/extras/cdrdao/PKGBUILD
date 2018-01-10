@@ -1,1 +1,4 @@
 #cdrdao
+pkgname=(cdrdao)
+pkgver=XYZVER
+pkgrel=1

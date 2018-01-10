@@ -1,1 +1,4 @@
 #gstreamer10-vaapi
+pkgname=(gstreamer10-vaapi)
+pkgver=XYZVER
+pkgrel=1

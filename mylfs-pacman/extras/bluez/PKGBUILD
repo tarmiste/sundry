@@ -1,1 +1,4 @@
 #bluez
+pkgname=(bluez)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #sqlite
+pkgname=(sqlite)
+pkgver=XYZVER
+pkgrel=1

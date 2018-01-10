@@ -1,1 +1,4 @@
 #jfsutils
+pkgname=(jfsutils)
+pkgver=XYZVER
+pkgrel=1

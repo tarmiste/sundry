@@ -1,1 +1,4 @@
 #gnome-autoar
+pkgname=(gnome-autoar)
+pkgver=XYZVER
+pkgrel=1

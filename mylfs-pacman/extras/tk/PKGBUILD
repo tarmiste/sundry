@@ -1,1 +1,4 @@
 #tk
+pkgname=(tk)
+pkgver=XYZVER
+pkgrel=1

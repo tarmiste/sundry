@@ -1,1 +1,4 @@
 #reiserfs
+pkgname=(reiserfs)
+pkgver=XYZVER
+pkgrel=1

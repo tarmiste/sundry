@@ -1,1 +1,4 @@
 #lxtask
+pkgname=(lxtask)
+pkgver=XYZVER
+pkgrel=1

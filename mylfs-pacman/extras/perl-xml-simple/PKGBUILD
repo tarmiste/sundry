@@ -1,1 +1,4 @@
 #perl-xml-simple
+pkgname=(perl-xml-simple)
+pkgver=XYZVER
+pkgrel=1

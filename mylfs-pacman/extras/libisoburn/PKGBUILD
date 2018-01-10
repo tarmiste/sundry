@@ -1,1 +1,4 @@
 #libisoburn
+pkgname=(libisoburn)
+pkgver=XYZVER
+pkgrel=1

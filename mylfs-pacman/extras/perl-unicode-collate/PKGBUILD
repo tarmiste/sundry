@@ -1,1 +1,4 @@
 #perl-unicode-collate
+pkgname=(perl-unicode-collate)
+pkgver=XYZVER
+pkgrel=1

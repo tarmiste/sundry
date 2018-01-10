@@ -1,1 +1,4 @@
 #fontconfig
+pkgname=(fontconfig)
+pkgver=XYZVER
+pkgrel=1

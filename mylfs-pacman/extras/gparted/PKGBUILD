@@ -1,1 +1,4 @@
 #gparted
+pkgname=(gparted)
+pkgver=XYZVER
+pkgrel=1

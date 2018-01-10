@@ -1,1 +1,4 @@
 #xproto
+pkgname=(xproto)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #yasm
+pkgname=(yasm)
+pkgver=XYZVER
+pkgrel=1

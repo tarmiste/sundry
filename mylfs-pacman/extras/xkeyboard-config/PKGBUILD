@@ -1,1 +1,4 @@
 #xkeyboard-config
+pkgname=(xkeyboard-config)
+pkgver=XYZVER
+pkgrel=1

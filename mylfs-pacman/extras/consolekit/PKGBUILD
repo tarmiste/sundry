@@ -1,1 +1,4 @@
 #consolekit
+pkgname=(consolekit)
+pkgver=XYZVER
+pkgrel=1

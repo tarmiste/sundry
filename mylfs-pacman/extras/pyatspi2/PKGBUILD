@@ -1,1 +1,4 @@
 #pyatspi2
+pkgname=(pyatspi2)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #perl-log-log4perl
+pkgname=(perl-log-log4perl)
+pkgver=XYZVER
+pkgrel=1

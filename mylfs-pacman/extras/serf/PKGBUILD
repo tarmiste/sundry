@@ -1,1 +1,4 @@
 #serf
+pkgname=(serf)
+pkgver=XYZVER
+pkgrel=1

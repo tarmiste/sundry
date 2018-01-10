@@ -1,1 +1,4 @@
 #clutter-gst
+pkgname=(clutter-gst)
+pkgver=XYZVER
+pkgrel=1

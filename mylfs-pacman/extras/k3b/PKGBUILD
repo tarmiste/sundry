@@ -1,1 +1,4 @@
 #k3b
+pkgname=(k3b)
+pkgver=XYZVER
+pkgrel=1

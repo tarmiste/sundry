@@ -1,1 +1,4 @@
 #id3lib
+pkgname=(id3lib)
+pkgver=XYZVER
+pkgrel=1

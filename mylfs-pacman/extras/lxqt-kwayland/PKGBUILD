@@ -1,1 +1,4 @@
 #lxqt-kwayland
+pkgname=(lxqt-kwayland)
+pkgver=XYZVER
+pkgrel=1

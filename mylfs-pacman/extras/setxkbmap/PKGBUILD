@@ -1,1 +1,4 @@
 #setxkbmap
+pkgname=(setxkbmap)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libcddb
+pkgname=(libcddb)
+pkgver=XYZVER
+pkgrel=1

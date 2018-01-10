@@ -1,1 +1,4 @@
 #firefox
+pkgname=(firefox)
+pkgver=XYZVER
+pkgrel=1

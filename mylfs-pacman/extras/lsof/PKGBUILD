@@ -1,1 +1,4 @@
 #lsof
+pkgname=(lsof)
+pkgver=XYZVER
+pkgrel=1

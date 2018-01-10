@@ -1,1 +1,4 @@
 #xorg-intel-driver
+pkgname=(xorg-intel-driver)
+pkgver=XYZVER
+pkgrel=1

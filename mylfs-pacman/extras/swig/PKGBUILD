@@ -1,1 +1,4 @@
 #swig
+pkgname=(swig)
+pkgver=XYZVER
+pkgrel=1

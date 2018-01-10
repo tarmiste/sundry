@@ -1,1 +1,4 @@
 #icon-naming-utils
+pkgname=(icon-naming-utils)
+pkgver=XYZVER
+pkgrel=1

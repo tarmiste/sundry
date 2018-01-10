@@ -1,1 +1,4 @@
 #xf86bigfontproto
+pkgname=(xf86bigfontproto)
+pkgver=XYZVER
+pkgrel=1

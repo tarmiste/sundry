@@ -1,1 +1,4 @@
 #glu
+pkgname=(glu)
+pkgver=XYZVER
+pkgrel=1

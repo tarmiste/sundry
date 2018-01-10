@@ -1,1 +1,4 @@
 #asymptote
+pkgname=(asymptote)
+pkgver=XYZVER
+pkgrel=1

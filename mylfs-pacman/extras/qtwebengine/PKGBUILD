@@ -1,1 +1,4 @@
 #qtwebengine
+pkgname=(qtwebengine)
+pkgver=XYZVER
+pkgrel=1

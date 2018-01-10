@@ -1,1 +1,4 @@
 #xhost
+pkgname=(xhost)
+pkgver=XYZVER
+pkgrel=1

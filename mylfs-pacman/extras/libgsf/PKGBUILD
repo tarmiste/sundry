@@ -1,1 +1,4 @@
 #libgsf
+pkgname=(libgsf)
+pkgver=XYZVER
+pkgrel=1

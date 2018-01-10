@@ -1,1 +1,4 @@
 #cdrtools
+pkgname=(cdrtools)
+pkgver=XYZVER
+pkgrel=1

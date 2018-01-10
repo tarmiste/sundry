@@ -1,1 +1,4 @@
 #hd2u
+pkgname=(hd2u)
+pkgver=XYZVER
+pkgrel=1

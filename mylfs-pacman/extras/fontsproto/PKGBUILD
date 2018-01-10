@@ -1,1 +1,4 @@
 #fontsproto
+pkgname=(fontsproto)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #scour
+pkgname=(scour)
+pkgver=XYZVER
+pkgrel=1

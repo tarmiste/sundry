@@ -1,1 +1,4 @@
 #libkdcraw
+pkgname=(libkdcraw)
+pkgver=XYZVER
+pkgrel=1

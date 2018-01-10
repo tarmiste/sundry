@@ -1,1 +1,4 @@
 #qterminal
+pkgname=(qterminal)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #adwaita-icon-theme
+pkgname=(adwaita-icon-theme)
+pkgver=XYZVER
+pkgrel=1

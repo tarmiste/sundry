@@ -1,1 +1,4 @@
 #perl-ipc-run3
+pkgname=(perl-ipc-run3)
+pkgver=XYZVER
+pkgrel=1

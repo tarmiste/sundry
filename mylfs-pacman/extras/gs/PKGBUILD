@@ -1,1 +1,4 @@
 #gs
+pkgname=(gs)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #startup-notification
+pkgname=(startup-notification)
+pkgver=XYZVER
+pkgrel=1

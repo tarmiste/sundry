@@ -1,1 +1,4 @@
 #python3
+pkgname=(python3)
+pkgver=XYZVER
+pkgrel=1

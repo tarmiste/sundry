@@ -1,1 +1,4 @@
 #baobab
+pkgname=(baobab)
+pkgver=XYZVER
+pkgrel=1

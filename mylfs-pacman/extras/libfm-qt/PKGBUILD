@@ -1,1 +1,4 @@
 #libfm-qt
+pkgname=(libfm-qt)
+pkgver=XYZVER
+pkgrel=1

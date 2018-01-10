@@ -1,1 +1,4 @@
 #ninja
+pkgname=(ninja)
+pkgver=XYZVER
+pkgrel=1

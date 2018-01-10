@@ -1,1 +1,4 @@
 #biber
+pkgname=(biber)
+pkgver=XYZVER
+pkgrel=1

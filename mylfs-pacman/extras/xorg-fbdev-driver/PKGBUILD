@@ -1,1 +1,4 @@
 #xorg-fbdev-driver
+pkgname=(xorg-fbdev-driver)
+pkgver=XYZVER
+pkgrel=1

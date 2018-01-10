@@ -1,1 +1,4 @@
 #bind-utils
+pkgname=(bind-utils)
+pkgver=XYZVER
+pkgrel=1

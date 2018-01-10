@@ -1,1 +1,4 @@
 #cdparanoia
+pkgname=(cdparanoia)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #xindy
+pkgname=(xindy)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #feh
+pkgname=(feh)
+pkgver=XYZVER
+pkgrel=1

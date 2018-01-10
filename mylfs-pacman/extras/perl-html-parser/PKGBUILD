@@ -1,1 +1,4 @@
 #perl-html-parser
+pkgname=(perl-html-parser)
+pkgver=XYZVER
+pkgrel=1

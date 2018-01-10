@@ -1,1 +1,4 @@
 #xpr
+pkgname=(xpr)
+pkgver=XYZVER
+pkgrel=1

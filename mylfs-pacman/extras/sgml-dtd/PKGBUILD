@@ -1,1 +1,4 @@
 #sgml-dtd
+pkgname=(sgml-dtd)
+pkgver=XYZVER
+pkgrel=1

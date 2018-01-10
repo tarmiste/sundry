@@ -1,1 +1,4 @@
 #gjs
+pkgname=(gjs)
+pkgver=XYZVER
+pkgrel=1

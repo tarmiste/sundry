@@ -1,1 +1,4 @@
 #lxqt-notificationd
+pkgname=(lxqt-notificationd)
+pkgver=XYZVER
+pkgrel=1

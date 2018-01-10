@@ -1,1 +1,4 @@
 #shared-mime-info
+pkgname=(shared-mime-info)
+pkgver=XYZVER
+pkgrel=1

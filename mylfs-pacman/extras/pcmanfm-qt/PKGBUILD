@@ -1,1 +1,4 @@
 #pcmanfm-qt
+pkgname=(pcmanfm-qt)
+pkgver=XYZVER
+pkgrel=1

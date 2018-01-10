@@ -1,1 +1,4 @@
 #gnome-calculator
+pkgname=(gnome-calculator)
+pkgver=XYZVER
+pkgrel=1

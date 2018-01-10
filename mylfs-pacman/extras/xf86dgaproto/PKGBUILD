@@ -1,1 +1,4 @@
 #xf86dgaproto
+pkgname=(xf86dgaproto)
+pkgver=XYZVER
+pkgrel=1

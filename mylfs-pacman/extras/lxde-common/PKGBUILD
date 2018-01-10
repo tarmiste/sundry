@@ -1,1 +1,4 @@
 #lxde-common
+pkgname=(lxde-common)
+pkgver=XYZVER
+pkgrel=1

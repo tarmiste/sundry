@@ -1,1 +1,4 @@
 #libassuan
+pkgname=(libassuan)
+pkgver=XYZVER
+pkgrel=1

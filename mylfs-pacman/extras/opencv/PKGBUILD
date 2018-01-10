@@ -1,1 +1,4 @@
 #opencv
+pkgname=(opencv)
+pkgver=XYZVER
+pkgrel=1

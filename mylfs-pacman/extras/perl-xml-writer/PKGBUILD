@@ -1,1 +1,4 @@
 #perl-xml-writer
+pkgname=(perl-xml-writer)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libtirpc
+pkgname=(libtirpc)
+pkgver=XYZVER
+pkgrel=1

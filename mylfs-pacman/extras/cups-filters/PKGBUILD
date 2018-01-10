@@ -1,1 +1,4 @@
 #cups-filters
+pkgname=(cups-filters)
+pkgver=XYZVER
+pkgrel=1

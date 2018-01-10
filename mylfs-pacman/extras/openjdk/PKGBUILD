@@ -1,1 +1,4 @@
 #openjdk
+pkgname=(openjdk)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #sddm
+pkgname=(sddm)
+pkgver=XYZVER
+pkgrel=1

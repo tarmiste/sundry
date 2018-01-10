@@ -1,1 +1,4 @@
 #damageproto
+pkgname=(damageproto)
+pkgver=XYZVER
+pkgrel=1

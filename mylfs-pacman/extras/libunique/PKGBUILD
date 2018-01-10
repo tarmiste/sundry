@@ -1,1 +1,4 @@
 #libunique
+pkgname=(libunique)
+pkgver=XYZVER
+pkgrel=1

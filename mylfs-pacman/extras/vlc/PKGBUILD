@@ -1,1 +1,4 @@
 #vlc
+pkgname=(vlc)
+pkgver=XYZVER
+pkgrel=1

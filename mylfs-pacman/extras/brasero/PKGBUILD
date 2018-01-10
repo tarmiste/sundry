@@ -1,1 +1,4 @@
 #brasero
+pkgname=(brasero)
+pkgver=XYZVER
+pkgrel=1

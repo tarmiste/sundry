@@ -1,1 +1,4 @@
 #libnotify
+pkgname=(libnotify)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #nghttp2
+pkgname=(nghttp2)
+pkgver=XYZVER
+pkgrel=1

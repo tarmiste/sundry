@@ -1,1 +1,4 @@
 #psutils
+pkgname=(psutils)
+pkgver=XYZVER
+pkgrel=1

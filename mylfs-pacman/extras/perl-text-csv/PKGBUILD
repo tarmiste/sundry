@@ -1,1 +1,4 @@
 #perl-text-csv
+pkgname=(perl-text-csv)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #rsync
+pkgname=(rsync)
+pkgver=XYZVER
+pkgrel=1

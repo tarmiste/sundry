@@ -1,1 +1,4 @@
 #lxpanel
+pkgname=(lxpanel)
+pkgver=XYZVER
+pkgrel=1

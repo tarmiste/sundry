@@ -1,1 +1,4 @@
 #twm
+pkgname=(twm)
+pkgver=XYZVER
+pkgrel=1

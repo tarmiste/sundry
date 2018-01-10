@@ -1,1 +1,4 @@
 #mdadm
+pkgname=(mdadm)
+pkgver=XYZVER
+pkgrel=1

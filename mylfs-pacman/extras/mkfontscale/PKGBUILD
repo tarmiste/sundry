@@ -1,1 +1,4 @@
 #mkfontscale
+pkgname=(mkfontscale)
+pkgver=XYZVER
+pkgrel=1

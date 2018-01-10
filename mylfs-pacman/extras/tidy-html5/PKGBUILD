@@ -1,1 +1,4 @@
 #tidy-html5
+pkgname=(tidy-html5)
+pkgver=XYZVER
+pkgrel=1

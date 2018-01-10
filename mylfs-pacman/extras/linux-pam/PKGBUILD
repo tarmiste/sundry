@@ -1,1 +1,4 @@
 #linux-pam
+pkgname=(linux-pam)
+pkgver=XYZVER
+pkgrel=1

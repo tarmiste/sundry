@@ -1,1 +1,4 @@
 #perl-module-build
+pkgname=(perl-module-build)
+pkgver=XYZVER
+pkgrel=1

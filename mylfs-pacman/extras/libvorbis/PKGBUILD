@@ -1,1 +1,4 @@
 #libvorbis
+pkgname=(libvorbis)
+pkgver=XYZVER
+pkgrel=1

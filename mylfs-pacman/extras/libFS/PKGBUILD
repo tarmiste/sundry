@@ -1,1 +1,4 @@
 #libFS
+pkgname=(libFS)
+pkgver=XYZVER
+pkgrel=1

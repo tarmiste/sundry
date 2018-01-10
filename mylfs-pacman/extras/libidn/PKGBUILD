@@ -1,1 +1,4 @@
 #libidn
+pkgname=(libidn)
+pkgver=XYZVER
+pkgrel=1

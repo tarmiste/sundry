@@ -1,1 +1,4 @@
 #smproxy
+pkgname=(smproxy)
+pkgver=XYZVER
+pkgrel=1

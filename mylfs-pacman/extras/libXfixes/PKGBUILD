@@ -1,1 +1,4 @@
 #libXfixes
+pkgname=(libXfixes)
+pkgver=XYZVER
+pkgrel=1

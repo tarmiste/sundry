@@ -1,1 +1,4 @@
 #libsoup
+pkgname=(libsoup)
+pkgver=XYZVER
+pkgrel=1

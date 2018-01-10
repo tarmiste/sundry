@@ -1,1 +1,4 @@
 #seamonkey
+pkgname=(seamonkey)
+pkgver=XYZVER
+pkgrel=1

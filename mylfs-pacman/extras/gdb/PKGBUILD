@@ -1,1 +1,4 @@
 #gdb
+pkgname=(gdb)
+pkgver=XYZVER
+pkgrel=1

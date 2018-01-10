@@ -1,1 +1,4 @@
 #xkbcomp
+pkgname=(xkbcomp)
+pkgver=XYZVER
+pkgrel=1

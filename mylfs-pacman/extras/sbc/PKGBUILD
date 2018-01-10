@@ -1,1 +1,4 @@
 #sbc
+pkgname=(sbc)
+pkgver=XYZVER
+pkgrel=1

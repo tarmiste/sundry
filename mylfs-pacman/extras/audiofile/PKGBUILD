@@ -1,1 +1,4 @@
 #audiofile
+pkgname=(audiofile)
+pkgver=XYZVER
+pkgrel=1

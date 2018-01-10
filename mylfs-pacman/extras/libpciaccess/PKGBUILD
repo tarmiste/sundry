@@ -1,1 +1,4 @@
 #libpciaccess
+pkgname=(libpciaccess)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #libpcap
+pkgname=(libpcap)
+pkgver=XYZVER
+pkgrel=1

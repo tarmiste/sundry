@@ -1,1 +1,4 @@
 #qca
+pkgname=(qca)
+pkgver=XYZVER
+pkgrel=1

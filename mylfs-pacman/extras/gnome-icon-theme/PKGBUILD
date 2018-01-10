@@ -1,1 +1,4 @@
 #gnome-icon-theme
+pkgname=(gnome-icon-theme)
+pkgver=XYZVER
+pkgrel=1

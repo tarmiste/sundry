@@ -1,1 +1,4 @@
 #libXxf86vm
+pkgname=(libXxf86vm)
+pkgver=XYZVER
+pkgrel=1

@@ -1,1 +1,4 @@
 #menu-cache
+pkgname=(menu-cache)
+pkgver=XYZVER
+pkgrel=1

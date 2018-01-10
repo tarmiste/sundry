@@ -1,1 +1,4 @@
 #gtk3
+pkgname=(gtk3)
+pkgver=XYZVER
+pkgrel=1

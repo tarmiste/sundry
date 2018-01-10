@@ -1,1 +1,4 @@
 #thunar
+pkgname=(thunar)
+pkgver=XYZVER
+pkgrel=1

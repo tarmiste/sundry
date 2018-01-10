@@ -1,1 +1,4 @@
 #xorg-wacom-driver
+pkgname=(xorg-wacom-driver)
+pkgver=XYZVER
+pkgrel=1

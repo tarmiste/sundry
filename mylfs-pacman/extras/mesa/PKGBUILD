@@ -1,1 +1,4 @@
 #mesa
+pkgname=(mesa)
+pkgver=XYZVER
+pkgrel=1

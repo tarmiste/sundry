@@ -1,1 +1,4 @@
 #mupdf
+pkgname=(mupdf)
+pkgver=XYZVER
+pkgrel=1

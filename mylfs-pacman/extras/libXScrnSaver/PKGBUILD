@@ -1,1 +1,4 @@
 #libXScrnSaver
+pkgname=(libXScrnSaver)
+pkgver=XYZVER
+pkgrel=1

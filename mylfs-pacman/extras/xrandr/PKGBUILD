@@ -1,1 +1,4 @@
 #xrandr
+pkgname=(xrandr)
+pkgver=XYZVER
+pkgrel=1
