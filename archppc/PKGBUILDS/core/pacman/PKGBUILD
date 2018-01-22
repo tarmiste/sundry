@@ -81,12 +81,12 @@ package() {
     ppc)
       mycarch="ppc"
       mychost="powerpc-unknown-linux-gnu"
-      myflags="-march=powerpc "
+      myflags="-mcpu=powerpc "
       ;;
     ppc64)
       mycarch="aarch64"
       mychost="powerpc64-unknown-linux-gnu"
-      myflags="-march=powerpc64 "
+      myflags="-mpcu=powerpc64 "
       ;;
   esac
 
