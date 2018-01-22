@@ -102,6 +102,13 @@ package() {
     ln -s lib usr/lib64
   }
 
+  # add lib symlinks powerpc
+  ln -s usr/lib lib
+  # [[ $CARCH = 'x86_64' ]] && {
+    ln -s usr/lib lib64
+    ln -s lib usr/lib64
+  # }
+
   # add bin symlinks
   ln -s usr/bin bin
   ln -s usr/bin sbin
