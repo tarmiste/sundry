@@ -52,13 +52,17 @@ prepare() {
   patch -p1 -i ../0003-Revert-alpm_run_chroot-always-connect-parent2child-p.patch
 }
 
+#
+#  ./configure --prefix=/usr --sysconfdir=/etc \
+#    --with-scriptlet-shell=/usr/bin/bash \
+#    --localstatedir=/var --disable-doc 
+#    --with-ldconfig=/usr/bin/ldconfig
+#
 build() {
   cd "$pkgname-$pkgver"
 
-  ./configure --prefix=/usr --sysconfdir=/etc \
-    --localstatedir=/var --enable-doc \
-    --with-scriptlet-shell=/usr/bin/bash \
-    --with-ldconfig=/usr/bin/ldconfig
+  ./configure --prefix=/usr
+    --localstatedir=/var --disable-doc 
   make
   make -C contrib
 }
@@ -86,7 +90,7 @@ package() {
     ppc64)
       mycarch="aarch64"
       mychost="powerpc64-unknown-linux-gnu"
-      myflags="-mpcu=powerpc64 "
+      myflags="-mcpu=powerpc64 "
       ;;
   esac
 
@@ -101,12 +105,12 @@ package() {
 
   # put bash_completion in the right location
   install -dm755 "$pkgdir/usr/share/bash-completion/completions"
-  mv "$pkgdir/etc/bash_completion.d/pacman" "$pkgdir/usr/share/bash-completion/completions"
-  rmdir "$pkgdir/etc/bash_completion.d"
+  #mv "$pkgdir/etc/bash_completion.d/pacman" "$pkgdir/usr/share/bash-completion/completions"
+  #rmdir "$pkgdir/etc/bash_completion.d"
 
-  for f in makepkg pacman-key; do
-    ln -s pacman "$pkgdir/usr/share/bash-completion/completions/$f"
-  done
+  #for f in makepkg pacman-key; do
+  #  ln -s pacman "$pkgdir/usr/share/bash-completion/completions/$f"
+  #done
 
-  install -Dm644 contrib/PKGBUILD.vim "$pkgdir/usr/share/vim/vimfiles/syntax/PKGBUILD.vim"
+  #install -Dm644 contrib/PKGBUILD.vim "$pkgdir/usr/share/vim/vimfiles/syntax/PKGBUILD.vim"
 }

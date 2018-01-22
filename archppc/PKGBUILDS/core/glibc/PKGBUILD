@@ -29,7 +29,6 @@ source=(${pkgname}-${pkgver}.tar.xz
         0003-linux-ttyname-Change-return-type-of-is_pty-from-int-.patch
         0004-linux-ttyname-_r-Make-tty-checks-consistent.patch
         0005-linux-ttyname-_r-Don-t-bail-prematurely-BZ-22145.patch
-        0006-linux-ttyname-_r-Add-tests.patch
         bz20338.patch)
 md5sums=('102f637c3812f81111f48f2427611be1'
          '07ac979b6ab5eeb778d55f041529d623'
@@ -39,13 +38,12 @@ md5sums=('102f637c3812f81111f48f2427611be1'
          '41d212e3f8d838bff341102679b2af09'
          '8a886e84f950caf2ad1c37cc3a456339'
          'fc5af427803b139d9753230849053458'
-         'eb4e1836f4f3721f1215450a2cca3523'
          'dc0d3ad59aeaaf591b085a77de6e03e9')
 
 prepare() {
   mkdir -p glibc-build
 
-  cd glibc
+  cd glibc-2.26
 
   local i; for i in ${source[@]}; do
     case ${i%::*} in
@@ -89,7 +87,7 @@ build() {
   # remove fortify for building libraries
   CPPFLAGS=${CPPFLAGS/-D_FORTIFY_SOURCE=2/}
 
-  "$srcdir/glibc/configure" \
+  "$srcdir/glibc-2.26/configure" \
       --libdir=/usr/lib \
       --libexecdir=/usr/lib \
       ${_configure_flags[@]} \
