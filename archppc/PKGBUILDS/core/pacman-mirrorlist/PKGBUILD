@@ -1,11 +1,11 @@
-# Maintainer: Kevin Mihelich <kevin@archlinuxarm.org>
+# Maintainer: Kevin Mihelich <kevin@archlinuxppc.org>
 
 pkgname=pacman-mirrorlist
 pkgver=20171201
 pkgrel=1
-pkgdesc="Arch Linux ARM mirror list for use by pacman"
+pkgdesc="Arch Linux PowerPC mirror list for use by pacman"
 arch=('any')
-url="http://www.archlinuxarm.org/about/mirrors"
+url="http://www.archlinuxppc.org/about/mirrors"
 license=('GPL')
 groups=('base')
 backup=(etc/pacman.d/mirrorlist)
