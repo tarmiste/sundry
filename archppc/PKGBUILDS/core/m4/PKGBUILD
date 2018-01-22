@@ -11,9 +11,9 @@ url="http://www.gnu.org/software/m4"
 license=('GPL3')
 groups=('base-devel')
 depends=('glibc' 'bash')
-source=(ftp://ftp.gnu.org/gnu/m4/$pkgname-$pkgver.tar.xz{,.sig})
+source=(ftp://ftp.gnu.org/gnu/m4/$pkgname-$pkgver.tar.xz)
 md5sums=('730bb15d96fffe47e148d1e09235af82'
-         'SKIP')
+         )
 validpgpkeys=('71C2CC22B1C4602927D2F3AAA7A16B4A2527436A')   # Eric Blake
 
 

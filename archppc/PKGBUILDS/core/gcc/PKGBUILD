@@ -76,6 +76,10 @@ prepare() {
   # Arch Linux ARM installs aarch64 libraries /lib
   [[ $CARCH == "aarch64" ]] && sed -i '/lp64=/s/lib64/lib/' gcc/config/aarch64/t-aarch64-linux
 
+  # Arch Linux PPC installs powerpc64 libraries /lib
+  [[ $CARCH == "ppc64" ]] && sed -i '/m64=/s/lib64/lib/' gcc/config/rs6000/t-linux64
+
+  # hack! - some configure tests for header files using "$CPP $CPPFLAGS"
   # hack! - some configure tests for header files using "$CPP $CPPFLAGS"
   sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" {libiberty,gcc}/configure
 
@@ -99,16 +103,19 @@ build() {
   CFLAGS=${CFLAGS/-pipe/}
   CXXFLAGS=${CXXFLAGS/-pipe/}
 
+#      --disable-bootstrap \   (added)
+#      --enable-languages=c,c++,fortran,go,lto,objc,obj-c++ \
   "$srcdir/gcc/configure" --prefix=/usr \
       --libdir=/usr/lib \
       --libexecdir=/usr/lib \
       --mandir=/usr/share/man \
       --infodir=/usr/share/info \
-      --with-bugurl=https://github.com/archlinuxarm/PKGBUILDs/issues \
-      --enable-languages=c,c++,fortran,go,lto,objc,obj-c++ \
+      --with-bugurl=https://github.com/archlinuxppc/PKGBUILDs/issues \
+      --enable-languages=c,c++ \
       --enable-shared \
       --enable-threads=posix \
       --with-system-zlib \
+      --disable-bootstrap \
       --with-isl \
       --enable-__cxa_atexit \
       --disable-libunwind-exceptions \
