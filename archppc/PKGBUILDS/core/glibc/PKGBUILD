@@ -5,7 +5,7 @@
 # toolchain build order: linux-api-headers->glibc->binutils->gcc->binutils->glibc
 # NOTE: valgrind requires rebuilt with each major glibc version
 
-# ALARM: Kevin Mihelich <kevin@archlinuxarm.org>
+# ALARM: Kevin Mihelich <kevin@archlinuxppc.org>
 #  - Specify our build host type
 #  - Disabled distcc
 #  - Strip out Arch x86 multilib
@@ -14,14 +14,14 @@ noautobuild=1
 
 pkgname=glibc
 pkgver=2.26
-pkgrel=10
+pkgrel=1
 arch=(x86_64)
 url='http://www.gnu.org/software/libc'
 license=(GPL LGPL)
 makedepends=(git gd)
 options=(!strip staticlibs !distcc)
 _commit=633e2f7f3d88df6427aa3a7a984d3a6b796d9611  # release/2.26/master
-source=(git://sourceware.org/git/glibc.git#commit=${_commit}
+source=(${pkgname}-${pkgver}.tar.xz
         locale.gen.txt
         locale-gen
         0001-manual-Update-to-mention-ENODEV-for-ttyname-and-ttyn.patch
@@ -31,7 +31,7 @@ source=(git://sourceware.org/git/glibc.git#commit=${_commit}
         0005-linux-ttyname-_r-Don-t-bail-prematurely-BZ-22145.patch
         0006-linux-ttyname-_r-Add-tests.patch
         bz20338.patch)
-md5sums=('SKIP'
+md5sums=('102f637c3812f81111f48f2427611be1'
          '07ac979b6ab5eeb778d55f041529d623'
          '476e9113489f93b348b21e144b6a8fcf'
          '2bb2dfa660fbb4b349f844459f79d5a1'
@@ -57,19 +57,21 @@ prepare() {
   done
 }
 
+#
+# PPC disable:
+#      --enable-stack-protector=strong
+#      --enable-stackguard-randomization
 build() {
   local _configure_flags=(
       --prefix=/usr
       --with-headers=/usr/include
-      --with-bugurl=https://github.com/archlinuxarm/PKGBUILDs/issues
+      --with-bugurl=https://github.com/archlinuxppc/PKGBUILDs/issues
       --enable-add-ons
       --enable-bind-now
       --enable-lock-elision
       --disable-multi-arch
       --enable-obsolete-nsl
       --enable-obsolete-rpc
-      --enable-stack-protector=strong
-      --enable-stackguard-randomization
       --disable-profile
       --disable-werror
   )
@@ -77,15 +79,12 @@ build() {
   cd "$srcdir/glibc-build"
 
   # ALARM: Specify build host types
-  [[ $CARCH == "arm" ]] && CONFIGFLAG="--host=armv5tel-unknown-linux-gnueabi --build=armv5tel-unknown-linux-gnueabi"
-  [[ $CARCH == "armv6h" ]] && CONFIGFLAG="--host=armv6l-unknown-linux-gnueabihf --build=armv6l-unknown-linux-gnueabihf"
-  [[ $CARCH == "armv7h" ]] && CONFIGFLAG="--host=armv7l-unknown-linux-gnueabihf --build=armv7l-unknown-linux-gnueabihf"
-  [[ $CARCH == "aarch64" ]] && CONFIGFLAG="--host=aarch64-unknown-linux-gnu --build=aarch64-unknown-linux-gnu"
+  # Removed
 
-  echo "slibdir=/usr/lib" >> configparms
-  echo "rtlddir=/usr/lib" >> configparms
-  echo "sbindir=/usr/bin" >> configparms
-  echo "rootsbindir=/usr/bin" >> configparms
+  echo "slibdir=/usr/lib" >> configpppcs
+  echo "rtlddir=/usr/lib" >> configpppcs
+  echo "sbindir=/usr/bin" >> configpppcs
+  echo "rootsbindir=/usr/bin" >> configpppcs
 
   # remove fortify for building libraries
   CPPFLAGS=${CPPFLAGS/-D_FORTIFY_SOURCE=2/}
@@ -97,14 +96,14 @@ build() {
       $CONFIGFLAG
 
   # build libraries with fortify disabled
-  echo "build-programs=no" >> configparms
+  echo "build-programs=no" >> configpppcs
   make
 
   # re-enable fortify for programs
-  sed -i "/build-programs=/s#no#yes#" configparms
+  sed -i "/build-programs=/s#no#yes#" configpppcs
 
-  echo "CC += -D_FORTIFY_SOURCE=2" >> configparms
-  echo "CXX += -D_FORTIFY_SOURCE=2" >> configparms
+  echo "CC += -D_FORTIFY_SOURCE=2" >> configpppcs
+  echo "CXX += -D_FORTIFY_SOURCE=2" >> configpppcs
   make
 }
 
@@ -112,7 +111,7 @@ check() {
   cd glibc-build
 
   # remove fortify in preparation to run test-suite
-  sed -i '/FORTIFY/d' configparms
+  sed -i '/FORTIFY/d' configpppcs
 
   # some failures are "expected"
   make check || true
@@ -152,7 +151,7 @@ package() {
     "$srcdir/glibc/localedata/SUPPORTED" >> "$pkgdir/etc/locale.gen"
 
   # ALARM: symlink ld-linux.so.3 for hard-float
-  [[ $CARCH == "armv6h" || $CARCH == "armv7h" ]] && ln -s /lib/ld-${pkgver}.so ${pkgdir}/usr/lib/ld-linux.so.3
+  # Removed
 
   # Do not strip the following files for improved debugging support
   # ("improved" as in not breaking gdb and valgrind...):
