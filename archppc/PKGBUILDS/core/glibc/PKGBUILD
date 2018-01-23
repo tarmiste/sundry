@@ -79,10 +79,10 @@ build() {
   # ALARM: Specify build host types
   # Removed
 
-  echo "slibdir=/usr/lib" >> configpppcs
-  echo "rtlddir=/usr/lib" >> configpppcs
-  echo "sbindir=/usr/bin" >> configpppcs
-  echo "rootsbindir=/usr/bin" >> configpppcs
+  echo "slibdir=/usr/lib" >> configparms
+  echo "rtlddir=/usr/lib" >> configparms
+  echo "sbindir=/usr/bin" >> configparms
+  echo "rootsbindir=/usr/bin" >> configparms
 
   # remove fortify for building libraries
   CPPFLAGS=${CPPFLAGS/-D_FORTIFY_SOURCE=2/}
@@ -94,14 +94,14 @@ build() {
       $CONFIGFLAG
 
   # build libraries with fortify disabled
-  echo "build-programs=no" >> configpppcs
+  echo "build-programs=no" >> configparms
   make
 
   # re-enable fortify for programs
-  sed -i "/build-programs=/s#no#yes#" configpppcs
+  sed -i "/build-programs=/s#no#yes#" configparms
 
-  echo "CC += -D_FORTIFY_SOURCE=2" >> configpppcs
-  echo "CXX += -D_FORTIFY_SOURCE=2" >> configpppcs
+  echo "CC += -D_FORTIFY_SOURCE=2" >> configparms
+  echo "CXX += -D_FORTIFY_SOURCE=2" >> configparms
   make
 }
 
@@ -109,7 +109,7 @@ check() {
   cd glibc-build
 
   # remove fortify in preparation to run test-suite
-  sed -i '/FORTIFY/d' configpppcs
+  sed -i '/FORTIFY/d' configparms
 
   # some failures are "expected"
   make check || true
@@ -131,7 +131,7 @@ package() {
   make -C glibc-build install_root="$pkgdir" install
   rm -f "$pkgdir"/etc/ld.so.{cache,conf}
 
-  cd glibc
+  cd glibc-2.26
 
   install -dm755 "$pkgdir"/usr/lib/{locale,systemd/system,tmpfiles.d}
   install -m644 nscd/nscd.conf "$pkgdir/etc/nscd.conf"
@@ -146,7 +146,7 @@ package() {
   # create /etc/locale.gen
   install -m644 "$srcdir/locale.gen.txt" "$pkgdir/etc/locale.gen"
   sed -e '1,3d' -e 's|/| |g' -e 's|\\| |g' -e 's|^|#|g' \
-    "$srcdir/glibc/localedata/SUPPORTED" >> "$pkgdir/etc/locale.gen"
+    "$srcdir/glibc-2.26/localedata/SUPPORTED" >> "$pkgdir/etc/locale.gen"
 
   # ALARM: symlink ld-linux.so.3 for hard-float
   # Removed

@@ -15,8 +15,9 @@
 
 noautobuild=1
 
-pkgname=(gcc gcc-libs gcc-fortran gcc-objc gcc-go)
-pkgver=7.2.1+20171224
+#pkgname=(gcc gcc-libs gcc-fortran gcc-objc gcc-go)
+pkgname=(gcc gcc-libs )
+pkgver=7.2.0
 _majorver=${pkgver:0:1}
 _islver=0.18
 pkgrel=2
@@ -61,7 +62,7 @@ snapshot() {
 }
 
 prepare() {
-  ln -s gcc-${_commit} gcc
+  ln -s gcc-7.2.0 gcc
   cd gcc
 
   # link isl for in-tree build
@@ -139,7 +140,7 @@ build() {
   make
 
   # make documentation
-  make -C $CHOST/libstdc++-v3/doc doc-man-doxygen
+  # make -C $CHOST/libstdc++-v3/doc doc-man-doxygen
 }
 
 check() {
