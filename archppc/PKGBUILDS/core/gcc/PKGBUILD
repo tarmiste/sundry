@@ -28,13 +28,12 @@ url='http://gcc.gnu.org'
 makedepends=(binutils libmpc doxygen)
 checkdepends=(dejagnu inetutils)
 options=(!emptydirs !distcc)
-source=(https://sources.archlinux.org/other/gcc/gcc-${pkgver/+/-}.tar.xz{,.sig}
+source=(https://sources.archlinux.org/other/gcc/gcc-${pkgver/+/-}.tar.xz
         http://isl.gforge.inria.fr/isl-${_islver}.tar.bz2
         c89 c99
         0001-ARMv5-disable-LDRD-STRD.patch)
 validpgpkeys=(F3691687D867B81B51CE07D9BBE43771487328A9) # bpiotrowski@archlinux.org
 sha256sums=('394c416a35dc608e5c9ea5ca902c5b08b51fcbc6b3b39ece05b8eea67033b4a8'
-            'SKIP'
             '6b8b0fd7f81d0a957beb3679c81bbb34ccc7568d5682844d8924424a0dadcb1b'
             'de48736f6e4153f03d0a5d38ceb6c6fdb7f054e8f47ddd6af0a3dbf14f27b931'
             '2513c6d9984dd0a2058557bf00f06d8d5181734e41dcfe07be7ed86f2959622a'
@@ -78,7 +77,9 @@ prepare() {
   [[ $CARCH == "aarch64" ]] && sed -i '/lp64=/s/lib64/lib/' gcc/config/aarch64/t-aarch64-linux
 
   # Arch Linux PPC installs powerpc64 libraries /lib
-  [[ $CARCH == "ppc64" ]] && sed -i '/m64=/s/lib64/lib/' gcc/config/rs6000/t-linux64
+  #[[ $CARCH == "ppc64" ]] && sed -i '/m64=/s/lib64/lib/' gcc/config/rs6000/t-linux64
+# hardcode for now.
+  sed -i '/m64=/s/lib64/lib/' gcc/config/rs6000/t-linux64
 
   # hack! - some configure tests for header files using "$CPP $CPPFLAGS"
   # hack! - some configure tests for header files using "$CPP $CPPFLAGS"
@@ -162,23 +163,27 @@ package_gcc-libs() {
   make -C $CHOST/libgcc DESTDIR="$pkgdir" install-shared
   rm -f "$pkgdir/$_libdir/libgcc_eh.a"
 
+#
+#
+#             libgfortran \
+#             libgo \
+#             libvtv; do
   for lib in libatomic \
-             libgfortran \
-             libgo \
              libgomp \
              libitm \
              libquadmath \
              libsanitizer/{a,l,ub}san \
-             libstdc++-v3/src \
-             libvtv; do
+             libstdc++-v3/src; do
     make -C $CHOST/$lib DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
   done
 
   if [[ $CARCH == "x86_64" || $CARCH == "aarch64" ]]; then
     make -C $CHOST/libsanitizer/tsan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
   fi
+##### make powerpc64 specific....: XXX
+    make -C $CHOST/libsanitizer/tsan DESTDIR="$pkgdir" install-toolexeclibLTLIBRARIES
 
-  make -C $CHOST/libobjc DESTDIR="$pkgdir" install-libs
+#  make -C $CHOST/libobjc DESTDIR="$pkgdir" install-libs
   make -C $CHOST/libstdc++-v3/po DESTDIR="$pkgdir" install
   #make -C $CHOST/libmpx DESTDIR="$pkgdir" install
   #rm -f "$pkgdir"/usr/lib/libmpx.spec
@@ -240,8 +245,9 @@ package_gcc() {
   install -m644 libiberty/pic/libiberty.a "$pkgdir/usr/lib"
 
   make -C gcc DESTDIR="$pkgdir" install-man install-info
-  rm "$pkgdir"/usr/share/man/man1/{gccgo,gfortran}.1
-  rm "$pkgdir"/usr/share/info/{gccgo,gfortran}.info
+# XXX
+  #rm "$pkgdir"/usr/share/man/man1/{gccgo,gfortran}.1
+  #rm "$pkgdir"/usr/share/info/{gccgo,gfortran}.info
 
   make -C libcpp DESTDIR="$pkgdir" install
   make -C gcc DESTDIR="$pkgdir" install-po
@@ -254,7 +260,7 @@ package_gcc() {
   install -Dm755 "$srcdir/c99" "$pkgdir/usr/bin/c99"
 
   # install the libstdc++ man pages
-  make -C $CHOST/libstdc++-v3/doc DESTDIR="$pkgdir" doc-install-man
+  #make -C $CHOST/libstdc++-v3/doc DESTDIR="$pkgdir" doc-install-man
 
   # Install Runtime Library Exception
   install -d "$pkgdir/usr/share/licenses/$pkgname/"
