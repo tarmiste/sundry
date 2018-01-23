@@ -20,9 +20,10 @@ md5sums=('f6e931e319531b736fadc017f470e68a'
          'SKIP')
 validpgpkeys=('6B99CE97F17F48C27F722D71023A4420C7EC6914')  # Dan Nicholson
 
+# ./configure --build=$CHOST --prefix=/usr
 build() {
   cd $pkgname-$pkgver
-  ./configure --build=$CHOST --prefix=/usr
+  ./configure --prefix=/usr --with-internal-glib
   make
 }
 
