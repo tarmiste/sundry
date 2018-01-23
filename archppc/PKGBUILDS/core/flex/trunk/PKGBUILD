@@ -17,6 +17,7 @@ md5sums=('2882e3179748cc9f9c23ec593d6adc8d')
 
 build() {
   cd "$pkgname-$pkgver"
+HELP2MAN=/tools/bin/true \
   ./configure --prefix=/usr
   make
 }
