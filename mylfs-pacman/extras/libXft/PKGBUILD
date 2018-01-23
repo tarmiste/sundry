@@ -1,4 +1,0 @@
-#libXft
-pkgname=(libXft)
-pkgver=XYZVER
-pkgrel=1

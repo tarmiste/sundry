@@ -1,4 +1,0 @@
-#xcb-util-renderutil
-pkgname=(xcb-util-renderutil)
-pkgver=XYZVER
-pkgrel=1

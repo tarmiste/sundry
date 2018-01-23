@@ -1,4 +1,0 @@
-#gimp
-pkgname=(gimp)
-pkgver=XYZVER
-pkgrel=1

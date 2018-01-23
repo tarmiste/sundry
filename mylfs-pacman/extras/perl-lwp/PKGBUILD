@@ -1,4 +1,0 @@
-#perl-lwp
-pkgname=(perl-lwp)
-pkgver=XYZVER
-pkgrel=1

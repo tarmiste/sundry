@@ -1,4 +1,0 @@
-#mplayer
-pkgname=(mplayer)
-pkgver=XYZVER
-pkgrel=1

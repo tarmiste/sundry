@@ -1,4 +1,0 @@
-#libXcursor
-pkgname=(libXcursor)
-pkgver=XYZVER
-pkgrel=1

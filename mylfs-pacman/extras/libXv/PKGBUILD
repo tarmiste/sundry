@@ -1,4 +1,0 @@
-#libXv
-pkgname=(libXv)
-pkgver=XYZVER
-pkgrel=1

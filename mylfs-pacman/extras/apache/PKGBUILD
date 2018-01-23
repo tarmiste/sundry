@@ -1,4 +1,0 @@
-#apache
-pkgname=(apache)
-pkgver=XYZVER
-pkgrel=1

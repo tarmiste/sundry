@@ -1,4 +1,0 @@
-#procmail
-pkgname=(procmail)
-pkgver=XYZVER
-pkgrel=1

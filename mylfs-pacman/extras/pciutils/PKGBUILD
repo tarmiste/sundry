@@ -1,4 +1,0 @@
-#pciutils
-pkgname=(pciutils)
-pkgver=XYZVER
-pkgrel=1

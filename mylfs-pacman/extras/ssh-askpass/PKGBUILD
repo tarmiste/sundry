@@ -1,4 +1,0 @@
-#ssh-askpass
-pkgname=(ssh-askpass)
-pkgver=XYZVER
-pkgrel=1

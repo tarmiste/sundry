@@ -1,4 +1,0 @@
-#xorg-server
-pkgname=(xorg-server)
-pkgver=XYZVER
-pkgrel=1

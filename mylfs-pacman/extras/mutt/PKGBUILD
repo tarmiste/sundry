@@ -1,4 +1,0 @@
-#mutt
-pkgname=(mutt)
-pkgver=XYZVER
-pkgrel=1

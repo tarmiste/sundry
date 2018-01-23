@@ -1,4 +1,0 @@
-#freetype2
-pkgname=(freetype2)
-pkgver=XYZVER
-pkgrel=1

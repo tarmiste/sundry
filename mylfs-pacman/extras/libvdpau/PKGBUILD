@@ -1,4 +1,0 @@
-#libvdpau
-pkgname=(libvdpau)
-pkgver=XYZVER
-pkgrel=1

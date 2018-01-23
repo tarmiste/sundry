@@ -1,4 +1,0 @@
-#iptables
-pkgname=(iptables)
-pkgver=XYZVER
-pkgrel=1

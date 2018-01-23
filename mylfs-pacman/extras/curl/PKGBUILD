@@ -1,4 +1,0 @@
-#curl
-pkgname=(curl)
-pkgver=XYZVER
-pkgrel=1

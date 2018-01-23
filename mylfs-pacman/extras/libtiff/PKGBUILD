@@ -1,4 +1,0 @@
-#libtiff
-pkgname=(libtiff)
-pkgver=XYZVER
-pkgrel=1

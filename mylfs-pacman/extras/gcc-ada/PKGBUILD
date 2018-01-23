@@ -1,4 +1,0 @@
-#gcc-ada
-pkgname=(gcc-ada)
-pkgver=XYZVER
-pkgrel=1

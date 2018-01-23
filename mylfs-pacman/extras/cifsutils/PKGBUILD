@@ -1,4 +1,0 @@
-#cifsutils
-pkgname=(cifsutils)
-pkgver=XYZVER
-pkgrel=1

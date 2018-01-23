@@ -1,4 +1,0 @@
-#ntfs-3g
-pkgname=(ntfs-3g)
-pkgver=XYZVER
-pkgrel=1

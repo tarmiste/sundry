@@ -1,4 +1,0 @@
-#libX11
-pkgname=(libX11)
-pkgver=XYZVER
-pkgrel=1

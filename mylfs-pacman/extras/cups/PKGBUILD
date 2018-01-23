@@ -1,4 +1,0 @@
-#cups
-pkgname=(cups)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#xfce4-notifyd
-pkgname=(xfce4-notifyd)
-pkgver=XYZVER
-pkgrel=1

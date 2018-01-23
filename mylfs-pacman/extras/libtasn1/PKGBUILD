@@ -1,4 +1,0 @@
-#libtasn1
-pkgname=(libtasn1)
-pkgver=XYZVER
-pkgrel=1

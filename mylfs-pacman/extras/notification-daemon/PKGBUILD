@@ -1,4 +1,0 @@
-#notification-daemon
-pkgname=(notification-daemon)
-pkgver=XYZVER
-pkgrel=1

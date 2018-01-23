@@ -1,4 +1,0 @@
-#xcb-util-wm
-pkgname=(xcb-util-wm)
-pkgver=XYZVER
-pkgrel=1

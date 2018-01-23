@@ -1,4 +1,0 @@
-#mercurial
-pkgname=(mercurial)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#gnome-terminal
-pkgname=(gnome-terminal)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#git
-pkgname=(git)
-pkgver=XYZVER
-pkgrel=1

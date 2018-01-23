@@ -1,4 +1,0 @@
-#libxshmfence
-pkgname=(libxshmfence)
-pkgver=XYZVER
-pkgrel=1

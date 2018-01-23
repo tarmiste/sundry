@@ -1,4 +1,0 @@
-#cyrus-sasl
-pkgname=(cyrus-sasl)
-pkgver=XYZVER
-pkgrel=1

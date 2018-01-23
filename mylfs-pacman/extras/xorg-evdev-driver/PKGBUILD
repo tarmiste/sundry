@@ -1,4 +1,0 @@
-#xorg-evdev-driver
-pkgname=(xorg-evdev-driver)
-pkgver=XYZVER
-pkgrel=1

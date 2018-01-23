@@ -1,4 +1,0 @@
-#xcb-util-keysyms
-pkgname=(xcb-util-keysyms)
-pkgver=XYZVER
-pkgrel=1

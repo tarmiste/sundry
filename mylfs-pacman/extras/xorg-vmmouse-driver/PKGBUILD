@@ -1,4 +1,0 @@
-#xorg-vmmouse-driver
-pkgname=(xorg-vmmouse-driver)
-pkgver=XYZVER
-pkgrel=1

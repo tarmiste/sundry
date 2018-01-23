@@ -1,4 +1,0 @@
-#NetworkManager
-pkgname=(NetworkManager)
-pkgver=XYZVER
-pkgrel=1

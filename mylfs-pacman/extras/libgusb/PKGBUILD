@@ -1,4 +1,0 @@
-#libgusb
-pkgname=(libgusb)
-pkgver=XYZVER
-pkgrel=1

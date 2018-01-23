@@ -1,4 +1,0 @@
-#lxqt-pre-install
-pkgname=(lxqt-pre-install)
-pkgver=XYZVER
-pkgrel=1

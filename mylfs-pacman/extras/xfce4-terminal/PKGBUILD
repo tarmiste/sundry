@@ -1,4 +1,0 @@
-#xfce4-terminal
-pkgname=(xfce4-terminal)
-pkgver=XYZVER
-pkgrel=1

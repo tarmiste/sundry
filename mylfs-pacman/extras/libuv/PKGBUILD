@@ -1,4 +1,0 @@
-#libuv
-pkgname=(libuv)
-pkgver=XYZVER
-pkgrel=1

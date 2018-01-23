@@ -1,4 +1,0 @@
-#xorg-synaptics-driver
-pkgname=(xorg-synaptics-driver)
-pkgver=XYZVER
-pkgrel=1

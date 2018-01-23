@@ -1,4 +1,0 @@
-#apr-util
-pkgname=(apr-util)
-pkgver=XYZVER
-pkgrel=1

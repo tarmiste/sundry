@@ -1,4 +1,0 @@
-#xorg-nouveau-driver
-pkgname=(xorg-nouveau-driver)
-pkgver=XYZVER
-pkgrel=1

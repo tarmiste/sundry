@@ -1,4 +1,0 @@
-#dovecot
-pkgname=(dovecot)
-pkgver=XYZVER
-pkgrel=1

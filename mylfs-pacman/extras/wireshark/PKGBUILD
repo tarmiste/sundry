@@ -1,4 +1,0 @@
-#wireshark
-pkgname=(wireshark)
-pkgver=XYZVER
-pkgrel=1

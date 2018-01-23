@@ -1,4 +1,0 @@
-#texlive
-pkgname=(texlive)
-pkgver=XYZVER
-pkgrel=1

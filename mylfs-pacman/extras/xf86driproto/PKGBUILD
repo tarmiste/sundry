@@ -1,4 +1,0 @@
-#xf86driproto
-pkgname=(xf86driproto)
-pkgver=XYZVER
-pkgrel=1

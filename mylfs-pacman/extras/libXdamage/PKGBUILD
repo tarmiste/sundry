@@ -1,4 +1,0 @@
-#libXdamage
-pkgname=(libXdamage)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#wpa_supplicant
-pkgname=(wpa_supplicant)
-pkgver=XYZVER
-pkgrel=1

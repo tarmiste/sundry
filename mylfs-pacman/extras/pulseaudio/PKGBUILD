@@ -1,4 +1,0 @@
-#pulseaudio
-pkgname=(pulseaudio)
-pkgver=XYZVER
-pkgrel=1

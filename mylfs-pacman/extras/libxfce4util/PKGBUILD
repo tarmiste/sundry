@@ -1,4 +1,0 @@
-#libxfce4util
-pkgname=(libxfce4util)
-pkgver=XYZVER
-pkgrel=1

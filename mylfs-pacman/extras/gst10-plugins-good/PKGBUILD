@@ -1,4 +1,0 @@
-#gst10-plugins-good
-pkgname=(gst10-plugins-good)
-pkgver=XYZVER
-pkgrel=1

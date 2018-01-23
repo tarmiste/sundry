@@ -1,4 +1,0 @@
-#perl-xml-libxslt
-pkgname=(perl-xml-libxslt)
-pkgver=XYZVER
-pkgrel=1

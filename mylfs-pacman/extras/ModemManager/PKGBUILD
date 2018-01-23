@@ -1,4 +1,0 @@
-#ModemManager
-pkgname=(ModemManager)
-pkgver=XYZVER
-pkgrel=1

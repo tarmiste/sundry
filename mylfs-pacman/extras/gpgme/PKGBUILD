@@ -1,4 +1,0 @@
-#gpgme
-pkgname=(gpgme)
-pkgver=XYZVER
-pkgrel=1

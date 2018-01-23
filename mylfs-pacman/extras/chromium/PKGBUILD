@@ -1,4 +1,0 @@
-#chromium
-pkgname=(chromium)
-pkgver=XYZVER
-pkgrel=1

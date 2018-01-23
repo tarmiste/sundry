@@ -1,4 +1,0 @@
-#sshfs
-pkgname=(sshfs)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#unbound
-pkgname=(unbound)
-pkgver=XYZVER
-pkgrel=1

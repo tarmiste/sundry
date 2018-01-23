@@ -1,4 +1,0 @@
-#libcap-pam
-pkgname=(libcap-pam)
-pkgver=XYZVER
-pkgrel=1

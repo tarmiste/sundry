@@ -1,4 +1,0 @@
-#gnome-screenshot
-pkgname=(gnome-screenshot)
-pkgver=XYZVER
-pkgrel=1

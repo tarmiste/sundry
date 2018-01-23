@@ -1,4 +1,0 @@
-#ntp
-pkgname=(ntp)
-pkgver=XYZVER
-pkgrel=1

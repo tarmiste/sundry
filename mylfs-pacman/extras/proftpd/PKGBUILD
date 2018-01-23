@@ -1,4 +1,0 @@
-#proftpd
-pkgname=(proftpd)
-pkgver=XYZVER
-pkgrel=1

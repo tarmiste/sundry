@@ -1,4 +1,0 @@
-#libXrender
-pkgname=(libXrender)
-pkgver=XYZVER
-pkgrel=1

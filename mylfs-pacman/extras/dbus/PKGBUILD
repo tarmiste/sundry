@@ -1,4 +1,0 @@
-#dbus
-pkgname=(dbus)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#libusb
-pkgname=(libusb)
-pkgver=XYZVER
-pkgrel=1

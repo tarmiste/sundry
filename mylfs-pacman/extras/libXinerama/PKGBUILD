@@ -1,4 +1,0 @@
-#libXinerama
-pkgname=(libXinerama)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#ibus
-pkgname=(ibus)
-pkgver=XYZVER
-pkgrel=1

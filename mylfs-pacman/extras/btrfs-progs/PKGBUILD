@@ -1,4 +1,0 @@
-#btrfs-progs
-pkgname=(btrfs-progs)
-pkgver=XYZVER
-pkgrel=1

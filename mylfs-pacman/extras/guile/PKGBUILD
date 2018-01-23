@@ -1,4 +1,0 @@
-#guile
-pkgname=(guile)
-pkgver=XYZVER
-pkgrel=1

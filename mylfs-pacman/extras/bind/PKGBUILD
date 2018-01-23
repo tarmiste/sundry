@@ -1,4 +1,0 @@
-#bind
-pkgname=(bind)
-pkgver=XYZVER
-pkgrel=1

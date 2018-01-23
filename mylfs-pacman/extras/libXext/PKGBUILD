@@ -1,4 +1,0 @@
-#libXext
-pkgname=(libXext)
-pkgver=XYZVER
-pkgrel=1

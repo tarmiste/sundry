@@ -1,4 +1,0 @@
-#perl-lwp-protocol-https
-pkgname=(perl-lwp-protocol-https)
-pkgver=XYZVER
-pkgrel=1

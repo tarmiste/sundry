@@ -1,4 +1,0 @@
-#wayland
-pkgname=(wayland)
-pkgver=XYZVER
-pkgrel=1

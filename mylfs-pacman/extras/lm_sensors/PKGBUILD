@@ -1,4 +1,0 @@
-#lm_sensors
-pkgname=(lm_sensors)
-pkgver=XYZVER
-pkgrel=1

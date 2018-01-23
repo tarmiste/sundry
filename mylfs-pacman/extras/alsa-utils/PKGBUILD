@@ -1,4 +1,0 @@
-#alsa-utils
-pkgname=(alsa-utils)
-pkgver=XYZVER
-pkgrel=1

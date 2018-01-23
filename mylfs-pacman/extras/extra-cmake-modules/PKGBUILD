@@ -1,4 +1,0 @@
-#extra-cmake-modules
-pkgname=(extra-cmake-modules)
-pkgver=XYZVER
-pkgrel=1

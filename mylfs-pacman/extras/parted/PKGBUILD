@@ -1,4 +1,0 @@
-#parted
-pkgname=(parted)
-pkgver=XYZVER
-pkgrel=1

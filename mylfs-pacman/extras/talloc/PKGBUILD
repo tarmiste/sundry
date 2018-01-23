@@ -1,4 +1,0 @@
-#talloc
-pkgname=(talloc)
-pkgver=XYZVER
-pkgrel=1

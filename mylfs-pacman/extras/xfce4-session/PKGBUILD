@@ -1,4 +1,0 @@
-#xfce4-session
-pkgname=(xfce4-session)
-pkgver=XYZVER
-pkgrel=1

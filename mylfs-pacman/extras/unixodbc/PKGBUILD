@@ -1,4 +1,0 @@
-#unixodbc
-pkgname=(unixodbc)
-pkgver=XYZVER
-pkgrel=1

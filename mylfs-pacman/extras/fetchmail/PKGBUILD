@@ -1,4 +1,0 @@
-#fetchmail
-pkgname=(fetchmail)
-pkgver=XYZVER
-pkgrel=1

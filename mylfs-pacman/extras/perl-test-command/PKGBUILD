@@ -1,4 +1,0 @@
-#perl-test-command
-pkgname=(perl-test-command)
-pkgver=XYZVER
-pkgrel=1

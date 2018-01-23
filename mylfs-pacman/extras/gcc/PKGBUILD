@@ -1,4 +1,0 @@
-#gcc
-pkgname=(gcc)
-pkgver=XYZVER
-pkgrel=1

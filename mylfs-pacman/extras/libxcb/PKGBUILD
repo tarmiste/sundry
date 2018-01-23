@@ -1,4 +1,0 @@
-#libxcb
-pkgname=(libxcb)
-pkgver=XYZVER
-pkgrel=1

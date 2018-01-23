@@ -1,4 +1,0 @@
-#libesmtp
-pkgname=(libesmtp)
-pkgver=XYZVER
-pkgrel=1

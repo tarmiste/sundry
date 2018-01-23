@@ -1,4 +1,0 @@
-#autofs
-pkgname=(autofs)
-pkgver=XYZVER
-pkgrel=1

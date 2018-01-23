@@ -1,4 +1,0 @@
-#gnome-keyring
-pkgname=(gnome-keyring)
-pkgver=XYZVER
-pkgrel=1

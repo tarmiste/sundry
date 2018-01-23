@@ -1,4 +1,0 @@
-#gnupg2
-pkgname=(gnupg2)
-pkgver=XYZVER
-pkgrel=1

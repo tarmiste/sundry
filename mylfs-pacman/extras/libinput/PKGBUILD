@@ -1,4 +1,0 @@
-#libinput
-pkgname=(libinput)
-pkgver=XYZVER
-pkgrel=1

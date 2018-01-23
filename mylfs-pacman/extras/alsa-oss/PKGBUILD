@@ -1,4 +1,0 @@
-#alsa-oss
-pkgname=(alsa-oss)
-pkgver=XYZVER
-pkgrel=1

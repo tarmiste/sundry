@@ -1,4 +1,0 @@
-#p7zip
-pkgname=(p7zip)
-pkgver=XYZVER
-pkgrel=1

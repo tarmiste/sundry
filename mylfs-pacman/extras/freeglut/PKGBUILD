@@ -1,4 +1,0 @@
-#freeglut
-pkgname=(freeglut)
-pkgver=XYZVER
-pkgrel=1

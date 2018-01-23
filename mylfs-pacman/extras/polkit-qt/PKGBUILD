@@ -1,4 +1,0 @@
-#polkit-qt
-pkgname=(polkit-qt)
-pkgver=XYZVER
-pkgrel=1

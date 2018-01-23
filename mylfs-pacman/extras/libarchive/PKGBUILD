@@ -1,4 +1,0 @@
-#libarchive
-pkgname=(libarchive)
-pkgver=XYZVER
-pkgrel=1

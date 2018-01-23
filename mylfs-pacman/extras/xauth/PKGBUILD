@@ -1,4 +1,0 @@
-#xauth
-pkgname=(xauth)
-pkgver=XYZVER
-pkgrel=1

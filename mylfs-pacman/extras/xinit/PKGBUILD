@@ -1,4 +1,0 @@
-#xinit
-pkgname=(xinit)
-pkgver=XYZVER
-pkgrel=1

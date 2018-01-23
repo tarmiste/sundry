@@ -1,4 +1,0 @@
-#zsh
-pkgname=(zsh)
-pkgver=XYZVER
-pkgrel=1

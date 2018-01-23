@@ -1,4 +1,0 @@
-#poppler
-pkgname=(poppler)
-pkgver=XYZVER
-pkgrel=1

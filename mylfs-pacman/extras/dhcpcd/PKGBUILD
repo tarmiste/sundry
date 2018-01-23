@@ -1,4 +1,0 @@
-#dhcpcd
-pkgname=(dhcpcd)
-pkgver=XYZVER
-pkgrel=1

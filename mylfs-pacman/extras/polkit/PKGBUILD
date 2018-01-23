@@ -1,4 +1,0 @@
-#polkit
-pkgname=(polkit)
-pkgver=XYZVER
-pkgrel=1

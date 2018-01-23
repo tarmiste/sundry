@@ -1,4 +1,0 @@
-#xorg-libinput-driver
-pkgname=(xorg-libinput-driver)
-pkgver=XYZVER
-pkgrel=1

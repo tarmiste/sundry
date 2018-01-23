@@ -1,4 +1,0 @@
-#smartmontools
-pkgname=(smartmontools)
-pkgver=XYZVER
-pkgrel=1

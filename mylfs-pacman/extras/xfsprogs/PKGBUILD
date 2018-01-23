@@ -1,4 +1,0 @@
-#xfsprogs
-pkgname=(xfsprogs)
-pkgver=XYZVER
-pkgrel=1

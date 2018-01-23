@@ -1,4 +1,0 @@
-#pcre2
-pkgname=(pcre2)
-pkgver=XYZVER
-pkgrel=1

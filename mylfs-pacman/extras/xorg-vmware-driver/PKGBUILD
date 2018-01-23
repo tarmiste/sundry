@@ -1,4 +1,0 @@
-#xorg-vmware-driver
-pkgname=(xorg-vmware-driver)
-pkgver=XYZVER
-pkgrel=1

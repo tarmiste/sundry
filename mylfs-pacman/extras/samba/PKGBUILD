@@ -1,4 +1,0 @@
-#samba
-pkgname=(samba)
-pkgver=XYZVER
-pkgrel=1

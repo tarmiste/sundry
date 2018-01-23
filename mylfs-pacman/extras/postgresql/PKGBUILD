@@ -1,4 +1,0 @@
-#postgresql
-pkgname=(postgresql)
-pkgver=XYZVER
-pkgrel=1

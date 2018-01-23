@@ -1,4 +1,0 @@
-#libidn2
-pkgname=(libidn2)
-pkgver=XYZVER
-pkgrel=1

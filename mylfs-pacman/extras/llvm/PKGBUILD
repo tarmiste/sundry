@@ -1,4 +1,0 @@
-#llvm
-pkgname=(llvm)
-pkgver=XYZVER
-pkgrel=1

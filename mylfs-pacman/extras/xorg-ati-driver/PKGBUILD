@@ -1,4 +1,0 @@
-#xorg-ati-driver
-pkgname=(xorg-ati-driver)
-pkgver=XYZVER
-pkgrel=1

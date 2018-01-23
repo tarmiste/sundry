@@ -1,4 +1,0 @@
-#libxkbcommon
-pkgname=(libxkbcommon)
-pkgver=XYZVER
-pkgrel=1

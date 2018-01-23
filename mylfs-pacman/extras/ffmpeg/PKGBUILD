@@ -1,4 +1,0 @@
-#ffmpeg
-pkgname=(ffmpeg)
-pkgver=XYZVER
-pkgrel=1

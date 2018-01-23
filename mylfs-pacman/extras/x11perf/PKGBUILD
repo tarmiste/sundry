@@ -1,4 +1,0 @@
-#x11perf
-pkgname=(x11perf)
-pkgver=XYZVER
-pkgrel=1

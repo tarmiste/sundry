@@ -1,4 +1,0 @@
-#logrotate
-pkgname=(logrotate)
-pkgver=XYZVER
-pkgrel=1

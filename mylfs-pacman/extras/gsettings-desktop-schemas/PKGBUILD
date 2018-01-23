@@ -1,4 +1,0 @@
-#gsettings-desktop-schemas
-pkgname=(gsettings-desktop-schemas)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#openssl10
-pkgname=(openssl10)
-pkgver=XYZVER
-pkgrel=1

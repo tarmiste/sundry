@@ -1,4 +1,0 @@
-#emacs
-pkgname=(emacs)
-pkgver=XYZVER
-pkgrel=1

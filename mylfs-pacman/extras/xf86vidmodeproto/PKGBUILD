@@ -1,4 +1,0 @@
-#xf86vidmodeproto
-pkgname=(xf86vidmodeproto)
-pkgver=XYZVER
-pkgrel=1

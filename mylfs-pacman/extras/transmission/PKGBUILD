@@ -1,4 +1,0 @@
-#transmission
-pkgname=(transmission)
-pkgver=XYZVER
-pkgrel=1

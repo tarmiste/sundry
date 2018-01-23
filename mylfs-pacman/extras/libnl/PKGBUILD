@@ -1,4 +1,0 @@
-#libnl
-pkgname=(libnl)
-pkgver=XYZVER
-pkgrel=1

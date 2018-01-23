@@ -1,4 +1,0 @@
-#mariadb
-pkgname=(mariadb)
-pkgver=XYZVER
-pkgrel=1

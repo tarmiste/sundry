@@ -1,4 +1,0 @@
-#dconf
-pkgname=(dconf)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#lxqt-post-install
-pkgname=(lxqt-post-install)
-pkgver=XYZVER
-pkgrel=1

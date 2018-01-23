@@ -1,4 +1,0 @@
-#libevent
-pkgname=(libevent)
-pkgver=XYZVER
-pkgrel=1

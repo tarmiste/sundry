@@ -1,4 +1,0 @@
-#libXcomposite
-pkgname=(libXcomposite)
-pkgver=XYZVER
-pkgrel=1

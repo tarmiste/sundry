@@ -1,4 +1,0 @@
-#network-manager-applet
-pkgname=(network-manager-applet)
-pkgver=XYZVER
-pkgrel=1

@@ -1,4 +1,0 @@
-#v4l-utils
-pkgname=(v4l-utils)
-pkgver=XYZVER
-pkgrel=1

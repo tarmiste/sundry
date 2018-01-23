@@ -1,4 +1,0 @@
-#phonon-backend-gstreamer
-pkgname=(phonon-backend-gstreamer)
-pkgver=XYZVER
-pkgrel=1

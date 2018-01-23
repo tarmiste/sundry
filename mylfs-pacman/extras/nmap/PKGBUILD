@@ -1,4 +1,0 @@
-#nmap
-pkgname=(nmap)
-pkgver=XYZVER
-pkgrel=1

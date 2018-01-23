@@ -1,4 +1,0 @@
-#gnutls
-pkgname=(gnutls)
-pkgver=XYZVER
-pkgrel=1
