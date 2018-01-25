@@ -18,9 +18,10 @@ source=("https://ftp.gnu.org/gnu/$pkgname/$pkgname-$pkgver.tar.xz"{,.sig})
 md5sums=('feca7b3e7c7f4aab2b42ecbfc513b070'
          'SKIP')
 
+#?  ./configure --prefix=/usr --without-included-regex
 build() {
   cd $pkgname-$pkgver
-  ./configure --prefix=/usr --without-included-regex
+  ./configure --prefix=/usr
   make
 }
 
