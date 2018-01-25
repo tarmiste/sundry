@@ -51,11 +51,14 @@ build() {
   [[ $CARCH == "x86_64" ]] && CFLAGS="$CFLAGS -fPIC"
 
   ./configure --prefix=/usr
-  make SHLIB_LIBS=-lncurses
+  #make SHLIB_LIBS=-lncurses
+  # XXX needed when bootstrapping
+  make SHLIB_LIBS="-L/tools/lib -lncurses"
 }
 
 package() {
-  make -C $pkgname-$_basever DESTDIR="$pkgdir" install
+  # XXX needed when bootstrapping
+  make SHLIB_LIBS="-L/tools/lib -lncurses"-C $pkgname-$_basever DESTDIR="$pkgdir" install
   install -Dm644 inputrc "$pkgdir"/etc/inputrc
 }
 
