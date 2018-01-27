@@ -16,7 +16,7 @@ sha256sums=('22560b89d420b11a4a724877bc6672b7d7c0f239e77d42a39dcc5a9c3b28db82')
 
 prepare() {
   cd $pkgname-$pkgver 
-  autoreconf -fi
+  #autoreconf -fi
 }
 
 build() {

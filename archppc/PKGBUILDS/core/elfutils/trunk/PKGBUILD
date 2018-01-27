@@ -23,9 +23,9 @@ build() {
 
   # fix make check with i686 
   # https://sourceware.org/bugzilla/show_bug.cgi?id=22083
-  export CFLAGS=${CFLAGS/-fno-plt} # fix make check with i686 
+  # export CFLAGS=${CFLAGS/-fno-plt} # fix make check with i686 
 
-  CFLAGS+=" -g"  # required for test-suite success
+  #CFLAGS+=" -g"  # required for test-suite success
   ./configure --prefix=/usr --program-prefix="eu-" --enable-deterministic-archives
 
   make

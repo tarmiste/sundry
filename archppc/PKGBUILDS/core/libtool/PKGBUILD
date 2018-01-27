@@ -28,7 +28,7 @@ conflicts=('libltdl')
 replaces=('libltdl')
 options=('!distcc')
 _commit=6ca5e224bc7bcc114a9ba2cf5dcf0fbf0ec40c9f
-source=(https://git.savannah.gnu.org/git/libtool-2.4.6.tar.gz
+source=(https://git.savannah.gnu.org/git/libtool-2.4.6.tar.xz
         armv7h-nopic.patch)
 md5sums=('SKIP'
          '8a1fdc77814fa5db3fc4d6a888d0cd89')

@@ -31,6 +31,9 @@ sha256sums=('1a51b16fa9cd51d26ef9ab52d2f1de12403b810fc8252bf7d478df91b3cddf11'
             '8ccec10a22523f6b9d55e0d6cbf91905a39881446710aa083e935e8073323376'
             'a22e0a037e702170c7d88460cc9c9c2ab1d3e5c54a6985cd4a164ea7beff1b36')
 
+# --enable-chfn-chsh \
+# --with-python=3
+
 build() {
   cd "$pkgbase-$pkgver"
 
@@ -42,10 +45,8 @@ build() {
               --enable-raw \
               --enable-vipw \
               --enable-newgrp \
-              --enable-chfn-chsh \
               --enable-write \
-              --enable-mesg \
-              --with-python=3
+              --enable-mesg 
 
   make
 }
@@ -68,17 +69,17 @@ package_util-linux() {
   make DESTDIR="$pkgdir" install
 
   # setuid chfn and chsh
-  chmod 4755 "$pkgdir"/usr/bin/{newgrp,ch{sh,fn}}
+  #chmod 4755 "$pkgdir"/usr/bin/{newgrp,ch{sh,fn}}
 
   # install PAM files for login-utils
-  install -Dm644 "$srcdir/pam-common" "$pkgdir/etc/pam.d/chfn"
-  install -m644 "$srcdir/pam-common" "$pkgdir/etc/pam.d/chsh"
-  install -m644 "$srcdir/pam-login" "$pkgdir/etc/pam.d/login"
-  install -m644 "$srcdir/pam-su" "$pkgdir/etc/pam.d/su"
-  install -m644 "$srcdir/pam-su" "$pkgdir/etc/pam.d/su-l"
+  #install -Dm644 "$srcdir/pam-common" "$pkgdir/etc/pam.d/chfn"
+  #install -m644 "$srcdir/pam-common" "$pkgdir/etc/pam.d/chsh"
+  #install -m644 "$srcdir/pam-login" "$pkgdir/etc/pam.d/login"
+  #install -m644 "$srcdir/pam-su" "$pkgdir/etc/pam.d/su"
+  #install -m644 "$srcdir/pam-su" "$pkgdir/etc/pam.d/su-l"
 
   # TODO(dreisner): offer this upstream?
-  sed -i '/ListenStream/ aRuntimeDirectory=uuidd' "$pkgdir/usr/lib/systemd/system/uuidd.socket"
+  #sed -i '/ListenStream/ aRuntimeDirectory=uuidd' "$pkgdir/usr/lib/systemd/system/uuidd.socket"
 
   # adjust for usrmove
   # TODO(dreisner): fix configure.ac upstream so that this isn't needed
