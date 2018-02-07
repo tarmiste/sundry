@@ -6,10 +6,12 @@ name=openrdate
 version=1.2
 release=3
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version.tar.gz/$name-$version.tar.gz 
-        rdate ntpleaps.patch)
+        rdate ntp.patch ntpleaps.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/ntp.patch
 
     # FS1462
     patch -p1 -i $SRC/ntpleaps.patch
