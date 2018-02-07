@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/core.pub
-RWRJc1FUaeVeqq1Tn1XXxsRt+F/Bhc4qXjWmXrXe7SXy9JUE8CiRnC2YKOEaZ5y2YojHT47jDqBlucmjSsX5DjFp3CUsaM9bvww=
-SHA256 (Pkgfile) = d41ea6a07d6060be1b2c8ab58897609d00e504c5c0313acdbe8f96cb53201cf1
-SHA256 (.footprint) = 7dbc1710a05fce27dc1dc6997877ecf87a36e43283e87cc3a1fbc00894c21a6a
-SHA256 (openssl-1.0.2n.tar.gz) = 370babb75f278c39e0c50e8c4e7493bc0f18db6867478341a832a982fd15a8fe
-SHA256 (mksslcert.sh) = d01cfd061b792f4f7444429582c5c9e83aaa7fc63cafd05669fd3f2970dff779
