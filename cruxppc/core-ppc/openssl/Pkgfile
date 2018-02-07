@@ -13,10 +13,11 @@ build() {
 
     export MAKEFLAGS="$MAKEFLAGS -j1"
 
+# XXX ?? changes for powerpc needed?
     ./config --prefix=/usr \
              --openssldir=/etc/ssl \
              shared \
-             enable-ec_nistp_64_gcc_128
+             enable-ec_nistp_64_gcc_128   # ??
 
     sed -i "s|-O3|$CFLAGS|" Makefile
 
