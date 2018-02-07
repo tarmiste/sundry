@@ -71,7 +71,7 @@ build() {
 cat > $PKG/usr/bin/crux << EOF
 #!/bin/sh
 
-echo "CRUX version $version"
+echo "CRUX-PPC version $version"
 
 # End of file
 EOF
