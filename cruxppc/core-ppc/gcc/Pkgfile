@@ -50,5 +50,6 @@ build() {
     #    mv $PKG/usr/${D}/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/${D}
     #done
 
-    sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib{,32}/{libstdc++.la,libsupc++.la}
+    #sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib{,32}/{libstdc++.la,libsupc++.la}
+    sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/{libstdc++.la,libsupc++.la}
 }
