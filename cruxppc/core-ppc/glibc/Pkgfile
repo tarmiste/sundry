@@ -6,12 +6,12 @@ name=glibc
 version=2.27
 release=1
 source=(http://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz \
-        http://www.kernel.org/pub/linux/kernel/v4.x/linux-4.14.14.tar.xz \
+        http://www.kernel.org/pub/linux/kernel/v4.x/linux-4.15.1.tar.xz \
 	hosts resolv.conf nsswitch.conf host.conf ld.so.conf)
 
 build() {
 	# install kernel headers
-	cd linux-4.14.14
+	cd linux-4.15.1
 	make mrproper
 	make ARCH=ppc headers_check
 	make ARCH=ppc INSTALL_HDR_PATH=$PKG/usr headers_install
