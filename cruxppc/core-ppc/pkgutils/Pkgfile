@@ -6,7 +6,7 @@
 name=pkgutils
 version=5.40.6
 release=1
-source=(http://crux.nu/files/$name-$version.tar.xz) \
+source=(http://crux.nu/files/$name-$version.tar.xz \
         pkgmk.conf.patch)
 
 build () {
