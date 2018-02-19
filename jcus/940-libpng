@@ -5,12 +5,11 @@ PKG="libpng"
 PKG_VERSION="1.6.34"
 PKG_FILE="libpng-1.6.34.tar.gz"
 URL="https://downloads.sourceforge.net/libpng/${PKG_FILE}"
-MD5="c05b6ca7190a5e387b78657dbe5536b2"
+MD5="03fbc5134830240104e96d3cda648e71"
 for i in PATCH{1..10}; do
    unset $i
 done
 PATCH1="https://downloads.sourceforge.net/sourceforge/libpng-apng/libpng-1.6.34-apng.patch.gz d7a82f1aa85ba628556fb7bd1428668b"
-
 
 ( cat << "xEOFx"
 
