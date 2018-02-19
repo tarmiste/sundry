@@ -2,17 +2,36 @@
 # $Id: 951-glib 3855 2016-02-20 22:13:22Z pierre $
 #
 PKG="glib"
-PKG_VERSION="2.44.1"
-PKG_FILE="glib-2.44.1.tar.xz"
-URL="http://ftp.gnome.org/pub/gnome/sources/glib/2.44/${PKG_FILE}"
-MD5="83efba4722a9674b97437d1d99af79db"
+PKG_VERSION="2.54.3"
+PKG_FILE="glib-2.54.3.tar.xz"
+URL="http://ftp.gnome.org/pub/gnome/sources/glib/2.54/${PKG_FILE}"
+MD5="16e886ad677bf07b7d48eb8188bcf759"
 for i in PATCH{1..10}; do
    unset $i
 done
+# Required patch: 
+PATCH1="http://www.linuxfromscratch.org/patches/blfs/svn/glib-2.54.3-meson_fixes-1.patch"
+#Optional patch: 
+PATCH2='http://www.linuxfromscratch.org/patches/blfs/svn/glib-2.54.3-skip_warnings-1.patch"
 
 ( cat << "xEOFx"
-./configure --prefix=/usr --with-pcre=system &&
-make
-make install
+    patch -Np1 -i ../glib-2.54.3-skip_warnings-1.patch
+    patch -Np1 -i ../glib-2.54.3-meson_fixes-1.patch &&
+    mkdir build-glib &&
+    cd    build-glib &&
+    meson --prefix=/usr -Dwith-pcre=system -Dwith-docs=no .. &&
+    ninja
+    ninja install &&
+    chmod -v 755 /usr/bin/{gdbus-codegen,glib-gettextize} &&
+    mkdir -p /usr/share/doc/glib-2.54.3 &&
+    cp -r ../docs/reference/{NEWS,README,gio,glib,gobject} /usr/share/doc/glib-2.54.3
 xEOFx
 ) > tmp
+
+
+
+ninja install &&
+chmod -v 755 /usr/bin/{gdbus-codegen,glib-gettextize} &&
+mkdir -p /usr/share/doc/glib-2.54.3 &&
+cp -r ../docs/reference/{NEWS,README,gio,glib,gobject} /usr/share/doc/glib-2.54.3
+
