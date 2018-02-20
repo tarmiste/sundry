@@ -28,7 +28,7 @@ done
 
 ( cat << "xEOFx"
 
-make
+LDFLAGS="-N" make
 make install
 
 xEOFx

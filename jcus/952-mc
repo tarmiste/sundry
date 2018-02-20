@@ -13,9 +13,9 @@ done
 ( cat << "xEOFx"
 ./configure --prefix=/usr \
             --sysconfdir=/etc \
+            --with-screen=ncurses \
             --enable-charset &&
 make
 make install
-cp -v doc/keybind-migration.txt /usr/share/mc
 xEOFx
 ) > tmp
