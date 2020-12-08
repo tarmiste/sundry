@@ -1,0 +1,161 @@
+prt-get: installing /usr/ports/opt/qtwebengine
+prt-get: starting build Sat Dec  5 17:57:48 2020
+=======> Building '/usr/ports/opt/qtwebengine/qtwebengine#5.15.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/opt/qtwebengine/work/src -xf /sources/qtwebengine-everywhere-src-5.15.2.tar.xz
++ build
++ cd qtwebengine-everywhere-src-5.15.2
++ test -n ''
++ prt-get isinst ccache
+package ccache is installed
+++ echo /sbin:/usr/sbin:/opt/sbin:/bin:/usr/bin:/opt/bin
+++ sed 's/:*$//'
+++ awk -v RS=: -v ORS=: '/ccache/ {next} {print}'
++ export 'QMAKE_CC=ccache gcc' 'QMAKE_LINK_C=ccache gcc' 'QMAKE_LINK_C_SHLIB=ccache gcc' 'QMAKE_CXX=ccache g++' 'QMAKE_LINK=ccache g++' 'QMAKE_LINK_SHLIB=ccache g++' PATH=/sbin:/usr/sbin:/opt/sbin:/bin:/usr/bin:/opt/bin
++ QMAKE_CC='ccache gcc'
++ QMAKE_LINK_C='ccache gcc'
++ QMAKE_LINK_C_SHLIB='ccache gcc'
++ QMAKE_CXX='ccache g++'
++ QMAKE_LINK='ccache g++'
++ QMAKE_LINK_SHLIB='ccache g++'
++ PATH=/sbin:/usr/sbin:/opt/sbin:/bin:/usr/bin:/opt/bin
++ install -d build
++ cd build
++ qmake .. -- -proprietary-codecs
+Info: creating stash file /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/.qmake.stash
+Info: creating cache file /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/.qmake.cache
+
+Running configuration tests...
+Checking for architecture supported... no
+Checking for bison... yes
+Checking for submodule initialized... yes
+Checking for build path without whitespace... yes
+Checking for platform supported... 
+Checking for flex... yes
+Checking for gperf... yes
+Checking for host pkg-config... /usr/bin/pkg-config
+Checking for jumbo build merge limit... 8
+Checking for linker supports -z noexecstack... yes
+Checking for x11... yes
+Checking for libdrm... yes
+Checking for xcomposite... yes
+Checking for xcursor... yes
+Checking for xi... yes
+Checking for xtst... yes
+Checking for python2... /usr/bin/python2
+Checking for d-bus... yes
+Checking for fontconfig... yes
+Checking for freetype >= 2.4.2... yes
+Checking for glib-2.0 >= 2.32.0... yes
+Checking for glibc > 2.16... yes
+Checking for harfbuzz >= 2.2.0... yes
+Checking for compatible jpeglib... yes
+Checking for jsoncpp... no
+Checking for khr... yes
+Checking for lcms2... yes
+Checking for libevent... yes
+Checking for libvpx... yes
+Checking for libwebp, libwebpmux and libwebpdemux... yes
+Checking for compatible libxml2 and libxslt... no
+Checking for minizip... yes
+Checking for system ninja... yes
+Checking for nss >= 3.26... yes
+Checking for opus... yes
+Checking for libpng >= 1.6.0... yes
+Checking for protobuf... yes
+Checking for protoc... yes
+Checking for re2... no
+Checking for snappy... no
+Checking for zlib... yes
+Done running configuration tests.
+
+Configure summary:
+
+Qt WebEngine Build Tools:
+  Use System Ninja ....................... yes
+  Use System Gn .......................... no
+  Jumbo Build Merge Limit ................ 8
+  Developer build ........................ no
+  Sanitizer .............................. no
+  QtWebEngine required system libraries:
+    fontconfig ........................... yes
+    dbus ................................. yes
+    nss .................................. yes
+    khr .................................. yes
+    glibc ................................ yes
+  QtWebEngine required system libraries for qpa-xcb:
+    x11 .................................. yes
+    libdrm ............................... yes
+    xcomposite ........................... yes
+    xcursor .............................. yes
+    xi ................................... yes
+    xtst ................................. yes
+  Optional system libraries used:
+    re2 .................................. no
+    icu .................................. no
+    libwebp, libwebpmux and libwebpdemux . yes
+    opus ................................. yes
+    ffmpeg ............................... no
+    libvpx ............................... yes
+    snappy ............................... no
+    glib ................................. yes
+    zlib ................................. yes
+    minizip .............................. yes
+    libevent ............................. yes
+    jsoncpp .............................. no
+    protobuf ............................. yes
+    libxml2 and libxslt .................. no
+    lcms2 ................................ yes
+    png .................................. yes
+    JPEG ................................. yes
+    harfbuzz ............................. yes
+    freetype ............................. yes
+
+Note: The following modules are not being compiled in this configuration:
+    webenginecore
+    webengine
+    webenginewidgets
+    pdf
+    pdfwidgets
+
+WARNING: QtWebEngine can only be built for x86, x86-64, ARM, Aarch64, and MIPSel architectures.
+
+WARNING: QtPdf can only be built for x86, x86-64, ARM, Aarch64, and MIPSel architectures.
+
+WARNING: QtWebEngine will not be built.
+
+WARNING: QtPdf will not be built.
+
+Qt is now configured for building. Just run 'make'.
+Once everything is built, you must run 'make install'.
+Qt will be installed into '/usr'.
+
+Prior to reconfiguration, make sure you remove any leftovers from
+the previous build.
+
++ make
+cd src/ && ( test -e Makefile || /usr/bin/qmake -o Makefile /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/src/src.pro ) && make -f Makefile 
+make[1]: Entering directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src'
+cd core/ && ( test -e Makefile || /usr/bin/qmake -o Makefile /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/src/core/core.pro ) && make -f Makefile 
+make[2]: Entering directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/core'
+QtWebEngineCore module will not be built. QtWebEngine can only be built for x86, x86-64, ARM, Aarch64, and MIPSel architectures.
+make[2]: Leaving directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/core'
+cd pdf/ && ( test -e Makefile || /usr/bin/qmake -o Makefile /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/src/pdf/pdf.pro ) && make -f Makefile 
+make[2]: Entering directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/pdf'
+QtPdf will not be built. QtPdf can only be built for x86, x86-64, ARM, Aarch64, and MIPSel architectures.
+make[2]: Leaving directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/pdf'
+make[1]: Leaving directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src'
++ make INSTALL_ROOT=/usr/ports/opt/qtwebengine/work/pkg install
+cd src/ && ( test -e Makefile || /usr/bin/qmake -o Makefile /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/src/src.pro ) && make -f Makefile install
+make[1]: Entering directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src'
+cd core/ && ( test -e Makefile || /usr/bin/qmake -o Makefile /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/src/core/core.pro ) && make -f Makefile install
+make[2]: Entering directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/core'
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/core'
+cd pdf/ && ( test -e Makefile || /usr/bin/qmake -o Makefile /usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/src/pdf/pdf.pro ) && make -f Makefile install
+make[2]: Entering directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/pdf'
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src/pdf'
+make[1]: Leaving directory '/usr/ports/opt/qtwebengine/work/src/qtwebengine-everywhere-src-5.15.2/build/src'
++ find /usr/ports/opt/qtwebengine/work/pkg/usr/lib -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' '{}' ';'
+find: '/usr/ports/opt/qtwebengine/work/pkg/usr/lib': No such file or directory
+=======> ERROR: Building '/usr/ports/opt/qtwebengine/qtwebengine#5.15.2-1.pkg.tar.xz' failed.

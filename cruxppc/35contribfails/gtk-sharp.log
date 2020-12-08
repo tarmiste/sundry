@@ -1,0 +1,1289 @@
+prt-get: installing /usr/ports/contrib/gtk-sharp
+prt-get: starting build Sat Dec  5 02:03:46 2020
+=======> Building '/usr/ports/contrib/gtk-sharp/gtk-sharp#2.12.45-2.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/gtk-sharp/work/src -xf /sources/gtk-sharp-2.12.45.tar.gz
++ build
++ cd gtk-sharp-2.12.45
++ sed -e 's/SUBDIRS = test/SUBDIRS =/g' -i sample/Makefile.am
++ sed -e 's/SUBDIRS = test/SUBDIRS =/g' -i sample/Makefile.in
++ ./configure --prefix=/usr --disable-static
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking target system type... powerpc-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking for gcc... (cached) gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert powerpc-unknown-linux-gnu file names to powerpc-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert powerpc-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking size of void *... 4
+checking for pkg-config... /usr/bin/pkg-config
+checking size of off_t... 4
+checking pkg-config is at least version 0.9.0... yes
+checking for MONO_DEPENDENCY... yes
+checking for MONO_DEPENDENCY... yes
+checking for gacutil... /usr/bin/gacutil
+checking for al... /usr/bin/al
+checking for mono... /usr/bin/mono
+checking for mcs... /usr/bin/mcs
+checking for MONO_CAIRO... yes
+checking for GLIB... yes
+checking for PANGO... yes
+checking for ATK... yes
+checking for GTK... yes
+checking for GLADE... yes
+checking for mdassembler... /usr/bin/mdassembler
+checking for monodocer... /usr/bin/monodocer
+checking for GLIB_2_31... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating AssemblyInfo.cs
+config.status: creating Makefile
+config.status: creating policy.config
+config.status: creating msi/gtk-sharp-2.0.wxs
+config.status: creating msi/Makefile
+config.status: creating msi/unmanaged/Makefile
+config.status: creating msi/unmanaged/custom/Makefile
+config.status: creating msi/unmanaged/custom/etc/Makefile
+config.status: creating msi/unmanaged/custom/etc/gtk-2.0/Makefile
+config.status: creating msi/unmanaged/custom/share/Makefile
+config.status: creating msi/unmanaged/custom/share/icons/Makefile
+config.status: creating msi/unmanaged/custom/share/icons/hicolor/Makefile
+config.status: creating sources/Makefile
+config.status: creating parser/Makefile
+config.status: creating parser/gapi-2.0.pc
+config.status: creating parser/gapi2-fixup
+config.status: creating parser/gapi2-parser
+config.status: creating generator/Makefile
+config.status: creating generator/gapi2-codegen
+config.status: creating glib/Makefile
+config.status: creating glib/glib-sharp-2.0.pc
+config.status: creating glib/glib-sharp.dll.config
+config.status: creating glib/glue/Makefile
+config.status: creating cairo/Makefile
+config.status: creating pango/Makefile
+config.status: creating pango/pango-sharp.dll.config
+config.status: creating pango/glue/Makefile
+config.status: creating atk/Makefile
+config.status: creating atk/atk-sharp.dll.config
+config.status: creating atk/glue/Makefile
+config.status: creating gdk/Makefile
+config.status: creating gdk/gdk-sharp.dll.config
+config.status: creating gdk/glue/Makefile
+config.status: creating gtk/Makefile
+config.status: creating gtk/gtk-sharp-2.0.pc
+config.status: creating gtk/gtk-sharp.dll.config
+config.status: creating gtk/glue/Makefile
+config.status: creating glade/Makefile
+config.status: creating glade/glade-sharp.dll.config
+config.status: creating glade/glade-sharp-2.0.pc
+config.status: creating glade/glue/Makefile
+config.status: creating gtkdotnet/Makefile
+config.status: creating gtkdotnet/gtk-dotnet.dll.config
+config.status: creating gtkdotnet/gtk-dotnet-2.0.pc
+config.status: creating doc/Makefile
+config.status: creating sample/GtkDemo/Makefile
+config.status: creating sample/Makefile
+config.status: creating sample/pixmaps/Makefile
+config.status: creating sample/test/Makefile
+config.status: creating sample/valtest/Makefile
+config.status: creating sample/valtest/valtest.exe.config
+config.status: creating sample/opaquetest/Makefile
+config.status: creating sample/opaquetest/opaquetest.exe.config
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+---
+Configuration summary
+
+   * Installation prefix = /usr
+   * C# compiler: /usr/bin/mcs  -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK
+
+   Optional assemblies included in the build:
+
+      * glade-sharp.dll: yes
+      * gtk-dotnet.dll: yes 
+      * Mono.Cairo.dll: using system assembly
+
+      NOTE: if any of the above say 'no' you may install the
+            corresponding development packages for them, rerun
+            autogen.sh to include them in the build.
+
+   * Documentation build enabled: yes 
+---
++ make
+make  all-recursive
+make[1]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45'
+Making all in sources
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sources'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sources'
+Making all in generator
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/generator'
+/usr/bin/mcs -out:gapi_codegen.exe -define:OFF_T_4  ./AttributeHelper.cs ./AliasGen.cs ./BoxedGen.cs ./ByRefGen.cs ./CallbackGen.cs ./ChildProperty.cs ./ClassBase.cs ./ClassGen.cs ./CodeGenerator.cs ./ConstFilenameGen.cs ./ConstStringGen.cs ./Ctor.cs ./EnumGen.cs ./FieldBase.cs ./GenBase.cs ./GenerationInfo.cs ./HandleBase.cs ./IAccessor.cs ./IGeneratable.cs ./IManualMarshaler.cs ./InterfaceGen.cs ./LPGen.cs ./LPUGen.cs ./ManagedCallString.cs ./ManualGen.cs ./MarshalGen.cs ./MethodBase.cs ./MethodBody.cs ./Method.cs ./ObjectField.cs ./ObjectBase.cs ./ObjectGen.cs ./OpaqueGen.cs ./Parameters.cs ./Parser.cs ./Property.cs ./PropertyBase.cs ./ReturnValue.cs ./Signal.cs ./Signature.cs ./SimpleBase.cs ./SimpleGen.cs ./Statistics.cs ./StructBase.cs ./StructField.cs ./StructGen.cs ./SymbolTable.cs ./VirtualMethod.cs ./VMSignature.cs
+./MarshalGen.cs(31,8): warning CS0169: The private field `GtkSharp.Generation.MarshalGen.freeAfterUse' is never used
+Compilation succeeded - 1 warning(s)
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/generator'
+Making all in parser
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/parser'
+/usr/bin/mcs -out:gapi-fixup.exe ./gapi-fixup.cs
+/usr/bin/mcs -out:gapi-parser.exe ./gapi-parser.cs
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/parser'
+Making all in glib
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glib'
+Making all in glue
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glib/glue'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT closure.lo -MD -MP -MF .deps/closure.Tpo -c -o closure.lo closure.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT closure.lo -MD -MP -MF .deps/closure.Tpo -c closure.c  -fPIC -DPIC -o .libs/closure.o
+mv -f .deps/closure.Tpo .deps/closure.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT error.lo -MD -MP -MF .deps/error.Tpo -c -o error.lo error.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT error.lo -MD -MP -MF .deps/error.Tpo -c error.c  -fPIC -DPIC -o .libs/error.o
+mv -f .deps/error.Tpo .deps/error.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object.lo -MD -MP -MF .deps/object.Tpo -c -o object.lo object.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object.lo -MD -MP -MF .deps/object.Tpo -c object.c  -fPIC -DPIC -o .libs/object.o
+object.c: In function 'gtksharp_object_newv':
+object.c:41:2: warning: 'GParameter' is deprecated [-Wdeprecated-declarations]
+  GParameter *parms = NULL;
+  ^~~~~~~~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from object.c:22:
+/usr/include/glib-2.0/gobject/gparam.h:271:8: note: declared here
+ struct _GParameter /* auxiliary structure for _setv() variants */
+        ^~~~~~~~~~~
+object.c:45:3: warning: 'GParameter' is deprecated [-Wdeprecated-declarations]
+   parms = g_new0 (GParameter, cnt);
+   ^~~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from object.c:22:
+/usr/include/glib-2.0/gobject/gparam.h:271:8: note: declared here
+ struct _GParameter /* auxiliary structure for _setv() variants */
+        ^~~~~~~~~~~
+object.c:45:3: warning: 'GParameter' is deprecated [-Wdeprecated-declarations]
+   parms = g_new0 (GParameter, cnt);
+   ^~~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from object.c:22:
+/usr/include/glib-2.0/gobject/gparam.h:271:8: note: declared here
+ struct _GParameter /* auxiliary structure for _setv() variants */
+        ^~~~~~~~~~~
+object.c:52:2: warning: 'g_object_newv' is deprecated: Use 'g_object_new_with_properties' instead [-Wdeprecated-declarations]
+  result = g_object_newv (type, cnt, parms);
+  ^~~~~~
+In file included from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from object.c:22:
+/usr/include/glib-2.0/gobject/gobject.h:431:13: note: declared here
+ gpointer    g_object_newv        (GType           object_type,
+             ^~~~~~~~~~~~~
+mv -f .deps/object.Tpo .deps/object.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT ptrarray.lo -MD -MP -MF .deps/ptrarray.Tpo -c -o ptrarray.lo ptrarray.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT ptrarray.lo -MD -MP -MF .deps/ptrarray.Tpo -c ptrarray.c  -fPIC -DPIC -o .libs/ptrarray.o
+mv -f .deps/ptrarray.Tpo .deps/ptrarray.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT signal.lo -MD -MP -MF .deps/signal.Tpo -c -o signal.lo signal.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT signal.lo -MD -MP -MF .deps/signal.Tpo -c signal.c  -fPIC -DPIC -o .libs/signal.o
+mv -f .deps/signal.Tpo .deps/signal.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT type.lo -MD -MP -MF .deps/type.Tpo -c -o type.lo type.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT type.lo -MD -MP -MF .deps/type.Tpo -c type.c  -fPIC -DPIC -o .libs/type.o
+type.c:26:13: warning: Deprecated pre-processor symbol, replace with 
+ G_CONST_RETURN gchar   *gtksharp_get_type_name (GObject *obj);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+type.c:37:13: warning: Deprecated pre-processor symbol, replace with 
+ G_CONST_RETURN gchar *
+             ^~~~~~~~~~                                      
+mv -f .deps/type.Tpo .deps/type.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT unichar.lo -MD -MP -MF .deps/unichar.Tpo -c -o unichar.lo unichar.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT unichar.lo -MD -MP -MF .deps/unichar.Tpo -c unichar.c  -fPIC -DPIC -o .libs/unichar.o
+mv -f .deps/unichar.Tpo .deps/unichar.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT value.lo -MD -MP -MF .deps/value.Tpo -c -o value.lo value.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT value.lo -MD -MP -MF .deps/value.Tpo -c value.c  -fPIC -DPIC -o .libs/value.o
+mv -f .deps/value.Tpo .deps/value.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT valuearray.lo -MD -MP -MF .deps/valuearray.Tpo -c -o valuearray.lo valuearray.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT valuearray.lo -MD -MP -MF .deps/valuearray.Tpo -c valuearray.c  -fPIC -DPIC -o .libs/valuearray.o
+mv -f .deps/valuearray.Tpo .deps/valuearray.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT thread.lo -MD -MP -MF .deps/thread.Tpo -c -o thread.lo thread.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT thread.lo -MD -MP -MF .deps/thread.Tpo -c thread.c  -fPIC -DPIC -o .libs/thread.o
+mv -f .deps/thread.Tpo .deps/thread.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libglibsharpglue-2.la -rpath /usr/lib closure.lo error.lo object.lo ptrarray.lo signal.lo type.lo unichar.lo value.lo valuearray.lo thread.lo -lgobject-2.0 -lglib-2.0 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/closure.o .libs/error.o .libs/object.o .libs/ptrarray.o .libs/signal.o .libs/type.o .libs/unichar.o .libs/value.o .libs/valuearray.o .libs/thread.o   -lgobject-2.0 -lglib-2.0  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -Wl,-soname -Wl,libglibsharpglue-2.so -o .libs/libglibsharpglue-2.so
+libtool: link: ( cd ".libs" && rm -f "libglibsharpglue-2.la" && ln -s "../libglibsharpglue-2.la" "libglibsharpglue-2.la" )
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glib/glue'
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glib'
+cp ../AssemblyInfo.cs .
+cp ../gtk-sharp.snk .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -out:glib-sharp.dll -target:library  ./Argv.cs ./Boxed.cs ./CDeclCallbackAttribute.cs ./ClassInitializerAttribute.cs ./ConnectBeforeAttribute.cs ./DefaultSignalHandlerAttribute.cs ./DelegateWrapper.cs ./DestroyNotify.cs ./EnumWrapper.cs ./ExceptionManager.cs ./FastActivator.cs ./FileUtils.cs ./Format.cs ./GException.cs ./GInterfaceAdapter.cs ./GInterfaceAttribute.cs ./Global.cs ./GString.cs ./GType.cs ./GTypeAttribute.cs ./Idle.cs ./IgnoreClassInitializersAttribute.cs ./InitiallyUnowned.cs ./IntPtrEqualityComparer.cs ./IOChannel.cs ./IWrapper.cs ./ListBase.cs ./List.cs ./Log.cs ./MainContext.cs ./MainLoop.cs ./ManagedValue.cs ./Markup.cs ./Marshaller.cs ./MissingIntPtrCtorException.cs ./NotifyHandler.cs ./Object.cs ./ObjectManager.cs ./Opaque.cs ./PropertyAttribute.cs ./PtrArray.cs ./Signal.cs ./SignalArgs.cs ./SignalAttribute.cs ./SignalCallback.cs ./SignalClosure.cs ./SList.cs ./Source.cs ./Spawn.cs ./Thread.cs ./Timeout.cs ./ToggleRef.cs ./TypeConverter.cs ./TypeFundamentals.cs ./TypeInitializerAttribute.cs ./UnwrappedObject.cs ./ValueArray.cs ./Value.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+./ObjectManager.cs(31,23): warning CS0414: The private field `GLib.ObjectManager.flags' is assigned but its value is never used
+Compilation succeeded - 2 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/glib-sharp/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.glib-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/glib-sharp/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.glib-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/glib-sharp/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.glib-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/glib-sharp/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.glib-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glib'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glib'
+Making all in cairo
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/cairo'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/cairo'
+Making all in pango
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/pango'
+Making all in .
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/pango'
+cp ./pango-api.raw pango-api.xml
+chmod u+w pango-api.xml
+mono ../parser/gapi-fixup.exe --api=pango-api.xml --metadata=./Pango.metadata --symbols=./pango-symbols.xml
+rm -f generated/* &&	\
+mono ../generator/gapi_codegen.exe --generate pango-api.xml \
+	\
+--outdir=generated --customdir=. --assembly-name=pango-sharp	\
+--gluelib-name=pangosharpglue-2 --glue-filename=glue/generated.c		\
+--glue-includes=pango/pango.h						\
+&& touch generated-stamp
+
+Generation Summary:
+  Enums: 17  Structs: 8  Boxed: 2  Opaques: 13  Interfaces: 0  Objects: 8  Callbacks: 4
+  Properties: 0  Signals: 0  Methods: 234  Constructors: 7  Throttled: 0
+Total Nodes: 293
+
+cp ../gtk-sharp.snk .
+cp ../AssemblyInfo.cs .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -unsafe -out:pango-sharp.dll -target:library -r:../glib/glib-sharp.dll -r:Mono.Cairo generated/*.cs ./Attribute.cs ./AttrBackground.cs ./AttrFallback.cs ./AttrFamily.cs ./AttrFontDesc.cs ./AttrForeground.cs ./AttrGravity.cs ./AttrGravityHint.cs ./AttrLanguage.cs ./AttrLetterSpacing.cs ./AttrRise.cs ./AttrScale.cs ./AttrShape.cs ./AttrSize.cs ./AttrStretch.cs ./AttrStrikethroughColor.cs ./AttrStrikethrough.cs ./AttrStyle.cs ./AttrUnderlineColor.cs ./AttrUnderline.cs ./AttrVariant.cs ./AttrWeight.cs ./Scale.cs ./ScriptIter.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+Compilation succeeded - 1 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/pango-sharp/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.pango-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/pango-sharp/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.pango-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/pango-sharp/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.pango-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/pango-sharp/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.pango-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/pango'
+Making all in glue
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/pango/glue'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT attribute.lo -MD -MP -MF .deps/attribute.Tpo -c -o attribute.lo attribute.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT attribute.lo -MD -MP -MF .deps/attribute.Tpo -c attribute.c  -fPIC -DPIC -o .libs/attribute.o
+mv -f .deps/attribute.Tpo .deps/attribute.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT units.lo -MD -MP -MF .deps/units.Tpo -c -o units.lo units.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT units.lo -MD -MP -MF .deps/units.Tpo -c units.c  -fPIC -DPIC -o .libs/units.o
+mv -f .deps/units.Tpo .deps/units.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c -o generated.lo generated.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c generated.c  -fPIC -DPIC -o .libs/generated.o
+generated.c:11:1: warning: 'get_threshold_class' defined but not used [-Wunused-function]
+ get_threshold_class (GObject *obj)
+ ^~~~~~~~~~~~~~~~~~~
+mv -f .deps/generated.Tpo .deps/generated.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libpangosharpglue-2.la -rpath /usr/lib attribute.lo units.lo generated.lo -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/attribute.o .libs/units.o .libs/generated.o   -lpango-1.0 -lgobject-2.0 -lglib-2.0 /usr/lib/libharfbuzz.so  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -Wl,-soname -Wl,libpangosharpglue-2.so -o .libs/libpangosharpglue-2.so
+libtool: link: ( cd ".libs" && rm -f "libpangosharpglue-2.la" && ln -s "../libpangosharpglue-2.la" "libpangosharpglue-2.la" )
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/pango/glue'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/pango'
+Making all in atk
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/atk'
+Making all in .
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/atk'
+cp ./atk-api.raw atk-api.xml
+chmod u+w atk-api.xml
+mono ../parser/gapi-fixup.exe --api=atk-api.xml --metadata=./Atk.metadata 
+Warning: <attr path="/api/namespace/interface[@cname='AtkTable']/*[@name='RefAt']/return-type"/> matched no nodes
+Warning: <attr path="/api/namespace/interface[@cname='AtkEditableText']/*[@name='GetRunAttributes']/return-type"/> matched no nodes
+Warning: <attr path="/api/namespace/interface[@cname='AtkEditableText']/*[@name='GetDefaultAttributes']/return-type"/> matched no nodes
+Warning: <attr path="/api/namespace/interface[@cname='AtkTable']/*[@cname='atk_table_get_summary']/return-type"/> matched no nodes
+rm -f generated/* &&	\
+mono ../generator/gapi_codegen.exe --generate atk-api.xml \
+	\
+--outdir=generated --customdir=. --assembly-name=atk-sharp	\
+--gluelib-name=atksharpglue-2 --glue-filename=glue/generated.c		\
+--glue-includes=atk/atk.h						\
+&& touch generated-stamp
+Property has unknown Type value_array in type Atk.Relation
+Defaulting FocusHandler param to 'call' scope in method PropertyChangeHandler.AddFocusHandler
+Interface Atk.Text virtual method GetRunAttributes has no matching method to invoke.
+Interface Atk.Text virtual method GetDefaultAttributes has no matching method to invoke.
+Defaulting FocusHandler param to 'call' scope in method NoOpObject.AddFocusHandler
+Defaulting PropertyChangeHandler param to 'call' scope in method Object.ConnectPropertyChangeHandler
+Defaulting EventListener param to 'call' scope in method Global.AddFocusTracker
+Defaulting KeySnoopFunc param to 'call' scope in method Global.AddKeyEventListener
+Defaulting EventListenerInit param to 'call' scope in method Focus.TrackerInit
+
+Generation Summary:
+  Enums: 10  Structs: 5  Boxed: 1  Opaques: 0  Interfaces: 12  Objects: 12  Callbacks: 6
+  Properties: 20  Signals: 17  Methods: 321  Constructors: 5  Throttled: 1
+Total Nodes: 410
+
+cp ../gtk-sharp.snk .
+cp ../AssemblyInfo.cs .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -unsafe -out:atk-sharp.dll -target:library -r:../glib/glib-sharp.dll -r:Mono.Cairo generated/*.cs ./ColumnDeletedHandler.cs ./ColumnInsertedHandler.cs ./RowDeletedHandler.cs ./RowInsertedHandler.cs ./TableAdapter.cs ./Table.cs ./TextChangedDetail.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+generated/NoOpObject.cs(1015,26): warning CS0108: `Atk.NoOpObject.Attributes' hides inherited member `Atk.Object.Attributes'. Use the new keyword if hiding was intended
+generated/Object.custom(286,26): (Location of the symbol related to previous warning)
+Compilation succeeded - 2 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/atk-sharp/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.atk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/atk-sharp/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.atk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/atk-sharp/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.atk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/atk-sharp/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.atk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/atk'
+Making all in glue
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/atk/glue'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT hyperlink.lo -MD -MP -MF .deps/hyperlink.Tpo -c -o hyperlink.lo hyperlink.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT hyperlink.lo -MD -MP -MF .deps/hyperlink.Tpo -c hyperlink.c  -fPIC -DPIC -o .libs/hyperlink.o
+mv -f .deps/hyperlink.Tpo .deps/hyperlink.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT misc.lo -MD -MP -MF .deps/misc.Tpo -c -o misc.lo misc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT misc.lo -MD -MP -MF .deps/misc.Tpo -c misc.c  -fPIC -DPIC -o .libs/misc.o
+mv -f .deps/misc.Tpo .deps/misc.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object.lo -MD -MP -MF .deps/object.Tpo -c -o object.lo object.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object.lo -MD -MP -MF .deps/object.Tpo -c object.c  -fPIC -DPIC -o .libs/object.o
+mv -f .deps/object.Tpo .deps/object.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object_factory.lo -MD -MP -MF .deps/object_factory.Tpo -c -o object_factory.lo object_factory.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object_factory.lo -MD -MP -MF .deps/object_factory.Tpo -c object_factory.c  -fPIC -DPIC -o .libs/object_factory.o
+mv -f .deps/object_factory.Tpo .deps/object_factory.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT util.lo -MD -MP -MF .deps/util.Tpo -c -o util.lo util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT util.lo -MD -MP -MF .deps/util.Tpo -c util.c  -fPIC -DPIC -o .libs/util.o
+mv -f .deps/util.Tpo .deps/util.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c -o generated.lo generated.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/atk-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c generated.c  -fPIC -DPIC -o .libs/generated.o
+mv -f .deps/generated.Tpo .deps/generated.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libatksharpglue-2.la -rpath /usr/lib hyperlink.lo misc.lo object.lo object_factory.lo util.lo generated.lo -latk-1.0 -lgobject-2.0 -lglib-2.0 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/hyperlink.o .libs/misc.o .libs/object.o .libs/object_factory.o .libs/util.o .libs/generated.o   -latk-1.0 -lgobject-2.0 -lglib-2.0  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -Wl,-soname -Wl,libatksharpglue-2.so -o .libs/libatksharpglue-2.so
+libtool: link: ( cd ".libs" && rm -f "libatksharpglue-2.la" && ln -s "../libatksharpglue-2.la" "libatksharpglue-2.la" )
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/atk/glue'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/atk'
+Making all in gdk
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gdk'
+Making all in .
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gdk'
+cp ./gdk-api.raw gdk-api.xml
+chmod u+w gdk-api.xml
+mono ../parser/gapi-fixup.exe --api=gdk-api.xml --metadata=./Gdk.metadata --symbols=./gdk-symbols.xml
+Warning: <attr path="/api/namespace/struct[@cname='GdkPixbufFormat']/method[@cname='gdk_pixbuf_format_get_mime_types ']/return-type"/> matched no nodes
+rm -f generated/* &&	\
+mono ../generator/gapi_codegen.exe --generate gdk-api.xml \
+-I:../glib/glib-api.xml -I:../pango/pango-api.xml	\
+--outdir=generated --customdir=. --assembly-name=gdk-sharp	\
+--gluelib-name=gdksharpglue-2 --glue-filename=glue/generated.c		\
+--glue-includes=gdk/gdk.h						\
+&& touch generated-stamp
+
+Generation Summary:
+  Enums: 54  Structs: 18  Boxed: 3  Opaques: 12  Interfaces: 0  Objects: 23  Callbacks: 8
+  Properties: 10  Signals: 10  Methods: 493  Constructors: 30  Throttled: 0
+Total Nodes: 661
+
+cp ../gtk-sharp.snk .
+cp ../AssemblyInfo.cs .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -unsafe -out:gdk-sharp.dll -target:library -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:Mono.Cairo generated/*.cs ./EventButton.cs ./EventClient.cs ./EventConfigure.cs ./EventCrossing.cs ./Event.cs ./EventDND.cs ./EventExpose.cs ./EventFocus.cs ./EventGrabBroken.cs ./EventKey.cs ./EventMotion.cs ./EventOwnerChange.cs ./EventProperty.cs ./EventProximity.cs ./EventScroll.cs ./EventSelection.cs ./EventSetting.cs ./EventVisibility.cs ./EventWindowState.cs ./Key.cs ./Size.cs ./TextProperty.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+./Event.cs(44,8): warning CS0414: The private field `Gdk.Event.owned' is assigned but its value is never used
+Compilation succeeded - 2 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/gdk-sharp/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.gdk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/gdk-sharp/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.gdk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/gdk-sharp/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.gdk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/gdk-sharp/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.gdk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gdk'
+Making all in glue
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gdk/glue'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT dragcontext.lo -MD -MP -MF .deps/dragcontext.Tpo -c -o dragcontext.lo dragcontext.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT dragcontext.lo -MD -MP -MF .deps/dragcontext.Tpo -c dragcontext.c  -fPIC -DPIC -o .libs/dragcontext.o
+mv -f .deps/dragcontext.Tpo .deps/dragcontext.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT device.lo -MD -MP -MF .deps/device.Tpo -c -o device.lo device.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT device.lo -MD -MP -MF .deps/device.Tpo -c device.c  -fPIC -DPIC -o .libs/device.o
+mv -f .deps/device.Tpo .deps/device.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT event.lo -MD -MP -MF .deps/event.Tpo -c -o event.lo event.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT event.lo -MD -MP -MF .deps/event.Tpo -c event.c  -fPIC -DPIC -o .libs/event.o
+mv -f .deps/event.Tpo .deps/event.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT selection.lo -MD -MP -MF .deps/selection.Tpo -c -o selection.lo selection.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT selection.lo -MD -MP -MF .deps/selection.Tpo -c selection.c  -fPIC -DPIC -o .libs/selection.o
+mv -f .deps/selection.Tpo .deps/selection.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT windowmanager.lo -MD -MP -MF .deps/windowmanager.Tpo -c -o windowmanager.lo windowmanager.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT windowmanager.lo -MD -MP -MF .deps/windowmanager.Tpo -c windowmanager.c  -fPIC -DPIC -o .libs/windowmanager.o
+windowmanager.c: In function 'gtksharp_get_gdk_net_client_list':
+windowmanager.c:113:12: warning: assignment to 'gpointer' {aka 'void *'} from 'long int' makes pointer from integer without a cast [-Wint-conversion]
+   list [i] = data [i];
+            ^
+In file included from /usr/include/glib-2.0/glib.h:62,
+                 from /usr/include/gtk-2.0/gdk/gdktypes.h:36,
+                 from /usr/include/gtk-2.0/gdk/gdkscreen.h:32,
+                 from windowmanager.c:27:
+windowmanager.c:114:14: warning: format '%d' expects argument of type 'int', but argument 4 has type 'gpointer' {aka 'void *'} [-Wformat=]
+   g_message ("WinID: %d", list [i]);
+              ^~~~~~~~~~~  ~~~~~~~~
+/usr/include/glib-2.0/glib/gmessages.h:334:32: note: in definition of macro 'g_message'
+                                __VA_ARGS__)
+                                ^~~~~~~~~~~
+mv -f .deps/windowmanager.Tpo .deps/windowmanager.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c -o generated.lo generated.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c generated.c  -fPIC -DPIC -o .libs/generated.o
+mv -f .deps/generated.Tpo .deps/generated.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libgdksharpglue-2.la -rpath /usr/lib dragcontext.lo device.lo event.lo selection.lo windowmanager.lo generated.lo -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/dragcontext.o .libs/device.o .libs/event.o .libs/selection.o .libs/windowmanager.o .libs/generated.o   /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so -lpangocairo-1.0 -latk-1.0 /usr/lib/libcairo.so -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 /usr/lib/libharfbuzz.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -pthread -Wl,-soname -Wl,libgdksharpglue-2.so -o .libs/libgdksharpglue-2.so
+libtool: link: ( cd ".libs" && rm -f "libgdksharpglue-2.la" && ln -s "../libgdksharpglue-2.la" "libgdksharpglue-2.la" )
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gdk/glue'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gdk'
+Making all in gtk
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtk'
+Making all in .
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtk'
+cp ./gtk-api.raw gtk-api.xml
+chmod u+w gtk-api.xml
+mono ../parser/gapi-fixup.exe --api=gtk-api.xml --metadata=./Gtk.metadata --symbols=./gtk-symbols.xml
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='Popup']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='Popdown']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='MoveViewport']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='MoveFocus']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='ToggleCursorVisible']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='FocusHomeOrEnd']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkMenuShell']/signal[@name='KeynavFailed']"/> matched no nodes
+Warning: <attr path="/api/namespace/object[@cname='GtkWindow']/signal[@name='MoveFocus']"/> matched no nodes
+rm -f generated/* &&	\
+mono ../generator/gapi_codegen.exe --generate gtk-api.xml \
+-I:../glib/glib-api.xml -I:../pango/pango-api.xml -I:../atk/atk-api.xml -I:../gdk/gdk-api.xml	\
+--outdir=generated --customdir=. --assembly-name=gtk-sharp	\
+--gluelib-name=gtksharpglue-2 --glue-filename=glue/generated.c		\
+--glue-includes=gtk/gtk.h						\
+&& touch generated-stamp
+Name: scanner Type: GScanner* in gtk_accel_map_load_scanner  in method LoadScanner in type Gtk.AccelMap
+Property has unknown Type GtkBorder in type Gtk.Entry
+rettype: const-GtkBorder* in method GetInnerBorder in type Gtk.Entry
+Name: border Type: const-GtkBorder* in gtk_entry_set_inner_border  in method SetInnerBorder in type Gtk.Entry
+Ellipsis parameter in gtk_message_dialog_format_secondary_text  in method FormatSecondaryText in type Gtk.MessageDialog
+Ellipsis parameter in gtk_message_dialog_format_secondary_markup  in method FormatSecondaryMarkup in type Gtk.MessageDialog
+Name: key_file Type: GKeyFile* in gtk_page_setup_to_key_file  in method ToKeyFile in type Gtk.PageSetup
+Name: key_file Type: GKeyFile* in gtk_page_setup_new_from_key_file in type Gtk.PageSetup
+rettype: cairo_surface_t* in method GetSurface in type Gtk.PrintJob
+Name: key_file Type: GKeyFile* in gtk_print_settings_to_key_file  in method ToKeyFile in type Gtk.PrintSettings
+Name: key_file Type: GKeyFile* in gtk_print_settings_new_from_key_file in type Gtk.PrintSettings
+Ellipsis parameter in gtk_recent_chooser_dialog_new in type Gtk.RecentChooserDialog
+Ellipsis parameter in gtk_recent_chooser_dialog_new_for_manager in type Gtk.RecentChooserDialog
+Ellipsis parameter in gtk_text_buffer_create_tag  in method CreateTag in type Gtk.TextBuffer
+Field Gpointer has unknown Type deprecated in type Gtk.Toolbar
+Field GtkTooltips has unknown Type deprecated in type Gtk.Toolbar
+Name: key_file Type: GKeyFile* in gtk_paper_size_to_key_file  in method ToKeyFile in type Gtk.PaperSize
+Name: key_file Type: GKeyFile* in gtk_paper_size_new_from_key_file in type Gtk.PaperSize
+Field ParentClass has unknown Type GtkScaleButtonClass in Struct Gtk.VolumeButtonClass
+Name: scanner Type: GScanner* in gtk_binding_parse_binding  in method BindingParseBinding in type Gtk.Global
+rettype: GOptionGroup* in method GetOptionGroup in type Gtk.Global
+Ellipsis parameter in gtk_show_about_dialog  in method ShowAboutDialog in type Gtk.Global
+Name: entries Type: GOptionEntry* in gtk_init_with_args  in method WithArgs in type Gtk.Init
+Name: scanner Type: GScanner* in gtk_rc_parse_color_full  in method ParseColorFull in type Gtk.Rc
+Name: scanner Type: GScanner* in gtk_rc_parse_color  in method ParseColor in type Gtk.Rc
+Name: scanner Type: GScanner* in gtk_rc_find_pixmap_in_path  in method FindPixmapInPath in type Gtk.Rc
+Name: scanner Type: GScanner* in gtk_rc_parse_priority  in method ParsePriority in type Gtk.Rc
+rettype: GScanner* in method ScannerNew in type Gtk.Rc
+Name: scanner Type: GScanner* in gtk_rc_parse_state  in method ParseState in type Gtk.Rc
+Interface Gtk.RecentChooser virtual method GetRecentManager has no matching method to invoke.
+Defaulting DestroyNotify param to 'call' scope in method ItemFactory.PopupWithData
+Defaulting DestroyNotify param to 'call' scope in method Object.SetDataFull
+Defaulting DestroyNotify param to 'call' scope in method Object.SetDataByIdFull
+Defaulting DestroyNotify param to 'call' scope in method Object.Weakunref
+Defaulting DestroyNotify param to 'call' scope in method Object.Weakref
+Defaulting RcPropertyParser param to 'call' scope in method Settings.InstallPropertyParser
+Defaulting Function param to 'call' scope in method Init.Add
+
+Generation Summary:
+  Enums: 97  Structs: 19  Boxed: 3  Opaques: 17  Interfaces: 10  Objects: 167  Callbacks: 58
+  Properties: 751  Signals: 356  Methods: 2062  Constructors: 191  Throttled: 25
+Total Nodes: 3756
+
+cp ../gtk-sharp.snk .
+cp ../AssemblyInfo.cs .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -unsafe -out:gtk-sharp.dll -target:library -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:Mono.Cairo generated/*.cs ./ActionEntry.cs ./Application.cs ./BindingAttribute.cs ./ChildPropertyAttribute.cs ./ITreeNode.cs ./IntPtrEqualityComparer.cs ./Key.cs ./MoveFocusHandler.cs ./NodeCellDataFunc.cs ./NodeSelection.cs ./NodeStore.cs ./NodeView.cs ./RadioActionEntry.cs ./RowsReorderedHandler.cs ./StockManager.cs ./TextBufferSerializeFunc.cs ./GtkSharp.TextBufferSerializeFuncNative.cs ./ThreadNotify.cs ./ToggleActionEntry.cs ./Timeout.cs ./TreeEnumerator.cs ./TreeNodeAttribute.cs ./TreeNode.cs ./TreeNodeValueAttribute.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+generated/AboutDialog.custom(23,17): warning CS0108: `Gtk.AboutDialog.Name' hides inherited member `Gtk.Widget.Name'. Use the new keyword if hiding was intended
+generated/Widget.cs(144,17): (Location of the symbol related to previous warning)
+generated/Assistant.cs(96,22): warning CS0109: The member `Gtk.Assistant.AssistantChild.Title' does not hide an inherited member. The new keyword is not required
+generated/TreePath.cs(12,15): warning CS0659: `Gtk.TreePath' overrides Object.Equals(object) but does not override Object.GetHashCode()
+generated/Input.custom(55,25): warning CS0414: The private field `Gtk.Input.InputProxy.function' is assigned but its value is never used
+generated/Input.custom(56,36): warning CS0414: The private field `Gtk.Input.InputProxy.marshal' is assigned but its value is never used
+generated/Input.custom(57,11): warning CS0414: The private field `Gtk.Input.InputProxy.data' is assigned but its value is never used
+./NodeStore.cs(97,7): warning CS0649: Field `Gtk.NodeStore.n_cols' is never assigned to, and will always have its default value `0'
+Compilation succeeded - 8 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/gtk-sharp/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.gtk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/gtk-sharp/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.gtk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/gtk-sharp/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.gtk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/gtk-sharp/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.gtk-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtk'
+Making all in glue
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtk/glue'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT adjustment.lo -MD -MP -MF .deps/adjustment.Tpo -c -o adjustment.lo adjustment.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT adjustment.lo -MD -MP -MF .deps/adjustment.Tpo -c adjustment.c  -fPIC -DPIC -o .libs/adjustment.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkadjustment.h:36,
+                 from adjustment.c:21:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkadjustment.h:35,
+                 from adjustment.c:21:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/adjustment.Tpo .deps/adjustment.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT cellrenderer.lo -MD -MP -MF .deps/cellrenderer.Tpo -c -o cellrenderer.lo cellrenderer.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT cellrenderer.lo -MD -MP -MF .deps/cellrenderer.Tpo -c cellrenderer.c  -fPIC -DPIC -o .libs/cellrenderer.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcelleditable.h:27,
+                 from /usr/include/gtk-2.0/gtk/gtkcellrenderer.h:27,
+                 from cellrenderer.c:24:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:34,
+                 from /usr/include/gtk-2.0/gtk/gtkcelleditable.h:27,
+                 from /usr/include/gtk-2.0/gtk/gtkcellrenderer.h:27,
+                 from cellrenderer.c:24:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/cellrenderer.Tpo .deps/cellrenderer.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT clipboard.lo -MD -MP -MF .deps/clipboard.Tpo -c -o clipboard.lo clipboard.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT clipboard.lo -MD -MP -MF .deps/clipboard.Tpo -c clipboard.c  -fPIC -DPIC -o .libs/clipboard.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from clipboard.c:19:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32,
+                 from clipboard.c:19:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126,
+                 from clipboard.c:19:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: 'GTimeVal' is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   GTimeVal last_popdown;
+   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:32,
+                 from /usr/include/glib-2.0/glib.h:30,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:28,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32,
+                 from clipboard.c:19:
+/usr/include/glib-2.0/glib/gtypes.h:547:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtk.h:234,
+                 from clipboard.c:19:
+/usr/include/gtk-2.0/gtk/gtkitemfactory.h:47:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ typedef void (*GtkItemFactoryCallback)  ();
+ ^~~~~~~
+mv -f .deps/clipboard.Tpo .deps/clipboard.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT colorseldialog.lo -MD -MP -MF .deps/colorseldialog.Tpo -c -o colorseldialog.lo colorseldialog.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT colorseldialog.lo -MD -MP -MF .deps/colorseldialog.Tpo -c colorseldialog.c  -fPIC -DPIC -o .libs/colorseldialog.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkcolorseldialog.h:34,
+                 from colorseldialog.c:22:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkaccelgroup.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkcolorseldialog.h:34,
+                 from colorseldialog.c:22:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/colorseldialog.Tpo .deps/colorseldialog.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT container.lo -MD -MP -MF .deps/container.Tpo -c -o container.lo container.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT container.lo -MD -MP -MF .deps/container.Tpo -c container.c  -fPIC -DPIC -o .libs/container.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from container.c:23:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:34,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from container.c:23:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/container.Tpo .deps/container.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT nodestore.lo -MD -MP -MF .deps/nodestore.Tpo -c -o nodestore.lo nodestore.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT nodestore.lo -MD -MP -MF .deps/nodestore.Tpo -c nodestore.c  -fPIC -DPIC -o .libs/nodestore.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtktreemodel.h:30,
+                 from nodestore.c:23:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/gtk-2.0/gtk/gtktreemodel.h:27,
+                 from nodestore.c:23:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/nodestore.Tpo .deps/nodestore.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object.lo -MD -MP -MF .deps/object.Tpo -c -o object.lo object.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT object.lo -MD -MP -MF .deps/object.Tpo -c object.c  -fPIC -DPIC -o .libs/object.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from object.c:23:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from object.c:22:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/object.Tpo .deps/object.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT selectiondata.lo -MD -MP -MF .deps/selectiondata.Tpo -c -o selectiondata.lo selectiondata.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT selectiondata.lo -MD -MP -MF .deps/selectiondata.Tpo -c selectiondata.c  -fPIC -DPIC -o .libs/selectiondata.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkselection.h:35,
+                 from selectiondata.c:22:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:34,
+                 from /usr/include/gtk-2.0/gtk/gtkselection.h:35,
+                 from selectiondata.c:22:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/selectiondata.Tpo .deps/selectiondata.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT statusicon.lo -MD -MP -MF .deps/statusicon.Tpo -c -o statusicon.lo statusicon.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT statusicon.lo -MD -MP -MF .deps/statusicon.Tpo -c statusicon.c  -fPIC -DPIC -o .libs/statusicon.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkmenushell.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkmenu.h:36,
+                 from statusicon.c:24:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkaccelgroup.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkmenu.h:35,
+                 from statusicon.c:24:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/statusicon.Tpo .deps/statusicon.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT style.lo -MD -MP -MF .deps/style.Tpo -c -o style.lo style.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT style.lo -MD -MP -MF .deps/style.Tpo -c style.c  -fPIC -DPIC -o .libs/style.o
+mv -f .deps/style.Tpo .deps/style.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT targetlist.lo -MD -MP -MF .deps/targetlist.Tpo -c -o targetlist.lo targetlist.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT targetlist.lo -MD -MP -MF .deps/targetlist.Tpo -c targetlist.c  -fPIC -DPIC -o .libs/targetlist.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkselection.h:35,
+                 from targetlist.c:19:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:34,
+                 from /usr/include/gtk-2.0/gtk/gtkselection.h:35,
+                 from targetlist.c:19:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/targetlist.Tpo .deps/targetlist.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT widget.lo -MD -MP -MF .deps/widget.Tpo -c -o widget.lo widget.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT widget.lo -MD -MP -MF .deps/widget.Tpo -c widget.c  -fPIC -DPIC -o .libs/widget.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkbindings.h:39,
+                 from widget.c:24:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkbindings.h:38,
+                 from widget.c:24:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/widget.Tpo .deps/widget.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c -o generated.lo generated.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c generated.c  -fPIC -DPIC -o .libs/generated.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from generated.c:4:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32,
+                 from generated.c:4:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126,
+                 from generated.c:4:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: 'GTimeVal' is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   GTimeVal last_popdown;
+   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:32,
+                 from /usr/include/glib-2.0/glib.h:30,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:28,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32,
+                 from generated.c:4:
+/usr/include/glib-2.0/glib/gtypes.h:547:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtk.h:234,
+                 from generated.c:4:
+/usr/include/gtk-2.0/gtk/gtkitemfactory.h:47:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ typedef void (*GtkItemFactoryCallback)  ();
+ ^~~~~~~
+mv -f .deps/generated.Tpo .deps/generated.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libgtksharpglue-2.la -rpath /usr/lib adjustment.lo cellrenderer.lo clipboard.lo colorseldialog.lo container.lo nodestore.lo object.lo selectiondata.lo statusicon.lo style.lo targetlist.lo widget.lo generated.lo -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/adjustment.o .libs/cellrenderer.o .libs/clipboard.o .libs/colorseldialog.o .libs/container.o .libs/nodestore.o .libs/object.o .libs/selectiondata.o .libs/statusicon.o .libs/style.o .libs/targetlist.o .libs/widget.o .libs/generated.o   /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so -lpangocairo-1.0 -latk-1.0 /usr/lib/libcairo.so -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 /usr/lib/libharfbuzz.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -pthread -Wl,-soname -Wl,libgtksharpglue-2.so -o .libs/libgtksharpglue-2.so
+libtool: link: ( cd ".libs" && rm -f "libgtksharpglue-2.la" && ln -s "../libgtksharpglue-2.la" "libgtksharpglue-2.la" )
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtk/glue'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtk'
+Making all in glade
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glade'
+Making all in .
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glade'
+cp ./glade-api.raw glade-api.xml
+chmod u+w glade-api.xml
+mono ../parser/gapi-fixup.exe --api=glade-api.xml --metadata=./Glade.metadata 
+rm -f generated/* &&	\
+mono ../generator/gapi_codegen.exe --generate glade-api.xml \
+-I:../pango/pango-api.xml -I:../atk/atk-api.xml -I:../gdk/gdk-api.xml -I:../gtk/gtk-api.xml	\
+--outdir=generated --customdir=. --assembly-name=glade-sharp	\
+--gluelib-name=gladesharpglue-2 --glue-filename=glue/generated.c		\
+--glue-includes=glade/glade.h,glade/glade-parser.h						\
+&& touch generated-stamp
+Name: func Type: GCallback in glade_xml_signal_connect  in method SignalConnect in type Glade.XML
+Name: func Type: GCallback in glade_xml_signal_connect_data  in method SignalConnectData in type Glade.XML
+Defaulting XMLConnectFunc param to 'call' scope in method XML.SignalConnectFull
+Defaulting XMLConnectFunc param to 'call' scope in method XML.SignalAutoconnectFull
+Defaulting ApplyCustomPropFunc param to 'call' scope in method Global.RegisterCustomProp
+Defaulting NewFunc param to 'call' scope in method Global.RegisterWidget
+Defaulting BuildChildrenFunc param to 'call' scope in method Global.RegisterWidget
+Defaulting FindInternalChildFunc param to 'call' scope in method Global.RegisterWidget
+
+Generation Summary:
+  Enums: 0  Structs: 8  Boxed: 0  Opaques: 0  Interfaces: 0  Objects: 1  Callbacks: 6
+  Properties: 0  Signals: 0  Methods: 29  Constructors: 2  Throttled: 2
+Total Nodes: 48
+
+cp ../gtk-sharp.snk .
+cp ../AssemblyInfo.cs .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -unsafe -out:glade-sharp.dll -target:library -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:Mono.Cairo generated/*.cs ./HandlerNotFoundExeception.cs ./WidgetAttribute.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+Compilation succeeded - 1 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/glade-sharp/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.glade-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/glade-sharp/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.glade-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/glade-sharp/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.glade-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/glade-sharp/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.glade-sharp.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glade'
+Making all in glue
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glade/glue'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/libglade-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT gladexml.lo -MD -MP -MF .deps/gladexml.Tpo -c -o gladexml.lo gladexml.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/libglade-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT gladexml.lo -MD -MP -MF .deps/gladexml.Tpo -c gladexml.c  -fPIC -DPIC -o .libs/gladexml.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from gladexml.c:22:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from gladexml.c:22:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from gladexml.c:22:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: 'GTimeVal' is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   GTimeVal last_popdown;
+   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:32,
+                 from /usr/include/glib-2.0/glib.h:30,
+                 from /usr/include/libglade-2.0/glade/glade.h:25,
+                 from gladexml.c:22:
+/usr/include/glib-2.0/glib/gtypes.h:547:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtk.h:234,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from gladexml.c:22:
+/usr/include/gtk-2.0/gtk/gtkitemfactory.h:47:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ typedef void (*GtkItemFactoryCallback)  ();
+ ^~~~~~~
+mv -f .deps/gladexml.Tpo .deps/gladexml.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/libglade-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../..    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c -o generated.lo generated.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/libglade-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libxml2 -DGTK_SHARP_2_6 -DGTK_SHARP_2_8 -DGTK_SHARP_2_10 -DGTK_SHARP_2_12 -I../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT generated.lo -MD -MP -MF .deps/generated.Tpo -c generated.c  -fPIC -DPIC -o .libs/generated.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from generated.c:4:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from generated.c:4:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from generated.c:4:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: 'GTimeVal' is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   GTimeVal last_popdown;
+   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:32,
+                 from /usr/include/glib-2.0/glib.h:30,
+                 from /usr/include/libglade-2.0/glade/glade.h:25,
+                 from generated.c:4:
+/usr/include/glib-2.0/glib/gtypes.h:547:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtk.h:234,
+                 from /usr/include/libglade-2.0/glade/glade-xml.h:26,
+                 from /usr/include/libglade-2.0/glade/glade.h:28,
+                 from generated.c:4:
+/usr/include/gtk-2.0/gtk/gtkitemfactory.h:47:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ typedef void (*GtkItemFactoryCallback)  ();
+ ^~~~~~~
+generated.c:12:1: warning: 'get_threshold_class' defined but not used [-Wunused-function]
+ get_threshold_class (GObject *obj)
+ ^~~~~~~~~~~~~~~~~~~
+mv -f .deps/generated.Tpo .deps/generated.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libgladesharpglue-2.la -rpath /usr/lib gladexml.lo generated.lo -lglade-2.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype -lxml2 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/gladexml.o .libs/generated.o   /usr/lib/libglade-2.0.so /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so -lpangocairo-1.0 -latk-1.0 /usr/lib/libcairo.so -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 /usr/lib/libharfbuzz.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so /usr/lib/libxml2.so  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -pthread -Wl,-soname -Wl,libgladesharpglue-2.so -o .libs/libgladesharpglue-2.so
+libtool: link: ( cd ".libs" && rm -f "libgladesharpglue-2.la" && ln -s "../libgladesharpglue-2.la" "libgladesharpglue-2.la" )
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glade/glue'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/glade'
+Making all in gtkdotnet
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtkdotnet'
+cp ../AssemblyInfo.cs .
+cp ../gtk-sharp.snk .
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -nowarn:0169,0612,0618 -out:gtk-dotnet.dll -target:library -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../gdk/gdk-sharp.dll -r:System.Drawing.dll ./Graphics.cs AssemblyInfo.cs
+AssemblyInfo.cs(6,11): warning CS1699: Use compiler option `keyfile' or appropriate project settings instead of `AssemblyKeyFile' attribute
+Compilation succeeded - 1 warning(s)
+sed -e "s/@ASSEMBLY_NAME@/gtk-dotnet/" -e "s/@POLICY@/2.4/" ../policy.config > policy.2.4.config
+"/usr/bin/al" -link:policy.2.4.config -version:2.4 -out:policy.2.4.gtk-dotnet.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.4.config' in the resource name is not supported. Using just file name 'policy.2.4.config'
+sed -e "s/@ASSEMBLY_NAME@/gtk-dotnet/" -e "s/@POLICY@/2.6/" ../policy.config > policy.2.6.config
+"/usr/bin/al" -link:policy.2.6.config -version:2.6 -out:policy.2.6.gtk-dotnet.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.6.config' in the resource name is not supported. Using just file name 'policy.2.6.config'
+sed -e "s/@ASSEMBLY_NAME@/gtk-dotnet/" -e "s/@POLICY@/2.8/" ../policy.config > policy.2.8.config
+"/usr/bin/al" -link:policy.2.8.config -version:2.8 -out:policy.2.8.gtk-dotnet.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.8.config' in the resource name is not supported. Using just file name 'policy.2.8.config'
+sed -e "s/@ASSEMBLY_NAME@/gtk-dotnet/" -e "s/@POLICY@/2.10/" ../policy.config > policy.2.10.config
+"/usr/bin/al" -link:policy.2.10.config -version:2.10 -out:policy.2.10.gtk-dotnet.dll -keyfile:gtk-sharp.snk
+ALINK: warning A99999: Path 'policy.2.10.config' in the resource name is not supported. Using just file name 'policy.2.10.config'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/gtkdotnet'
+Making all in sample
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample'
+Making all in GtkDemo
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/GtkDemo'
+/usr/bin/mcs -define:GTK_SHARP_2_6 -define:GTK_SHARP_2_8 -define:GTK_SHARP_2_10 -define:GTK_SHARP_2_12  -unsafe -define:HAVE_NET_4_6 -define:DISABLE_GTHREAD_CHECK -out:GtkDemo.exe ./DemoApplicationWindow.cs ./DemoAttribute.cs ./DemoButtonBox.cs ./DemoClipboard.cs ./DemoColorSelection.cs ./DemoDialog.cs ./DemoDrawingArea.cs ./DemoEditableCells.cs ./DemoEntryCompletion.cs ./DemoExpander.cs ./DemoHyperText.cs ./DemoIconView.cs ./DemoImages.cs ./DemoListStore.cs ./DemoMain.cs ./DemoMenus.cs ./DemoPanes.cs ./DemoPixbuf.cs ./DemoRotatedText.cs ./DemoSizeGroup.cs ./DemoStockBrowser.cs ./DemoTextView.cs ./DemoTreeStore.cs ./DemoUIManager.cs ./DemoPrinting.cs -r:../../glib/glib-sharp.dll -r:../../pango/pango-sharp.dll -r:../../atk/atk-sharp.dll -r:../../gdk/gdk-sharp.dll -r:../../gtk/gtk-sharp.dll -r:Mono.Cairo -resource:./images/gnome-foot.png,gnome-foot.png -resource:./images/MonoIcon.png,MonoIcon.png -resource:./images/gnome-calendar.png,gnome-calendar.png -resource:./images/gnome-gmush.png,gnome-gmush.png -resource:./images/gnu-keys.png,gnu-keys.png -resource:./images/gnome-applets.png,gnome-applets.png -resource:./images/gnome-gsame.png,gnome-gsame.png -resource:./images/alphatest.png,alphatest.png -resource:./images/gnome-gimp.png,gnome-gimp.png -resource:./images/apple-red.png,apple-red.png -resource:./images/background.jpg,background.jpg -resource:./images/gtk-logo-rgb.gif,gtk-logo-rgb.gif -resource:./images/floppybuddy.gif,floppybuddy.gif
+./DemoImages.cs(173,21): warning CS0618: `Gtk.Image.FromPixbuf' is obsolete: `Use the Pixbuf property instead'
+Compilation succeeded - 1 warning(s)
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/GtkDemo'
+Making all in pixmaps
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/pixmaps'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/pixmaps'
+Making all in valtest
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/valtest'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT valobj.lo -MD -MP -MF .deps/valobj.Tpo -c -o valobj.lo valobj.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT valobj.lo -MD -MP -MF .deps/valobj.Tpo -c valobj.c  -fPIC -DPIC -o .libs/valobj.o
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from valobj.h:9,
+                 from valobj.c:20:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: 'GTypeDebugFlags' is deprecated [-Wdeprecated-declarations]
+ void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+ ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:22,
+                 from /usr/include/glib-2.0/gio/gioenums.h:28,
+                 from /usr/include/glib-2.0/gio/giotypes.h:28,
+                 from /usr/include/glib-2.0/gio/gio.h:26,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:34,
+                 from valobj.h:9,
+                 from valobj.c:20:
+/usr/include/glib-2.0/gobject/gtype.h:679:1: note: declared here
+ {
+ ^
+mv -f .deps/valobj.Tpo .deps/valobj.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libvalobj.la -rpath /usr/lib valobj.lo -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/valobj.o   /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so -lpangocairo-1.0 -latk-1.0 /usr/lib/libcairo.so -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 /usr/lib/libharfbuzz.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -pthread -Wl,-soname -Wl,libvalobj.so -o .libs/libvalobj.so
+libtool: link: ( cd ".libs" && rm -f "libvalobj.la" && ln -s "../libvalobj.la" "libvalobj.la" )
+mono ../../generator/gapi_codegen.exe --generate ./valobj-api.xml --include ../../gtk/gtk-api.xml ../../gdk/gdk-api.xml --outdir=. --assembly-name=valobj-sharp
+
+Generation Summary:
+  Enums: 0  Structs: 0  Boxed: 0  Opaques: 0  Interfaces: 0  Objects: 1  Callbacks: 0
+  Properties: 14  Signals: 0  Methods: 15  Constructors: 1  Throttled: 0
+Total Nodes: 31
+
+/usr/bin/mcs -out:valtest.exe -r:../../glib/glib-sharp.dll -r:../../pango/pango-sharp.dll -r:../../atk/atk-sharp.dll -r:../../gdk/gdk-sharp.dll -r:../../gtk/gtk-sharp.dll ./Valtest.cs Valobj.cs
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/valtest'
+Making all in opaquetest
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/opaquetest'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT opaques.lo -MD -MP -MF .deps/opaques.Tpo -c -o opaques.lo opaques.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -MT opaques.lo -MD -MP -MF .deps/opaques.Tpo -c opaques.c  -fPIC -DPIC -o .libs/opaques.o
+mv -f .deps/opaques.Tpo .deps/opaques.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings -DDISABLE_GTHREAD_CHECK -module -avoid-version -no-undefined  -o libopaque.la -rpath /usr/lib opaques.lo -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/opaques.o   /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so -lpangocairo-1.0 -latk-1.0 /usr/lib/libcairo.so -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 /usr/lib/libharfbuzz.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -pthread -Wl,-soname -Wl,libopaque.so -o .libs/libopaque.so
+libtool: link: ( cd ".libs" && rm -f "libopaque.la" && ln -s "../libopaque.la" "libopaque.la" )
+mono ../../generator/gapi_codegen.exe --generate ./opaque-api.xml --include ../../gtk/gtk-api.xml ../../gdk/gdk-api.xml --outdir=generated --assembly-name=opaque-sharp
+Defaulting OpaqueReturnFunc param to 'call' scope in method Opaque.CheckFree
+Defaulting GCFunc param to 'call' scope in method Opaque.CheckFree
+Defaulting OpaqueReturnFunc param to 'call' scope in method Opaque.Check
+Defaulting GCFunc param to 'call' scope in method Opaque.Check
+Defaulting RefcountedReturnFunc param to 'call' scope in method Refcounted.CheckUnref
+Defaulting GCFunc param to 'call' scope in method Refcounted.CheckUnref
+Defaulting RefcountedReturnFunc param to 'call' scope in method Refcounted.Check
+Defaulting GCFunc param to 'call' scope in method Refcounted.Check
+
+Generation Summary:
+  Enums: 0  Structs: 0  Boxed: 0  Opaques: 2  Interfaces: 0  Objects: 0  Callbacks: 3
+  Properties: 0  Signals: 0  Methods: 9  Constructors: 2  Throttled: 0
+Total Nodes: 16
+
+/usr/bin/mcs -out:opaquetest.exe -r:../../glib/glib-sharp.dll -r:../../pango/pango-sharp.dll -r:../../atk/atk-sharp.dll -r:../../gdk/gdk-sharp.dll -r:../../gtk/gtk-sharp.dll ./OpaqueTest.cs generated/*.cs
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample/opaquetest'
+make[3]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample'
+/usr/bin/mcs -debug -out:polarfixed.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./PolarFixed.cs
+/usr/bin/mcs -debug -out:custom-widget.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./CustomWidget.cs
+./CustomWidget.cs(44,24): warning CS0649: Field `CustomWidget.customWidgetGType' is never assigned to, and will always have its default value
+Compilation succeeded - 1 warning(s)
+/usr/bin/mcs -debug -out:custom-cellrenderer.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./CustomCellRenderer.cs
+/usr/bin/mcs  -out:gtk-hello-world.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./HelloWorld.cs
+/usr/bin/mcs  -out:button.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./ButtonApp.cs
+/usr/bin/mcs  -out:calendar.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./CalendarApp.cs
+/usr/bin/mcs  -out:subclass.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./Subclass.cs
+/usr/bin/mcs  -out:menu.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./Menu.cs
+/usr/bin/mcs  -out:size.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./Size.cs
+/usr/bin/mcs  -out:scribble.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./Scribble.cs
+/usr/bin/mcs  -out:scribble-xinput.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./ScribbleXInput.cs
+/usr/bin/mcs  -out:treeviewdemo.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./TreeViewDemo.cs
+/usr/bin/mcs  -out:managedtreeviewdemo.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./ManagedTreeViewDemo.cs
+/usr/bin/mcs  -out:nodeviewdemo.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./NodeViewDemo.cs
+/usr/bin/mcs  -out:treemodeldemo.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./TreeModelDemo.cs
+/usr/bin/mcs -debug -unsafe -out:testdnd.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./TestDnd.cs
+./TestDnd.cs(293,25): warning CS0618: `Gtk.Image.FromPixbuf' is obsolete: `Use the Pixbuf property instead'
+./TestDnd.cs(301,26): warning CS0618: `Gtk.Image.FromPixbuf' is obsolete: `Use the Pixbuf property instead'
+./TestDnd.cs(319,25): warning CS0618: `Gtk.Image.FromPixbuf' is obsolete: `Use the Pixbuf property instead'
+./TestDnd.cs(475,10): warning CS0219: The variable `drag_icon_pixbuf' is assigned but its value is never used
+Compilation succeeded - 4 warning(s)
+/usr/bin/mcs -debug -unsafe -out:actions.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./Actions.cs
+/usr/bin/mcs  -out:spawn.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./SpawnTests.cs
+/usr/bin/mcs  -out:assistant.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./Assistant.cs
+/usr/bin/mcs  -out:registerprop.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./PropertyRegistration.cs
+/usr/bin/mcs  -out:gexceptiontest.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./GExceptionTest.cs
+/usr/bin/mcs -out:cairo-sample.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll -r:Mono.Cairo ./CairoSample.cs
+./CairoSample.cs(41,22): warning CS0618: `Cairo.Context.Target' is obsolete: `Use GetTarget/SetTarget'
+./CairoSample.cs(46,8): warning CS0618: `Cairo.Context.Color' is obsolete: `Use SetSourceColor method'
+./CairoSample.cs(50,8): warning CS0618: `Cairo.Context.Color' is obsolete: `Use SetSourceColor method'
+./CairoSample.cs(61,6): warning CS0618: `Cairo.Context.Source' is obsolete: `Use GetSource/SetSource'
+./CairoSample.cs(65,17): warning CS0618: `Cairo.Pattern.Destroy()' is obsolete: `Use Dispose()'
+./CairoSample.cs(66,9): warning CS0618: `Cairo.Surface.Destroy()' is obsolete: `Use Dispose()'
+./CairoSample.cs(74,6): warning CS0618: `Cairo.Context.Color' is obsolete: `Use SetSourceColor method'
+./CairoSample.cs(78,6): warning CS0618: `Cairo.Context.Color' is obsolete: `Use SetSourceColor method'
+./CairoSample.cs(82,6): warning CS0618: `Cairo.Context.Color' is obsolete: `Use SetSourceColor method'
+./CairoSample.cs(93,24): warning CS0618: `Cairo.Context.Target' is obsolete: `Use GetTarget/SetTarget'
+./CairoSample.cs(94,24): warning CS0618: `Cairo.Context.Target' is obsolete: `Use GetTarget/SetTarget'
+./CairoSample.cs(95,24): warning CS0618: `Cairo.Context.Target' is obsolete: `Use GetTarget/SetTarget'
+./CairoSample.cs(102,15): warning CS0618: `Cairo.Context.Color' is obsolete: `Use SetSourceColor method'
+./CairoSample.cs(131,11): warning CS0618: `Cairo.Surface.Destroy()' is obsolete: `Use Dispose()'
+./CairoSample.cs(132,9): warning CS0618: `Cairo.Surface.Destroy()' is obsolete: `Use Dispose()'
+./CairoSample.cs(133,11): warning CS0618: `Cairo.Surface.Destroy()' is obsolete: `Use Dispose()'
+Compilation succeeded - 16 warning(s)
+/usr/bin/mcs  -out:glade-viewer.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./GladeViewer.cs
+/usr/bin/mcs  -resource:./test.glade,test.glade -out:glade-test.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll ./GladeTest.cs
+/usr/bin/mcs -debug -out:drawing-sample.exe -r:../glib/glib-sharp.dll -r:../pango/pango-sharp.dll -r:../atk/atk-sharp.dll -r:../gdk/gdk-sharp.dll -r:../gtk/gtk-sharp.dll -r:../glade/glade-sharp.dll -r:../gtkdotnet/gtk-dotnet.dll -r:System.Drawing.dll ./DrawingSample.cs
+make[3]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample'
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/sample'
+Making all in doc
+make[2]: Entering directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/doc'
+/usr/bin/mdassembler --ecma ./en -o gtk-sharp-docs
+Cannot open assembly '/usr/lib/mono/4.5/mdoc.exe': No such file or directory.
+make[2]: *** [Makefile:571: gtk-sharp-docs.zip] Error 2
+make[2]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45/doc'
+make[1]: *** [Makefile:454: all-recursive] Error 1
+make[1]: Leaving directory '/usr/ports/contrib/gtk-sharp/work/src/gtk-sharp-2.12.45'
+make: *** [Makefile:382: all] Error 2
+=======> ERROR: Building '/usr/ports/contrib/gtk-sharp/gtk-sharp#2.12.45-2.pkg.tar.xz' failed.

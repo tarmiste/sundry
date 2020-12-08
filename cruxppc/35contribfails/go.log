@@ -1,0 +1,23 @@
+prt-get: installing /usr/ports/contrib/go
+prt-get: starting build Sun Dec  6 10:23:39 2020
+=======> Building '/usr/ports/contrib/go/go#1.15.4-1.pkg.tar.xz'.
+bsdtar: Pathname can't be converted from UTF-8 to current locale.
+bsdtar: Pathname can't be converted from UTF-8 to current locale.
+bsdtar: Error exit delayed from previous errors.
++ build
++ export GOROOT_BOOTSTRAP=/usr/ports/contrib/go/work/src/go1.4
++ GOROOT_BOOTSTRAP=/usr/ports/contrib/go/work/src/go1.4
++ export GOROOT_FINAL=/usr/lib/go
++ GOROOT_FINAL=/usr/lib/go
++ export GOOS=linux
++ GOOS=linux
++ export GOARCH=amd64
++ GOARCH=amd64
++ export GOCACHE=off
++ GOCACHE=off
++ cd go/src
++ bash make.bash --no-clean
+make.bash: line 165: /usr/ports/contrib/go/work/src/go1.4/bin/go: cannot execute binary file: Exec format error
+Building Go cmd/dist using /usr/ports/contrib/go/work/src/go1.4. ()
+make.bash: line 181: /usr/ports/contrib/go/work/src/go1.4/bin/go: cannot execute binary file: Exec format error
+=======> ERROR: Building '/usr/ports/contrib/go/go#1.15.4-1.pkg.tar.xz' failed.

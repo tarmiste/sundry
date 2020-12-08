@@ -1,0 +1,6 @@
+prt-get: installing /usr/ports/contrib/warsow
+prt-get: starting build Sun Dec  6 20:03:46 2020
+=======> ERROR: Signature mismatch found:
+MISMATCH	warsow_0.42_unified.zip
+MISMATCH	warsow_0.42_sdk.zip
+=======> ERROR: Building '/usr/ports/contrib/warsow/warsow#0.42-1.pkg.tar.xz' failed.

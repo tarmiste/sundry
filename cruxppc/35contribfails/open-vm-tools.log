@@ -1,0 +1,12 @@
+prt-get: installing /usr/ports/contrib/open-vm-tools
+prt-get: starting build Sat Dec  5 19:26:34 2020
+=======> Building '/usr/ports/contrib/open-vm-tools/open-vm-tools#11.2.0-16938113-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/open-vm-tools/work/src -xf /sources/open-vm-tools-11.2.0-16938113.tar.gz
+cp vmtoolsd /usr/ports/contrib/open-vm-tools/work/src
++ build
++ cd open-vm-tools-11.2.0-16938113
++ ./configure --prefix=/usr --without-icu --without-x --without-xerces
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+configure: error: Unknown architecture.
+=======> ERROR: Building '/usr/ports/contrib/open-vm-tools/open-vm-tools#11.2.0-16938113-1.pkg.tar.xz' failed.

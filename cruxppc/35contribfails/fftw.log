@@ -1,0 +1,1088 @@
+prt-get: installing /usr/ports/contrib/fftw
+prt-get: starting build Sun Dec  6 09:51:21 2020
+=======> WARNING: Signature file not found, falling back to old md5sum checking.
+=======> Building '/usr/ports/contrib/fftw/fftw#3.3.8-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/fftw/work/src -xf /sources/fftw-3.3.8.tar.gz
++ build
++ cd fftw-3.3.8
++ local 'config=
+F77=gfortran
+--prefix=/usr
+--enable-threads
+--with-gnu-ld
+--enable-shared
+--enable-openmp'
++ CFLAGS+=' -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math'
++ ./configure F77=gfortran --prefix=/usr --enable-threads --with-gnu-ld --enable-shared --enable-openmp --enable-single
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for C compiler vendor... gnu
+checking for gcc option to accept ISO C99... none needed
+checking for gcc option to accept ISO Standard C... (cached) none needed
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert powerpc-unknown-linux-gnu file names to powerpc-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert powerpc-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for ranlib... (cached) ranlib
+checking for ocamlbuild... ocamlbuild
+checking for ANSI C header files... (cached) yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking fenv.h usability... yes
+checking fenv.h presence... yes
+checking for fenv.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking altivec.h usability... no
+checking altivec.h presence... no
+checking for altivec.h... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for size_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for long double... yes
+checking for hrtime_t... no
+checking size of int... 4
+checking size of unsigned int... 4
+checking size of long... 4
+checking size of unsigned long... 4
+checking size of long long... 8
+checking size of unsigned long long... 8
+checking size of size_t... 4
+checking size of ptrdiff_t... 4
+checking for ptrdiff_t... yes
+checking for uintptr_t... yes
+checking size of float... 4
+checking size of double... 8
+checking size of fftw_r2r_kind... 4
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for working strtod... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for sin in -lm... yes
+checking for BSDgettimeofday... no
+checking for gettimeofday... yes
+checking for gethrtime... no
+checking for read_real_time... no
+checking for time_base_to_time... no
+checking for drand48... yes
+checking for sqrt... yes
+checking for memset... yes
+checking for posix_memalign... yes
+checking for memalign... yes
+checking for _mm_malloc... no
+checking for _mm_free... no
+checking for clock_gettime... yes
+checking for mach_absolute_time... no
+checking for sysctl... yes
+checking for abort... yes
+checking for sinl... yes
+checking for cosl... yes
+checking for snprintf... yes
+checking for memmove... yes
+checking for strchr... yes
+checking for getpagesize... yes
+checking whether sinl is declared... yes
+checking whether cosl is declared... yes
+checking whether sinq is declared... no
+checking whether cosq is declared... no
+checking whether memalign is declared... yes
+checking whether drand48 is declared... yes
+checking whether srand48 is declared... yes
+checking whether posix_memalign is declared... yes
+checking for _rtc intrinsic... no
+checking for isnan... yes
+checking whether C compiler accepts -mpreferred-stack-boundary=4... no
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether gfortran accepts -g... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gfortran option to produce PIC... -fPIC
+checking if gfortran PIC flag -fPIC works... yes
+checking if gfortran static flag -static works... yes
+checking if gfortran supports -c -o file.o... yes
+checking if gfortran supports -c -o file.o... (cached) yes
+checking whether the gfortran linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking how to get verbose linking output from gfortran... -v
+checking for Fortran 77 libraries of gfortran...  -L/usr/lib/gcc/powerpc-unknown-linux-gnu/8.4.0 -L/usr/lib/gcc/powerpc-unknown-linux-gnu/8.4.0/../../.. -lgfortran -lm
+checking for dummy main to link with Fortran 77 libraries... none
+checking for Fortran 77 name-mangling scheme... lower case, underscore, no extra underscore
+checking for OpenMP flag of C compiler... -fopenmp
+checking for Win32 threads... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking whether a cycle counter is available... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating support/Makefile
+config.status: creating genfft/Makefile
+config.status: creating kernel/Makefile
+config.status: creating simd-support/Makefile
+config.status: creating dft/Makefile
+config.status: creating dft/scalar/Makefile
+config.status: creating dft/scalar/codelets/Makefile
+config.status: creating dft/simd/Makefile
+config.status: creating dft/simd/common/Makefile
+config.status: creating dft/simd/sse2/Makefile
+config.status: creating dft/simd/avx/Makefile
+config.status: creating dft/simd/avx-128-fma/Makefile
+config.status: creating dft/simd/avx2/Makefile
+config.status: creating dft/simd/avx2-128/Makefile
+config.status: creating dft/simd/avx512/Makefile
+config.status: creating dft/simd/kcvi/Makefile
+config.status: creating dft/simd/altivec/Makefile
+config.status: creating dft/simd/vsx/Makefile
+config.status: creating dft/simd/neon/Makefile
+config.status: creating dft/simd/generic-simd128/Makefile
+config.status: creating dft/simd/generic-simd256/Makefile
+config.status: creating rdft/Makefile
+config.status: creating rdft/scalar/Makefile
+config.status: creating rdft/scalar/r2cf/Makefile
+config.status: creating rdft/scalar/r2cb/Makefile
+config.status: creating rdft/scalar/r2r/Makefile
+config.status: creating rdft/simd/Makefile
+config.status: creating rdft/simd/common/Makefile
+config.status: creating rdft/simd/sse2/Makefile
+config.status: creating rdft/simd/avx/Makefile
+config.status: creating rdft/simd/avx-128-fma/Makefile
+config.status: creating rdft/simd/avx2/Makefile
+config.status: creating rdft/simd/avx2-128/Makefile
+config.status: creating rdft/simd/avx512/Makefile
+config.status: creating rdft/simd/kcvi/Makefile
+config.status: creating rdft/simd/altivec/Makefile
+config.status: creating rdft/simd/vsx/Makefile
+config.status: creating rdft/simd/neon/Makefile
+config.status: creating rdft/simd/generic-simd128/Makefile
+config.status: creating rdft/simd/generic-simd256/Makefile
+config.status: creating reodft/Makefile
+config.status: creating threads/Makefile
+config.status: creating api/Makefile
+config.status: creating mpi/Makefile
+config.status: creating libbench2/Makefile
+config.status: creating tests/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/FAQ/Makefile
+config.status: creating tools/Makefile
+config.status: creating tools/fftw_wisdom.1
+config.status: creating tools/fftw-wisdom-to-conf
+config.status: creating m4/Makefile
+config.status: creating fftw.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
++ make
+make  all-recursive
+make[1]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8'
+Making all in support
+make[2]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/support'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/support'
+Making all in kernel
+make[2]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/kernel'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT align.lo -MD -MP -MF .deps/align.Tpo -c -o align.lo align.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT align.lo -MD -MP -MF .deps/align.Tpo -c align.c  -fPIC -DPIC -o .libs/align.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT align.lo -MD -MP -MF .deps/align.Tpo -c align.c -o align.o >/dev/null 2>&1
+mv -f .deps/align.Tpo .deps/align.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT alloc.lo -MD -MP -MF .deps/alloc.Tpo -c -o alloc.lo alloc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT alloc.lo -MD -MP -MF .deps/alloc.Tpo -c alloc.c  -fPIC -DPIC -o .libs/alloc.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT alloc.lo -MD -MP -MF .deps/alloc.Tpo -c alloc.c -o alloc.o >/dev/null 2>&1
+mv -f .deps/alloc.Tpo .deps/alloc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT assert.lo -MD -MP -MF .deps/assert.Tpo -c -o assert.lo assert.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT assert.lo -MD -MP -MF .deps/assert.Tpo -c assert.c  -fPIC -DPIC -o .libs/assert.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT assert.lo -MD -MP -MF .deps/assert.Tpo -c assert.c -o assert.o >/dev/null 2>&1
+mv -f .deps/assert.Tpo .deps/assert.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT awake.lo -MD -MP -MF .deps/awake.Tpo -c -o awake.lo awake.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT awake.lo -MD -MP -MF .deps/awake.Tpo -c awake.c  -fPIC -DPIC -o .libs/awake.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT awake.lo -MD -MP -MF .deps/awake.Tpo -c awake.c -o awake.o >/dev/null 2>&1
+mv -f .deps/awake.Tpo .deps/awake.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT buffered.lo -MD -MP -MF .deps/buffered.Tpo -c -o buffered.lo buffered.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT buffered.lo -MD -MP -MF .deps/buffered.Tpo -c buffered.c  -fPIC -DPIC -o .libs/buffered.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT buffered.lo -MD -MP -MF .deps/buffered.Tpo -c buffered.c -o buffered.o >/dev/null 2>&1
+mv -f .deps/buffered.Tpo .deps/buffered.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy1d.lo -MD -MP -MF .deps/cpy1d.Tpo -c -o cpy1d.lo cpy1d.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy1d.lo -MD -MP -MF .deps/cpy1d.Tpo -c cpy1d.c  -fPIC -DPIC -o .libs/cpy1d.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy1d.lo -MD -MP -MF .deps/cpy1d.Tpo -c cpy1d.c -o cpy1d.o >/dev/null 2>&1
+mv -f .deps/cpy1d.Tpo .deps/cpy1d.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy2d-pair.lo -MD -MP -MF .deps/cpy2d-pair.Tpo -c -o cpy2d-pair.lo cpy2d-pair.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy2d-pair.lo -MD -MP -MF .deps/cpy2d-pair.Tpo -c cpy2d-pair.c  -fPIC -DPIC -o .libs/cpy2d-pair.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy2d-pair.lo -MD -MP -MF .deps/cpy2d-pair.Tpo -c cpy2d-pair.c -o cpy2d-pair.o >/dev/null 2>&1
+mv -f .deps/cpy2d-pair.Tpo .deps/cpy2d-pair.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy2d.lo -MD -MP -MF .deps/cpy2d.Tpo -c -o cpy2d.lo cpy2d.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy2d.lo -MD -MP -MF .deps/cpy2d.Tpo -c cpy2d.c  -fPIC -DPIC -o .libs/cpy2d.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT cpy2d.lo -MD -MP -MF .deps/cpy2d.Tpo -c cpy2d.c -o cpy2d.o >/dev/null 2>&1
+mv -f .deps/cpy2d.Tpo .deps/cpy2d.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ct.lo -MD -MP -MF .deps/ct.Tpo -c -o ct.lo ct.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ct.lo -MD -MP -MF .deps/ct.Tpo -c ct.c  -fPIC -DPIC -o .libs/ct.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ct.lo -MD -MP -MF .deps/ct.Tpo -c ct.c -o ct.o >/dev/null 2>&1
+mv -f .deps/ct.Tpo .deps/ct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT debug.lo -MD -MP -MF .deps/debug.Tpo -c -o debug.lo debug.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT debug.lo -MD -MP -MF .deps/debug.Tpo -c debug.c  -fPIC -DPIC -o .libs/debug.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT debug.lo -MD -MP -MF .deps/debug.Tpo -c debug.c -o debug.o >/dev/null 2>&1
+mv -f .deps/debug.Tpo .deps/debug.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT extract-reim.lo -MD -MP -MF .deps/extract-reim.Tpo -c -o extract-reim.lo extract-reim.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT extract-reim.lo -MD -MP -MF .deps/extract-reim.Tpo -c extract-reim.c  -fPIC -DPIC -o .libs/extract-reim.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT extract-reim.lo -MD -MP -MF .deps/extract-reim.Tpo -c extract-reim.c -o extract-reim.o >/dev/null 2>&1
+mv -f .deps/extract-reim.Tpo .deps/extract-reim.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hash.lo -MD -MP -MF .deps/hash.Tpo -c -o hash.lo hash.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hash.lo -MD -MP -MF .deps/hash.Tpo -c hash.c  -fPIC -DPIC -o .libs/hash.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hash.lo -MD -MP -MF .deps/hash.Tpo -c hash.c -o hash.o >/dev/null 2>&1
+mv -f .deps/hash.Tpo .deps/hash.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT iabs.lo -MD -MP -MF .deps/iabs.Tpo -c -o iabs.lo iabs.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT iabs.lo -MD -MP -MF .deps/iabs.Tpo -c iabs.c  -fPIC -DPIC -o .libs/iabs.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT iabs.lo -MD -MP -MF .deps/iabs.Tpo -c iabs.c -o iabs.o >/dev/null 2>&1
+mv -f .deps/iabs.Tpo .deps/iabs.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kalloc.lo -MD -MP -MF .deps/kalloc.Tpo -c -o kalloc.lo kalloc.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kalloc.lo -MD -MP -MF .deps/kalloc.Tpo -c kalloc.c  -fPIC -DPIC -o .libs/kalloc.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kalloc.lo -MD -MP -MF .deps/kalloc.Tpo -c kalloc.c -o kalloc.o >/dev/null 2>&1
+mv -f .deps/kalloc.Tpo .deps/kalloc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT md5-1.lo -MD -MP -MF .deps/md5-1.Tpo -c -o md5-1.lo md5-1.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT md5-1.lo -MD -MP -MF .deps/md5-1.Tpo -c md5-1.c  -fPIC -DPIC -o .libs/md5-1.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT md5-1.lo -MD -MP -MF .deps/md5-1.Tpo -c md5-1.c -o md5-1.o >/dev/null 2>&1
+mv -f .deps/md5-1.Tpo .deps/md5-1.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT md5.lo -MD -MP -MF .deps/md5.Tpo -c -o md5.lo md5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT md5.lo -MD -MP -MF .deps/md5.Tpo -c md5.c  -fPIC -DPIC -o .libs/md5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT md5.lo -MD -MP -MF .deps/md5.Tpo -c md5.c -o md5.o >/dev/null 2>&1
+mv -f .deps/md5.Tpo .deps/md5.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT minmax.lo -MD -MP -MF .deps/minmax.Tpo -c -o minmax.lo minmax.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT minmax.lo -MD -MP -MF .deps/minmax.Tpo -c minmax.c  -fPIC -DPIC -o .libs/minmax.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT minmax.lo -MD -MP -MF .deps/minmax.Tpo -c minmax.c -o minmax.o >/dev/null 2>&1
+mv -f .deps/minmax.Tpo .deps/minmax.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ops.lo -MD -MP -MF .deps/ops.Tpo -c -o ops.lo ops.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ops.lo -MD -MP -MF .deps/ops.Tpo -c ops.c  -fPIC -DPIC -o .libs/ops.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ops.lo -MD -MP -MF .deps/ops.Tpo -c ops.c -o ops.o >/dev/null 2>&1
+mv -f .deps/ops.Tpo .deps/ops.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT pickdim.lo -MD -MP -MF .deps/pickdim.Tpo -c -o pickdim.lo pickdim.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT pickdim.lo -MD -MP -MF .deps/pickdim.Tpo -c pickdim.c  -fPIC -DPIC -o .libs/pickdim.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT pickdim.lo -MD -MP -MF .deps/pickdim.Tpo -c pickdim.c -o pickdim.o >/dev/null 2>&1
+mv -f .deps/pickdim.Tpo .deps/pickdim.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT plan.lo -MD -MP -MF .deps/plan.Tpo -c -o plan.lo plan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT plan.lo -MD -MP -MF .deps/plan.Tpo -c plan.c  -fPIC -DPIC -o .libs/plan.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT plan.lo -MD -MP -MF .deps/plan.Tpo -c plan.c -o plan.o >/dev/null 2>&1
+mv -f .deps/plan.Tpo .deps/plan.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT planner.lo -MD -MP -MF .deps/planner.Tpo -c -o planner.lo planner.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT planner.lo -MD -MP -MF .deps/planner.Tpo -c planner.c  -fPIC -DPIC -o .libs/planner.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT planner.lo -MD -MP -MF .deps/planner.Tpo -c planner.c -o planner.o >/dev/null 2>&1
+mv -f .deps/planner.Tpo .deps/planner.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT primes.lo -MD -MP -MF .deps/primes.Tpo -c -o primes.lo primes.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT primes.lo -MD -MP -MF .deps/primes.Tpo -c primes.c  -fPIC -DPIC -o .libs/primes.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT primes.lo -MD -MP -MF .deps/primes.Tpo -c primes.c -o primes.o >/dev/null 2>&1
+mv -f .deps/primes.Tpo .deps/primes.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT print.lo -MD -MP -MF .deps/print.Tpo -c -o print.lo print.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT print.lo -MD -MP -MF .deps/print.Tpo -c print.c  -fPIC -DPIC -o .libs/print.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT print.lo -MD -MP -MF .deps/print.Tpo -c print.c -o print.o >/dev/null 2>&1
+mv -f .deps/print.Tpo .deps/print.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT problem.lo -MD -MP -MF .deps/problem.Tpo -c -o problem.lo problem.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT problem.lo -MD -MP -MF .deps/problem.Tpo -c problem.c  -fPIC -DPIC -o .libs/problem.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT problem.lo -MD -MP -MF .deps/problem.Tpo -c problem.c -o problem.o >/dev/null 2>&1
+mv -f .deps/problem.Tpo .deps/problem.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rader.lo -MD -MP -MF .deps/rader.Tpo -c -o rader.lo rader.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rader.lo -MD -MP -MF .deps/rader.Tpo -c rader.c  -fPIC -DPIC -o .libs/rader.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rader.lo -MD -MP -MF .deps/rader.Tpo -c rader.c -o rader.o >/dev/null 2>&1
+mv -f .deps/rader.Tpo .deps/rader.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT scan.lo -MD -MP -MF .deps/scan.Tpo -c -o scan.lo scan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT scan.lo -MD -MP -MF .deps/scan.Tpo -c scan.c  -fPIC -DPIC -o .libs/scan.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT scan.lo -MD -MP -MF .deps/scan.Tpo -c scan.c -o scan.o >/dev/null 2>&1
+mv -f .deps/scan.Tpo .deps/scan.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solver.lo -MD -MP -MF .deps/solver.Tpo -c -o solver.lo solver.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solver.lo -MD -MP -MF .deps/solver.Tpo -c solver.c  -fPIC -DPIC -o .libs/solver.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solver.lo -MD -MP -MF .deps/solver.Tpo -c solver.c -o solver.o >/dev/null 2>&1
+mv -f .deps/solver.Tpo .deps/solver.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solvtab.lo -MD -MP -MF .deps/solvtab.Tpo -c -o solvtab.lo solvtab.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solvtab.lo -MD -MP -MF .deps/solvtab.Tpo -c solvtab.c  -fPIC -DPIC -o .libs/solvtab.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solvtab.lo -MD -MP -MF .deps/solvtab.Tpo -c solvtab.c -o solvtab.o >/dev/null 2>&1
+mv -f .deps/solvtab.Tpo .deps/solvtab.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT stride.lo -MD -MP -MF .deps/stride.Tpo -c -o stride.lo stride.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT stride.lo -MD -MP -MF .deps/stride.Tpo -c stride.c  -fPIC -DPIC -o .libs/stride.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT stride.lo -MD -MP -MF .deps/stride.Tpo -c stride.c -o stride.o >/dev/null 2>&1
+mv -f .deps/stride.Tpo .deps/stride.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor.lo -MD -MP -MF .deps/tensor.Tpo -c -o tensor.lo tensor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor.lo -MD -MP -MF .deps/tensor.Tpo -c tensor.c  -fPIC -DPIC -o .libs/tensor.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor.lo -MD -MP -MF .deps/tensor.Tpo -c tensor.c -o tensor.o >/dev/null 2>&1
+mv -f .deps/tensor.Tpo .deps/tensor.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor1.lo -MD -MP -MF .deps/tensor1.Tpo -c -o tensor1.lo tensor1.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor1.lo -MD -MP -MF .deps/tensor1.Tpo -c tensor1.c  -fPIC -DPIC -o .libs/tensor1.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor1.lo -MD -MP -MF .deps/tensor1.Tpo -c tensor1.c -o tensor1.o >/dev/null 2>&1
+mv -f .deps/tensor1.Tpo .deps/tensor1.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor2.lo -MD -MP -MF .deps/tensor2.Tpo -c -o tensor2.lo tensor2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor2.lo -MD -MP -MF .deps/tensor2.Tpo -c tensor2.c  -fPIC -DPIC -o .libs/tensor2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor2.lo -MD -MP -MF .deps/tensor2.Tpo -c tensor2.c -o tensor2.o >/dev/null 2>&1
+mv -f .deps/tensor2.Tpo .deps/tensor2.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor3.lo -MD -MP -MF .deps/tensor3.Tpo -c -o tensor3.lo tensor3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor3.lo -MD -MP -MF .deps/tensor3.Tpo -c tensor3.c  -fPIC -DPIC -o .libs/tensor3.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor3.lo -MD -MP -MF .deps/tensor3.Tpo -c tensor3.c -o tensor3.o >/dev/null 2>&1
+mv -f .deps/tensor3.Tpo .deps/tensor3.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor4.lo -MD -MP -MF .deps/tensor4.Tpo -c -o tensor4.lo tensor4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor4.lo -MD -MP -MF .deps/tensor4.Tpo -c tensor4.c  -fPIC -DPIC -o .libs/tensor4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor4.lo -MD -MP -MF .deps/tensor4.Tpo -c tensor4.c -o tensor4.o >/dev/null 2>&1
+mv -f .deps/tensor4.Tpo .deps/tensor4.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor5.lo -MD -MP -MF .deps/tensor5.Tpo -c -o tensor5.lo tensor5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor5.lo -MD -MP -MF .deps/tensor5.Tpo -c tensor5.c  -fPIC -DPIC -o .libs/tensor5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor5.lo -MD -MP -MF .deps/tensor5.Tpo -c tensor5.c -o tensor5.o >/dev/null 2>&1
+mv -f .deps/tensor5.Tpo .deps/tensor5.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor7.lo -MD -MP -MF .deps/tensor7.Tpo -c -o tensor7.lo tensor7.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor7.lo -MD -MP -MF .deps/tensor7.Tpo -c tensor7.c  -fPIC -DPIC -o .libs/tensor7.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor7.lo -MD -MP -MF .deps/tensor7.Tpo -c tensor7.c -o tensor7.o >/dev/null 2>&1
+mv -f .deps/tensor7.Tpo .deps/tensor7.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor8.lo -MD -MP -MF .deps/tensor8.Tpo -c -o tensor8.lo tensor8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor8.lo -MD -MP -MF .deps/tensor8.Tpo -c tensor8.c  -fPIC -DPIC -o .libs/tensor8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor8.lo -MD -MP -MF .deps/tensor8.Tpo -c tensor8.c -o tensor8.o >/dev/null 2>&1
+mv -f .deps/tensor8.Tpo .deps/tensor8.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor9.lo -MD -MP -MF .deps/tensor9.Tpo -c -o tensor9.lo tensor9.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor9.lo -MD -MP -MF .deps/tensor9.Tpo -c tensor9.c  -fPIC -DPIC -o .libs/tensor9.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tensor9.lo -MD -MP -MF .deps/tensor9.Tpo -c tensor9.c -o tensor9.o >/dev/null 2>&1
+mv -f .deps/tensor9.Tpo .deps/tensor9.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tile2d.lo -MD -MP -MF .deps/tile2d.Tpo -c -o tile2d.lo tile2d.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tile2d.lo -MD -MP -MF .deps/tile2d.Tpo -c tile2d.c  -fPIC -DPIC -o .libs/tile2d.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT tile2d.lo -MD -MP -MF .deps/tile2d.Tpo -c tile2d.c -o tile2d.o >/dev/null 2>&1
+mv -f .deps/tile2d.Tpo .deps/tile2d.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT timer.lo -MD -MP -MF .deps/timer.Tpo -c -o timer.lo timer.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT timer.lo -MD -MP -MF .deps/timer.Tpo -c timer.c  -fPIC -DPIC -o .libs/timer.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT timer.lo -MD -MP -MF .deps/timer.Tpo -c timer.c -o timer.o >/dev/null 2>&1
+mv -f .deps/timer.Tpo .deps/timer.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT transpose.lo -MD -MP -MF .deps/transpose.Tpo -c -o transpose.lo transpose.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT transpose.lo -MD -MP -MF .deps/transpose.Tpo -c transpose.c  -fPIC -DPIC -o .libs/transpose.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT transpose.lo -MD -MP -MF .deps/transpose.Tpo -c transpose.c -o transpose.o >/dev/null 2>&1
+mv -f .deps/transpose.Tpo .deps/transpose.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT trig.lo -MD -MP -MF .deps/trig.Tpo -c -o trig.lo trig.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT trig.lo -MD -MP -MF .deps/trig.Tpo -c trig.c  -fPIC -DPIC -o .libs/trig.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT trig.lo -MD -MP -MF .deps/trig.Tpo -c trig.c -o trig.o >/dev/null 2>&1
+mv -f .deps/trig.Tpo .deps/trig.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT twiddle.lo -MD -MP -MF .deps/twiddle.Tpo -c -o twiddle.lo twiddle.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT twiddle.lo -MD -MP -MF .deps/twiddle.Tpo -c twiddle.c  -fPIC -DPIC -o .libs/twiddle.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT twiddle.lo -MD -MP -MF .deps/twiddle.Tpo -c twiddle.c -o twiddle.o >/dev/null 2>&1
+mv -f .deps/twiddle.Tpo .deps/twiddle.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math   -o libkernel.la  align.lo alloc.lo assert.lo awake.lo buffered.lo cpy1d.lo cpy2d-pair.lo cpy2d.lo ct.lo debug.lo extract-reim.lo hash.lo iabs.lo kalloc.lo md5-1.lo md5.lo minmax.lo ops.lo pickdim.lo plan.lo planner.lo primes.lo print.lo problem.lo rader.lo scan.lo solver.lo solvtab.lo stride.lo tensor.lo tensor1.lo tensor2.lo tensor3.lo tensor4.lo tensor5.lo tensor7.lo tensor8.lo tensor9.lo tile2d.lo timer.lo transpose.lo trig.lo twiddle.lo  -lm 
+libtool: link: ar cru .libs/libkernel.a .libs/align.o .libs/alloc.o .libs/assert.o .libs/awake.o .libs/buffered.o .libs/cpy1d.o .libs/cpy2d-pair.o .libs/cpy2d.o .libs/ct.o .libs/debug.o .libs/extract-reim.o .libs/hash.o .libs/iabs.o .libs/kalloc.o .libs/md5-1.o .libs/md5.o .libs/minmax.o .libs/ops.o .libs/pickdim.o .libs/plan.o .libs/planner.o .libs/primes.o .libs/print.o .libs/problem.o .libs/rader.o .libs/scan.o .libs/solver.o .libs/solvtab.o .libs/stride.o .libs/tensor.o .libs/tensor1.o .libs/tensor2.o .libs/tensor3.o .libs/tensor4.o .libs/tensor5.o .libs/tensor7.o .libs/tensor8.o .libs/tensor9.o .libs/tile2d.o .libs/timer.o .libs/transpose.o .libs/trig.o .libs/twiddle.o 
+libtool: link: ranlib .libs/libkernel.a
+libtool: link: ( cd ".libs" && rm -f "libkernel.la" && ln -s "../libkernel.la" "libkernel.la" )
+make[2]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/kernel'
+Making all in simd-support
+make[2]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/simd-support'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT taint.lo -MD -MP -MF .deps/taint.Tpo -c -o taint.lo taint.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT taint.lo -MD -MP -MF .deps/taint.Tpo -c taint.c  -fPIC -DPIC -o .libs/taint.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT taint.lo -MD -MP -MF .deps/taint.Tpo -c taint.c -o taint.o >/dev/null 2>&1
+mv -f .deps/taint.Tpo .deps/taint.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT sse2.lo -MD -MP -MF .deps/sse2.Tpo -c -o sse2.lo sse2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT sse2.lo -MD -MP -MF .deps/sse2.Tpo -c sse2.c  -fPIC -DPIC -o .libs/sse2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT sse2.lo -MD -MP -MF .deps/sse2.Tpo -c sse2.c -o sse2.o >/dev/null 2>&1
+mv -f .deps/sse2.Tpo .deps/sse2.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx.lo -MD -MP -MF .deps/avx.Tpo -c -o avx.lo avx.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx.lo -MD -MP -MF .deps/avx.Tpo -c avx.c  -fPIC -DPIC -o .libs/avx.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx.lo -MD -MP -MF .deps/avx.Tpo -c avx.c -o avx.o >/dev/null 2>&1
+mv -f .deps/avx.Tpo .deps/avx.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx-128-fma.lo -MD -MP -MF .deps/avx-128-fma.Tpo -c -o avx-128-fma.lo avx-128-fma.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx-128-fma.lo -MD -MP -MF .deps/avx-128-fma.Tpo -c avx-128-fma.c  -fPIC -DPIC -o .libs/avx-128-fma.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx-128-fma.lo -MD -MP -MF .deps/avx-128-fma.Tpo -c avx-128-fma.c -o avx-128-fma.o >/dev/null 2>&1
+mv -f .deps/avx-128-fma.Tpo .deps/avx-128-fma.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx2.lo -MD -MP -MF .deps/avx2.Tpo -c -o avx2.lo avx2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx2.lo -MD -MP -MF .deps/avx2.Tpo -c avx2.c  -fPIC -DPIC -o .libs/avx2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx2.lo -MD -MP -MF .deps/avx2.Tpo -c avx2.c -o avx2.o >/dev/null 2>&1
+mv -f .deps/avx2.Tpo .deps/avx2.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx512.lo -MD -MP -MF .deps/avx512.Tpo -c -o avx512.lo avx512.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx512.lo -MD -MP -MF .deps/avx512.Tpo -c avx512.c  -fPIC -DPIC -o .libs/avx512.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT avx512.lo -MD -MP -MF .deps/avx512.Tpo -c avx512.c -o avx512.o >/dev/null 2>&1
+mv -f .deps/avx512.Tpo .deps/avx512.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kcvi.lo -MD -MP -MF .deps/kcvi.Tpo -c -o kcvi.lo kcvi.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kcvi.lo -MD -MP -MF .deps/kcvi.Tpo -c kcvi.c  -fPIC -DPIC -o .libs/kcvi.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kcvi.lo -MD -MP -MF .deps/kcvi.Tpo -c kcvi.c -o kcvi.o >/dev/null 2>&1
+mv -f .deps/kcvi.Tpo .deps/kcvi.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT altivec.lo -MD -MP -MF .deps/altivec.Tpo -c -o altivec.lo altivec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT altivec.lo -MD -MP -MF .deps/altivec.Tpo -c altivec.c  -fPIC -DPIC -o .libs/altivec.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT altivec.lo -MD -MP -MF .deps/altivec.Tpo -c altivec.c -o altivec.o >/dev/null 2>&1
+mv -f .deps/altivec.Tpo .deps/altivec.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT vsx.lo -MD -MP -MF .deps/vsx.Tpo -c -o vsx.lo vsx.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT vsx.lo -MD -MP -MF .deps/vsx.Tpo -c vsx.c  -fPIC -DPIC -o .libs/vsx.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT vsx.lo -MD -MP -MF .deps/vsx.Tpo -c vsx.c -o vsx.o >/dev/null 2>&1
+mv -f .deps/vsx.Tpo .deps/vsx.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT neon.lo -MD -MP -MF .deps/neon.Tpo -c -o neon.lo neon.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT neon.lo -MD -MP -MF .deps/neon.Tpo -c neon.c  -fPIC -DPIC -o .libs/neon.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT neon.lo -MD -MP -MF .deps/neon.Tpo -c neon.c -o neon.o >/dev/null 2>&1
+mv -f .deps/neon.Tpo .deps/neon.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math   -o libsimd_support.la  taint.lo sse2.lo avx.lo avx-128-fma.lo avx2.lo avx512.lo kcvi.lo altivec.lo vsx.lo neon.lo  -lm 
+libtool: link: ar cru .libs/libsimd_support.a .libs/taint.o .libs/sse2.o .libs/avx.o .libs/avx-128-fma.o .libs/avx2.o .libs/avx512.o .libs/kcvi.o .libs/altivec.o .libs/vsx.o .libs/neon.o 
+libtool: link: ranlib .libs/libsimd_support.a
+libtool: link: ( cd ".libs" && rm -f "libsimd_support.la" && ln -s "../libsimd_support.la" "libsimd_support.la" )
+make[2]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/simd-support'
+Making all in dft
+make[2]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft'
+Making all in scalar
+make[3]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar'
+Making all in codelets
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar/codelets'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar/codelets'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_2.lo -MD -MP -MF .deps/n1_2.Tpo -c -o n1_2.lo n1_2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_2.lo -MD -MP -MF .deps/n1_2.Tpo -c n1_2.c  -fPIC -DPIC -o .libs/n1_2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_2.lo -MD -MP -MF .deps/n1_2.Tpo -c n1_2.c -o n1_2.o >/dev/null 2>&1
+mv -f .deps/n1_2.Tpo .deps/n1_2.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_3.lo -MD -MP -MF .deps/n1_3.Tpo -c -o n1_3.lo n1_3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_3.lo -MD -MP -MF .deps/n1_3.Tpo -c n1_3.c  -fPIC -DPIC -o .libs/n1_3.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_3.lo -MD -MP -MF .deps/n1_3.Tpo -c n1_3.c -o n1_3.o >/dev/null 2>&1
+mv -f .deps/n1_3.Tpo .deps/n1_3.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_4.lo -MD -MP -MF .deps/n1_4.Tpo -c -o n1_4.lo n1_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_4.lo -MD -MP -MF .deps/n1_4.Tpo -c n1_4.c  -fPIC -DPIC -o .libs/n1_4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_4.lo -MD -MP -MF .deps/n1_4.Tpo -c n1_4.c -o n1_4.o >/dev/null 2>&1
+mv -f .deps/n1_4.Tpo .deps/n1_4.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_5.lo -MD -MP -MF .deps/n1_5.Tpo -c -o n1_5.lo n1_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_5.lo -MD -MP -MF .deps/n1_5.Tpo -c n1_5.c  -fPIC -DPIC -o .libs/n1_5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_5.lo -MD -MP -MF .deps/n1_5.Tpo -c n1_5.c -o n1_5.o >/dev/null 2>&1
+mv -f .deps/n1_5.Tpo .deps/n1_5.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_6.lo -MD -MP -MF .deps/n1_6.Tpo -c -o n1_6.lo n1_6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_6.lo -MD -MP -MF .deps/n1_6.Tpo -c n1_6.c  -fPIC -DPIC -o .libs/n1_6.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_6.lo -MD -MP -MF .deps/n1_6.Tpo -c n1_6.c -o n1_6.o >/dev/null 2>&1
+mv -f .deps/n1_6.Tpo .deps/n1_6.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_7.lo -MD -MP -MF .deps/n1_7.Tpo -c -o n1_7.lo n1_7.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_7.lo -MD -MP -MF .deps/n1_7.Tpo -c n1_7.c  -fPIC -DPIC -o .libs/n1_7.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_7.lo -MD -MP -MF .deps/n1_7.Tpo -c n1_7.c -o n1_7.o >/dev/null 2>&1
+mv -f .deps/n1_7.Tpo .deps/n1_7.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_8.lo -MD -MP -MF .deps/n1_8.Tpo -c -o n1_8.lo n1_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_8.lo -MD -MP -MF .deps/n1_8.Tpo -c n1_8.c  -fPIC -DPIC -o .libs/n1_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_8.lo -MD -MP -MF .deps/n1_8.Tpo -c n1_8.c -o n1_8.o >/dev/null 2>&1
+mv -f .deps/n1_8.Tpo .deps/n1_8.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_9.lo -MD -MP -MF .deps/n1_9.Tpo -c -o n1_9.lo n1_9.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_9.lo -MD -MP -MF .deps/n1_9.Tpo -c n1_9.c  -fPIC -DPIC -o .libs/n1_9.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_9.lo -MD -MP -MF .deps/n1_9.Tpo -c n1_9.c -o n1_9.o >/dev/null 2>&1
+mv -f .deps/n1_9.Tpo .deps/n1_9.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_10.lo -MD -MP -MF .deps/n1_10.Tpo -c -o n1_10.lo n1_10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_10.lo -MD -MP -MF .deps/n1_10.Tpo -c n1_10.c  -fPIC -DPIC -o .libs/n1_10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_10.lo -MD -MP -MF .deps/n1_10.Tpo -c n1_10.c -o n1_10.o >/dev/null 2>&1
+mv -f .deps/n1_10.Tpo .deps/n1_10.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_11.lo -MD -MP -MF .deps/n1_11.Tpo -c -o n1_11.lo n1_11.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_11.lo -MD -MP -MF .deps/n1_11.Tpo -c n1_11.c  -fPIC -DPIC -o .libs/n1_11.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_11.lo -MD -MP -MF .deps/n1_11.Tpo -c n1_11.c -o n1_11.o >/dev/null 2>&1
+mv -f .deps/n1_11.Tpo .deps/n1_11.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_12.lo -MD -MP -MF .deps/n1_12.Tpo -c -o n1_12.lo n1_12.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_12.lo -MD -MP -MF .deps/n1_12.Tpo -c n1_12.c  -fPIC -DPIC -o .libs/n1_12.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_12.lo -MD -MP -MF .deps/n1_12.Tpo -c n1_12.c -o n1_12.o >/dev/null 2>&1
+mv -f .deps/n1_12.Tpo .deps/n1_12.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_13.lo -MD -MP -MF .deps/n1_13.Tpo -c -o n1_13.lo n1_13.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_13.lo -MD -MP -MF .deps/n1_13.Tpo -c n1_13.c  -fPIC -DPIC -o .libs/n1_13.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_13.lo -MD -MP -MF .deps/n1_13.Tpo -c n1_13.c -o n1_13.o >/dev/null 2>&1
+mv -f .deps/n1_13.Tpo .deps/n1_13.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_14.lo -MD -MP -MF .deps/n1_14.Tpo -c -o n1_14.lo n1_14.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_14.lo -MD -MP -MF .deps/n1_14.Tpo -c n1_14.c  -fPIC -DPIC -o .libs/n1_14.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_14.lo -MD -MP -MF .deps/n1_14.Tpo -c n1_14.c -o n1_14.o >/dev/null 2>&1
+mv -f .deps/n1_14.Tpo .deps/n1_14.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_15.lo -MD -MP -MF .deps/n1_15.Tpo -c -o n1_15.lo n1_15.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_15.lo -MD -MP -MF .deps/n1_15.Tpo -c n1_15.c  -fPIC -DPIC -o .libs/n1_15.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_15.lo -MD -MP -MF .deps/n1_15.Tpo -c n1_15.c -o n1_15.o >/dev/null 2>&1
+mv -f .deps/n1_15.Tpo .deps/n1_15.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_16.lo -MD -MP -MF .deps/n1_16.Tpo -c -o n1_16.lo n1_16.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_16.lo -MD -MP -MF .deps/n1_16.Tpo -c n1_16.c  -fPIC -DPIC -o .libs/n1_16.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_16.lo -MD -MP -MF .deps/n1_16.Tpo -c n1_16.c -o n1_16.o >/dev/null 2>&1
+mv -f .deps/n1_16.Tpo .deps/n1_16.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_32.lo -MD -MP -MF .deps/n1_32.Tpo -c -o n1_32.lo n1_32.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_32.lo -MD -MP -MF .deps/n1_32.Tpo -c n1_32.c  -fPIC -DPIC -o .libs/n1_32.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_32.lo -MD -MP -MF .deps/n1_32.Tpo -c n1_32.c -o n1_32.o >/dev/null 2>&1
+mv -f .deps/n1_32.Tpo .deps/n1_32.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_64.lo -MD -MP -MF .deps/n1_64.Tpo -c -o n1_64.lo n1_64.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_64.lo -MD -MP -MF .deps/n1_64.Tpo -c n1_64.c  -fPIC -DPIC -o .libs/n1_64.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_64.lo -MD -MP -MF .deps/n1_64.Tpo -c n1_64.c -o n1_64.o >/dev/null 2>&1
+mv -f .deps/n1_64.Tpo .deps/n1_64.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_20.lo -MD -MP -MF .deps/n1_20.Tpo -c -o n1_20.lo n1_20.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_20.lo -MD -MP -MF .deps/n1_20.Tpo -c n1_20.c  -fPIC -DPIC -o .libs/n1_20.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_20.lo -MD -MP -MF .deps/n1_20.Tpo -c n1_20.c -o n1_20.o >/dev/null 2>&1
+mv -f .deps/n1_20.Tpo .deps/n1_20.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_25.lo -MD -MP -MF .deps/n1_25.Tpo -c -o n1_25.lo n1_25.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_25.lo -MD -MP -MF .deps/n1_25.Tpo -c n1_25.c  -fPIC -DPIC -o .libs/n1_25.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n1_25.lo -MD -MP -MF .deps/n1_25.Tpo -c n1_25.c -o n1_25.o >/dev/null 2>&1
+mv -f .deps/n1_25.Tpo .deps/n1_25.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_2.lo -MD -MP -MF .deps/t1_2.Tpo -c -o t1_2.lo t1_2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_2.lo -MD -MP -MF .deps/t1_2.Tpo -c t1_2.c  -fPIC -DPIC -o .libs/t1_2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_2.lo -MD -MP -MF .deps/t1_2.Tpo -c t1_2.c -o t1_2.o >/dev/null 2>&1
+mv -f .deps/t1_2.Tpo .deps/t1_2.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_3.lo -MD -MP -MF .deps/t1_3.Tpo -c -o t1_3.lo t1_3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_3.lo -MD -MP -MF .deps/t1_3.Tpo -c t1_3.c  -fPIC -DPIC -o .libs/t1_3.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_3.lo -MD -MP -MF .deps/t1_3.Tpo -c t1_3.c -o t1_3.o >/dev/null 2>&1
+mv -f .deps/t1_3.Tpo .deps/t1_3.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_4.lo -MD -MP -MF .deps/t1_4.Tpo -c -o t1_4.lo t1_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_4.lo -MD -MP -MF .deps/t1_4.Tpo -c t1_4.c  -fPIC -DPIC -o .libs/t1_4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_4.lo -MD -MP -MF .deps/t1_4.Tpo -c t1_4.c -o t1_4.o >/dev/null 2>&1
+mv -f .deps/t1_4.Tpo .deps/t1_4.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_5.lo -MD -MP -MF .deps/t1_5.Tpo -c -o t1_5.lo t1_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_5.lo -MD -MP -MF .deps/t1_5.Tpo -c t1_5.c  -fPIC -DPIC -o .libs/t1_5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_5.lo -MD -MP -MF .deps/t1_5.Tpo -c t1_5.c -o t1_5.o >/dev/null 2>&1
+mv -f .deps/t1_5.Tpo .deps/t1_5.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_6.lo -MD -MP -MF .deps/t1_6.Tpo -c -o t1_6.lo t1_6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_6.lo -MD -MP -MF .deps/t1_6.Tpo -c t1_6.c  -fPIC -DPIC -o .libs/t1_6.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_6.lo -MD -MP -MF .deps/t1_6.Tpo -c t1_6.c -o t1_6.o >/dev/null 2>&1
+mv -f .deps/t1_6.Tpo .deps/t1_6.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_7.lo -MD -MP -MF .deps/t1_7.Tpo -c -o t1_7.lo t1_7.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_7.lo -MD -MP -MF .deps/t1_7.Tpo -c t1_7.c  -fPIC -DPIC -o .libs/t1_7.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_7.lo -MD -MP -MF .deps/t1_7.Tpo -c t1_7.c -o t1_7.o >/dev/null 2>&1
+mv -f .deps/t1_7.Tpo .deps/t1_7.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_8.lo -MD -MP -MF .deps/t1_8.Tpo -c -o t1_8.lo t1_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_8.lo -MD -MP -MF .deps/t1_8.Tpo -c t1_8.c  -fPIC -DPIC -o .libs/t1_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_8.lo -MD -MP -MF .deps/t1_8.Tpo -c t1_8.c -o t1_8.o >/dev/null 2>&1
+mv -f .deps/t1_8.Tpo .deps/t1_8.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_9.lo -MD -MP -MF .deps/t1_9.Tpo -c -o t1_9.lo t1_9.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_9.lo -MD -MP -MF .deps/t1_9.Tpo -c t1_9.c  -fPIC -DPIC -o .libs/t1_9.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_9.lo -MD -MP -MF .deps/t1_9.Tpo -c t1_9.c -o t1_9.o >/dev/null 2>&1
+mv -f .deps/t1_9.Tpo .deps/t1_9.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_10.lo -MD -MP -MF .deps/t1_10.Tpo -c -o t1_10.lo t1_10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_10.lo -MD -MP -MF .deps/t1_10.Tpo -c t1_10.c  -fPIC -DPIC -o .libs/t1_10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_10.lo -MD -MP -MF .deps/t1_10.Tpo -c t1_10.c -o t1_10.o >/dev/null 2>&1
+mv -f .deps/t1_10.Tpo .deps/t1_10.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_12.lo -MD -MP -MF .deps/t1_12.Tpo -c -o t1_12.lo t1_12.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_12.lo -MD -MP -MF .deps/t1_12.Tpo -c t1_12.c  -fPIC -DPIC -o .libs/t1_12.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_12.lo -MD -MP -MF .deps/t1_12.Tpo -c t1_12.c -o t1_12.o >/dev/null 2>&1
+mv -f .deps/t1_12.Tpo .deps/t1_12.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_15.lo -MD -MP -MF .deps/t1_15.Tpo -c -o t1_15.lo t1_15.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_15.lo -MD -MP -MF .deps/t1_15.Tpo -c t1_15.c  -fPIC -DPIC -o .libs/t1_15.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_15.lo -MD -MP -MF .deps/t1_15.Tpo -c t1_15.c -o t1_15.o >/dev/null 2>&1
+mv -f .deps/t1_15.Tpo .deps/t1_15.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_16.lo -MD -MP -MF .deps/t1_16.Tpo -c -o t1_16.lo t1_16.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_16.lo -MD -MP -MF .deps/t1_16.Tpo -c t1_16.c  -fPIC -DPIC -o .libs/t1_16.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_16.lo -MD -MP -MF .deps/t1_16.Tpo -c t1_16.c -o t1_16.o >/dev/null 2>&1
+mv -f .deps/t1_16.Tpo .deps/t1_16.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_32.lo -MD -MP -MF .deps/t1_32.Tpo -c -o t1_32.lo t1_32.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_32.lo -MD -MP -MF .deps/t1_32.Tpo -c t1_32.c  -fPIC -DPIC -o .libs/t1_32.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_32.lo -MD -MP -MF .deps/t1_32.Tpo -c t1_32.c -o t1_32.o >/dev/null 2>&1
+mv -f .deps/t1_32.Tpo .deps/t1_32.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_64.lo -MD -MP -MF .deps/t1_64.Tpo -c -o t1_64.lo t1_64.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_64.lo -MD -MP -MF .deps/t1_64.Tpo -c t1_64.c  -fPIC -DPIC -o .libs/t1_64.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_64.lo -MD -MP -MF .deps/t1_64.Tpo -c t1_64.c -o t1_64.o >/dev/null 2>&1
+mv -f .deps/t1_64.Tpo .deps/t1_64.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_20.lo -MD -MP -MF .deps/t1_20.Tpo -c -o t1_20.lo t1_20.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_20.lo -MD -MP -MF .deps/t1_20.Tpo -c t1_20.c  -fPIC -DPIC -o .libs/t1_20.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_20.lo -MD -MP -MF .deps/t1_20.Tpo -c t1_20.c -o t1_20.o >/dev/null 2>&1
+mv -f .deps/t1_20.Tpo .deps/t1_20.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_25.lo -MD -MP -MF .deps/t1_25.Tpo -c -o t1_25.lo t1_25.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_25.lo -MD -MP -MF .deps/t1_25.Tpo -c t1_25.c  -fPIC -DPIC -o .libs/t1_25.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t1_25.lo -MD -MP -MF .deps/t1_25.Tpo -c t1_25.c -o t1_25.o >/dev/null 2>&1
+mv -f .deps/t1_25.Tpo .deps/t1_25.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_4.lo -MD -MP -MF .deps/t2_4.Tpo -c -o t2_4.lo t2_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_4.lo -MD -MP -MF .deps/t2_4.Tpo -c t2_4.c  -fPIC -DPIC -o .libs/t2_4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_4.lo -MD -MP -MF .deps/t2_4.Tpo -c t2_4.c -o t2_4.o >/dev/null 2>&1
+mv -f .deps/t2_4.Tpo .deps/t2_4.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_8.lo -MD -MP -MF .deps/t2_8.Tpo -c -o t2_8.lo t2_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_8.lo -MD -MP -MF .deps/t2_8.Tpo -c t2_8.c  -fPIC -DPIC -o .libs/t2_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_8.lo -MD -MP -MF .deps/t2_8.Tpo -c t2_8.c -o t2_8.o >/dev/null 2>&1
+mv -f .deps/t2_8.Tpo .deps/t2_8.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_16.lo -MD -MP -MF .deps/t2_16.Tpo -c -o t2_16.lo t2_16.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_16.lo -MD -MP -MF .deps/t2_16.Tpo -c t2_16.c  -fPIC -DPIC -o .libs/t2_16.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_16.lo -MD -MP -MF .deps/t2_16.Tpo -c t2_16.c -o t2_16.o >/dev/null 2>&1
+mv -f .deps/t2_16.Tpo .deps/t2_16.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_32.lo -MD -MP -MF .deps/t2_32.Tpo -c -o t2_32.lo t2_32.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_32.lo -MD -MP -MF .deps/t2_32.Tpo -c t2_32.c  -fPIC -DPIC -o .libs/t2_32.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_32.lo -MD -MP -MF .deps/t2_32.Tpo -c t2_32.c -o t2_32.o >/dev/null 2>&1
+mv -f .deps/t2_32.Tpo .deps/t2_32.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_64.lo -MD -MP -MF .deps/t2_64.Tpo -c -o t2_64.lo t2_64.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_64.lo -MD -MP -MF .deps/t2_64.Tpo -c t2_64.c  -fPIC -DPIC -o .libs/t2_64.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_64.lo -MD -MP -MF .deps/t2_64.Tpo -c t2_64.c -o t2_64.o >/dev/null 2>&1
+mv -f .deps/t2_64.Tpo .deps/t2_64.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_5.lo -MD -MP -MF .deps/t2_5.Tpo -c -o t2_5.lo t2_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_5.lo -MD -MP -MF .deps/t2_5.Tpo -c t2_5.c  -fPIC -DPIC -o .libs/t2_5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_5.lo -MD -MP -MF .deps/t2_5.Tpo -c t2_5.c -o t2_5.o >/dev/null 2>&1
+mv -f .deps/t2_5.Tpo .deps/t2_5.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_10.lo -MD -MP -MF .deps/t2_10.Tpo -c -o t2_10.lo t2_10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_10.lo -MD -MP -MF .deps/t2_10.Tpo -c t2_10.c  -fPIC -DPIC -o .libs/t2_10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_10.lo -MD -MP -MF .deps/t2_10.Tpo -c t2_10.c -o t2_10.o >/dev/null 2>&1
+mv -f .deps/t2_10.Tpo .deps/t2_10.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_20.lo -MD -MP -MF .deps/t2_20.Tpo -c -o t2_20.lo t2_20.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_20.lo -MD -MP -MF .deps/t2_20.Tpo -c t2_20.c  -fPIC -DPIC -o .libs/t2_20.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_20.lo -MD -MP -MF .deps/t2_20.Tpo -c t2_20.c -o t2_20.o >/dev/null 2>&1
+mv -f .deps/t2_20.Tpo .deps/t2_20.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_25.lo -MD -MP -MF .deps/t2_25.Tpo -c -o t2_25.lo t2_25.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_25.lo -MD -MP -MF .deps/t2_25.Tpo -c t2_25.c  -fPIC -DPIC -o .libs/t2_25.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t2_25.lo -MD -MP -MF .deps/t2_25.Tpo -c t2_25.c -o t2_25.o >/dev/null 2>&1
+mv -f .deps/t2_25.Tpo .deps/t2_25.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_2.lo -MD -MP -MF .deps/q1_2.Tpo -c -o q1_2.lo q1_2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_2.lo -MD -MP -MF .deps/q1_2.Tpo -c q1_2.c  -fPIC -DPIC -o .libs/q1_2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_2.lo -MD -MP -MF .deps/q1_2.Tpo -c q1_2.c -o q1_2.o >/dev/null 2>&1
+mv -f .deps/q1_2.Tpo .deps/q1_2.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_4.lo -MD -MP -MF .deps/q1_4.Tpo -c -o q1_4.lo q1_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_4.lo -MD -MP -MF .deps/q1_4.Tpo -c q1_4.c  -fPIC -DPIC -o .libs/q1_4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_4.lo -MD -MP -MF .deps/q1_4.Tpo -c q1_4.c -o q1_4.o >/dev/null 2>&1
+mv -f .deps/q1_4.Tpo .deps/q1_4.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_8.lo -MD -MP -MF .deps/q1_8.Tpo -c -o q1_8.lo q1_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_8.lo -MD -MP -MF .deps/q1_8.Tpo -c q1_8.c  -fPIC -DPIC -o .libs/q1_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_8.lo -MD -MP -MF .deps/q1_8.Tpo -c q1_8.c -o q1_8.o >/dev/null 2>&1
+mv -f .deps/q1_8.Tpo .deps/q1_8.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_3.lo -MD -MP -MF .deps/q1_3.Tpo -c -o q1_3.lo q1_3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_3.lo -MD -MP -MF .deps/q1_3.Tpo -c q1_3.c  -fPIC -DPIC -o .libs/q1_3.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_3.lo -MD -MP -MF .deps/q1_3.Tpo -c q1_3.c -o q1_3.o >/dev/null 2>&1
+mv -f .deps/q1_3.Tpo .deps/q1_3.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_5.lo -MD -MP -MF .deps/q1_5.Tpo -c -o q1_5.lo q1_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_5.lo -MD -MP -MF .deps/q1_5.Tpo -c q1_5.c  -fPIC -DPIC -o .libs/q1_5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_5.lo -MD -MP -MF .deps/q1_5.Tpo -c q1_5.c -o q1_5.o >/dev/null 2>&1
+mv -f .deps/q1_5.Tpo .deps/q1_5.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_6.lo -MD -MP -MF .deps/q1_6.Tpo -c -o q1_6.lo q1_6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_6.lo -MD -MP -MF .deps/q1_6.Tpo -c q1_6.c  -fPIC -DPIC -o .libs/q1_6.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT q1_6.lo -MD -MP -MF .deps/q1_6.Tpo -c q1_6.c -o q1_6.o >/dev/null 2>&1
+mv -f .deps/q1_6.Tpo .deps/q1_6.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT codlist.lo -MD -MP -MF .deps/codlist.Tpo -c -o codlist.lo codlist.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT codlist.lo -MD -MP -MF .deps/codlist.Tpo -c codlist.c  -fPIC -DPIC -o .libs/codlist.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT codlist.lo -MD -MP -MF .deps/codlist.Tpo -c codlist.c -o codlist.o >/dev/null 2>&1
+mv -f .deps/codlist.Tpo .deps/codlist.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math   -o libdft_scalar_codelets.la  n1_2.lo n1_3.lo n1_4.lo n1_5.lo n1_6.lo n1_7.lo n1_8.lo n1_9.lo n1_10.lo n1_11.lo n1_12.lo n1_13.lo n1_14.lo n1_15.lo n1_16.lo n1_32.lo n1_64.lo n1_20.lo n1_25.lo t1_2.lo t1_3.lo t1_4.lo t1_5.lo t1_6.lo t1_7.lo t1_8.lo t1_9.lo t1_10.lo t1_12.lo t1_15.lo t1_16.lo t1_32.lo t1_64.lo t1_20.lo t1_25.lo t2_4.lo t2_8.lo t2_16.lo t2_32.lo t2_64.lo t2_5.lo t2_10.lo t2_20.lo t2_25.lo   q1_2.lo q1_4.lo q1_8.lo q1_3.lo q1_5.lo q1_6.lo codlist.lo  -lm 
+libtool: link: ar cru .libs/libdft_scalar_codelets.a .libs/n1_2.o .libs/n1_3.o .libs/n1_4.o .libs/n1_5.o .libs/n1_6.o .libs/n1_7.o .libs/n1_8.o .libs/n1_9.o .libs/n1_10.o .libs/n1_11.o .libs/n1_12.o .libs/n1_13.o .libs/n1_14.o .libs/n1_15.o .libs/n1_16.o .libs/n1_32.o .libs/n1_64.o .libs/n1_20.o .libs/n1_25.o .libs/t1_2.o .libs/t1_3.o .libs/t1_4.o .libs/t1_5.o .libs/t1_6.o .libs/t1_7.o .libs/t1_8.o .libs/t1_9.o .libs/t1_10.o .libs/t1_12.o .libs/t1_15.o .libs/t1_16.o .libs/t1_32.o .libs/t1_64.o .libs/t1_20.o .libs/t1_25.o .libs/t2_4.o .libs/t2_8.o .libs/t2_16.o .libs/t2_32.o .libs/t2_64.o .libs/t2_5.o .libs/t2_10.o .libs/t2_20.o .libs/t2_25.o .libs/q1_2.o .libs/q1_4.o .libs/q1_8.o .libs/q1_3.o .libs/q1_5.o .libs/q1_6.o .libs/codlist.o 
+libtool: link: ranlib .libs/libdft_scalar_codelets.a
+libtool: link: ( cd ".libs" && rm -f "libdft_scalar_codelets.la" && ln -s "../libdft_scalar_codelets.la" "libdft_scalar_codelets.la" )
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar/codelets'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar/codelets'
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../..  -I ../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n.lo -MD -MP -MF .deps/n.Tpo -c -o n.lo n.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I ../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n.lo -MD -MP -MF .deps/n.Tpo -c n.c  -fPIC -DPIC -o .libs/n.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I ../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT n.lo -MD -MP -MF .deps/n.Tpo -c n.c -o n.o >/dev/null 2>&1
+mv -f .deps/n.Tpo .deps/n.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../..  -I ../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t.lo -MD -MP -MF .deps/t.Tpo -c -o t.lo t.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I ../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t.lo -MD -MP -MF .deps/t.Tpo -c t.c  -fPIC -DPIC -o .libs/t.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I ../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT t.lo -MD -MP -MF .deps/t.Tpo -c t.c -o t.o >/dev/null 2>&1
+mv -f .deps/t.Tpo .deps/t.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math   -o libdft_scalar.la  n.lo t.lo  -lm 
+libtool: link: ar cru .libs/libdft_scalar.a .libs/n.o .libs/t.o 
+libtool: link: ranlib .libs/libdft_scalar.a
+libtool: link: ( cd ".libs" && rm -f "libdft_scalar.la" && ln -s "../libdft_scalar.la" "libdft_scalar.la" )
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar'
+make[3]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/scalar'
+Making all in simd
+make[3]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd'
+Making all in common
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/common'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/common'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/common'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/common'
+Making all in sse2
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/sse2'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/sse2'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/sse2'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/sse2'
+Making all in avx
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx'
+Making all in avx-128-fma
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx-128-fma'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx-128-fma'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx-128-fma'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx-128-fma'
+Making all in avx2
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2'
+Making all in avx2-128
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2-128'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2-128'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2-128'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx2-128'
+Making all in avx512
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx512'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx512'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx512'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/avx512'
+Making all in kcvi
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/kcvi'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/kcvi'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/kcvi'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/kcvi'
+Making all in altivec
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/altivec'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/altivec'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/altivec'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/altivec'
+Making all in vsx
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/vsx'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/vsx'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/vsx'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/vsx'
+Making all in neon
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/neon'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/neon'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/neon'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/neon'
+Making all in generic-simd128
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd128'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd128'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd128'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd128'
+Making all in generic-simd256
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd256'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd256'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd256'
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd/generic-simd256'
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd'
+make[3]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft/simd'
+make[3]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT bluestein.lo -MD -MP -MF .deps/bluestein.Tpo -c -o bluestein.lo bluestein.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT bluestein.lo -MD -MP -MF .deps/bluestein.Tpo -c bluestein.c  -fPIC -DPIC -o .libs/bluestein.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT bluestein.lo -MD -MP -MF .deps/bluestein.Tpo -c bluestein.c -o bluestein.o >/dev/null 2>&1
+mv -f .deps/bluestein.Tpo .deps/bluestein.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT buffered.lo -MD -MP -MF .deps/buffered.Tpo -c -o buffered.lo buffered.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT buffered.lo -MD -MP -MF .deps/buffered.Tpo -c buffered.c  -fPIC -DPIC -o .libs/buffered.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT buffered.lo -MD -MP -MF .deps/buffered.Tpo -c buffered.c -o buffered.o >/dev/null 2>&1
+mv -f .deps/buffered.Tpo .deps/buffered.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT conf.lo -MD -MP -MF .deps/conf.Tpo -c -o conf.lo conf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT conf.lo -MD -MP -MF .deps/conf.Tpo -c conf.c  -fPIC -DPIC -o .libs/conf.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT conf.lo -MD -MP -MF .deps/conf.Tpo -c conf.c -o conf.o >/dev/null 2>&1
+mv -f .deps/conf.Tpo .deps/conf.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ct.lo -MD -MP -MF .deps/ct.Tpo -c -o ct.lo ct.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ct.lo -MD -MP -MF .deps/ct.Tpo -c ct.c  -fPIC -DPIC -o .libs/ct.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT ct.lo -MD -MP -MF .deps/ct.Tpo -c ct.c -o ct.o >/dev/null 2>&1
+mv -f .deps/ct.Tpo .deps/ct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-direct.lo -MD -MP -MF .deps/dftw-direct.Tpo -c -o dftw-direct.lo dftw-direct.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-direct.lo -MD -MP -MF .deps/dftw-direct.Tpo -c dftw-direct.c  -fPIC -DPIC -o .libs/dftw-direct.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-direct.lo -MD -MP -MF .deps/dftw-direct.Tpo -c dftw-direct.c -o dftw-direct.o >/dev/null 2>&1
+mv -f .deps/dftw-direct.Tpo .deps/dftw-direct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-directsq.lo -MD -MP -MF .deps/dftw-directsq.Tpo -c -o dftw-directsq.lo dftw-directsq.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-directsq.lo -MD -MP -MF .deps/dftw-directsq.Tpo -c dftw-directsq.c  -fPIC -DPIC -o .libs/dftw-directsq.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-directsq.lo -MD -MP -MF .deps/dftw-directsq.Tpo -c dftw-directsq.c -o dftw-directsq.o >/dev/null 2>&1
+mv -f .deps/dftw-directsq.Tpo .deps/dftw-directsq.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-generic.lo -MD -MP -MF .deps/dftw-generic.Tpo -c -o dftw-generic.lo dftw-generic.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-generic.lo -MD -MP -MF .deps/dftw-generic.Tpo -c dftw-generic.c  -fPIC -DPIC -o .libs/dftw-generic.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-generic.lo -MD -MP -MF .deps/dftw-generic.Tpo -c dftw-generic.c -o dftw-generic.o >/dev/null 2>&1
+mv -f .deps/dftw-generic.Tpo .deps/dftw-generic.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-genericbuf.lo -MD -MP -MF .deps/dftw-genericbuf.Tpo -c -o dftw-genericbuf.lo dftw-genericbuf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-genericbuf.lo -MD -MP -MF .deps/dftw-genericbuf.Tpo -c dftw-genericbuf.c  -fPIC -DPIC -o .libs/dftw-genericbuf.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT dftw-genericbuf.lo -MD -MP -MF .deps/dftw-genericbuf.Tpo -c dftw-genericbuf.c -o dftw-genericbuf.o >/dev/null 2>&1
+mv -f .deps/dftw-genericbuf.Tpo .deps/dftw-genericbuf.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT direct.lo -MD -MP -MF .deps/direct.Tpo -c -o direct.lo direct.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT direct.lo -MD -MP -MF .deps/direct.Tpo -c direct.c  -fPIC -DPIC -o .libs/direct.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT direct.lo -MD -MP -MF .deps/direct.Tpo -c direct.c -o direct.o >/dev/null 2>&1
+mv -f .deps/direct.Tpo .deps/direct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT generic.lo -MD -MP -MF .deps/generic.Tpo -c -o generic.lo generic.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT generic.lo -MD -MP -MF .deps/generic.Tpo -c generic.c  -fPIC -DPIC -o .libs/generic.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT generic.lo -MD -MP -MF .deps/generic.Tpo -c generic.c -o generic.o >/dev/null 2>&1
+mv -f .deps/generic.Tpo .deps/generic.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT indirect.lo -MD -MP -MF .deps/indirect.Tpo -c -o indirect.lo indirect.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT indirect.lo -MD -MP -MF .deps/indirect.Tpo -c indirect.c  -fPIC -DPIC -o .libs/indirect.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT indirect.lo -MD -MP -MF .deps/indirect.Tpo -c indirect.c -o indirect.o >/dev/null 2>&1
+mv -f .deps/indirect.Tpo .deps/indirect.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT indirect-transpose.lo -MD -MP -MF .deps/indirect-transpose.Tpo -c -o indirect-transpose.lo indirect-transpose.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT indirect-transpose.lo -MD -MP -MF .deps/indirect-transpose.Tpo -c indirect-transpose.c  -fPIC -DPIC -o .libs/indirect-transpose.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT indirect-transpose.lo -MD -MP -MF .deps/indirect-transpose.Tpo -c indirect-transpose.c -o indirect-transpose.o >/dev/null 2>&1
+mv -f .deps/indirect-transpose.Tpo .deps/indirect-transpose.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-dif.lo -MD -MP -MF .deps/kdft-dif.Tpo -c -o kdft-dif.lo kdft-dif.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-dif.lo -MD -MP -MF .deps/kdft-dif.Tpo -c kdft-dif.c  -fPIC -DPIC -o .libs/kdft-dif.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-dif.lo -MD -MP -MF .deps/kdft-dif.Tpo -c kdft-dif.c -o kdft-dif.o >/dev/null 2>&1
+mv -f .deps/kdft-dif.Tpo .deps/kdft-dif.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-difsq.lo -MD -MP -MF .deps/kdft-difsq.Tpo -c -o kdft-difsq.lo kdft-difsq.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-difsq.lo -MD -MP -MF .deps/kdft-difsq.Tpo -c kdft-difsq.c  -fPIC -DPIC -o .libs/kdft-difsq.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-difsq.lo -MD -MP -MF .deps/kdft-difsq.Tpo -c kdft-difsq.c -o kdft-difsq.o >/dev/null 2>&1
+mv -f .deps/kdft-difsq.Tpo .deps/kdft-difsq.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-dit.lo -MD -MP -MF .deps/kdft-dit.Tpo -c -o kdft-dit.lo kdft-dit.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-dit.lo -MD -MP -MF .deps/kdft-dit.Tpo -c kdft-dit.c  -fPIC -DPIC -o .libs/kdft-dit.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft-dit.lo -MD -MP -MF .deps/kdft-dit.Tpo -c kdft-dit.c -o kdft-dit.o >/dev/null 2>&1
+mv -f .deps/kdft-dit.Tpo .deps/kdft-dit.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft.lo -MD -MP -MF .deps/kdft.Tpo -c -o kdft.lo kdft.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft.lo -MD -MP -MF .deps/kdft.Tpo -c kdft.c  -fPIC -DPIC -o .libs/kdft.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT kdft.lo -MD -MP -MF .deps/kdft.Tpo -c kdft.c -o kdft.o >/dev/null 2>&1
+mv -f .deps/kdft.Tpo .deps/kdft.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT nop.lo -MD -MP -MF .deps/nop.Tpo -c -o nop.lo nop.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT nop.lo -MD -MP -MF .deps/nop.Tpo -c nop.c  -fPIC -DPIC -o .libs/nop.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT nop.lo -MD -MP -MF .deps/nop.Tpo -c nop.c -o nop.o >/dev/null 2>&1
+mv -f .deps/nop.Tpo .deps/nop.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT plan.lo -MD -MP -MF .deps/plan.Tpo -c -o plan.lo plan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT plan.lo -MD -MP -MF .deps/plan.Tpo -c plan.c  -fPIC -DPIC -o .libs/plan.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT plan.lo -MD -MP -MF .deps/plan.Tpo -c plan.c -o plan.o >/dev/null 2>&1
+mv -f .deps/plan.Tpo .deps/plan.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT problem.lo -MD -MP -MF .deps/problem.Tpo -c -o problem.lo problem.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT problem.lo -MD -MP -MF .deps/problem.Tpo -c problem.c  -fPIC -DPIC -o .libs/problem.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT problem.lo -MD -MP -MF .deps/problem.Tpo -c problem.c -o problem.o >/dev/null 2>&1
+mv -f .deps/problem.Tpo .deps/problem.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rader.lo -MD -MP -MF .deps/rader.Tpo -c -o rader.lo rader.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rader.lo -MD -MP -MF .deps/rader.Tpo -c rader.c  -fPIC -DPIC -o .libs/rader.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rader.lo -MD -MP -MF .deps/rader.Tpo -c rader.c -o rader.o >/dev/null 2>&1
+mv -f .deps/rader.Tpo .deps/rader.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rank-geq2.lo -MD -MP -MF .deps/rank-geq2.Tpo -c -o rank-geq2.lo rank-geq2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rank-geq2.lo -MD -MP -MF .deps/rank-geq2.Tpo -c rank-geq2.c  -fPIC -DPIC -o .libs/rank-geq2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT rank-geq2.lo -MD -MP -MF .deps/rank-geq2.Tpo -c rank-geq2.c -o rank-geq2.o >/dev/null 2>&1
+mv -f .deps/rank-geq2.Tpo .deps/rank-geq2.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solve.lo -MD -MP -MF .deps/solve.Tpo -c -o solve.lo solve.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solve.lo -MD -MP -MF .deps/solve.Tpo -c solve.c  -fPIC -DPIC -o .libs/solve.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT solve.lo -MD -MP -MF .deps/solve.Tpo -c solve.c -o solve.o >/dev/null 2>&1
+mv -f .deps/solve.Tpo .deps/solve.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT vrank-geq1.lo -MD -MP -MF .deps/vrank-geq1.Tpo -c -o vrank-geq1.lo vrank-geq1.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT vrank-geq1.lo -MD -MP -MF .deps/vrank-geq1.Tpo -c vrank-geq1.c  -fPIC -DPIC -o .libs/vrank-geq1.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT vrank-geq1.lo -MD -MP -MF .deps/vrank-geq1.Tpo -c vrank-geq1.c -o vrank-geq1.o >/dev/null 2>&1
+mv -f .deps/vrank-geq1.Tpo .deps/vrank-geq1.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..  -I ..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT zero.lo -MD -MP -MF .deps/zero.Tpo -c -o zero.lo zero.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT zero.lo -MD -MP -MF .deps/zero.Tpo -c zero.c  -fPIC -DPIC -o .libs/zero.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -I .. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT zero.lo -MD -MP -MF .deps/zero.Tpo -c zero.c -o zero.o >/dev/null 2>&1
+mv -f .deps/zero.Tpo .deps/zero.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math   -o libdft.la  bluestein.lo buffered.lo conf.lo ct.lo dftw-direct.lo dftw-directsq.lo dftw-generic.lo dftw-genericbuf.lo direct.lo generic.lo indirect.lo indirect-transpose.lo kdft-dif.lo kdft-difsq.lo kdft-dit.lo kdft.lo nop.lo plan.lo problem.lo rader.lo rank-geq2.lo solve.lo vrank-geq1.lo zero.lo  -lm 
+libtool: link: ar cru .libs/libdft.a .libs/bluestein.o .libs/buffered.o .libs/conf.o .libs/ct.o .libs/dftw-direct.o .libs/dftw-directsq.o .libs/dftw-generic.o .libs/dftw-genericbuf.o .libs/direct.o .libs/generic.o .libs/indirect.o .libs/indirect-transpose.o .libs/kdft-dif.o .libs/kdft-difsq.o .libs/kdft-dit.o .libs/kdft.o .libs/nop.o .libs/plan.o .libs/problem.o .libs/rader.o .libs/rank-geq2.o .libs/solve.o .libs/vrank-geq1.o .libs/zero.o 
+libtool: link: ranlib .libs/libdft.a
+libtool: link: ( cd ".libs" && rm -f "libdft.la" && ln -s "../libdft.la" "libdft.la" )
+make[3]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft'
+make[2]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/dft'
+Making all in rdft
+make[2]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft'
+Making all in scalar
+make[3]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft/scalar'
+Making all in r2cf
+make[4]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft/scalar/r2cf'
+make  all-am
+make[5]: Entering directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft/scalar/r2cf'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_2.lo -MD -MP -MF .deps/r2cf_2.Tpo -c -o r2cf_2.lo r2cf_2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_2.lo -MD -MP -MF .deps/r2cf_2.Tpo -c r2cf_2.c  -fPIC -DPIC -o .libs/r2cf_2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_2.lo -MD -MP -MF .deps/r2cf_2.Tpo -c r2cf_2.c -o r2cf_2.o >/dev/null 2>&1
+mv -f .deps/r2cf_2.Tpo .deps/r2cf_2.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_3.lo -MD -MP -MF .deps/r2cf_3.Tpo -c -o r2cf_3.lo r2cf_3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_3.lo -MD -MP -MF .deps/r2cf_3.Tpo -c r2cf_3.c  -fPIC -DPIC -o .libs/r2cf_3.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_3.lo -MD -MP -MF .deps/r2cf_3.Tpo -c r2cf_3.c -o r2cf_3.o >/dev/null 2>&1
+mv -f .deps/r2cf_3.Tpo .deps/r2cf_3.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_4.lo -MD -MP -MF .deps/r2cf_4.Tpo -c -o r2cf_4.lo r2cf_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_4.lo -MD -MP -MF .deps/r2cf_4.Tpo -c r2cf_4.c  -fPIC -DPIC -o .libs/r2cf_4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_4.lo -MD -MP -MF .deps/r2cf_4.Tpo -c r2cf_4.c -o r2cf_4.o >/dev/null 2>&1
+mv -f .deps/r2cf_4.Tpo .deps/r2cf_4.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_5.lo -MD -MP -MF .deps/r2cf_5.Tpo -c -o r2cf_5.lo r2cf_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_5.lo -MD -MP -MF .deps/r2cf_5.Tpo -c r2cf_5.c  -fPIC -DPIC -o .libs/r2cf_5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_5.lo -MD -MP -MF .deps/r2cf_5.Tpo -c r2cf_5.c -o r2cf_5.o >/dev/null 2>&1
+mv -f .deps/r2cf_5.Tpo .deps/r2cf_5.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_6.lo -MD -MP -MF .deps/r2cf_6.Tpo -c -o r2cf_6.lo r2cf_6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_6.lo -MD -MP -MF .deps/r2cf_6.Tpo -c r2cf_6.c  -fPIC -DPIC -o .libs/r2cf_6.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_6.lo -MD -MP -MF .deps/r2cf_6.Tpo -c r2cf_6.c -o r2cf_6.o >/dev/null 2>&1
+mv -f .deps/r2cf_6.Tpo .deps/r2cf_6.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_7.lo -MD -MP -MF .deps/r2cf_7.Tpo -c -o r2cf_7.lo r2cf_7.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_7.lo -MD -MP -MF .deps/r2cf_7.Tpo -c r2cf_7.c  -fPIC -DPIC -o .libs/r2cf_7.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_7.lo -MD -MP -MF .deps/r2cf_7.Tpo -c r2cf_7.c -o r2cf_7.o >/dev/null 2>&1
+mv -f .deps/r2cf_7.Tpo .deps/r2cf_7.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_8.lo -MD -MP -MF .deps/r2cf_8.Tpo -c -o r2cf_8.lo r2cf_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_8.lo -MD -MP -MF .deps/r2cf_8.Tpo -c r2cf_8.c  -fPIC -DPIC -o .libs/r2cf_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_8.lo -MD -MP -MF .deps/r2cf_8.Tpo -c r2cf_8.c -o r2cf_8.o >/dev/null 2>&1
+mv -f .deps/r2cf_8.Tpo .deps/r2cf_8.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_9.lo -MD -MP -MF .deps/r2cf_9.Tpo -c -o r2cf_9.lo r2cf_9.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_9.lo -MD -MP -MF .deps/r2cf_9.Tpo -c r2cf_9.c  -fPIC -DPIC -o .libs/r2cf_9.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_9.lo -MD -MP -MF .deps/r2cf_9.Tpo -c r2cf_9.c -o r2cf_9.o >/dev/null 2>&1
+mv -f .deps/r2cf_9.Tpo .deps/r2cf_9.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_10.lo -MD -MP -MF .deps/r2cf_10.Tpo -c -o r2cf_10.lo r2cf_10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_10.lo -MD -MP -MF .deps/r2cf_10.Tpo -c r2cf_10.c  -fPIC -DPIC -o .libs/r2cf_10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_10.lo -MD -MP -MF .deps/r2cf_10.Tpo -c r2cf_10.c -o r2cf_10.o >/dev/null 2>&1
+mv -f .deps/r2cf_10.Tpo .deps/r2cf_10.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_11.lo -MD -MP -MF .deps/r2cf_11.Tpo -c -o r2cf_11.lo r2cf_11.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_11.lo -MD -MP -MF .deps/r2cf_11.Tpo -c r2cf_11.c  -fPIC -DPIC -o .libs/r2cf_11.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_11.lo -MD -MP -MF .deps/r2cf_11.Tpo -c r2cf_11.c -o r2cf_11.o >/dev/null 2>&1
+mv -f .deps/r2cf_11.Tpo .deps/r2cf_11.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_12.lo -MD -MP -MF .deps/r2cf_12.Tpo -c -o r2cf_12.lo r2cf_12.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_12.lo -MD -MP -MF .deps/r2cf_12.Tpo -c r2cf_12.c  -fPIC -DPIC -o .libs/r2cf_12.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_12.lo -MD -MP -MF .deps/r2cf_12.Tpo -c r2cf_12.c -o r2cf_12.o >/dev/null 2>&1
+mv -f .deps/r2cf_12.Tpo .deps/r2cf_12.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_13.lo -MD -MP -MF .deps/r2cf_13.Tpo -c -o r2cf_13.lo r2cf_13.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_13.lo -MD -MP -MF .deps/r2cf_13.Tpo -c r2cf_13.c  -fPIC -DPIC -o .libs/r2cf_13.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_13.lo -MD -MP -MF .deps/r2cf_13.Tpo -c r2cf_13.c -o r2cf_13.o >/dev/null 2>&1
+mv -f .deps/r2cf_13.Tpo .deps/r2cf_13.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_14.lo -MD -MP -MF .deps/r2cf_14.Tpo -c -o r2cf_14.lo r2cf_14.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_14.lo -MD -MP -MF .deps/r2cf_14.Tpo -c r2cf_14.c  -fPIC -DPIC -o .libs/r2cf_14.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_14.lo -MD -MP -MF .deps/r2cf_14.Tpo -c r2cf_14.c -o r2cf_14.o >/dev/null 2>&1
+mv -f .deps/r2cf_14.Tpo .deps/r2cf_14.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_15.lo -MD -MP -MF .deps/r2cf_15.Tpo -c -o r2cf_15.lo r2cf_15.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_15.lo -MD -MP -MF .deps/r2cf_15.Tpo -c r2cf_15.c  -fPIC -DPIC -o .libs/r2cf_15.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_15.lo -MD -MP -MF .deps/r2cf_15.Tpo -c r2cf_15.c -o r2cf_15.o >/dev/null 2>&1
+mv -f .deps/r2cf_15.Tpo .deps/r2cf_15.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_16.lo -MD -MP -MF .deps/r2cf_16.Tpo -c -o r2cf_16.lo r2cf_16.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_16.lo -MD -MP -MF .deps/r2cf_16.Tpo -c r2cf_16.c  -fPIC -DPIC -o .libs/r2cf_16.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_16.lo -MD -MP -MF .deps/r2cf_16.Tpo -c r2cf_16.c -o r2cf_16.o >/dev/null 2>&1
+mv -f .deps/r2cf_16.Tpo .deps/r2cf_16.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_32.lo -MD -MP -MF .deps/r2cf_32.Tpo -c -o r2cf_32.lo r2cf_32.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_32.lo -MD -MP -MF .deps/r2cf_32.Tpo -c r2cf_32.c  -fPIC -DPIC -o .libs/r2cf_32.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_32.lo -MD -MP -MF .deps/r2cf_32.Tpo -c r2cf_32.c -o r2cf_32.o >/dev/null 2>&1
+mv -f .deps/r2cf_32.Tpo .deps/r2cf_32.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_64.lo -MD -MP -MF .deps/r2cf_64.Tpo -c -o r2cf_64.lo r2cf_64.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_64.lo -MD -MP -MF .deps/r2cf_64.Tpo -c r2cf_64.c  -fPIC -DPIC -o .libs/r2cf_64.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_64.lo -MD -MP -MF .deps/r2cf_64.Tpo -c r2cf_64.c -o r2cf_64.o >/dev/null 2>&1
+mv -f .deps/r2cf_64.Tpo .deps/r2cf_64.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_128.lo -MD -MP -MF .deps/r2cf_128.Tpo -c -o r2cf_128.lo r2cf_128.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_128.lo -MD -MP -MF .deps/r2cf_128.Tpo -c r2cf_128.c  -fPIC -DPIC -o .libs/r2cf_128.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_128.lo -MD -MP -MF .deps/r2cf_128.Tpo -c r2cf_128.c -o r2cf_128.o >/dev/null 2>&1
+mv -f .deps/r2cf_128.Tpo .deps/r2cf_128.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_20.lo -MD -MP -MF .deps/r2cf_20.Tpo -c -o r2cf_20.lo r2cf_20.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_20.lo -MD -MP -MF .deps/r2cf_20.Tpo -c r2cf_20.c  -fPIC -DPIC -o .libs/r2cf_20.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_20.lo -MD -MP -MF .deps/r2cf_20.Tpo -c r2cf_20.c -o r2cf_20.o >/dev/null 2>&1
+mv -f .deps/r2cf_20.Tpo .deps/r2cf_20.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_25.lo -MD -MP -MF .deps/r2cf_25.Tpo -c -o r2cf_25.lo r2cf_25.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_25.lo -MD -MP -MF .deps/r2cf_25.Tpo -c r2cf_25.c  -fPIC -DPIC -o .libs/r2cf_25.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT r2cf_25.lo -MD -MP -MF .deps/r2cf_25.Tpo -c r2cf_25.c -o r2cf_25.o >/dev/null 2>&1
+mv -f .deps/r2cf_25.Tpo .deps/r2cf_25.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_2.lo -MD -MP -MF .deps/hf_2.Tpo -c -o hf_2.lo hf_2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_2.lo -MD -MP -MF .deps/hf_2.Tpo -c hf_2.c  -fPIC -DPIC -o .libs/hf_2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_2.lo -MD -MP -MF .deps/hf_2.Tpo -c hf_2.c -o hf_2.o >/dev/null 2>&1
+mv -f .deps/hf_2.Tpo .deps/hf_2.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_3.lo -MD -MP -MF .deps/hf_3.Tpo -c -o hf_3.lo hf_3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_3.lo -MD -MP -MF .deps/hf_3.Tpo -c hf_3.c  -fPIC -DPIC -o .libs/hf_3.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_3.lo -MD -MP -MF .deps/hf_3.Tpo -c hf_3.c -o hf_3.o >/dev/null 2>&1
+mv -f .deps/hf_3.Tpo .deps/hf_3.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_4.lo -MD -MP -MF .deps/hf_4.Tpo -c -o hf_4.lo hf_4.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_4.lo -MD -MP -MF .deps/hf_4.Tpo -c hf_4.c  -fPIC -DPIC -o .libs/hf_4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_4.lo -MD -MP -MF .deps/hf_4.Tpo -c hf_4.c -o hf_4.o >/dev/null 2>&1
+mv -f .deps/hf_4.Tpo .deps/hf_4.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_5.lo -MD -MP -MF .deps/hf_5.Tpo -c -o hf_5.lo hf_5.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_5.lo -MD -MP -MF .deps/hf_5.Tpo -c hf_5.c  -fPIC -DPIC -o .libs/hf_5.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_5.lo -MD -MP -MF .deps/hf_5.Tpo -c hf_5.c -o hf_5.o >/dev/null 2>&1
+mv -f .deps/hf_5.Tpo .deps/hf_5.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_6.lo -MD -MP -MF .deps/hf_6.Tpo -c -o hf_6.lo hf_6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_6.lo -MD -MP -MF .deps/hf_6.Tpo -c hf_6.c  -fPIC -DPIC -o .libs/hf_6.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_6.lo -MD -MP -MF .deps/hf_6.Tpo -c hf_6.c -o hf_6.o >/dev/null 2>&1
+mv -f .deps/hf_6.Tpo .deps/hf_6.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_7.lo -MD -MP -MF .deps/hf_7.Tpo -c -o hf_7.lo hf_7.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_7.lo -MD -MP -MF .deps/hf_7.Tpo -c hf_7.c  -fPIC -DPIC -o .libs/hf_7.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_7.lo -MD -MP -MF .deps/hf_7.Tpo -c hf_7.c -o hf_7.o >/dev/null 2>&1
+mv -f .deps/hf_7.Tpo .deps/hf_7.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_8.lo -MD -MP -MF .deps/hf_8.Tpo -c -o hf_8.lo hf_8.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_8.lo -MD -MP -MF .deps/hf_8.Tpo -c hf_8.c  -fPIC -DPIC -o .libs/hf_8.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_8.lo -MD -MP -MF .deps/hf_8.Tpo -c hf_8.c -o hf_8.o >/dev/null 2>&1
+mv -f .deps/hf_8.Tpo .deps/hf_8.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_9.lo -MD -MP -MF .deps/hf_9.Tpo -c -o hf_9.lo hf_9.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_9.lo -MD -MP -MF .deps/hf_9.Tpo -c hf_9.c  -fPIC -DPIC -o .libs/hf_9.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_9.lo -MD -MP -MF .deps/hf_9.Tpo -c hf_9.c -o hf_9.o >/dev/null 2>&1
+mv -f .deps/hf_9.Tpo .deps/hf_9.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_10.lo -MD -MP -MF .deps/hf_10.Tpo -c -o hf_10.lo hf_10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_10.lo -MD -MP -MF .deps/hf_10.Tpo -c hf_10.c  -fPIC -DPIC -o .libs/hf_10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_10.lo -MD -MP -MF .deps/hf_10.Tpo -c hf_10.c -o hf_10.o >/dev/null 2>&1
+mv -f .deps/hf_10.Tpo .deps/hf_10.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_12.lo -MD -MP -MF .deps/hf_12.Tpo -c -o hf_12.lo hf_12.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_12.lo -MD -MP -MF .deps/hf_12.Tpo -c hf_12.c  -fPIC -DPIC -o .libs/hf_12.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_12.lo -MD -MP -MF .deps/hf_12.Tpo -c hf_12.c -o hf_12.o >/dev/null 2>&1
+mv -f .deps/hf_12.Tpo .deps/hf_12.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_15.lo -MD -MP -MF .deps/hf_15.Tpo -c -o hf_15.lo hf_15.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_15.lo -MD -MP -MF .deps/hf_15.Tpo -c hf_15.c  -fPIC -DPIC -o .libs/hf_15.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_15.lo -MD -MP -MF .deps/hf_15.Tpo -c hf_15.c -o hf_15.o >/dev/null 2>&1
+mv -f .deps/hf_15.Tpo .deps/hf_15.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_16.lo -MD -MP -MF .deps/hf_16.Tpo -c -o hf_16.lo hf_16.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_16.lo -MD -MP -MF .deps/hf_16.Tpo -c hf_16.c  -fPIC -DPIC -o .libs/hf_16.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_16.lo -MD -MP -MF .deps/hf_16.Tpo -c hf_16.c -o hf_16.o >/dev/null 2>&1
+mv -f .deps/hf_16.Tpo .deps/hf_16.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_32.lo -MD -MP -MF .deps/hf_32.Tpo -c -o hf_32.lo hf_32.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_32.lo -MD -MP -MF .deps/hf_32.Tpo -c hf_32.c  -fPIC -DPIC -o .libs/hf_32.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_32.lo -MD -MP -MF .deps/hf_32.Tpo -c hf_32.c -o hf_32.o >/dev/null 2>&1
+mv -f .deps/hf_32.Tpo .deps/hf_32.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../..  -I ../../..   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_64.lo -MD -MP -MF .deps/hf_64.Tpo -c -o hf_64.lo hf_64.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_64.lo -MD -MP -MF .deps/hf_64.Tpo -c hf_64.c  -fPIC -DPIC -o .libs/hf_64.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I ../../.. -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -MT hf_64.lo -MD -MP -MF .deps/hf_64.Tpo -c hf_64.c -o hf_64.o >/dev/null 2>&1
+make[5]: *** [Makefile:640: hf_64.lo] Error 1
+make[5]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft/scalar/r2cf'
+make[4]: *** [Makefile:481: all] Error 2
+make[4]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft/scalar/r2cf'
+make[3]: *** [Makefile:474: all-recursive] Error 1
+make[3]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft/scalar'
+make[2]: *** [Makefile:528: all-recursive] Error 1
+make[2]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8/rdft'
+make[1]: *** [Makefile:708: all-recursive] Error 1
+make[1]: Leaving directory '/usr/ports/contrib/fftw/work/src/fftw-3.3.8'
+make: *** [Makefile:552: all] Error 2
+=======> ERROR: Building '/usr/ports/contrib/fftw/fftw#3.3.8-1.pkg.tar.xz' failed.

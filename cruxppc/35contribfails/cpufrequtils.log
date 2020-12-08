@@ -1,0 +1,47 @@
+prt-get: installing /usr/ports/contrib/cpufrequtils
+prt-get: starting build Fri Dec  4 04:58:38 2020
+=======> Downloading 'https://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils-008.tar.xz'.
+--2020-12-04 04:58:38--  https://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils-008.tar.xz
+Resolving www.kernel.org... 2604:1380:4030:1000::1, 147.75.56.137
+Connecting to www.kernel.org|2604:1380:4030:1000::1|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://mirrors.edge.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils-008.tar.xz [following]
+--2020-12-04 04:58:40--  https://mirrors.edge.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils-008.tar.xz
+Resolving mirrors.edge.kernel.org... 2604:1380:1000:8100::1, 147.75.69.165
+Connecting to mirrors.edge.kernel.org|2604:1380:1000:8100::1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 48892 (48K) [application/x-xz]
+Saving to: '/sources/cpufrequtils-008.tar.xz.partial'
+
+     0K .......... .......... .......... .......... .......   100% 1.69M=0.03s
+
+2020-12-04 04:58:41 (1.69 MB/s) - '/sources/cpufrequtils-008.tar.xz.partial' saved [48892/48892]
+
+=======> Building '/usr/ports/contrib/cpufrequtils/cpufrequtils#008-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/cpufrequtils/work/src -xf /sources/cpufrequtils-008.tar.xz
++ build
++ cd cpufrequtils-008
++ make NLS=false V=true
+Building ccdv
+gcc -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer -fPIC -o lib/cpufreq.o -c lib/cpufreq.c
+gcc -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer -fPIC -o lib/proc.o -c lib/proc.c
+gcc -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer -fPIC -o lib/sysfs.o -c lib/sysfs.c
+gcc -shared -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer  -o libcpufreq.so.0.0.0 \
+	-Wl,-soname,libcpufreq.so.0 lib/cpufreq.o lib/proc.o lib/sysfs.o
+gcc -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer -I. -I./lib/ -c -o utils/cpufreq-info.o utils/info.c
+gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer  -L. -o cpufreq-info utils/cpufreq-info.o -lcpufreq
+strip -s --remove-section=.note --remove-section=.comment cpufreq-info
+gcc -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer -I. -I./lib/ -c -o utils/cpufreq-set.o utils/set.c
+gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer  -L. -o cpufreq-set utils/cpufreq-set.o -lcpufreq
+strip -s --remove-section=.note --remove-section=.comment cpufreq-set
+gcc -DVERSION=\"008\" -DPACKAGE=\"cpufrequtils\" -DPACKAGE_BUGREPORT=\"cpufreq@vger.kernel.org\" -D_GNU_SOURCE -DINTERFACE_PROC -DINTERFACE_SYSFS -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -Wall -Wchar-subscripts -Wpointer-arith -Wsign-compare -Wno-pointer-sign -Wdeclaration-after-statement -Wshadow -Os -fomit-frame-pointer -I. -I./lib/ -c -o utils/cpufreq-aperf.o utils/aperf.c
+In file included from utils/aperf.c:56:
+utils/aperf.c: In function 'main':
+utils/cpuid.h:8:2: error: inconsistent operand constraints in an 'asm'
+  asm volatile("cpuid"
+  ^~~
+utils/cpuid.h:8:2: error: inconsistent operand constraints in an 'asm'
+  asm volatile("cpuid"
+  ^~~
+make: *** [Makefile:198: cpufreq-aperf] Error 1
+=======> ERROR: Building '/usr/ports/contrib/cpufrequtils/cpufrequtils#008-1.pkg.tar.xz' failed.

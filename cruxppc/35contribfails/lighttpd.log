@@ -1,0 +1,10 @@
+prt-get: installing /usr/ports/contrib/lighttpd
+prt-get: starting build Sat Dec  5 09:15:48 2020
+=======> Downloading 'https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.56.tar.xz'.
+--2020-12-05 09:15:48--  https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.56.tar.xz
+Resolving download.lighttpd.net... 2a01:4f8:161:80c9::2, 5.9.70.195
+Connecting to download.lighttpd.net|2a01:4f8:161:80c9::2|:443... connected.
+ERROR: cannot verify download.lighttpd.net's certificate, issued by 'CN=R3,O=Let\'s Encrypt,C=US':
+  Issued certificate not yet valid.
+To connect to download.lighttpd.net insecurely, use `--no-check-certificate'.
+=======> ERROR: Downloading 'https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.56.tar.xz' failed.

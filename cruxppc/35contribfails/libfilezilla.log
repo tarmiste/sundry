@@ -1,0 +1,309 @@
+prt-get: installing /usr/ports/contrib/libfilezilla
+prt-get: starting build Sat Dec  5 22:03:51 2020
+=======> Building '/usr/ports/contrib/libfilezilla/libfilezilla#0.25.0-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/libfilezilla/work/src -xf /sources/libfilezilla-0.25.0.tar.bz2
++ build
++ cd libfilezilla-0.25.0
++ export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib
++ CC=clang
++ CXX=clang++
++ AR=llvm-ar
++ NM=llvm-nm
++ RANLIB=llvm-ranlib
++ autoreconf -vfi
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'config'.
+libtoolize: copying file 'config/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:20: installing 'config/compile'
+configure.ac:15: installing 'config/missing'
+demos/Makefile.am: installing 'config/depcomp'
+locales/Makefile.am:34: warning: '%'-style pattern rules are a GNU make extension
+locales/Makefile.am:38: warning: '%'-style pattern rules are a GNU make extension
+autoreconf: Leaving directory `.'
++ ./configure --prefix=/usr --disable-static
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of clang++... gcc3
+checking for gcc... clang
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether clang understands -c and -o together... yes
+checking dependency style of clang... gcc3
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by clang... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... llvm-nm
+checking the name lister (llvm-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert powerpc-unknown-linux-gnu file names to powerpc-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert powerpc-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... llvm-ranlib
+checking command to parse llvm-nm output from clang object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... clang -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if clang supports -fno-rtti -fno-exceptions... yes
+checking for clang option to produce PIC... -fPIC -DPIC
+checking if clang PIC flag -fPIC -DPIC works... yes
+checking if clang static flag -static works... yes
+checking if clang supports -c -o file.o... yes
+checking if clang supports -c -o file.o... (cached) yes
+checking whether the clang linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... clang++ -E
+checking for ld used by clang++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the clang++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for clang++ option to produce PIC... -fPIC -DPIC
+checking if clang++ PIC flag -fPIC -DPIC works... yes
+checking if clang++ static flag -static works... yes
+checking if clang++ supports -c -o file.o... yes
+checking if clang++ supports -c -o file.o... (cached) yes
+checking whether the clang++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether C compiler accepts -Werror=partial-availability... yes
+checking whether the linker accepts -Wl,-no_weak_imports... no
+checking whether clang++ supports C++17 features with -std=c++17... yes
+checking for whether we need -stdlib=libc++... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking whether std::chrono::steady_clock is steady... yes
+checking for thread_local... yes
+checking whether CLOCK_MONOTONIC is declared... yes
+checking for posix_fadvise... yes
+checking for poll... yes
+checking for pipe2... yes
+checking for accept4... yes
+checking for eventfd... yes
+checking for d_type member in directory struct... yes
+checking for localtime_r... yes
+checking for gmtime_r... yes
+checking for timegm... yes
+checking for clock_gettime... yes
+checking whether pthread_condattr_setclock is declared... yes
+checking whether iconv can be used without link library... yes
+checking for TCP_INFO... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for nettle >= 3.3... yes
+checking for hogweed >= 3.3... yes
+checking for gnutls >= 3.5.8... yes
+checking whether to use windres... no
+checking whether the linker accepts -Wl,--dynamicbase... no
+checking whether the linker accepts -Wl,--nxcompat... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for cppunit >= 1.13.0... yes
+checking for doxygen... /usr/bin/doxygen
+checking for perl... /usr/bin/perl
+checking for pdflatex... no
+configure: WARNING: pdflatex not found - will not generate doxygen PDF documentation
+checking for makeindex... no
+checking for egrep... /usr/bin/egrep
+checking for xgettext... /usr/bin/xgettext
+checking for msgfmt... /usr/bin/msgfmt
+checking for msgmerge... /usr/bin/msgmerge
+checking whether msgmerge version >= 0.11.0... yes, 0.21
+checking available libfilezilla message catalogs... an ar az bg_BG ca ca_ES@valencia co cs_CZ cy da de el es et eu fa_IR fi_FI fr gl_ES he_IL hr hu_HU hy id_ID is it ja_JP kab ko_KR ky lo_LA lt_LT lv_LV mk_MK nb_NO ne nl nn_NO oc pl_PL pt_BR pt_PT ro_RO ru sk_SK sl_SI sr sv th_TH tr uk_UA vi_VN zh_CN zh_TW
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/libfilezilla.pc
+config.status: creating lib/libfilezilla/version.hpp
+config.status: creating lib/windows/version.rc
+config.status: creating demos/Makefile
+config.status: creating doc/Doxyfile
+config.status: creating doc/Makefile
+config.status: creating locales/Makefile
+config.status: creating tests/Makefile
+config.status: creating config/config.hpp
+config.status: executing depfiles commands
+config.status: executing libtool commands
++ make
+Making all in .
+make[1]: Entering directory '/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0'
+Making all in lib
+make[1]: Entering directory '/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0/lib'
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-buffer.lo -MD -MP -MF .deps/libfilezilla_la-buffer.Tpo -c -o libfilezilla_la-buffer.lo `test -f 'buffer.cpp' || echo './'`buffer.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-buffer.lo -MD -MP -MF .deps/libfilezilla_la-buffer.Tpo -c buffer.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-buffer.o
+mv -f .deps/libfilezilla_la-buffer.Tpo .deps/libfilezilla_la-buffer.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-encode.lo -MD -MP -MF .deps/libfilezilla_la-encode.Tpo -c -o libfilezilla_la-encode.lo `test -f 'encode.cpp' || echo './'`encode.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-encode.lo -MD -MP -MF .deps/libfilezilla_la-encode.Tpo -c encode.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-encode.o
+mv -f .deps/libfilezilla_la-encode.Tpo .deps/libfilezilla_la-encode.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-encryption.lo -MD -MP -MF .deps/libfilezilla_la-encryption.Tpo -c -o libfilezilla_la-encryption.lo `test -f 'encryption.cpp' || echo './'`encryption.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-encryption.lo -MD -MP -MF .deps/libfilezilla_la-encryption.Tpo -c encryption.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-encryption.o
+mv -f .deps/libfilezilla_la-encryption.Tpo .deps/libfilezilla_la-encryption.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-event.lo -MD -MP -MF .deps/libfilezilla_la-event.Tpo -c -o libfilezilla_la-event.lo `test -f 'event.cpp' || echo './'`event.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-event.lo -MD -MP -MF .deps/libfilezilla_la-event.Tpo -c event.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-event.o
+mv -f .deps/libfilezilla_la-event.Tpo .deps/libfilezilla_la-event.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-event_handler.lo -MD -MP -MF .deps/libfilezilla_la-event_handler.Tpo -c -o libfilezilla_la-event_handler.lo `test -f 'event_handler.cpp' || echo './'`event_handler.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-event_handler.lo -MD -MP -MF .deps/libfilezilla_la-event_handler.Tpo -c event_handler.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-event_handler.o
+mv -f .deps/libfilezilla_la-event_handler.Tpo .deps/libfilezilla_la-event_handler.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-event_loop.lo -MD -MP -MF .deps/libfilezilla_la-event_loop.Tpo -c -o libfilezilla_la-event_loop.lo `test -f 'event_loop.cpp' || echo './'`event_loop.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-event_loop.lo -MD -MP -MF .deps/libfilezilla_la-event_loop.Tpo -c event_loop.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-event_loop.o
+mv -f .deps/libfilezilla_la-event_loop.Tpo .deps/libfilezilla_la-event_loop.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-file.lo -MD -MP -MF .deps/libfilezilla_la-file.Tpo -c -o libfilezilla_la-file.lo `test -f 'file.cpp' || echo './'`file.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-file.lo -MD -MP -MF .deps/libfilezilla_la-file.Tpo -c file.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-file.o
+mv -f .deps/libfilezilla_la-file.Tpo .deps/libfilezilla_la-file.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-hash.lo -MD -MP -MF .deps/libfilezilla_la-hash.Tpo -c -o libfilezilla_la-hash.lo `test -f 'hash.cpp' || echo './'`hash.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-hash.lo -MD -MP -MF .deps/libfilezilla_la-hash.Tpo -c hash.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-hash.o
+mv -f .deps/libfilezilla_la-hash.Tpo .deps/libfilezilla_la-hash.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-invoker.lo -MD -MP -MF .deps/libfilezilla_la-invoker.Tpo -c -o libfilezilla_la-invoker.lo `test -f 'invoker.cpp' || echo './'`invoker.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-invoker.lo -MD -MP -MF .deps/libfilezilla_la-invoker.Tpo -c invoker.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-invoker.o
+mv -f .deps/libfilezilla_la-invoker.Tpo .deps/libfilezilla_la-invoker.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-iputils.lo -MD -MP -MF .deps/libfilezilla_la-iputils.Tpo -c -o libfilezilla_la-iputils.lo `test -f 'iputils.cpp' || echo './'`iputils.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-iputils.lo -MD -MP -MF .deps/libfilezilla_la-iputils.Tpo -c iputils.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-iputils.o
+mv -f .deps/libfilezilla_la-iputils.Tpo .deps/libfilezilla_la-iputils.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-local_filesys.lo -MD -MP -MF .deps/libfilezilla_la-local_filesys.Tpo -c -o libfilezilla_la-local_filesys.lo `test -f 'local_filesys.cpp' || echo './'`local_filesys.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-local_filesys.lo -MD -MP -MF .deps/libfilezilla_la-local_filesys.Tpo -c local_filesys.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-local_filesys.o
+mv -f .deps/libfilezilla_la-local_filesys.Tpo .deps/libfilezilla_la-local_filesys.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-mutex.lo -MD -MP -MF .deps/libfilezilla_la-mutex.Tpo -c -o libfilezilla_la-mutex.lo `test -f 'mutex.cpp' || echo './'`mutex.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-mutex.lo -MD -MP -MF .deps/libfilezilla_la-mutex.Tpo -c mutex.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-mutex.o
+mv -f .deps/libfilezilla_la-mutex.Tpo .deps/libfilezilla_la-mutex.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-process.lo -MD -MP -MF .deps/libfilezilla_la-process.Tpo -c -o libfilezilla_la-process.lo `test -f 'process.cpp' || echo './'`process.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-process.lo -MD -MP -MF .deps/libfilezilla_la-process.Tpo -c process.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-process.o
+mv -f .deps/libfilezilla_la-process.Tpo .deps/libfilezilla_la-process.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-rate_limiter.lo -MD -MP -MF .deps/libfilezilla_la-rate_limiter.Tpo -c -o libfilezilla_la-rate_limiter.lo `test -f 'rate_limiter.cpp' || echo './'`rate_limiter.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-rate_limiter.lo -MD -MP -MF .deps/libfilezilla_la-rate_limiter.Tpo -c rate_limiter.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-rate_limiter.o
+mv -f .deps/libfilezilla_la-rate_limiter.Tpo .deps/libfilezilla_la-rate_limiter.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-rate_limited_layer.lo -MD -MP -MF .deps/libfilezilla_la-rate_limited_layer.Tpo -c -o libfilezilla_la-rate_limited_layer.lo `test -f 'rate_limited_layer.cpp' || echo './'`rate_limited_layer.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-rate_limited_layer.lo -MD -MP -MF .deps/libfilezilla_la-rate_limited_layer.Tpo -c rate_limited_layer.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-rate_limited_layer.o
+mv -f .deps/libfilezilla_la-rate_limited_layer.Tpo .deps/libfilezilla_la-rate_limited_layer.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-recursive_remove.lo -MD -MP -MF .deps/libfilezilla_la-recursive_remove.Tpo -c -o libfilezilla_la-recursive_remove.lo `test -f 'recursive_remove.cpp' || echo './'`recursive_remove.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-recursive_remove.lo -MD -MP -MF .deps/libfilezilla_la-recursive_remove.Tpo -c recursive_remove.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-recursive_remove.o
+mv -f .deps/libfilezilla_la-recursive_remove.Tpo .deps/libfilezilla_la-recursive_remove.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-signature.lo -MD -MP -MF .deps/libfilezilla_la-signature.Tpo -c -o libfilezilla_la-signature.lo `test -f 'signature.cpp' || echo './'`signature.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-signature.lo -MD -MP -MF .deps/libfilezilla_la-signature.Tpo -c signature.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-signature.o
+mv -f .deps/libfilezilla_la-signature.Tpo .deps/libfilezilla_la-signature.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-socket.lo -MD -MP -MF .deps/libfilezilla_la-socket.Tpo -c -o libfilezilla_la-socket.lo `test -f 'socket.cpp' || echo './'`socket.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-socket.lo -MD -MP -MF .deps/libfilezilla_la-socket.Tpo -c socket.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-socket.o
+mv -f .deps/libfilezilla_la-socket.Tpo .deps/libfilezilla_la-socket.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-socket_errors.lo -MD -MP -MF .deps/libfilezilla_la-socket_errors.Tpo -c -o libfilezilla_la-socket_errors.lo `test -f 'socket_errors.cpp' || echo './'`socket_errors.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-socket_errors.lo -MD -MP -MF .deps/libfilezilla_la-socket_errors.Tpo -c socket_errors.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-socket_errors.o
+mv -f .deps/libfilezilla_la-socket_errors.Tpo .deps/libfilezilla_la-socket_errors.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-string.lo -MD -MP -MF .deps/libfilezilla_la-string.Tpo -c -o libfilezilla_la-string.lo `test -f 'string.cpp' || echo './'`string.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-string.lo -MD -MP -MF .deps/libfilezilla_la-string.Tpo -c string.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-string.o
+mv -f .deps/libfilezilla_la-string.Tpo .deps/libfilezilla_la-string.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-thread.lo -MD -MP -MF .deps/libfilezilla_la-thread.Tpo -c -o libfilezilla_la-thread.lo `test -f 'thread.cpp' || echo './'`thread.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-thread.lo -MD -MP -MF .deps/libfilezilla_la-thread.Tpo -c thread.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-thread.o
+mv -f .deps/libfilezilla_la-thread.Tpo .deps/libfilezilla_la-thread.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-thread_pool.lo -MD -MP -MF .deps/libfilezilla_la-thread_pool.Tpo -c -o libfilezilla_la-thread_pool.lo `test -f 'thread_pool.cpp' || echo './'`thread_pool.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-thread_pool.lo -MD -MP -MF .deps/libfilezilla_la-thread_pool.Tpo -c thread_pool.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-thread_pool.o
+mv -f .deps/libfilezilla_la-thread_pool.Tpo .deps/libfilezilla_la-thread_pool.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_info.lo -MD -MP -MF .deps/libfilezilla_la-tls_info.Tpo -c -o libfilezilla_la-tls_info.lo `test -f 'tls_info.cpp' || echo './'`tls_info.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_info.lo -MD -MP -MF .deps/libfilezilla_la-tls_info.Tpo -c tls_info.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-tls_info.o
+mv -f .deps/libfilezilla_la-tls_info.Tpo .deps/libfilezilla_la-tls_info.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_layer.lo -MD -MP -MF .deps/libfilezilla_la-tls_layer.Tpo -c -o libfilezilla_la-tls_layer.lo `test -f 'tls_layer.cpp' || echo './'`tls_layer.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_layer.lo -MD -MP -MF .deps/libfilezilla_la-tls_layer.Tpo -c tls_layer.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-tls_layer.o
+mv -f .deps/libfilezilla_la-tls_layer.Tpo .deps/libfilezilla_la-tls_layer.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_layer_impl.lo -MD -MP -MF .deps/libfilezilla_la-tls_layer_impl.Tpo -c -o libfilezilla_la-tls_layer_impl.lo `test -f 'tls_layer_impl.cpp' || echo './'`tls_layer_impl.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_layer_impl.lo -MD -MP -MF .deps/libfilezilla_la-tls_layer_impl.Tpo -c tls_layer_impl.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-tls_layer_impl.o
+mv -f .deps/libfilezilla_la-tls_layer_impl.Tpo .deps/libfilezilla_la-tls_layer_impl.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_system_trust_store.lo -MD -MP -MF .deps/libfilezilla_la-tls_system_trust_store.Tpo -c -o libfilezilla_la-tls_system_trust_store.lo `test -f 'tls_system_trust_store.cpp' || echo './'`tls_system_trust_store.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-tls_system_trust_store.lo -MD -MP -MF .deps/libfilezilla_la-tls_system_trust_store.Tpo -c tls_system_trust_store.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-tls_system_trust_store.o
+mv -f .deps/libfilezilla_la-tls_system_trust_store.Tpo .deps/libfilezilla_la-tls_system_trust_store.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-time.lo -MD -MP -MF .deps/libfilezilla_la-time.Tpo -c -o libfilezilla_la-time.lo `test -f 'time.cpp' || echo './'`time.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-time.lo -MD -MP -MF .deps/libfilezilla_la-time.Tpo -c time.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-time.o
+mv -f .deps/libfilezilla_la-time.Tpo .deps/libfilezilla_la-time.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-translate.lo -MD -MP -MF .deps/libfilezilla_la-translate.Tpo -c -o libfilezilla_la-translate.lo `test -f 'translate.cpp' || echo './'`translate.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-translate.lo -MD -MP -MF .deps/libfilezilla_la-translate.Tpo -c translate.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-translate.o
+mv -f .deps/libfilezilla_la-translate.Tpo .deps/libfilezilla_la-translate.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-uri.lo -MD -MP -MF .deps/libfilezilla_la-uri.Tpo -c -o libfilezilla_la-uri.lo `test -f 'uri.cpp' || echo './'`uri.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-uri.lo -MD -MP -MF .deps/libfilezilla_la-uri.Tpo -c uri.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-uri.o
+mv -f .deps/libfilezilla_la-uri.Tpo .deps/libfilezilla_la-uri.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-util.lo -MD -MP -MF .deps/libfilezilla_la-util.Tpo -c -o libfilezilla_la-util.lo `test -f 'util.cpp' || echo './'`util.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-util.lo -MD -MP -MF .deps/libfilezilla_la-util.Tpo -c util.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-util.o
+mv -f .deps/libfilezilla_la-util.Tpo .deps/libfilezilla_la-util.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-version.lo -MD -MP -MF .deps/libfilezilla_la-version.Tpo -c -o libfilezilla_la-version.lo `test -f 'version.cpp' || echo './'`version.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT libfilezilla_la-version.lo -MD -MP -MF .deps/libfilezilla_la-version.Tpo -c version.cpp  -fPIC -DPIC -o .libs/libfilezilla_la-version.o
+mv -f .deps/libfilezilla_la-version.Tpo .deps/libfilezilla_la-version.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=compile clang++ -std=c++17 -DHAVE_CONFIG_H    -I../config -DBUILDING_LIBFILEZILLA  -I/usr/include/p11-kit-1 -I. -I./libfilezilla   -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT glue/libfilezilla_la-unix.lo -MD -MP -MF glue/.deps/libfilezilla_la-unix.Tpo -c -o glue/libfilezilla_la-unix.lo `test -f 'glue/unix.cpp' || echo './'`glue/unix.cpp
+libtool: compile:  clang++ -std=c++17 -DHAVE_CONFIG_H -I../config -DBUILDING_LIBFILEZILLA -I/usr/include/p11-kit-1 -I. -I./libfilezilla -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT glue/libfilezilla_la-unix.lo -MD -MP -MF glue/.deps/libfilezilla_la-unix.Tpo -c glue/unix.cpp  -fPIC -DPIC -o glue/.libs/libfilezilla_la-unix.o
+mv -f glue/.deps/libfilezilla_la-unix.Tpo glue/.deps/libfilezilla_la-unix.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=link clang++ -std=c++17  -fvisibility=hidden -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability    -no-undefined -version-info 10:0:0  -o libfilezilla.la -rpath /usr/lib libfilezilla_la-buffer.lo libfilezilla_la-encode.lo libfilezilla_la-encryption.lo libfilezilla_la-event.lo libfilezilla_la-event_handler.lo libfilezilla_la-event_loop.lo libfilezilla_la-file.lo libfilezilla_la-hash.lo libfilezilla_la-invoker.lo libfilezilla_la-iputils.lo libfilezilla_la-local_filesys.lo libfilezilla_la-mutex.lo libfilezilla_la-process.lo libfilezilla_la-rate_limiter.lo libfilezilla_la-rate_limited_layer.lo libfilezilla_la-recursive_remove.lo libfilezilla_la-signature.lo libfilezilla_la-socket.lo libfilezilla_la-socket_errors.lo libfilezilla_la-string.lo libfilezilla_la-thread.lo libfilezilla_la-thread_pool.lo libfilezilla_la-tls_info.lo libfilezilla_la-tls_layer.lo libfilezilla_la-tls_layer_impl.lo libfilezilla_la-tls_system_trust_store.lo libfilezilla_la-time.lo libfilezilla_la-translate.lo libfilezilla_la-uri.lo libfilezilla_la-util.lo libfilezilla_la-version.lo glue/libfilezilla_la-unix.lo -lpthread -lnettle -lhogweed -lgnutls 
+libtool: link: clang++  -fPIC -DPIC -shared -nostdlib /usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0/../../../crti.o /usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0/crtbeginS.o  .libs/libfilezilla_la-buffer.o .libs/libfilezilla_la-encode.o .libs/libfilezilla_la-encryption.o .libs/libfilezilla_la-event.o .libs/libfilezilla_la-event_handler.o .libs/libfilezilla_la-event_loop.o .libs/libfilezilla_la-file.o .libs/libfilezilla_la-hash.o .libs/libfilezilla_la-invoker.o .libs/libfilezilla_la-iputils.o .libs/libfilezilla_la-local_filesys.o .libs/libfilezilla_la-mutex.o .libs/libfilezilla_la-process.o .libs/libfilezilla_la-rate_limiter.o .libs/libfilezilla_la-rate_limited_layer.o .libs/libfilezilla_la-recursive_remove.o .libs/libfilezilla_la-signature.o .libs/libfilezilla_la-socket.o .libs/libfilezilla_la-socket_errors.o .libs/libfilezilla_la-string.o .libs/libfilezilla_la-thread.o .libs/libfilezilla_la-thread_pool.o .libs/libfilezilla_la-tls_info.o .libs/libfilezilla_la-tls_layer.o .libs/libfilezilla_la-tls_layer_impl.o .libs/libfilezilla_la-tls_system_trust_store.o .libs/libfilezilla_la-time.o .libs/libfilezilla_la-translate.o .libs/libfilezilla_la-uri.o .libs/libfilezilla_la-util.o .libs/libfilezilla_la-version.o glue/.libs/libfilezilla_la-unix.o   /usr/lib/libgnutls.so -L/usr/lib /usr/lib/libp11-kit.so /usr/lib/libffi.so -ldl -lpthread /usr/lib/libidn2.so /usr/lib/libunistring.so /usr/lib/libtasn1.so -lnettle -lhogweed /usr/lib/libgmp.so -L/usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0 -L/usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0/../../../../lib32 -L/usr/bin/../lib32 -L/lib/../lib32 -L/usr/lib/../lib32 -L/usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0/../../.. -L/usr/bin/../lib -L/lib /usr/lib/libstdc++.so -lm -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0/crtendS.o /usr/bin/../lib/gcc/powerpc-unknown-linux-gnu/8.4.0/../../../crtn.o  -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -g   -pthread -Wl,-soname -Wl,libfilezilla.so.10 -o .libs/libfilezilla.so.10.0.0
+clang-10: warning: argument unused during compilation: '-pthread' [-Wunused-command-line-argument]
+libtool: link: (cd ".libs" && rm -f "libfilezilla.so.10" && ln -s "libfilezilla.so.10.0.0" "libfilezilla.so.10")
+libtool: link: (cd ".libs" && rm -f "libfilezilla.so" && ln -s "libfilezilla.so.10.0.0" "libfilezilla.so")
+libtool: link: ( cd ".libs" && rm -f "libfilezilla.la" && ln -s "../libfilezilla.la" "libfilezilla.la" )
+make[1]: Leaving directory '/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0/lib'
+Making all in demos
+make[1]: Entering directory '/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0/demos'
+clang++ -std=c++17 -DHAVE_CONFIG_H    -I../lib   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -MT timer_fizzbuzz-timer_fizzbuzz.o -MD -MP -MF .deps/timer_fizzbuzz-timer_fizzbuzz.Tpo -c -o timer_fizzbuzz-timer_fizzbuzz.o `test -f 'timer_fizzbuzz.cpp' || echo './'`timer_fizzbuzz.cpp
+mv -f .deps/timer_fizzbuzz-timer_fizzbuzz.Tpo .deps/timer_fizzbuzz-timer_fizzbuzz.Po
+/bin/sh ../libtool  --tag=CXX   --mode=link clang++ -std=c++17  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability  -no-install  -o timer_fizzbuzz timer_fizzbuzz-timer_fizzbuzz.o ../lib/libfilezilla.la -lpthread 
+libtool: link: clang++ -std=c++17 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -g -Werror=partial-availability -o timer_fizzbuzz timer_fizzbuzz-timer_fizzbuzz.o  ../lib/.libs/libfilezilla.so /usr/lib/libgnutls.so -L/usr/lib /usr/lib/libp11-kit.so /usr/lib/libffi.so -ldl /usr/lib/libidn2.so /usr/lib/libunistring.so /usr/lib/libtasn1.so -lnettle -lhogweed /usr/lib/libgmp.so /usr/lib/libstdc++.so -lm -lpthread -pthread -Wl,-rpath -Wl,/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0/lib/.libs
+/usr/bin/ld: ../lib/.libs/libfilezilla.so: undefined reference to `__atomic_exchange_8'
+/usr/bin/ld: ../lib/.libs/libfilezilla.so: undefined reference to `__atomic_compare_exchange_8'
+/usr/bin/ld: ../lib/.libs/libfilezilla.so: undefined reference to `__atomic_load_8'
+/usr/bin/ld: ../lib/.libs/libfilezilla.so: undefined reference to `__atomic_store_8'
+clang-10: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:474: timer_fizzbuzz] Error 1
+make[1]: Leaving directory '/usr/ports/contrib/libfilezilla/work/src/libfilezilla-0.25.0/demos'
+make: *** [Makefile:488: all-recursive] Error 1
+=======> ERROR: Building '/usr/ports/contrib/libfilezilla/libfilezilla#0.25.0-1.pkg.tar.xz' failed.

@@ -1,0 +1,76 @@
+prt-get: installing /usr/ports/contrib/python3-Automat
+prt-get: starting build Sun Dec  6 05:05:21 2020
+=======> Building '/usr/ports/contrib/python3-Automat/python3-Automat#20.2.0-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/python3-Automat/work/src -xf /sources/Automat-20.2.0.tar.gz
++ build
++ cd Automat-20.2.0
++ /usr/bin/python3 setup.py build
+WARNING: The wheel package is not available.
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 228, in _main
+    status = self.run(options, args)
+  File "/usr/lib/python3.7/site-packages/pip/_internal/cli/req_command.py", line 182, in wrapper
+    return func(self, options, args)
+  File "/usr/lib/python3.7/site-packages/pip/_internal/commands/wheel.py", line 114, in run
+    session = self.get_default_session(options)
+  File "/usr/lib/python3.7/site-packages/pip/_internal/cli/req_command.py", line 80, in get_default_session
+    self._session = self.enter_context(self._build_session(options))
+  File "/usr/lib/python3.7/site-packages/pip/_internal/cli/req_command.py", line 97, in _build_session
+    index_urls=self._get_index_urls(options),
+  File "/usr/lib/python3.7/site-packages/pip/_internal/network/session.py", line 249, in __init__
+    self.headers["User-Agent"] = user_agent()
+  File "/usr/lib/python3.7/site-packages/pip/_internal/network/session.py", line 132, in user_agent
+    zip(["name", "version", "id"], distro.linux_distribution()),
+  File "/usr/lib/python3.7/site-packages/pip/_vendor/distro.py", line 125, in linux_distribution
+    return _distro.linux_distribution(full_distribution_name)
+  File "/usr/lib/python3.7/site-packages/pip/_vendor/distro.py", line 680, in linux_distribution
+    self.name() if full_distribution_name else self.id(),
+  File "/usr/lib/python3.7/site-packages/pip/_vendor/distro.py", line 719, in name
+    or self.lsb_release_attr('distributor_id') \
+  File "/usr/lib/python3.7/site-packages/pip/_vendor/distro.py", line 903, in lsb_release_attr
+    return self._lsb_release_info.get(attribute, '')
+  File "/usr/lib/python3.7/site-packages/pip/_vendor/distro.py", line 556, in __get__
+    ret = obj.__dict__[self._fname] = self._f(obj)
+  File "/usr/lib/python3.7/site-packages/pip/_vendor/distro.py", line 1014, in _lsb_release_info
+    stdout = subprocess.check_output(cmd, stderr=devnull)
+  File "/usr/lib/python3.7/subprocess.py", line 411, in check_output
+    **kwargs).stdout
+  File "/usr/lib/python3.7/subprocess.py", line 512, in run
+    output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '('lsb_release', '-a')' returned non-zero exit status 3.
+
+
+!!! m2r not found, long_description is bad, don't upload this to PyPI !!!
+
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/setuptools/installer.py", line 126, in fetch_build_egg
+    subprocess.check_call(cmd)
+  File "/usr/lib/python3.7/subprocess.py", line 363, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmph1otl_u6', '--quiet', 'm2r']' returned non-zero exit status 2.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "setup.py", line 58, in <module>
+    'Programming Language :: Python :: 3.8',
+  File "/usr/lib/python3.7/site-packages/setuptools/__init__.py", line 152, in setup
+    _install_setup_requires(attrs)
+  File "/usr/lib/python3.7/site-packages/setuptools/__init__.py", line 147, in _install_setup_requires
+    dist.fetch_build_eggs(dist.setup_requires)
+  File "/usr/lib/python3.7/site-packages/setuptools/dist.py", line 676, in fetch_build_eggs
+    replace_conflicting=True,
+  File "/usr/lib/python3.7/site-packages/pkg_resources/__init__.py", line 766, in resolve
+    replace_conflicting=replace_conflicting
+  File "/usr/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1049, in best_match
+    return self.obtain(req, installer)
+  File "/usr/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1061, in obtain
+    return installer(requirement)
+  File "/usr/lib/python3.7/site-packages/setuptools/dist.py", line 732, in fetch_build_egg
+    return fetch_build_egg(self, req)
+  File "/usr/lib/python3.7/site-packages/setuptools/installer.py", line 128, in fetch_build_egg
+    raise DistutilsError(str(e)) from e
+distutils.errors.DistutilsError: Command '['/usr/bin/python3', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmph1otl_u6', '--quiet', 'm2r']' returned non-zero exit status 2.
+=======> ERROR: Building '/usr/ports/contrib/python3-Automat/python3-Automat#20.2.0-1.pkg.tar.xz' failed.

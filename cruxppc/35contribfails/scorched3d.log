@@ -1,0 +1,3 @@
+prt-get: installing /usr/ports/contrib/scorched3d
+prt-get: starting build Sun Dec  6 10:43:18 2020
+=======> ERROR: Source file 'scorched3d-44-fix-c++14.patch' not found (can not be downloaded, URL not specified).

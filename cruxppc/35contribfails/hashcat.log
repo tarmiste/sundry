@@ -1,0 +1,183 @@
+prt-get: installing /usr/ports/contrib/hashcat
+prt-get: starting build Fri Dec  4 20:23:32 2020
+=======> Downloading 'https://github.com/hashcat/hashcat/archive/v6.1.1/hashcat-6.1.1.tar.gz'.
+--2020-12-04 20:23:32--  https://github.com/hashcat/hashcat/archive/v6.1.1/hashcat-6.1.1.tar.gz
+Resolving github.com... 140.82.114.4
+Connecting to github.com|140.82.114.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/hashcat/hashcat/tar.gz/v6.1.1 [following]
+--2020-12-04 20:23:33--  https://codeload.github.com/hashcat/hashcat/tar.gz/v6.1.1
+Resolving codeload.github.com... 140.82.113.10
+Connecting to codeload.github.com|140.82.113.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: '/sources/hashcat-6.1.1.tar.gz.partial'
+
+     0K .......... .......... .......... .......... ..........  381K
+    50K .......... .......... .......... .......... ..........  770K
+   100K .......... .......... .......... .......... .......... 3.45M
+   150K .......... .......... .......... .......... .......... 1.00M
+   200K .......... .......... .......... .......... .......... 3.10M
+   250K .......... .......... .......... .......... .......... 4.65M
+   300K .......... .......... .......... .......... .......... 4.65M
+   350K .......... .......... .......... .......... .......... 1.78M
+   400K .......... .......... .......... .......... .......... 4.41M
+   450K .......... .......... .......... .......... .......... 5.24M
+   500K .......... .......... .......... .......... .......... 5.39M
+   550K .......... .......... .......... .......... .......... 4.42M
+   600K .......... .......... .......... .......... .......... 5.34M
+   650K .......... .......... .......... .......... .......... 5.24M
+   700K .......... .......... .......... .......... .......... 5.37M
+   750K .......... .......... .......... .......... .......... 4.85M
+   800K .......... .......... .......... .......... .......... 5.24M
+   850K .......... .......... .......... .......... .......... 4.69M
+   900K .......... .......... .......... .......... .......... 6.94M
+   950K .......... .......... .......... .......... .......... 8.74M
+  1000K .......... .......... .......... .......... .......... 10.1M
+  1050K .......... .......... .......... .......... .......... 4.82M
+  1100K .......... .......... .......... .......... .......... 4.16M
+  1150K .......... .......... .......... .......... .......... 4.68M
+  1200K .......... .......... .......... .......... .......... 4.57M
+  1250K .......... .......... .......... .......... .......... 4.89M
+  1300K .......... .......... .......... .......... .......... 5.17M
+  1350K .......... .......... .......... .......... ..........  580K
+  1400K .......... .......... .......... .......... .......... 4.78M
+  1450K .......... .......... .......... .......... .......... 5.15M
+  1500K .......... .......... .......... .......... .......... 5.04M
+  1550K .......... .......... .......... .......... .......... 4.68M
+  1600K .......... .......... .......... .......... .......... 4.72M
+  1650K .......... .......... .......... .......... .......... 4.58M
+  1700K .......... .......... .......... .......... .......... 5.30M
+  1750K .......... .......... .......... .......... .......... 13.6M
+  1800K .......... .......... .......... .......... .......... 15.4M
+  1850K .......... .......... .......... .......... .......... 11.2M
+  1900K .......... .......... .......... .......... .......... 8.90M
+  1950K .......... .......... .......... .......... .......... 9.16M
+  2000K .......... .......... .......... .......... .......... 8.94M
+  2050K .......... .......... .......... .......... .......... 9.12M
+  2100K .......... .......... .......... .......... .......... 9.11M
+  2150K .......... .......... .......... .......... .......... 9.02M
+  2200K .......... .......... .......... .......... .......... 8.52M
+  2250K .......... .......... .......... .......... .......... 9.21M
+  2300K .......... .......... .......... .......... .......... 9.04M
+  2350K .......... .......... .......... .......... .......... 9.29M
+  2400K .......... .......... .......... .......... .......... 9.16M
+  2450K .......... .......... .......... .......... .......... 9.84M
+  2500K .......... .......... .......... .......... .......... 8.76M
+  2550K .......... .......... .......... .......... .......... 8.87M
+  2600K .......... .......... .......... .......... .......... 8.30M
+  2650K .......... .......... .......... .......... .......... 9.33M
+  2700K .......... .......... .......... .......... .......... 8.89M
+  2750K .......... .......... .......... .......... .......... 9.23M
+  2800K .......... .......... .......... .......... .......... 9.05M
+  2850K .......... .......... .......... .......... .......... 9.35M
+  2900K .......... .......... .......... .......... .......... 9.31M
+  2950K .......... .......... .......... .......... .......... 11.1M
+  3000K .......... .......... .......... .......... .......... 8.55M
+  3050K .......... .......... .......... .......... .......... 10.1M
+  3100K .......... .......... .......... .......... .......... 8.76M
+  3150K .......... .......... .......... .......... .......... 9.84M
+  3200K .......... .......... .......... .......... ..........  636K
+  3250K .......... .......... .......... .......... .......... 8.54M
+  3300K .......... .......... .......... .......... .......... 8.98M
+  3350K .......... .......... .......... .......... .......... 9.34M
+  3400K .......... .......... .......... .......... ..........  594K
+  3450K .......... .......... .......... .......... .......... 7.79M
+  3500K .......... .......... .......... .......... .......... 9.48M
+  3550K .......... .......... .......... .......... .......... 10.9M
+  3600K .......... .......... .......... .......... .......... 9.62M
+  3650K .......... .......... .......... .......... .......... 9.28M
+  3700K .......... .......... .......... .......... .......... 8.94M
+  3750K .......... .......... .......... .......... .......... 8.30M
+  3800K .......... .......... .......... .......... .......... 9.08M
+  3850K .......... .......... .......... .......... .......... 9.87M
+  3900K .......... .......... .......... .......... .......... 8.70M
+  3950K .......... .......... .......... .......... .......... 9.09M
+  4000K .......... .......... .......... .......... .......... 8.93M
+  4050K .......... .......... .......... .......... .......... 9.23M
+  4100K .......... .......... .......... .......... .......... 8.81M
+  4150K .......... .......... .......... .......... .......... 9.23M
+  4200K .......... .......... .......... .......... .......... 9.27M
+  4250K .......... .......... .......... .......... .......... 9.26M
+  4300K .......... .......... .......... .......... .......... 9.16M
+  4350K .......... .......... .......... .......... .......... 8.80M
+  4400K .......... .......... .......... .......... .......... 8.82M
+  4450K .......... .......... .......... .......... .......... 9.13M
+  4500K .......... .......... .......... .......... .......... 9.08M
+  4550K .......... .......... .......... .......... .......... 9.10M
+  4600K .......... .......... .......... .......... .......... 9.04M
+  4650K .......... .......... .......... .......... .......... 9.18M
+  4700K .......... .......... .......... .......... .......... 8.85M
+  4750K .......... .......... .......... .......... .......... 9.27M
+  4800K .......... .......... .......... .......... .......... 8.84M
+  4850K .......... .......... .......... .......... .......... 9.15M
+  4900K .......... .......... .......... .......... .......... 8.86M
+  4950K .......... .......... .......... .......... .......... 9.29M
+  5000K .......... .......... .......... .......... .......... 8.64M
+  5050K .......... .......... .......... .......... .......... 9.21M
+  5100K .......... .......... .......... .......... .......... 8.93M
+  5150K .......... .......... .......... .......... .......... 9.18M
+  5200K .......... .......... .......... .......... .......... 8.82M
+  5250K ........                                               8.92M=1.2s
+
+2020-12-04 20:23:34 (4.35 MB/s) - '/sources/hashcat-6.1.1.tar.gz.partial' saved [5385180]
+
+=======> Building '/usr/ports/contrib/hashcat/hashcat#6.1.1-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/hashcat/work/src -xf /sources/hashcat-6.1.1.tar.gz
++ build
++ cd hashcat-6.1.1
++ export PREFIX=/usr
++ PREFIX=/usr
++ PATH=/usr/lib/ccache/:/bin:/sbin:/usr/bin:/usr/sbin
++ sed -i -e '/^CFLAGS/s/+= -O2/+= /' -e '/^CFLAGS/s/+= -pipe /+= /' src/Makefile
++ make
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/affinity.c -o obj/affinity.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/autotune.c -o obj/autotune.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/backend.c -o obj/backend.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/benchmark.c -o obj/benchmark.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/bitmap.c -o obj/bitmap.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/bitops.c -o obj/bitops.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/combinator.c -o obj/combinator.NATIVE.o -fpic
+gcc -c -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu99 -Iinclude/ -IOpenCL/ -Ideps/LZMA-SDK/C -Ideps/zlib -Ideps/zlib/contrib -Ideps/OpenCL-Headers -DWITH_BRAIN -Ideps/xxHash -DWITH_CUBIN -DWITH_HWMON src/common.c -o obj/common.NATIVE.o -fpic
+In file included from src/common.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+make: *** [src/Makefile:487: obj/common.NATIVE.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from src/bitmap.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+In file included from src/affinity.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+In file included from src/benchmark.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+In file included from src/autotune.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+In file included from src/bitops.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+In file included from src/combinator.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+In file included from src/backend.c:6:
+include/common.h:21:2: error: #error "compiling for big-endian architecture not supported"
+ #error "compiling for big-endian architecture not supported"
+  ^~~~~
+make: *** [src/Makefile:487: obj/affinity.NATIVE.o] Error 1
+make: *** [src/Makefile:487: obj/bitmap.NATIVE.o] Error 1
+make: *** [src/Makefile:487: obj/benchmark.NATIVE.o] Error 1
+make: *** [src/Makefile:487: obj/autotune.NATIVE.o] Error 1
+make: *** [src/Makefile:487: obj/bitops.NATIVE.o] Error 1
+make: *** [src/Makefile:487: obj/combinator.NATIVE.o] Error 1
+make: *** [src/Makefile:487: obj/backend.NATIVE.o] Error 1
+=======> ERROR: Building '/usr/ports/contrib/hashcat/hashcat#6.1.1-1.pkg.tar.xz' failed.

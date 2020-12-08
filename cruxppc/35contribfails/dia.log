@@ -1,0 +1,13 @@
+prt-get: installing /usr/ports/contrib/dia
+prt-get: starting build Fri Dec  4 07:48:53 2020
+=======> Downloading 'ftp://ftp.gnome.org/pub/gnome/sources/dia/0.97/dia-0.97.3.tar.xz'.
+--2020-12-04 07:48:53--  ftp://ftp.gnome.org/pub/gnome/sources/dia/0.97/dia-0.97.3.tar.xz
+           => '/sources/dia-0.97.3.tar.xz.partial'
+Resolving ftp.gnome.org... 2620:52:3:1:5054:ff:fe0d:ee0f, 2620:52:3:1:5054:ff:fedd:5ad0, 2620:52:3:1:5054:ff:fede:8714, ...
+Connecting to ftp.gnome.org|2620:52:3:1:5054:ff:fe0d:ee0f|:21... failed: Permission denied.
+Connecting to ftp.gnome.org|2620:52:3:1:5054:ff:fedd:5ad0|:21... failed: Permission denied.
+Connecting to ftp.gnome.org|2620:52:3:1:5054:ff:fede:8714|:21... failed: Permission denied.
+Connecting to ftp.gnome.org|8.43.85.13|:21... failed: No route to host.
+Connecting to ftp.gnome.org|8.43.85.14|:21... failed: No route to host.
+Connecting to ftp.gnome.org|8.43.85.29|:21... failed: No route to host.
+=======> ERROR: Downloading 'ftp://ftp.gnome.org/pub/gnome/sources/dia/0.97/dia-0.97.3.tar.xz' failed.

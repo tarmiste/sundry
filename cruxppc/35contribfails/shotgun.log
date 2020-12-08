@@ -1,0 +1,89 @@
+prt-get: installing /usr/ports/contrib/shotgun
+prt-get: starting build Sun Dec  6 14:10:28 2020
+=======> Building '/usr/ports/contrib/shotgun/shotgun#2.2.0-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/shotgun/work/src -xf /sources/shotgun-2.2.0.tar.gz
++ build
++ cd shotgun-2.2.0
++ prt-get isinst sccache
+package sccache is not installed
++ mkdir /sources/rust
+mkdir: cannot create directory '/sources/rust': File exists
++ true
++ export CARGO_HOME=/sources/rust
++ CARGO_HOME=/sources/rust
++ cargo update
+    Updating crates.io index
+    Updating adler32 v1.0.3 -> v1.2.0
+    Updating autocfg v0.1.6 -> v1.0.1
+    Updating bitflags v1.1.0 -> v1.2.1
+    Updating byteorder v1.3.2 -> v1.3.4
+    Updating cfg-if v0.1.9 -> v1.0.0
+    Updating crc32fast v1.2.0 -> v1.2.1
+    Updating image v0.22.2 -> v0.22.5
+    Updating libc v0.2.62 -> v0.2.81
+    Updating num-integer v0.1.41 -> v0.1.44
+    Updating num-iter v0.1.39 -> v0.1.42
+    Updating num-rational v0.2.2 -> v0.2.4
+    Updating num-traits v0.2.8 -> v0.2.14
+    Updating pkg-config v0.3.16 -> v0.3.19
+    Updating png v0.15.0 -> v0.15.3
+    Removing redox_syscall v0.1.56
+    Updating time v0.1.42 -> v0.1.44
+    Updating unicode-width v0.1.6 -> v0.1.8
+      Adding wasi v0.10.0+wasi-snapshot-preview1
+    Updating winapi v0.3.8 -> v0.3.9
+    Updating x11 v2.18.1 -> v2.18.2
++ cargo fetch
+ Downloading crates ...
+  Downloaded png v0.15.3
+  Downloaded num-rational v0.2.4
+  Downloaded deflate v0.7.20
+  Downloaded x11 v2.18.2
+  Downloaded inflate v0.4.5
+  Downloaded image v0.22.5
++ cargo build --release --locked
+   Compiling autocfg v1.0.1
+   Compiling byteorder v1.3.4
+   Compiling libc v0.2.81
+   Compiling bitflags v1.2.1
+   Compiling adler32 v1.2.0
+   Compiling crc32fast v1.2.1
+   Compiling cfg-if v1.0.0
+   Compiling pkg-config v0.3.19
+   Compiling unicode-width v0.1.8
+   Compiling shotgun v2.2.0 (/usr/ports/contrib/shotgun/work/src/shotgun-2.2.0)
+   Compiling num-traits v0.2.14
+   Compiling num-integer v0.1.44
+   Compiling num-iter v0.1.42
+   Compiling num-rational v0.2.4
+   Compiling inflate v0.4.5
+   Compiling getopts v0.2.21
+   Compiling x11 v2.18.2
+   Compiling deflate v0.7.20
+   Compiling time v0.1.44
+   Compiling png v0.15.3
+   Compiling image v0.22.5
+warning: use of deprecated function `std::mem::uninitialized`: use `mem::MaybeUninit` instead
+  --> src/xwrap.rs:64:29
+   |
+64 |             let mut attrs = mem::uninitialized();
+   |                             ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+error[E0308]: mismatched types
+   --> src/xwrap.rs:251:30
+    |
+251 |         xlib::XParseGeometry(g.as_ptr() as *const i8, &mut x, &mut y, &mut w, &mut h);
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^ expected `u8`, found `i8`
+    |
+    = note: expected raw pointer `*const u8`
+               found raw pointer `*const i8`
+
+error: aborting due to previous error; 1 warning emitted
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `shotgun`
+
+To learn more, run the command again with --verbose.
+=======> ERROR: Building '/usr/ports/contrib/shotgun/shotgun#2.2.0-1.pkg.tar.xz' failed.

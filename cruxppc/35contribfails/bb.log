@@ -1,0 +1,115 @@
+prt-get: installing /usr/ports/contrib/bb
+prt-get: starting build Fri Dec  4 01:26:38 2020
+=======> Downloading 'https://github.com/epilys/bb/archive/0.4.3/bb-0.4.3.tar.gz'.
+--2020-12-04 01:26:38--  https://github.com/epilys/bb/archive/0.4.3/bb-0.4.3.tar.gz
+Resolving github.com... 140.82.112.4
+Connecting to github.com|140.82.112.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/epilys/bb/tar.gz/0.4.3 [following]
+--2020-12-04 01:26:38--  https://codeload.github.com/epilys/bb/tar.gz/0.4.3
+Resolving codeload.github.com... 140.82.113.10
+Connecting to codeload.github.com|140.82.113.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: '/sources/bb-0.4.3.tar.gz.partial'
+
+     0K .......... .......... .......... .......... ..........  393K
+    50K .......... .......... .......... .......... ..........  790K
+   100K .......... .......... .......... .......... ...        8.72M=0.2s
+
+2020-12-04 01:26:39 (732 KB/s) - '/sources/bb-0.4.3.tar.gz.partial' saved [146432]
+
+=======> Building '/usr/ports/contrib/bb/bb#0.4.3-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/bb/work/src -xf /sources/bb-0.4.3.tar.gz
++ build
++ cd bb-0.4.3
++ prt-get isinst sccache
+package sccache is not installed
++ mkdir /sources/rust
+mkdir: cannot create directory '/sources/rust': File exists
++ true
++ export CARGO_HOME=/sources/rust
++ CARGO_HOME=/sources/rust
++ cargo update
+    Updating crates.io index
+    Removing arc-swap v0.4.2
+    Removing arrayvec v0.4.11
+      Adding autocfg v1.0.1
+    Updating bitflags v1.1.0 -> v1.2.1
+    Updating cc v1.0.41 -> v1.0.66
+    Updating cfg-if v0.1.9 -> v0.1.10
+    Updating crossbeam v0.7.2 -> v0.7.3
+    Updating crossbeam-channel v0.3.9 -> v0.4.4
+    Updating crossbeam-deque v0.7.1 -> v0.7.3
+    Updating crossbeam-epoch v0.7.2 -> v0.8.2
+    Updating crossbeam-queue v0.1.2 -> v0.2.3
+    Updating crossbeam-utils v0.6.6 -> v0.7.2
+    Updating libc v0.2.62 -> v0.2.80
+      Adding maybe-uninit v2.0.0
+    Updating memoffset v0.5.1 -> v0.5.6
+    Removing nodrop v0.1.13
+    Updating redox_syscall v0.1.56 -> v0.1.57
+    Removing rustc_version v0.2.3
+    Updating scopeguard v1.0.0 -> v1.1.0
+    Removing semver v0.9.0
+    Removing semver-parser v0.7.0
+    Updating signal-hook v0.1.13 -> v0.1.16
+    Updating signal-hook-registry v1.2.0 -> v1.2.2
+    Updating termion v1.5.3 -> v1.5.5
+    Updating unicode-segmentation v1.3.0 -> v1.7.1
++ cargo fetch
+ Downloading crates ...
+  Downloaded crossbeam-epoch v0.8.2
+  Downloaded crossbeam-channel v0.4.4
+  Downloaded crossbeam-deque v0.7.3
+  Downloaded cassowary v0.3.0
+  Downloaded crossbeam v0.7.3
+  Downloaded nix v0.16.1
+  Downloaded redox_termios v0.1.1
+  Downloaded crossbeam-queue v0.2.3
+  Downloaded numtoa v0.1.0
+  Downloaded termion v1.5.5
+  Downloaded memoffset v0.5.6
+  Downloaded crossbeam-utils v0.7.2
+  Downloaded void v1.0.2
+  Downloaded unicode-segmentation v1.7.1
++ cargo build --release --locked
+   Compiling autocfg v1.0.1
+   Compiling cfg-if v0.1.10
+   Compiling maybe-uninit v2.0.0
+   Compiling lazy_static v1.4.0
+   Compiling libc v0.2.80
+   Compiling bitflags v1.2.1
+   Compiling scopeguard v1.1.0
+   Compiling nix v0.16.1
+   Compiling void v1.0.2
+   Compiling numtoa v0.1.0
+   Compiling bb v0.4.3 (/usr/ports/contrib/bb/work/src/bb-0.4.3)
+   Compiling unicode-segmentation v1.7.1
+   Compiling cassowary v0.3.0
+   Compiling crossbeam-utils v0.7.2
+   Compiling memoffset v0.5.6
+   Compiling crossbeam-epoch v0.8.2
+   Compiling crossbeam-channel v0.4.4
+   Compiling crossbeam-queue v0.2.3
+   Compiling signal-hook-registry v1.2.2
+   Compiling termion v1.5.5
+   Compiling crossbeam-deque v0.7.3
+   Compiling signal-hook v0.1.16
+   Compiling crossbeam v0.7.3
+error[E0308]: mismatched types
+   --> src/main.rs:108:54
+    |
+108 |                 libc::getpwuid_r(pw_uid, &mut pwent, buffer.as_mut_ptr(), 16384, &mut pwentp);
+    |                                                      ^^^^^^^^^^^^^^^^^^^ expected `u8`, found `i8`
+    |
+    = note: expected raw pointer `*mut u8`
+               found raw pointer `*mut i8`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `bb`
+
+To learn more, run the command again with --verbose.
+=======> ERROR: Building '/usr/ports/contrib/bb/bb#0.4.3-1.pkg.tar.xz' failed.

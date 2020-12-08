@@ -1,0 +1,10 @@
+prt-get: installing /usr/ports/contrib/openjdk8
+prt-get: starting build Sat Dec  5 21:20:47 2020
+=======> Downloading 'https://stygian.me/crux/distfiles/openjdk8/corba-8u252-b09.tar.xz'.
+--2020-12-05 21:20:48--  https://stygian.me/crux/distfiles/openjdk8/corba-8u252-b09.tar.xz
+Resolving stygian.me... 45.63.13.210
+Connecting to stygian.me|45.63.13.210|:443... connected.
+ERROR: cannot verify stygian.me's certificate, issued by 'CN=Let\'s Encrypt Authority X3,O=Let\'s Encrypt,C=US':
+  Issued certificate has expired.
+To connect to stygian.me insecurely, use `--no-check-certificate'.
+=======> ERROR: Downloading 'https://stygian.me/crux/distfiles/openjdk8/corba-8u252-b09.tar.xz' failed.

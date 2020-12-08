@@ -1,0 +1,107 @@
+prt-get: installing /usr/ports/contrib/kvantum
+prt-get: starting build Sat Dec  5 01:35:23 2020
+=======> Downloading 'https://github.com/tsujan/Kvantum/archive/V0.17.0/Kvantum-v0.17.0.tar.gz'.
+--2020-12-05 01:35:23--  https://github.com/tsujan/Kvantum/archive/V0.17.0/Kvantum-v0.17.0.tar.gz
+Resolving github.com... 140.82.114.3
+Connecting to github.com|140.82.114.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/tsujan/Kvantum/tar.gz/V0.17.0 [following]
+--2020-12-05 01:35:24--  https://codeload.github.com/tsujan/Kvantum/tar.gz/V0.17.0
+Resolving codeload.github.com... 140.82.112.9
+Connecting to codeload.github.com|140.82.112.9|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: '/sources/Kvantum-v0.17.0.tar.gz.partial'
+
+     0K .......... .......... .......... .......... ..........  369K
+    50K .......... .......... .......... .......... ..........  767K
+   100K .......... .......... .......... .......... .......... 9.10M
+   150K .......... .......... .......... .......... .......... 9.18M
+   200K .......... .......... .......... .......... ..........  789K
+   250K .......... .......... .......... .......... .......... 7.25M
+   300K .......... .......... .......... .......... .......... 10.1M
+   350K .......... .......... .......... .......... .......... 9.56M
+   400K .......... .......... .......... .......... .......... 1.08M
+   450K .......... .......... .......... .......... .......... 9.71M
+   500K .......... .......... .......... .......... .......... 9.98M
+   550K .......... .......... .......... .......... .......... 7.62M
+   600K .......... .......... .......... .......... .......... 9.98M
+   650K .......... .......... .......... .......... .......... 9.80M
+   700K .......... .......... .......... .......... .......... 10.1M
+   750K .......... .......... .......... .......... .......... 8.77M
+   800K .......... .......... .......... .......... .......... 10.1M
+   850K .......... .......... .......... .......... .......... 1.91M
+   900K .......... .......... .......... .......... .......... 9.95M
+   950K .......... .......... .......... .......... .......... 6.76M
+  1000K .......... .......... .......... .......... .......... 11.7M
+  1050K .......... .......... .......... .......... .......... 10.0M
+  1100K .......... .......... .......... .......... .......... 9.67M
+  1150K .......... .......... .......... .......... .......... 9.79M
+  1200K .......... .......... .......... .......... .......... 10.1M
+  1250K .......... .......... .......... .......... .......... 9.78M
+  1300K .......... .......... .......... .......... .......... 9.91M
+  1350K .......... .......... .......... .......... .......... 7.62M
+  1400K .......... .......... .......... .......... .......... 10.0M
+  1450K .......... .......... .......... .......... ..........  581K
+  1500K .......... .......... .......... .......... .......... 9.60M
+  1550K .......... .......... .......... .......... .......... 14.6M
+  1600K .......... .......... .......... .......... .......... 16.7M
+  1650K .......... .......... .......... .......... .......... 16.8M
+  1700K .......... .......... .......... .......... .......... 16.9M
+  1750K .......... .......... .......... .......... .......... 13.5M
+  1800K .......... .......... .......... .......... .......... 17.0M
+  1850K .......... .......... .......... .......... .......... 17.3M
+  1900K .......... .......... .......... .......... .......... 17.0M
+  1950K .......... .......... .......... .......... .......... 15.8M
+  2000K .......... .......... .......... .......... .......... 16.8M
+  2050K .......... .......... .......... .......... .......... 17.0M
+  2100K .......... .......... .......... .......... .......... 2.26M
+  2150K .......... .......... .......... .......... .......... 8.40M
+  2200K .......... .......... .......... .......... .......... 11.9M
+  2250K .......... .......... .......... .......... .......... 15.3M
+  2300K .......... .......... .......... .......... .......... 12.1M
+  2350K .......... .......... .......... .......... .......... 12.2M
+  2400K .......... .......... .......... .......... .......... 14.4M
+  2450K .......... .......... .......... .......... .......... 15.9M
+  2500K .......... .......... .......... .......... .......... 16.3M
+  2550K .......... .......... .......... .......... .......... 12.7M
+  2600K .......... .......... .......... ..                    22.3M=0.6s
+
+2020-12-05 01:35:25 (4.00 MB/s) - '/sources/Kvantum-v0.17.0.tar.gz.partial' saved [2696151]
+
+=======> Building '/usr/ports/contrib/kvantum/kvantum#0.17.0-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/kvantum/work/src -xf /sources/Kvantum-v0.17.0.tar.gz
++ build
++ cmake -S Kvantum-0.17.0/Kvantum -B build -G Ninja -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D 'CMAKE_CXX_FLAGS_RELEASE=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DNDEBUG' -D 'CMAKE_C_FLAGS_RELEASE=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DNDEBUG' -Wno-dev
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at style/CMakeLists.txt:10 (find_package):
+  By not providing "FindKF5WindowSystem.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "KF5WindowSystem", but CMake did not find one.
+
+  Could not find a package configuration file provided by "KF5WindowSystem"
+  with any of the following names:
+
+    KF5WindowSystemConfig.cmake
+    kf5windowsystem-config.cmake
+
+  Add the installation prefix of "KF5WindowSystem" to CMAKE_PREFIX_PATH or
+  set "KF5WindowSystem_DIR" to a directory containing one of the above files.
+  If "KF5WindowSystem" provides a separate development package or SDK, be
+  sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/usr/ports/contrib/kvantum/work/src/build/CMakeFiles/CMakeOutput.log".
+=======> ERROR: Building '/usr/ports/contrib/kvantum/kvantum#0.17.0-1.pkg.tar.xz' failed.

@@ -1,0 +1,10 @@
+prt-get: installing /usr/ports/contrib/warzone2100
+prt-get: starting build Sun Dec  6 20:03:47 2020
+=======> Downloading 'http://downloads.sourceforge.net/project/warzone2100/releases/3.2.1/warzone2100-3.2.1.tar.xz'.
+--2020-12-06 20:03:47--  http://downloads.sourceforge.net/project/warzone2100/releases/3.2.1/warzone2100-3.2.1.tar.xz
+Resolving downloads.sourceforge.net... 216.105.38.13
+Connecting to downloads.sourceforge.net|216.105.38.13|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2020-12-06 20:03:47 ERROR 404: Not Found.
+
+=======> ERROR: Downloading 'http://downloads.sourceforge.net/project/warzone2100/releases/3.2.1/warzone2100-3.2.1.tar.xz' failed.

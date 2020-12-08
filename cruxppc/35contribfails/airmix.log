@@ -1,0 +1,35 @@
+prt-get: installing /usr/ports/contrib/airmix
+prt-get: starting build Thu Dec  3 03:08:23 2020
+=======> Downloading 'http://www.mizrahi.com.ve/projects/airmix/airmix-1.0.tar.gz'.
+--2020-12-03 03:08:24--  http://www.mizrahi.com.ve/projects/airmix/airmix-1.0.tar.gz
+Resolving www.mizrahi.com.ve... 118.243.126.207
+Connecting to www.mizrahi.com.ve|118.243.126.207|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.mizrahi.com.ve/projects/airmix/airmix-1.0.tar.gz [following]
+--2020-12-03 03:08:24--  https://www.mizrahi.com.ve/projects/airmix/airmix-1.0.tar.gz
+Connecting to www.mizrahi.com.ve|118.243.126.207|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30095 (29K) [application/x-tar]
+Saving to: '/sources/airmix-1.0.tar.gz.partial'
+
+     0K .......... .......... .........                       100% 44.3K=0.7s
+
+2020-12-03 03:08:25 (44.3 KB/s) - '/sources/airmix-1.0.tar.gz.partial' saved [30095/30095]
+
+=======> Building '/usr/ports/contrib/airmix/airmix#1.0-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/airmix/work/src -xf /sources/airmix-1.0.tar.gz
++ build
++ cd airmix-1.0
++ make
+cc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Ixosd  -c -o airmix.o airmix.c
+airmix.c: In function 'daemonize':
+airmix.c:149:2: warning: implicit declaration of function 'umask' [-Wimplicit-function-declaration]
+  umask(0);
+  ^~~~~
+cc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Ixosd  -c -o xosd/xosd.o xosd/xosd.c
+cc -lasound -lX11 -lXmu -lXinerama -o airmix airmix.o xosd/xosd.o
+/usr/bin/ld: xosd/xosd.o: undefined reference to symbol 'pthread_create@@GLIBC_2.1'
+/usr/bin/ld: /lib/libpthread.so.0: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:47: airmix] Error 1
+=======> ERROR: Building '/usr/ports/contrib/airmix/airmix#1.0-1.pkg.tar.xz' failed.

@@ -1,0 +1,30 @@
+prt-get: installing /usr/ports/contrib/nsjail
+prt-get: starting build Sat Dec  5 18:45:29 2020
+=======> Building '/usr/ports/contrib/nsjail/nsjail#3.0-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/nsjail/work/src -xf /sources/nsjail-3.0.tar.gz
+bsdtar -p -o -C /usr/ports/contrib/nsjail/work/src -xf /sources/kafel-8e69b8e.tar.gz
++ build
++ cd nsjail-3.0
++ rm -rf kafel
++ mv /usr/ports/contrib/nsjail/work/src/kafel-8e69b8efae415cde3debffbb1e379d9e7a16835a kafel
++ make
+Makefile:60: warning: ignoring prerequisites on suffix rule definition
+make -C kafel
+make[1]: Entering directory '/usr/ports/contrib/nsjail/work/src/nsjail-3.0/kafel'
+Makefile:27: warning: overriding recipe for target 'test'
+build/Makefile.mk:41: warning: ignoring old recipe for target 'test'
+make -C src PROJECT_ROOT=../
+make[2]: Entering directory '/usr/ports/contrib/nsjail/work/src/nsjail-3.0/kafel/src'
+flex lexer.l
+bison parser.y
+cc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -std=gnu11 -Iinclude -Wall -Wextra -Werror -O2 -fPIC -fvisibility=hidden -std=gnu11 -I../include -Wall -Wextra -Werror -O2   -c -o kafel.o kafel.c
+In file included from kafel.c:24:
+common.h:55:2: error: #error "Unsupported architecture"
+ #error "Unsupported architecture"
+  ^~~~~
+make[2]: *** [<builtin>: kafel.o] Error 1
+make[2]: Leaving directory '/usr/ports/contrib/nsjail/work/src/nsjail-3.0/kafel/src'
+make[1]: *** [build/Makefile.mk:41: src] Error 2
+make[1]: Leaving directory '/usr/ports/contrib/nsjail/work/src/nsjail-3.0/kafel'
+make: *** [Makefile:80: kafel/libkafel.a] Error 2
+=======> ERROR: Building '/usr/ports/contrib/nsjail/nsjail#3.0-1.pkg.tar.xz' failed.

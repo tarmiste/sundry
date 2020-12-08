@@ -1,0 +1,157 @@
+prt-get: installing /usr/ports/contrib/ipset
+prt-get: starting build Sat Dec  5 00:27:54 2020
+=======> Downloading 'https://ipset.netfilter.org/ipset-7.9.tar.bz2'.
+--2020-12-05 00:27:54--  https://ipset.netfilter.org/ipset-7.9.tar.bz2
+Resolving ipset.netfilter.org... 92.243.18.11
+Connecting to ipset.netfilter.org|92.243.18.11|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 679273 (663K) [application/x-bzip2]
+Saving to: '/sources/ipset-7.9.tar.bz2.partial'
+
+     0K .......... .......... .......... .......... ..........  7%  175K 4s
+    50K .......... .......... .......... .......... .......... 15%  316K 3s
+   100K .......... .......... .......... .......... .......... 22% 9.85M 2s
+   150K .......... .......... .......... .......... .......... 30% 2.73M 1s
+   200K .......... .......... .......... .......... .......... 37%  413K 1s
+   250K .......... .......... .......... .......... .......... 45% 9.83M 1s
+   300K .......... .......... .......... .......... .......... 52% 9.81M 1s
+   350K .......... .......... .......... .......... .......... 60% 10.2M 0s
+   400K .......... .......... .......... .......... .......... 67%  399K 0s
+   450K .......... .......... .......... .......... .......... 75% 9.66M 0s
+   500K .......... .......... .......... .......... .......... 82% 10.3M 0s
+   550K .......... .......... .......... .......... .......... 90% 9.80M 0s
+   600K .......... .......... .......... .......... .......... 97% 9.67M 0s
+   650K .......... ...                                        100% 27.3M=0.7s
+
+2020-12-05 00:27:57 (886 KB/s) - '/sources/ipset-7.9.tar.bz2.partial' saved [679273/679273]
+
+=======> Building '/usr/ports/contrib/ipset/ipset#7.9-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/ipset/work/src -xf /sources/ipset-7.9.tar.bz2
++ build
++ cd ipset-7.9
++ CONFIG_SHELL=/bin/bash
++ ./configure --prefix=/usr
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking how to print strings... printf
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert powerpc-unknown-linux-gnu file names to powerpc-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert powerpc-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking what extension is used for runtime loadable modules... .so
+checking what variable specifies run-time module search path... LD_LIBRARY_PATH
+checking for the default library search path... /lib /usr/lib 
+checking for library containing dlopen... -ldl
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... yes
+checking for argz.h... yes
+checking for error_t... yes
+checking for argz_add... yes
+checking for argz_append... yes
+checking for argz_count... yes
+checking for argz_create_sep... yes
+checking for argz_insert... yes
+checking for argz_next... yes
+checking for argz_stringify... yes
+checking if argz actually works... yes
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for ltdl.h... yes
+checking whether lt_dlinterface_register is declared... yes
+checking for lt_dladvise_preload in -lltdl... yes
+checking where to find libltdl headers... 
+checking where to find libltdl library... -lltdl
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... no
+checking for strlcpy... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+configure: error: Invalid kernel source directory /lib/modules/4.19.160-cruxppc/source
+=======> ERROR: Building '/usr/ports/contrib/ipset/ipset#7.9-1.pkg.tar.xz' failed.

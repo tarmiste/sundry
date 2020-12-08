@@ -1,0 +1,135 @@
+prt-get: installing /usr/ports/contrib/open-isns
+prt-get: starting build Sat Dec  5 19:25:51 2020
+=======> Building '/usr/ports/contrib/open-isns/open-isns#0.100-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/open-isns/work/src -xf /sources/open-isns-0.100.tar.gz
++ build
++ cd open-isns-0.100
++ ./configure --prefix=/usr
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... yes
+checking how to run the C preprocessor... gcc -E
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for sh... /bin/sh
+checking for inline... inline
+checking for ANSI C header files... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for socket in -lsocket... no
+checking for getopt_long... yes
+checking openssl/crypto.h usability... yes
+checking openssl/crypto.h presence... yes
+checking for openssl/crypto.h... yes
+checking for EVP_PKEY_new in -lcrypto... yes
+checking slp.h usability... no
+checking slp.h presence... no
+checking for slp.h... no
+checking for SLPOpen in -lslp... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/libisns/paths.h
+config.status: creating config.h
++ make
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o server.o server.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o client.o client.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o objects.o objects.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o callback.o callback.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o timer.o timer.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o vendor.o vendor.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o db.o db.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o db-file.o db-file.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o db-policy.o db-policy.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o relation.o relation.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o scope.o scope.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE  -c -o message.o message.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o security.o security.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o authblock.o authblock.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o policy.o policy.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o pki.o pki.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o register.o register.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o query.o query.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o getnext.o getnext.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o deregister.o deregister.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o esi.o esi.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o scn.o scn.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o dd.o dd.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o entity.o entity.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o portal-group.o portal-group.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o storage-node.o storage-node.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o domain.o domain.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o simple.o simple.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o tags.o tags.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o attrs.o attrs.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o export.o export.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o socket.o socket.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o slp.o slp.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o error.o error.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o logging.o logging.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o config.o config.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o parser.o parser.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o buffer.o buffer.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o pidfile.o pidfile.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o sysdep-unix.o sysdep-unix.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o util.o util.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o bitvector.o bitvector.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o mdebug.o mdebug.c
+ar cr libisns.a server.o client.o objects.o callback.o timer.o vendor.o db.o db-file.o db-policy.o relation.o scope.o message.o security.o authblock.o policy.o pki.o register.o query.o getnext.o deregister.o esi.o scn.o dd.o entity.o portal-group.o storage-node.o domain.o simple.o tags.o attrs.o export.o socket.o slp.o error.o logging.o config.o parser.o buffer.o pidfile.o sysdep-unix.o util.o bitvector.o mdebug.o
+touch libisns.so.0
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o isnsd.o isnsd.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include  -o isnsd isnsd.o -L. -lisns -Wl,--as-needed -lcrypto 
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o isnsadm.o isnsadm.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include  -o isnsadm isnsadm.o -L. -lisns -Wl,--as-needed -lcrypto 
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o local.o local.c
+gcc -Wall -Werror -Wextra -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -I. -Iinclude -I. -I./include -D_GNU_SOURCE -c -o isnsdd.o isnsdd.c
+isnsdd.c: In function 'check_portal_registration':
+isnsdd.c:404:36: error: comparison of integer expressions of different signedness: 'long unsigned int' and 'time_t' {aka 'long int'} [-Werror=sign-compare]
+   if (last_modified + 2 * interval > now) {
+                                    ^
+cc1: all warnings being treated as errors
+make: *** [Makefile:151: isnsdd.o] Error 1
+=======> ERROR: Building '/usr/ports/contrib/open-isns/open-isns#0.100-1.pkg.tar.xz' failed.

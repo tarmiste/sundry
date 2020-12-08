@@ -1,0 +1,1464 @@
+prt-get: installing /usr/ports/contrib/wine-staging
+prt-get: starting build Sun Dec  6 20:04:39 2020
+=======> Building '/usr/ports/contrib/wine-staging/wine-staging#5.20-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/wine-staging/work/src -xf /sources/wine-5.20.tar.xz
+bsdtar -p -o -C /usr/ports/contrib/wine-staging/work/src -xf /sources/wine-staging-5.20.tar.gz
+cp /sources/wine-gecko-2.47.1-x86.msi /usr/ports/contrib/wine-staging/work/src
+cp /sources/wine-gecko-2.47.1-x86_64.msi /usr/ports/contrib/wine-staging/work/src
+cp /sources/wine-mono-5.1.1-x86.msi /usr/ports/contrib/wine-staging/work/src
++ build
++ cd wine-staging-5.20
++ ./patches/patchinstall.sh DESTDIR=../wine-5.20 --all
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0001-windowscodecs-Avoid-implicit-cast-of-interface-point.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0021-d2d1-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0022-d3d11-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0023-d3d8-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0024-d3d9-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0025-ddraw-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0026-dwrite-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0027-msxml3-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0028-oleaut32-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0029-rpcrt4-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0030-vbscript-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0031-include-Check-element-type-in-CONTAINING_RECORD-and-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Compiler_Warnings/0032-wsdapi-Avoid-implicit-cast-of-interface-pointer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Pipelight/0001-winex11-Implement-X11DRV_FLUSH_GDI_DISPLAY-ExtEscape-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Pipelight/0002-user32-Decrease-minimum-SetTimer-interval-to-5-ms.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Pipelight/0004-winex11.drv-Indicate-direct-rendering-through-OpenGL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Staging/0001-kernel32-Add-winediag-message-to-show-warning-that-t.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/Staging/0002-winelib-Append-Staging-at-the-end-of-the-version-s.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/advapi32-LsaLookupPrivilegeName/0001-advapi32-Fix-error-code-when-calling-LsaOpenPolicy-f.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/advapi32-LsaLookupPrivilegeName/0002-advapi32-Use-TRACE-for-LsaOpenPolicy-LsaClose.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/api-ms-win-Stub_DLLs/0006-iertutil-Add-dll-and-add-stub-for-ordinal-811.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/api-ms-win-Stub_DLLs/0009-ext-ms-win-xaml-pal-l1-1-0-Add-dll-and-add-stub-for-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/api-ms-win-Stub_DLLs/0010-ext-ms-win-appmodel-usercontext-l1-1-0-Add-dll-and-a.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/api-ms-win-Stub_DLLs/0012-ext-ms-win-xaml-pal-l1-1-0-Add-stub-for-GetThemeServ.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/api-ms-win-Stub_DLLs/0027-uiautomationcore-Add-dll-and-stub-some-functions.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/atl-AtlAxDialogBox/0001-atl-Implement-AtlAxDialogBox-A-W.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/bcrypt-ECDHSecretAgreement/0001-bcrypt-Allow-multiple-backends-to-coexist.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/bcrypt-ECDHSecretAgreement/0002-bcrypt-Implement-BCryptSecretAgreement-with-libgcryp.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/bcrypt-ECDHSecretAgreement/0003-bcrypt-Implement-BCRYPT_KDF_HASH.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/cmd-launch-association/0001-cmd-Support-for-launching-programs-based-on-file-ass.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/cmd-launch-association/0002-cmd-ftype-failed-to-clear-file-associations.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/color-sRGB-profile/0001-winspool-Add-sRGB-color-profile.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/comctl32-Listview_DrawItem/0001-comctl32-Preserve-custom-colors-between-subitems.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/comctl32-rebar-capture/0001-comctl32-Fixed-rebar-behaviour-when-there-s-capture-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/comctl32-version_6/0001-comctl32-Bump-version-to-6.0.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/comdlg32-lpstrFileTitle/0001-comdlg32-Postpone-setting-ofn-lpstrFileTitle-to-work.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/crypt32-CMS_Certificates/0001-crypt32-Skip-unknown-item-when-decoding-a-CMS-certif.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/cryptext-CryptExtOpenCER/0001-cryptext-Implement-CryptExtOpenCER.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0001-include-Add-cuda.h.h.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0002-nvcuda-Add-stub-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0003-nvcuda-First-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0004-nvcuda-Implement-new-functions-added-in-CUDA-6.5.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0005-nvcuda-Properly-wrap-undocumented-ContextStorage-int.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0006-nvcuda-Emulate-two-d3d9-initialization-functions.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0007-nvcuda-Properly-wrap-stream-callbacks-by-forwarding-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0008-nvcuda-Add-support-for-CUDA-7.0.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0009-nvcuda-Implement-cuModuleLoad-wrapper-function.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0010-nvcuda-Search-for-dylib-library-on-Mac-OS-X.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuda-CUDA_Support/0011-nvcuda-Add-semi-stub-for-cuD3D10GetDevice.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0001-nvapi-First-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0002-nvapi-Add-stubs-for-NvAPI_EnumLogicalGPUs-and-undocu.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0003-nvapi-Add-NvAPI_GetPhysicalGPUsFromLogicalGPU.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0004-nvapi-Add-stub-for-NvAPI_EnumPhysicalGPUs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0005-nvapi-Add-stubs-for-NvAPI_GPU_GetFullName.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0006-nvapi-Explicity-return-NULL-for-0x33c7358c-and-0x593.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0007-nvapi-Add-stub-for-NvAPI_DISP_GetGDIPrimaryDisplayId.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0008-nvapi-Add-stub-for-EnumNvidiaDisplayHandle.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0009-nvapi-Add-stub-for-NvAPI_SYS_GetDriverAndBranchVersi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0010-nvapi-Add-stub-for-NvAPI_Unload.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0011-nvapi-Add-stub-for-NvAPI_D3D_GetCurrentSLIState.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0012-nvapi-tests-Use-structure-to-list-imports.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0013-nvapi-Add-stub-for-NvAPI_GetLogicalGPUFromDisplay.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0014-nvapi-Add-stub-for-NvAPI_D3D_GetObjectHandleForResou.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0015-nvapi-Add-stub-for-NvAPI_D3D9_RegisterResource.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0016-nvapi-Improve-NvAPI_D3D_GetCurrentSLIState.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0017-nvapi-Implement-NvAPI_GPU_Get-Physical-Virtual-Frame.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0018-nvapi-Add-stub-for-NvAPI_GPU_GetGpuCoreCount.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0019-nvapi-Implement-NvAPI_D3D11_SetDepthBoundsTest.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvapi-Stub_DLL/0020-nvapi-Implement-NvAPI_D3D11_CreateDevice-and-NvAPI_D.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0001-d3d11-Add-stub-deferred-rendering-context.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0002-wined3d-Add-wined3d_resource_map_info-function.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0003-d3d11-Initial-implementation-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0004-d3d11-Implement-CSSetShader-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0005-d3d11-Implement-CSSetConstantBuffers-for-deferred-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0006-d3d11-Implement-Dispatch-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0007-d3d11-Implement-CSSetUnorderedAccessViews-for-deferr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0008-d3d11-Implement-ClearRenderTargetView-for-deferred-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0009-d3d11-Implement-Draw-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0010-d3d11-Implement-ClearDepthStencilView-for-deferred-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0011-d3d11-Implement-GSSetShader-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0012-d3d11-Implement-GSSetConstantBuffers-for-deferred-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0013-d3d11-Implement-CSSetShaderResources-for-deferred-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0014-d3d11-Implement-GSSetShaderResources-for-deferred-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0015-d3d11-Implement-HSSetShaderResources-for-deferred-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0016-d3d11-Implement-VSSetShaderResources-for-deferred-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0017-d3d11-Implement-CSSetSamplers-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0018-d3d11-Implement-GSSetSamplers-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0019-d3d11-Implement-HSSetSamplers-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0020-d3d11-Implement-VSSetSamplers-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0021-d3d11-Implement-Begin-and-End-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0022-d3d11-Implement-CopyResource-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0023-d3d11-Implement-SetResourceMinLOD-for-deferred-conte.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0024-d3d11-Implement-CopySubresourceRegion-for-deferred-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0025-d3d11-Implement-ResolveSubresource-for-deferred-cont.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0026-d3d11-Implement-CopyStructureCount-for-deferred-cont.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0027-d3d11-Implement-DrawAuto-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0028-d3d11-Implement-DrawInstanced-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0029-d3d11-Implement-DrawInstancedIndirect-for-deferred-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0030-d3d11-Implement-DrawIndexedInstancedIndirect-for-def.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0031-d3d11-Implement-ClearUnorderedAccessViewUint-for-def.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0032-d3d11-Implement-ClearUnorderedAccessViewFloat-for-de.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0033-d3d11-Implement-RsSetScissorRects-for-deferred-conte.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0034-d3d11-Implement-OMSetRenderTargetsAndUnorderedAccess.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0035-d3d11-Implement-SOSetTargets-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0036-d3d11-Implement-GenerateMips-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0037-d3d11-Implement-DispatchIndirect-for-deferred-contex.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0038-d3d11-Implement-SetPredication-for-deferred-contexts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0039-d3d11-Implement-d3d11_deferred_context_UpdateSubreso.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0040-d3d11-Implement-restoring-of-state-after-executing-a.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0041-d3d11-Allow-NULL-pointer-for-initial-count-in-d3d11_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0042-d3d11-Correctly-align-map-info-buffer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0043-d3d11-tests-Add-a-basic-test-for-drawing-with-deferr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0044-d3d11-Support-ID3D11DeviceContext1-for-deferred-cont.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3d11-Deferred_Context/0045-d3d11-Implement-ID3D11Device2-GetImmediateContext1.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9-32bpp_Alpha_Channel/0001-d3dx9-Return-D3DFMT_A8R8G8B8-in-D3DXGetImageInfoFrom.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-BumpLuminance/0002-d3dx9_36-Add-format-description-for-X8L8V8U8-for-for.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-CloneEffect/0001-d3dx9_36-Improve-stub-for-ID3DXEffectImpl_CloneEffec.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-D3DXDisassembleShader/0004-d3dx9_36-Implement-D3DXDisassembleShader.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-D3DXDisassembleShader/0005-d3dx9_36-tests-Add-initial-tests-for-D3DXDisassemble.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-D3DXDisassembleShader/0006-d3dx9_36-tests-Add-additional-tests-for-special-case.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-D3DXOptimizeVertices/0002-d3dx9_36-Add-semi-stub-for-D3DXOptimizeVertices.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-D3DXSHProjectCubeMap/0001-d3dx9_-Add-D3DXSHProjectCubeMap-stub.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-D3DXStubs/0003-d3dx9-Implement-D3DXComputeTangent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-DDS/0001-d3dx9_36-Add-support-for-FOURCC-surface-to-save_dds_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-DDS/0002-d3dx9_36-Improve-D3DXSaveTextureToFile-to-save-simpl.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-Filter_Warnings/0001-d3dx9_36-Filter-out-D3DCompile-warning-messages-that.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/d3dx9_36-UpdateSkinnedMesh/0001-d3dx9_36-Implement-ID3DXSkinInfoImpl_UpdateSkinnedMe.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dbghelp-Debug_Symbols/0001-dbghelp-Always-check-for-debug-symbols-in-BINDIR.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-Device_Caps/0001-ddraw-Don-t-set-HWTRANSFORMANDLIGHT-flag-on-d3d7-RGB.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-Device_Caps/0002-ddraw-Set-dwZBufferBitDepth-in-ddraw7_GetCaps.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-IDirect3DTexture2_Load/0001-ddraw-Allow-size-and-format-conversions-in-IDirect3D.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-IDirect3DTexture2_Load/0002-ddraw-tests-Add-more-tests-for-IDirect3DTexture2-Loa.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-Rendering_Targets/0001-ddraw-Create-rendering-targets-in-video-memory-if-po.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-Silence_FIXMEs/0001-ddraw-Silence-noisy-FIXME-about-unimplemented-D3DPRO.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-Texture_Wrong_Caps/0001-ddraw-Allow-setting-texture-without-DDSCAPS_TEXTURE-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ddraw-version-check/0001-ddraw-Return-correct-devices-based-off-requested-Dir.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-joy-mappings/0001-dinput-Load-users-Joystick-mappings.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-joy-mappings/0002-dinput-Allow-empty-Joystick-mappings.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-joy-mappings/0003-dinput-Support-username-in-Config-dialog.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-joy-mappings/0004-dinput-Dont-allow-Fixed-actions-to-be-changed.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-SetActionMap-genre/0001-dinput-Allow-mapping-of-controls-based-of-Genre-type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-SetActionMap-genre/0002-dinput-Improved-tracing-of-Semantic-value.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-axis-recalc/0001-dinput-Recalculated-Axis-after-deadzone-change.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-reconnect-joystick/0001-dinput-Allow-reconnecting-to-disconnected-joysticks.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dinput-remap-joystick/0001-dinput-Allow-remapping-of-joystick-buttons.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-Fast_Mixer/0001-dsound-Add-a-linear-resampler-for-use-with-a-large-n.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0001-dsound-Apply-filters-before-sound-is-multiplied-to-s.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0002-dsound-Add-EAX-v1-constants-and-structs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0003-dsound-Report-that-we-support-EAX-v1.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0004-dsound-Add-EAX-propset-stubs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0005-dsound-Add-EAX-presets.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0006-dsound-Support-getting-and-setting-EAX-properties.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0007-dsound-Support-getting-and-setting-EAX-buffer-proper.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0008-dsound-Add-EAX-init-and-free-stubs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0009-dsound-Feed-data-through-EAX-function.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0010-dsound-Allocate-EAX-delay-lines.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0011-dsound-Add-EAX-VerbPass-stub.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0012-dsound-Implement-EAX-lowpass-filter.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0013-dsound-Add-delay-line-EAX-functions.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0014-dsound-Implement-EAX-early-reflections.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0015-dsound-Implement-EAX-decorrelator.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0016-dsound-Implement-EAX-late-reverb.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0017-dsound-Implement-EAX-late-all-pass-filter.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0018-dsound-Various-improvements-to-EAX-support.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0019-dsound-Allow-disabling-of-EAX-support-in-the-registr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0020-dsound-Add-stub-support-for-DSPROPSETID_EAX20_Listen.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dsound-EAX/0021-dsound-Add-stub-support-for-DSPROPSETID_EAX20_Buffer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dwmapi-DwmGetTransportAttributes/0002-dwmapi-add-initial-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dwrite-FontFallback/0001-dwrite-Test-IDWriteTextFormat-with-nonexistent-font.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dwrite-FontFallback/0002-dwrite-Test-GetMetrics-with-custom-fontcollection.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dwrite-FontFallback/0004-dwrite-Use-font-fallback-when-mapping-characters.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dwrite-FontFallback/0005-dwrite-Use-MapCharacters-for-non-visual-characters.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dwrite-FontFallback/0006-dwrite-Use-MapCharacters-for-dummy-line-metrics.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dxdiagn-Enumerate_DirectSound/0001-dxdiagn-Enumerate-DirectSound-devices-and-add-some-b.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/dxdiagn-GetChildContainer_Leaf_Nodes/0001-dxdiagn-Calling-GetChildContainer-with-an-empty-stri.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0001-ntdll-Implement-retrieving-DOS-attributes-in-fd_-get.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0003-ntdll-Implement-storing-DOS-attributes-in-NtSetInfor.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0004-ntdll-Implement-storing-DOS-attributes-in-NtCreateFi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0005-libport-Add-support-for-Mac-OS-X-style-extended-attr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0006-libport-Add-support-for-FreeBSD-style-extended-attri.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0007-ntdll-Perform-the-Unix-style-hidden-file-check-withi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-DOS_Attributes/0008-ntdll-Always-store-SAMBA_XATTR_DOS_ATTRIB-when-path-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-NtQueryEaFile/0001-ntdll-Improve-stub-of-NtQueryEaFile.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0001-ntdll-Add-support-for-junction-point-creation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0002-ntdll-Add-support-for-reading-junction-points.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0003-ntdll-Add-support-for-deleting-junction-points.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0004-ntdll-Add-a-test-for-junction-point-advertisement.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0005-server-Add-support-for-deleting-junction-points-with.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0007-ntdll-Add-support-for-absolute-symlink-creation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0008-ntdll-Add-support-for-reading-absolute-symlinks.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0009-ntdll-Add-support-for-deleting-symlinks.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0010-ntdll-Add-support-for-relative-symlink-creation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0011-ntdll-Add-support-for-reading-relative-symlinks.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0012-ntdll-Add-support-for-file-symlinks.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0013-ntdll-Allow-creation-of-dangling-reparse-points-to-n.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0014-ntdll-Correctly-report-file-symbolic-links-as-files.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0015-kernel32-Set-error-code-when-attempting-to-delete-fi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0016-server-Properly-handle-file-symlink-deletion.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0017-ntdll-Always-report-symbolic-links-as-containing-zer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0018-ntdll-Find-dangling-symlinks-quickly.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0019-kernel32-Implement-CreateSymbolicLink-A-W-with-ntdll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0020-kernel32-Add-reparse-support-to-FindNextFile.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0021-wcmd-Display-reparse-point-type-in-directory-listing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0022-wcmd-Show-reparse-point-target-in-directory-listing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0023-wcmd-Add-junction-point-support-to-mklink.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Junction_Points/0024-server-Fix-obtaining-information-about-a-symlink.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-PeekMessage/0001-server-Fix-handling-of-GetMessage-after-previous-Pee.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Realtime_Priority/0001-wineserver-Draft-to-implement-priority-levels-throug.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Signal_Thread/0001-server-Do-not-signal-thread-until-it-is-really-gone.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0001-configure-Check-for-sys-eventfd.h-ppoll-and-shm_open.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0002-server-Create-server-objects-for-eventfd-based-synch.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0003-ntdll-Create-eventfd-based-objects-for-semaphores.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0004-ntdll-Implement-NtReleaseSemaphore.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0005-ntdll-Implement-NtClose.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0006-ntdll-Implement-NtWaitForMultipleObjects.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0007-ntdll-server-Implement-NtCreateEvent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0008-ntdll-Implement-NtSetEvent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0009-ntdll-Implement-NtResetEvent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0010-ntdll-Implement-waiting-on-manual-reset-events.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0011-server-Add-an-object-operation-to-grab-the-esync-fil.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0012-server-Add-a-request-to-get-the-eventfd-file-descrip.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0013-server-Create-eventfd-file-descriptors-for-process-o.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0014-ntdll-server-Implement-waiting-on-server-bound-objec.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0015-server-Create-eventfd-file-descriptors-for-event-obj.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0016-server-Allow-re-setting-esync-events-on-the-server-s.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0017-ntdll-Try-again-if-poll-returns-EINTR.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0018-server-Create-eventfd-file-descriptors-for-thread-ob.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0019-rpcrt4-Avoid-closing-the-server-thread-handle-while-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0020-server-Create-eventfd-file-descriptors-for-message-q.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0021-server-ntdll-Implement-message-waits.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0022-server-Create-eventfd-descriptors-for-device-manager.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0023-ntdll-server-Implement-NtCreateMutant.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0024-ntdll-Implement-NtReleaseMutant.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0025-ntdll-Implement-waiting-on-mutexes.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0026-ntdll-Implement-wait-all.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0027-esync-Add-a-README.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0028-ntdll-Implement-NtSignalAndWaitForSingleObject.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0029-ntdll-Implement-NtOpenSemaphore.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0030-ntdll-Implement-NtOpenEvent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0031-ntdll-Implement-NtOpenMutant.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0032-server-Implement-esync_map_access.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0033-server-Implement-NtDuplicateObject.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0034-server-Create-eventfd-descriptors-for-timers.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0035-ntdll-server-Implement-alertable-waits.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0036-esync-Update-README.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0037-kernel32-tests-Mark-some-existing-tests-as-failing-u.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0038-kernel32-tests-Add-some-semaphore-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0039-kernel32-tests-Add-some-event-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0040-kernel32-tests-Add-some-mutex-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0041-kernel32-tests-Add-some-tests-for-wait-timeouts.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0042-kernel32-tests-Zigzag-test.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0043-ntdll-Implement-NtQuerySemaphore.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0044-ntdll-Implement-NtQueryEvent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0045-ntdll-Implement-NtQueryMutant.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0046-server-Create-eventfd-descriptors-for-pseudo-fd-obje.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0047-esync-Update-README.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0048-esync-Add-note-about-file-limits-not-being-raised-wh.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0049-ntdll-Try-to-avoid-poll-for-uncontended-objects.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0050-ntdll-server-Try-to-avoid-poll-for-signaled-events.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0051-esync-Update-README.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0052-ntdll-Implement-NtPulseEvent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0053-esync-Update-README.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0054-server-Create-esync-file-descriptors-for-true-file-o.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0055-ntdll-server-Abandon-esync-mutexes-on-thread-exit.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/eventfd_synchronization/0056-server-Create-esync-file-descriptors-for-console-ser.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/explorer-Video_Registry_Key/0001-explorer-Create-CurrentControlSet-Control-Video-regi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/fonts-Missing_Fonts/0001-fonts-Add-Liberation-Sans-as-an-Arial-replacement.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/fonts-Missing_Fonts/0002-fonts-Add-Liberation-Serif-as-an-Times-New-Roman-rep.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/fonts-Missing_Fonts/0003-fonts-Add-Liberation-Mono-as-an-Courier-New-replacem.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/fonts-Missing_Fonts/0004-fonts-Add-WenQuanYi-Micro-Hei-as-a-Microsoft-Yahei-r.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/fonts-Missing_Fonts/0005-Add-licenses-for-fonts-as-separate-files.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/gdi32-rotation/0001-gdi32-fix-for-rotated-Arc-ArcTo-Chord-and-Pie-drawin.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/gdi32-rotation/0002-gdi32-fix-for-rotated-ellipse.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/gdiplus-Performance-Improvements/0001-gdiplus-Change-the-order-of-x-y-loops-in-the-scaler.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/gdiplus-Performance-Improvements/0002-gdiplus-Change-multiplications-by-additions-in-the-x.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/gdiplus-Performance-Improvements/0003-gdiplus-Remove-ceilf-floorf-calls-from-bilinear-scal.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/gdiplus-Performance-Improvements/0004-gdiplus-Prefer-using-pre-multiplied-ARGB-data-in-the.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/imagehlp-BindImageEx/0001-imagehlp-Implement-parts-of-BindImageEx-to-make-free.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/imm32-message_on_focus/0001-imm32-Only-generate-WM_IME_SETCONTEXT-message-if-win.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/include-winsock/0001-include-Always-define-hton-ntoh-macros.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/inseng-Implementation/0001-inseng-Implement-CIF-reader-and-download-functions.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/iphlpapi-System_Ping/0001-iphlpapi-Fallback-to-system-ping-when-ICMP-permissio.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-FileDispositionInformation/0001-ntdll-tests-Added-tests-to-set-disposition-on-file-w.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-FileDispositionInformation/0002-server-Do-not-allow-to-set-disposition-on-file-which.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-CopyFileEx/0001-kernel32-Add-support-for-progress-callback-in-CopyFi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-Debugger/0001-kernel32-Always-start-debugger-on-WinSta0.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-FindFirstFile/0001-kernel32-Strip-invalid-characters-from-mask-in-FindF.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-FindFirstFile/0002-kernel32-tests-Add-tests-for-FindFirstFileA-with-inv.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-Job_Tests/0001-kernel32-tests-Add-tests-for-job-object-accounting.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-Processor_Group/0001-kernel32-Implement-some-processor-group-functions.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-Processor_Group/0002-kernel32-Add-stub-for-SetThreadIdealProcessorEx.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-SetProcessDEPPolicy/0001-kernel32-Implement-SetProcessDEPPolicy.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-SetProcessDEPPolicy/0002-kernel32-Implement-GetSystemDEPPolicy.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/kernel32-SetProcessDEPPolicy/0003-kernel32-Make-system-DEP-policy-affect-GetProcessDEP.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/krnl386.exe16-GDT_LDT_Emulation/0001-krnl386.exe16-Emulate-GDT-and-LDT-access.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/krnl386.exe16-Invalid_Console_Handles/0001-krnl386.exe16-Really-translate-all-invalid-console-h.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/loader-KeyboardLayouts/0001-loader-Add-Keyboard-Layouts-registry-enteries.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/loader-KeyboardLayouts/0002-user32-Improve-GetKeyboardLayoutList.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0001-mfmediaengine-Provide-the-partial-topology-to-the-me.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0002-mfmediaengine-Issue-MF_MEDIA_ENGINE_EVENT_CANPLAY-up.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0003-mfmediaengine-Issue-MF_MEDIA_ENGINE_EVENT_PLAYING-up.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0004-mfmediaengine-Issue-MF_MEDIA_ENGINE_EVENT_ENDED-upon.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0005-mf-Unconditionally-deliver-NULL-EOS-samples.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0006-winegstreamer-Insert-videoconvert-into-decoded-video.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0007-winegstreamer-Insert-audioconvert-into-decoded-audio.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0008-winegstreamer-Implement-IMFMediaSource-CreatePresent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0009-winegstreamer-Implement-IMFMediaSource-Start.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0010-winegstreamer-Implement-IMFMediaStream-RequestSample.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0011-winegstreamer-Insert-parser-into-pipeline-to-rectify.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0012-winegstreamer-Translate-H.264-caps-to-attributes.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0013-winegstreamer-Translate-WMV-caps-to-attributes.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0014-winegstreamer-Translate-AAC-caps-to-attributes.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0015-winegstreamer-Translate-MPEG-4-Section-2-caps-to-att.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0016-winegstreamer-Translate-WMA-caps-to-attributes.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0017-winegstreamer-Translate-H.264-attributes-to-caps.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0018-winegstreamer-Translate-WMV-attributes-to-caps.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0019-winegstreamer-Translate-AAC-attributes-to-caps.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0020-winegstreamer-Translate-MPEG-4-Section-2-attributes-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0021-winegstreamer-Translate-WMA-attributes-to-caps.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0022-winegstreamer-Implement-IMFMediaSource-GetCharacteri.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0023-winegstreamer-Calculate-the-MF_PD_DURATION-of-the-me.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0024-tools-Add-support-for-multiple-parent-directories.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0025-mf-Introduce-handler-helper.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0026-Introduce-IMFSample-GstBuffer-converter.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0027-winegstreamer-Implement-decoder-MFT-on-gstreamer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0028-mfreadwrite-Select-all-streams-when-creating-a-sourc.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0029-Miscellaneous.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0030-WMV.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0031-mf-Ask-for-more-samples-from-upstream-node-when-upon.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0032-winegstreamer-Implement-IMFMedisStream-GetMediaSourc.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0033-Expose-PCM-output-type-on-AAC-decoder.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0034-mfplat-Add-I420-format-information.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0035-winegstreamer-Implement-Color-Converter-MFT.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0036-HACK-Set-BPS-to-16-for-output-template.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0037-Improve-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0038-Revert-Improve-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0039-Report-streams-backwards-and-only-select-one-of-each.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0040-winegstreamer-Implement-IMFMediaSource-Stop.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0041-winegstreamer-Introduce-MPEG-4-Section-2-video-decod.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0042-HACK-Switch-between-all-selection-streams-on-MF_SOUR.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0043-winegstreamer-Introduce-WMA-audio-decoder.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0044-Support-stereo-down-folding.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0045-winegstreamer-Implement-MF_SD_LANGUAGE.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0046-Revert-mf-topoloader-Add-a-structure-for-iterative-b.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0047-Revert-mf-topoloader-Clone-source-nodes-as-a-first-l.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0048-Revert-mf-topoloader-Switch-to-public-interface-for-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0049-mf-Partially-implement-the-topology-loader.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0050-mf-Miscelaneous-fixes-to-topology-resolution.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0051-Rewrite-branch-resolver.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0053-winegstreamer-Implement-audio-conversion-MFT.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0054-HACK-Shutdown-media-sinks-on-session-shutdown.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0055-HACK-Flush-decoder-when-changing-times.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0056-mfmediaengine-Implement-GetNativeVideoSize.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mfplat-streaming-support/0060-winegstreamer-Support-eAVEncH264VProfile_Constrained.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mmsystem.dll16-MIDIHDR_Refcount/0001-mmsystem.dll16-Refcount-midihdr-to-work-around-buggy.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mmsystem.dll16-MIDIHDR_Refcount/0002-mmsystem.dll16-Translate-MidiIn-messages.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mountmgr-DosDevices/0001-mountmgr.sys-Write-usable-device-paths-into-HKLM-SYS.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mscoree-CorValidateImage/0001-mscoree-Implement-_CorValidateImage.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/msctf-ITfActiveLanguageProfileNotifySink/0001-msctf-Added-ITfActiveLanguageProfileNotifySink-suppo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mshtml-HTMLLocation_put_hash/0001-mshtml-Add-IHTMLLocation-hash-property-s-getter-impl.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/mshtml-TranslateAccelerator/0001-mshtml-Improve-IOleInPlaceActiveObject-TranslateAcce.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/msi-msi_vcl_get_cost/0001-msi-Do-not-sign-extend-after-multiplying.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/msvcrt-Math_Precision/0001-msvcrt-Calculate-sinh-cosh-exp-pow-with-higher-preci.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/msxml3-FreeThreadedXMLHTTP60/0001-include-Remove-interfaces-already-define-in-msxml6.i.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/msxml3-FreeThreadedXMLHTTP60/0002-include-Add-IXMLHTTPRequest2-3-interfaces.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/msxml3-FreeThreadedXMLHTTP60/0003-msxml3-Implement-FreeThreadedXMLHTTP60.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/netutils-dll/0001-netutils-New-DLL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-APC_Performance/0001-ntdll-Reuse-old-async-fileio-structures-if-possible.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Activation_Context/0001-ntdll-Fix-return-value-for-missing-ACTIVATION_CONTEX.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ApiSetMap/0001-ntdll-Add-dummy-apiset-to-PEB.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ForceBottomUpAlloc/0001-ntdll-Increase-step-after-failed-map-attempt-in-try_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ForceBottomUpAlloc/0002-ntdll-Increase-free-ranges-view-block-size-on-64-bit.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ForceBottomUpAlloc/0003-ntdll-Force-virtual-memory-allocation-order.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ForceBottomUpAlloc/0004-ntdll-Exclude-natively-mapped-areas-from-free-areas-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0001-ntdll-Trigger-write-watches-before-passing-userdata-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0003-ntdll-Setup-a-temporary-signal-handler-during-proces.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0004-ntdll-Properly-handle-PAGE_WRITECOPY-protection.-try.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0005-ntdll-Track-if-a-WRITECOPY-page-has-been-modified.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0006-ntdll-Support-WRITECOPY-on-x64.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0007-ntdll-Report-unmodified-WRITECOPY-pages-as-shared.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0008-ntdll-Fallback-to-copy-pages-for-WRITECOPY.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-WRITECOPY/0009-kernel32-tests-psapi-tests-Update-tests.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Builtin_Prot/0001-ntdll-Fix-holes-in-ELF-mappings.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-CriticalSection/0002-ntdll-Add-inline-versions-of-RtlEnterCriticalSection.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-CriticalSection/0003-ntdll-Use-fast-CS-functions-for-heap-locking.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-CriticalSection/0004-ntdll-Use-fast-CS-functions-for-threadpool-locking.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Dealloc_Thread_Stack/0001-ntdll-Do-not-allow-to-allocate-thread-stack-for-curr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Exception/0002-ntdll-OutputDebugString-should-throw-the-exception-a.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-FileFsFullSizeInformation/0001-ntdll-Add-support-for-FileFsFullSizeInformation-clas.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Fix_Alignment/0001-ntdll-Move-NtProtectVirtualMemory-and-NtCreateSectio.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-HashLinks/0001-ntdll-Implement-HashLinks-field-in-LDR-module-data.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-HashLinks/0002-ntdll-Use-HashLinks-when-searching-for-a-dll-using-t.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Heap_Improvements/0001-ntdll-Add-helper-function-to-delete-free-blocks.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Heap_Improvements/0002-ntdll-Improve-heap-allocation-performance.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Hide_Wine_Exports/0001-ntdll-Add-support-for-hiding-wine-version-informatio.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Interrupt-0x2e/0001-ntdll-Catch-windows-int-0x2e-syscall-on-i386.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Manifest_Range/0001-ntdll-Support-ISOLATIONAWARE_MANIFEST_RESOURCE_ID-ra.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-NtAccessCheck/0001-ntdll-Improve-invalid-paramater-handling-in-NtAccess.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Pipe_SpecialCharacters/0001-ntdll-Allow-special-characters-in-pipe-names.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-NtDevicePath/0001-ntdll-Implement-opening-files-through-nt-device-path.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-NtQuerySection/0002-kernel32-tests-Add-tests-for-NtQuerySection.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-NtSetLdtEntries/0001-ntdll-Implement-NtSetLdtEntries.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-NtSetLdtEntries/0002-libs-wine-Allow-to-modify-reserved-LDT-entries.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ProcessQuotaLimits/0001-ntdll-Add-fake-data-implementation-for-ProcessQuotaL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-RtlQueryPackageIdentity/0003-ntdll-tests-Add-basic-tests-for-RtlQueryPackageIdent.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-RtlQueryRegistryValuesEx/0001-ntdll-Implement-RtlQueryRegistryValuesEx.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Serial_Port_Detection/0001-ntdll-Do-a-device-check-before-returning-a-default-s.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Status_Mapping/0001-ntdll-Return-STATUS_INVALID_DEVICE_REQUEST-when-tryi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winebuild-pe_syscall_thunks/0002-winebuild-Call-__wine_syscall_dispatcher-through-the.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Syscall_Emulation/0001-ntdll-Support-x86_64-syscall-emulation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-SystemExtendedProcessInformation/0001-ntdll-Add-stub-for-NtQuerySystemInformation-SystemEx.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-SystemCodeIntegrityInformation/0001-ntdll-NtQuerySystemInformation-support-SystemCodeInt.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-SystemModuleInformation/0003-ntdll-Add-stub-for-NtQuerySystemInformation-SystemMo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-Zero_mod_name/0001-ntdll-Initialize-mod_name-to-zero.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-aarch-TEB/0001-configure-Avoid-clobbering-x18-on-arm64-within-wine.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-aarch-TEB/0002-ntdll-Always-restore-TEB-to-x18-on-aarch-64-on-retur.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-ext4-case-folder/0002-ntdll-server-Mark-drive_c-as-case-insensitive-when-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-set_full_cpu_context/0001-ntdll-Add-back-SS-segment-prefixes-in-set_full_cpu_c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntdll-x86_64_SegDs/0001-ntdll-Report-SegDs-to-be-identical-to-SegSs-on-x86_6.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntoskrnl-Stubs/0009-ntoskrnl.exe-Implement-MmMapLockedPages-and-MmUnmapL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ntoskrnl-Stubs/0011-ntoskrnl.exe-Add-IoGetDeviceAttachmentBaseRef-stub.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvcuvid-CUDA_Video_Support/0001-nvcuvid-First-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvencodeapi-Video_Encoder/0001-nvencodeapi-First-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvencodeapi-Video_Encoder/0002-nvencodeapi-Add-debian-specific-paths-to-native-libr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/nvencodeapi-Video_Encoder/0003-nvencodeapi-Add-support-for-version-6.0.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-CreateTypeLib/0001-oleaut32-Implement-semi-stub-for-CreateTypeLib.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-Load_Save_EMF/0001-oleaut32-tests-Add-some-tests-for-loading-and-saving.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-Load_Save_EMF/0002-oleaut32-Add-support-for-loading-and-saving-EMF-to-I.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OLEPictureImpl_SaveAsFile/0002-oleaut32-Implement-a-better-stub-for-IPicture-SaveAs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OLEPictureImpl_SaveAsFile/0003-oleaut32-Implement-SaveAsFile-for-PICTYPE_ENHMETAFIL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OleLoadPicture/0001-oleaut32-OleLoadPicture-should-create-a-DIB-section-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OleLoadPicture/0002-oleaut32-Make-OleLoadPicture-load-DIBs-using-WIC-dec.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OleLoadPictureFile/0001-oleaut32-Do-not-reimplement-OleLoadPicture-in-OleLoa.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OleLoadPictureFile/0002-oleaut32-Factor-out-stream-creation-from-OleLoadPict.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/oleaut32-OleLoadPictureFile/0003-oleaut32-Implement-OleLoadPictureFile.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/opencl-version_1_2/0001-opencl-Add-OpenCL-1.0-function-pointer-loader.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/opencl-version_1_2/0002-opencl-Use-function-pointer-instead-of-call-the-func.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/opencl-version_1_2/0003-opencl-Add-OpenCL-1.1-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/opencl-version_1_2/0004-opencl-Add-OpenCL-1.2-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/opencl-version_1_2/0005-opencl-Expose-all-extensions-list-to-wine.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/packager-DllMain/0001-packager-Prefer-native-version.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/pdh-PdhLookupPerfNameByIndex-processor/0001-pdh-Support-the-Processor-object-string.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/programs-findstr/0001-findstr-add-basic-functionality-also-support-literal.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/programs-systeminfo/0001-systeminfo-add-basic-functionality.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/quartz-MediaSeeking_Positions/0001-strmbase-Fix-MediaSeekingPassThru_GetPositions-retur.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/riched20-Class_Tests/0001-riched20-tests-Add-a-test-to-see-what-richedit-class.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/riched20-IText_Interface/0003-riched20-Stub-for-ITextPara-interface-and-implement-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/riched20-IText_Interface/0010-riched20-Silence-repeated-FIXMEs-triggered-by-Adobe-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-FileEndOfFileInformation/0001-ntdll-Set-EOF-on-file-which-has-a-memory-mapping-sho.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-FileEndOfFileInformation/0002-server-Growing-files-which-are-mapped-to-memory-shou.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0001-server-Improve-STATUS_CANNOT_DELETE-checks-for-direc.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0002-server-Allow-to-open-files-without-any-permission-bi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0003-server-When-creating-new-directories-temporarily-giv.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0004-advapi32-tests-Add-tests-for-ACL-inheritance-in-Crea.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0005-advapi32-tests-Add-ACL-inheritance-tests-for-creatin.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0006-ntdll-tests-Added-tests-for-open-behaviour-on-readon.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0007-server-FILE_WRITE_ATTRIBUTES-should-succeed-for-read.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-File_Permissions/0008-server-Improve-mapping-of-DACL-to-file-permissions.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0001-server-Unify-the-storage-of-security-attributes-for-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0002-server-Unify-the-retrieval-of-security-attributes-fo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0003-server-Add-a-helper-function-set_sd_from_token_inter.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0004-server-Temporarily-store-the-full-security-descripto.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0005-server-Store-file-security-attributes-with-extended-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0006-server-Convert-return-of-file-security-masks-with-ge.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Stored_ACLs/0007-server-Retrieve-file-security-attributes-with-extend.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Inherited_ACLs/0001-server-Inherit-security-attributes-from-parent-direc.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Key_State/0001-server-Introduce-a-helper-function-to-update-the-thr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Key_State/0002-server-Implement-locking-and-synchronization-of-keys.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0001-ntdll-Implement-SystemExtendedHandleInformation-in-N.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0002-ntdll-Implement-ObjectTypesInformation-in-NtQueryObj.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0003-server-Register-types-during-startup.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0004-server-Rename-ObjectType-to-Type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0008-ntdll-Set-TypeIndex-for-ObjectTypeInformation-in-NtQ.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0009-ntdll-Set-object-type-for-System-Extended-HandleInfo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Object_Types/0010-ntdll-Mimic-object-type-behavior-for-different-windo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Registry_Notifications/0001-server-Allow-multiple-registry-notifications-for-the.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/server-Registry_Notifications/0002-server-Introduce-refcounting-for-registry-notificati.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-DiskSpaceList/0001-setupapi-Rewrite-DiskSpaceList-logic-using-lists.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-DiskSpaceList/0002-setupapi-Implement-SetupAddToDiskSpaceList.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-DiskSpaceList/0003-setupapi-Implement-SetupQueryDrivesInDiskSpaceList.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-DiskSpaceList/0004-setupapi-Ignore-deletion-of-added-files-in-SetupAddT.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-DiskSpaceList/0005-setupapi-ImplementSetupAddSectionToDiskSpaceList.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-DiskSpaceList/0006-setupapi-Implement-SetupAddInstallSectionToDiskSpace.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-SPFILENOTIFY_FILEINCABINET/0001-setupapi-tests-Add-more-tests-for-SPFILENOTIFY_FILEI.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-SPFILENOTIFY_FILEINCABINET/0002-setupapi-Fix-CabinetName-passed-to-SPFILENOTIFY_CABI.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-SPFILENOTIFY_FILEINCABINET/0003-setupapi-tests-Add-tests-for-cabinet-name-passed-to-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/setupapi-SPFILENOTIFY_FILEINCABINET/0004-setupapi-Fix-parameters-of-SPFILENOTIFY_FILEINCABINE.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shdocvw-ParseURLFromOutsideSource_Tests/0001-shdocvw-Check-precisely-ParseURLFromOutsideSourceX-r.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-SHFileOperation_Move/0001-shell32-Fix-SHFileOperation-FO_MOVE-for-creating-sub.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Progress_Dialog/0001-shell32-Correct-indentation-in-shfileop.c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Progress_Dialog/0002-shell32-Pass-FILE_INFORMATION-into-SHNotify-function.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Progress_Dialog/0003-shell32-Implement-file-operation-progress-dialog.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Progress_Dialog/0004-shell32-Show-animation-during-SHFileOperation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-ACE_Viewer/0001-aclui-Add-basic-ACE-viewer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-ACE_Viewer/0002-shell32-Add-security-property-tab.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0001-shell32-Fix-copying-of-files-when-using-a-context-me.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0002-shell32-Set-return-value-correctly-in-DoPaste.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0003-shell32-Implement-insert-paste-for-item-context-menu.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0005-shell32-Add-support-for-setting-getting-PREFERREDDRO.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0006-shell32-Add-parameter-to-ISFHelper-DeleteItems-to-al.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0007-shell32-Remove-source-files-when-using-cut-in-the-co.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Context_Menu/0008-shell32-Recognize-cut-copy-paste-string-verbs-in-ite.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-IconCache/0001-shell32-iconcache-Generate-icons-from-available-icons-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-NewMenu_Interface/0001-shell32-Implement-NewMenu-with-new-folder-item.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-SFGAO_HASSUBFOLDER/0001-shell32-Set-SFGAO_HASSUBFOLDER-correctly-for-unixfs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-SFGAO_HASSUBFOLDER/0002-shell32-Set-SFGAO_HASSUBFOLDER-correctly-for-normal-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-SHGetStockIconInfo/0001-shell32-Improve-semi-stub-SHGetStockIconInfo-try-fin.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Toolbar_Bitmaps/0001-shell32-Add-toolbar-bitmaps-compatible-with-IE6.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-Toolbar_Bitmaps/0002-shell32-Add-more-Tango-icons-to-the-IE-toolbar.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shell32-UnixFS/0001-shell32-Do-not-use-unixfs-for-devices-without-mountp.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shlwapi-AssocGetPerceivedType/0001-shlwapi-tests-Add-tests-for-AssocGetPerceivedType.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shlwapi-AssocGetPerceivedType/0002-shlwapi-Implement-AssocGetPerceivedType.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shlwapi-SHAddDataBlock/0001-shlwapi-Fix-the-return-value-of-SHAddDataBlock.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shlwapi-UrlCanonicalize/0001-shlwapi-Support-.-in-UrlCanonicalize.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shlwapi-UrlCombine/0001-shlwapi-tests-Add-additional-tests-for-UrlCombine-and-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/shlwapi-UrlCombine/0002-shlwapi-UrlCombineW-workaround-for-relative-paths.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/srvcli-dll/0001-srvcli-New-DLL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/stdole32.idl-Typelib/0001-include-Make-stdole32.idl-a-public-component.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0001-widl-Add-initial-implementation-of-SLTG-typelib-gene.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0002-widl-Add-support-for-structures.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0003-widl-Properly-align-name-table-entries.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0004-widl-More-accurately-report-variable-descriptions-da.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0005-widl-Calculate-size-of-instance-for-structures.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0006-widl-Write-correct-typekind-to-the-SLTG-typeinfo-blo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0007-widl-Write-SLTG-blocks-according-to-the-index-order.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0008-widl-Write-correct-syskind-by-SLTG-typelib-generator.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0009-widl-Add-support-for-VT_VOID-and-VT_VARIANT-to-SLTG-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0010-widl-Add-support-for-VT_USERDEFINED-to-SLTG-typelib-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0011-widl-Factor-out-SLTG-tail-initialization.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0012-widl-Add-support-for-recursive-type-references-to-SL.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0013-widl-Add-support-for-interfaces-to-SLTG-typelib-gene.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0014-widl-Add-support-for-inherited-interfaces-to-SLTG-ty.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0015-widl-Make-automatic-dispid-generation-scheme-better-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0016-widl-Create-library-block-index-right-after-the-Comp.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0017-widl-Fix-generation-of-resources-containing-an-old-t.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0018-widl-Add-oldtlb-switch-in-usage-message.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0019-widl-Avoid-relying-on-side-effects-when-marking-func.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0020-widl-Set-the-lowest-bit-in-the-param-name-to-indicat.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0021-oleaut32-Fix-logic-for-deciding-whether-type-descrip.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0022-widl-Add-support-for-function-parameter-flags-to-SLT.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0023-oleaut32-Implement-decoding-of-SLTG-help-strings.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0024-oleaut32-Add-support-for-decoding-SLTG-function-help.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0025-oleaut32-Add-support-for-decoding-SLTG-variable-help.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-SLTG_Typelib_Support/0026-widl-Minor-cosmetic-clean-up.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/stdole32.tlb-SLTG_Typelib/0020-stdole32.tlb-Compile-typelib-with-oldtlb.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/tasklist-basics/0001-tasklist.exe-add-minimal-functionality.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-DM_SETDEFID/0001-user32-Do-not-initialize-dialog-info-for-every-windo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-DM_SETDEFID/0002-user32-Use-root-dialog-for-DM_SETDEFID-DM_GETDEFID-i.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-DM_SETDEFID/0003-user32-tests-Add-a-bunch-of-tests-for-DM_SETDEFID-DM.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Dialog_Paint_Event/0001-user32-Call-UpdateWindow-during-DIALOG_CreateIndirec.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-DrawTextExW/0001-user32-Fix-handling-of-invert_y-in-DrawTextExW.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-FlashWindowEx/0001-user32-Improve-FlashWindowEx-message-and-return-valu.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-GetSystemMetrics/0001-user32-Allow-changing-the-tablet-media-center-status.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Implement-CascadeWindows/0001-user32-Implement-CascadeWindows.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Implement-CascadeWindows/0002-user32-Implement-TileWindows.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-InternalGetWindowIcon/0001-user32-AddInternalGetWindowIcon-stub.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-LR_LOADFROMFILE/0001-user32-Add-a-workaround-for-Windows-3.1-apps-which-c.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-ListBox_Size/0001-user32-Fix-calculation-of-listbox-size-when-horizont.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-LoadKeyboardLayoutEx/0001-user32-Added-LoadKeyboardLayoutEx-stub.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-MessageBox_WS_EX_TOPMOST/0001-user32-tests-Add-some-tests-to-see-when-MessageBox-g.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-MessageBox_WS_EX_TOPMOST/0002-user32-MessageBox-should-be-topmost-when-MB_SYSTEMMO.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Mouse_Message_Hwnd/0001-user32-Try-harder-to-find-a-target-for-mouse-message.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Mouse_Message_Hwnd/0002-user32-tests-Add-tests-for-clicking-through-layered-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Mouse_Message_Hwnd/0003-user32-tests-Add-tests-for-window-region-of-layered-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Mouse_Message_Hwnd/0004-user32-tests-Add-tests-for-DC-region.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Mouse_Message_Hwnd/0005-server-Add-support-for-a-layered-window-region.-v2.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-QueryDisplayConfig/0001-user32-Implement-QueryDisplayConfig.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-Refresh_MDI_Menus/0001-user32-Refresh-MDI-menus-when-DefMDIChildProcW-WM_SE.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-ScrollWindowEx/0001-user32-Fix-return-value-of-ScrollWindowEx-for-invisi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-msgbox-Support-WM_COPY-mesg/0001-user32-msgbox-Support-WM_COPY-Message.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-msgbox-Support-WM_COPY-mesg/0002-user32-msgbox-Use-a-windows-hook-to-trap-Ctrl-C.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11.drv-mouse-coorrds/0001-winex11.drv-mouse-Use-root-relative-coordinates-for-ev.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse/0006-server-Add-send_hardware_message-flags-for-rawinput-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse/0007-user32-Add-__wine_send_input-flags-to-hint-raw-input.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse/0008-winex11.drv-Advertise-XInput2-version-2.1-support.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse/0009-winex11.drv-Keep-track-of-pointer-and-device-button-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse/0010-winex11.drv-Listen-to-RawMotion-and-RawButton-events.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-hid/0001-server-Add-process-argument-to-find_rawinput_device.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-hid/0002-server-Allow-extra-data-for-hardware_msg_data-messag.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-hid/0003-server-Make-it-possible-to-queue-rawinput-message-on.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-hid/0004-server-Add-HID-input-message-type-to-send_hardware_m.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-hid/0005-hidclass.sys-Send-input-message-to-server-when-HID-r.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse-experimental/0001-winex11.drv-Add-support-for-absolute-RawMotion-event.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse-experimental/0002-winex11.drv-Send-relative-RawMotion-events-unprocess.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-rawinput-mouse-experimental/0003-winex11.drv-Accumulate-mouse-movement-to-avoid-round.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-recursive-activation/0001-user32-focus-Prevent-a-recursive-loop-with-the-activ.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-recursive-activation/0002-user32-tests-Test-a-recursive-activation-loop-on-WM_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/user32-window-activation/0001-user32-Send-a-WM_ACTIVATE-message-after-restoring-a-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/uxtheme-CloseThemeClass/0001-uxtheme-Protect-CloseThemeData-from-invalid-input.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/version-VerQueryValue/0001-version-Test-for-VerQueryValueA-try-2.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0001-include-Add-windows.media.speechsynthesis.idl-draft.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0002-widl-Restrict-some-keywords-to-WinRT-mode-only.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0003-widl-Introduce-format_namespace_buffer-helper.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0004-widl-Support-WinRT-contractversion-attribute-parsing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0005-widl-Support-WinRT-apicontract-type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0006-widl-Prefer-mangled-name-over-typedef-in-WinRT-mode.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0007-widl-Don-t-output-typedef-statement-in-WinRT-mode.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0008-widl-Support-WinRT-contract-attribute.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0009-widl-Support-WinRT-marshaling_behavior-attribute-par.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0010-widl-Support-WinRT-mta-threading-attribute-parsing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0011-widl-Support-WinRT-exclusiveto-attribute-parsing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0012-widl-Support-WinRT-runtimeclass-type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0013-widl-Support-WinRT-eventadd-eventremove-attributes.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0014-widl-Support-WinRT-flags-attribute-parsing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0015-widl-Support-using-qualified-names-for-interfaces.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0016-widl-Support-repeated-attributes-for-WinRT-static.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0017-widl-Support-WinRT-static-attribute-parsing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0018-widl-Support-WinRT-requires-keyword.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0019-widl-Support-WinRT-activatable-attribute.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0020-widl-Support-WinRT-parameterized-type-parsing.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0021-widl-Support-partially-specialized-parameterized-typ.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0022-widl-Support-WinRT-parameterized-interface-type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0023-widl-Support-WinRT-delegate-type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0024-widl-Support-WinRT-parameterized-delegate-type.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0025-widl-Compute-signatures-for-parameterized-types.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0026-widl-Compute-uuids-for-parameterized-types.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0027-widl-Generate-helper-macros-for-WinRT-implementation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/widl-winrt-support/0028-include-Add-IVectorView-HSTRING-declaration-to-windo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.media.speech.dll/0001-windows.media.speech-Add-stub-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.media.speech.dll/0002-windows.media.speech-Implement-IInstalledVoicesStati.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.media.speech.dll/0003-windows.media.speech-Implement-IInstalledVoicesStati.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.media.speech.dll/0004-windows.media.speech-Fake-empty-IInstalledVoicesStat.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0001-windows.gaming.input-Add-stub-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0002-windows.gaming.input-Implement-IGamepadStatics-stubs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0003-windows.gaming.input-Implement-IGamepadStatics-Gamep.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0004-windows.gaming.input-Fake-empty-IGamepadStatics-Game.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0005-windows.gaming.input-Fake-IEventHandler_Gamepad-supp.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0006-windows.gaming.input-Implement-IRawGameControllerSta.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0007-windows.gaming.input-Implement-IRawGameControllerSta.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0008-windows.gaming.input-Fake-empty-IRawGameControllerSt.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.gaming.input-dll/0009-windows.gaming.input-Fake-IEventHandler_RawGameContr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.globalization-dll/0001-windows.globalization-Add-stub-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.globalization-dll/0002-windows.globalization-Implement-IGlobalizationPrefer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.globalization-dll/0003-windows.globalization-Implement-IGlobalizationPrefer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.globalization-dll/0004-windows.globalization-Implement-IGlobalizationPrefer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.globalization-dll/0005-windows.globalization-Fake-empty-IGlobalizationPrefe.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.networking.connectivity.dll/0001-windows.networking.connectivity-Add-stub-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.networking.connectivity.dll/0002-windows.networking.connectivity-Implement-IActivatio.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windows.networking.connectivity.dll/0003-windows.networking.connectivity-Implement-INetworkIn.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windowscodecs-GIF_Encoder/0007-windowscodecs-tests-Add-IWICBitmapEncoderInfo-test.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windowscodecs-TIFF_Support/0015-windowscodecs-Tolerate-partial-reads-in-the-IFD-meta.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windowscodecs-TIFF_Support/0016-gdiplus-Add-support-for-more-image-color-formats.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/windowscodecs-TIFF_Support/0017-gdiplus-tests-Add-some-tests-for-loading-TIFF-images.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wine.inf-Directory_ContextMenuHandlers/0001-wine.inf-Add-New-context-menu-handler-entry-for-dire.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wine.inf-Dummy_CA_Certificate/0001-wine.inf.in-Add-invalid-dummy-certificate-to-CA-cert.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wine.inf-Performance/0001-wine.inf-Add-registry-keys-for-Windows-Performance-L.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wine.inf-Performance/0002-wine.inf-Add-Counters-to-the-perflib-key-as-an-alias.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wine.inf-Performance/0003-advapi32-tests-Add-test-for-perflib-registry-key.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wineboot-DriveSerial/0001-wineboot-Assign-a-drive-serial-number-during-prefix-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wineboot-HKEY_DYN_DATA/0001-wineboot-Add-some-generic-hardware-in-HKEY_DYN_DATA-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wineboot-drivers_etc_Stubs/0001-wineboot-Init-system32-drivers-etc-host-networks-pro.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wineboot-ProxySettings/0001-wineboot-Initialize-proxy-settings-registry-key.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winecfg-Libraries/0001-winecfg-Double-click-in-dlls-list-to-edit-item-s-ove.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winecfg-Staging/0001-winecfg-Add-staging-tab-for-CSMT.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winecfg-Staging/0002-winecfg-Add-checkbox-to-enable-disable-vaapi-GPU-dec.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winecfg-Staging/0003-winecfg-Add-checkbox-to-enable-disable-EAX-support.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winecfg-Staging/0004-winecfg-Add-checkbox-to-enable-disable-HideWineExpor.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winecfg-Staging/0005-winecfg-Add-option-to-enable-disable-GTK3-theming.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Accounting/0001-wined3d-Use-real-values-for-memory-accounting-on-NVI.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-CSMT_Main/0045-wined3d-Improve-wined3d_cs_emit_update_sub_resource.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-SWVP-shaders/0001-wined3d-Use-UBO-for-vertex-shader-float-constants-if.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-SWVP-shaders/0002-d3d9-Support-SWVP-vertex-shader-float-constants-limi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-SWVP-shaders/0003-wined3d-Report-actual-vertex-shader-float-constants-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-SWVP-shaders/0004-wined3d-Support-SWVP-vertex-shader-constants-limit-i.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-SWVP-shaders/0005-wined3d-Support-SWVP-mode-vertex-shaders.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Indexed_Vertex_Blending/0001-d3d9-tests-Add-test-for-indexed-vertex-blending.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Indexed_Vertex_Blending/0002-d3d9-tests-Test-normal-calculation-when-indexed-vert.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Indexed_Vertex_Blending/0003-d3d9-tests-Check-MaxVertexBlendMatrixIndex-capabilit.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Indexed_Vertex_Blending/0004-wined3d-Allow-higher-world-matrix-states.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Indexed_Vertex_Blending/0005-wined3d-Support-indexed-vertex-blending.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-Silence_FIXMEs/0004-wined3d-Print-FIXME-only-once-in-surface_cpu_blt.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-WINED3DFMT_B8G8R8X8_UNORM/0001-wined3d-Implement-WINED3DFMT_B8G8R8X8_UNORM-to-WINED.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-mesa_texture_download/0001-wined3d-Use-glReadPixels-for-RT-texture-download.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-unset-flip-gdi/0001-wined3d-Dont-set-DDSCAPS_FLIP-for-gdi-renderer.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-wined3d_guess_gl_vendor/0001-wined3d-Also-check-for-Brian-Paul-to-detect-Mesa-gl_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wined3d-zero-inf-shaders/0001-wined3d-Add-a-setting-to-workaround-0-inf-problem-in.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winedbg-Process_Arguments/0001-programs-winedbg-Print-process-arguments-in-info-thr.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winedevice-Default_Drivers/0001-win32k.sys-Add-stub-driver.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winedevice-Default_Drivers/0002-dxgkrnl.sys-Add-stub-driver.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winedevice-Default_Drivers/0003-dxgmms1.sys-Add-stub-driver.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winedevice-Default_Drivers/0004-programs-winedevice-Load-some-common-drivers-and-fix.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winemapi-user-xdg-mail/0001-winemapi-Directly-use-xdg-email-if-available-enablin.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winemenubuilder-Desktop_Icon_Path/0001-winemenubuilder-Create-desktop-shortcuts-with-absolu.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winemenubuilder-integration/0001-winemenubuilder-Blacklist-desktop-integration-for-ce.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wineps.drv-PostScript_Fixes/0004-wineps.drv-Add-support-for-GETFACENAME-and-DOWNLOADF.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winepulse-PulseAudio_Support/0001-winepulse.drv-Use-a-separate-mainloop-and-ctx-for-pu.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winepulse-PulseAudio_Support/0003-winepulse-expose-audio-devices-directly-to-programs.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winepulse-PulseAudio_Support/0005-winepulse-implement-GetPropValue.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winepulse-PulseAudio_Support/0006-winepulse-fetch-actual-program-name-if-possible.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winepulse-PulseAudio_Support/0007-winepulse-return-PKEY_AudioEndpoint_PhysicalSpeakers.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-CandidateWindowPos/0001-winex11.drv-Update-a-candidate-window-s-position-wit.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-MWM_Decorations/0001-winex11.drv-Don-t-use-MWM_DECOR_RESIZEH-window-resiz.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-MWM_Decorations/0002-winex11.drv-Don-t-add-MWM_DECOR_BORDER-to-windows-wi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-UpdateLayeredWindow/0001-winex11-Fix-alpha-blending-in-X11DRV_UpdateLayeredWi.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-Vulkan_support/0001-winex11-Specify-a-default-vulkan-driver-if-one-not-f.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-_NET_ACTIVE_WINDOW/0001-winex11.drv-Add-support-for-_NET_ACTIVE_WINDOW.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-_NET_ACTIVE_WINDOW/0002-user32-Before-asking-a-WM-to-activate-a-window-make-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-WM_WINDOWPOSCHANGING/0001-winex11.drv-Send-WM_WINDOWPOSCHANGING-WM_WINDOWPOSCH.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-Window_Style/0001-winex11-Fix-handling-of-window-attributes-for-WS_EX_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-XEMBED/0001-winex11-Enable-disable-windows-when-they-are-un-mapped.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-ime-check-thread-data/0001-winex11.drv-handle-missing-thread-data-in-X11DRV_get_ic.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-key_translation/0001-winex11-Match-keyboard-in-Unicode.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-key_translation/0002-winex11-Fix-more-key-translation.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-key_translation/0003-winex11.drv-Fix-main-Russian-keyboard-layout.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11-wglShareLists/0001-winex11.drv-Only-warn-about-used-contexts-in-wglShar.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winex11.drv-Query_server_position/0001-winex11.drv-window-Query-the-X-server-for-the-actual.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wininet-Cleanup/0001-wininet-tests-Add-more-tests-for-cookies.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wininet-Cleanup/0002-wininet-tests-Test-auth-credential-reusage-with-host.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wininet-Cleanup/0003-wininet-tests-Check-cookie-behaviour-when-overriding.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wininet-Cleanup/0004-wininet-Strip-filename-if-no-path-is-set-in-cookie.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wininet-Cleanup/0005-wininet-Replacing-header-fields-should-fail-if-they-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winmm-Delay_Import_Depends/0001-winmm-Delay-import-ole32-msacm32-to-workaround-bug-w.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winmm-fullpath/0001-winmm-Pass-a-fullpath-to-CreateFileA.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/winmm-mciSendCommandA/0001-winmm-Do-not-crash-in-Win-9X-mode-when-an-invalid-de.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wintab32-improvements/0002-wintab32-Set-lcSysExtX-Y-for-the-first-index-of-WTI_.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wintab32-improvements/0003-winex11-Handle-negative-orAltitude-values.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wintab32-improvements/0004-winex11.drv-Support-multiplex-categories-WTI_DSCTXS-.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wintab32-improvements/0005-winex11-Support-WTI_STATUS-in-WTInfo.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wintrust-WTHelperGetProvCertFromChain/0001-wintrust-Add-parameter-check-in-WTHelperGetProvCertF.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wow64cpu-Wow64Transition/0001-wow64cpu-Add-stub-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wow64cpu-Wow64Transition/0002-ntdll-Add-a-stub-implementation-of-Wow64Transition.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wpcap-Dynamic_Linking/0001-wpcap-Load-libpcap-dynamically.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ws2_32-APC_Performance/0001-ws2_32-Reuse-old-async-ws2_async_io-structures-if-po.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ws2_32-Connect_Time/0001-ws2_32-Implement-returning-the-proper-time-with-SO_C.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/ws2_32-getsockopt/0001-ws2_32-Divide-values-returned-by-SO_RCVBUF-and-SO_SN.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/wtsapi32-EnumerateProcesses/0001-wtsapi32-Partial-implementation-of-WTSEnumerateProce.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine-initial/0001-x3daudio1_7-Create-import-library.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine-initial/0003-xactengine3_7-tests-Add-Global-settings-test.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0001-include-Add-xact2wb.h.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0002-include-Add-xact.h.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0003-xactengine2_10-Add-new-dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0004-xactengine2_10-Implement-IXACTEngine-interface.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0005-xactengine2_10-Implement-IXACTSoundBank-interface.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0006-xactengine2_10-Implement-IXACTCue-Interface.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0007-xactengine2_10-Implement-IXACTWaveBank-interface.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0008-xactengine2_10-Implement-IXACTEngine-CreateStreaming.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0009-xactengine2_10-Implement-IXACTWave-interface.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0010-xactengine2_10-Implement-IXACTSoundBank-Play-functio.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0011-xactengine2_10-Implement-IXACTWaveBank-Play-function.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0012-xactengine2_10-Implement-IXACTEngine-Un-RegisterNoti.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0013-xactengine2_9-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0014-xactengine2_8-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0015-xactengine2_7-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0016-xactengine2_6-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0017-xactengine2_5-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0018-xactengine2_4-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0019-xactengine2_3-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0020-xactengine2_2-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0021-xactengine2_1-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine2-dll/0022-xactengine2_0-New-Dll.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine3_7-PrepareWave/0001-xactengine3_7-Implement-IXACT3Engine-PrepareWave.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine3_7-PrepareWave/0002-xactengine3_7-Implement-IXACT3Engine-PrepareStreamin.patch
+Applying /usr/ports/contrib/wine-staging/work/src/wine-staging-5.20/patches/xactengine3_7-PrepareWave/0003-xactengine3_7-Implement-IXACT3Engine-PrepareInMemory.patch
+include/wine/server_protocol.h updated
+include/wine/server_protocol.h updated
+server/trace.c updated
+server/request.h updated
++ cd ..
++ install -d wine32 wine64
++ export 'CPPFLAGS= -D_FORTIFY_SOURCE=0'
++ CPPFLAGS=' -D_FORTIFY_SOURCE=0'
++ cd wine64
++ ../wine-5.20/configure --prefix=/usr --libdir=/usr/lib --enable-win64
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for cpp... cpp
+checking for ld... ld
+checking for the directory containing the Wine tools... 
+checking for flex... flex
+checking whether flex is recent enough... yes
+checking for bison... bison
+checking whether bison is recent enough... yes
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking whether ln -s works... yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ldconfig... /sbin/ldconfig
+checking for msgfmt... msgfmt
+checking for pkg-config... pkg-config
+checking whether msgfmt supports contexts... yes
+checking for i386_set_ldt in -li386... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking AL/al.h usability... yes
+checking AL/al.h presence... yes
+checking for AL/al.h... yes
+checking ApplicationServices/ApplicationServices.h usability... no
+checking ApplicationServices/ApplicationServices.h presence... no
+checking for ApplicationServices/ApplicationServices.h... no
+checking AudioToolbox/AudioConverter.h usability... no
+checking AudioToolbox/AudioConverter.h presence... no
+checking for AudioToolbox/AudioConverter.h... no
+checking AudioUnit/AudioUnit.h usability... no
+checking AudioUnit/AudioUnit.h presence... no
+checking for AudioUnit/AudioUnit.h... no
+checking AudioUnit/AudioComponent.h usability... no
+checking AudioUnit/AudioComponent.h presence... no
+checking for AudioUnit/AudioComponent.h... no
+checking CL/cl.h usability... no
+checking CL/cl.h presence... no
+checking for CL/cl.h... no
+checking Carbon/Carbon.h usability... no
+checking Carbon/Carbon.h presence... no
+checking for Carbon/Carbon.h... no
+checking CommonCrypto/CommonCryptor.h usability... no
+checking CommonCrypto/CommonCryptor.h presence... no
+checking for CommonCrypto/CommonCryptor.h... no
+checking CoreAudio/CoreAudio.h usability... no
+checking CoreAudio/CoreAudio.h presence... no
+checking for CoreAudio/CoreAudio.h... no
+checking CoreServices/CoreServices.h usability... no
+checking CoreServices/CoreServices.h presence... no
+checking for CoreServices/CoreServices.h... no
+checking DiskArbitration/DiskArbitration.h usability... no
+checking DiskArbitration/DiskArbitration.h presence... no
+checking for DiskArbitration/DiskArbitration.h... no
+checking EGL/egl.h usability... yes
+checking EGL/egl.h presence... yes
+checking for EGL/egl.h... yes
+checking IOKit/IOKitLib.h usability... no
+checking IOKit/IOKitLib.h presence... no
+checking for IOKit/IOKitLib.h... no
+checking IOKit/hid/IOHIDLib.h usability... no
+checking IOKit/hid/IOHIDLib.h presence... no
+checking for IOKit/hid/IOHIDLib.h... no
+checking OpenAL/al.h usability... no
+checking OpenAL/al.h presence... no
+checking for OpenAL/al.h... no
+checking OpenCL/opencl.h usability... no
+checking OpenCL/opencl.h presence... no
+checking for OpenCL/opencl.h... no
+checking QuickTime/ImageCompression.h usability... no
+checking QuickTime/ImageCompression.h presence... no
+checking for QuickTime/ImageCompression.h... no
+checking Security/Security.h usability... no
+checking Security/Security.h presence... no
+checking for Security/Security.h... no
+checking SystemConfiguration/SCDynamicStoreCopyDHCPInfo.h usability... no
+checking SystemConfiguration/SCDynamicStoreCopyDHCPInfo.h presence... no
+checking for SystemConfiguration/SCDynamicStoreCopyDHCPInfo.h... no
+checking SystemConfiguration/SCNetworkConfiguration.h usability... no
+checking SystemConfiguration/SCNetworkConfiguration.h presence... no
+checking for SystemConfiguration/SCNetworkConfiguration.h... no
+checking alias.h usability... no
+checking alias.h presence... no
+checking for alias.h... no
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking arpa/nameser.h usability... yes
+checking arpa/nameser.h presence... yes
+checking for arpa/nameser.h... yes
+checking asm/types.h usability... yes
+checking asm/types.h presence... yes
+checking for asm/types.h... yes
+checking asm/user.h usability... no
+checking asm/user.h presence... no
+checking for asm/user.h... no
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking elf.h usability... yes
+checking elf.h presence... yes
+checking for elf.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking fnmatch.h usability... yes
+checking fnmatch.h presence... yes
+checking for fnmatch.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking gettext-po.h usability... yes
+checking gettext-po.h presence... yes
+checking for gettext-po.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking gsm.h usability... no
+checking gsm.h presence... no
+checking for gsm.h... no
+checking gsm/gsm.h usability... yes
+checking gsm/gsm.h presence... yes
+checking for gsm/gsm.h... yes
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking inet/mib2.h usability... no
+checking inet/mib2.h presence... no
+checking for inet/mib2.h... no
+checking kstat.h usability... no
+checking kstat.h presence... no
+checking for kstat.h... no
+checking libproc.h usability... no
+checking libproc.h presence... no
+checking for libproc.h... no
+checking link.h usability... yes
+checking link.h presence... yes
+checking for link.h... yes
+checking linux/cdrom.h usability... yes
+checking linux/cdrom.h presence... yes
+checking for linux/cdrom.h... yes
+checking linux/compiler.h usability... no
+checking linux/compiler.h presence... no
+checking for linux/compiler.h... no
+checking linux/filter.h usability... yes
+checking linux/filter.h presence... yes
+checking for linux/filter.h... yes
+checking linux/hdreg.h usability... yes
+checking linux/hdreg.h presence... yes
+checking for linux/hdreg.h... yes
+checking linux/hidraw.h usability... yes
+checking linux/hidraw.h presence... yes
+checking for linux/hidraw.h... yes
+checking linux/input.h usability... yes
+checking linux/input.h presence... yes
+checking for linux/input.h... yes
+checking linux/ioctl.h usability... yes
+checking linux/ioctl.h presence... yes
+checking for linux/ioctl.h... yes
+checking linux/joystick.h usability... yes
+checking linux/joystick.h presence... yes
+checking for linux/joystick.h... yes
+checking linux/major.h usability... yes
+checking linux/major.h presence... yes
+checking for linux/major.h... yes
+checking linux/param.h usability... yes
+checking linux/param.h presence... yes
+checking for linux/param.h... yes
+checking linux/seccomp.h usability... yes
+checking linux/seccomp.h presence... yes
+checking for linux/seccomp.h... yes
+checking linux/serial.h usability... yes
+checking linux/serial.h presence... yes
+checking for linux/serial.h... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking linux/ucdrom.h usability... no
+checking linux/ucdrom.h presence... no
+checking for linux/ucdrom.h... no
+checking lwp.h usability... no
+checking lwp.h presence... no
+checking for lwp.h... no
+checking mach-o/nlist.h usability... no
+checking mach-o/nlist.h presence... no
+checking for mach-o/nlist.h... no
+checking mach-o/loader.h usability... no
+checking mach-o/loader.h presence... no
+checking for mach-o/loader.h... no
+checking mach/mach.h usability... no
+checking mach/mach.h presence... no
+checking for mach/mach.h... no
+checking mach/machine.h usability... no
+checking mach/machine.h presence... no
+checking for mach/machine.h... no
+checking machine/cpu.h usability... no
+checking machine/cpu.h presence... no
+checking for machine/cpu.h... no
+checking machine/sysarch.h usability... no
+checking machine/sysarch.h presence... no
+checking for machine/sysarch.h... no
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking netinet/in_systm.h usability... yes
+checking netinet/in_systm.h presence... yes
+checking for netinet/in_systm.h... yes
+checking netinet/tcp.h usability... yes
+checking netinet/tcp.h presence... yes
+checking for netinet/tcp.h... yes
+checking netinet/tcp_fsm.h usability... no
+checking netinet/tcp_fsm.h presence... no
+checking for netinet/tcp_fsm.h... no
+checking pcap/pcap.h usability... yes
+checking pcap/pcap.h presence... yes
+checking for pcap/pcap.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking port.h usability... no
+checking port.h presence... no
+checking for port.h... no
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking sasl/sasl.h usability... yes
+checking sasl/sasl.h presence... yes
+checking for sasl/sasl.h... yes
+checking sched.h usability... yes
+checking sched.h presence... yes
+checking for sched.h... yes
+checking scsi/scsi.h usability... yes
+checking scsi/scsi.h presence... yes
+checking for scsi/scsi.h... yes
+checking scsi/scsi_ioctl.h usability... yes
+checking scsi/scsi_ioctl.h presence... yes
+checking for scsi/scsi_ioctl.h... yes
+checking scsi/sg.h usability... yes
+checking scsi/sg.h presence... yes
+checking for scsi/sg.h... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking for stdint.h... (cached) yes
+checking stropts.h usability... yes
+checking stropts.h presence... yes
+checking for stropts.h... yes
+checking sys/attr.h usability... no
+checking sys/attr.h presence... no
+checking for sys/attr.h... no
+checking sys/auxv.h usability... yes
+checking sys/auxv.h presence... yes
+checking for sys/auxv.h... yes
+checking sys/cdio.h usability... no
+checking sys/cdio.h presence... no
+checking for sys/cdio.h... no
+checking sys/epoll.h usability... yes
+checking sys/epoll.h presence... yes
+checking for sys/epoll.h... yes
+checking sys/event.h usability... no
+checking sys/event.h presence... no
+checking for sys/event.h... no
+checking sys/eventfd.h usability... yes
+checking sys/eventfd.h presence... yes
+checking for sys/eventfd.h... yes
+checking sys/filio.h usability... no
+checking sys/filio.h presence... no
+checking for sys/filio.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/ipc.h usability... yes
+checking sys/ipc.h presence... yes
+checking for sys/ipc.h... yes
+checking sys/link.h usability... no
+checking sys/link.h presence... no
+checking for sys/link.h... no
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/modem.h usability... no
+checking sys/modem.h presence... no
+checking for sys/modem.h... no
+checking sys/msg.h usability... yes
+checking sys/msg.h presence... yes
+checking for sys/msg.h... yes
+checking sys/mtio.h usability... yes
+checking sys/mtio.h presence... yes
+checking for sys/mtio.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/protosw.h usability... no
+checking sys/protosw.h presence... no
+checking for sys/protosw.h... no
+checking sys/ptrace.h usability... yes
+checking sys/ptrace.h presence... yes
+checking for sys/ptrace.h... yes
+checking sys/queue.h usability... yes
+checking sys/queue.h presence... yes
+checking for sys/queue.h... yes
+checking sys/random.h usability... yes
+checking sys/random.h presence... yes
+checking for sys/random.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/scsiio.h usability... no
+checking sys/scsiio.h presence... no
+checking for sys/scsiio.h... no
+checking sys/shm.h usability... yes
+checking sys/shm.h presence... yes
+checking for sys/shm.h... yes
+checking sys/signal.h usability... yes
+checking sys/signal.h presence... yes
+checking for sys/signal.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/socketvar.h usability... yes
+checking sys/socketvar.h presence... yes
+checking for sys/socketvar.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking sys/strtio.h usability... no
+checking sys/strtio.h presence... no
+checking for sys/strtio.h... no
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/sysinfo.h usability... yes
+checking sys/sysinfo.h presence... yes
+checking for sys/sysinfo.h... yes
+checking sys/tihdr.h usability... no
+checking sys/tihdr.h presence... no
+checking for sys/tihdr.h... no
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/timeout.h usability... no
+checking sys/timeout.h presence... no
+checking for sys/timeout.h... no
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking sys/user.h usability... yes
+checking sys/user.h presence... yes
+checking for sys/user.h... yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking sys/vnode.h usability... no
+checking sys/vnode.h presence... no
+checking for sys/vnode.h... no
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking syscall.h usability... yes
+checking syscall.h presence... yes
+checking for syscall.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking valgrind/memcheck.h usability... no
+checking valgrind/memcheck.h presence... no
+checking for valgrind/memcheck.h... no
+checking valgrind/valgrind.h usability... no
+checking valgrind/valgrind.h presence... no
+checking for valgrind/valgrind.h... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking whether stat file-mode macros are broken... no
+checking for sys/mount.h... yes
+checking for sys/statfs.h... yes
+checking for sys/user.h... (cached) yes
+checking for sys/vfs.h... yes
+checking for sys/sysctl.h... yes
+checking for netinet/ip.h... yes
+checking for net/if.h... yes
+checking for net/if_arp.h... yes
+checking for net/if_dl.h... no
+checking for net/if_types.h... no
+checking for net/route.h... yes
+checking for netinet/if_ether.h... yes
+checking for netinet/if_inarp.h... no
+checking for netinet/in_pcb.h... no
+checking for netinet/ip_icmp.h... yes
+checking for netinet/ip_var.h... no
+checking for netinet/udp.h... yes
+checking for netipx/ipx.h... yes
+checking for sys/un.h... yes
+checking for netinet/tcp_timer.h... no
+checking for netinet/udp_var.h... no
+checking for netinet/icmp_var.h... no
+checking for netinet/tcp_var.h... no
+checking for linux/ipx.h... yes
+checking for linux/irda.h... no
+checking for linux/rtnetlink.h... yes
+checking for resolv.h... yes
+checking for ifaddrs.h... yes
+checking for sys/ucontext.h... yes
+checking for sys/thr.h... no
+checking for pthread_np.h... no
+checking for linux/videodev2.h... yes
+checking for libprocstat.h... no
+checking attr/xattr.h usability... no
+checking attr/xattr.h presence... no
+checking for attr/xattr.h... no
+checking sys/extattr.h usability... no
+checking sys/extattr.h presence... no
+checking for sys/extattr.h... no
+checking sys/xattr.h usability... yes
+checking sys/xattr.h presence... yes
+checking for sys/xattr.h... yes
+checking for ldd... /usr/bin/ldd
+checking for otool... no
+checking for readelf... readelf
+checking whether we can build a GNU style ELF dll... yes
+checking whether the compiler supports -shared -Wl,-soname,confest.so.1... yes
+checking whether the compiler supports -shared -Wl,--version-script=conftest.map... yes
+checking whether the compiler supports -Wl,--export-dynamic... yes
+checking for pthread_create... no
+checking for pthread_create in -lpthread... yes
+checking for X... libraries , headers 
+checking for gethostbyname... yes
+checking for connect... yes
+checking for remove... yes
+checking for shmat... yes
+checking for IceConnectionNumber in -lICE... yes
+checking for -lX11... libX11.so.6
+checking for -lXext... libXext.so.6
+checking for X11/Xlib.h... yes
+checking for X11/XKBlib.h... yes
+checking for X11/Xutil.h... yes
+checking for X11/Xcursor/Xcursor.h... yes
+checking for X11/extensions/shape.h... yes
+checking for X11/extensions/XInput.h... yes
+checking for X11/extensions/XInput2.h... yes
+checking for X11/extensions/XShm.h... yes
+checking for X11/extensions/Xcomposite.h... yes
+checking for X11/extensions/Xfixes.h... yes
+checking for X11/extensions/Xinerama.h... yes
+checking for X11/extensions/Xrandr.h... yes
+checking for X11/extensions/Xrender.h... yes
+checking for X11/extensions/xf86vmode.h... yes
+checking for X11/extensions/xf86vmproto.h... yes
+checking for XkbQueryExtension in -lX11... yes
+checking for -lXcursor... libXcursor.so.1
+checking for -lXi... libXi.so.6
+checking for XShmQueryExtension in -lXext... yes
+checking for XShapeQueryExtension in -lXext... yes
+checking for -lXxf86vm... libXxf86vm.so.1
+checking for -lXrender... libXrender.so.1
+checking for XRenderSetPictureTransform in -lXrender... yes
+checking for XRenderCreateLinearGradient in -lXrender... yes
+checking for -lXrandr... libXrandr.so.2
+checking for -lXfixes... libXfixes.so.3
+checking for -lXinerama... libXinerama.so.1
+checking for -lXcomposite... libXcomposite.so.1
+checking for XICCallback.callback... yes
+checking for XEvent.xcookie... yes
+checking for -lGL... libGL.so.1
+checking for -lGLU... libGLU.so.1
+checking for -lOSMesa... libOSMesa.so.8
+checking for -lpcap... libpcap.so.1
+checking libxml/parser.h usability... yes
+checking libxml/parser.h presence... yes
+checking for libxml/parser.h... yes
+checking libxml/xmlsave.h usability... yes
+checking libxml/xmlsave.h presence... yes
+checking for libxml/xmlsave.h... yes
+checking libxml/SAX2.h usability... yes
+checking libxml/SAX2.h presence... yes
+checking for libxml/SAX2.h... yes
+checking for xmlParseMemory in -lxml2... yes
+checking for xmlReadMemory in -lxml2... yes
+checking for xmlNewDocPI in -lxml2... yes
+checking for xmlSchemaSetParserStructuredErrors in -lxml2... yes
+checking for xmlSchemaSetValidStructuredErrors in -lxml2... yes
+checking for xmlFirstElementChild in -lxml2... yes
+checking for xmlDocProperties... yes
+checking for libxslt/pattern.h... yes
+checking for libxslt/transform.h... yes
+checking for -lxslt... libxslt.so.1
+checking sys/inotify.h usability... yes
+checking sys/inotify.h presence... yes
+checking for sys/inotify.h... yes
+checking for inotify_add_watch in -linotify... no
+checking dbus/dbus.h usability... yes
+checking dbus/dbus.h presence... yes
+checking for dbus/dbus.h... yes
+checking for -ldbus-1... libdbus-1.so.3
+checking hal/libhal.h usability... no
+checking hal/libhal.h presence... no
+checking for hal/libhal.h... no
+checking gnutls/gnutls.h usability... yes
+checking gnutls/gnutls.h presence... yes
+checking for gnutls/gnutls.h... yes
+checking for -lgnutls... libgnutls.so.30
+checking for gnutls_cipher_init... yes
+checking sane/sane.h usability... no
+checking sane/sane.h presence... no
+checking for sane/sane.h... no
+checking libusb.h usability... yes
+checking libusb.h presence... yes
+checking for libusb.h... yes
+checking for libusb_interrupt_event_handler in -lusb-1.0... yes
+checking for -lv4l2... libv4l2.so.0
+checking gphoto2-camera.h usability... no
+checking gphoto2-camera.h presence... no
+checking for gphoto2-camera.h... no
+checking gphoto2-port.h usability... no
+checking gphoto2-port.h presence... no
+checking for gphoto2-port.h... no
+checking for resolver library... none required
+checking for res_getservers... no
+checking lcms2.h usability... yes
+checking lcms2.h presence... yes
+checking for lcms2.h... yes
+checking for cmsOpenProfileFromFile in -llcms2... yes
+checking ft2build.h usability... yes
+checking ft2build.h presence... yes
+checking for ft2build.h... yes
+checking for -lfreetype... libfreetype.so.6
+checking for FT_TrueTypeEngineType... yes
+checking for pthread_getthreadid_np... no
+checking pulse/pulseaudio.h usability... no
+checking pulse/pulseaudio.h presence... no
+checking for pulse/pulseaudio.h... no
+checking gst/gst.h usability... yes
+checking gst/gst.h presence... yes
+checking for gst/gst.h... yes
+checking whether gint64 defined by gst/gst.h is indeed 64-bit... yes
+checking for gst_pad_new in -lgstreamer-1.0... yes
+checking for snd_pcm_hw_params_get_access_mask in -lasound... yes
+checking sys/soundcard.h usability... yes
+checking sys/soundcard.h presence... yes
+checking for sys/soundcard.h... yes
+checking for oss_sysinfo.numaudioengines... no
+checking libudev.h usability... yes
+checking libudev.h presence... yes
+checking for libudev.h... yes
+checking for udev_new in -ludev... yes
+checking for unw_step... no
+checking for unw_step in libunwind... no
+checking SDL2/SDL.h usability... yes
+checking SDL2/SDL.h presence... yes
+checking for SDL2/SDL.h... yes
+checking for -lSDL2... libSDL2-2.0.so.0
+checking FAudio.h usability... no
+checking FAudio.h presence... no
+checking for FAudio.h... no
+checking for FAudio_CommitOperationSet... no
+checking for F3DAudioInitialize8... no
+checking for FAudioLinkedVersion... no
+checking for FAudioCreateReverb9WithCustomAllocatorEXT... no
+checking for capi20.h... no
+checking for linux/capi.h... yes
+checking cups/cups.h usability... yes
+checking cups/cups.h presence... yes
+checking for cups/cups.h... yes
+checking cups/ppd.h usability... yes
+checking cups/ppd.h presence... yes
+checking for cups/ppd.h... yes
+checking for -lcups... libcups.so.2
+checking fontconfig/fontconfig.h usability... yes
+checking fontconfig/fontconfig.h presence... yes
+checking for fontconfig/fontconfig.h... yes
+checking for -lfontconfig... libfontconfig.so.1
+checking for -lgsm... libgsm.so.1
+checking krb5/krb5.h usability... yes
+checking krb5/krb5.h presence... yes
+checking for krb5/krb5.h... yes
+checking for -lkrb5... libkrb5.so.3
+checking gssapi/gssapi.h usability... yes
+checking gssapi/gssapi.h presence... yes
+checking for gssapi/gssapi.h... yes
+checking gssapi/gssapi_ext.h usability... yes
+checking gssapi/gssapi_ext.h presence... yes
+checking for gssapi/gssapi_ext.h... yes
+checking for -lgssapi_krb5... libgssapi_krb5.so.2
+checking jpeglib.h usability... yes
+checking jpeglib.h presence... yes
+checking for jpeglib.h... yes
+checking for -ljpeg... libjpeg.so.8
+checking png.h usability... yes
+checking png.h presence... yes
+checking for png.h... yes
+checking for -lpng... libpng16.so.16
+checking tiffio.h usability... yes
+checking tiffio.h presence... yes
+checking for tiffio.h... yes
+checking for -ltiff... libtiff.so.5
+checking mpg123.h usability... yes
+checking mpg123.h presence... yes
+checking for mpg123.h... yes
+checking for mpg123_feed in -lmpg123... yes
+checking for -lopenal... libopenal.so.1
+checking for -lodbc... libodbc.so.2
+checking for -lnetapi... libnetapi.so.0
+checking for -lvulkan... libvulkan.so.1
+checking for -lvkd3d... not found
+checking for -lvkd3d-shader... not found
+checking gcrypt.h usability... yes
+checking gcrypt.h presence... yes
+checking for gcrypt.h... yes
+checking for -lgcrypt... libgcrypt.so.20
+checking whether the compiler supports -Werror=unknown-warning-option... no
+checking whether the compiler supports -Werror=unused-command-line-argument... no
+checking whether the compiler supports -Werror=ignored-optimization-argument... no
+checking whether the compiler supports -fcf-protection=none... yes
+checking whether the compiler supports -fno-stack-protector... yes
+checking whether the compiler supports -fno-strict-aliasing... yes
+checking whether the compiler supports -Wdeclaration-after-statement... yes
+checking whether the compiler supports -Wempty-body... yes
+checking whether the compiler supports -Wignored-qualifiers... yes
+checking whether the compiler supports -Wpacked-not-aligned... yes
+checking whether the compiler supports -Wpragma-pack... no
+checking whether the compiler supports -Wshift-overflow=2... yes
+checking whether the compiler supports -Wstrict-prototypes... yes
+checking whether the compiler supports -Wtype-limits... yes
+checking whether the compiler supports -Wunused-but-set-parameter... yes
+checking whether the compiler supports -Wvla... yes
+checking whether the compiler supports -Wwrite-strings... yes
+checking whether the compiler supports -fexcess-precision=standard... yes
+checking whether the compiler supports -Wpointer-arith... yes
+checking for broken string.h that generates warnings with -Wpointer-arith... no
+checking whether the compiler supports -Wlogical-op... yes
+checking for broken string.h that generates warnings with -Wlogical-op... no
+checking for flags needed for 64-bit compare-and-swap support... unknown
+configure: error: gcc doesn't support 64-bit compare-and-swap on this platform
+=======> ERROR: Building '/usr/ports/contrib/wine-staging/wine-staging#5.20-1.pkg.tar.xz' failed.

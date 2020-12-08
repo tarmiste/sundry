@@ -1,0 +1,16 @@
+prt-get: installing /usr/ports/contrib/zita-convolver
+prt-get: starting build Sun Dec  6 20:12:51 2020
+=======> Building '/usr/ports/contrib/zita-convolver/zita-convolver#4.0.3-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/zita-convolver/work/src -xf /sources/zita-convolver-4.0.3.tar.bz2
++ build
++ cd zita-convolver-4.0.3/source
++ sed -e /native/d -e 's/ldconfig/& -N $(DESTDIR)\/$(LIBDIR)/' -i Makefile
++ make
+g++ -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -fPIC -Wall -ffast-math -funroll-loops -O2 -I. -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS -DENABLE_VECTOR_MODE   -c -o zita-convolver.o zita-convolver.cc
+In file included from zita-convolver.cc:25:
+zita-convolver.h:27:10: fatal error: fftw3.h: No such file or directory
+ #include <fftw3.h>
+          ^~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: zita-convolver.o] Error 1
+=======> ERROR: Building '/usr/ports/contrib/zita-convolver/zita-convolver#4.0.3-1.pkg.tar.xz' failed.

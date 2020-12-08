@@ -1,0 +1,336 @@
+prt-get: installing /usr/ports/contrib/fstrcmp
+prt-get: starting build Fri Dec  4 12:33:37 2020
+=======> Downloading 'http://fstrcmp.sourceforge.net/fstrcmp-0.7.D001.tar.gz'.
+--2020-12-04 12:33:37--  http://fstrcmp.sourceforge.net/fstrcmp-0.7.D001.tar.gz
+Resolving fstrcmp.sourceforge.net... 216.105.38.10
+Connecting to fstrcmp.sourceforge.net|216.105.38.10|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 394845 (386K) [application/x-gzip]
+Saving to: '/sources/fstrcmp-0.7.D001.tar.gz.partial'
+
+     0K .......... .......... .......... .......... .......... 12%  380K 1s
+    50K .......... .......... .......... .......... .......... 25%  751K 1s
+   100K .......... .......... .......... .......... .......... 38% 5.21M 0s
+   150K .......... .......... .......... .......... .......... 51%  903K 0s
+   200K .......... .......... .......... .......... .......... 64% 5.24M 0s
+   250K .......... .......... .......... .......... .......... 77% 9.36M 0s
+   300K .......... .......... .......... .......... .......... 90% 9.84M 0s
+   350K .......... .......... .......... .....                100% 9.62M=0.3s
+
+2020-12-04 12:33:39 (1.32 MB/s) - '/sources/fstrcmp-0.7.D001.tar.gz.partial' saved [394845/394845]
+
+=======> Building '/usr/ports/contrib/fstrcmp/fstrcmp#0.7.D001-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/fstrcmp/work/src -xf /sources/fstrcmp-0.7.D001.tar.gz
++ build
++ cd fstrcmp-0.7.D001
++ ./configure --prefix=/usr
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for ar... ar
+checking for an ANSI C-conforming const... yes
+checking for library containing strerror... none required
+checking if gcc accepts -Wall... yes
+checking if gcc accepts -Wextra... yes
+checking if gcc accepts -Wshadow... yes
+checking for libtool... libtool
+checking for groff... groff
+checking for gsoelim... no
+checking for soelim... soelim
+checking for refer... refer
+checking for manpath... manpath
+checking for groff -ms macros... -ms
+checking for groff -mm macros... -mm
+checking assert.h usability... yes
+checking assert.h presence... yes
+checking for assert.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for memory.h... (cached) yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking for size_t... yes
+checking for snprintf... yes
+checking for strerror... yes
+checking for vsnprintf... yes
+checking for a Bourne shell which understands functions... /bin/sh
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/config.h
++ make
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	fstrcmp/main.c -o fstrcmp/main.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c fstrcmp/main.c  -fPIC -DPIC -o fstrcmp/.libs/main.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c fstrcmp/main.c -o fstrcmp/main.o >/dev/null 2>&1
+mkdir bin
+chmod 0755 bin
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/ac/string.c -o lib/ac/string.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/ac/string.c  -fPIC -DPIC -o lib/ac/.libs/string.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/ac/string.c -o lib/ac/string.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/downcase.c -o lib/downcase.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/downcase.c  -fPIC -DPIC -o lib/.libs/downcase.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/downcase.c -o lib/downcase.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fmemcmp.c -o lib/fmemcmp.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fmemcmp.c  -fPIC -DPIC -o lib/.libs/fmemcmp.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fmemcmp.c -o lib/fmemcmp.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fmemcmpi.c -o lib/fmemcmpi.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fmemcmpi.c  -fPIC -DPIC -o lib/.libs/fmemcmpi.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fmemcmpi.c -o lib/fmemcmpi.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fstrcasecmp.c -o lib/fstrcasecmp.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcasecmp.c  -fPIC -DPIC -o lib/.libs/fstrcasecmp.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcasecmp.c -o lib/fstrcasecmp.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fstrcasecmpi.c -o lib/fstrcasecmpi.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcasecmpi.c  -fPIC -DPIC -o lib/.libs/fstrcasecmpi.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcasecmpi.c -o lib/fstrcasecmpi.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fstrcmp.c -o lib/fstrcmp.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcmp.c  -fPIC -DPIC -o lib/.libs/fstrcmp.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcmp.c -o lib/fstrcmp.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fstrcmpi.c -o lib/fstrcmpi.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcmpi.c  -fPIC -DPIC -o lib/.libs/fstrcmpi.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcmpi.c -o lib/fstrcmpi.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fstrcoll.c -o lib/fstrcoll.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcoll.c  -fPIC -DPIC -o lib/.libs/fstrcoll.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcoll.c -o lib/fstrcoll.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fstrcolli.c -o lib/fstrcolli.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcolli.c  -fPIC -DPIC -o lib/.libs/fstrcolli.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fstrcolli.c -o lib/fstrcolli.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fwcscmp.c -o lib/fwcscmp.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fwcscmp.c  -fPIC -DPIC -o lib/.libs/fwcscmp.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fwcscmp.c -o lib/fwcscmp.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/fwcscmpi.c -o lib/fwcscmpi.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fwcscmpi.c  -fPIC -DPIC -o lib/.libs/fwcscmpi.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/fwcscmpi.c -o lib/fwcscmpi.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/mbs_to_wcs.c -o lib/mbs_to_wcs.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/mbs_to_wcs.c  -fPIC -DPIC -o lib/.libs/mbs_to_wcs.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/mbs_to_wcs.c -o lib/mbs_to_wcs.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/nmalloc.c -o lib/nmalloc.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/nmalloc.c  -fPIC -DPIC -o lib/.libs/nmalloc.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/nmalloc.c -o lib/nmalloc.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/program_name.c -o lib/program_name.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/program_name.c  -fPIC -DPIC -o lib/.libs/program_name.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/program_name.c -o lib/program_name.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/version.c -o lib/version.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/version.c  -fPIC -DPIC -o lib/.libs/version.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/version.c -o lib/version.o >/dev/null 2>&1
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	lib/version_print.c -o lib/version_print.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/version_print.c  -fPIC -DPIC -o lib/.libs/version_print.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c lib/version_print.c -o lib/version_print.o >/dev/null 2>&1
+rm -f lib/libfstrcmp.la
+libtool --mode=link --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow  \
+	-o lib/libfstrcmp.la lib/ac/string.lo lib/downcase.lo lib/fmemcmp.lo lib/fmemcmpi.lo lib/fstrcasecmp.lo lib/fstrcasecmpi.lo lib/fstrcmp.lo lib/fstrcmpi.lo lib/fstrcoll.lo lib/fstrcolli.lo lib/fwcscmp.lo lib/fwcscmpi.lo lib/mbs_to_wcs.lo lib/nmalloc.lo lib/program_name.lo lib/version.lo lib/version_print.lo  -rpath /usr/lib -version-info 6:0:6
+libtool: link: gcc -shared  -fPIC -DPIC  lib/ac/.libs/string.o lib/.libs/downcase.o lib/.libs/fmemcmp.o lib/.libs/fmemcmpi.o lib/.libs/fstrcasecmp.o lib/.libs/fstrcasecmpi.o lib/.libs/fstrcmp.o lib/.libs/fstrcmpi.o lib/.libs/fstrcoll.o lib/.libs/fstrcolli.o lib/.libs/fwcscmp.o lib/.libs/fwcscmpi.o lib/.libs/mbs_to_wcs.o lib/.libs/nmalloc.o lib/.libs/program_name.o lib/.libs/version.o lib/.libs/version_print.o    -O2 -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec   -Wl,-soname -Wl,libfstrcmp.so.0 -o lib/.libs/libfstrcmp.so.0.6.0
+libtool: link: (cd "lib/.libs" && rm -f "libfstrcmp.so.0" && ln -s "libfstrcmp.so.0.6.0" "libfstrcmp.so.0")
+libtool: link: (cd "lib/.libs" && rm -f "libfstrcmp.so" && ln -s "libfstrcmp.so.0.6.0" "libfstrcmp.so")
+libtool: link: ar cru lib/.libs/libfstrcmp.a  lib/ac/string.o lib/downcase.o lib/fmemcmp.o lib/fmemcmpi.o lib/fstrcasecmp.o lib/fstrcasecmpi.o lib/fstrcmp.o lib/fstrcmpi.o lib/fstrcoll.o lib/fstrcolli.o lib/fwcscmp.o lib/fwcscmpi.o lib/mbs_to_wcs.o lib/nmalloc.o lib/program_name.o lib/version.o lib/version_print.o
+libtool: link: ranlib lib/.libs/libfstrcmp.a
+libtool: link: ( cd "lib/.libs" && rm -f "libfstrcmp.la" && ln -s "../libfstrcmp.la" "libfstrcmp.la" )
+libtool --mode=link --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -o bin/fstrcmp \
+	fstrcmp/main.lo lib/libfstrcmp.la  
+libtool: link: gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -o bin/.libs/fstrcmp fstrcmp/.libs/main.o  lib/.libs/libfstrcmp.so 
+CONFIG_FILES=script/test_prelude.sh:script/test_prelude.sh.in CONFIG_HEADERS= /bin/sh \
+	config.status
+config.status: creating script/test_prelude.sh
+cp script/test_prelude.sh bin/test_prelude
+chmod a+rx bin/test_prelude
+libtool --mode=compile --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c \
+	test_user/main.c -o test_user/main.lo
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c test_user/main.c  -fPIC -DPIC -o test_user/.libs/main.o
+libtool: compile:  gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -I. -c test_user/main.c -o test_user/main.o >/dev/null 2>&1
+libtool --mode=link --tag=CC gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -o bin/test_user \
+	test_user/main.lo lib/libfstrcmp.la  
+libtool: link: gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -Wall -Wextra -Wshadow -o bin/.libs/test_user test_user/.libs/main.o  lib/.libs/libfstrcmp.so 
+groff -Tps -s -I. -t -man etc/building.man > etc/building.ps
+ps2pdf etc/building.ps etc/building.pdf
+rm etc/building.ps
+groff -Tps -s -I. -t -man etc/readme.man > etc/readme.ps
+ps2pdf etc/readme.ps etc/readme.pdf
+rm etc/readme.ps
+groff -Tps -s -I. -t -man etc/reference.man > etc/reference.ps
+ps2pdf etc/reference.ps etc/reference.pdf
+rm etc/reference.ps
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man1/fstrcmp.1 > man/cat1/fstrcmp.1
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man \
+	man/man1/fstrcmp_license.1 > man/cat1/fstrcmp_license.1
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fmemcmp.3 > man/cat3/fmemcmp.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fmemcmpi.3 > man/cat3/fmemcmpi.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fstrcasecmp.3 > man/cat3/fstrcasecmp.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fstrcasecmpi.3 > \
+	man/cat3/fstrcasecmpi.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fstrcmp.3 > man/cat3/fstrcmp.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fstrcmpi.3 > man/cat3/fstrcmpi.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fstrcoll.3 > man/cat3/fstrcoll.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fstrcolli.3 > man/cat3/fstrcolli.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fwcscmp.3 > man/cat3/fwcscmp.3
+GROFF_NO_SGR=-c groff -I. -Tascii -t -man man/man3/fwcscmpi.3 > man/cat3/fwcscmpi.3
++ make DESTDIR=/usr/ports/contrib/fstrcmp/work/pkg install
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/bin
+libtool --mode=install /usr/bin/install -c bin/fstrcmp /usr/ports/contrib/fstrcmp/work/pkg/usr/bin/fstrcmp
+libtool: warning: 'lib/libfstrcmp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c bin/.libs/fstrcmp /usr/ports/contrib/fstrcmp/work/pkg/usr/bin/fstrcmp
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/share
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/share/doc
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/share/doc/fstrcmp
+/usr/bin/install -c -m 644 etc/building.pdf /usr/ports/contrib/fstrcmp/work/pkg/usr/share/doc/fstrcmp/building.pdf
+/usr/bin/install -c -m 644 etc/readme.pdf /usr/ports/contrib/fstrcmp/work/pkg/usr/share/doc/fstrcmp/readme.pdf
+/usr/bin/install -c -m 644 etc/reference.pdf /usr/ports/contrib/fstrcmp/work/pkg/usr/share/doc/fstrcmp/reference.pdf
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/include
+/usr/bin/install -c -m 644 lib/fstrcmp.h /usr/ports/contrib/fstrcmp/work/pkg/usr/include/fstrcmp.h
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/lib
+libtool --mode=install /usr/bin/install -c -m 644 lib/libfstrcmp.la /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/libfstrcmp.la
+libtool: install: /usr/bin/install -c -m 644 lib/.libs/libfstrcmp.so.0.6.0 /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/libfstrcmp.so.0.6.0
+libtool: install: (cd /usr/ports/contrib/fstrcmp/work/pkg/usr/lib && { ln -s -f libfstrcmp.so.0.6.0 libfstrcmp.so.0 || { rm -f libfstrcmp.so.0 && ln -s libfstrcmp.so.0.6.0 libfstrcmp.so.0; }; })
+libtool: install: (cd /usr/ports/contrib/fstrcmp/work/pkg/usr/lib && { ln -s -f libfstrcmp.so.0.6.0 libfstrcmp.so || { rm -f libfstrcmp.so && ln -s libfstrcmp.so.0.6.0 libfstrcmp.so; }; })
+libtool: install: /usr/bin/install -c -m 644 lib/.libs/libfstrcmp.lai /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/libfstrcmp.la
+libtool: install: /usr/bin/install -c -m 644 lib/.libs/libfstrcmp.a /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/libfstrcmp.a
+libtool: install: chmod 644 /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/libfstrcmp.a
+libtool: install: ranlib /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/libfstrcmp.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/pkgconfig
+CONFIG_FILES=libdir/pkgconfig/fstrcmp.pc:libdir/pkgconfig/fstrcmp.pc.in CONFIG_HEADERS= /bin/sh \
+	config.status
+config.status: creating libdir/pkgconfig/fstrcmp.pc
+/usr/bin/install -c -m 644 libdir/pkgconfig/fstrcmp.pc /usr/ports/contrib/fstrcmp/work/pkg/usr/lib/pkgconfig/fstrcmp.pc
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man1
+soelim -I. man/man1/fstrcmp.1 | sed '/^[.]XX ./d' > \
+	man/man1/fstrcmp.1.tmp
+/usr/bin/install -c -m 644 man/man1/fstrcmp.1.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man1/fstrcmp.1
+sed '/^[.]XX ./d' < man/man1/fstrcmp_license.1 > \
+	man/man1/fstrcmp_license.1.tmp
+/usr/bin/install -c -m 644 man/man1/fstrcmp_license.1.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man1/fstrcmp_license.1
+/usr/bin/install -c -m 0755 -d /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3
+soelim -I. man/man3/fmemcmp.3 | sed '/^[.]XX ./d' > \
+	man/man3/fmemcmp.3.tmp
+/usr/bin/install -c -m 644 man/man3/fmemcmp.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fmemcmp.3
+soelim -I. man/man3/fmemcmpi.3 | sed '/^[.]XX ./d' > \
+	man/man3/fmemcmpi.3.tmp
+/usr/bin/install -c -m 644 man/man3/fmemcmpi.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fmemcmpi.3
+soelim -I. man/man3/fstrcasecmp.3 | sed '/^[.]XX ./d' > \
+	man/man3/fstrcasecmp.3.tmp
+/usr/bin/install -c -m 644 man/man3/fstrcasecmp.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fstrcasecmp.3
+soelim -I. man/man3/fstrcasecmpi.3 | sed '/^[.]XX ./d' > \
+	man/man3/fstrcasecmpi.3.tmp
+/usr/bin/install -c -m 644 man/man3/fstrcasecmpi.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fstrcasecmpi.3
+soelim -I. man/man3/fstrcmp.3 | sed '/^[.]XX ./d' > \
+	man/man3/fstrcmp.3.tmp
+/usr/bin/install -c -m 644 man/man3/fstrcmp.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fstrcmp.3
+soelim -I. man/man3/fstrcmpi.3 | sed '/^[.]XX ./d' > \
+	man/man3/fstrcmpi.3.tmp
+/usr/bin/install -c -m 644 man/man3/fstrcmpi.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fstrcmpi.3
+soelim -I. man/man3/fstrcoll.3 | sed '/^[.]XX ./d' > \
+	man/man3/fstrcoll.3.tmp
+/usr/bin/install -c -m 644 man/man3/fstrcoll.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fstrcoll.3
+soelim -I. man/man3/fstrcolli.3 | sed '/^[.]XX ./d' > \
+	man/man3/fstrcolli.3.tmp
+/usr/bin/install -c -m 644 man/man3/fstrcolli.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fstrcolli.3
+soelim -I. man/man3/fwcscmp.3 | sed '/^[.]XX ./d' > \
+	man/man3/fwcscmp.3.tmp
+/usr/bin/install -c -m 644 man/man3/fwcscmp.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fwcscmp.3
+soelim -I. man/man3/fwcscmpi.3 | sed '/^[.]XX ./d' > \
+	man/man3/fwcscmpi.3.tmp
+/usr/bin/install -c -m 644 man/man3/fwcscmpi.3.tmp /usr/ports/contrib/fstrcmp/work/pkg/usr/share/man/man3/fwcscmpi.3
++ rm -fr /usr/ports/contrib/fstrcmp/work/pkg/usr/share/doc
+=======> Build result:
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/lib/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/bin/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/share/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/include/
+-rw-r--r--  0 root   root     9357 Dec  4 12:34 usr/include/fstrcmp.h
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/share/man/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/share/man/man3/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/share/man/man1/
+-rw-r--r--  0 root   root     1721 Dec  4 12:34 usr/share/man/man1/fstrcmp.1.gz
+-rw-r--r--  0 root   root    12292 Dec  4 12:34 usr/share/man/man1/fstrcmp_license.1.gz
+-rw-r--r--  0 root   root     1187 Dec  4 12:34 usr/share/man/man3/fstrcasecmpi.3.gz
+-rw-r--r--  0 root   root     1195 Dec  4 12:34 usr/share/man/man3/fstrcmpi.3.gz
+-rw-r--r--  0 root   root     1236 Dec  4 12:34 usr/share/man/man3/fmemcmp.3.gz
+-rw-r--r--  0 root   root     1193 Dec  4 12:34 usr/share/man/man3/fwcscmpi.3.gz
+-rw-r--r--  0 root   root     1201 Dec  4 12:34 usr/share/man/man3/fwcscmp.3.gz
+-rw-r--r--  0 root   root     1234 Dec  4 12:34 usr/share/man/man3/fmemcmpi.3.gz
+-rw-r--r--  0 root   root     1298 Dec  4 12:34 usr/share/man/man3/fstrcoll.3.gz
+-rw-r--r--  0 root   root     1296 Dec  4 12:34 usr/share/man/man3/fstrcolli.3.gz
+-rw-r--r--  0 root   root     1204 Dec  4 12:34 usr/share/man/man3/fstrcmp.3.gz
+-rw-r--r--  0 root   root     1219 Dec  4 12:34 usr/share/man/man3/fstrcasecmp.3.gz
+-rwxr-xr-x  0 root   root    67120 Dec  4 12:34 usr/bin/fstrcmp
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/lib/pkgconfig/
+-rw-r--r--  0 root   root    33228 Dec  4 12:34 usr/lib/libfstrcmp.a
+lrwxrwxrwx  0 root   root        0 Dec  4 12:34 usr/lib/libfstrcmp.so -> libfstrcmp.so.0.6.0
+-rw-r--r--  0 root   root      931 Dec  4 12:34 usr/lib/libfstrcmp.la
+lrwxrwxrwx  0 root   root        0 Dec  4 12:34 usr/lib/libfstrcmp.so.0 -> libfstrcmp.so.0.6.0
+-rw-r--r--  0 root   root    66932 Dec  4 12:34 usr/lib/libfstrcmp.so.0.6.0
+-rw-r--r--  0 root   root      309 Dec  4 12:34 usr/lib/pkgconfig/fstrcmp.pc
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/contrib/fstrcmp/fstrcmp#0.7.D001-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/contrib/fstrcmp
+prt-get: installing fstrcmp 0.7.D001-1
+prt-get: /usr/bin/pkgadd fstrcmp#0.7.D001-1.pkg.tar.xz
+prt-get: build done Fri Dec  4 12:34:20 2020
+
+pkgadd: package database is currently locked by another process

@@ -1,0 +1,539 @@
+prt-get: installing /usr/ports/contrib/dhcp
+prt-get: starting build Fri Dec  4 07:40:55 2020
+=======> Downloading 'http://ftp.isc.org/isc/dhcp/4.4.2/dhcp-4.4.2.tar.gz'.
+--2020-12-04 07:40:55--  http://ftp.isc.org/isc/dhcp/4.4.2/dhcp-4.4.2.tar.gz
+Resolving ftp.isc.org... 2001:4f8:1:f::49, 149.20.1.49
+Connecting to ftp.isc.org|2001:4f8:1:f::49|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9906235 (9.4M) [application/x-gzip]
+Saving to: '/sources/dhcp-4.4.2.tar.gz.partial'
+
+     0K .......... .......... .......... .......... ..........  0%  683K 14s
+    50K .......... .......... .......... .......... ..........  1%  762K 13s
+   100K .......... .......... .......... .......... ..........  1% 1.51M 11s
+   150K .......... .......... .......... .......... ..........  2% 1.69M 9s
+   200K .......... .......... .......... .......... ..........  2% 1.66M 9s
+   250K .......... .......... .......... .......... ..........  3% 9.32M 7s
+   300K .......... .......... .......... .......... ..........  3% 1.58M 7s
+   350K .......... .......... .......... .......... ..........  4% 1.75M 7s
+   400K .......... .......... .......... .......... ..........  4% 9.42M 6s
+   450K .......... .......... .......... .......... ..........  5% 2.00M 6s
+   500K .......... .......... .......... .......... ..........  5% 3.54M 6s
+   550K .......... .......... .......... .......... ..........  6% 3.87M 5s
+   600K .......... .......... .......... .......... ..........  6% 3.15M 5s
+   650K .......... .......... .......... .......... ..........  7% 7.72M 5s
+   700K .......... .......... .......... .......... ..........  7% 2.50M 5s
+   750K .......... .......... .......... .......... ..........  8% 5.82M 4s
+   800K .......... .......... .......... .......... ..........  8% 9.56M 4s
+   850K .......... .......... .......... .......... ..........  9% 5.56M 4s
+   900K .......... .......... .......... .......... ..........  9% 3.51M 4s
+   950K .......... .......... .......... .......... .......... 10% 5.43M 4s
+  1000K .......... .......... .......... .......... .......... 10% 7.44M 4s
+  1050K .......... .......... .......... .......... .......... 11% 5.19M 4s
+  1100K .......... .......... .......... .......... .......... 11% 4.38M 3s
+  1150K .......... .......... .......... .......... .......... 12% 7.22M 3s
+  1200K .......... .......... .......... .......... .......... 12% 9.50M 3s
+  1250K .......... .......... .......... .......... .......... 13% 6.26M 3s
+  1300K .......... .......... .......... .......... .......... 13% 4.84M 3s
+  1350K .......... .......... .......... .......... .......... 14% 7.18M 3s
+  1400K .......... .......... .......... .......... .......... 14% 9.34M 3s
+  1450K .......... .......... .......... .......... .......... 15% 7.36M 3s
+  1500K .......... .......... .......... .......... .......... 16% 5.39M 3s
+  1550K .......... .......... .......... .......... .......... 16% 5.50M 3s
+  1600K .......... .......... .......... .......... .......... 17% 7.39M 3s
+  1650K .......... .......... .......... .......... .......... 17% 1.02M 3s
+  1700K .......... .......... .......... .......... .......... 18% 11.7M 3s
+  1750K .......... .......... .......... .......... .......... 18% 14.2M 3s
+  1800K .......... .......... .......... .......... .......... 19% 13.7M 3s
+  1850K .......... .......... .......... .......... .......... 19% 13.7M 2s
+  1900K .......... .......... .......... .......... .......... 20% 1.75M 2s
+  1950K .......... .......... .......... .......... .......... 20% 1.40M 3s
+  2000K .......... .......... .......... .......... .......... 21% 1.60M 3s
+  2050K .......... .......... .......... .......... .......... 21% 1.67M 3s
+  2100K .......... .......... .......... .......... .......... 22% 3.08M 3s
+  2150K .......... .......... .......... .......... .......... 22% 2.81M 3s
+  2200K .......... .......... .......... .......... .......... 23% 1.85M 3s
+  2250K .......... .......... .......... .......... .......... 23% 9.67M 3s
+  2300K .......... .......... .......... .......... .......... 24% 1.97M 3s
+  2350K .......... .......... .......... .......... .......... 24% 6.56M 2s
+  2400K .......... .......... .......... .......... .......... 25% 9.50M 2s
+  2450K .......... .......... .......... .......... .......... 25% 2.26M 2s
+  2500K .......... .......... .......... .......... .......... 26% 5.42M 2s
+  2550K .......... .......... .......... .......... .......... 26% 2.10M 2s
+  2600K .......... .......... .......... .......... .......... 27% 5.62M 2s
+  2650K .......... .......... .......... .......... .......... 27% 8.91M 2s
+  2700K .......... .......... .......... .......... .......... 28% 2.01M 2s
+  2750K .......... .......... .......... .......... .......... 28% 9.36M 2s
+  2800K .......... .......... .......... .......... .......... 29% 3.23M 2s
+  2850K .......... .......... .......... .......... .......... 29% 3.45M 2s
+  2900K .......... .......... .......... .......... .......... 30% 6.18M 2s
+  2950K .......... .......... .......... .......... .......... 31% 2.96M 2s
+  3000K .......... .......... .......... .......... .......... 31% 4.76M 2s
+  3050K .......... .......... .......... .......... .......... 32% 4.04M 2s
+  3100K .......... .......... .......... .......... .......... 32% 3.87M 2s
+  3150K .......... .......... .......... .......... .......... 33% 5.82M 2s
+  3200K .......... .......... .......... .......... .......... 33% 2.40M 2s
+  3250K .......... .......... .......... .......... .......... 34% 7.25M 2s
+  3300K .......... .......... .......... .......... .......... 34% 3.70M 2s
+  3350K .......... .......... .......... .......... .......... 35% 4.19M 2s
+  3400K .......... .......... .......... .......... .......... 35% 6.95M 2s
+  3450K .......... .......... .......... .......... .......... 36% 2.88M 2s
+  3500K .......... .......... .......... .......... .......... 36% 5.40M 2s
+  3550K .......... .......... .......... .......... .......... 37% 4.81M 2s
+  3600K .......... .......... .......... .......... .......... 37% 3.00M 2s
+  3650K .......... .......... .......... .......... .......... 38% 9.34M 2s
+  3700K .......... .......... .......... .......... .......... 38% 2.59M 2s
+  3750K .......... .......... .......... .......... .......... 39% 7.38M 2s
+  3800K .......... .......... .......... .......... .......... 39% 3.71M 2s
+  3850K .......... .......... .......... .......... .......... 40% 3.50M 2s
+  3900K .......... .......... .......... .......... .......... 40% 5.65M 2s
+  3950K .......... .......... .......... .......... .......... 41% 3.05M 2s
+  4000K .......... .......... .......... .......... .......... 41% 2.79M 2s
+  4050K .......... .......... .......... .......... .......... 42% 9.33M 2s
+  4100K .......... .......... .......... .......... .......... 42% 1.80M 2s
+  4150K .......... .......... .......... .......... .......... 43% 9.44M 2s
+  4200K .......... .......... .......... .......... .......... 43% 9.33M 2s
+  4250K .......... .......... .......... .......... .......... 44% 1.07M 2s
+  4300K .......... .......... .......... .......... .......... 44% 9.67M 2s
+  4350K .......... .......... .......... .......... .......... 45% 2.23M 2s
+  4400K .......... .......... .......... .......... .......... 45% 5.08M 2s
+  4450K .......... .......... .......... .......... .......... 46% 9.46M 2s
+  4500K .......... .......... .......... .......... .......... 47% 2.63M 2s
+  4550K .......... .......... .......... .......... .......... 47% 5.52M 2s
+  4600K .......... .......... .......... .......... .......... 48% 2.55M 2s
+  4650K .......... .......... .......... .......... .......... 48% 8.94M 1s
+  4700K .......... .......... .......... .......... .......... 49% 4.98M 1s
+  4750K .......... .......... .......... .......... .......... 49% 2.47M 1s
+  4800K .......... .......... .......... .......... .......... 50% 7.87M 1s
+  4850K .......... .......... .......... .......... .......... 50% 2.61M 1s
+  4900K .......... .......... .......... .......... .......... 51% 5.36M 1s
+  4950K .......... .......... .......... .......... .......... 51% 9.36M 1s
+  5000K .......... .......... .......... .......... .......... 52% 2.00M 1s
+  5050K .......... .......... .......... .......... .......... 52% 5.45M 1s
+  5100K .......... .......... .......... .......... .......... 53% 5.65M 1s
+  5150K .......... .......... .......... .......... .......... 53% 2.69M 1s
+  5200K .......... .......... .......... .......... .......... 54% 6.50M 1s
+  5250K .......... .......... .......... .......... .......... 54% 3.07M 1s
+  5300K .......... .......... .......... .......... .......... 55% 4.35M 1s
+  5350K .......... .......... .......... .......... .......... 55% 5.48M 1s
+  5400K .......... .......... .......... .......... .......... 56% 3.22M 1s
+  5450K .......... .......... .......... .......... .......... 56% 3.87M 1s
+  5500K .......... .......... .......... .......... .......... 57% 5.42M 1s
+  5550K .......... .......... .......... .......... .......... 57% 3.78M 1s
+  5600K .......... .......... .......... .......... .......... 58% 3.85M 1s
+  5650K .......... .......... .......... .......... .......... 58% 4.91M 1s
+  5700K .......... .......... .......... .......... .......... 59% 4.11M 1s
+  5750K .......... .......... .......... .......... .......... 59% 3.62M 1s
+  5800K .......... .......... .......... .......... .......... 60% 3.69M 1s
+  5850K .......... .......... .......... .......... .......... 60% 4.54M 1s
+  5900K .......... .......... .......... .......... .......... 61% 5.78M 1s
+  5950K .......... .......... .......... .......... .......... 62% 3.66M 1s
+  6000K .......... .......... .......... .......... .......... 62% 4.43M 1s
+  6050K .......... .......... .......... .......... .......... 63% 4.41M 1s
+  6100K .......... .......... .......... .......... .......... 63% 4.30M 1s
+  6150K .......... .......... .......... .......... .......... 64% 4.15M 1s
+  6200K .......... .......... .......... .......... .......... 64% 5.55M 1s
+  6250K .......... .......... .......... .......... .......... 65% 2.62M 1s
+  6300K .......... .......... .......... .......... .......... 65% 7.84M 1s
+  6350K .......... .......... .......... .......... .......... 66% 5.25M 1s
+  6400K .......... .......... .......... .......... .......... 66% 3.03M 1s
+  6450K .......... .......... .......... .......... .......... 67% 5.04M 1s
+  6500K .......... .......... .......... .......... .......... 67% 2.47M 1s
+  6550K .......... .......... .......... .......... .......... 68% 8.89M 1s
+  6600K .......... .......... .......... .......... .......... 68% 9.66M 1s
+  6650K .......... .......... .......... .......... .......... 69% 2.04M 1s
+  6700K .......... .......... .......... .......... .......... 69% 9.53M 1s
+  6750K .......... .......... .......... .......... .......... 70% 3.36M 1s
+  6800K .......... .......... .......... .......... .......... 70% 3.44M 1s
+  6850K .......... .......... .......... .......... .......... 71% 9.44M 1s
+  6900K .......... .......... .......... .......... .......... 71% 3.13M 1s
+  6950K .......... .......... .......... .......... .......... 72% 3.42M 1s
+  7000K .......... .......... .......... .......... .......... 72% 6.16M 1s
+  7050K .......... .......... .......... .......... .......... 73% 3.77M 1s
+  7100K .......... .......... .......... .......... .......... 73% 3.44M 1s
+  7150K .......... .......... .......... .......... .......... 74% 9.39M 1s
+  7200K .......... .......... .......... .......... .......... 74% 2.73M 1s
+  7250K .......... .......... .......... .......... .......... 75% 2.96M 1s
+  7300K .......... .......... .......... .......... .......... 75% 9.49M 1s
+  7350K .......... .......... .......... .......... .......... 76% 3.04M 1s
+  7400K .......... .......... .......... .......... .......... 77% 3.12M 1s
+  7450K .......... .......... .......... .......... .......... 77% 9.77M 1s
+  7500K .......... .......... .......... .......... .......... 78% 3.08M 1s
+  7550K .......... .......... .......... .......... .......... 78% 2.83M 1s
+  7600K .......... .......... .......... .......... .......... 79% 9.46M 1s
+  7650K .......... .......... .......... .......... .......... 79% 2.55M 1s
+  7700K .......... .......... .......... .......... .......... 80% 2.42M 1s
+  7750K .......... .......... .......... .......... .......... 80% 9.01M 1s
+  7800K .......... .......... .......... .......... .......... 81% 8.97M 1s
+  7850K .......... .......... .......... .......... .......... 81% 2.48M 0s
+  7900K .......... .......... .......... .......... .......... 82% 4.96M 0s
+  7950K .......... .......... .......... .......... .......... 82% 3.36M 0s
+  8000K .......... .......... .......... .......... .......... 83% 4.57M 0s
+  8050K .......... .......... .......... .......... .......... 83% 7.90M 0s
+  8100K .......... .......... .......... .......... .......... 84% 3.17M 0s
+  8150K .......... .......... .......... .......... .......... 84% 4.60M 0s
+  8200K .......... .......... .......... .......... .......... 85% 4.52M 0s
+  8250K .......... .......... .......... .......... .......... 85% 3.16M 0s
+  8300K .......... .......... .......... .......... .......... 86% 9.11M 0s
+  8350K .......... .......... .......... .......... .......... 86% 3.24M 0s
+  8400K .......... .......... .......... .......... .......... 87% 4.55M 0s
+  8450K .......... .......... .......... .......... .......... 87% 6.76M 0s
+  8500K .......... .......... .......... .......... .......... 88% 3.03M 0s
+  8550K .......... .......... .......... .......... .......... 88% 5.37M 0s
+  8600K .......... .......... .......... .......... .......... 89% 3.48M 0s
+  8650K .......... .......... .......... .......... .......... 89% 4.70M 0s
+  8700K .......... .......... .......... .......... .......... 90% 6.82M 0s
+  8750K .......... .......... .......... .......... .......... 90% 3.09M 0s
+  8800K .......... .......... .......... .......... .......... 91% 4.88M 0s
+  8850K .......... .......... .......... .......... .......... 91% 5.25M 0s
+  8900K .......... .......... .......... .......... .......... 92% 4.05M 0s
+  8950K .......... .......... .......... .......... .......... 93% 5.66M 0s
+  9000K .......... .......... .......... .......... .......... 93% 3.74M 0s
+  9050K .......... .......... .......... .......... .......... 94% 4.89M 0s
+  9100K .......... .......... .......... .......... .......... 94% 6.03M 0s
+  9150K .......... .......... .......... .......... .......... 95% 3.57M 0s
+  9200K .......... .......... .......... .......... .......... 95% 5.37M 0s
+  9250K .......... .......... .......... .......... .......... 96% 4.88M 0s
+  9300K .......... .......... .......... .......... .......... 96% 3.54M 0s
+  9350K .......... .......... .......... .......... .......... 97% 5.09M 0s
+  9400K .......... .......... .......... .......... .......... 97% 3.40M 0s
+  9450K .......... .......... .......... .......... .......... 98% 6.48M 0s
+  9500K .......... .......... .......... .......... .......... 98% 3.82M 0s
+  9550K .......... .......... .......... .......... .......... 99% 3.78M 0s
+  9600K .......... .......... .......... .......... .......... 99% 9.42M 0s
+  9650K .......... .......... ....                            100% 2.45M=2.6s
+
+2020-12-04 07:40:58 (3.66 MB/s) - '/sources/dhcp-4.4.2.tar.gz.partial' saved [9906235/9906235]
+
+=======> Building '/usr/ports/contrib/dhcp/dhcp#4.4.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/dhcp/work/src -xf /sources/dhcp-4.4.2.tar.gz
+cp dhcpd /usr/ports/contrib/dhcp/work/src
+cp dhclient /usr/ports/contrib/dhcp/work/src
+cp default-config.diff /usr/ports/contrib/dhcp/work/src
++ build
++ cd dhcp-4.4.2
++ patch -p1 -i /usr/ports/contrib/dhcp/work/src/default-config.diff
+patching file client/dhclient.conf.example
+patching file server/dhcpd.conf.example
++ ./configure --prefix=/usr --sysconfdir=/etc
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for ranlib... ranlib
+checking for ar... /usr/bin/ar
+checking whether byte ordering is bigendian... yes
+checking for dhcpd.leases location... /var/db/dhcpd.leases
+checking for dhcpd6.leases location... /var/db/dhcpd6.leases
+checking for dhclient.leases location... /var/db/dhclient.leases
+checking for dhclient6.leases location... /var/db/dhclient6.leases
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for u_int8_t... yes
+checking for u_int16_t... yes
+checking for u_int32_t... yes
+checking for u_int64_t... yes
+checking ifaddrs.h usability... yes
+checking ifaddrs.h presence... yes
+checking for ifaddrs.h... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking for linux/filter.h... yes
+checking for struct lifnum... no
+checking for struct if_laddrconf... no
+checking for struct if_laddrreq... no
+checking for GCC noreturn attribute... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking net/if_dl.h usability... no
+checking net/if_dl.h presence... no
+checking for net/if_dl.h... no
+checking net/if6.h usability... no
+checking net/if6.h presence... no
+checking for net/if6.h... no
+checking regex.h usability... yes
+checking regex.h presence... yes
+checking for regex.h... yes
+checking for library containing socket... none required
+checking for library containing inet_ntoa... none required
+checking for library containing inet_aton... none required
+checking for library containing regcomp... none required
+checking for strlcat... no
+checking for library containing if_nametoindex... none required
+checking for nanosleep... yes
+checking for random device... /dev/random
+checking for /dev/random... yes
+checking for struct sockaddr.sa_len... no
+checking size of struct iaddr *... 4
+checking for struct msghdr.msg_control... yes
+checking for struct tpacket_auxdata.tp_vlan_tci... yes
+checking for flexible array members... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating ./bind/Makefile
+config.status: creating Makefile
+config.status: creating client/Makefile
+config.status: creating client/tests/Makefile
+config.status: creating common/Makefile.am
+config.status: creating common/Makefile
+config.status: creating common/tests/Makefile
+config.status: creating dhcpctl/Makefile.am
+config.status: creating dhcpctl/Makefile
+config.status: creating includes/Makefile
+config.status: creating keama/Makefile
+config.status: creating omapip/Makefile.am
+config.status: creating omapip/Makefile
+config.status: creating relay/Makefile
+config.status: creating relay/tests/Makefile
+config.status: creating server/Makefile
+config.status: creating tests/Makefile.am
+config.status: creating tests/Makefile
+config.status: creating tests/unittest.sh
+config.status: creating server/tests/Makefile
+config.status: creating doc/devel/doxyfile
+config.status: creating includes/config.h
+config.status: executing depfiles commands
+
+     ISC DHCP source configure results:
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Package:
+  Name:          DHCP
+  Version:       4.4.2
+
+C Compiler:      gcc
+
+Flags:
+  DEFS:          -DHAVE_CONFIG_H
+  CFLAGS:        -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I$(top_srcdir)/includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include
+
+DHCP versions:   DHCPv4 and DHCPv6
+
+Features:
+  debug:         no
+  failover:      yes
+  execute:       yes
+  binary-leases: no
+  dhcpv6:        yes
+  delayed-ack:   yes
+  dhcpv4o6:      no
+  relay-port:    no
+
+Developer:
+  ATF unittests : no
+
+
+Now you can type make to build ISC DHCP
+
++ make -j1
+Making all in ./bind
+make[1]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind'
+Configuring BIND libraries for DHCP.
+Building BIND libraries - this takes some time.
+Building isc library in /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc
+Building dns library in /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/dns
+Building isccfg library in /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isccfg
+Building irs library in /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/irs
+Installing BIND libraries to /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind.
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/isc
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/pk11
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/pkcs11
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/lib
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/dns
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/dst
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/isccfg
+mkdir /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include/irs
+make[1]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind'
+Making all in includes
+make[1]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/includes'
+make  all-am
+make[2]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/includes'
+make[2]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/includes'
+make[1]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/includes'
+Making all in tests
+make[1]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/tests'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/tests'
+Making all in common
+make[1]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common'
+Making all in .
+make[2]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common'
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT alloc.o -MD -MP -MF .deps/alloc.Tpo -c -o alloc.o alloc.c
+mv -f .deps/alloc.Tpo .deps/alloc.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT bpf.o -MD -MP -MF .deps/bpf.Tpo -c -o bpf.o bpf.c
+mv -f .deps/bpf.Tpo .deps/bpf.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT comapi.o -MD -MP -MF .deps/comapi.Tpo -c -o comapi.o comapi.c
+mv -f .deps/comapi.Tpo .deps/comapi.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT conflex.o -MD -MP -MF .deps/conflex.Tpo -c -o conflex.o conflex.c
+mv -f .deps/conflex.Tpo .deps/conflex.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT ctrace.o -MD -MP -MF .deps/ctrace.Tpo -c -o ctrace.o ctrace.c
+mv -f .deps/ctrace.Tpo .deps/ctrace.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT dhcp4o6.o -MD -MP -MF .deps/dhcp4o6.Tpo -c -o dhcp4o6.o dhcp4o6.c
+mv -f .deps/dhcp4o6.Tpo .deps/dhcp4o6.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT discover.o -MD -MP -MF .deps/discover.Tpo -c -o discover.o discover.c
+mv -f .deps/discover.Tpo .deps/discover.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT dispatch.o -MD -MP -MF .deps/dispatch.Tpo -c -o dispatch.o dispatch.c
+mv -f .deps/dispatch.Tpo .deps/dispatch.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT dlpi.o -MD -MP -MF .deps/dlpi.Tpo -c -o dlpi.o dlpi.c
+mv -f .deps/dlpi.Tpo .deps/dlpi.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT dns.o -MD -MP -MF .deps/dns.Tpo -c -o dns.o dns.c
+mv -f .deps/dns.Tpo .deps/dns.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT ethernet.o -MD -MP -MF .deps/ethernet.Tpo -c -o ethernet.o ethernet.c
+mv -f .deps/ethernet.Tpo .deps/ethernet.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT execute.o -MD -MP -MF .deps/execute.Tpo -c -o execute.o execute.c
+mv -f .deps/execute.Tpo .deps/execute.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT fddi.o -MD -MP -MF .deps/fddi.Tpo -c -o fddi.o fddi.c
+mv -f .deps/fddi.Tpo .deps/fddi.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT icmp.o -MD -MP -MF .deps/icmp.Tpo -c -o icmp.o icmp.c
+mv -f .deps/icmp.Tpo .deps/icmp.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT inet.o -MD -MP -MF .deps/inet.Tpo -c -o inet.o inet.c
+mv -f .deps/inet.Tpo .deps/inet.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT lpf.o -MD -MP -MF .deps/lpf.Tpo -c -o lpf.o lpf.c
+mv -f .deps/lpf.Tpo .deps/lpf.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT memory.o -MD -MP -MF .deps/memory.Tpo -c -o memory.o memory.c
+mv -f .deps/memory.Tpo .deps/memory.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT nit.o -MD -MP -MF .deps/nit.Tpo -c -o nit.o nit.c
+mv -f .deps/nit.Tpo .deps/nit.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT ns_name.o -MD -MP -MF .deps/ns_name.Tpo -c -o ns_name.o ns_name.c
+mv -f .deps/ns_name.Tpo .deps/ns_name.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT options.o -MD -MP -MF .deps/options.Tpo -c -o options.o options.c
+mv -f .deps/options.Tpo .deps/options.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT packet.o -MD -MP -MF .deps/packet.Tpo -c -o packet.o packet.c
+mv -f .deps/packet.Tpo .deps/packet.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT parse.o -MD -MP -MF .deps/parse.Tpo -c -o parse.o parse.c
+mv -f .deps/parse.Tpo .deps/parse.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT print.o -MD -MP -MF .deps/print.Tpo -c -o print.o print.c
+mv -f .deps/print.Tpo .deps/print.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT raw.o -MD -MP -MF .deps/raw.Tpo -c -o raw.o raw.c
+mv -f .deps/raw.Tpo .deps/raw.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT resolv.o -MD -MP -MF .deps/resolv.Tpo -c -o resolv.o resolv.c
+mv -f .deps/resolv.Tpo .deps/resolv.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT socket.o -MD -MP -MF .deps/socket.Tpo -c -o socket.o socket.c
+mv -f .deps/socket.Tpo .deps/socket.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT tables.o -MD -MP -MF .deps/tables.Tpo -c -o tables.o tables.c
+mv -f .deps/tables.Tpo .deps/tables.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT tr.o -MD -MP -MF .deps/tr.Tpo -c -o tr.o tr.c
+mv -f .deps/tr.Tpo .deps/tr.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT tree.o -MD -MP -MF .deps/tree.Tpo -c -o tree.o tree.c
+mv -f .deps/tree.Tpo .deps/tree.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes  -I.. -DLOCALSTATEDIR='"/var"'   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT upf.o -MD -MP -MF .deps/upf.Tpo -c -o upf.o upf.c
+mv -f .deps/upf.Tpo .deps/upf.Po
+rm -f libdhcp.a
+/usr/bin/ar cru libdhcp.a alloc.o bpf.o comapi.o conflex.o ctrace.o dhcp4o6.o discover.o dispatch.o dlpi.o dns.o ethernet.o execute.o fddi.o icmp.o inet.o lpf.o memory.o nit.o ns_name.o options.o packet.o parse.o print.o raw.o resolv.o socket.o tables.o tr.o tree.o upf.o 
+ranlib libdhcp.a
+make[2]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common'
+Making all in tests
+make[2]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common/tests'
+Making all in .
+make[3]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common/tests'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common/tests'
+make[2]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common/tests'
+make[1]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/common'
+Making all in omapip
+make[1]: Entering directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/omapip'
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT test.o -MD -MP -MF .deps/test.Tpo -c -o test.o test.c
+mv -f .deps/test.Tpo .deps/test.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT protocol.o -MD -MP -MF .deps/protocol.Tpo -c -o protocol.o protocol.c
+mv -f .deps/protocol.Tpo .deps/protocol.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT buffer.o -MD -MP -MF .deps/buffer.Tpo -c -o buffer.o buffer.c
+mv -f .deps/buffer.Tpo .deps/buffer.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT alloc.o -MD -MP -MF .deps/alloc.Tpo -c -o alloc.o alloc.c
+mv -f .deps/alloc.Tpo .deps/alloc.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT result.o -MD -MP -MF .deps/result.Tpo -c -o result.o result.c
+mv -f .deps/result.Tpo .deps/result.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT connection.o -MD -MP -MF .deps/connection.Tpo -c -o connection.o connection.c
+mv -f .deps/connection.Tpo .deps/connection.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT errwarn.o -MD -MP -MF .deps/errwarn.Tpo -c -o errwarn.o errwarn.c
+mv -f .deps/errwarn.Tpo .deps/errwarn.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT listener.o -MD -MP -MF .deps/listener.Tpo -c -o listener.o listener.c
+mv -f .deps/listener.Tpo .deps/listener.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT dispatch.o -MD -MP -MF .deps/dispatch.Tpo -c -o dispatch.o dispatch.c
+mv -f .deps/dispatch.Tpo .deps/dispatch.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT generic.o -MD -MP -MF .deps/generic.Tpo -c -o generic.o generic.c
+mv -f .deps/generic.Tpo .deps/generic.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT support.o -MD -MP -MF .deps/support.Tpo -c -o support.o support.c
+mv -f .deps/support.Tpo .deps/support.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT handle.o -MD -MP -MF .deps/handle.Tpo -c -o handle.o handle.c
+mv -f .deps/handle.Tpo .deps/handle.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT message.o -MD -MP -MF .deps/message.Tpo -c -o message.o message.c
+mv -f .deps/message.Tpo .deps/message.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT convert.o -MD -MP -MF .deps/convert.Tpo -c -o convert.o convert.c
+mv -f .deps/convert.Tpo .deps/convert.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT hash.o -MD -MP -MF .deps/hash.Tpo -c -o hash.o hash.c
+mv -f .deps/hash.Tpo .deps/hash.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT auth.o -MD -MP -MF .deps/auth.Tpo -c -o auth.o auth.c
+mv -f .deps/auth.Tpo .deps/auth.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT inet_addr.o -MD -MP -MF .deps/inet_addr.Tpo -c -o inet_addr.o inet_addr.c
+mv -f .deps/inet_addr.Tpo .deps/inet_addr.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT array.o -MD -MP -MF .deps/array.Tpo -c -o array.o array.c
+mv -f .deps/array.Tpo .deps/array.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT trace.o -MD -MP -MF .deps/trace.Tpo -c -o trace.o trace.c
+mv -f .deps/trace.Tpo .deps/trace.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT toisc.o -MD -MP -MF .deps/toisc.Tpo -c -o toisc.o toisc.c
+mv -f .deps/toisc.Tpo .deps/toisc.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT iscprint.o -MD -MP -MF .deps/iscprint.Tpo -c -o iscprint.o iscprint.c
+mv -f .deps/iscprint.Tpo .deps/iscprint.Po
+gcc -DHAVE_CONFIG_H -I. -I../includes     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include -MT isclib.o -MD -MP -MF .deps/isclib.Tpo -c -o isclib.o isclib.c
+mv -f .deps/isclib.Tpo .deps/isclib.Po
+rm -f libomapi.a
+/usr/bin/ar cru libomapi.a protocol.o buffer.o alloc.o result.o connection.o errwarn.o listener.o dispatch.o generic.o support.o handle.o message.o convert.o hash.o auth.o inet_addr.o array.o trace.o toisc.o iscprint.o isclib.o 
+ranlib libomapi.a
+gcc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -I../includes -I/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/include   -o svtest test.o libomapi.a /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/irs/libirs.a /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/dns/libdns.a /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isccfg/libisccfg.a /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a 
+/usr/bin/ld: /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a(stats.o): in function `isc_stats_increment':
+stats.c:(.text+0x4b0): undefined reference to `__atomic_fetch_add_8'
+/usr/bin/ld: /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a(stats.o): in function `isc_stats_decrement':
+stats.c:(.text+0x564): undefined reference to `__atomic_fetch_sub_8'
+/usr/bin/ld: /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a(stats.o): in function `isc_stats_dump':
+stats.c:(.text+0x67c): undefined reference to `__atomic_load_8'
+/usr/bin/ld: /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a(stats.o): in function `isc_stats_set':
+stats.c:(.text+0x80c): undefined reference to `__atomic_store_8'
+/usr/bin/ld: /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a(stats.o): in function `isc_stats_update_if_greater':
+stats.c:(.text+0x8e4): undefined reference to `__atomic_load_8'
+/usr/bin/ld: stats.c:(.text+0x914): undefined reference to `__atomic_compare_exchange_8'
+/usr/bin/ld: /usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/bind/bind-9.11.14/lib/isc/libisc.a(stats.o): in function `isc_stats_get_counter':
+stats.c:(.text+0xa28): undefined reference to `__atomic_load_8'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:440: svtest] Error 1
+make[1]: Leaving directory '/usr/ports/contrib/dhcp/work/src/dhcp-4.4.2/omapip'
+make: *** [Makefile:463: all-recursive] Error 1
+=======> ERROR: Building '/usr/ports/contrib/dhcp/dhcp#4.4.2-1.pkg.tar.xz' failed.

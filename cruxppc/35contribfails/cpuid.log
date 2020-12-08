@@ -1,0 +1,28 @@
+prt-get: installing /usr/ports/contrib/cpuid
+prt-get: starting build Fri Dec  4 04:58:46 2020
+=======> Downloading 'http://www.etallen.com/cpuid/cpuid-20201006.src.tar.gz'.
+--2020-12-04 04:58:46--  http://www.etallen.com/cpuid/cpuid-20201006.src.tar.gz
+Resolving www.etallen.com... 69.39.232.74
+Connecting to www.etallen.com|69.39.232.74|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 118994 (116K) [application/x-gzip]
+Saving to: '/sources/cpuid-20201006.src.tar.gz.partial'
+
+     0K .......... .......... .......... .......... .......... 43%  437K 0s
+    50K .......... .......... .......... .......... .......... 86%  457K 0s
+   100K .......... ......                                     100%  320K=0.3s
+
+2020-12-04 04:58:47 (423 KB/s) - '/sources/cpuid-20201006.src.tar.gz.partial' saved [118994/118994]
+
+=======> Building '/usr/ports/contrib/cpuid/cpuid#20201006-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/cpuid/work/src -xf /sources/cpuid-20201006.src.tar.gz
++ build
++ cd cpuid-20201006
++ make -e 'CFLAGS=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec'
+cc  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  -Wall -W -Wshadow -Wcast-align -Wredundant-decls -Wbad-function-cast -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wimplicit-fallthrough -Wunused-parameter -D_FILE_OFFSET_BITS=64 -DVERSION=20201006  -o cpuid cpuid.c
+cpuid.c:101:10: fatal error: cpuid.h: No such file or directory
+ #include <cpuid.h>
+          ^~~~~~~~~
+compilation terminated.
+make: *** [Makefile:46: cpuid] Error 1
+=======> ERROR: Building '/usr/ports/contrib/cpuid/cpuid#20201006-1.pkg.tar.xz' failed.

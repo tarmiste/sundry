@@ -1,0 +1,14 @@
+prt-get: installing /usr/ports/contrib/dsniff
+prt-get: starting build Fri Dec  4 08:53:15 2020
+=======> Downloading 'http://monkey.org/~dugsong/dsniff/beta/dsniff-2.4b1.tar.gz'.
+--2020-12-04 08:53:15--  http://monkey.org/~dugsong/dsniff/beta/dsniff-2.4b1.tar.gz
+Resolving monkey.org... 104.197.149.9
+Connecting to monkey.org|104.197.149.9|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://monkey.org/~dugsong/dsniff/beta/dsniff-2.4b1.tar.gz [following]
+--2020-12-04 08:53:17--  https://monkey.org/~dugsong/dsniff/beta/dsniff-2.4b1.tar.gz
+Connecting to monkey.org|104.197.149.9|:443... connected.
+ERROR: cannot verify monkey.org's certificate, issued by 'CN=R3,O=Let\'s Encrypt,C=US':
+  Issued certificate not yet valid.
+To connect to monkey.org insecurely, use `--no-check-certificate'.
+=======> ERROR: Downloading 'http://monkey.org/~dugsong/dsniff/beta/dsniff-2.4b1.tar.gz' failed.

@@ -1,0 +1,19 @@
+prt-get: installing /usr/ports/contrib/x86info
+prt-get: starting build Sun Dec  6 20:10:11 2020
+=======> Building '/usr/ports/contrib/x86info/x86info#1.31-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/x86info/work/src -xf /sources/x86info-1.31.tar.gz
++ build
++ cd x86info-8ea5ed19fae1d209eba9257171a10f7afd474618
++ sed -e 's/-Werror //' -i Makefile
++ make
+  CC MHz.o
+In file included from MHz.c:14:
+MHz.c: In function 'estimate_MHz':
+include/rdtsc.h:7:2: error: inconsistent operand constraints in an 'asm'
+  __asm__ __volatile__("rdtsc" : "=a" (low), "=d" (high));
+  ^~~~~~~
+include/rdtsc.h:7:2: error: inconsistent operand constraints in an 'asm'
+  __asm__ __volatile__("rdtsc" : "=a" (low), "=d" (high));
+  ^~~~~~~
+make: *** [Makefile:79: MHz.o] Error 1
+=======> ERROR: Building '/usr/ports/contrib/x86info/x86info#1.31-1.pkg.tar.xz' failed.

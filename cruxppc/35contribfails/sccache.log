@@ -1,0 +1,416 @@
+prt-get: installing /usr/ports/contrib/sccache
+prt-get: starting build Sun Dec  6 10:36:26 2020
+=======> Building '/usr/ports/contrib/sccache/sccache#0.2.13-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/sccache/work/src -xf /sources/sccache-0.2.13.tar.gz
++ build
++ cd sccache-0.2.13
++ prt-get isinst sccache
+package sccache is not installed
++ mkdir /sources/rust
+mkdir: cannot create directory '/sources/rust': File exists
++ true
++ export CARGO_HOME=/sources/rust
++ CARGO_HOME=/sources/rust
++ cargo fetch
+    Updating git repository `https://github.com/saresend/selenium-rs.git`
+ Downloading crates ...
+  Downloaded termcolor v1.0.5
+  Downloaded subtle v1.0.0
+  Downloaded hmac v0.7.1
+  Downloaded tar v0.4.26
+  Downloaded dtoa v0.4.4
+  Downloaded thread_local v0.3.6
+  Downloaded crossbeam-deque v0.7.2
+  Downloaded blake2b_simd v0.5.9
+  Downloaded unicode-xid v0.2.0
+  Downloaded threadpool v1.7.1
+  Downloaded arrayref v0.3.5
+  Downloaded phf_shared v0.7.24
+  Downloaded ar v0.6.2
+  Downloaded vec_map v0.8.1
+  Downloaded atty v0.2.13
+  Downloaded twoway v0.1.8
+  Downloaded winapi-util v0.1.2
+  Downloaded unreachable v1.0.0
+  Downloaded combine v3.8.1
+  Downloaded mime v0.2.6
+  Downloaded normalize-line-endings v0.2.2
+  Downloaded predicates v0.9.1
+  Downloaded float-cmp v0.4.0
+  Downloaded crypto-mac v0.7.0
+  Downloaded quick-error v1.2.2
+  Downloaded getopts v0.2.21
+  Downloaded env_logger v0.5.13
+  Downloaded skeptic v0.4.0
+  Downloaded jsonwebtoken v6.0.1
+  Downloaded unix_socket v0.5.0
+  Downloaded tokio-codec v0.1.1
+  Downloaded wincolor v1.0.2
+  Downloaded phf_generator v0.7.24
+  Downloaded bincode v1.2.0
+  Downloaded phf v0.7.24
+  Downloaded tokio-current-thread v0.1.6
+  Downloaded rand v0.7.2
+  Downloaded c2-chacha v0.2.3
+  Downloaded rand_chacha v0.2.1
+  Downloaded counted-array v0.1.2
+  Downloaded language-tags v0.2.2
+  Downloaded escargot v0.3.1
+  Downloaded daemonize v0.3.0
+  Downloaded error-chain v0.11.0
+  Downloaded directories v1.0.2
+  Downloaded mime v0.3.14
+  Downloaded retry v0.4.0
+  Downloaded version_check v0.1.5
+  Downloaded url v2.1.0
+  Downloaded libmount v0.1.15
+  Downloaded tiny_http v0.6.2
+  Downloaded openssl-sys v0.9.53
+  Downloaded rust-argon2 v0.5.1
+  Downloaded predicates-tree v0.9.0
+  Downloaded sha1 v0.6.0
+  Downloaded predicates-core v0.9.0
+  Downloaded dirs v1.0.5
+  Downloaded memcached-rs v0.3.0
+  Downloaded mio-uds v0.6.7
+  Downloaded tokio-process v0.2.4
+  Downloaded getrandom v0.1.13
+  Downloaded tokio-serde v0.1.0
+  Downloaded itertools v0.7.11
+  Downloaded ascii v0.9.3
+  Downloaded crossbeam-utils v0.5.0
+  Downloaded buf_redux v0.6.3
+  Downloaded pulldown-cmark v0.0.3
+  Downloaded clap v2.33.0
+  Downloaded regex-syntax v0.6.12
+  Downloaded security-framework-sys v0.3.3
+  Downloaded crossbeam-utils v0.7.0
+  Downloaded nix v0.11.1
+  Downloaded syslog v4.0.1
+  Downloaded tracing v0.1.10
+  Downloaded local-encoding v0.2.0
+  Downloaded assert_cmd v0.9.1
+  Downloaded rouille v2.2.0
+  Downloaded aho-corasick v0.7.6
+  Downloaded bincode v0.8.0
+  Downloaded hyperx v0.12.0
+  Downloaded vte v0.3.3
+  Downloaded chrono v0.4.10
+  Downloaded futures v0.1.29
+  Downloaded openssl v0.10.26
+  Downloaded backtrace-sys v0.1.32
+  Downloaded libz-sys v1.0.25
+  Downloaded regex v1.3.1
+  Downloaded libc v0.2.66
+  Downloaded encoding_rs v0.8.20
+  Downloaded reqwest v0.9.22
+  Downloaded error-chain v0.12.1
+  Downloaded wasi v0.7.0
+  Downloaded tokio-sync v0.1.7
+  Downloaded ring v0.14.6
+  Downloaded syn v0.11.11
+  Downloaded tracing-core v0.1.7
+  Downloaded tower-buffer v0.1.2
+  Downloaded tower-limit v0.1.1
+  Downloaded hermit-abi v0.1.3
+  Downloaded walkdir v1.0.7
+  Downloaded miow v0.3.3
+  Downloaded tower-retry v0.1.0
+  Downloaded cc v1.0.48
+  Downloaded tower-util v0.1.0
+  Downloaded adler32 v1.0.4
+  Downloaded security-framework v0.3.4
+  Downloaded tower-timeout v0.1.1
+  Downloaded native-tls v0.2.3
+  Downloaded term v0.5.2
+  Downloaded ascii v0.8.7
+  Downloaded chunked_transfer v0.3.1
+  Downloaded tower-load-shed v0.1.0
+  Downloaded schannel v0.1.16
+  Downloaded typenum v1.11.2
+  Downloaded tokio-serde-bincode v0.1.1
+  Downloaded itoa v0.4.4
+  Downloaded mime_guess v2.0.1
+  Downloaded podio v0.1.6
+  Downloaded msdos_time v0.1.6
+  Downloaded core-foundation-sys v0.6.2
+  Downloaded serde_json v1.0.44
+  Downloaded serde v1.0.103
+  Downloaded tokio-threadpool v0.1.17
+  Downloaded miow v0.2.1
+  Downloaded socket2 v0.3.11
+  Downloaded mio-named-pipes v0.1.6
+  Downloaded filetime v0.2.8
+  Downloaded tokio-fs v0.1.6
+  Downloaded redox_users v0.3.1
+  Downloaded conhash v0.4.0
+  Downloaded redis v0.9.1
+  Downloaded crossbeam-queue v0.1.2
+  Downloaded filetime v0.1.15
+  Downloaded zip v0.4.2
+  Downloaded tokio-named-pipes v0.1.0
+  Downloaded mio v0.6.21
+  Downloaded memoffset v0.5.3
+  Downloaded arc-swap v0.4.4
+  Downloaded byteorder v1.3.2
+  Downloaded ryu v1.0.2
+  Downloaded tokio-signal v0.2.7
+  Downloaded indexmap v1.3.0
+  Downloaded crossbeam-epoch v0.8.0
+  Downloaded tokio-udp v0.1.5
+  Downloaded case v0.1.0
+  Downloaded synom v0.11.3
+  Downloaded num-traits v0.2.10
+  Downloaded lock_api v0.3.2
+  Downloaded derive-error v0.0.3
+  Downloaded tokio-reactor v0.1.11
+  Downloaded serde_derive v1.0.103
+  Downloaded linked-hash-map v0.2.1
+  Downloaded num_cpus v1.11.1
+  Downloaded untrusted v0.6.2
+  Downloaded unicode-normalization v0.1.11
+  Downloaded quote v0.3.15
+  Downloaded md5 v0.3.8
+  Downloaded sha2 v0.8.0
+  Downloaded scopeguard v1.0.0
+  Downloaded net2 v0.2.33
+  Downloaded tokio-uds v0.2.5
+  Downloaded tower v0.1.1
+  Downloaded number_prefix v0.2.8
+  Downloaded fnv v1.0.6
+  Downloaded md-5 v0.8.0
+  Downloaded toml v0.4.10
+  Downloaded tracing-attributes v0.1.5
+  Downloaded tokio-io v0.1.12
+  Downloaded bufstream v0.1.4
+  Downloaded core-foundation v0.6.4
+  Downloaded tower-discover v0.1.0
+  Downloaded tokio-executor v0.1.9
+  Downloaded rand v0.5.6
+  Downloaded tower-layer v0.1.0
+  Downloaded synstructure v0.12.3
+  Downloaded failure_derive v0.1.6
+  Downloaded quote v1.0.2
+  Downloaded memchr v1.0.2
+  Downloaded phf_codegen v0.7.24
+  Downloaded tokio-timer v0.2.12
+  Downloaded tower-service v0.2.0
+  Downloaded unicase v1.4.2
+  Downloaded multipart v0.13.6
+  Downloaded memchr v2.2.1
+  Downloaded base64 v0.9.3
+  Downloaded miniz_oxide v0.3.5
+  Downloaded log v0.3.9
+  Downloaded constant_time_eq v0.1.4
+  Downloaded num-integer v0.1.41
+  Downloaded xattr v0.2.2
+  Downloaded safemem v0.2.0
+  Downloaded version-compare v0.0.10
+  Downloaded failure v0.1.6
+  Downloaded proc-macro2 v1.0.6
+  Downloaded syn v1.0.11
+  Downloaded same-file v0.1.3
+  Downloaded ppv-lite86 v0.2.6
+  Downloaded crossbeam-utils v0.6.6
+  Downloaded mime_guess v1.8.7
+  Downloaded smallvec v1.0.0
+  Downloaded utf8parse v0.1.1
+  Downloaded backtrace v0.3.40
+  Downloaded which v2.0.1
+  Downloaded time v0.1.42
+  Downloaded vcpkg v0.2.8
+  Downloaded crc32fast v1.2.0
+  Downloaded flate2 v1.0.13
+  Downloaded sha-1 v0.8.1
+  Downloaded tokio-tcp v0.1.3
+  Downloaded signal-hook v0.1.12
+  Downloaded unicode-xid v0.0.4
+  Downloaded jobserver v0.1.19
+  Downloaded rand v0.3.23
+  Downloaded try-lock v0.2.2
+  Downloaded siphasher v0.2.3
+  Downloaded strip-ansi-escapes v0.1.0
++ cargo build --release
+   Compiling libc v0.2.66
+   Compiling cfg-if v0.1.10
+   Compiling autocfg v0.1.7
+   Compiling spin v0.5.2
+   Compiling futures v0.1.29
+   Compiling byteorder v1.3.2
+   Compiling log v0.4.8
+   Compiling semver-parser v0.7.0
+   Compiling either v1.5.3
+   Compiling proc-macro2 v1.0.6
+   Compiling unicode-xid v0.2.0
+   Compiling syn v1.0.11
+   Compiling slab v0.4.2
+   Compiling cc v1.0.48
+   Compiling fnv v1.0.6
+   Compiling scopeguard v1.0.0
+   Compiling maybe-uninit v2.0.0
+   Compiling rand_core v0.4.2
+   Compiling itoa v0.4.4
+   Compiling version_check v0.9.1
+   Compiling serde v1.0.103
+   Compiling matches v0.1.8
+   Compiling smallvec v1.0.0
+   Compiling pkg-config v0.3.17
+   Compiling typenum v1.11.2
+   Compiling memchr v2.2.1
+   Compiling bitflags v1.2.1
+   Compiling unicode-width v0.1.7
+   Compiling getrandom v0.1.13
+   Compiling failure_derive v0.1.6
+   Compiling httparse v1.3.4
+   Compiling version_check v0.1.5
+   Compiling percent-encoding v1.0.1
+   Compiling crc32fast v1.2.0
+   Compiling rustc-demangle v0.1.16
+   Compiling openssl v0.10.26
+   Compiling remove_dir_all v0.5.2
+   Compiling regex-syntax v0.6.12
+   Compiling ryu v1.0.2
+   Compiling foreign-types-shared v0.1.1
+   Compiling unicode-xid v0.0.4
+   Compiling arc-swap v0.4.4
+   Compiling try-lock v0.2.2
+   Compiling ppv-lite86 v0.2.6
+   Compiling byte-tools v0.3.1
+   Compiling native-tls v0.2.3
+   Compiling percent-encoding v2.1.0
+   Compiling adler32 v1.0.4
+   Compiling encoding_rs v0.8.20
+   Compiling openssl-probe v0.1.2
+   Compiling mime v0.3.14
+   Compiling quote v0.3.15
+   Compiling opaque-debug v0.2.3
+   Compiling subtle v1.0.0
+   Compiling case v0.1.0
+   Compiling same-file v0.1.3
+   Compiling dtoa v0.4.4
+   Compiling safemem v0.3.3
+   Compiling fake-simd v0.1.2
+   Compiling quick-error v1.2.2
+   Compiling utf8parse v0.1.1
+   Compiling termcolor v1.0.5
+   Compiling untrusted v0.6.2
+   Compiling vec_map v0.8.1
+   Compiling linked-hash-map v0.2.1
+   Compiling ansi_term v0.11.0
+   Compiling language-tags v0.2.2
+   Compiling podio v0.1.6
+   Compiling strsim v0.8.0
+   Compiling base64 v0.11.0
+   Compiling counted-array v0.1.2
+   Compiling try_from v0.3.2
+   Compiling lazy_static v1.4.0
+   Compiling crossbeam-utils v0.7.0
+   Compiling crossbeam-epoch v0.8.0
+   Compiling num-traits v0.2.10
+   Compiling indexmap v1.3.0
+   Compiling rand_pcg v0.1.2
+   Compiling rand_chacha v0.1.1
+   Compiling rand v0.6.5
+   Compiling num-integer v0.1.41
+   Compiling bincode v1.2.0
+   Compiling semver v0.9.0
+   Compiling tower-service v0.2.0
+   Compiling tokio-sync v0.1.7
+   Compiling lock_api v0.3.2
+   Compiling rand_core v0.3.1
+   Compiling rand_jitter v0.1.4
+   Compiling backtrace-sys v0.1.32
+   Compiling ring v0.14.6
+   Compiling unicode-bidi v0.3.4
+   Compiling unicase v2.6.0
+   Compiling unicode-normalization v0.1.11
+   Compiling openssl-sys v0.9.53
+   Compiling getopts v0.2.21
+   Compiling error-chain v0.12.1
+   Compiling foreign-types v0.3.2
+   Compiling synom v0.11.3
+   Compiling c2-chacha v0.2.3
+   Compiling block-padding v0.1.5
+   Compiling miniz_oxide v0.3.5
+   Compiling textwrap v0.11.0
+   Compiling walkdir v1.0.7
+   Compiling humantime v1.3.0
+   Compiling vte v0.3.3
+   Compiling crossbeam-utils v0.6.6
+   Compiling thread_local v0.3.6
+   Compiling tracing-core v0.1.7
+   Compiling tower-layer v0.1.0
+   Compiling tower-discover v0.1.0
+   Compiling rustc_version v0.2.3
+   Compiling rand_isaac v0.1.1
+   Compiling rand_hc v0.1.0
+   Compiling rand_xorshift v0.1.1
+error: failed to run custom build command for `ring v0.14.6`
+
+Caused by:
+  process didn't exit successfully: `/usr/ports/contrib/sccache/work/src/sccache-0.2.13/target/release/build/ring-b465d718aa5a4ee6/build-script-build` (exit code: 101)
+  --- stdout
+  CARGO: /usr/bin/cargo
+  CARGO_CFG_TARGET_ARCH: powerpc
+  CARGO_CFG_TARGET_ENDIAN: big
+  CARGO_CFG_TARGET_ENV: gnu
+  CARGO_CFG_TARGET_FAMILY: unix
+  CARGO_CFG_TARGET_OS: linux
+  CARGO_CFG_TARGET_POINTER_WIDTH: 32
+  CARGO_CFG_TARGET_VENDOR: unknown
+  CARGO_CFG_UNIX: 
+  CARGO_FEATURE_DEFAULT: 1
+  CARGO_FEATURE_DEV_URANDOM_FALLBACK: 1
+  CARGO_FEATURE_USE_HEAP: 1
+  CARGO_HOME: /sources/rust
+  CARGO_MAKEFLAGS: --jobserver-fds=7,8 -j --jobserver-auth=7,8 -j
+  CARGO_MANIFEST_DIR: /sources/rust/registry/src/github.com-b420f105fcaca6de/ring-0.14.6
+  CARGO_MANIFEST_LINKS: ring-asm
+  CARGO_PKG_AUTHORS: Brian Smith <brian@briansmith.org>
+  CARGO_PKG_DESCRIPTION: Safe, fast, small crypto using Rust.
+  CARGO_PKG_HOMEPAGE: 
+  CARGO_PKG_LICENSE: 
+  CARGO_PKG_LICENSE_FILE: LICENSE
+  CARGO_PKG_NAME: ring
+  CARGO_PKG_REPOSITORY: https://github.com/briansmith/ring
+  CARGO_PKG_VERSION: 0.14.6
+  CARGO_PKG_VERSION_MAJOR: 0
+  CARGO_PKG_VERSION_MINOR: 14
+  CARGO_PKG_VERSION_PATCH: 6
+  CARGO_PKG_VERSION_PRE: 
+  CFLAGS: -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec
+  CXXFLAGS: -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec
+  DEBUG: false
+  HOME: /root
+  HOST: powerpc-unknown-linux-gnu
+  HUSHLOGIN: FALSE
+  INPUTRC: /etc/inputrc
+  LC_ALL: POSIX
+  LD_LIBRARY_PATH: /usr/ports/contrib/sccache/work/src/sccache-0.2.13/target/release/deps:/usr/ports/contrib/sccache/work/src/sccache-0.2.13/target/release:/usr/lib/rustlib/powerpc-unknown-linux-gnu/lib
+  LESS: -R
+  LOGNAME: root
+  MOTD_SHOWN: pam
+  NUM_JOBS: 2
+  OLDPWD: /usr/ports/contrib/sccache/work/src
+  OPT_LEVEL: 3
+  OUT_DIR: /usr/ports/contrib/sccache/work/src/sccache-0.2.13/target/release/build/ring-c1fd986df340dcf3/out
+  PATH: /sbin:/usr/sbin:/opt/sbin:/bin:/usr/bin:/opt/bin
+  PROFILE: release
+  PWD: /usr/ports/contrib/sccache/work/src/sccache-0.2.13
+  RUSTC: rustc
+  RUSTDOC: rustdoc
+  SHELL: /bin/bash
+  SHLVL: 2
+  SSL_CERT_DIR: /etc/pki/tls/certs
+  SSL_CERT_FILE: /etc/pki/tls/certs/ca-bundle.crt
+  TARGET: powerpc-unknown-linux-gnu
+  TERM: linux
+  USER: root
+  _: /usr/bin/cargo
+
+  --- stderr
+  thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', /sources/rust/registry/src/github.com-b420f105fcaca6de/ring-0.14.6/build.rs:371:10
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+error: build failed
+=======> ERROR: Building '/usr/ports/contrib/sccache/sccache#0.2.13-1.pkg.tar.xz' failed.

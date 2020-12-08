@@ -1,0 +1,15 @@
+prt-get: installing /usr/ports/contrib/python3-pyqtwebengine
+prt-get: starting build Sun Dec  6 06:08:45 2020
+=======> Building '/usr/ports/contrib/python3-pyqtwebengine/python3-pyqtwebengine#5.15.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/python3-pyqtwebengine/work/src -xf /sources/PyQtWebEngine-5.15.2.tar.gz
++ build
++ cd PyQtWebEngine-5.15.2
++ export PATH=/usr/lib/qt5/bin/:/sbin:/usr/sbin:/opt/sbin:/bin:/usr/bin:/opt/bin
++ PATH=/usr/lib/qt5/bin/:/sbin:/usr/sbin:/opt/sbin:/bin:/usr/bin:/opt/bin
++ sip-build --no-make --api-dir /usr/share/qt/qsci/api/python/
+Querying qmake about your Qt installation...
+These bindings will be built: QtWebEngineCore, QtWebEngine, QtWebEngineWidgets.
+Generating the QtWebEngineCore bindings...
+sip-build: Unable to find file "QtCore/QtCoremod.sip"
+
+=======> ERROR: Building '/usr/ports/contrib/python3-pyqtwebengine/python3-pyqtwebengine#5.15.2-1.pkg.tar.xz' failed.

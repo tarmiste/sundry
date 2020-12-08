@@ -1,0 +1,32 @@
+prt-get: installing /usr/ports/contrib/p7zip
+prt-get: starting build Sun Dec  6 03:02:23 2020
+=======> Building '/usr/ports/contrib/p7zip/p7zip#16.02-2.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/p7zip/work/src -xf /sources/p7zip_16.02_src_all.tar.bz2
+cp CVE-2016-9296.patch /usr/ports/contrib/p7zip/work/src
+cp CVE-2017-17969.patch /usr/ports/contrib/p7zip/work/src
+cp CVE-2018-5996.patch /usr/ports/contrib/p7zip/work/src
++ build
++ cd p7zip_16.02
++ patch -p1 -i /usr/ports/contrib/p7zip/work/src/CVE-2016-9296.patch
+patching file CPP/7zip/Archive/7z/7zIn.cpp
++ patch -p1 -i /usr/ports/contrib/p7zip/work/src/CVE-2017-17969.patch
+patching file CPP/7zip/Compress/ShrinkDecoder.cpp
++ patch -p1 -i /usr/ports/contrib/p7zip/work/src/CVE-2018-5996.patch
+patching file CPP/7zip/Compress/Rar1Decoder.cpp
+patching file CPP/7zip/Compress/Rar1Decoder.h
+patching file CPP/7zip/Compress/Rar2Decoder.cpp
+patching file CPP/7zip/Compress/Rar2Decoder.h
+patching file CPP/7zip/Compress/Rar3Decoder.cpp
+patching file CPP/7zip/Compress/Rar3Decoder.h
++ cp makefile.linux_amd64_asm makefile.machine
++ make all3 'OPTFLAGS=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec'
+mkdir -p bin
+make -C CPP/7zip/Bundles/Alone all
+make[1]: Entering directory '/usr/ports/contrib/p7zip/work/src/p7zip_16.02/CPP/7zip/Bundles/Alone'
+rm -f StdAfx.h.gch
+g++ -c -I. -I../../../../C -I../../../../CPP/myWindows -I../../../../CPP/include_windows -I../../../../CPP -m64 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -pipe -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DNDEBUG -D_REENTRANT -DENV_UNIX -D_7ZIP_LARGE_PAGES -D_7ZIP_ASM  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_REENTRANT -DENV_UNIX -DBREAK_HANDLER -DUNICODE -D_UNICODE -DUNIX_USE_WIN_FILE   ../../../myWindows/StdAfx.h -o StdAfx.h.gch
+cc1plus: error: '-m64' not supported in this configuration
+make[1]: *** [makefile.list:242: StdAfx.h.gch] Error 1
+make[1]: Leaving directory '/usr/ports/contrib/p7zip/work/src/p7zip_16.02/CPP/7zip/Bundles/Alone'
+make: *** [makefile:17: 7za] Error 2
+=======> ERROR: Building '/usr/ports/contrib/p7zip/p7zip#16.02-2.pkg.tar.xz' failed.

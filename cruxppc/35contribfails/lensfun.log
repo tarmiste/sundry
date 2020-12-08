@@ -1,0 +1,97 @@
+prt-get: installing /usr/ports/contrib/lensfun
+prt-get: starting build Sat Dec  5 01:36:36 2020
+=======> Downloading 'https://github.com/lensfun/lensfun/archive/v0.3.2/lensfun-0.3.2.tar.gz'.
+--2020-12-05 01:36:36--  https://github.com/lensfun/lensfun/archive/v0.3.2/lensfun-0.3.2.tar.gz
+Resolving github.com... 140.82.113.4
+Connecting to github.com|140.82.113.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/lensfun/lensfun/tar.gz/v0.3.2 [following]
+--2020-12-05 01:36:37--  https://codeload.github.com/lensfun/lensfun/tar.gz/v0.3.2
+Resolving codeload.github.com... 140.82.114.10
+Connecting to codeload.github.com|140.82.114.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: '/sources/lensfun-0.3.2.tar.gz.partial'
+
+     0K .......... .......... .......... .......... ..........  391K
+    50K .......... .......... .......... .......... ..........  798K
+   100K .......... .......... .......... .......... .......... 4.06M
+   150K .......... .......... .......... .......... .......... 9.33M
+   200K .......... .......... .......... .......... ..........  943K
+   250K .......... .......... .......... .......... ..........  636K
+   300K .......... .......... .......... .......... .......... 16.4M
+   350K .......... .......... .......... .......... .......... 14.9M
+   400K .......... .......... .......... .......... .......... 15.6M
+   450K .......... .......... .......... .......... .......... 15.7M
+   500K .......... .......... .......... .......... .......... 17.0M
+   550K .......... .......... .......... .......... .......... 13.4M
+   600K .......... .......... .......... .......... .......... 1.81M
+   650K .......... .......... .......... .......... .......... 2.64M
+   700K .......... .......... .......... .......... .......... 9.92M
+   750K .......... ......                                      21.3M=0.4s
+
+2020-12-05 01:36:37 (1.83 MB/s) - '/sources/lensfun-0.3.2.tar.gz.partial' saved [784825]
+
+=======> Building '/usr/ports/contrib/lensfun/lensfun#0.3.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/lensfun/work/src -xf /sources/lensfun-0.3.2.tar.gz
+cp lensfun-fix-python-install-dir.patch /usr/ports/contrib/lensfun/work/src
++ build
++ patch -p1 -d lensfun-0.3.2 -i /usr/ports/contrib/lensfun/work/src/lensfun-fix-python-install-dir.patch
+patching file apps/CMakeLists.txt
++ cmake -S lensfun-0.3.2 -B build -G Ninja -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_INSTALL_LIBDIR=lib -D CMAKE_BUILD_TYPE=Release -D 'CMAKE_CXX_FLAGS_RELEASE=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -fno-delete-null-pointer-checks -DNDEBUG' -D 'CMAKE_C_FLAGS_RELEASE=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -fno-delete-null-pointer-checks -DNDEBUG' -Wno-dev
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for include file regex.h
+-- Looking for include file regex.h - found
+-- Looking for include file endian.h
+-- Looking for include file endian.h - found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for one of the modules 'glib-2.0'
+-- -------------------------------------------------------------------------------------
+-- Building Lensfun 0.3.2.0
+-- -------------------------------------------------------------------------------------
+-- Build as dynamic/shared library
+-- Build type: Release
+-- Build doc: OFF
+-- Build test suite: OFF
+-- Build lenstool: OFF
+-- Build with support for SSE: ON
+-- Build with support for SSE2: ON
+-- Install helper scripts: ON
+-- 
+Install prefix: /usr
+-- 
+Using: 
+-- GLIB2 include dir: /usr/include/glib-2.0;/usr/lib/glib-2.0/include
+-- GLIB2 library: glib-2.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /usr/ports/contrib/lensfun/work/src/build
++ cmake --build build
+[1/16] Building CXX object libs/lensfun/CMakeFiles/lensfun.dir/camera.cpp.o
+FAILED: libs/lensfun/CMakeFiles/lensfun.dir/camera.cpp.o 
+/usr/bin/c++ -Dlensfun_EXPORTS -I. -I/usr/ports/contrib/lensfun/work/src/lensfun-0.3.2/include/lensfun -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -msse -msse2 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -fno-delete-null-pointer-checks -DNDEBUG -fPIC -DCONF_SYMBOL_VISIBILITY -MD -MT libs/lensfun/CMakeFiles/lensfun.dir/camera.cpp.o -MF libs/lensfun/CMakeFiles/lensfun.dir/camera.cpp.o.d -o libs/lensfun/CMakeFiles/lensfun.dir/camera.cpp.o -c /usr/ports/contrib/lensfun/work/src/lensfun-0.3.2/libs/lensfun/camera.cpp
+c++: error: unrecognized command line option '-msse'; did you mean '-fdse'?
+c++: error: unrecognized command line option '-msse2'; did you mean '-misel'?
+[2/16] Building CXX object libs/lensfun/CMakeFiles/lensfun.dir/database.cpp.o
+FAILED: libs/lensfun/CMakeFiles/lensfun.dir/database.cpp.o 
+/usr/bin/c++ -Dlensfun_EXPORTS -I. -I/usr/ports/contrib/lensfun/work/src/lensfun-0.3.2/include/lensfun -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -msse -msse2 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -fno-delete-null-pointer-checks -DNDEBUG -fPIC -DCONF_SYMBOL_VISIBILITY -MD -MT libs/lensfun/CMakeFiles/lensfun.dir/database.cpp.o -MF libs/lensfun/CMakeFiles/lensfun.dir/database.cpp.o.d -o libs/lensfun/CMakeFiles/lensfun.dir/database.cpp.o -c /usr/ports/contrib/lensfun/work/src/lensfun-0.3.2/libs/lensfun/database.cpp
+c++: error: unrecognized command line option '-msse'; did you mean '-fdse'?
+c++: error: unrecognized command line option '-msse2'; did you mean '-misel'?
+[3/16] Building CXX object libs/lensfun/CMakeFiles/lensfun.dir/lens.cpp.o
+FAILED: libs/lensfun/CMakeFiles/lensfun.dir/lens.cpp.o 
+/usr/bin/c++ -Dlensfun_EXPORTS -I. -I/usr/ports/contrib/lensfun/work/src/lensfun-0.3.2/include/lensfun -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -msse -msse2 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -fno-delete-null-pointer-checks -DNDEBUG -fPIC -DCONF_SYMBOL_VISIBILITY -MD -MT libs/lensfun/CMakeFiles/lensfun.dir/lens.cpp.o -MF libs/lensfun/CMakeFiles/lensfun.dir/lens.cpp.o.d -o libs/lensfun/CMakeFiles/lensfun.dir/lens.cpp.o -c /usr/ports/contrib/lensfun/work/src/lensfun-0.3.2/libs/lensfun/lens.cpp
+c++: error: unrecognized command line option '-msse'; did you mean '-fdse'?
+c++: error: unrecognized command line option '-msse2'; did you mean '-misel'?
+ninja: build stopped: subcommand failed.
+=======> ERROR: Building '/usr/ports/contrib/lensfun/lensfun#0.3.2-1.pkg.tar.xz' failed.

@@ -1,0 +1,327 @@
+prt-get: installing /usr/ports/contrib/ruget
+prt-get: starting build Sun Dec  6 09:56:46 2020
+=======> Building '/usr/ports/contrib/ruget/ruget#0.4.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/ruget/work/src -xf /sources/ruget-0.4.2.tar.gz
++ build
++ cd ruget-0.4.2
++ prt-get isinst sccache
+package sccache is not installed
++ mkdir /sources/rust
+mkdir: cannot create directory '/sources/rust': File exists
++ true
++ export CARGO_HOME=/sources/rust
++ CARGO_HOME=/sources/rust
++ cargo update
+    Updating crates.io index
+      Adding addr2line v0.14.0
+      Adding adler v0.2.3
+    Removing adler32 v1.0.3
+    Removing aho-corasick v0.7.6
+    Removing arrayvec v0.4.11
+    Removing autocfg v0.1.6
+      Adding autocfg v0.1.7
+      Adding autocfg v1.0.1
+    Updating backtrace v0.3.35 -> v0.3.55
+    Removing backtrace-sys v0.1.31
+    Updating bitflags v1.1.0 -> v1.2.1
+    Updating byteorder v1.3.2 -> v1.3.4
+    Removing c2-chacha v0.2.2
+    Updating cc v1.0.41 -> v1.0.66
+    Removing cfg-if v0.1.9
+      Adding cfg-if v0.1.10
+      Adding cfg-if v1.0.0
+      Adding const_fn v0.4.3
+    Updating core-foundation v0.6.4 -> v0.9.1
+    Updating core-foundation-sys v0.6.2 -> v0.8.2
+    Updating crc32fast v1.2.0 -> v1.2.1
+      Adding crossbeam-channel v0.5.0
+    Removing crossbeam-deque v0.6.3
+    Removing crossbeam-deque v0.7.1
+      Adding crossbeam-deque v0.7.3
+      Adding crossbeam-deque v0.8.0
+    Removing crossbeam-epoch v0.7.2
+      Adding crossbeam-epoch v0.8.2
+      Adding crossbeam-epoch v0.9.1
+    Updating crossbeam-queue v0.1.2 -> v0.2.3
+    Removing crossbeam-utils v0.6.6
+      Adding crossbeam-utils v0.7.2
+      Adding crossbeam-utils v0.8.1
+    Updating dtoa v0.4.4 -> v0.4.6
+    Updating either v1.5.2 -> v1.6.1
+    Updating encoding_rs v0.8.17 -> v0.8.26
+    Updating error-chain v0.12.1 -> v0.12.4
+    Updating failure v0.1.5 -> v0.1.8
+    Updating failure_derive v0.1.5 -> v0.1.8
+    Updating flate2 v1.0.11 -> v1.0.19
+    Updating fnv v1.0.6 -> v1.0.7
+      Adding form_urlencoded v1.0.0
+    Updating futures v0.1.28 -> v0.1.30
+    Updating getrandom v0.1.11 -> v0.1.15
+      Adding gimli v0.23.0
+      Adding hashbrown v0.9.1
+      Adding hermit-abi v0.1.17
+    Updating http v0.1.18 -> v0.1.21
+    Updating hyper v0.12.33 -> v0.12.35
+    Updating indexmap v1.1.0 -> v1.6.0
+    Updating iovec v0.1.2 -> v0.1.4
+    Updating itoa v0.4.4 -> v0.4.6
+    Updating libc v0.2.62 -> v0.2.80
+    Updating lock_api v0.1.5 -> v0.3.4
+    Updating log v0.4.8 -> v0.4.11
+      Adding maybe-uninit v2.0.0
+    Removing memchr v2.2.1
+    Removing memoffset v0.5.1
+      Adding memoffset v0.5.6
+      Adding memoffset v0.6.1
+    Updating mime v0.3.13 -> v0.3.16
+    Updating mime_guess v2.0.1 -> v2.0.3
+    Updating miniz_oxide v0.3.2 -> v0.4.3
+    Updating mio v0.6.19 -> v0.6.23
+    Updating miow v0.2.1 -> v0.2.2
+    Updating native-tls v0.2.3 -> v0.2.6
+    Updating net2 v0.2.33 -> v0.2.36
+    Removing nodrop v0.1.13
+    Updating num_cpus v1.10.1 -> v1.13.0
+      Adding object v0.22.0
+    Updating openssl v0.10.24 -> v0.10.30
+    Updating openssl-sys v0.9.49 -> v0.9.58
+    Removing owning_ref v0.4.0
+    Updating parking_lot v0.7.1 -> v0.9.0
+    Updating parking_lot_core v0.4.0 -> v0.6.2
+    Updating pkg-config v0.3.15 -> v0.3.19
+    Updating ppv-lite86 v0.2.5 -> v0.2.10
+    Removing proc-macro2 v0.4.30
+    Removing proc-macro2 v1.0.1
+      Adding proc-macro2 v1.0.24
+    Updating publicsuffix v1.5.3 -> v1.5.4
+    Removing quote v0.6.13
+    Removing quote v1.0.2
+      Adding quote v1.0.7
+    Updating rand v0.7.0 -> v0.7.3
+    Updating rand_chacha v0.2.1 -> v0.2.2
+    Updating rayon v1.1.0 -> v1.5.0
+    Updating rayon-core v1.5.0 -> v1.9.0
+    Updating redox_syscall v0.1.56 -> v0.1.57
+    Updating regex v1.2.1 -> v1.4.2
+    Updating regex-syntax v0.6.11 -> v0.6.21
+    Updating remove_dir_all v0.5.2 -> v0.5.3
+    Updating reqwest v0.9.20 -> v0.9.24
+    Updating rustc-demangle v0.1.16 -> v0.1.18
+    Updating ryu v1.0.0 -> v1.0.5
+    Updating schannel v0.1.15 -> v0.1.19
+    Removing scopeguard v0.3.3
+    Removing scopeguard v1.0.0
+      Adding scopeguard v1.1.0
+    Updating seahorse v1.0.0 -> v1.1.1
+    Updating security-framework v0.3.1 -> v2.0.0
+    Updating security-framework-sys v0.3.1 -> v2.0.0
+    Updating serde v1.0.99 -> v1.0.118
+    Updating serde_derive v1.0.99 -> v1.0.118
+    Updating serde_json v1.0.40 -> v1.0.60
+    Updating smallvec v0.6.10 -> v0.6.13
+    Removing stable_deref_trait v1.1.1
+    Removing syn v0.15.44
+    Removing syn v1.0.5
+      Adding syn v1.0.53
+    Updating synstructure v0.10.2 -> v0.12.4
+    Removing thread_local v0.3.6
+    Updating time v0.1.42 -> v0.1.44
+      Adding tinyvec v1.1.0
+      Adding tinyvec_macros v0.1.0
+    Updating tokio-current-thread v0.1.6 -> v0.1.7
+    Updating tokio-executor v0.1.8 -> v0.1.10
+    Updating tokio-io v0.1.12 -> v0.1.13
+    Updating tokio-reactor v0.1.9 -> v0.1.12
+    Updating tokio-sync v0.1.6 -> v0.1.8
+    Updating tokio-tcp v0.1.3 -> v0.1.4
+    Updating tokio-threadpool v0.1.15 -> v0.1.18
+    Updating tokio-timer v0.2.11 -> v0.2.13
+    Updating try-lock v0.2.2 -> v0.2.3
+    Updating unicase v2.4.0 -> v2.6.0
+    Updating unicode-normalization v0.1.8 -> v0.1.16
+    Removing unicode-xid v0.1.0
+    Removing unicode-xid v0.2.0
+      Adding unicode-xid v0.2.1
+    Updating url v2.1.0 -> v2.2.0
+    Updating vcpkg v0.2.7 -> v0.2.10
+    Updating version_check v0.1.5 -> v0.9.2
+    Removing wasi v0.5.0
+      Adding wasi v0.9.0+wasi-snapshot-preview1
+      Adding wasi v0.10.0+wasi-snapshot-preview1
+    Updating winapi v0.3.8 -> v0.3.9
++ cargo fetch
+ Downloading crates ...
+  Downloaded const_fn v0.4.3
+  Downloaded crossbeam-deque v0.8.0
+  Downloaded memoffset v0.6.1
+  Downloaded crossbeam-epoch v0.9.1
+  Downloaded rayon v1.5.0
+  Downloaded serde_urlencoded v0.5.5
+  Downloaded cookie_store v0.7.0
+  Downloaded cookie v0.12.0
+  Downloaded futures-cpupool v0.1.8
+  Downloaded uuid v0.7.4
+  Downloaded publicsuffix v1.5.4
+  Downloaded http v0.1.21
+  Downloaded string v0.2.1
+  Downloaded try_from v0.3.2
+  Downloaded reqwest v0.9.24
+  Downloaded h2 v0.1.26
+  Downloaded url v1.7.2
+  Downloaded seahorse v1.1.1
+  Downloaded http-body v0.1.0
+  Downloaded want v0.2.0
+  Downloaded tokio-buf v0.1.1
+  Downloaded hyper v0.12.35
+  Downloaded hyper-tls v0.3.2
+  Downloaded idna v0.1.5
+  Downloaded winreg v0.6.2
+  Downloaded rayon-core v1.9.0
+  Downloaded percent-encoding v1.0.1
++ cargo build --release --locked
+   Compiling autocfg v1.0.1
+   Compiling libc v0.2.80
+   Compiling cfg-if v0.1.10
+   Compiling lazy_static v1.4.0
+   Compiling futures v0.1.30
+   Compiling byteorder v1.3.4
+   Compiling semver-parser v0.7.0
+   Compiling scopeguard v1.1.0
+   Compiling maybe-uninit v2.0.0
+   Compiling log v0.4.11
+   Compiling either v1.6.1
+   Compiling version_check v0.9.2
+   Compiling proc-macro2 v1.0.24
+   Compiling cfg-if v1.0.0
+   Compiling unicode-xid v0.2.1
+   Compiling rand_core v0.4.2
+   Compiling autocfg v0.1.7
+   Compiling tinyvec_macros v0.1.0
+   Compiling matches v0.1.8
+   Compiling syn v1.0.53
+   Compiling slab v0.4.2
+   Compiling fnv v1.0.7
+   Compiling cc v1.0.66
+   Compiling itoa v0.4.6
+   Compiling pkg-config v0.3.19
+   Compiling serde_derive v1.0.118
+   Compiling adler v0.2.3
+   Compiling serde v1.0.118
+   Compiling bitflags v1.2.1
+   Compiling const_fn v0.4.3
+   Compiling percent-encoding v1.0.1
+   Compiling httparse v1.3.4
+   Compiling hashbrown v0.9.1
+   Compiling ryu v1.0.5
+   Compiling percent-encoding v2.1.0
+   Compiling gimli v0.23.0
+   Compiling openssl v0.10.30
+   Compiling foreign-types-shared v0.1.1
+   Compiling failure_derive v0.1.8
+   Compiling serde_json v1.0.60
+   Compiling rayon-core v1.9.0
+   Compiling native-tls v0.2.6
+   Compiling regex-syntax v0.6.21
+   Compiling try-lock v0.2.3
+   Compiling object v0.22.0
+   Compiling rustc-demangle v0.1.18
+   Compiling crc32fast v1.2.1
+   Compiling openssl-probe v0.1.2
+   Compiling encoding_rs v0.8.26
+   Compiling mime v0.3.16
+   Compiling dtoa v0.4.6
+   Compiling seahorse v1.1.1
+   Compiling try_from v0.3.2
+   Compiling crossbeam-utils v0.7.2
+   Compiling memoffset v0.5.6
+   Compiling crossbeam-epoch v0.8.2
+   Compiling crossbeam-utils v0.8.1
+   Compiling miniz_oxide v0.4.3
+   Compiling memoffset v0.6.1
+   Compiling indexmap v1.6.0
+   Compiling rayon v1.5.0
+   Compiling semver v0.9.0
+   Compiling lock_api v0.3.4
+   Compiling unicase v2.6.0
+   Compiling error-chain v0.12.4
+   Compiling rand_core v0.3.1
+   Compiling rand_jitter v0.1.4
+   Compiling tinyvec v1.1.0
+   Compiling unicode-bidi v0.3.4
+   Compiling rand_chacha v0.1.1
+   Compiling rand_pcg v0.1.2
+   Compiling rand v0.6.5
+   Compiling tokio-sync v0.1.8
+   Compiling openssl-sys v0.9.58
+   Compiling form_urlencoded v1.0.0
+   Compiling foreign-types v0.3.2
+   Compiling addr2line v0.14.0
+   Compiling regex v1.4.2
+   Compiling rustc_version v0.2.3
+   Compiling rand_xorshift v0.1.1
+   Compiling rand_isaac v0.1.1
+   Compiling rand_hc v0.1.0
+   Compiling unicode-normalization v0.1.16
+   Compiling iovec v0.1.4
+   Compiling num_cpus v1.13.0
+   Compiling net2 v0.2.36
+   Compiling time v0.1.44
+   Compiling rand_os v0.1.3
+   Compiling base64 v0.10.1
+   Compiling parking_lot_core v0.6.2
+   Compiling parking_lot v0.9.0
+   Compiling hyper v0.12.35
+   Compiling smallvec v0.6.13
+   Compiling want v0.2.0
+   Compiling quote v1.0.7
+   Compiling idna v0.1.5
+   Compiling idna v0.2.0
+   Compiling bytes v0.4.12
+   Compiling futures-cpupool v0.1.8
+   Compiling mio v0.6.23
+   Compiling tokio-executor v0.1.10
+   Compiling crossbeam-queue v0.2.3
+   Compiling crossbeam-channel v0.5.0
+   Compiling backtrace v0.3.55
+   Compiling flate2 v1.0.19
+   Compiling crossbeam-epoch v0.9.1
+   Compiling mime_guess v2.0.3
+   Compiling url v1.7.2
+   Compiling url v2.2.0
+   Compiling tokio-io v0.1.13
+   Compiling http v0.1.21
+   Compiling string v0.2.1
+   Compiling tokio-buf v0.1.1
+   Compiling tokio-current-thread v0.1.7
+   Compiling tokio-timer v0.2.13
+   Compiling crossbeam-deque v0.7.3
+   Compiling crossbeam-deque v0.8.0
+   Compiling synstructure v0.12.4
+   Compiling cookie v0.12.0
+   Compiling publicsuffix v1.5.4
+   Compiling uuid v0.7.4
+   Compiling http-body v0.1.0
+   Compiling h2 v0.1.26
+   Compiling tokio-threadpool v0.1.18
+   Compiling tokio-reactor v0.1.12
+   Compiling failure v0.1.8
+   Compiling tokio-tcp v0.1.4
+   Compiling serde_urlencoded v0.5.5
+   Compiling tokio v0.1.22
+   Compiling cookie_store v0.7.0
+   Compiling hyper-tls v0.3.2
+   Compiling reqwest v0.9.24
+   Compiling ruget v0.4.2 (/usr/ports/contrib/ruget/work/src/ruget-0.4.2)
+error[E0599]: no method named `usage` found for struct `Flag` in the current scope
+  --> src/main.rs:56:14
+   |
+56 |             .usage("--output, -o: ruget [url] --output [file name]")
+   |              ^^^^^ method not found in `Flag`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `ruget`
+
+To learn more, run the command again with --verbose.
+=======> ERROR: Building '/usr/ports/contrib/ruget/ruget#0.4.2-1.pkg.tar.xz' failed.

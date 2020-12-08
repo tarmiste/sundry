@@ -1,0 +1,54 @@
+prt-get: installing /usr/ports/contrib/asterisk-espeak
+prt-get: starting build Thu Dec  3 21:43:45 2020
+=======> Downloading 'http://prdownloads.sf.net/asterisk-espeak/asterisk-espeak-0.4.tar.gz'.
+--2020-12-03 21:43:45--  http://prdownloads.sf.net/asterisk-espeak/asterisk-espeak-0.4.tar.gz
+Resolving prdownloads.sf.net... 216.105.38.13
+Connecting to prdownloads.sf.net|216.105.38.13|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://prdownloads.sf.net/asterisk-espeak/asterisk-espeak-0.4.tar.gz [following]
+--2020-12-03 21:43:47--  https://prdownloads.sf.net/asterisk-espeak/asterisk-espeak-0.4.tar.gz
+Connecting to prdownloads.sf.net|216.105.38.13|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://prdownloads.sourceforge.net/asterisk-espeak/asterisk-espeak-0.4.tar.gz [following]
+--2020-12-03 21:43:48--  https://prdownloads.sourceforge.net/asterisk-espeak/asterisk-espeak-0.4.tar.gz
+Resolving prdownloads.sourceforge.net... 216.105.38.13
+Connecting to prdownloads.sourceforge.net|216.105.38.13|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://downloads.sourceforge.net/project/asterisk-espeak/asterisk-espeak/0.4/asterisk-espeak-0.4.tar.gz [following]
+--2020-12-03 21:43:49--  https://downloads.sourceforge.net/project/asterisk-espeak/asterisk-espeak/0.4/asterisk-espeak-0.4.tar.gz
+Resolving downloads.sourceforge.net... 216.105.38.13
+Connecting to downloads.sourceforge.net|216.105.38.13|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://master.dl.sourceforge.net/project/asterisk-espeak/asterisk-espeak/0.4/asterisk-espeak-0.4.tar.gz?viasf=1 [following]
+--2020-12-03 21:43:51--  https://master.dl.sourceforge.net/project/asterisk-espeak/asterisk-espeak/0.4/asterisk-espeak-0.4.tar.gz?viasf=1
+Resolving master.dl.sourceforge.net... 216.105.38.12
+Connecting to master.dl.sourceforge.net|216.105.38.12|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 14374 (14K) [application/x-gzip]
+Saving to: '/sources/asterisk-espeak-0.4.tar.gz.partial'
+
+     0K .......... ....                                       100% 15.9M=0.001s
+
+2020-12-03 21:43:56 (15.9 MB/s) - '/sources/asterisk-espeak-0.4.tar.gz.partial' saved [14374/14374]
+
+=======> Building '/usr/ports/contrib/asterisk-espeak/asterisk-espeak#0.4-2.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/asterisk-espeak/work/src -xf /sources/asterisk-espeak-0.4.tar.gz
+cp build.patch /usr/ports/contrib/asterisk-espeak/work/src
++ build
++ cd asterisk-espeak-0.4
++ patch -p1 -i /usr/ports/contrib/asterisk-espeak/work/src/build.patch
+patching file app_espeak.c
++ export 'CFLAGS=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DASTERISK_VERSION=8'
++ CFLAGS='-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DASTERISK_VERSION=8'
++ make
+gcc -pipe   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DASTERISK_VERSION=8 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g    -D_REENTRANT -D_GNU_SOURCE -O6  -fsigned-char -fPIC -c -o app_espeak.o app_espeak.c
+In file included from app_espeak.c:50:
+/usr/include/asterisk.h:233:2: error: #error "Externally compiled modules must declare AST_MODULE_SELF_SYM."
+ #error "Externally compiled modules must declare AST_MODULE_SELF_SYM."
+  ^~~~~
+app_espeak.c:65:10: fatal error: espeak/speak_lib.h: No such file or directory
+ #include <espeak/speak_lib.h>
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:74: app_espeak.o] Error 1
+=======> ERROR: Building '/usr/ports/contrib/asterisk-espeak/asterisk-espeak#0.4-2.pkg.tar.xz' failed.

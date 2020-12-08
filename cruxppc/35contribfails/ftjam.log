@@ -1,0 +1,118 @@
+prt-get: installing /usr/ports/contrib/ftjam
+prt-get: starting build Fri Dec  4 12:34:21 2020
+=======> Downloading 'http://david.freetype.org/jam/ftjam-2.5.3rc2.tar.bz2'.
+--2020-12-04 12:34:21--  http://david.freetype.org/jam/ftjam-2.5.3rc2.tar.bz2
+Resolving david.freetype.org... 66.111.4.53, 66.111.4.54
+Connecting to david.freetype.org|66.111.4.53|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 215963 (211K) [application/x-bzip2]
+Saving to: '/sources/ftjam-2.5.3rc2.tar.bz2.partial'
+
+     0K .......... .......... .......... .......... .......... 23%  351K 0s
+    50K .......... .......... .......... .......... .......... 47%  714K 0s
+   100K .......... .......... .......... .......... .......... 71% 6.07M 0s
+   150K .......... .......... .......... .......... .......... 94%  781K 0s
+   200K ..........                                            100% 5.09M=0.3s
+
+2020-12-04 12:34:23 (736 KB/s) - '/sources/ftjam-2.5.3rc2.tar.bz2.partial' saved [215963/215963]
+
+=======> Building '/usr/ports/contrib/ftjam/ftjam#2.5.3rc2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/ftjam/work/src -xf /sources/ftjam-2.5.3rc2.tar.bz2
++ build
++ cd ftjam-2.5.3rc2
++ ./configure --prefix=/usr
+checking build system type... powerpc-unknown-linux-gnu
+checking host system type... powerpc-unknown-linux-gnu
+checking target system type... powerpc-unknown-linux-gnu
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for rm... rm -f
+checking for rmdir... rmdir
+checking for a BSD-compatible install... /usr/bin/install -c
+configure: creating ./config.status
+config.status: creating ../../Makefile
+config.status: WARNING:  Makefile.in seems to ignore the --datarootdir setting
+config.status: creating ../../patchlevel.h
+config.status: creating ../../Jamrules
++ make
+gcc -o jam0 -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec  builtins.c command.c compile.c execnt.c execunix.c execvms.c expand.c filent.c fileos2.c fileunix.c filevms.c glob.c hash.c hdrmacro.c headers.c jam.c jambase.c jamgram.c lists.c make.c make1.c newstr.c option.c parse.c pathunix.c pathvms.c regexp.c rope.c rules.c scan.c search.c spawn.c spawnmac.c spawnnt.c spawnos2.c spawnunix.c timestamp.c variable.c 
+make1.c: In function 'make1d':
+make1.c:389:8: warning: implicit declaration of function 'unlink'; did you mean 'unix'? [-Wimplicit-function-declaration]
+   if( !unlink( targets->string ) )
+        ^~~~~~
+        unix
+chmod a+w jambase.c
+./jam0
+...found 276 target(s)...
+...updating 36 target(s)...
+MkDir1 bin.unix 
+Cc bin.unix/builtins.o 
+Cc bin.unix/command.o 
+Cc bin.unix/compile.o 
+Cc bin.unix/execunix.o 
+Cc bin.unix/fileunix.o 
+Cc bin.unix/pathunix.o 
+Cc bin.unix/spawnunix.o 
+Yacc1 jamgram.c jamgram.h 
+YaccMv jamgram.c jamgram.h 
+Cc bin.unix/jamgram.o 
+Cc bin.unix/expand.o 
+Cc bin.unix/glob.o 
+Cc bin.unix/hash.o 
+Cc bin.unix/headers.o 
+Cc bin.unix/lists.o 
+Cc bin.unix/make.o 
+Cc bin.unix/make1.o 
+make1.c: In function 'make1d':
+make1.c:389:8: warning: implicit declaration of function 'unlink'; did you mean 'unix'? [-Wimplicit-function-declaration]
+   if( !unlink( targets->string ) )
+        ^~~~~~
+        unix
+Cc bin.unix/newstr.o 
+Cc bin.unix/option.o 
+Cc bin.unix/parse.o 
+Cc bin.unix/regexp.o 
+Cc bin.unix/rules.o 
+Cc bin.unix/scan.o 
+Cc bin.unix/search.o 
+Cc bin.unix/timestamp.o 
+Cc bin.unix/variable.o 
+Cc bin.unix/hdrmacro.o 
+Cc bin.unix/rope.o 
+Archive bin.unix/libjam.a 
+ar: creating bin.unix/libjam.a
+Ranlib bin.unix/libjam.a 
+Cc bin.unix/mkjambase.o 
+Link bin.unix/mkjambase 
+Chmod1 bin.unix/mkjambase 
+Cc bin.unix/jam.o 
+GenFile1 jambase.c 
+Cc bin.unix/jambase.o 
+Link bin.unix/jam 
+Chmod1 bin.unix/jam 
+Strip bin.unix/jam 
+...updated 36 target(s)...
++ make DESTDIR=/usr/ports/contrib/ftjam/work/pkg install
+builds/unix/mkinstalldirs /usr/ports/contrib/ftjam/work/pkg/usr/bin
+mkdir -p -- /usr/ports/contrib/ftjam/work/pkg/usr/bin
+/usr/bin/install -c bin.unix/jam /usr/ports/contrib/ftjam/work/pkg/usr/bin/jam
+=======> Build result:
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/
+drwxr-xr-x  0 root   root        0 Dec  4 12:34 usr/bin/
+-rwxr-xr-x  0 root   root   209684 Dec  4 12:34 usr/bin/jam
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/contrib/ftjam/ftjam#2.5.3rc2-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/contrib/ftjam
+prt-get: installing ftjam 2.5.3rc2-1
+prt-get: /usr/bin/pkgadd ftjam#2.5.3rc2-1.pkg.tar.xz
+prt-get: build done Fri Dec  4 12:34:55 2020
+
+pkgadd: package database is currently locked by another process

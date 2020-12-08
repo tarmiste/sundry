@@ -1,0 +1,1604 @@
+prt-get: installing /usr/ports/contrib/lldb
+prt-get: starting build Sat Dec  5 09:22:41 2020
+=======> Downloading 'https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/lldb-10.0.1.src.tar.xz'.
+--2020-12-05 09:22:41--  https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/lldb-10.0.1.src.tar.xz
+Resolving github.com... 192.30.255.113
+Connecting to github.com|192.30.255.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-production-release-asset-2e65be.s3.amazonaws.com/75821432/0272dd00-cb91-11ea-825c-6a4e43a00504?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201205T163556Z&X-Amz-Expires=300&X-Amz-Signature=e82643a4b0a331950727577b753738aa64e86dab24d0f2151d20f290ca330cd2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=75821432&response-content-disposition=attachment%3B%20filename%3Dlldb-10.0.1.src.tar.xz&response-content-type=application%2Foctet-stream [following]
+--2020-12-05 09:22:41--  https://github-production-release-asset-2e65be.s3.amazonaws.com/75821432/0272dd00-cb91-11ea-825c-6a4e43a00504?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201205T163556Z&X-Amz-Expires=300&X-Amz-Signature=e82643a4b0a331950727577b753738aa64e86dab24d0f2151d20f290ca330cd2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=75821432&response-content-disposition=attachment%3B%20filename%3Dlldb-10.0.1.src.tar.xz&response-content-type=application%2Foctet-stream
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com... 52.216.133.131
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com|52.216.133.131|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9632124 (9.2M) [application/octet-stream]
+Saving to: '/sources/lldb-10.0.1.src.tar.xz.partial'
+
+     0K .......... .......... .......... .......... ..........  0%  628K 15s
+    50K .......... .......... .......... .......... ..........  1%  591K 15s
+   100K .......... .......... .......... .......... ..........  1%  664K 15s
+   150K .......... .......... .......... .......... ..........  2% 9.06M 11s
+   200K .......... .......... .......... .......... ..........  2% 9.65M 9s
+   250K .......... .......... .......... .......... ..........  3%  740K 10s
+   300K .......... .......... .......... .......... ..........  3% 9.09M 8s
+   350K .......... .......... .......... .......... ..........  4% 9.76M 7s
+   400K .......... .......... .......... .......... ..........  4% 9.34M 7s
+   450K .......... .......... .......... .......... ..........  5% 9.91M 6s
+   500K .......... .......... .......... .......... ..........  5%  942K 6s
+   550K .......... .......... .......... .......... ..........  6% 9.49M 6s
+   600K .......... .......... .......... .......... ..........  6% 7.26M 5s
+   650K .......... .......... .......... .......... ..........  7% 7.85M 5s
+   700K .......... .......... .......... .......... ..........  7% 8.83M 5s
+   750K .......... .......... .......... .......... ..........  8% 9.17M 5s
+   800K .......... .......... .......... .......... ..........  9% 9.68M 4s
+   850K .......... .......... .......... .......... ..........  9% 12.1M 4s
+   900K .......... .......... .......... .......... .......... 10% 10.1M 4s
+   950K .......... .......... .......... .......... .......... 10% 9.32M 4s
+  1000K .......... .......... .......... .......... .......... 11% 9.32M 4s
+  1050K .......... .......... .......... .......... .......... 11% 9.49M 3s
+  1100K .......... .......... .......... .......... .......... 12%  440K 4s
+  1150K .......... .......... .......... .......... .......... 12% 14.6M 4s
+  1200K .......... .......... .......... .......... .......... 13% 15.7M 4s
+  1250K .......... .......... .......... .......... .......... 13% 15.3M 4s
+  1300K .......... .......... .......... .......... .......... 14% 16.0M 3s
+  1350K .......... .......... .......... .......... .......... 14% 15.8M 3s
+  1400K .......... .......... .......... .......... .......... 15% 13.8M 3s
+  1450K .......... .......... .......... .......... .......... 15% 15.3M 3s
+  1500K .......... .......... .......... .......... .......... 16% 15.9M 3s
+  1550K .......... .......... .......... .......... .......... 17% 15.8M 3s
+  1600K .......... .......... .......... .......... .......... 17% 15.4M 3s
+  1650K .......... .......... .......... .......... .......... 18% 16.8M 3s
+  1700K .......... .......... .......... .......... .......... 18% 17.6M 3s
+  1750K .......... .......... .......... .......... .......... 19% 16.9M 3s
+  1800K .......... .......... .......... .......... .......... 19% 4.36M 3s
+  1850K .......... .......... .......... .......... .......... 20% 6.26M 2s
+  1900K .......... .......... .......... .......... .......... 20% 13.6M 2s
+  1950K .......... .......... .......... .......... .......... 21% 11.8M 2s
+  2000K .......... .......... .......... .......... .......... 21% 8.89M 2s
+  2050K .......... .......... .......... .......... .......... 22% 13.9M 2s
+  2100K .......... .......... .......... .......... .......... 22% 11.3M 2s
+  2150K .......... .......... .......... .......... .......... 23% 12.5M 2s
+  2200K .......... .......... .......... .......... .......... 23% 7.41M 2s
+  2250K .......... .......... .......... .......... .......... 24% 16.8M 2s
+  2300K .......... .......... .......... .......... .......... 24% 16.3M 2s
+  2350K .......... .......... .......... .......... .......... 25% 15.6M 2s
+  2400K .......... .......... .......... .......... .......... 26% 13.2M 2s
+  2450K .......... .......... .......... .......... .......... 26% 17.5M 2s
+  2500K .......... .......... .......... .......... .......... 27% 17.0M 2s
+  2550K .......... .......... .......... .......... .......... 27% 2.28M 2s
+  2600K .......... .......... .......... .......... .......... 28% 9.80M 2s
+  2650K .......... .......... .......... .......... .......... 28% 9.74M 2s
+  2700K .......... .......... .......... .......... .......... 29% 10.2M 2s
+  2750K .......... .......... .......... .......... .......... 29% 10.3M 2s
+  2800K .......... .......... .......... .......... .......... 30% 7.70M 2s
+  2850K .......... .......... .......... .......... .......... 30% 9.69M 2s
+  2900K .......... .......... .......... .......... .......... 31% 10.1M 2s
+  2950K .......... .......... .......... .......... .......... 31% 10.1M 2s
+  3000K .......... .......... .......... .......... .......... 32% 9.63M 2s
+  3050K .......... .......... .......... .......... .......... 32% 9.93M 2s
+  3100K .......... .......... .......... .......... .......... 33%  595K 2s
+  3150K .......... .......... .......... .......... .......... 34% 16.7M 2s
+  3200K .......... .......... .......... .......... .......... 34% 8.68M 2s
+  3250K .......... .......... .......... .......... .......... 35% 16.8M 2s
+  3300K .......... .......... .......... .......... .......... 35% 16.3M 2s
+  3350K .......... .......... .......... .......... .......... 36% 16.0M 1s
+  3400K .......... .......... .......... .......... .......... 36% 15.7M 1s
+  3450K .......... .......... .......... .......... .......... 37% 17.3M 1s
+  3500K .......... .......... .......... .......... .......... 37% 16.1M 1s
+  3550K .......... .......... .......... .......... .......... 38% 16.6M 1s
+  3600K .......... .......... .......... .......... .......... 38% 13.2M 1s
+  3650K .......... .......... .......... .......... .......... 39% 16.3M 1s
+  3700K .......... .......... .......... .......... .......... 39% 16.7M 1s
+  3750K .......... .......... .......... .......... .......... 40% 16.8M 1s
+  3800K .......... .......... .......... .......... .......... 40% 15.1M 1s
+  3850K .......... .......... .......... .......... .......... 41% 16.2M 1s
+  3900K .......... .......... .......... .......... .......... 41% 16.7M 1s
+  3950K .......... .......... .......... .......... .......... 42% 15.7M 1s
+  4000K .......... .......... .......... .......... .......... 43% 13.8M 1s
+  4050K .......... .......... .......... .......... .......... 43% 16.0M 1s
+  4100K .......... .......... .......... .......... .......... 44% 16.6M 1s
+  4150K .......... .......... .......... .......... .......... 44% 15.7M 1s
+  4200K .......... .......... .......... .......... .......... 45% 15.7M 1s
+  4250K .......... .......... .......... .......... .......... 45% 18.0M 1s
+  4300K .......... .......... .......... .......... .......... 46% 16.0M 1s
+  4350K .......... .......... .......... .......... .......... 46% 16.3M 1s
+  4400K .......... .......... .......... .......... .......... 47% 12.6M 1s
+  4450K .......... .......... .......... .......... .......... 47% 10.9M 1s
+  4500K .......... .......... .......... .......... .......... 48% 4.93M 1s
+  4550K .......... .......... .......... .......... .......... 48% 9.64M 1s
+  4600K .......... .......... .......... .......... .......... 49% 9.95M 1s
+  4650K .......... .......... .......... .......... .......... 49% 10.2M 1s
+  4700K .......... .......... .......... .......... .......... 50% 9.83M 1s
+  4750K .......... .......... .......... .......... .......... 51% 10.1M 1s
+  4800K .......... .......... .......... .......... .......... 51% 2.95M 1s
+  4850K .......... .......... .......... .......... .......... 52% 10.1M 1s
+  4900K .......... .......... .......... .......... .......... 52% 6.82M 1s
+  4950K .......... .......... .......... .......... .......... 53% 9.18M 1s
+  5000K .......... .......... .......... .......... .......... 53% 9.59M 1s
+  5050K .......... .......... .......... .......... .......... 54% 10.2M 1s
+  5100K .......... .......... .......... .......... .......... 54% 6.06M 1s
+  5150K .......... .......... .......... .......... .......... 55% 5.04M 1s
+  5200K .......... .......... .......... .......... .......... 55% 7.61M 1s
+  5250K .......... .......... .......... .......... .......... 56% 9.96M 1s
+  5300K .......... .......... .......... .......... .......... 56% 10.4M 1s
+  5350K .......... .......... .......... .......... .......... 57% 9.66M 1s
+  5400K .......... .......... .......... .......... .......... 57% 4.53M 1s
+  5450K .......... .......... .......... .......... .......... 58% 10.0M 1s
+  5500K .......... .......... .......... .......... .......... 59% 8.86M 1s
+  5550K .......... .......... .......... .......... .......... 59% 5.12M 1s
+  5600K .......... .......... .......... .......... .......... 60% 6.62M 1s
+  5650K .......... .......... .......... .......... .......... 60% 9.87M 1s
+  5700K .......... .......... .......... .......... .......... 61% 7.73M 1s
+  5750K .......... .......... .......... .......... .......... 61% 5.65M 1s
+  5800K .......... .......... .......... .......... .......... 62% 9.45M 1s
+  5850K .......... .......... .......... .......... .......... 62% 10.3M 1s
+  5900K .......... .......... .......... .......... .......... 63% 10.2M 1s
+  5950K .......... .......... .......... .......... .......... 63% 8.41M 1s
+  6000K .......... .......... .......... .......... .......... 64% 4.75M 1s
+  6050K .......... .......... .......... .......... .......... 64% 9.59M 1s
+  6100K .......... .......... .......... .......... .......... 65% 5.45M 1s
+  6150K .......... .......... .......... .......... .......... 65% 7.71M 1s
+  6200K .......... .......... .......... .......... .......... 66% 7.65M 1s
+  6250K .......... .......... .......... .......... .......... 66% 8.45M 1s
+  6300K .......... .......... .......... .......... .......... 67% 10.1M 1s
+  6350K .......... .......... .......... .......... .......... 68% 6.48M 1s
+  6400K .......... .......... .......... .......... .......... 68% 6.32M 1s
+  6450K .......... .......... .......... .......... .......... 69% 10.1M 1s
+  6500K .......... .......... .......... .......... .......... 69% 10.1M 1s
+  6550K .......... .......... .......... .......... .......... 70% 7.72M 1s
+  6600K .......... .......... .......... .......... .......... 70% 7.73M 0s
+  6650K .......... .......... .......... .......... .......... 71% 8.14M 0s
+  6700K .......... .......... .......... .......... .......... 71% 6.31M 0s
+  6750K .......... .......... .......... .......... .......... 72% 4.78M 0s
+  6800K .......... .......... .......... .......... .......... 72% 2.86M 0s
+  6850K .......... .......... .......... .......... .......... 73% 4.11M 0s
+  6900K .......... .......... .......... .......... .......... 73% 4.07M 0s
+  6950K .......... .......... .......... .......... .......... 74% 3.99M 0s
+  7000K .......... .......... .......... .......... .......... 74% 15.5M 0s
+  7050K .......... .......... .......... .......... .......... 75% 16.1M 0s
+  7100K .......... .......... .......... .......... .......... 76% 15.9M 0s
+  7150K .......... .......... .......... .......... .......... 76% 17.2M 0s
+  7200K .......... .......... .......... .......... .......... 77% 12.9M 0s
+  7250K .......... .......... .......... .......... .......... 77% 16.1M 0s
+  7300K .......... .......... .......... .......... .......... 78% 16.2M 0s
+  7350K .......... .......... .......... .......... .......... 78% 15.7M 0s
+  7400K .......... .......... .......... .......... .......... 79% 9.03M 0s
+  7450K .......... .......... .......... .......... .......... 79% 9.08M 0s
+  7500K .......... .......... .......... .......... .......... 80% 3.23M 0s
+  7550K .......... .......... .......... .......... .......... 80% 8.30M 0s
+  7600K .......... .......... .......... .......... .......... 81% 7.71M 0s
+  7650K .......... .......... .......... .......... .......... 81% 10.1M 0s
+  7700K .......... .......... .......... .......... .......... 82% 9.59M 0s
+  7750K .......... .......... .......... .......... .......... 82% 10.4M 0s
+  7800K .......... .......... .......... .......... .......... 83% 9.80M 0s
+  7850K .......... .......... .......... .......... .......... 83% 3.53M 0s
+  7900K .......... .......... .......... .......... .......... 84% 10.1M 0s
+  7950K .......... .......... .......... .......... .......... 85% 10.1M 0s
+  8000K .......... .......... .......... .......... .......... 85% 7.72M 0s
+  8050K .......... .......... .......... .......... .......... 86% 9.80M 0s
+  8100K .......... .......... .......... .......... .......... 86% 5.15M 0s
+  8150K .......... .......... .......... .......... .......... 87% 9.35M 0s
+  8200K .......... .......... .......... .......... .......... 87% 6.04M 0s
+  8250K .......... .......... .......... .......... .......... 88% 8.97M 0s
+  8300K .......... .......... .......... .......... .......... 88% 9.86M 0s
+  8350K .......... .......... .......... .......... .......... 89% 9.96M 0s
+  8400K .......... .......... .......... .......... .......... 89% 7.74M 0s
+  8450K .......... .......... .......... .......... .......... 90% 4.44M 0s
+  8500K .......... .......... .......... .......... .......... 90% 9.79M 0s
+  8550K .......... .......... .......... .......... .......... 91% 3.69M 0s
+  8600K .......... .......... .......... .......... .......... 91% 9.69M 0s
+  8650K .......... .......... .......... .......... .......... 92% 9.98M 0s
+  8700K .......... .......... .......... .......... .......... 93% 10.2M 0s
+  8750K .......... .......... .......... .......... .......... 93% 9.58M 0s
+  8800K .......... .......... .......... .......... .......... 94% 7.98M 0s
+  8850K .......... .......... .......... .......... .......... 94% 8.89M 0s
+  8900K .......... .......... .......... .......... .......... 95% 10.1M 0s
+  8950K .......... .......... .......... .......... .......... 95% 7.35M 0s
+  9000K .......... .......... .......... .......... .......... 96% 9.80M 0s
+  9050K .......... .......... .......... .......... .......... 96% 5.96M 0s
+  9100K .......... .......... .......... .......... .......... 97% 8.96M 0s
+  9150K .......... .......... .......... .......... .......... 97% 4.11M 0s
+  9200K .......... .......... .......... .......... .......... 98% 5.44M 0s
+  9250K .......... .......... .......... .......... .......... 98% 6.15M 0s
+  9300K .......... .......... .......... .......... .......... 99% 9.84M 0s
+  9350K .......... .......... .......... .......... .......... 99% 10.8M 0s
+  9400K ......                                                100% 33.3M=1.6s
+
+2020-12-05 09:22:43 (5.87 MB/s) - '/sources/lldb-10.0.1.src.tar.xz.partial' saved [9632124/9632124]
+
+=======> Building '/usr/ports/contrib/lldb/lldb#10.0.1-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/lldb/work/src -xf /sources/lldb-10.0.1.src.tar.xz
++ build
++ cmake -S lldb-10.0.1.src -B build -G Ninja -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D 'CMAKE_CXX_FLAGS_RELEASE=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DNDEBUG' -D 'CMAKE_C_FLAGS_RELEASE=-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DNDEBUG' -D PYTHON_EXECUTABLE=/usr/bin/python3 -D LLVM_LINK_LLVM_DYLIB=ON -D LLDB_USE_SYSTEM_SIX=1 -Wno-dev
+-- The C compiler identification is GNU 8.4.0
+-- The CXX compiler identification is GNU 8.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Linker detection: GNU ld
+/usr/bin/ar: creating t.a
+-- Performing Test C_SUPPORTS_FPIC
+-- Performing Test C_SUPPORTS_FPIC - Success
+-- Performing Test CXX_SUPPORTS_FPIC
+-- Performing Test CXX_SUPPORTS_FPIC - Success
+-- Building with -fPIC
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS - Failed
+-- Performing Test C_SUPPORTS_FNO_FUNCTION_SECTIONS
+-- Performing Test C_SUPPORTS_FNO_FUNCTION_SECTIONS - Success
+-- Performing Test C_SUPPORTS_FFUNCTION_SECTIONS
+-- Performing Test C_SUPPORTS_FFUNCTION_SECTIONS - Success
+-- Performing Test CXX_SUPPORTS_FFUNCTION_SECTIONS
+-- Performing Test CXX_SUPPORTS_FFUNCTION_SECTIONS - Success
+-- Performing Test C_SUPPORTS_FDATA_SECTIONS
+-- Performing Test C_SUPPORTS_FDATA_SECTIONS - Success
+-- Performing Test CXX_SUPPORTS_FDATA_SECTIONS
+-- Performing Test CXX_SUPPORTS_FDATA_SECTIONS - Success
+-- Looking for os_signpost_interval_begin
+-- Looking for os_signpost_interval_begin - not found
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Failed
+-- Looking for __atomic_load_8 in atomic
+-- Looking for __atomic_load_8 in atomic - found
+-- Performing Test HAVE_CXX_ATOMICS64_WITH_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITH_LIB - Success
+-- Performing Test LLVM_HAS_ATOMICS
+-- Performing Test LLVM_HAS_ATOMICS - Success
+-- Found LibEdit: /usr/include (found version ".") 
+-- Enable editline support in LLDB: TRUE
+-- Found CursesAndPanel: /usr/include  
+-- Enable curses support in LLDB: TRUE
+-- Looking for lzma_auto_decoder in /usr/lib/liblzma.so
+-- Looking for lzma_auto_decoder in /usr/lib/liblzma.so - found
+-- Looking for lzma_easy_encoder in /usr/lib/liblzma.so
+-- Looking for lzma_easy_encoder in /usr/lib/liblzma.so - found
+-- Looking for lzma_lzma_preset in /usr/lib/liblzma.so
+-- Looking for lzma_lzma_preset in /usr/lib/liblzma.so - found
+-- Found LibLZMA: /usr/lib/liblzma.so (found version "5.2.5") 
+-- Enable LZMA compression support in LLDB: TRUE
+-- Found LuaAndSwig: /usr/lib/liblua5.4.so;/usr/lib/libm.so  
+-- Enable Lua scripting support in LLDB: TRUE
+-- Found PythonInterpAndLibs: /usr/lib/libpython3.7m.so  
+-- Enable Python scripting support in LLDB: TRUE
+-- Found LibXml2: /usr/lib/libxml2.so (found suitable version "2.9.10", minimum required is "2.8") 
+-- Enable Libxml 2 support in LLDB: TRUE
+-- Looking for el_winsertstr
+-- Looking for el_winsertstr - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of el_rfunc_t
+-- Check size of el_rfunc_t - done
+-- Performing Test CXX_SUPPORTS_NO_DEPRECATED_DECLARATIONS
+-- Performing Test CXX_SUPPORTS_NO_DEPRECATED_DECLARATIONS - Success
+-- Performing Test CXX_SUPPORTS_NO_UNKNOWN_PRAGMAS
+-- Performing Test CXX_SUPPORTS_NO_UNKNOWN_PRAGMAS - Success
+-- Performing Test CXX_SUPPORTS_NO_STRICT_ALIASING
+-- Performing Test CXX_SUPPORTS_NO_STRICT_ALIASING - Success
+-- Performing Test CXX_SUPPORTS_NO_DEPRECATED_REGISTER
+-- Performing Test CXX_SUPPORTS_NO_DEPRECATED_REGISTER - Success
+-- Performing Test CXX_SUPPORTS_NO_VLA_EXTENSION
+-- Performing Test CXX_SUPPORTS_NO_VLA_EXTENSION - Success
+-- LLDB version: 10.0.1
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Found Backtrace: /usr/include  
+-- Looking for ppoll
+-- Looking for ppoll - found
+-- Looking for sigaction
+-- Looking for sigaction - found
+-- Looking for accept4
+-- Looking for accept4 - found
+-- Looking for termios.h
+-- Looking for termios.h - found
+-- Looking for include files sys/types.h, sys/event.h
+-- Looking for include files sys/types.h, sys/event.h - not found
+-- Looking for process_vm_readv
+-- Looking for process_vm_readv - found
+-- Looking for __NR_process_vm_readv
+-- Looking for __NR_process_vm_readv - found
+-- Looking for compression_encode_buffer in compression
+-- Looking for compression_encode_buffer in compression - not found
+-- Found Lua: /usr/lib/liblua5.4.so;/usr/lib/libm.so (found version "5.4.1") 
+-- Symbols (liblldb): exporting all symbols from the lldb namespace
+-- Found Doxygen: /usr/bin/doxygen (found version "1.8.20") found components: doxygen missing components: dot
+-- Could NOT find epydoc
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1688 (add_lit_target)
+  test/CMakeLists.txt:165 (add_lit_testsuites)
+
+
+CMake Warning at /usr/lib/cmake/llvm/AddLLVM.cmake:1568 (message):
+  LLVM_EXTERNAL_LIT set to lit_full_path-NOTFOUND, but the path does not
+  exist.
+Call Stack (most recent call first):
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1612 (get_llvm_lit_path)
+  /usr/lib/cmake/llvm/AddLLVM.cmake:1657 (add_lit_target)
+  test/CMakeLists.txt:169 (add_lit_testsuite)
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /usr/ports/contrib/lldb/work/src/build
++ cmake --build build
+[1/879] Building CXX object utils/TableGen/CMakeFiles/lldb-tblgen.dir/LLDBOptionDefEmitter.cpp.o
+[2/879] Builds LLDB Lua wrapper
+[3/879] Building CXX object utils/TableGen/CMakeFiles/lldb-tblgen.dir/LLDBPropertyDefEmitter.cpp.o
+[4/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Event.cpp.o
+[5/879] Building CXX object utils/TableGen/CMakeFiles/lldb-tblgen.dir/LLDBTableGenUtils.cpp.o
+[6/879] Generating VCSVersion.inc
+[7/879] Builds LLDB Python wrapper
+[8/879] Building CXX object utils/TableGen/CMakeFiles/lldb-tblgen.dir/LLDBTableGen.cpp.o
+[9/879] Building CXX object source/CMakeFiles/lldbBase.dir/lldb.cpp.o
+[10/879] Linking CXX static library lib/liblldbBase.a
+[11/879] Linking CXX executable bin/lldb-tblgen
+[12/879] Building CommandOptions.inc...
+[13/879] Building CoreProperties.inc...
+[14/879] Building CorePropertiesEnum.inc...
+[15/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/FileAction.cpp.o
+[16/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/linux/HostInfoLinux.cpp.o
+[17/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/linux/Host.cpp.o
+[18/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/FileCache.cpp.o
+[19/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/GetOptInc.cpp.o
+[20/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/File.cpp.o
+[21/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/FileSystem.cpp.o
+[22/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/HostInfoBase.cpp.o
+[23/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/HostNativeThreadBase.cpp.o
+[24/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/Host.cpp.o
+[25/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/HostThread.cpp.o
+[26/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/LockFileBase.cpp.o
+[27/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/HostProcess.cpp.o
+[28/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/LZMA.cpp.o
+[29/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/MainLoop.cpp.o
+[30/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/MonitoringProcessLauncher.cpp.o
+[31/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/NativeRegisterContext.cpp.o
+[32/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/NativeThreadProtocol.cpp.o
+[33/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/NativeWatchpointList.cpp.o
+[34/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/NativeProcessProtocol.cpp.o
+[35/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/OptionParser.cpp.o
+[36/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/PipeBase.cpp.o
+[37/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/ProcessRunLock.cpp.o
+[38/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/PseudoTerminal.cpp.o
+[39/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/SocketAddress.cpp.o
+[40/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/StringConvert.cpp.o
+[41/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/ProcessLaunchInfo.cpp.o
+[42/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/Socket.cpp.o
+[43/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/TaskPool.cpp.o
+[44/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/Terminal.cpp.o
+[45/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/TCPSocket.cpp.o
+[46/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/ThreadLauncher.cpp.o
+[47/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/UDPSocket.cpp.o
+[48/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/XML.cpp.o
+[49/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/ConnectionFileDescriptorPosix.cpp.o
+[50/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/common/Editline.cpp.o
+[51/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/DomainSocket.cpp.o
+[52/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/FileSystemPosix.cpp.o
+[53/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/HostInfoPosix.cpp.o
+[54/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/HostProcessPosix.cpp.o
+[55/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/HostThreadPosix.cpp.o
+[56/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/LockFilePosix.cpp.o
+[57/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/linux/AbstractSocket.cpp.o
+[58/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/linux/LibcGlue.cpp.o
+[59/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/PipePosix.cpp.o
+[60/879] Building InterpreterProperties.inc...
+[61/879] Building InterpreterPropertiesEnum.inc...
+[62/879] Building DynamicLoaderDarwinKernelPropertiesEnum.inc...
+[63/879] Building DynamicLoaderDarwinKernelProperties.inc...
+[64/879] Building JITLoaderGDBPropertiesEnum.inc...
+[65/879] Building JITLoaderGDBProperties.inc...
+[66/879] Building PlatformMacOSXProperties.inc...
+[67/879] Building PlatformMacOSXPropertiesEnum.inc...
+[68/879] Building ProcessGDBRemoteProperties.inc...
+[69/879] Building ProcessGDBRemotePropertiesEnum.inc...
+[70/879] Building StructuredDataDarwinLogPropertiesEnum.inc...
+[71/879] Building StructuredDataDarwinLogProperties.inc...
+[72/879] Building SymbolFileDWARFPropertiesEnum.inc...
+[73/879] Building SymbolFileDWARFProperties.inc...
+[74/879] Building TargetProperties.inc...
+[75/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/posix/ProcessLauncherPosixFork.cpp.o
+[76/879] Building TargetPropertiesEnum.inc...
+[77/879] Building CXX object source/Host/CMakeFiles/lldbHost.dir/linux/Support.cpp.o
+[78/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/ArchSpec.cpp.o
+[79/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/WatchpointList.cpp.o
+[80/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointID.cpp.o
+[81/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/Breakpoint.cpp.o
+[82/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointIDList.cpp.o
+[83/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointList.cpp.o
+[84/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointLocationCollection.cpp.o
+[85/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointLocationList.cpp.o
+[86/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointLocation.cpp.o
+[87/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointName.cpp.o
+[88/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointPrecondition.cpp.o
+[89/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointResolverAddress.cpp.o
+[90/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointOptions.cpp.o
+[91/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointResolver.cpp.o
+[92/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointResolverFileLine.cpp.o
+[93/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointResolverFileRegex.cpp.o
+[94/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointSite.cpp.o
+[95/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointSiteList.cpp.o
+[96/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointResolverName.cpp.o
+[97/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/BreakpointResolverScripted.cpp.o
+[98/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/Stoppoint.cpp.o
+[99/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/StoppointCallbackContext.cpp.o
+[100/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/StoppointLocation.cpp.o
+[101/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/WatchpointOptions.cpp.o
+[102/879] Building CXX object source/Breakpoint/CMakeFiles/lldbBreakpoint.dir/Watchpoint.cpp.o
+[103/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandCompletions.cpp.o
+[104/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/DiagnosticManager.cpp.o
+[105/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectApropos.cpp.o
+[106/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectBreakpointCommand.cpp.o
+[107/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectBreakpoint.cpp.o
+[108/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectCommands.cpp.o
+[109/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectDisassemble.cpp.o
+[110/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectExpression.cpp.o
+[111/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectGUI.cpp.o
+[112/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectHelp.cpp.o
+[113/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectFrame.cpp.o
+[114/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectLog.cpp.o
+[115/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectMultiword.cpp.o
+[116/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectMemory.cpp.o
+[117/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectPlugin.cpp.o
+[118/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectPlatform.cpp.o
+[119/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectQuit.cpp.o
+[120/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectProcess.cpp.o
+[121/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectRegister.cpp.o
+[122/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectSettings.cpp.o
+[123/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectReproducer.cpp.o
+[124/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectSource.cpp.o
+[125/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectStats.cpp.o
+[126/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectThread.cpp.o
+[127/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectTarget.cpp.o
+[128/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectVersion.cpp.o
+[129/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectType.cpp.o
+[130/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectWatchpointCommand.cpp.o
+[131/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectWatchpoint.cpp.o
+[132/879] Building CXX object source/Commands/CMakeFiles/lldbCommands.dir/CommandObjectLanguage.cpp.o
+[133/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/AddressResolver.cpp.o
+[134/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/AddressRange.cpp.o
+[135/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Address.cpp.o
+[136/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/AddressResolverFileLine.cpp.o
+[137/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/AddressResolverName.cpp.o
+[138/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Communication.cpp.o
+[139/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/DumpDataExtractor.cpp.o
+[140/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Disassembler.cpp.o
+[141/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/DumpRegisterValue.cpp.o
+[142/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Debugger.cpp.o
+[143/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/FileLineResolver.cpp.o
+[144/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/EmulateInstruction.cpp.o
+[145/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/FileSpecList.cpp.o
+[146/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/DynamicLoader.cpp.o
+[147/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Highlighter.cpp.o
+[148/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/IOHandler.cpp.o
+[149/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/FormatEntity.cpp.o
+[150/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Mangled.cpp.o
+[151/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ModuleChild.cpp.o
+[152/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/IOHandlerCursesGUI.cpp.o
+[153/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Opcode.cpp.o
+[154/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ModuleList.cpp.o
+[155/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Module.cpp.o
+[156/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/RichManglingContext.cpp.o
+[157/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/PluginManager.cpp.o
+[158/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/SearchFilter.cpp.o
+[159/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Section.cpp.o
+[160/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/StreamFile.cpp.o
+[161/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/StreamAsynchronousIO.cpp.o
+[162/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/UserSettingsController.cpp.o
+[163/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/SourceManager.cpp.o
+[164/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/Value.cpp.o
+[165/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectCast.cpp.o
+[166/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectChild.cpp.o
+[167/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectConstResult.cpp.o
+[168/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectConstResultCast.cpp.o
+[169/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObject.cpp.o
+[170/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectConstResultChild.cpp.o
+[171/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectConstResultImpl.cpp.o
+[172/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectList.cpp.o
+[173/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectDynamicValue.cpp.o
+[174/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectMemory.cpp.o
+[175/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectRegister.cpp.o
+[176/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectSyntheticFilter.cpp.o
+[177/879] Building CXX object source/Core/CMakeFiles/lldbCore.dir/ValueObjectVariable.cpp.o
+[178/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/CXXFunctionPointer.cpp.o
+[179/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/DataVisualization.cpp.o
+[180/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/FormatCache.cpp.o
+[181/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/DumpValueObjectOptions.cpp.o
+[182/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/FormatClasses.cpp.o
+[183/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/LanguageCategory.cpp.o
+[184/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/FormatManager.cpp.o
+[185/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/FormattersHelpers.cpp.o
+[186/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/StringPrinter.cpp.o
+[187/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/TypeCategoryMap.cpp.o
+[188/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/TypeCategory.cpp.o
+[189/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/TypeFormat.cpp.o
+[190/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/TypeSummary.cpp.o
+[191/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/TypeSynthetic.cpp.o
+[192/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/VectorType.cpp.o
+[193/879] Building CXX object source/DataFormatters/CMakeFiles/lldbDataFormatters.dir/ValueObjectPrinter.cpp.o
+[194/879] Building CXX object source/Plugins/ABI/Windows-x86_64/CMakeFiles/lldbPluginABIWindows_x86_64.dir/ABIWindows_x86_64.cpp.o
+[195/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/Expression.cpp.o
+[196/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/ExpressionVariable.cpp.o
+[197/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/FunctionCaller.cpp.o
+[198/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/DWARFExpression.cpp.o
+[199/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/IRMemoryMap.cpp.o
+[200/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/IRExecutionUnit.cpp.o
+[201/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/IRInterpreter.cpp.o
+[202/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/LLVMUserExpression.cpp.o
+[203/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/Materializer.cpp.o
+[204/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/REPL.cpp.o
+[205/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/MSVCUndecoratedNameParser.cpp.o
+[206/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/UserExpression.cpp.o
+[207/879] Building CXX object source/Expression/CMakeFiles/lldbExpression.dir/UtilityFunction.cpp.o
+[208/879] Building CXX object source/Initialization/CMakeFiles/lldbInitialization.dir/SystemInitializer.cpp.o
+[209/879] Building CXX object source/Initialization/CMakeFiles/lldbInitialization.dir/SystemInitializerCommon.cpp.o
+[210/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandHistory.cpp.o
+[211/879] Building CXX object source/Initialization/CMakeFiles/lldbInitialization.dir/SystemLifetimeManager.cpp.o
+[212/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandAlias.cpp.o
+[213/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandObjectRegexCommand.cpp.o
+[214/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandObject.cpp.o
+[215/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandInterpreter.cpp.o
+[216/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandReturnObject.cpp.o
+[217/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandOptionValidators.cpp.o
+[218/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/CommandObjectScript.cpp.o
+[219/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupArchitecture.cpp.o
+[220/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupBoolean.cpp.o
+[221/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupFile.cpp.o
+[222/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionArgParser.cpp.o
+[223/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupPythonClassWithDict.cpp.o
+[224/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupOutputFile.cpp.o
+[225/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupFormat.cpp.o
+[226/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupString.cpp.o
+[227/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupUInt64.cpp.o
+[228/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupUUID.cpp.o
+[229/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupPlatform.cpp.o
+[230/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValue.cpp.o
+[231/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupValueObjectDisplay.cpp.o
+[232/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueArgs.cpp.o
+[233/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueBoolean.cpp.o
+[234/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueArray.cpp.o
+[235/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueArch.cpp.o
+[236/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueChar.cpp.o
+[237/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueEnumeration.cpp.o
+[238/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueFileSpecList.cpp.o
+[239/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueDictionary.cpp.o
+[240/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueFileSpec.cpp.o
+[241/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueFormat.cpp.o
+[242/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueFormatEntity.cpp.o
+[243/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValuePathMappings.cpp.o
+[244/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueLanguage.cpp.o
+[245/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueProperties.cpp.o
+[246/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueRegex.cpp.o
+[247/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueSInt64.cpp.o
+[248/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueString.cpp.o
+[249/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueUInt64.cpp.o
+[250/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupWatchpoint.cpp.o
+[251/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionValueUUID.cpp.o
+[252/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/OptionGroupVariable.cpp.o
+[253/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/ScriptInterpreter.cpp.o
+[254/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/Options.cpp.o
+[255/879] Building CXX object source/Interpreter/CMakeFiles/lldbInterpreter.dir/Property.cpp.o
+[256/879] Building CXX object source/Plugins/ABI/SysV-ppc/CMakeFiles/lldbPluginABISysV_ppc.dir/ABISysV_ppc.cpp.o
+[257/879] Building CXX object source/Plugins/ABI/SysV-i386/CMakeFiles/lldbPluginABISysV_i386.dir/ABISysV_i386.cpp.o
+[258/879] Building CXX object source/Plugins/ABI/SysV-x86_64/CMakeFiles/lldbPluginABISysV_x86_64.dir/ABISysV_x86_64.cpp.o
+[259/879] Building CXX object source/Plugins/ABI/SysV-ppc64/CMakeFiles/lldbPluginABISysV_ppc64.dir/ABISysV_ppc64.cpp.o
+[260/879] Building CXX object source/Plugins/ABI/MacOSX-i386/CMakeFiles/lldbPluginABIMacOSX_i386.dir/ABIMacOSX_i386.cpp.o
+[261/879] Building CXX object source/Plugins/Architecture/Arm/CMakeFiles/lldbPluginArchitectureArm.dir/ArchitectureArm.cpp.o
+[262/879] Building CXX object source/Plugins/Architecture/PPC64/CMakeFiles/lldbPluginArchitecturePPC64.dir/ArchitecturePPC64.cpp.o
+[263/879] Building CXX object source/Plugins/Architecture/Mips/CMakeFiles/lldbPluginArchitectureMips.dir/ArchitectureMips.cpp.o
+[264/879] Building CXX object source/Plugins/Disassembler/llvm/CMakeFiles/lldbPluginDisassemblerLLVM.dir/DisassemblerLLVMC.cpp.o
+[265/879] Building CXX object source/Plugins/DynamicLoader/Darwin-Kernel/CMakeFiles/lldbPluginDynamicLoaderDarwinKernel.dir/DynamicLoaderDarwinKernel.cpp.o
+[266/879] Building CXX object source/Plugins/DynamicLoader/MacOSX-DYLD/CMakeFiles/lldbPluginDynamicLoaderMacOSXDYLD.dir/DynamicLoaderMacOSXDYLD.cpp.o
+[267/879] Building CXX object source/Plugins/DynamicLoader/POSIX-DYLD/CMakeFiles/lldbPluginDynamicLoaderPosixDYLD.dir/DYLDRendezvous.cpp.o
+[268/879] Building CXX object source/Plugins/DynamicLoader/MacOSX-DYLD/CMakeFiles/lldbPluginDynamicLoaderMacOSXDYLD.dir/DynamicLoaderMacOS.cpp.o
+[269/879] Building CXX object source/Plugins/DynamicLoader/MacOSX-DYLD/CMakeFiles/lldbPluginDynamicLoaderMacOSXDYLD.dir/DynamicLoaderDarwin.cpp.o
+[270/879] Building CXX object source/Plugins/DynamicLoader/Static/CMakeFiles/lldbPluginDynamicLoaderStatic.dir/DynamicLoaderStatic.cpp.o
+[271/879] Building CXX object source/Plugins/DynamicLoader/POSIX-DYLD/CMakeFiles/lldbPluginDynamicLoaderPosixDYLD.dir/DynamicLoaderPOSIXDYLD.cpp.o
+[272/879] Building CXX object source/Plugins/DynamicLoader/Hexagon-DYLD/CMakeFiles/lldbPluginDynamicLoaderHexagonDYLD.dir/HexagonDYLDRendezvous.cpp.o
+[273/879] Building CXX object source/Plugins/DynamicLoader/Hexagon-DYLD/CMakeFiles/lldbPluginDynamicLoaderHexagonDYLD.dir/DynamicLoaderHexagonDYLD.cpp.o
+[274/879] Building CXX object source/Plugins/DynamicLoader/Windows-DYLD/CMakeFiles/lldbPluginDynamicLoaderWindowsDYLD.dir/DynamicLoaderWindowsDYLD.cpp.o
+[275/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ASTUtils.cpp.o
+[276/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ASTStructExtractor.cpp.o
+[277/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ASTResultSynthesizer.cpp.o
+[278/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangDeclVendor.cpp.o
+[279/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangASTSource.cpp.o
+[280/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangExpressionDeclMap.cpp.o
+[281/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangExpressionSourceCode.cpp.o
+[282/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangExpressionVariable.cpp.o
+[283/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangHost.cpp.o
+[284/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangExpressionParser.cpp.o
+[285/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangFunctionCaller.cpp.o
+[286/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangPersistentVariables.cpp.o
+[287/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangModulesDeclVendor.cpp.o
+[288/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/CppModuleConfiguration.cpp.o
+[289/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangUtilityFunction.cpp.o
+[290/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/ClangUserExpression.cpp.o
+[291/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/IRDynamicChecks.cpp.o
+[292/879] Building CXX object source/Plugins/Instruction/ARM/CMakeFiles/lldbPluginInstructionARM.dir/EmulateInstructionARM.cpp.o
+[293/879] Building CXX object source/Plugins/Instruction/ARM/CMakeFiles/lldbPluginInstructionARM.dir/EmulationStateARM.cpp.o
+[294/879] Building CXX object source/Plugins/Instruction/ARM64/CMakeFiles/lldbPluginInstructionARM64.dir/EmulateInstructionARM64.cpp.o
+[295/879] Building CXX object source/Plugins/Instruction/MIPS64/CMakeFiles/lldbPluginInstructionMIPS64.dir/EmulateInstructionMIPS64.cpp.o
+[296/879] Building CXX object source/Plugins/Instruction/MIPS/CMakeFiles/lldbPluginInstructionMIPS.dir/EmulateInstructionMIPS.cpp.o
+[297/879] Building CXX object source/Plugins/ExpressionParser/Clang/CMakeFiles/lldbPluginExpressionParserClang.dir/IRForTarget.cpp.o
+[298/879] Building CXX object source/Plugins/Instruction/PPC64/CMakeFiles/lldbPluginInstructionPPC64.dir/EmulateInstructionPPC64.cpp.o
+[299/879] Building CXX object source/Plugins/InstrumentationRuntime/ASan/CMakeFiles/lldbPluginInstrumentationRuntimeASan.dir/ASanRuntime.cpp.o
+[300/879] Building CXX object source/Plugins/InstrumentationRuntime/MainThreadChecker/CMakeFiles/lldbPluginInstrumentationRuntimeMainThreadChecker.dir/MainThreadCheckerRuntime.cpp.o
+[301/879] Building CXX object source/Plugins/InstrumentationRuntime/TSan/CMakeFiles/lldbPluginInstrumentationRuntimeTSan.dir/TSanRuntime.cpp.o
+[302/879] Building CXX object source/Plugins/JITLoader/GDB/CMakeFiles/lldbPluginJITLoaderGDB.dir/JITLoaderGDB.cpp.o
+[303/879] Building CXX object source/Plugins/InstrumentationRuntime/UBSan/CMakeFiles/lldbPluginInstrumentationRuntimeUBSan.dir/UBSanRuntime.cpp.o
+[304/879] Building CXX object source/Plugins/Language/ClangCommon/CMakeFiles/lldbPluginClangCommon.dir/ClangHighlighter.cpp.o
+[305/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/CPlusPlusNameParser.cpp.o
+[306/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/BlockPointer.cpp.o
+[307/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/CPlusPlusLanguage.cpp.o
+[308/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/CxxStringTypes.cpp.o
+[309/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxAtomic.cpp.o
+[310/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxInitializerList.cpp.o
+[311/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxBitset.cpp.o
+[312/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxx.cpp.o
+[313/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxOptional.cpp.o
+[314/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxList.cpp.o
+[315/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxMap.cpp.o
+[316/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxQueue.cpp.o
+[317/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxTuple.cpp.o
+[318/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxVariant.cpp.o
+[319/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxVector.cpp.o
+[320/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibCxxUnorderedMap.cpp.o
+[321/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibStdcppTuple.cpp.o
+[322/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibStdcpp.cpp.o
+[323/879] Building CXX object source/Plugins/Language/CPlusPlus/CMakeFiles/lldbPluginCPlusPlusLanguage.dir/LibStdcppUniquePointer.cpp.o
+[324/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/CF.cpp.o
+[325/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/Cocoa.cpp.o
+[326/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/CoreMedia.cpp.o
+[327/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/ObjCLanguage.cpp.o
+[328/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSArray.cpp.o
+[329/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSError.cpp.o
+[330/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSDictionary.cpp.o
+[331/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSException.cpp.o
+[332/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSIndexPath.cpp.o
+[333/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSSet.cpp.o
+[334/879] Building CXX object source/Plugins/Language/ObjCPlusPlus/CMakeFiles/lldbPluginObjCPlusPlusLanguage.dir/ObjCPlusPlusLanguage.cpp.o
+[335/879] Building CXX object source/Plugins/Language/ObjC/CMakeFiles/lldbPluginObjCLanguage.dir/NSString.cpp.o
+[336/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Platform.cpp.o
+[337/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Queue.cpp.o
+[338/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/QueueItem.cpp.o
+[339/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Process.cpp.o
+[340/879] Building CXX object source/Plugins/LanguageRuntime/CPlusPlus/CMakeFiles/lldbPluginCPPRuntime.dir/CPPLanguageRuntime.cpp.o
+[341/879] Building CXX object source/Plugins/LanguageRuntime/CPlusPlus/ItaniumABI/CMakeFiles/lldbPluginCXXItaniumABI.dir/ItaniumABILanguageRuntime.cpp.o
+[342/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/CMakeFiles/lldbPluginObjCRuntime.dir/ObjCLanguageRuntime.cpp.o
+[343/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCRuntime.cpp.o
+[344/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCRuntimeV1.cpp.o
+[345/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCTrampolineHandler.cpp.o
+[346/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCRuntimeV2.cpp.o
+[347/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCDeclVendor.cpp.o
+[348/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleThreadPlanStepThroughObjCTrampoline.cpp.o
+[349/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCClassDescriptorV2.cpp.o
+[350/879] Building CXX object source/Plugins/LanguageRuntime/ObjC/AppleObjCRuntime/CMakeFiles/lldbPluginAppleObjCRuntime.dir/AppleObjCTypeEncodingParser.cpp.o
+[351/879] Building CXX object source/Plugins/LanguageRuntime/RenderScript/RenderScriptRuntime/CMakeFiles/lldbPluginRenderScriptRuntime.dir/RenderScriptExpressionOpts.cpp.o
+[352/879] Building CXX object source/Plugins/LanguageRuntime/RenderScript/RenderScriptRuntime/CMakeFiles/lldbPluginRenderScriptRuntime.dir/RenderScriptx86ABIFixups.cpp.o
+[353/879] Building CXX object source/Plugins/LanguageRuntime/RenderScript/RenderScriptRuntime/CMakeFiles/lldbPluginRenderScriptRuntime.dir/RenderScriptRuntime.cpp.o
+[354/879] Building CXX object source/Plugins/LanguageRuntime/RenderScript/RenderScriptRuntime/CMakeFiles/lldbPluginRenderScriptRuntime.dir/RenderScriptScriptGroup.cpp.o
+[355/879] Building CXX object source/Plugins/MemoryHistory/asan/CMakeFiles/lldbPluginMemoryHistoryASan.dir/MemoryHistoryASan.cpp.o
+[356/879] Building CXX object source/Plugins/ObjectContainer/BSD-Archive/CMakeFiles/lldbPluginObjectContainerBSDArchive.dir/ObjectContainerBSDArchive.cpp.o
+[357/879] Building CXX object source/Plugins/ObjectFile/Breakpad/CMakeFiles/lldbPluginObjectFileBreakpad.dir/BreakpadRecords.cpp.o
+[358/879] Building CXX object source/Plugins/ObjectContainer/Universal-Mach-O/CMakeFiles/lldbPluginObjectContainerMachOArchive.dir/ObjectContainerUniversalMachO.cpp.o
+[359/879] Building CXX object source/Plugins/ObjectFile/ELF/CMakeFiles/lldbPluginObjectFileELF.dir/ELFHeader.cpp.o
+[360/879] Building CXX object source/Plugins/ObjectFile/Breakpad/CMakeFiles/lldbPluginObjectFileBreakpad.dir/ObjectFileBreakpad.cpp.o
+[361/879] Building CXX object source/Plugins/ObjectFile/PECOFF/CMakeFiles/lldbPluginObjectFilePECOFF.dir/ObjectFilePECOFF.cpp.o
+[362/879] Building CXX object source/Plugins/ObjectFile/ELF/CMakeFiles/lldbPluginObjectFileELF.dir/ObjectFileELF.cpp.o
+[363/879] Building CXX object source/Plugins/ObjectFile/PECOFF/CMakeFiles/lldbPluginObjectFilePECOFF.dir/PECallFrameInfo.cpp.o
+[364/879] Building CXX object source/Plugins/ObjectFile/Mach-O/CMakeFiles/lldbPluginObjectFileMachO.dir/ObjectFileMachO.cpp.o
+[365/879] Building CXX object source/Plugins/ObjectFile/PECOFF/CMakeFiles/lldbPluginObjectFilePECOFF.dir/WindowsMiniDump.cpp.o
+[366/879] Building CXX object source/Plugins/ObjectFile/JIT/CMakeFiles/lldbPluginObjectFileJIT.dir/ObjectFileJIT.cpp.o
+[367/879] Building CXX object source/Plugins/OperatingSystem/Python/CMakeFiles/lldbPluginOSPython.dir/OperatingSystemPython.cpp.o
+[368/879] Building CXX object source/Plugins/Platform/Linux/CMakeFiles/lldbPluginPlatformLinux.dir/PlatformLinux.cpp.o
+[369/879] Building CXX object source/Plugins/Platform/FreeBSD/CMakeFiles/lldbPluginPlatformFreeBSD.dir/PlatformFreeBSD.cpp.o
+[370/879] Building CXX object source/Plugins/Platform/OpenBSD/CMakeFiles/lldbPluginPlatformOpenBSD.dir/PlatformOpenBSD.cpp.o
+[371/879] Building CXX object source/Plugins/Platform/NetBSD/CMakeFiles/lldbPluginPlatformNetBSD.dir/PlatformNetBSD.cpp.o
+[372/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformDarwinKernel.cpp.o
+[373/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformMacOSX.cpp.o
+[374/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformDarwin.cpp.o
+[375/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformRemoteiOS.cpp.o
+[376/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformRemoteAppleTV.cpp.o
+[377/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformRemoteAppleWatch.cpp.o
+[378/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformRemoteDarwinDevice.cpp.o
+[379/879] Building CXX object source/Plugins/Platform/MacOSX/CMakeFiles/lldbPluginPlatformMacOSX.dir/PlatformRemoteAppleBridge.cpp.o
+[380/879] Building CXX object source/Plugins/Platform/Windows/CMakeFiles/lldbPluginPlatformWindows.dir/PlatformWindows.cpp.o
+[381/879] Building CXX object source/Plugins/Platform/Android/CMakeFiles/lldbPluginPlatformAndroid.dir/AdbClient.cpp.o
+[382/879] Building CXX object source/Plugins/Platform/gdb-server/CMakeFiles/lldbPluginPlatformGDB.dir/PlatformRemoteGDBServer.cpp.o
+[383/879] Building CXX object source/Plugins/Platform/POSIX/CMakeFiles/lldbPluginPlatformPOSIX.dir/PlatformPOSIX.cpp.o
+[384/879] Building CXX object source/Plugins/Platform/Android/CMakeFiles/lldbPluginPlatformAndroid.dir/PlatformAndroidRemoteGDBServer.cpp.o
+[385/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux.cpp.o
+[386/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux_arm.cpp.o
+[387/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux_arm64.cpp.o
+[388/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux_mips64.cpp.o
+[389/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux_ppc64le.cpp.o
+[390/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux_s390x.cpp.o
+[391/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeRegisterContextLinux_x86_64.cpp.o
+[392/879] Building CXX object source/Plugins/Platform/Android/CMakeFiles/lldbPluginPlatformAndroid.dir/PlatformAndroid.cpp.o
+[393/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeThreadLinux.cpp.o
+[394/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/ProcessorTrace.cpp.o
+[395/879] Building CXX object source/Plugins/Process/POSIX/CMakeFiles/lldbPluginProcessPOSIX.dir/CrashReason.cpp.o
+[396/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/SingleStepCheck.cpp.o
+[397/879] Building CXX object source/Plugins/Process/Linux/CMakeFiles/lldbPluginProcessLinux.dir/NativeProcessLinux.cpp.o
+[398/879] Building CXX object source/Plugins/Process/POSIX/CMakeFiles/lldbPluginProcessPOSIX.dir/ProcessMessage.cpp.o
+[399/879] Building CXX object source/Plugins/Process/POSIX/CMakeFiles/lldbPluginProcessPOSIX.dir/ProcessPOSIXLog.cpp.o
+[400/879] Building CXX object source/Plugins/Process/POSIX/CMakeFiles/lldbPluginProcessPOSIX.dir/NativeProcessELF.cpp.o
+[401/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteClientBase.cpp.o
+[402/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationHistory.cpp.o
+[403/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunication.cpp.o
+[404/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationReplayServer.cpp.o
+[405/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationServer.cpp.o
+[406/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationClient.cpp.o
+[407/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationServerCommon.cpp.o
+[408/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationServerPlatform.cpp.o
+[409/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteCommunicationServerLLGS.cpp.o
+[410/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/GDBRemoteRegisterContext.cpp.o
+[411/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/ProcessGDBRemoteLog.cpp.o
+[412/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/AuxVector.cpp.o
+[413/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/ThreadGDBRemote.cpp.o
+[414/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/FreeBSDSignals.cpp.o
+[415/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/GDBRemoteSignals.cpp.o
+[416/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/DynamicRegisterInfo.cpp.o
+[417/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/HistoryThread.cpp.o
+[418/879] Building CXX object source/Plugins/Process/gdb-remote/CMakeFiles/lldbPluginProcessGDBRemote.dir/ProcessGDBRemote.cpp.o
+[419/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/LinuxProcMaps.cpp.o
+[420/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/HistoryUnwind.cpp.o
+[421/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/LinuxSignals.cpp.o
+[422/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/MipsLinuxSignals.cpp.o
+[423/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/InferiorCallPOSIX.cpp.o
+[424/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/NativeRegisterContextRegisterInfo.cpp.o
+[425/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/NetBSDSignals.cpp.o
+[426/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextDarwin_arm.cpp.o
+[427/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextDarwin_i386.cpp.o
+[428/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextDarwin_x86_64.cpp.o
+[429/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextDarwin_arm64.cpp.o
+[430/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextFreeBSD_i386.cpp.o
+[431/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextFreeBSD_mips64.cpp.o
+[432/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextDummy.cpp.o
+[433/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextFreeBSD_powerpc.cpp.o
+[434/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextFreeBSD_x86_64.cpp.o
+[435/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextLinux_i386.cpp.o
+[436/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextLinux_x86_64.cpp.o
+[437/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextLinux_mips64.cpp.o
+[438/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextLinux_mips.cpp.o
+[439/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextHistory.cpp.o
+[440/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextLinux_s390x.cpp.o
+[441/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextMach_arm.cpp.o
+[442/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextMach_i386.cpp.o
+[443/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextMach_x86_64.cpp.o
+[444/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextMacOSXFrameBackchain.cpp.o
+[445/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextMemory.cpp.o
+[446/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextNetBSD_x86_64.cpp.o
+[447/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextOpenBSD_x86_64.cpp.o
+[448/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextOpenBSD_i386.cpp.o
+[449/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextLLDB.cpp.o
+[450/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_arm64.cpp.o
+[451/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_arm.cpp.o
+[452/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_mips64.cpp.o
+[453/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_powerpc.cpp.o
+[454/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_ppc64le.cpp.o
+[455/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_s390x.cpp.o
+[456/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextWindows_i386.cpp.o
+[457/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextThreadMemory.cpp.o
+[458/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextWindows_x86_64.cpp.o
+[459/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterContextPOSIX_x86.cpp.o
+[460/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterInfoPOSIX_arm.cpp.o
+[461/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterInfoPOSIX_arm64.cpp.o
+[462/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/RegisterInfoPOSIX_ppc64le.cpp.o
+[463/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/ThreadMemory.cpp.o
+[464/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/StopInfoMachException.cpp.o
+[465/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/UnwindLLDB.cpp.o
+[466/879] Building CXX object source/Plugins/Process/Utility/CMakeFiles/lldbPluginProcessUtility.dir/UnwindMacOSXFrameBackchain.cpp.o
+[467/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/ThreadElfCore.cpp.o
+[468/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_arm.cpp.o
+[469/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/ProcessElfCore.cpp.o
+[470/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_arm64.cpp.o
+[471/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_mips64.cpp.o
+[472/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_powerpc.cpp.o
+[473/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_ppc64le.cpp.o
+[474/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_s390x.cpp.o
+[475/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterContextPOSIXCore_x86_64.cpp.o
+[476/879] Building CXX object source/Plugins/Process/elf-core/CMakeFiles/lldbPluginProcessElfCore.dir/RegisterUtilities.cpp.o
+[477/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/MinidumpTypes.cpp.o
+[478/879] Building CXX object source/Plugins/Process/mach-core/CMakeFiles/lldbPluginProcessMachCore.dir/ThreadMachCore.cpp.o
+[479/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/RegisterContextMinidump_ARM.cpp.o
+[480/879] Building CXX object source/Plugins/Process/mach-core/CMakeFiles/lldbPluginProcessMachCore.dir/ProcessMachCore.cpp.o
+[481/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/MinidumpParser.cpp.o
+[482/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/RegisterContextMinidump_ARM64.cpp.o
+[483/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/RegisterContextMinidump_x86_32.cpp.o
+[484/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/RegisterContextMinidump_x86_64.cpp.o
+[485/879] Building CXX object source/Plugins/ScriptInterpreter/None/CMakeFiles/lldbPluginScriptInterpreterNone.dir/ScriptInterpreterNone.cpp.o
+[486/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/ThreadMinidump.cpp.o
+[487/879] Building CXX object source/Plugins/ScriptInterpreter/Python/CMakeFiles/lldbPluginScriptInterpreterPython.dir/PythonReadline.cpp.o
+[488/879] Building CXX object source/Plugins/Process/minidump/CMakeFiles/lldbPluginProcessMinidump.dir/ProcessMinidump.cpp.o
+[489/879] Building CXX object source/Plugins/ScriptInterpreter/Lua/CMakeFiles/lldbPluginScriptInterpreterLua.dir/Lua.cpp.o
+[490/879] Building CXX object source/Plugins/ScriptInterpreter/Python/CMakeFiles/lldbPluginScriptInterpreterPython.dir/PythonDataObjects.cpp.o
+[491/879] Building CXX object source/Plugins/ScriptInterpreter/Python/CMakeFiles/lldbPluginScriptInterpreterPython.dir/ScriptInterpreterPython.cpp.o
+[492/879] Building CXX object source/Plugins/ScriptInterpreter/Lua/CMakeFiles/lldbPluginScriptInterpreterLua.dir/ScriptInterpreterLua.cpp.o
+[493/879] Building CXX object source/Plugins/StructuredData/DarwinLog/CMakeFiles/lldbPluginStructuredDataDarwinLog.dir/StructuredDataDarwinLog.cpp.o
+[494/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/AppleDWARFIndex.cpp.o
+[495/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DIERef.cpp.o
+[496/879] Building CXX object source/Plugins/SymbolFile/Breakpad/CMakeFiles/lldbPluginSymbolFileBreakpad.dir/SymbolFileBreakpad.cpp.o
+[497/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DebugNamesDWARFIndex.cpp.o
+[498/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFAbbreviationDeclaration.cpp.o
+[499/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFAttribute.cpp.o
+[500/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFBaseDIE.cpp.o
+[501/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFCompileUnit.cpp.o
+[502/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFContext.cpp.o
+[503/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDataExtractor.cpp.o
+[504/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugAbbrev.cpp.o
+[505/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugAranges.cpp.o
+[506/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugArangeSet.cpp.o
+[507/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFASTParserClang.cpp.o
+[508/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugMacro.cpp.o
+[509/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugInfo.cpp.o
+[510/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugInfoEntry.cpp.o
+[511/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDeclContext.cpp.o
+[512/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDefines.cpp.o
+[513/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDebugRanges.cpp.o
+[514/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFDIE.cpp.o
+[515/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFFormValue.cpp.o
+[516/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFTypeUnit.cpp.o
+[517/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFIndex.cpp.o
+[518/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/LogChannelDWARF.cpp.o
+[519/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/HashedNameToDIE.cpp.o
+[520/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/DWARFUnit.cpp.o
+[521/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/NameToDIE.cpp.o
+[522/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/ManualDWARFIndex.cpp.o
+[523/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/SymbolFileDWARFDwo.cpp.o
+[524/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/SymbolFileDWARFDwoDwp.cpp.o
+[525/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/SymbolFileDWARFDwp.cpp.o
+[526/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/UniqueDWARFASTType.cpp.o
+[527/879] Building CXX object source/Plugins/SymbolFile/Symtab/CMakeFiles/lldbPluginSymbolFileSymtab.dir/SymbolFileSymtab.cpp.o
+[528/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/CodeViewRegisterMapping.cpp.o
+[529/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/SymbolFileDWARFDebugMap.cpp.o
+[530/879] Building CXX object source/Plugins/SymbolFile/DWARF/CMakeFiles/lldbPluginSymbolFileDWARF.dir/SymbolFileDWARF.cpp.o
+[531/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/DWARFLocationExpression.cpp.o
+[532/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/CompileUnitIndex.cpp.o
+[533/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/PdbFPOProgramToDWARFExpression.cpp.o
+[534/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/PdbSymUid.cpp.o
+[535/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/PdbIndex.cpp.o
+[536/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/PdbUtil.cpp.o
+[537/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/PdbAstBuilder.cpp.o
+[538/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/UdtRecordCompleter.cpp.o
+[539/879] Building CXX object source/Plugins/SymbolFile/NativePDB/CMakeFiles/lldbPluginSymbolFileNativePDB.dir/SymbolFileNativePDB.cpp.o
+[540/879] Building CXX object source/Plugins/SymbolFile/PDB/CMakeFiles/lldbPluginSymbolFilePDB.dir/PDBLocationToDWARFExpression.cpp.o
+[541/879] Building CXX object source/Plugins/SymbolFile/PDB/CMakeFiles/lldbPluginSymbolFilePDB.dir/PDBASTParser.cpp.o
+[542/879] Building CXX object source/Plugins/SystemRuntime/MacOSX/CMakeFiles/lldbPluginSystemRuntimeMacOSX.dir/AppleGetItemInfoHandler.cpp.o
+[543/879] Building CXX object source/Plugins/SystemRuntime/MacOSX/CMakeFiles/lldbPluginSystemRuntimeMacOSX.dir/AppleGetPendingItemsHandler.cpp.o
+[544/879] Building CXX object source/Plugins/SystemRuntime/MacOSX/CMakeFiles/lldbPluginSystemRuntimeMacOSX.dir/AppleGetQueuesHandler.cpp.o
+[545/879] Building CXX object source/Plugins/SymbolFile/PDB/CMakeFiles/lldbPluginSymbolFilePDB.dir/SymbolFilePDB.cpp.o
+[546/879] Building CXX object source/Plugins/SystemRuntime/MacOSX/CMakeFiles/lldbPluginSystemRuntimeMacOSX.dir/AppleGetThreadItemInfoHandler.cpp.o
+[547/879] Building CXX object source/Plugins/SymbolVendor/ELF/CMakeFiles/lldbPluginSymbolVendorELF.dir/SymbolVendorELF.cpp.o
+[548/879] Building CXX object source/Plugins/SystemRuntime/MacOSX/CMakeFiles/lldbPluginSystemRuntimeMacOSX.dir/SystemRuntimeMacOSX.cpp.o
+[549/879] Building CXX object source/Plugins/UnwindAssembly/x86/CMakeFiles/lldbPluginUnwindAssemblyX86.dir/UnwindAssembly-x86.cpp.o
+[550/879] Building CXX object source/Plugins/UnwindAssembly/InstEmulation/CMakeFiles/lldbPluginUnwindAssemblyInstEmulation.dir/UnwindAssemblyInstEmulation.cpp.o
+[551/879] Building CXX object source/Plugins/UnwindAssembly/x86/CMakeFiles/lldbPluginUnwindAssemblyX86.dir/x86AssemblyInspectionEngine.cpp.o
+[552/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ArmUnwindInfo.cpp.o
+[553/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Block.cpp.o
+[554/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ClangASTMetadata.cpp.o
+[555/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ClangExternalASTSourceCallbacks.cpp.o
+[556/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ClangASTImporter.cpp.o
+[557/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ClangUtil.cpp.o
+[558/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/CompactUnwindInfo.cpp.o
+[559/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/CompilerDecl.cpp.o
+[560/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/CompileUnit.cpp.o
+[561/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/CompilerDeclContext.cpp.o
+[562/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ClangASTContext.cpp.o
+[563/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/CompilerType.cpp.o
+[564/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/DebugMacros.cpp.o
+[565/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/DWARFCallFrameInfo.cpp.o
+[566/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Declaration.cpp.o
+[567/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/DeclVendor.cpp.o
+[568/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/CxxModuleHandler.cpp.o
+[569/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Function.cpp.o
+[570/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/FuncUnwinders.cpp.o
+[571/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/LocateSymbolFile.cpp.o
+[572/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/LineTable.cpp.o
+[573/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/LineEntry.cpp.o
+[574/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/PostfixExpression.cpp.o
+[575/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/ObjectFile.cpp.o
+[576/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Symbol.cpp.o
+[577/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/SymbolContext.cpp.o
+[578/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/SymbolVendor.cpp.o
+[579/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/SymbolFile.cpp.o
+[580/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/TypeList.cpp.o
+[581/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/TypeMap.cpp.o
+[582/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Type.cpp.o
+[583/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Symtab.cpp.o
+[584/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/UnwindTable.cpp.o
+[585/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/TypeSystem.cpp.o
+[586/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/UnwindPlan.cpp.o
+[587/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/VariableList.cpp.o
+[588/879] Building CXX object source/Symbol/CMakeFiles/lldbSymbol.dir/Variable.cpp.o
+[589/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ABI.cpp.o
+[590/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/JITLoaderList.cpp.o
+[591/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ExecutionContext.cpp.o
+[592/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/JITLoader.cpp.o
+[593/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/InstrumentationRuntimeStopInfo.cpp.o
+[594/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/InstrumentationRuntime.cpp.o
+[595/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Language.cpp.o
+[596/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/MemoryHistory.cpp.o
+[597/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Memory.cpp.o
+[598/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/MemoryRegionInfo.cpp.o
+[599/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/LanguageRuntime.cpp.o
+[600/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/PathMappingList.cpp.o
+[601/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/OperatingSystem.cpp.o
+[602/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ModuleCache.cpp.o
+[603/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/RegisterNumber.cpp.o
+[604/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/QueueList.cpp.o
+[605/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/RegisterContext.cpp.o
+[606/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/SectionLoadHistory.cpp.o
+[607/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/RemoteAwarePlatform.cpp.o
+[608/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/SectionLoadList.cpp.o
+[609/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/StackFrameList.cpp.o
+[610/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/StackFrame.cpp.o
+[611/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/StackID.cpp.o
+[612/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/StackFrameRecognizer.cpp.o
+[613/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/SystemRuntime.cpp.o
+[614/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/StructuredDataPlugin.cpp.o
+[615/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/StopInfo.cpp.o
+[616/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/TargetList.cpp.o
+[617/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadCollection.cpp.o
+[618/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Thread.cpp.o
+[619/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadList.cpp.o
+[620/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlan.cpp.o
+[621/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanBase.cpp.o
+[622/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/Target.cpp.o
+[623/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanCallFunction.cpp.o
+[624/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanCallFunctionUsingABI.cpp.o
+[625/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanCallOnFunctionExit.cpp.o
+[626/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanCallUserExpression.cpp.o
+[627/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanPython.cpp.o
+[628/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanRunToAddress.cpp.o
+[629/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanShouldStopHere.cpp.o
+[630/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepInstruction.cpp.o
+[631/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepInRange.cpp.o
+[632/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepOut.cpp.o
+[633/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepOverBreakpoint.cpp.o
+[634/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepOverRange.cpp.o
+[635/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepThrough.cpp.o
+[636/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepRange.cpp.o
+[637/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanStepUntil.cpp.o
+[638/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/UnixSignals.cpp.o
+[639/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadSpec.cpp.o
+[640/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/UnwindAssembly.cpp.o
+[641/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Baton.cpp.o
+[642/879] Building CXX object source/Target/CMakeFiles/lldbTarget.dir/ThreadPlanTracer.cpp.o
+[643/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Args.cpp.o
+[644/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Connection.cpp.o
+[645/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/CompletionRequest.cpp.o
+[646/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/DataBufferHeap.cpp.o
+[647/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/ConstString.cpp.o
+[648/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Broadcaster.cpp.o
+[649/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/DataEncoder.cpp.o
+[650/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/DataBufferLLVM.cpp.o
+[651/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Environment.cpp.o
+[652/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/FileSpec.cpp.o
+[653/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/DataExtractor.cpp.o
+[654/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/LLDBAssert.cpp.o
+[655/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/IOObject.cpp.o
+[656/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/GDBRemote.cpp.o
+[657/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Logging.cpp.o
+[658/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Log.cpp.o
+[659/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/NameMatches.cpp.o
+[660/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Listener.cpp.o
+[661/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/ProcessInfo.cpp.o
+[662/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/RegularExpression.cpp.o
+[663/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/RegisterValue.cpp.o
+[664/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/ReproducerInstrumentation.cpp.o
+[665/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Scalar.cpp.o
+[666/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Reproducer.cpp.o
+[667/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/SharingPtr.cpp.o
+[668/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/State.cpp.o
+[669/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/SelectHelper.cpp.o
+[670/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Status.cpp.o
+[671/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StreamCallback.cpp.o
+[672/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Stream.cpp.o
+[673/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StreamString.cpp.o
+[674/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StringExtractor.cpp.o
+[675/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StringLexer.cpp.o
+[676/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StringExtractorGDBRemote.cpp.o
+[677/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/TildeExpressionResolver.cpp.o
+[678/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StringList.cpp.o
+[679/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/Timer.cpp.o
+[680/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/UUID.cpp.o
+[681/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/UriParser.cpp.o
+[682/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/StructuredData.cpp.o
+[683/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/UserID.cpp.o
+[684/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/VASprintf.cpp.o
+[685/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/UserIDResolver.cpp.o
+[686/879] Creating export file for liblldb
+[687/879] Building CXX object source/Utility/CMakeFiles/lldbUtility.dir/VMRange.cpp.o
+[688/879] Building CXX object tools/argdumper/CMakeFiles/lldb-argdumper.dir/argdumper.cpp.o
+[689/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBBreakpointOptionCommon.cpp.o
+[690/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBBreakpointName.cpp.o
+[691/879] Linking CXX static library lib/liblldbUtility.a
+[692/879] Linking CXX static library lib/liblldbHost.a
+[693/879] Linking CXX static library lib/liblldbTarget.a
+[694/879] Linking CXX static library lib/liblldbSymbol.a
+[695/879] Linking CXX static library lib/liblldbPluginSymbolFilePDB.a
+[696/879] Linking CXX static library lib/liblldbPluginSymbolFileNativePDB.a
+[697/879] Linking CXX static library lib/liblldbPluginSymbolFileDWARF.a
+[698/879] Linking CXX static library lib/liblldbPluginProcessUtility.a
+[699/879] Linking CXX static library lib/liblldbPluginObjectFileJIT.a
+[700/879] Linking CXX static library lib/liblldbPluginAppleObjCRuntime.a
+[701/879] Linking CXX static library lib/liblldbPluginObjCRuntime.a
+[702/879] Linking CXX static library lib/liblldbPluginCPPRuntime.a
+[703/879] Linking CXX static library lib/liblldbPluginObjCLanguage.a
+[704/879] Linking CXX static library lib/liblldbPluginCPlusPlusLanguage.a
+[705/879] Linking CXX static library lib/liblldbPluginClangCommon.a
+[706/879] Linking CXX static library lib/liblldbPluginExpressionParserClang.a
+[707/879] Linking CXX static library lib/liblldbInterpreter.a
+[708/879] Linking CXX static library lib/liblldbExpression.a
+[709/879] Linking CXX static library lib/liblldbDataFormatters.a
+[710/879] Linking CXX static library lib/liblldbCore.a
+[711/879] Linking CXX static library lib/liblldbCommands.a
+[712/879] Linking CXX static library lib/liblldbBreakpoint.a
+[713/879] Linking CXX static library lib/liblldbPluginABIWindows_x86_64.a
+[714/879] Linking CXX static library lib/liblldbPluginABISysV_ppc.a
+[715/879] Linking CXX static library lib/liblldbPluginABISysV_ppc64.a
+[716/879] Linking CXX static library lib/liblldbPluginABISysV_i386.a
+[717/879] Linking CXX static library lib/liblldbPluginABISysV_x86_64.a
+[718/879] Linking CXX static library lib/liblldbPluginABIMacOSX_i386.a
+[719/879] Linking CXX static library lib/liblldbPluginArchitectureArm.a
+[720/879] Linking CXX static library lib/liblldbPluginArchitectureMips.a
+[721/879] Linking CXX static library lib/liblldbPluginArchitecturePPC64.a
+[722/879] Linking CXX static library lib/liblldbPluginDisassemblerLLVM.a
+[723/879] Linking CXX static library lib/liblldbPluginDynamicLoaderMacOSXDYLD.a
+[724/879] Linking CXX static library lib/liblldbPluginDynamicLoaderStatic.a
+[725/879] Linking CXX static library lib/liblldbPluginDynamicLoaderHexagonDYLD.a
+[726/879] Linking CXX static library lib/liblldbPluginDynamicLoaderWindowsDYLD.a
+[727/879] Linking CXX static library lib/liblldbPluginInstructionARM.a
+[728/879] Linking CXX static library lib/liblldbPluginInstructionARM64.a
+[729/879] Linking CXX static library lib/liblldbPluginInstructionMIPS.a
+[730/879] Linking CXX static library lib/liblldbPluginInstructionMIPS64.a
+[731/879] Linking CXX static library lib/liblldbPluginInstructionPPC64.a
+[732/879] Linking CXX static library lib/liblldbPluginInstrumentationRuntimeASan.a
+[733/879] Linking CXX static library lib/liblldbPluginInstrumentationRuntimeMainThreadChecker.a
+[734/879] Linking CXX static library lib/liblldbPluginInstrumentationRuntimeTSan.a
+[735/879] Linking CXX static library lib/liblldbPluginInstrumentationRuntimeUBSan.a
+[736/879] Linking CXX static library lib/liblldbPluginObjCPlusPlusLanguage.a
+[737/879] Linking CXX static library lib/liblldbPluginCXXItaniumABI.a
+[738/879] Linking CXX static library lib/liblldbPluginRenderScriptRuntime.a
+[739/879] Linking CXX static library lib/liblldbPluginMemoryHistoryASan.a
+[740/879] Linking CXX static library lib/liblldbPluginObjectContainerBSDArchive.a
+[741/879] Linking CXX static library lib/liblldbPluginObjectContainerMachOArchive.a
+[742/879] Linking CXX static library lib/liblldbPluginObjectFileBreakpad.a
+[743/879] Linking CXX static library lib/liblldbPluginObjectFileELF.a
+[744/879] Linking CXX static library lib/liblldbPluginObjectFileMachO.a
+[745/879] Linking CXX static library lib/liblldbPluginJITLoaderGDB.a
+[746/879] Linking CXX static library lib/liblldbPluginObjectFilePECOFF.a
+[747/879] Linking CXX static library lib/liblldbPluginOSPython.a
+[748/879] Linking CXX static library lib/liblldbPluginPlatformFreeBSD.a
+[749/879] Linking CXX static library lib/liblldbPluginPlatformNetBSD.a
+[750/879] Linking CXX static library lib/liblldbPluginPlatformOpenBSD.a
+[751/879] Linking CXX static library lib/liblldbPluginPlatformWindows.a
+[752/879] Linking CXX static library lib/liblldbPluginPlatformPOSIX.a
+[753/879] Linking CXX static library lib/liblldbPluginPlatformLinux.a
+[754/879] Linking CXX static library lib/liblldbPluginPlatformMacOSX.a
+[755/879] Linking CXX static library lib/liblldbPluginDynamicLoaderDarwinKernel.a
+[756/879] Linking CXX static library lib/liblldbPluginPlatformGDB.a
+[757/879] Linking CXX static library lib/liblldbPluginPlatformAndroid.a
+[758/879] Linking CXX static library lib/liblldbPluginProcessPOSIX.a
+[759/879] Linking CXX static library lib/liblldbPluginProcessLinux.a
+[760/879] Linking CXX static library lib/liblldbPluginProcessGDBRemote.a
+[761/879] Linking CXX static library lib/liblldbInitialization.a
+[762/879] Linking CXX static library lib/liblldbPluginProcessElfCore.a
+[763/879] Linking CXX static library lib/liblldbPluginDynamicLoaderPosixDYLD.a
+[764/879] Linking CXX static library lib/liblldbPluginProcessMachCore.a
+[765/879] Linking CXX static library lib/liblldbPluginProcessMinidump.a
+[766/879] Linking CXX static library lib/liblldbPluginScriptInterpreterNone.a
+[767/879] Linking CXX static library lib/liblldbPluginScriptInterpreterPython.a
+[768/879] Linking CXX static library lib/liblldbPluginScriptInterpreterLua.a
+[769/879] Linking CXX static library lib/liblldbPluginStructuredDataDarwinLog.a
+[770/879] Linking CXX static library lib/liblldbPluginSymbolFileBreakpad.a
+[771/879] Linking CXX static library lib/liblldbPluginSymbolFileSymtab.a
+[772/879] Linking CXX static library lib/liblldbPluginSystemRuntimeMacOSX.a
+[773/879] Linking CXX static library lib/liblldbPluginSymbolVendorELF.a
+[774/879] Linking CXX static library lib/liblldbPluginUnwindAssemblyInstEmulation.a
+[775/879] Linking CXX static library lib/liblldbPluginUnwindAssemblyX86.a
+[776/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBCommandInterpreter.cpp.o
+[777/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBAddress.cpp.o
+[778/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBBroadcaster.cpp.o
+[779/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBBreakpointLocation.cpp.o
+[780/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBBreakpoint.cpp.o
+[781/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBBlock.cpp.o
+[782/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBCommandReturnObject.cpp.o
+[783/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBAttachInfo.cpp.o
+[784/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBCommunication.cpp.o
+[785/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBCompileUnit.cpp.o
+[786/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBData.cpp.o
+[787/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBDeclaration.cpp.o
+[788/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBError.cpp.o
+[789/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBExecutionContext.cpp.o
+[790/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBEvent.cpp.o
+[791/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBDebugger.cpp.o
+[792/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBFileSpec.cpp.o
+[793/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBExpressionOptions.cpp.o
+[794/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBFile.cpp.o
+[795/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBFileSpecList.cpp.o
+[796/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBHostOS.cpp.o
+[797/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBFunction.cpp.o
+[798/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBFrame.cpp.o
+[799/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBInstructionList.cpp.o
+[800/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBInstruction.cpp.o
+[801/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBLanguageRuntime.cpp.o
+[802/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBLineEntry.cpp.o
+[803/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBLaunchInfo.cpp.o
+[804/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBListener.cpp.o
+[805/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBMemoryRegionInfo.cpp.o
+[806/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBMemoryRegionInfoList.cpp.o
+[807/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBModuleSpec.cpp.o
+[808/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBPlatform.cpp.o
+[809/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBModule.cpp.o
+[810/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBProcessInfo.cpp.o
+[811/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBQueue.cpp.o
+[812/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBQueueItem.cpp.o
+[813/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBProcess.cpp.o
+[814/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBReproducer.cpp.o
+[815/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBSection.cpp.o
+[816/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBStream.cpp.o
+[817/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBSourceManager.cpp.o
+[818/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBStringList.cpp.o
+[819/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBStructuredData.cpp.o
+[820/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBSymbol.cpp.o
+[821/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBSymbolContext.cpp.o
+[822/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBSymbolContextList.cpp.o
+[823/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBThreadCollection.cpp.o
+[824/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBThread.cpp.o
+[825/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBThreadPlan.cpp.o
+[826/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTrace.cpp.o
+[827/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTarget.cpp.o
+[828/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTraceOptions.cpp.o
+[829/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeEnumMember.cpp.o
+[830/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBType.cpp.o
+[831/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeCategory.cpp.o
+[832/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeFilter.cpp.o
+[833/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeFormat.cpp.o
+[834/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeNameSpecifier.cpp.o
+[835/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeSynthetic.cpp.o
+[836/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBTypeSummary.cpp.o
+[837/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBValueList.cpp.o
+[838/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBVariablesOptions.cpp.o
+[839/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBValue.cpp.o
+[840/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBWatchpoint.cpp.o
+[841/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SBUnixSignals.cpp.o
+[842/879] Building CXX object source/API/CMakeFiles/liblldb.dir/SystemInitializerFull.cpp.o
+[843/879] Linking CXX executable bin/lldb-argdumper
+[844/879] Building Options.inc...
+[845/879] Building CXX object tools/intel-features/CMakeFiles/lldbIntelFeatures.dir/cli-wrapper.cpp.o
+[846/879] Building CXX object tools/intel-features/intel-mpx/CMakeFiles/lldbIntelMPX.dir/cli-wrapper-mpxtable.cpp.o
+[847/879] Building CXX object source/API/CMakeFiles/liblldb.dir/__/__/bindings/LLDBWrapLua.cpp.o
+[848/879] Building CXX object source/API/CMakeFiles/liblldb.dir/__/__/bindings/LLDBWrapPython.cpp.o
+[849/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/lldb-vscode.cpp.o
+[850/879] Building CXX object tools/lldb-instr/CMakeFiles/lldb-instr.dir/Instrument.cpp.o
+[851/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/BreakpointBase.cpp.o
+[852/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/ExceptionBreakpoint.cpp.o
+[853/879] Linking CXX executable bin/lldb-instr
+[854/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/IOStream.cpp.o
+[855/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/FunctionBreakpoint.cpp.o
+[856/879] Linking CXX shared library lib/liblldb.so.10.0.1
+[857/879] Creating library symlink lib/liblldb.so.10 lib/liblldb.so
+[858/879] Python script sym-linking LLDB Python API
+[859/879] Running utility command for finish_swig
+[860/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/LLDBUtils.cpp.o
+[861/879] Building CXX object tools/driver/CMakeFiles/lldb.dir/Platform.cpp.o
+[862/879] Linking CXX static library lib/liblldbIntelMPX.a
+[863/879] Linking CXX shared library lib/liblldbIntelFeatures.so.10
+[864/879] Creating library symlink lib/liblldbIntelFeatures.so
+[865/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/JSONUtils.cpp.o
+[866/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/SourceBreakpoint.cpp.o
+[867/879] Building CXX object tools/driver/CMakeFiles/lldb.dir/Driver.cpp.o
+[868/879] Linking CXX executable bin/lldb
+[869/879] Building CXX object tools/lldb-vscode/CMakeFiles/lldb-vscode.dir/VSCode.cpp.o
+[870/879] Building CXX object tools/lldb-server/CMakeFiles/lldb-server.dir/Acceptor.cpp.o
+[871/879] Linking CXX executable bin/lldb-vscode
+[872/879] Building CXX object tools/lldb-server/CMakeFiles/lldb-server.dir/lldb-server.cpp.o
+[873/879] Building CXX object tools/lldb-server/CMakeFiles/lldb-server.dir/lldb-gdbserver.cpp.o
+[874/879] Building CXX object tools/lldb-server/CMakeFiles/lldb-server.dir/lldb-platform.cpp.o
+[875/879] Building CXX object tools/lldb-server/CMakeFiles/lldb-server.dir/LLDBServerUtilities.cpp.o
+[876/879] Building CXX object utils/lit-cpuid/CMakeFiles/lit-cpuid.dir/lit-cpuid.cpp.o
+[877/879] Building CXX object tools/lldb-server/CMakeFiles/lldb-server.dir/SystemInitializerLLGS.cpp.o
+[878/879] Linking CXX executable bin/lit-cpuid
+[879/879] Linking CXX executable bin/lldb-server
+FAILED: bin/lldb-server 
+: && /usr/bin/c++ -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -fPIC -fvisibility-inlines-hidden -Werror=date-time -w -fdiagnostics-color -ffunction-sections -fdata-sections -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-strict-aliasing -Wno-deprecated-register -Wno-vla-extension -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DNDEBUG -Wl,-rpath-link,/usr/ports/contrib/lldb/work/src/build/./lib  -Wl,-O3 -Wl,--gc-sections tools/lldb-server/CMakeFiles/lldb-server.dir/Acceptor.cpp.o tools/lldb-server/CMakeFiles/lldb-server.dir/lldb-gdbserver.cpp.o tools/lldb-server/CMakeFiles/lldb-server.dir/lldb-platform.cpp.o tools/lldb-server/CMakeFiles/lldb-server.dir/lldb-server.cpp.o tools/lldb-server/CMakeFiles/lldb-server.dir/LLDBServerUtilities.cpp.o tools/lldb-server/CMakeFiles/lldb-server.dir/SystemInitializerLLGS.cpp.o -o bin/lldb-server  -Wl,-rpath,"\$ORIGIN/../lib"  -lpthread  lib/liblldbBase.a  lib/liblldbHost.a  lib/liblldbInitialization.a  lib/liblldbPluginProcessLinux.a  lib/liblldbPluginObjectFileELF.a  lib/liblldbPluginInstructionARM.a  lib/liblldbPluginInstructionMIPS.a  lib/liblldbPluginInstructionMIPS64.a  lib/liblldbPluginProcessGDBRemote.a  lib/liblldbPluginPlatformMacOSX.a  lib/liblldbPluginPlatformPOSIX.a  lib/liblldbPluginProcessPOSIX.a  lib/liblldbCore.a  lib/liblldbSymbol.a  lib/liblldbTarget.a  lib/liblldbPluginProcessUtility.a  lib/liblldbInterpreter.a  lib/liblldbBreakpoint.a  lib/liblldbDataFormatters.a  lib/liblldbExpression.a  lib/liblldbPluginCPlusPlusLanguage.a  lib/liblldbPluginObjCLanguage.a  lib/liblldbPluginExpressionParserClang.a  lib/liblldbPluginSymbolFileDWARF.a  lib/liblldbPluginSymbolFilePDB.a  lib/liblldbPluginObjCRuntime.a  lib/liblldbCommands.a  lib/liblldbPluginObjectFileJIT.a  lib/liblldbPluginClangCommon.a  lib/liblldbPluginCPPRuntime.a  lib/liblldbPluginAppleObjCRuntime.a  lib/liblldbPluginSymbolFileNativePDB.a  lib/liblldbCore.a  lib/liblldbSymbol.a  lib/liblldbTarget.a  lib/liblldbPluginProcessUtility.a  lib/liblldbInterpreter.a  lib/liblldbBreakpoint.a  lib/liblldbDataFormatters.a  lib/liblldbExpression.a  lib/liblldbPluginCPlusPlusLanguage.a  lib/liblldbPluginObjCLanguage.a  lib/liblldbPluginExpressionParserClang.a  lib/liblldbPluginSymbolFileDWARF.a  lib/liblldbPluginSymbolFilePDB.a  lib/liblldbPluginObjCRuntime.a  lib/liblldbCommands.a  lib/liblldbPluginObjectFileJIT.a  lib/liblldbPluginClangCommon.a  lib/liblldbPluginCPPRuntime.a  lib/liblldbPluginAppleObjCRuntime.a  lib/liblldbPluginSymbolFileNativePDB.a  lib/liblldbCore.a  lib/liblldbSymbol.a  lib/liblldbTarget.a  lib/liblldbPluginProcessUtility.a  lib/liblldbInterpreter.a  lib/liblldbBreakpoint.a  lib/liblldbDataFormatters.a  lib/liblldbExpression.a  lib/liblldbPluginCPlusPlusLanguage.a  lib/liblldbPluginObjCLanguage.a  lib/liblldbPluginExpressionParserClang.a  lib/liblldbPluginSymbolFileDWARF.a  lib/liblldbPluginSymbolFilePDB.a  lib/liblldbPluginObjCRuntime.a  lib/liblldbCommands.a  lib/liblldbPluginObjectFileJIT.a  lib/liblldbPluginClangCommon.a  lib/liblldbPluginCPPRuntime.a  lib/liblldbPluginAppleObjCRuntime.a  lib/liblldbPluginSymbolFileNativePDB.a  lib/liblldbCore.a  lib/liblldbSymbol.a  lib/liblldbTarget.a  lib/liblldbPluginProcessUtility.a  lib/liblldbInterpreter.a  lib/liblldbBreakpoint.a  lib/liblldbDataFormatters.a  lib/liblldbExpression.a  lib/liblldbPluginCPlusPlusLanguage.a  lib/liblldbPluginObjCLanguage.a  lib/liblldbPluginExpressionParserClang.a  lib/liblldbPluginSymbolFileDWARF.a  lib/liblldbPluginSymbolFilePDB.a  lib/liblldbPluginObjCRuntime.a  lib/liblldbCommands.a  lib/liblldbPluginObjectFileJIT.a  lib/liblldbPluginClangCommon.a  lib/liblldbPluginCPPRuntime.a  lib/liblldbPluginAppleObjCRuntime.a  lib/liblldbPluginSymbolFileNativePDB.a  -lcurses  -lform  -lpanel  /usr/lib/libclangCodeGen.a  /usr/lib/libLLVMCoroutines.a  /usr/lib/libLLVMCoverage.a  /usr/lib/libLLVMLTO.a  /usr/lib/libLLVMExtensions.a  /usr/lib/libLLVMObjCARCOpts.a  /usr/lib/libLLVMPasses.a  /usr/lib/libLLVMipo.a  /usr/lib/libLLVMIRReader.a  /usr/lib/libLLVMAsmParser.a  /usr/lib/libLLVMLinker.a  /usr/lib/libLLVMInstrumentation.a  /usr/lib/libLLVMVectorize.a  /usr/lib/libLLVMCodeGen.a  /usr/lib/libLLVMBitWriter.a  /usr/lib/libLLVMScalarOpts.a  /usr/lib/libLLVMAggressiveInstCombine.a  /usr/lib/libLLVMInstCombine.a  /usr/lib/libLLVMTarget.a  /usr/lib/libclangRewriteFrontend.a  /usr/lib/libclangFrontend.a  /usr/lib/libclangDriver.a  /usr/lib/libLLVMOption.a  /usr/lib/libclangParse.a  /usr/lib/libclangRewrite.a  /usr/lib/libclangSerialization.a  /usr/lib/libclangSema.a  /usr/lib/libclangEdit.a  /usr/lib/libclangAnalysis.a  /usr/lib/libclangASTMatchers.a  lib/liblldbBase.a  lib/liblldbHost.a  /usr/lib/libedit.so  /usr/lib/liblzma.so  /usr/lib/libedit.so  /usr/lib/liblzma.so  lib/liblldbUtility.a  /usr/lib/libLLVM-10.so  /usr/lib/libxml2.so  -latomic  /usr/lib/libclangAST.a  /usr/lib/libLLVMFrontendOpenMP.a  /usr/lib/libLLVMTransformUtils.a  /usr/lib/libLLVMAnalysis.a  /usr/lib/libLLVMProfileData.a  /usr/lib/libLLVMObject.a  /usr/lib/libLLVMBitReader.a  /usr/lib/libLLVMMCParser.a  /usr/lib/libLLVMTextAPI.a  /usr/lib/libclangLex.a  /usr/lib/libclangBasic.a  /usr/lib/libLLVMCore.a  /usr/lib/libLLVMRemarks.a  /usr/lib/libLLVMBitstreamReader.a  /usr/lib/libLLVMMC.a  /usr/lib/libLLVMBinaryFormat.a  /usr/lib/libLLVMDebugInfoCodeView.a  /usr/lib/libLLVMDebugInfoMSF.a  /usr/lib/libLLVMSupport.a  -lz  -lrt  -ldl  -lcurses  -lpthread  -lm  /usr/lib/libLLVMDemangle.a && :
+/usr/bin/ld: lib/liblldbPluginProcessLinux.a(NativeThreadLinux.cpp.o): in function `lldb_private::process_linux::NativeThreadLinux::NativeThreadLinux(lldb_private::process_linux::NativeProcessLinux&, unsigned long long)':
+NativeThreadLinux.cpp:(.text._ZN12lldb_private13process_linux17NativeThreadLinuxC2ERNS0_18NativeProcessLinuxEy+0x80): undefined reference to `lldb_private::process_linux::NativeRegisterContextLinux::CreateHostNativeRegisterContextLinux(lldb_private::ArchSpec const&, lldb_private::NativeThreadProtocol&)'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+=======> ERROR: Building '/usr/ports/contrib/lldb/lldb#10.0.1-1.pkg.tar.xz' failed.

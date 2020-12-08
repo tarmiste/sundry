@@ -1,0 +1,10 @@
+prt-get: installing /usr/ports/contrib/gradm
+prt-get: starting build Fri Dec  4 15:46:47 2020
+=======> Downloading 'https://grsecurity.net/stable/gradm-3.1-201903191516.tar.gz'.
+--2020-12-04 15:46:47--  https://grsecurity.net/stable/gradm-3.1-201903191516.tar.gz
+Resolving grsecurity.net... 50.239.52.65
+Connecting to grsecurity.net|50.239.52.65|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2020-12-04 15:46:49 ERROR 404: Not Found.
+
+=======> ERROR: Downloading 'https://grsecurity.net/stable/gradm-3.1-201903191516.tar.gz' failed.

@@ -1,0 +1,89 @@
+prt-get: installing /usr/ports/contrib/python-ply
+prt-get: starting build Sun Dec  6 04:34:30 2020
+=======> Building '/usr/ports/contrib/python-ply/python-ply#3.11-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/python-ply/work/src -xf /sources/ply-3.11.tar.gz
++ build
++ cd ply-3.11
++ python setup.py build
+/usr/lib/python2.7/site-packages/pkg_resources/py2_warn.py:22: UserWarning: Setuptools will stop working on Python 2
+************************************************************
+You are running Setuptools on Python 2, which is no longer
+supported and
+>>> SETUPTOOLS WILL STOP WORKING <<<
+in a subsequent release (no sooner than 2020-04-20).
+Please ensure you are installing
+Setuptools using pip 9.x or later or pin to `setuptools<45`
+in your environment.
+If you have done those things and are still encountering
+this message, please comment in
+https://github.com/pypa/setuptools/issues/1458
+about the steps that led to this unsupported combination.
+************************************************************
+  sys.version_info < (3,) and warnings.warn(pre + "*" * 60 + msg + "*" * 60)
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/ply
+copying ply/cpp.py -> build/lib/ply
+copying ply/lex.py -> build/lib/ply
+copying ply/ygen.py -> build/lib/ply
+copying ply/ctokens.py -> build/lib/ply
+copying ply/__init__.py -> build/lib/ply
+copying ply/yacc.py -> build/lib/ply
++ python setup.py install --prefix=/usr --root=/usr/ports/contrib/python-ply/work/pkg --optimize=1
+/usr/lib/python2.7/site-packages/pkg_resources/py2_warn.py:22: UserWarning: Setuptools will stop working on Python 2
+************************************************************
+You are running Setuptools on Python 2, which is no longer
+supported and
+>>> SETUPTOOLS WILL STOP WORKING <<<
+in a subsequent release (no sooner than 2020-04-20).
+Please ensure you are installing
+Setuptools using pip 9.x or later or pin to `setuptools<45`
+in your environment.
+If you have done those things and are still encountering
+this message, please comment in
+https://github.com/pypa/setuptools/issues/1458
+about the steps that led to this unsupported combination.
+************************************************************
+  sys.version_info < (3,) and warnings.warn(pre + "*" * 60 + msg + "*" * 60)
+running install
+running build
+running build_py
+running install_lib
+creating /usr/ports/contrib/python-ply/work/pkg/usr
+creating /usr/ports/contrib/python-ply/work/pkg/usr/lib
+creating /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7
+creating /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages
+creating /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+copying build/lib/ply/cpp.py -> /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+copying build/lib/ply/lex.py -> /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+copying build/lib/ply/ygen.py -> /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+copying build/lib/ply/ctokens.py -> /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+copying build/lib/ply/__init__.py -> /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+copying build/lib/ply/yacc.py -> /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply
+byte-compiling /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply/cpp.py to cpp.pyc
+byte-compiling /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply/lex.py to lex.pyc
+byte-compiling /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply/ygen.py to ygen.pyc
+byte-compiling /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply/ctokens.py to ctokens.pyc
+byte-compiling /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply/__init__.py to __init__.pyc
+byte-compiling /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply/yacc.py to yacc.pyc
+writing byte-compilation script '/tmp/tmpgFDbtB.py'
+/usr/bin/python -O /tmp/tmpgFDbtB.py
+removing /tmp/tmpgFDbtB.py
+running install_egg_info
+running egg_info
+creating ply.egg-info
+writing ply.egg-info/PKG-INFO
+writing top-level names to ply.egg-info/top_level.txt
+writing dependency_links to ply.egg-info/dependency_links.txt
+writing manifest file 'ply.egg-info/SOURCES.txt'
+reading manifest file 'ply.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+writing manifest file 'ply.egg-info/SOURCES.txt'
+Copying ply.egg-info to /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ply-3.11-py2.7.egg-info
+running install_scripts
++ find /usr/ports/contrib/python-ply/work/pkg/usr/lib/python2.7/site-packages/ -maxdepth 1 -type f lists buffers-name 'ply-3.11-py*.egg-info' -delete
+find: paths must precede expression: `lists'
+=======> ERROR: Building '/usr/ports/contrib/python-ply/python-ply#3.11-1.pkg.tar.xz' failed.

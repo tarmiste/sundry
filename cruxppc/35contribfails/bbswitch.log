@@ -1,0 +1,11 @@
+prt-get: installing /usr/ports/contrib/bbswitch
+prt-get: starting build Fri Dec  4 02:10:07 2020
+=======> Building '/usr/ports/contrib/bbswitch/bbswitch#0.8-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/bbswitch/work/src -xf /sources/bbswitch-0.8.tar.gz
++ build
++ cd bbswitch-0.8
++ make
+make -C /lib/modules/4.19.160-cruxppc/build M="$(pwd)" modules
+make[1]: *** /lib/modules/4.19.160-cruxppc/build: No such file or directory.  Stop.
+make: *** [Makefile:13: default] Error 2
+=======> ERROR: Building '/usr/ports/contrib/bbswitch/bbswitch#0.8-1.pkg.tar.xz' failed.

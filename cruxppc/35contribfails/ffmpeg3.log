@@ -1,0 +1,2706 @@
+prt-get: installing /usr/ports/contrib/ffmpeg3
+prt-get: starting build Fri Dec  4 10:12:33 2020
+=======> Downloading 'https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2'.
+--2020-12-04 10:12:33--  https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2
+Resolving ffmpeg.org... 79.124.17.100
+Connecting to ffmpeg.org|79.124.17.100|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10179184 (9.7M) [application/x-bzip2]
+Saving to: '/sources/ffmpeg-3.4.2.tar.bz2.partial'
+
+     0K .......... .......... .......... .......... ..........  0%  133K 75s
+    50K .......... .......... .......... .......... ..........  1%  278K 55s
+   100K .......... .......... .......... .......... ..........  1% 3.98M 37s
+   150K .......... .......... .......... .......... ..........  2% 1.44M 29s
+   200K .......... .......... .......... .......... ..........  2%  354K 29s
+   250K .......... .......... .......... .......... ..........  3% 4.51M 24s
+   300K .......... .......... .......... .......... ..........  3% 5.14M 21s
+   350K .......... .......... .......... .......... ..........  4% 2.46M 19s
+   400K .......... .......... .......... .......... ..........  4%  371K 19s
+   450K .......... .......... .......... .......... ..........  5% 4.11M 18s
+   500K .......... .......... .......... .......... ..........  5% 4.30M 16s
+   550K .......... .......... .......... .......... ..........  6% 4.15M 15s
+   600K .......... .......... .......... .......... ..........  6% 3.89M 14s
+   650K .......... .......... .......... .......... ..........  7% 5.81M 13s
+   700K .......... .......... .......... .......... ..........  7% 4.21M 12s
+   750K .......... .......... .......... .......... ..........  8% 6.51M 11s
+   800K .......... .......... .......... .......... ..........  8% 5.90M 11s
+   850K .......... .......... .......... .......... ..........  9%  503K 11s
+   900K .......... .......... .......... .......... ..........  9% 7.99M 10s
+   950K .......... .......... .......... .......... .......... 10% 8.76M 10s
+  1000K .......... .......... .......... .......... .......... 10% 7.43M 9s
+  1050K .......... .......... .......... .......... .......... 11% 8.15M 9s
+  1100K .......... .......... .......... .......... .......... 11% 9.31M 9s
+  1150K .......... .......... .......... .......... .......... 12% 8.01M 8s
+  1200K .......... .......... .......... .......... .......... 12% 6.12M 8s
+  1250K .......... .......... .......... .......... .......... 13% 7.03M 8s
+  1300K .......... .......... .......... .......... .......... 13% 7.60M 7s
+  1350K .......... .......... .......... .......... .......... 14% 7.55M 7s
+  1400K .......... .......... .......... .......... .......... 14% 7.62M 7s
+  1450K .......... .......... .......... .......... .......... 15% 8.32M 7s
+  1500K .......... .......... .......... .......... .......... 15% 7.91M 6s
+  1550K .......... .......... .......... .......... .......... 16% 7.98M 6s
+  1600K .......... .......... .......... .......... .......... 16% 7.27M 6s
+  1650K .......... .......... .......... .......... .......... 17% 9.99M 6s
+  1700K .......... .......... .......... .......... .......... 17% 8.81M 6s
+  1750K .......... .......... .......... .......... .......... 18%  655K 6s
+  1800K .......... .......... .......... .......... .......... 18% 7.09M 6s
+  1850K .......... .......... .......... .......... .......... 19% 8.04M 5s
+  1900K .......... .......... .......... .......... .......... 19% 8.50M 5s
+  1950K .......... .......... .......... .......... .......... 20% 8.17M 5s
+  2000K .......... .......... .......... .......... .......... 20% 6.87M 5s
+  2050K .......... .......... .......... .......... .......... 21% 8.49M 5s
+  2100K .......... .......... .......... .......... .......... 21% 8.21M 5s
+  2150K .......... .......... .......... .......... .......... 22% 8.33M 5s
+  2200K .......... .......... .......... .......... .......... 22% 7.69M 5s
+  2250K .......... .......... .......... .......... .......... 23% 8.37M 4s
+  2300K .......... .......... .......... .......... .......... 23% 8.64M 4s
+  2350K .......... .......... .......... .......... .......... 24% 8.55M 4s
+  2400K .......... .......... .......... .......... .......... 24% 6.97M 4s
+  2450K .......... .......... .......... .......... .......... 25% 8.81M 4s
+  2500K .......... .......... .......... .......... .......... 25%  240K 5s
+  2550K .......... .......... .......... .......... .......... 26% 7.67M 4s
+  2600K .......... .......... .......... .......... .......... 26% 6.98M 4s
+  2650K .......... .......... .......... .......... .......... 27% 8.32M 4s
+  2700K .......... .......... .......... .......... .......... 27% 7.93M 4s
+  2750K .......... .......... .......... .......... .......... 28% 7.99M 4s
+  2800K .......... .......... .......... .......... .......... 28% 6.57M 4s
+  2850K .......... .......... .......... .......... .......... 29% 8.38M 4s
+  2900K .......... .......... .......... .......... .......... 29% 9.75M 4s
+  2950K .......... .......... .......... .......... .......... 30% 8.55M 4s
+  3000K .......... .......... .......... .......... .......... 30% 7.65M 4s
+  3050K .......... .......... .......... .......... .......... 31% 8.52M 4s
+  3100K .......... .......... .......... .......... .......... 31% 8.49M 4s
+  3150K .......... .......... .......... .......... .......... 32% 7.85M 3s
+  3200K .......... .......... .......... .......... .......... 32% 7.13M 3s
+  3250K .......... .......... .......... .......... .......... 33% 7.86M 3s
+  3300K .......... .......... .......... .......... .......... 33% 8.71M 3s
+  3350K .......... .......... .......... .......... .......... 34% 8.83M 3s
+  3400K .......... .......... .......... .......... .......... 34% 7.78M 3s
+  3450K .......... .......... .......... .......... .......... 35% 8.01M 3s
+  3500K .......... .......... .......... .......... .......... 35%  307K 3s
+  3550K .......... .......... .......... .......... .......... 36% 8.45M 3s
+  3600K .......... .......... .......... .......... .......... 36% 6.78M 3s
+  3650K .......... .......... .......... .......... .......... 37% 8.30M 3s
+  3700K .......... .......... .......... .......... .......... 37% 8.27M 3s
+  3750K .......... .......... .......... .......... .......... 38% 8.09M 3s
+  3800K .......... .......... .......... .......... .......... 38% 7.51M 3s
+  3850K .......... .......... .......... .......... .......... 39% 8.34M 3s
+  3900K .......... .......... .......... .......... .......... 39% 7.87M 3s
+  3950K .......... .......... .......... .......... .......... 40% 8.17M 3s
+  4000K .......... .......... .......... .......... .......... 40% 6.84M 3s
+  4050K .......... .......... .......... .......... .......... 41% 7.79M 3s
+  4100K .......... .......... .......... .......... .......... 41% 8.26M 3s
+  4150K .......... .......... .......... .......... .......... 42% 7.41M 3s
+  4200K .......... .......... .......... .......... .......... 42% 7.37M 3s
+  4250K .......... .......... .......... .......... .......... 43% 7.35M 3s
+  4300K .......... .......... .......... .......... .......... 43% 8.34M 3s
+  4350K .......... .......... .......... .......... .......... 44% 8.35M 2s
+  4400K .......... .......... .......... .......... .......... 44% 6.88M 2s
+  4450K .......... .......... .......... .......... .......... 45% 8.01M 2s
+  4500K .......... .......... .......... .......... .......... 45% 8.50M 2s
+  4550K .......... .......... .......... .......... .......... 46% 8.07M 2s
+  4600K .......... .......... .......... .......... .......... 46% 7.49M 2s
+  4650K .......... .......... .......... .......... .......... 47% 8.59M 2s
+  4700K .......... .......... .......... .......... .......... 47% 7.05M 2s
+  4750K .......... .......... .......... .......... .......... 48% 8.14M 2s
+  4800K .......... .......... .......... .......... .......... 48% 6.50M 2s
+  4850K .......... .......... .......... .......... .......... 49% 7.20M 2s
+  4900K .......... .......... .......... .......... .......... 49% 7.87M 2s
+  4950K .......... .......... .......... .......... .......... 50% 8.24M 2s
+  5000K .......... .......... .......... .......... .......... 50% 7.75M 2s
+  5050K .......... .......... .......... .......... .......... 51% 8.84M 2s
+  5100K .......... .......... .......... .......... .......... 51% 8.64M 2s
+  5150K .......... .......... .......... .......... .......... 52% 8.80M 2s
+  5200K .......... .......... .......... .......... .......... 52% 7.05M 2s
+  5250K .......... .......... .......... .......... .......... 53% 8.66M 2s
+  5300K .......... .......... .......... .......... .......... 53% 8.49M 2s
+  5350K .......... .......... .......... .......... .......... 54% 8.06M 2s
+  5400K .......... .......... .......... .......... .......... 54% 8.95M 2s
+  5450K .......... .......... .......... .......... .......... 55% 13.5M 2s
+  5500K .......... .......... .......... .......... .......... 55% 17.5M 2s
+  5550K .......... .......... .......... .......... .......... 56% 17.6M 2s
+  5600K .......... .......... .......... .......... .......... 56% 13.6M 2s
+  5650K .......... .......... .......... .......... .......... 57% 18.0M 2s
+  5700K .......... .......... .......... .......... .......... 57%  204K 2s
+  5750K .......... .......... .......... .......... .......... 58% 11.2M 2s
+  5800K .......... .......... .......... .......... .......... 58% 9.97M 2s
+  5850K .......... .......... .......... .......... .......... 59% 11.4M 2s
+  5900K .......... .......... .......... .......... .......... 59% 10.3M 2s
+  5950K .......... .......... .......... .......... .......... 60% 10.7M 2s
+  6000K .......... .......... .......... .......... .......... 60% 8.47M 2s
+  6050K .......... .......... .......... .......... .......... 61%  212K 2s
+  6100K .......... .......... .......... .......... .......... 61% 11.8M 2s
+  6150K .......... .......... .......... .......... .......... 62% 15.5M 2s
+  6200K .......... .......... .......... .......... .......... 62% 17.0M 2s
+  6250K .......... .......... .......... .......... .......... 63% 17.4M 2s
+  6300K .......... .......... .......... .......... .......... 63% 17.8M 1s
+  6350K .......... .......... .......... .......... .......... 64% 17.6M 1s
+  6400K .......... .......... .......... .......... .......... 64% 14.4M 1s
+  6450K .......... .......... .......... .......... .......... 65% 18.1M 1s
+  6500K .......... .......... .......... .......... .......... 65% 15.8M 1s
+  6550K .......... .......... .......... .......... .......... 66% 16.3M 1s
+  6600K .......... .......... .......... .......... .......... 66% 16.4M 1s
+  6650K .......... .......... .......... .......... .......... 67% 17.2M 1s
+  6700K .......... .......... .......... .......... .......... 67% 17.6M 1s
+  6750K .......... .......... .......... .......... .......... 68% 18.0M 1s
+  6800K .......... .......... .......... .......... .......... 68% 14.0M 1s
+  6850K .......... .......... .......... .......... .......... 69% 17.8M 1s
+  6900K .......... .......... .......... .......... .......... 69% 18.1M 1s
+  6950K .......... .......... .......... .......... .......... 70% 18.1M 1s
+  7000K .......... .......... .......... .......... .......... 70% 16.9M 1s
+  7050K .......... .......... .......... .......... .......... 71% 18.2M 1s
+  7100K .......... .......... .......... .......... .......... 71% 18.3M 1s
+  7150K .......... .......... .......... .......... .......... 72% 17.7M 1s
+  7200K .......... .......... .......... .......... .......... 72% 13.9M 1s
+  7250K .......... .......... .......... .......... .......... 73% 18.1M 1s
+  7300K .......... .......... .......... .......... .......... 73% 18.3M 1s
+  7350K .......... .......... .......... .......... .......... 74% 17.9M 1s
+  7400K .......... .......... .......... .......... .......... 74% 17.0M 1s
+  7450K .......... .......... .......... .......... .......... 75% 18.4M 1s
+  7500K .......... .......... .......... .......... .......... 75% 18.5M 1s
+  7550K .......... .......... .......... .......... .......... 76% 17.6M 1s
+  7600K .......... .......... .......... .......... .......... 76% 13.9M 1s
+  7650K .......... .......... .......... .......... .......... 77% 16.6M 1s
+  7700K .......... .......... .......... .......... .......... 77% 17.5M 1s
+  7750K .......... .......... .......... .......... .......... 78% 17.2M 1s
+  7800K .......... .......... .......... .......... .......... 78% 17.2M 1s
+  7850K .......... .......... .......... .......... .......... 79% 17.0M 1s
+  7900K .......... .......... .......... .......... .......... 79% 16.9M 1s
+  7950K .......... .......... .......... .......... .......... 80% 17.6M 1s
+  8000K .......... .......... .......... .......... .......... 80% 14.0M 1s
+  8050K .......... .......... .......... .......... .......... 81% 16.9M 1s
+  8100K .......... .......... .......... .......... .......... 81% 17.4M 1s
+  8150K .......... .......... .......... .......... .......... 82% 17.9M 1s
+  8200K .......... .......... .......... .......... .......... 82% 17.8M 1s
+  8250K .......... .......... .......... .......... .......... 83% 17.7M 1s
+  8300K .......... .......... .......... .......... .......... 83% 17.8M 1s
+  8350K .......... .......... .......... .......... .......... 84% 18.2M 1s
+  8400K .......... .......... .......... .......... .......... 85%  784K 0s
+  8450K .......... .......... .......... .......... .......... 85% 9.74M 0s
+  8500K .......... .......... .......... .......... .......... 86% 9.93M 0s
+  8550K .......... .......... .......... .......... .......... 86% 9.94M 0s
+  8600K .......... .......... .......... .......... .......... 87% 9.74M 0s
+  8650K .......... .......... .......... .......... .......... 87% 9.81M 0s
+  8700K .......... .......... .......... .......... .......... 88% 9.92M 0s
+  8750K .......... .......... .......... .......... .......... 88% 10.0M 0s
+  8800K .......... .......... .......... .......... .......... 89%  240K 0s
+  8850K .......... .......... .......... .......... .......... 89% 11.5M 0s
+  8900K .......... .......... .......... .......... .......... 90% 10.4M 0s
+  8950K .......... .......... .......... .......... .......... 90% 1.97M 0s
+  9000K .......... .......... .......... .......... .......... 91% 10.1M 0s
+  9050K .......... .......... .......... .......... .......... 91% 9.32M 0s
+  9100K .......... .......... .......... .......... .......... 92% 12.7M 0s
+  9150K .......... .......... .......... .......... .......... 92% 11.1M 0s
+  9200K .......... .......... .......... .......... .......... 93%  655K 0s
+  9250K .......... .......... .......... .......... .......... 93% 5.84M 0s
+  9300K .......... .......... .......... .......... .......... 94% 11.1M 0s
+  9350K .......... .......... .......... .......... .......... 94% 10.6M 0s
+  9400K .......... .......... .......... .......... .......... 95% 16.6M 0s
+  9450K .......... .......... .......... .......... .......... 95% 18.2M 0s
+  9500K .......... .......... .......... .......... .......... 96% 18.2M 0s
+  9550K .......... .......... .......... .......... .......... 96% 17.4M 0s
+  9600K .......... .......... .......... .......... .......... 97% 14.2M 0s
+  9650K .......... .......... .......... .......... .......... 97% 17.9M 0s
+  9700K .......... .......... .......... .......... .......... 98% 17.7M 0s
+  9750K .......... .......... .......... .......... .......... 98% 18.5M 0s
+  9800K .......... .......... .......... .......... .......... 99% 17.4M 0s
+  9850K .......... .......... .......... .......... .......... 99% 17.8M 0s
+  9900K .......... .......... .......... ..........           100% 18.1M=3.2s
+
+2020-12-04 10:12:37 (3.00 MB/s) - '/sources/ffmpeg-3.4.2.tar.bz2.partial' saved [10179184/10179184]
+
+=======> Building '/usr/ports/contrib/ffmpeg3/ffmpeg3#3.4.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/ffmpeg3/work/src -xf /sources/ffmpeg-3.4.2.tar.bz2
+cp CVE-2018-6621.patch /usr/ports/contrib/ffmpeg3/work/src
++ build
++ cd ffmpeg-3.4.2
++ patch -p1 -i /usr/ports/contrib/ffmpeg3/work/src/CVE-2018-6621.patch
+patching file libavcodec/utvideodec.c
+Hunk #1 succeeded at 587 (offset 26 lines).
++ '[' -e /usr/lib/pkgconfig/libwebp.pc ']'
++ PKGMK_FFMPEG+=' --enable-libwebp'
++ '[' -e /usr/lib/pkgconfig/vdpau.pc ']'
++ PKGMK_FFMPEG+=' --enable-vdpau'
++ '[' -e /usr/lib/pkgconfig/freetype2.pc ']'
++ PKGMK_FFMPEG+=' --enable-libfreetype'
++ '[' -e /usr/lib/pkgconfig/x264.pc ']'
++ PKGMK_FFMPEG+=' --enable-libx264'
++ '[' -e /usr/lib/pkgconfig/x265.pc ']'
++ PKGMK_FFMPEG+=' --enable-libx265'
++ '[' -e /usr/lib/pkgconfig/libass.pc ']'
++ PKGMK_FFMPEG+=' --enable-libass'
++ '[' -e /usr/include/lame/lame.h ']'
++ PKGMK_FFMPEG+=' --enable-libmp3lame'
++ '[' -e /usr/lib/pkgconfig/opus.pc ']'
++ PKGMK_FFMPEG+=' --enable-libopus'
++ '[' -e /usr/lib/pkgconfig/vpx.pc ']'
++ PKGMK_FFMPEG+=' --enable-libvpx'
++ '[' -e /usr/lib/pkgconfig/vorbis.pc ']'
++ PKGMK_FFMPEG+=' --enable-libvorbis'
++ '[' -e /usr/lib/pkgconfig/theora.pc ']'
++ PKGMK_FFMPEG+=' --enable-libtheora'
++ '[' -e /usr/lib/pkgconfig/fdk-aac.pc ']'
++ PKGMK_FFMPEG+=' --enable-libfdk-aac --enable-nonfree'
++ '[' -e /usr/lib/pkgconfig/gnutls.pc ']'
++ PKGMK_FFMPEG+=' --enable-gnutls'
++ ./configure --enable-libwebp --enable-vdpau --enable-libfreetype --enable-libx264 --enable-libx265 --enable-libass --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libvorbis --enable-libtheora --enable-libfdk-aac --enable-nonfree --enable-gnutls --prefix=/usr --incdir=/usr/include/ffmpeg3 --libdir=/usr/lib/ffmpeg3 --shlibdir=/usr/lib/ffmpeg3 --disable-debug --disable-doc --enable-gpl --enable-version3 --enable-shared --enable-pic --enable-avfilter --enable-avresample --enable-postproc --enable-pthreads --enable-swresample
+install prefix            /usr
+source path               .
+C compiler                gcc
+C library                 glibc
+ARCH                      ppc (generic)
+big-endian                yes
+runtime cpu detection     yes
+AltiVec enabled           yes
+VSX enabled               no
+POWER8 enabled            no
+PPC 4xx optimizations     no
+dcbzl available           yes
+debug symbols             no
+strip symbols             yes
+optimize for size         no
+optimizations             yes
+static                    yes
+shared                    yes
+postprocessing support    yes
+network support           yes
+threading support         pthreads
+safe bitstream reader     yes
+texi2html enabled         no
+perl enabled              yes
+pod2man enabled           yes
+makeinfo enabled          no
+makeinfo supports HTML    no
+
+External libraries:
+alsa			libmp3lame		libxcb
+bzlib			libopus			libxcb_shape
+gnutls			libtheora		libxcb_shm
+iconv			libvorbis		libxcb_xfixes
+jack			libvpx			lzma
+libass			libwebp			xlib
+libfdk_aac		libx264			zlib
+libfreetype		libx265
+
+External libraries providing hardware acceleration:
+v4l2_m2m		vdpau			xvmc
+vaapi
+
+Libraries:
+avcodec			avformat		postproc
+avdevice		avresample		swresample
+avfilter		avutil			swscale
+
+Programs:
+ffmpeg			ffprobe			ffserver
+
+Enabled decoders:
+aac			aura			evrc
+aac_fixed		aura2			exr
+aac_latm		avrn			ffv1
+aasc			avrp			ffvhuff
+ac3			avs			ffwavesynth
+ac3_fixed		avui			fic
+adpcm_4xm		ayuv			fits
+adpcm_adx		bethsoftvid		flac
+adpcm_afc		bfi			flashsv
+adpcm_aica		bink			flashsv2
+adpcm_ct		binkaudio_dct		flic
+adpcm_dtk		binkaudio_rdft		flv
+adpcm_ea		bintext			fmvc
+adpcm_ea_maxis_xa	bitpacked		fourxm
+adpcm_ea_r1		bmp			fraps
+adpcm_ea_r2		bmv_audio		frwu
+adpcm_ea_r3		bmv_video		g2m
+adpcm_ea_xas		brender_pix		g723_1
+adpcm_g722		c93			g729
+adpcm_g726		cavs			gdv
+adpcm_g726le		ccaption		gif
+adpcm_ima_amv		cdgraphics		gremlin_dpcm
+adpcm_ima_apc		cdxl			gsm
+adpcm_ima_dat4		cfhd			gsm_ms
+adpcm_ima_dk3		cinepak			h261
+adpcm_ima_dk4		clearvideo		h263
+adpcm_ima_ea_eacs	cljr			h263_v4l2m2m
+adpcm_ima_ea_sead	cllc			h263i
+adpcm_ima_iss		comfortnoise		h263p
+adpcm_ima_oki		cook			h264
+adpcm_ima_qt		cpia			h264_v4l2m2m
+adpcm_ima_rad		cscd			h264_vdpau
+adpcm_ima_smjpeg	cyuv			hap
+adpcm_ima_wav		dca			hevc
+adpcm_ima_ws		dds			hevc_v4l2m2m
+adpcm_ms		dfa			hnm4_video
+adpcm_mtaf		dirac			hq_hqa
+adpcm_psx		dnxhd			hqx
+adpcm_sbpro_2		dolby_e			huffyuv
+adpcm_sbpro_3		dpx			iac
+adpcm_sbpro_4		dsd_lsbf		idcin
+adpcm_swf		dsd_lsbf_planar		idf
+adpcm_thp		dsd_msbf		iff_ilbm
+adpcm_thp_le		dsd_msbf_planar		imc
+adpcm_vima		dsicinaudio		indeo2
+adpcm_xa		dsicinvideo		indeo3
+adpcm_yamaha		dss_sp			indeo4
+aic			dst			indeo5
+alac			dvaudio			interplay_acm
+alias_pix		dvbsub			interplay_dpcm
+als			dvdsub			interplay_video
+amrnb			dvvideo			jacosub
+amrwb			dxa			jpeg2000
+amv			dxtory			jpegls
+anm			dxv			jv
+ansi			eac3			kgv1
+ape			eacmv			kmvc
+apng			eamad			lagarith
+ass			eatgq			libfdk_aac
+asv1			eatgv			libopus
+asv2			eatqi			libvorbis
+atrac1			eightbps		libvpx_vp8
+atrac3			eightsvx_exp		libvpx_vp9
+atrac3al		eightsvx_fib		loco
+atrac3p			escape124		m101
+atrac3pal		escape130		mace3
+mace6			pcm_f64le		sdx2_dpcm
+magicyuv		pcm_lxf			sgi
+mdec			pcm_mulaw		sgirle
+metasound		pcm_s16be		sheervideo
+microdvd		pcm_s16be_planar	shorten
+mimic			pcm_s16le		sipr
+mjpeg			pcm_s16le_planar	smackaud
+mjpegb			pcm_s24be		smacker
+mlp			pcm_s24daud		smc
+mmvideo			pcm_s24le		smvjpeg
+motionpixels		pcm_s24le_planar	snow
+movtext			pcm_s32be		sol_dpcm
+mp1			pcm_s32le		sonic
+mp1float		pcm_s32le_planar	sp5x
+mp2			pcm_s64be		speedhq
+mp2float		pcm_s64le		srgc
+mp3			pcm_s8			srt
+mp3adu			pcm_s8_planar		ssa
+mp3adufloat		pcm_u16be		stl
+mp3float		pcm_u16le		subrip
+mp3on4			pcm_u24be		subviewer
+mp3on4float		pcm_u24le		subviewer1
+mpc7			pcm_u32be		sunrast
+mpc8			pcm_u32le		svq1
+mpeg1_v4l2m2m		pcm_u8			svq3
+mpeg1_vdpau		pcm_zork		tak
+mpeg1video		pcx			targa
+mpeg2_v4l2m2m		pgm			targa_y216
+mpeg2video		pgmyuv			tdsc
+mpeg4			pgssub			text
+mpeg4_v4l2m2m		pictor			theora
+mpeg4_vdpau		pixlet			thp
+mpeg_vdpau		pjs			tiertexseqvideo
+mpeg_xvmc		png			tiff
+mpegvideo		ppm			tmv
+mpl2			prores			truehd
+msa1			prores_lgpl		truemotion1
+mscc			psd			truemotion2
+msmpeg4v1		ptx			truemotion2rt
+msmpeg4v2		qcelp			truespeech
+msmpeg4v3		qdm2			tscc
+msrle			qdmc			tscc2
+mss1			qdraw			tta
+mss2			qpeg			twinvq
+msvideo1		qtrle			txd
+mszh			r10k			ulti
+mts2			r210			utvideo
+mvc1			ra_144			v210
+mvc2			ra_288			v210x
+mxpeg			ralf			v308
+nellymoser		rawvideo		v408
+nuv			realtext		v410
+on2avc			rl2			vb
+opus			roq			vble
+paf_audio		roq_dpcm		vc1
+paf_video		rpza			vc1_v4l2m2m
+pam			rscc			vc1_vdpau
+pbm			rv10			vc1image
+pcm_alaw		rv20			vcr1
+pcm_bluray		rv30			vmdaudio
+pcm_dvd			rv40			vmdvideo
+pcm_f16le		s302m			vmnc
+pcm_f24le		sami			vorbis
+pcm_f32be		sanm			vp3
+pcm_f32le		scpr			vp5
+pcm_f64be		screenpresso		vp6
+vp6a			wmav2			xface
+vp6f			wmavoice		xl
+vp7			wmv1			xma1
+vp8			wmv2			xma2
+vp8_v4l2m2m		wmv3			xpm
+vp9			wmv3_vdpau		xsub
+vp9_v4l2m2m		wmv3image		xwd
+vplayer			wnv1			y41p
+vqa			wrapped_avframe		ylc
+wavpack			ws_snd1			yop
+webp			xan_dpcm		yuv4
+webvtt			xan_wc3			zero12v
+wmalossless		xan_wc4			zerocodec
+wmapro			xbin			zlib
+wmav1			xbm			zmbv
+
+Enabled encoders:
+a64multi		libopus			pcx
+a64multi5		libtheora		pgm
+aac			libvorbis		pgmyuv
+ac3			libvpx_vp8		png
+ac3_fixed		libvpx_vp9		ppm
+adpcm_adx		libwebp			prores
+adpcm_g722		libwebp_anim		prores_aw
+adpcm_g726		libx264			prores_ks
+adpcm_g726le		libx264rgb		qtrle
+adpcm_ima_qt		libx265			r10k
+adpcm_ima_wav		ljpeg			r210
+adpcm_ms		mjpeg			ra_144
+adpcm_swf		mjpeg_vaapi		rawvideo
+adpcm_yamaha		mlp			roq
+alac			movtext			roq_dpcm
+alias_pix		mp2			rv10
+amv			mp2fixed		rv20
+apng			mpeg1video		s302m
+ass			mpeg2_vaapi		sgi
+asv1			mpeg2video		snow
+asv2			mpeg4			sonic
+avrp			mpeg4_v4l2m2m		sonic_ls
+avui			msmpeg4v2		srt
+ayuv			msmpeg4v3		ssa
+bmp			msvideo1		subrip
+cinepak			nellymoser		sunrast
+cljr			opus			svq1
+comfortnoise		pam			targa
+dca			pbm			text
+dnxhd			pcm_alaw		tiff
+dpx			pcm_f32be		truehd
+dvbsub			pcm_f32le		tta
+dvdsub			pcm_f64be		utvideo
+dvvideo			pcm_f64le		v210
+eac3			pcm_mulaw		v308
+ffv1			pcm_s16be		v408
+ffvhuff			pcm_s16be_planar	v410
+fits			pcm_s16le		vc2
+flac			pcm_s16le_planar	vorbis
+flashsv			pcm_s24be		vp8_v4l2m2m
+flashsv2		pcm_s24daud		vp8_vaapi
+flv			pcm_s24le		vp9_vaapi
+g723_1			pcm_s24le_planar	wavpack
+gif			pcm_s32be		webvtt
+h261			pcm_s32le		wmav1
+h263			pcm_s32le_planar	wmav2
+h263_v4l2m2m		pcm_s64be		wmv1
+h263p			pcm_s64le		wmv2
+h264_v4l2m2m		pcm_s8			wrapped_avframe
+h264_vaapi		pcm_s8_planar		xbm
+hevc_v4l2m2m		pcm_u16be		xface
+hevc_vaapi		pcm_u16le		xsub
+huffyuv			pcm_u24be		xwd
+jpeg2000		pcm_u24le		y41p
+jpegls			pcm_u32be		yuv4
+libfdk_aac		pcm_u32le		zlib
+libmp3lame		pcm_u8			zmbv
+
+Enabled hwaccels:
+h263_vaapi		mpeg1_xvmc		vc1_vaapi
+h264_vaapi		mpeg2_vaapi		vc1_vdpau
+h264_vdpau		mpeg2_vdpau		vp9_vaapi
+hevc_vaapi		mpeg2_xvmc		wmv3_vaapi
+hevc_vdpau		mpeg4_vaapi		wmv3_vdpau
+mpeg1_vdpau		mpeg4_vdpau
+
+Enabled parsers:
+aac			dvdsub			opus
+aac_latm		flac			png
+ac3			g729			pnm
+adx			gsm			rv30
+bmp			h261			rv40
+cavsvideo		h263			sipr
+cook			h264			tak
+dca			hevc			vc1
+dirac			mjpeg			vorbis
+dnxhd			mlp			vp3
+dpx			mpeg4video		vp8
+dvaudio			mpegaudio		vp9
+dvbsub			mpegvideo		xma
+dvd_nav
+
+Enabled demuxers:
+aa			flac			lrc
+aac			flic			lvf
+ac3			flv			lxf
+acm			fourxm			m4v
+act			frm			matroska
+adf			fsb			mgsts
+adp			g722			microdvd
+ads			g723_1			mjpeg
+adx			g726			mjpeg_2000
+aea			g726le			mlp
+afc			g729			mlv
+aiff			gdv			mm
+aix			genh			mmf
+amr			gif			mov
+anm			gsm			mp3
+apc			gxf			mpc
+ape			h261			mpc8
+apng			h263			mpegps
+aqtitle			h264			mpegts
+asf			hevc			mpegtsraw
+asf_o			hls			mpegvideo
+ass			hnm			mpjpeg
+ast			ico			mpl2
+au			idcin			mpsub
+avi			idf			msf
+avr			iff			msnwc_tcp
+avs			ilbc			mtaf
+bethsoftvid		image2			mtv
+bfi			image2_alias_pix	musx
+bfstm			image2_brender_pix	mv
+bink			image2pipe		mvi
+bintext			image_bmp_pipe		mxf
+bit			image_dds_pipe		mxg
+bmv			image_dpx_pipe		nc
+boa			image_exr_pipe		nistsphere
+brstm			image_j2k_pipe		nsv
+c93			image_jpeg_pipe		nut
+caf			image_jpegls_pipe	nuv
+cavsvideo		image_pam_pipe		ogg
+cdg			image_pbm_pipe		oma
+cdxl			image_pcx_pipe		paf
+cine			image_pgm_pipe		pcm_alaw
+concat			image_pgmyuv_pipe	pcm_f32be
+data			image_pictor_pipe	pcm_f32le
+daud			image_png_pipe		pcm_f64be
+dcstr			image_ppm_pipe		pcm_f64le
+dfa			image_psd_pipe		pcm_mulaw
+dirac			image_qdraw_pipe	pcm_s16be
+dnxhd			image_sgi_pipe		pcm_s16le
+dsf			image_sunrast_pipe	pcm_s24be
+dsicin			image_svg_pipe		pcm_s24le
+dss			image_tiff_pipe		pcm_s32be
+dts			image_webp_pipe		pcm_s32le
+dtshd			image_xpm_pipe		pcm_s8
+dv			ingenient		pcm_u16be
+dvbsub			ipmovie			pcm_u16le
+dvbtxt			ircam			pcm_u24be
+dxa			iss			pcm_u24le
+ea			iv8			pcm_u32be
+ea_cdata		ivf			pcm_u32le
+eac3			ivr			pcm_u8
+epaf			jacosub			pjs
+ffm			jv			pmp
+ffmetadata		live_flv		pva
+filmstrip		lmlm4			pvf
+fits			loas			qcp
+r3d			smush			vc1t
+rawvideo		sol			vivo
+realtext		sox			vmd
+redspark		spdif			vobsub
+rl2			srt			voc
+rm			stl			vpk
+roq			str			vplayer
+rpl			subviewer		vqf
+rsd			subviewer1		w64
+rso			sup			wav
+rtp			svag			wc3
+rtsp			swf			webm_dash_manifest
+s337m			tak			webvtt
+sami			tedcaptions		wsaud
+sap			thp			wsd
+sbg			threedostr		wsvqa
+scc			tiertexseq		wtv
+sdp			tmv			wv
+sdr2			truehd			wve
+sds			tta			xa
+sdx			tty			xbin
+segafilm		txd			xmv
+shorten			v210			xvag
+siff			v210x			xwma
+sln			vag			yop
+smacker			vc1			yuv4mpegpipe
+smjpeg
+
+Enabled muxers:
+a64			ilbc			pcm_s24le
+ac3			image2			pcm_s32be
+adts			image2pipe		pcm_s32le
+adx			ipod			pcm_s8
+aiff			ircam			pcm_u16be
+amr			ismv			pcm_u16le
+apng			ivf			pcm_u24be
+asf			jacosub			pcm_u24le
+asf_stream		latm			pcm_u32be
+ass			lrc			pcm_u32le
+ast			m4v			pcm_u8
+au			matroska		psp
+avi			matroska_audio		rawvideo
+avm2			md5			rm
+bit			microdvd		roq
+caf			mjpeg			rso
+cavsvideo		mkvtimestamp_v2		rtp
+crc			mlp			rtp_mpegts
+dash			mmf			rtsp
+data			mov			sap
+daud			mp2			scc
+dirac			mp3			segment
+dnxhd			mp4			singlejpeg
+dts			mpeg1system		smjpeg
+dv			mpeg1vcd		smoothstreaming
+eac3			mpeg1video		sox
+f4v			mpeg2dvd		spdif
+ffm			mpeg2svcd		spx
+ffmetadata		mpeg2video		srt
+fifo			mpeg2vob		stream_segment
+filmstrip		mpegts			sup
+fits			mpjpeg			swf
+flac			mxf			tee
+flv			mxf_d10			tg2
+framecrc		mxf_opatom		tgp
+framehash		null			truehd
+framemd5		nut			tta
+g722			oga			uncodedframecrc
+g723_1			ogg			vc1
+g726			ogv			vc1t
+g726le			oma			voc
+gif			opus			w64
+gsm			pcm_alaw		wav
+gxf			pcm_f32be		webm
+h261			pcm_f32le		webm_chunk
+h263			pcm_f64be		webm_dash_manifest
+h264			pcm_f64le		webp
+hash			pcm_mulaw		webvtt
+hds			pcm_s16be		wtv
+hevc			pcm_s16le		wv
+hls			pcm_s24be		yuv4mpegpipe
+ico
+
+Enabled protocols:
+async			httpproxy		rtmpts
+cache			https			rtp
+concat			icecast			srtp
+crypto			md5			subfile
+data			mmsh			tcp
+ffrtmphttp		mmst			tee
+file			pipe			tls_gnutls
+ftp			prompeg			udp
+gopher			rtmp			udplite
+hls			rtmps			unix
+http			rtmpt
+
+Enabled filters:
+abench			bitplanenoise		fieldmatch
+abitscope		blackdetect		fieldorder
+acompressor		blackframe		find_rect
+acopy			blend			firequalizer
+acrossfade		boxblur			flanger
+acrusher		bwdif			floodfill
+adelay			cellauto		format
+adrawgraph		channelmap		fps
+aecho			channelsplit		framepack
+aemphasis		chorus			framerate
+aeval			chromakey		framestep
+aevalsrc		ciescope		fspp
+afade			codecview		gblur
+afftfilt		color			geq
+afir			colorbalance		gradfun
+aformat			colorchannelmixer	haas
+agate			colorkey		haldclut
+ahistogram		colorlevels		haldclutsrc
+ainterleave		colormatrix		hdcd
+alimiter		colorspace		headphone
+allpass			compand			hflip
+allrgb			compensationdelay	highpass
+allyuv			concat			histeq
+aloop			convolution		histogram
+alphaextract		convolve		hqdn3d
+alphamerge		copy			hqx
+amerge			cover_rect		hstack
+ametadata		crop			hue
+amix			cropdetect		hwdownload
+amovie			crossfeed		hwmap
+anequalizer		crystalizer		hwupload
+anoisesrc		curves			hysteresis
+anull			datascope		idet
+anullsink		dcshift			il
+anullsrc		dctdnoiz		inflate
+apad			deband			interlace
+aperms			decimate		interleave
+aphasemeter		deflate			join
+aphaser			deflicker		kerndeint
+apulsator		deinterlace_vaapi	lenscorrection
+arealtime		dejudder		life
+aresample		delogo			limiter
+areverse		deshake			loop
+aselect			despill			loudnorm
+asendcmd		detelecine		lowpass
+asetnsamples		dilation		lumakey
+asetpts			displace		lut
+asetrate		doubleweave		lut2
+asettb			drawbox			lut3d
+ashowinfo		drawgraph		lutrgb
+asidedata		drawgrid		lutyuv
+asplit			drawtext		mandelbrot
+ass			dynaudnorm		maskedclamp
+astats			earwax			maskedmerge
+astreamselect		ebur128			mcdeint
+atadenoise		edgedetect		mergeplanes
+atempo			elbg			mestimate
+atrim			eq			metadata
+avectorscope		equalizer		midequalizer
+avgblur			erosion			minterpolate
+bandpass		extractplanes		movie
+bandreject		extrastereo		mpdecimate
+bass			fade			mptestsrc
+bbox			fftfilt			negate
+bench			field			nlmeans
+biquad			fieldhint		nnedi
+noformat		scale2ref		streamselect
+noise			scale_vaapi		subtitles
+null			select			super2xsai
+nullsink		selectivecolor		superequalizer
+nullsrc			sendcmd			surround
+oscilloscope		separatefields		swaprect
+overlay			setdar			swapuv
+owdenoise		setfield		tblend
+pad			setpts			telecine
+palettegen		setsar			testsrc
+paletteuse		settb			testsrc2
+pan			showcqt			threshold
+perms			showfreqs		thumbnail
+perspective		showinfo		tile
+phase			showpalette		tinterlace
+pixdesctest		showspectrum		tlut2
+pixscope		showspectrumpic		tonemap
+pp			showvolume		transpose
+pp7			showwaves		treble
+premultiply		showwavespic		tremolo
+prewitt			shuffleframes		trim
+pseudocolor		shuffleplanes		unpremultiply
+psnr			sidechaincompress	unsharp
+pullup			sidechaingate		uspp
+qp			sidedata		vaguedenoiser
+random			signalstats		vectorscope
+readeia608		signature		vflip
+readvitc		silencedetect		vibrato
+realtime		silenceremove		vignette
+remap			sine			vmafmotion
+removegrain		smartblur		volume
+removelogo		smptebars		volumedetect
+repeatfields		smptehdbars		vstack
+replaygain		sobel			w3fdif
+resample		spectrumsynth		waveform
+reverse			split			weave
+rgbtestsrc		spp			xbr
+roberts			ssim			yadif
+rotate			stereo3d		yuvtestsrc
+sab			stereotools		zoompan
+scale			stereowiden
+
+Enabled bsfs:
+aac_adtstoasc		imx_dump_header		null
+chomp			mjpeg2jpeg		remove_extradata
+dca_core		mjpega_dump_header	text2movsub
+dump_extradata		mov2textsub		vp9_raw_reorder
+extract_extradata	mp3_header_decompress	vp9_superframe
+h264_mp4toannexb	mpeg4_unpack_bframes	vp9_superframe_split
+hevc_mp4toannexb	noise
+
+Enabled indevs:
+alsa			lavfi			v4l2
+fbdev			oss			xcbgrab
+jack
+
+Enabled outdevs:
+alsa			oss			xv
+fbdev			v4l2
+
+License: nonfree and unredistributable
+Creating configuration files ...
++ make
+GEN	libavutil/libavutil.version
+GEN	libswscale/libswscale.version
+GEN	libswresample/libswresample.version
+GEN	libpostproc/libpostproc.version
+GEN	libavresample/libavresample.version
+GEN	libavcodec/libavcodec.version
+GEN	libavformat/libavformat.version
+GEN	libavfilter/libavfilter.version
+GEN	libavdevice/libavdevice.version
+CC	libavdevice/alldevices.o
+CC	libavdevice/alsa.o
+CC	libavdevice/alsa_dec.o
+CC	libavdevice/alsa_enc.o
+CC	libavdevice/avdevice.o
+CC	libavdevice/fbdev_common.o
+CC	libavdevice/fbdev_dec.o
+CC	libavdevice/fbdev_enc.o
+CC	libavdevice/jack.o
+libavdevice/jack.c: In function 'audio_read_header':
+libavdevice/jack.c:175:45: warning: 'snprintf' output may be truncated before the last format character [-Wformat-truncation=]
+         snprintf(str, sizeof(str), "input_%d", i + 1);
+                                             ^
+libavdevice/jack.c:175:9: note: 'snprintf' output between 8 and 17 bytes into a destination of size 16
+         snprintf(str, sizeof(str), "input_%d", i + 1);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavdevice/lavfi.o
+CC	libavdevice/oss.o
+CC	libavdevice/oss_dec.o
+CC	libavdevice/oss_enc.o
+CC	libavdevice/reverse.o
+CC	libavdevice/timefilter.o
+CC	libavdevice/utils.o
+CC	libavdevice/v4l2-common.o
+CC	libavdevice/v4l2.o
+CC	libavdevice/v4l2enc.o
+CC	libavdevice/xcbgrab.o
+CC	libavdevice/xv.o
+AR	libavdevice/libavdevice.a
+GEN	libavdevice/libavdevice.pc
+GEN	libavdevice/libavdevice.ver
+CC	libavfilter/aeval.o
+CC	libavfilter/af_acopy.o
+CC	libavfilter/af_acrusher.o
+CC	libavfilter/af_adelay.o
+CC	libavfilter/af_aecho.o
+CC	libavfilter/af_aemphasis.o
+CC	libavfilter/af_afade.o
+CC	libavfilter/af_afftfilt.o
+CC	libavfilter/af_afir.o
+CC	libavfilter/af_aformat.o
+CC	libavfilter/af_agate.o
+CC	libavfilter/af_alimiter.o
+CC	libavfilter/af_amerge.o
+CC	libavfilter/af_amix.o
+CC	libavfilter/af_anequalizer.o
+CC	libavfilter/af_anull.o
+CC	libavfilter/af_apad.o
+CC	libavfilter/af_aphaser.o
+CC	libavfilter/af_apulsator.o
+CC	libavfilter/af_aresample.o
+CC	libavfilter/af_asetnsamples.o
+CC	libavfilter/af_asetrate.o
+CC	libavfilter/af_ashowinfo.o
+CC	libavfilter/af_astats.o
+CC	libavfilter/af_atempo.o
+CC	libavfilter/af_biquads.o
+CC	libavfilter/af_channelmap.o
+CC	libavfilter/af_channelsplit.o
+CC	libavfilter/af_chorus.o
+CC	libavfilter/af_compand.o
+CC	libavfilter/af_compensationdelay.o
+CC	libavfilter/af_crossfeed.o
+CC	libavfilter/af_crystalizer.o
+CC	libavfilter/af_dcshift.o
+CC	libavfilter/af_dynaudnorm.o
+CC	libavfilter/af_earwax.o
+CC	libavfilter/af_extrastereo.o
+CC	libavfilter/af_firequalizer.o
+CC	libavfilter/af_flanger.o
+CC	libavfilter/af_haas.o
+CC	libavfilter/af_hdcd.o
+CC	libavfilter/af_headphone.o
+CC	libavfilter/af_join.o
+CC	libavfilter/af_loudnorm.o
+CC	libavfilter/af_pan.o
+CC	libavfilter/af_replaygain.o
+CC	libavfilter/af_resample.o
+CC	libavfilter/af_sidechaincompress.o
+CC	libavfilter/af_silencedetect.o
+CC	libavfilter/af_silenceremove.o
+CC	libavfilter/af_stereotools.o
+CC	libavfilter/af_stereowiden.o
+CC	libavfilter/af_superequalizer.o
+CC	libavfilter/af_surround.o
+CC	libavfilter/af_tremolo.o
+CC	libavfilter/af_vibrato.o
+CC	libavfilter/af_volume.o
+CC	libavfilter/af_volumedetect.o
+CC	libavfilter/allfilters.o
+CC	libavfilter/asink_anullsink.o
+CC	libavfilter/asrc_anoisesrc.o
+CC	libavfilter/asrc_anullsrc.o
+CC	libavfilter/asrc_sine.o
+CC	libavfilter/audio.o
+CC	libavfilter/avf_abitscope.o
+CC	libavfilter/avf_ahistogram.o
+CC	libavfilter/avf_aphasemeter.o
+CC	libavfilter/avf_avectorscope.o
+CC	libavfilter/avf_concat.o
+CC	libavfilter/avf_showcqt.o
+CC	libavfilter/avf_showfreqs.o
+CC	libavfilter/avf_showspectrum.o
+CC	libavfilter/avf_showvolume.o
+CC	libavfilter/avf_showwaves.o
+CC	libavfilter/avfilter.o
+CC	libavfilter/avfiltergraph.o
+libavfilter/avfiltergraph.c: In function 'avfilter_graph_free':
+libavfilter/avfiltergraph.c:132:5: warning: 'resample_lavr_opts' is deprecated [-Wdeprecated-declarations]
+     av_freep(&(*graph)->resample_lavr_opts);
+     ^~~~~~~~
+In file included from libavfilter/avfiltergraph.c:38:
+libavfilter/avfilter.h:862:32: note: declared here
+     attribute_deprecated char *resample_lavr_opts;   ///< libavresample options to use for the auto-inserted resample filters
+                                ^~~~~~~~~~~~~~~~~~
+CC	libavfilter/bbox.o
+CC	libavfilter/buffersink.o
+CC	libavfilter/buffersrc.o
+CC	libavfilter/colorspacedsp.o
+CC	libavfilter/drawutils.o
+CC	libavfilter/ebur128.o
+CC	libavfilter/f_bench.o
+CC	libavfilter/f_drawgraph.o
+CC	libavfilter/f_ebur128.o
+CC	libavfilter/f_interleave.o
+CC	libavfilter/f_loop.o
+CC	libavfilter/f_metadata.o
+CC	libavfilter/f_perms.o
+CC	libavfilter/f_realtime.o
+CC	libavfilter/f_reverse.o
+CC	libavfilter/f_select.o
+CC	libavfilter/f_sendcmd.o
+CC	libavfilter/f_sidedata.o
+CC	libavfilter/f_streamselect.o
+CC	libavfilter/fifo.o
+CC	libavfilter/formats.o
+CC	libavfilter/framepool.o
+CC	libavfilter/framequeue.o
+CC	libavfilter/framesync.o
+CC	libavfilter/generate_wave_table.o
+CC	libavfilter/graphdump.o
+CC	libavfilter/graphparser.o
+CC	libavfilter/lavfutils.o
+libavfilter/lavfutils.c: In function 'ff_load_image':
+libavfilter/lavfutils.c:93:5: warning: 'avcodec_decode_video2' is deprecated [-Wdeprecated-declarations]
+     ret = avcodec_decode_video2(codec_ctx, frame, &frame_decoded, &pkt);
+     ^~~
+In file included from ./libavformat/avformat.h:319,
+                 from libavfilter/lavfutils.h:27,
+                 from libavfilter/lavfutils.c:22:
+./libavcodec/avcodec.h:4993:5: note: declared here
+ int avcodec_decode_video2(AVCodecContext *avctx, AVFrame *picture,
+     ^~~~~~~~~~~~~~~~~~~~~
+CC	libavfilter/log2_tab.o
+CC	libavfilter/lswsutils.o
+CC	libavfilter/motion_estimation.o
+CC	libavfilter/opencl_allkernels.o
+CC	libavfilter/pthread.o
+CC	libavfilter/scale.o
+CC	libavfilter/setpts.o
+CC	libavfilter/settb.o
+CC	libavfilter/split.o
+CC	libavfilter/src_movie.o
+libavfilter/src_movie.c: In function 'open_stream':
+libavfilter/src_movie.c:175:5: warning: 'refcounted_frames' is deprecated [-Wdeprecated-declarations]
+     st->codec_ctx->refcounted_frames = 1;
+     ^~
+In file included from libavfilter/src_movie.c:41:
+./libavcodec/avcodec.h:2694:9: note: declared here
+     int refcounted_frames;
+         ^~~~~~~~~~~~~~~~~
+libavfilter/src_movie.c: In function 'movie_push_frame':
+libavfilter/src_movie.c:531:9: warning: 'avcodec_decode_video2' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_decode_video2(st->codec_ctx, frame, &got_frame, pkt);
+         ^~~
+In file included from libavfilter/src_movie.c:41:
+./libavcodec/avcodec.h:4993:5: note: declared here
+ int avcodec_decode_video2(AVCodecContext *avctx, AVFrame *picture,
+     ^~~~~~~~~~~~~~~~~~~~~
+libavfilter/src_movie.c:534:9: warning: 'avcodec_decode_audio4' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_decode_audio4(st->codec_ctx, frame, &got_frame, pkt);
+         ^~~
+In file included from libavfilter/src_movie.c:41:
+./libavcodec/avcodec.h:4944:5: note: declared here
+ int avcodec_decode_audio4(AVCodecContext *avctx, AVFrame *frame,
+     ^~~~~~~~~~~~~~~~~~~~~
+CC	libavfilter/transform.o
+CC	libavfilter/trim.o
+CC	libavfilter/vaf_spectrumsynth.o
+CC	libavfilter/vf_alphamerge.o
+CC	libavfilter/vf_aspect.o
+CC	libavfilter/vf_atadenoise.o
+CC	libavfilter/vf_avgblur.o
+CC	libavfilter/vf_bbox.o
+CC	libavfilter/vf_bitplanenoise.o
+CC	libavfilter/vf_blackdetect.o
+CC	libavfilter/vf_blackframe.o
+CC	libavfilter/vf_blend.o
+CC	libavfilter/vf_boxblur.o
+CC	libavfilter/vf_bwdif.o
+CC	libavfilter/vf_chromakey.o
+CC	libavfilter/vf_ciescope.o
+CC	libavfilter/vf_codecview.o
+CC	libavfilter/vf_colorbalance.o
+CC	libavfilter/vf_colorchannelmixer.o
+CC	libavfilter/vf_colorkey.o
+CC	libavfilter/vf_colorlevels.o
+CC	libavfilter/vf_colormatrix.o
+CC	libavfilter/vf_colorspace.o
+CC	libavfilter/vf_convolution.o
+CC	libavfilter/vf_convolve.o
+CC	libavfilter/vf_copy.o
+CC	libavfilter/vf_cover_rect.o
+CC	libavfilter/vf_crop.o
+CC	libavfilter/vf_cropdetect.o
+CC	libavfilter/vf_curves.o
+CC	libavfilter/vf_datascope.o
+CC	libavfilter/vf_dctdnoiz.o
+CC	libavfilter/vf_deband.o
+CC	libavfilter/vf_decimate.o
+CC	libavfilter/vf_deflicker.o
+CC	libavfilter/vf_deinterlace_vaapi.o
+CC	libavfilter/vf_dejudder.o
+CC	libavfilter/vf_delogo.o
+CC	libavfilter/vf_deshake.o
+CC	libavfilter/vf_despill.o
+CC	libavfilter/vf_detelecine.o
+CC	libavfilter/vf_displace.o
+CC	libavfilter/vf_drawbox.o
+CC	libavfilter/vf_drawtext.o
+CC	libavfilter/vf_edgedetect.o
+CC	libavfilter/vf_elbg.o
+CC	libavfilter/vf_eq.o
+CC	libavfilter/vf_extractplanes.o
+CC	libavfilter/vf_fade.o
+CC	libavfilter/vf_fftfilt.o
+CC	libavfilter/vf_field.o
+CC	libavfilter/vf_fieldhint.o
+CC	libavfilter/vf_fieldmatch.o
+CC	libavfilter/vf_fieldorder.o
+CC	libavfilter/vf_find_rect.o
+CC	libavfilter/vf_floodfill.o
+CC	libavfilter/vf_format.o
+CC	libavfilter/vf_fps.o
+CC	libavfilter/vf_framepack.o
+CC	libavfilter/vf_framerate.o
+CC	libavfilter/vf_framestep.o
+CC	libavfilter/vf_fspp.o
+CC	libavfilter/vf_gblur.o
+CC	libavfilter/vf_geq.o
+libavfilter/vf_geq.c: In function 'geq_init':
+libavfilter/vf_geq.c:143:51: warning: '%d' directive output may be truncated writing between 1 and 11 bytes into a region of size 8 [-Wformat-truncation=]
+         snprintf(bps_string, sizeof(bps_string), "%d", (1<<geq->bps) - 1);
+                                                   ^~
+libavfilter/vf_geq.c:143:50: note: directive argument in the range [-2147483648, 2147483646]
+         snprintf(bps_string, sizeof(bps_string), "%d", (1<<geq->bps) - 1);
+                                                  ^~~~
+libavfilter/vf_geq.c:143:9: note: 'snprintf' output between 2 and 12 bytes into a destination of size 8
+         snprintf(bps_string, sizeof(bps_string), "%d", (1<<geq->bps) - 1);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavfilter/vf_gradfun.o
+CC	libavfilter/vf_hflip.o
+CC	libavfilter/vf_histeq.o
+CC	libavfilter/vf_histogram.o
+CC	libavfilter/vf_hqdn3d.o
+CC	libavfilter/vf_hqx.o
+CC	libavfilter/vf_hue.o
+CC	libavfilter/vf_hwdownload.o
+CC	libavfilter/vf_hwmap.o
+CC	libavfilter/vf_hwupload.o
+CC	libavfilter/vf_hysteresis.o
+CC	libavfilter/vf_idet.o
+CC	libavfilter/vf_il.o
+CC	libavfilter/vf_interlace.o
+CC	libavfilter/vf_kerndeint.o
+CC	libavfilter/vf_lenscorrection.o
+CC	libavfilter/vf_limiter.o
+CC	libavfilter/vf_lumakey.o
+CC	libavfilter/vf_lut.o
+CC	libavfilter/vf_lut2.o
+CC	libavfilter/vf_lut3d.o
+CC	libavfilter/vf_maskedclamp.o
+CC	libavfilter/vf_maskedmerge.o
+CC	libavfilter/vf_mcdeint.o
+libavfilter/vf_mcdeint.c: In function 'filter_frame':
+libavfilter/vf_mcdeint.c:189:5: warning: 'avcodec_encode_video2' is deprecated [-Wdeprecated-declarations]
+     ret = avcodec_encode_video2(mcdeint->enc_ctx, &pkt, inpic, &got_frame);
+     ^~~
+In file included from libavfilter/vf_mcdeint.c:54:
+./libavcodec/avcodec.h:5508:5: note: declared here
+ int avcodec_encode_video2(AVCodecContext *avctx, AVPacket *avpkt,
+     ^~~~~~~~~~~~~~~~~~~~~
+libavfilter/vf_mcdeint.c:193:5: warning: 'coded_frame' is deprecated [-Wdeprecated-declarations]
+     frame_dec = mcdeint->enc_ctx->coded_frame;
+     ^~~~~~~~~
+In file included from libavfilter/vf_mcdeint.c:54:
+./libavcodec/avcodec.h:3183:35: note: declared here
+     attribute_deprecated AVFrame *coded_frame;
+                                   ^~~~~~~~~~~
+CC	libavfilter/vf_mergeplanes.o
+CC	libavfilter/vf_mestimate.o
+CC	libavfilter/vf_midequalizer.o
+CC	libavfilter/vf_minterpolate.o
+CC	libavfilter/vf_mpdecimate.o
+CC	libavfilter/vf_neighbor.o
+CC	libavfilter/vf_nlmeans.o
+CC	libavfilter/vf_nnedi.o
+CC	libavfilter/vf_noise.o
+CC	libavfilter/vf_null.o
+CC	libavfilter/vf_overlay.o
+CC	libavfilter/vf_owdenoise.o
+CC	libavfilter/vf_pad.o
+CC	libavfilter/vf_palettegen.o
+CC	libavfilter/vf_paletteuse.o
+CC	libavfilter/vf_perspective.o
+CC	libavfilter/vf_phase.o
+CC	libavfilter/vf_pixdesctest.o
+CC	libavfilter/vf_pp.o
+CC	libavfilter/vf_pp7.o
+CC	libavfilter/vf_premultiply.o
+CC	libavfilter/vf_pseudocolor.o
+CC	libavfilter/vf_psnr.o
+CC	libavfilter/vf_pullup.o
+CC	libavfilter/vf_qp.o
+CC	libavfilter/vf_random.o
+CC	libavfilter/vf_readeia608.o
+CC	libavfilter/vf_readvitc.o
+CC	libavfilter/vf_remap.o
+CC	libavfilter/vf_removegrain.o
+CC	libavfilter/vf_removelogo.o
+CC	libavfilter/vf_repeatfields.o
+CC	libavfilter/vf_rotate.o
+CC	libavfilter/vf_sab.o
+CC	libavfilter/vf_scale.o
+CC	libavfilter/vf_scale_vaapi.o
+CC	libavfilter/vf_selectivecolor.o
+CC	libavfilter/vf_separatefields.o
+CC	libavfilter/vf_setfield.o
+CC	libavfilter/vf_showinfo.o
+CC	libavfilter/vf_showpalette.o
+CC	libavfilter/vf_shuffleframes.o
+CC	libavfilter/vf_shuffleplanes.o
+CC	libavfilter/vf_signalstats.o
+CC	libavfilter/vf_signature.o
+CC	libavfilter/vf_smartblur.o
+CC	libavfilter/vf_spp.o
+CC	libavfilter/vf_ssim.o
+CC	libavfilter/vf_stack.o
+CC	libavfilter/vf_stereo3d.o
+CC	libavfilter/vf_subtitles.o
+libavfilter/vf_subtitles.c: In function 'config_input':
+libavfilter/vf_subtitles.c:149:9: warning: 'ass_set_aspect_ratio' is deprecated: use 'ass_set_pixel_aspect' instead [-Wdeprecated-declarations]
+         ass_set_aspect_ratio(ass->renderer, (double)inlink->w / inlink->h,
+         ^~~~~~~~~~~~~~~~~~~~
+In file included from libavfilter/vf_subtitles.c:30:
+/usr/include/ass/ass.h:421:59: note: declared here
+ ASS_DEPRECATED("use 'ass_set_pixel_aspect' instead") void ass_set_aspect_ratio(ASS_Renderer *priv, double dar, double sar);
+                                                           ^~~~~~~~~~~~~~~~~~~~
+CC	libavfilter/vf_super2xsai.o
+CC	libavfilter/vf_swaprect.o
+CC	libavfilter/vf_swapuv.o
+CC	libavfilter/vf_telecine.o
+CC	libavfilter/vf_threshold.o
+CC	libavfilter/vf_thumbnail.o
+CC	libavfilter/vf_tile.o
+CC	libavfilter/vf_tinterlace.o
+CC	libavfilter/vf_tonemap.o
+CC	libavfilter/vf_transpose.o
+CC	libavfilter/vf_unsharp.o
+CC	libavfilter/vf_uspp.o
+libavfilter/vf_uspp.c: In function 'filter':
+libavfilter/vf_uspp.c:253:9: warning: 'avcodec_encode_video2' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_encode_video2(p->avctx_enc[i], &pkt, p->frame, &got_pkt_ptr);
+         ^~~
+In file included from libavfilter/internal.h:35,
+                 from libavfilter/vf_uspp.c:34:
+./libavcodec/avcodec.h:5508:5: note: declared here
+ int avcodec_encode_video2(AVCodecContext *avctx, AVPacket *avpkt,
+     ^~~~~~~~~~~~~~~~~~~~~
+libavfilter/vf_uspp.c:259:9: warning: 'coded_frame' is deprecated [-Wdeprecated-declarations]
+         p->frame_dec = p->avctx_enc[i]->coded_frame;
+         ^
+In file included from libavfilter/internal.h:35,
+                 from libavfilter/vf_uspp.c:34:
+./libavcodec/avcodec.h:3183:35: note: declared here
+     attribute_deprecated AVFrame *coded_frame;
+                                   ^~~~~~~~~~~
+CC	libavfilter/vf_vaguedenoiser.o
+CC	libavfilter/vf_vectorscope.o
+CC	libavfilter/vf_vflip.o
+CC	libavfilter/vf_vignette.o
+CC	libavfilter/vf_vmafmotion.o
+CC	libavfilter/vf_w3fdif.o
+CC	libavfilter/vf_waveform.o
+CC	libavfilter/vf_weave.o
+CC	libavfilter/vf_xbr.o
+CC	libavfilter/vf_yadif.o
+CC	libavfilter/vf_zoompan.o
+CC	libavfilter/video.o
+CC	libavfilter/vsink_nullsink.o
+CC	libavfilter/vsrc_cellauto.o
+CC	libavfilter/vsrc_life.o
+CC	libavfilter/vsrc_mandelbrot.o
+CC	libavfilter/vsrc_mptestsrc.o
+CC	libavfilter/vsrc_testsrc.o
+GEN	libavfilter/libavfilter.ver
+CC	libavresample/audio_convert.o
+CC	libavresample/audio_data.o
+CC	libavresample/audio_mix.o
+CC	libavresample/audio_mix_matrix.o
+CC	libavresample/dither.o
+CC	libavresample/options.o
+CC	libavresample/resample.o
+CC	libavresample/utils.o
+GEN	libavresample/libavresample.ver
+CC	libavutil/adler32.o
+CC	libavutil/aes.o
+CC	libavutil/aes_ctr.o
+CC	libavutil/audio_fifo.o
+CC	libavutil/avstring.o
+CC	libavutil/base64.o
+CC	libavutil/blowfish.o
+CC	libavutil/bprint.o
+CC	libavutil/buffer.o
+CC	libavutil/camellia.o
+CC	libavutil/cast5.o
+CC	libavutil/channel_layout.o
+CC	libavutil/color_utils.o
+CC	libavutil/cpu.o
+CC	libavutil/crc.o
+CC	libavutil/des.o
+CC	libavutil/dict.o
+CC	libavutil/display.o
+CC	libavutil/downmix_info.o
+CC	libavutil/error.o
+CC	libavutil/eval.o
+CC	libavutil/fifo.o
+CC	libavutil/file.o
+CC	libavutil/file_open.o
+CC	libavutil/fixed_dsp.o
+CC	libavutil/float_dsp.o
+CC	libavutil/frame.o
+CC	libavutil/hash.o
+CC	libavutil/hmac.o
+CC	libavutil/hwcontext.o
+CC	libavutil/hwcontext_vaapi.o
+CC	libavutil/hwcontext_vdpau.o
+CC	libavutil/imgutils.o
+CC	libavutil/integer.o
+CC	libavutil/intmath.o
+CC	libavutil/lfg.o
+CC	libavutil/lls.o
+CC	libavutil/log.o
+CC	libavutil/log2_tab.o
+CC	libavutil/lzo.o
+CC	libavutil/mastering_display_metadata.o
+CC	libavutil/mathematics.o
+CC	libavutil/md5.o
+CC	libavutil/mem.o
+CC	libavutil/murmur3.o
+CC	libavutil/opt.o
+CC	libavutil/parseutils.o
+CC	libavutil/pixdesc.o
+CC	libavutil/pixelutils.o
+CC	libavutil/ppc/cpu.o
+CC	libavutil/ppc/float_dsp_altivec.o
+CC	libavutil/ppc/float_dsp_init.o
+CC	libavutil/random_seed.o
+CC	libavutil/rational.o
+CC	libavutil/rc4.o
+CC	libavutil/reverse.o
+CC	libavutil/ripemd.o
+CC	libavutil/samplefmt.o
+CC	libavutil/sha.o
+CC	libavutil/sha512.o
+CC	libavutil/slicethread.o
+CC	libavutil/spherical.o
+CC	libavutil/stereo3d.o
+CC	libavutil/tea.o
+CC	libavutil/threadmessage.o
+CC	libavutil/time.o
+CC	libavutil/timecode.o
+libavutil/timecode.c: In function 'av_timecode_make_string':
+libavutil/timecode.c:103:60: warning: '%02d' directive output may be truncated writing between 2 and 10 bytes into a region of size between 2 and 14 [-Wformat-truncation=]
+     snprintf(buf, AV_TIMECODE_STR_SIZE, "%s%02d:%02d:%02d%c%02d",
+                                                            ^~~~
+libavutil/timecode.c:103:41: note: directive argument in the range [0, 2147483647]
+     snprintf(buf, AV_TIMECODE_STR_SIZE, "%s%02d:%02d:%02d%c%02d",
+                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+libavutil/timecode.c:103:5: note: 'snprintf' output between 12 and 32 bytes into a destination of size 23
+     snprintf(buf, AV_TIMECODE_STR_SIZE, "%s%02d:%02d:%02d%c%02d",
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              neg ? "-" : "",
+              ~~~~~~~~~~~~~~~
+              hh, mm, ss, drop ? ';' : ':', ff);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavutil/tree.o
+CC	libavutil/twofish.o
+CC	libavutil/utils.o
+CC	libavutil/xga_font_data.o
+CC	libavutil/xtea.o
+GEN	libavutil/libavutil.ver
+LD	libavutil/libavutil.so.55
+LD	libavresample/libavresample.so.3
+CC	libswscale/alphablend.o
+CC	libswscale/gamma.o
+CC	libswscale/hscale.o
+CC	libswscale/hscale_fast_bilinear.o
+CC	libswscale/input.o
+CC	libswscale/log2_tab.o
+CC	libswscale/options.o
+CC	libswscale/output.o
+CC	libswscale/ppc/swscale_altivec.o
+libswscale/ppc/swscale_altivec.c: In function 'yuv2planeX_16_altivec':
+libswscale/ppc/swscale_altivec.c:109:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         yuv2planeX_8(vo1, vo2, l1, src[j], x,     perm, vLumFilter);
+         ^~~~~~~~~~~~
+libswscale/ppc/swscale_altivec.c:110:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         yuv2planeX_8(vo3, vo4, l1, src[j], x + 8, perm, vLumFilter);
+         ^~~~~~~~~~~~
+libswscale/ppc/swscale_altivec.c: In function 'hScale_altivec_real':
+libswscale/ppc/swscale_altivec.c:298:21: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+                     vector signed short src_vA = // vec_unpackh sign-extends...
+                     ^~~~~~
+libswscale/ppc/swscale_altivec.c:305:21: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+                     vector signed int val_acc = vec_msums(src_vA, filter_v0, val_v);
+                     ^~~~~~
+CC	libswscale/ppc/yuv2rgb_altivec.o
+CC	libswscale/ppc/yuv2yuv_altivec.o
+CC	libswscale/rgb2rgb.o
+CC	libswscale/slice.o
+CC	libswscale/swscale.o
+CC	libswscale/swscale_unscaled.o
+CC	libswscale/utils.o
+CC	libswscale/vscale.o
+CC	libswscale/yuv2rgb.o
+GEN	libswscale/libswscale.ver
+LD	libswscale/libswscale.so.4
+CC	libpostproc/postprocess.o
+In file included from libpostproc/postprocess.c:530:
+libpostproc/postprocess_template.c: In function 'postProcess_altivec':
+libpostproc/postprocess_template.c:3637:25: warning: array subscript -48 is below array bounds of 'unsigned char[272]' [-Warray-bounds]
+                     t = vertClassify_altivec(tempBlock-48, 16, &c);
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GEN	libpostproc/libpostproc.ver
+LD	libpostproc/libpostproc.so.54
+CC	libavformat/3dostr.o
+CC	libavformat/4xm.o
+CC	libavformat/a64.o
+CC	libavformat/aacdec.o
+CC	libavformat/aadec.o
+libavformat/aadec.c: In function 'aa_read_header':
+libavformat/aadec.c:109:13: warning: 'strncpy' output may be truncated copying 63 bytes from a string of length 127 [-Wstringop-truncation]
+             strncpy(codec_name, val, sizeof(codec_name) - 1);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/ac3dec.o
+CC	libavformat/acm.o
+CC	libavformat/act.o
+CC	libavformat/adp.o
+CC	libavformat/ads.o
+CC	libavformat/adtsenc.o
+CC	libavformat/adxdec.o
+CC	libavformat/aea.o
+CC	libavformat/afc.o
+CC	libavformat/aiffdec.o
+CC	libavformat/aiffenc.o
+CC	libavformat/aixdec.o
+CC	libavformat/allformats.o
+CC	libavformat/amr.o
+CC	libavformat/anm.o
+CC	libavformat/apc.o
+CC	libavformat/ape.o
+CC	libavformat/apetag.o
+CC	libavformat/apngdec.o
+CC	libavformat/apngenc.o
+CC	libavformat/aqtitledec.o
+CC	libavformat/asf.o
+CC	libavformat/asfcrypt.o
+CC	libavformat/asfdec_f.o
+CC	libavformat/asfdec_o.o
+CC	libavformat/asfenc.o
+CC	libavformat/assdec.o
+CC	libavformat/assenc.o
+CC	libavformat/ast.o
+CC	libavformat/astdec.o
+CC	libavformat/astenc.o
+CC	libavformat/async.o
+CC	libavformat/au.o
+CC	libavformat/audiointerleave.o
+CC	libavformat/avc.o
+CC	libavformat/avidec.o
+CC	libavformat/avienc.o
+CC	libavformat/avio.o
+CC	libavformat/aviobuf.o
+CC	libavformat/avlanguage.o
+CC	libavformat/avr.o
+CC	libavformat/avs.o
+CC	libavformat/bethsoftvid.o
+CC	libavformat/bfi.o
+CC	libavformat/bink.o
+CC	libavformat/bintext.o
+CC	libavformat/bit.o
+CC	libavformat/bmv.o
+CC	libavformat/boadec.o
+CC	libavformat/brstm.o
+CC	libavformat/c93.o
+CC	libavformat/cache.o
+CC	libavformat/caf.o
+CC	libavformat/cafdec.o
+CC	libavformat/cafenc.o
+CC	libavformat/cavsvideodec.o
+CC	libavformat/cdg.o
+CC	libavformat/cdxl.o
+CC	libavformat/cinedec.o
+CC	libavformat/concat.o
+CC	libavformat/concatdec.o
+CC	libavformat/crcenc.o
+CC	libavformat/crypto.o
+CC	libavformat/cutils.o
+CC	libavformat/dash.o
+CC	libavformat/dashenc.o
+libavformat/dashenc.c: In function 'dash_init':
+libavformat/dashenc.c:482:49: warning: 'snprintf' output may be truncated before the last format character [-Wformat-truncation=]
+             snprintf(as->id, sizeof(as->id), "%d", i);
+                                                 ^
+libavformat/dashenc.c:482:13: note: 'snprintf' output between 2 and 11 bytes into a destination of size 10
+             snprintf(as->id, sizeof(as->id), "%d", i);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/dashenc.c:772:65: warning: '-stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+                 snprintf(os->initfile, sizeof(os->initfile), "%s-stream%d.m4s", basename, i);
+                                                                 ^~~~~~~
+libavformat/dashenc.c:772:62: note: directive argument in the range [0, 2147483647]
+                 snprintf(os->initfile, sizeof(os->initfile), "%s-stream%d.m4s", basename, i);
+                                                              ^~~~~~~~~~~~~~~~~
+libavformat/dashenc.c:772:17: note: 'snprintf' output between 13 and 1045 bytes into a destination of size 1024
+                 snprintf(os->initfile, sizeof(os->initfile), "%s-stream%d.m4s", basename, i);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/dashenc.c:776:49: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(filename, sizeof(filename), "%s%s", c->dirname, os->initfile);
+                                                 ^~
+libavformat/dashenc.c:776:9: note: 'snprintf' output between 1 and 2047 bytes into a destination of size 1024
+         snprintf(filename, sizeof(filename), "%s%s", c->dirname, os->initfile);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/dashenc.c: In function 'dash_flush':
+libavformat/dashenc.c:988:55: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+             snprintf(full_path, sizeof(full_path), "%s%s", c->dirname, os->initfile);
+                                                       ^~
+libavformat/dashenc.c:988:13: note: 'snprintf' output between 1 and 2047 bytes into a destination of size 1024
+             snprintf(full_path, sizeof(full_path), "%s%s", c->dirname, os->initfile);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/dashenc.c:980:55: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+             snprintf(full_path, sizeof(full_path), "%s%s", c->dirname, filename);
+                                                       ^~               ~~~~~~~~
+libavformat/dashenc.c:980:13: note: 'snprintf' output between 1 and 2047 bytes into a destination of size 1024
+             snprintf(full_path, sizeof(full_path), "%s%s", c->dirname, filename);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/dashenc.c:1033:61: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+                     snprintf(filename, sizeof(filename), "%s%s", c->dirname, os->segments[j]->file);
+                                                             ^~
+libavformat/dashenc.c:1033:21: note: 'snprintf' output between 1 and 2047 bytes into a destination of size 1024
+                     snprintf(filename, sizeof(filename), "%s%s", c->dirname, os->segments[j]->file);
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/dashenc.c: In function 'dash_write_trailer':
+libavformat/dashenc.c:1146:53: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+             snprintf(filename, sizeof(filename), "%s%s", c->dirname, os->initfile);
+                                                     ^~
+libavformat/dashenc.c:1146:13: note: 'snprintf' output between 1 and 2047 bytes into a destination of size 1024
+             snprintf(filename, sizeof(filename), "%s%s", c->dirname, os->initfile);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/data_uri.o
+CC	libavformat/dauddec.o
+CC	libavformat/daudenc.o
+CC	libavformat/dcstr.o
+CC	libavformat/dfa.o
+CC	libavformat/diracdec.o
+CC	libavformat/dnxhddec.o
+CC	libavformat/dsfdec.o
+CC	libavformat/dsicin.o
+CC	libavformat/dss.o
+CC	libavformat/dtsdec.o
+CC	libavformat/dtshddec.o
+CC	libavformat/dump.o
+libavformat/dump.c: In function 'dump_stream_format':
+libavformat/dump.c:473:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     avctx->properties = st->codec->properties;
+     ^~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:474:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     avctx->codec      = st->codec->codec;
+     ^~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:475:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     avctx->qmin       = st->codec->qmin;
+     ^~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:476:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     avctx->qmax       = st->codec->qmax;
+     ^~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:477:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     avctx->coded_width  = st->codec->coded_width;
+     ^~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:478:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     avctx->coded_height = st->codec->coded_height;
+     ^~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:513:9: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+         int tbc = st->codec->time_base.den && st->codec->time_base.num;
+         ^~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:513:9: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+         int tbc = st->codec->time_base.den && st->codec->time_base.num;
+         ^~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/dump.c:525:13: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+             print_fps(1 / av_q2d(st->codec->time_base), "tbc");
+             ^~~~~~~~~
+In file included from libavformat/dump.c:37:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+CC	libavformat/dv.o
+CC	libavformat/dvbsub.o
+CC	libavformat/dvbtxt.o
+CC	libavformat/dvenc.o
+CC	libavformat/dxa.o
+CC	libavformat/eacdata.o
+CC	libavformat/electronicarts.o
+CC	libavformat/epafdec.o
+CC	libavformat/ffmdec.o
+CC	libavformat/ffmenc.o
+CC	libavformat/ffmetadec.o
+CC	libavformat/ffmetaenc.o
+CC	libavformat/fifo.o
+CC	libavformat/file.o
+CC	libavformat/filmstripdec.o
+CC	libavformat/filmstripenc.o
+CC	libavformat/fitsdec.o
+CC	libavformat/fitsenc.o
+CC	libavformat/flac_picture.o
+CC	libavformat/flacdec.o
+CC	libavformat/flacenc.o
+CC	libavformat/flacenc_header.o
+CC	libavformat/flic.o
+CC	libavformat/flvdec.o
+CC	libavformat/flvenc.o
+CC	libavformat/format.o
+CC	libavformat/framecrcenc.o
+CC	libavformat/framehash.o
+CC	libavformat/frmdec.o
+CC	libavformat/fsb.o
+CC	libavformat/ftp.o
+libavformat/ftp.c: In function 'ftp_move':
+libavformat/ftp.c:1098:46: warning: '%s' directive output may be truncated writing up to 4095 bytes into a region of size 4091 [-Wformat-truncation=]
+     snprintf(command, sizeof(command), "RNTO %s\r\n", path);
+                                              ^~       ~~~~
+libavformat/ftp.c:1098:5: note: 'snprintf' output between 8 and 4103 bytes into a destination of size 4096
+     snprintf(command, sizeof(command), "RNTO %s\r\n", path);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/g722.o
+CC	libavformat/g723_1.o
+CC	libavformat/g726.o
+CC	libavformat/g729dec.o
+CC	libavformat/gdv.o
+CC	libavformat/genh.o
+CC	libavformat/gif.o
+CC	libavformat/gifdec.o
+CC	libavformat/golomb_tab.o
+CC	libavformat/gopher.o
+CC	libavformat/gsmdec.o
+CC	libavformat/gxf.o
+CC	libavformat/gxfenc.o
+CC	libavformat/h261dec.o
+CC	libavformat/h263dec.o
+CC	libavformat/h264dec.o
+CC	libavformat/hashenc.o
+CC	libavformat/hdsenc.o
+libavformat/hdsenc.c: In function 'write_manifest':
+libavformat/hdsenc.c:172:45: warning: '/index.f4m' directive output may be truncated writing 10 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+     snprintf(filename, sizeof(filename), "%s/index.f4m", s->filename);
+                                             ^~~~~~~~~~
+libavformat/hdsenc.c:172:5: note: 'snprintf' output between 11 and 1034 bytes into a destination of size 1024
+     snprintf(filename, sizeof(filename), "%s/index.f4m", s->filename);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c:173:55: warning: '/index.f4m.tmp' directive output may be truncated writing 14 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+     snprintf(temp_filename, sizeof(temp_filename), "%s/index.f4m.tmp", s->filename);
+                                                       ^~~~~~~~~~~~~~
+libavformat/hdsenc.c:173:5: note: 'snprintf' output between 15 and 1038 bytes into a destination of size 1024
+     snprintf(temp_filename, sizeof(temp_filename), "%s/index.f4m.tmp", s->filename);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c: In function 'write_abst':
+libavformat/hdsenc.c:239:17: warning: '/stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+              "%s/stream%d.abst", s->filename, index);
+                 ^~~~~~~
+libavformat/hdsenc.c:238:5: note: 'snprintf' output between 14 and 1047 bytes into a destination of size 1024
+     snprintf(filename, sizeof(filename),
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              "%s/stream%d.abst", s->filename, index);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c:241:17: warning: '/stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+              "%s/stream%d.abst.tmp", s->filename, index);
+                 ^~~~~~~
+libavformat/hdsenc.c:240:5: note: 'snprintf' output between 18 and 1051 bytes into a destination of size 1024
+     snprintf(temp_filename, sizeof(temp_filename),
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              "%s/stream%d.abst.tmp", s->filename, index);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c: In function 'hds_flush':
+libavformat/hdsenc.c:479:17: warning: '/stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+              "%s/stream%dSeg1-Frag%d", s->filename, index, os->fragment_index);
+                 ^~~~~~~
+libavformat/hdsenc.c:478:5: note: 'snprintf' output between 19 and 1062 bytes into a destination of size 1024
+     snprintf(target_filename, sizeof(target_filename),
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              "%s/stream%dSeg1-Frag%d", s->filename, index, os->fragment_index);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c: In function 'hds_write_header':
+libavformat/hdsenc.c:415:21: warning: '/stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+                  "%s/stream%d_temp", s->filename, i);
+                     ^~~~~~~
+libavformat/hdsenc.c:415:18: note: directive argument in the range [0, 2147483647]
+                  "%s/stream%d_temp", s->filename, i);
+                  ^~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c:414:9: note: 'snprintf' output between 14 and 1046 bytes into a destination of size 1024
+         snprintf(os->temp_filename, sizeof(os->temp_filename),
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  "%s/stream%d_temp", s->filename, i);
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c: In function 'hds_write_trailer':
+libavformat/hdsenc.c:479:17: warning: '/stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+              "%s/stream%dSeg1-Frag%d", s->filename, index, os->fragment_index);
+                 ^~~~~~~
+libavformat/hdsenc.c:478:5: note: 'snprintf' output between 19 and 1062 bytes into a destination of size 1024
+     snprintf(target_filename, sizeof(target_filename),
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              "%s/stream%dSeg1-Frag%d", s->filename, index, os->fragment_index);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c:552:49: warning: '/index.f4m' directive output may be truncated writing 10 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(filename, sizeof(filename), "%s/index.f4m", s->filename);
+                                                 ^~~~~~~~~~
+libavformat/hdsenc.c:552:9: note: 'snprintf' output between 11 and 1034 bytes into a destination of size 1024
+         snprintf(filename, sizeof(filename), "%s/index.f4m", s->filename);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c:555:53: warning: '/stream' directive output may be truncated writing 7 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+             snprintf(filename, sizeof(filename), "%s/stream%d.abst", s->filename, i);
+                                                     ^~~~~~~
+libavformat/hdsenc.c:555:50: note: directive argument in the range [0, 2147483647]
+             snprintf(filename, sizeof(filename), "%s/stream%d.abst", s->filename, i);
+                                                  ^~~~~~~~~~~~~~~~~~
+libavformat/hdsenc.c:555:13: note: 'snprintf' output between 14 and 1046 bytes into a destination of size 1024
+             snprintf(filename, sizeof(filename), "%s/stream%d.abst", s->filename, i);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/hevc.o
+CC	libavformat/hevcdec.o
+CC	libavformat/hls.o
+In function 'new_rendition',
+    inlined from 'parse_playlist' at libavformat/hls.c:751:13:
+libavformat/hls.c:515:13: warning: 'strncpy' output may be truncated copying between 2 and 62 bytes from a string of length 63 [-Wstringop-truncation]
+             strncpy(rend->language + langlen + 1, info->assoc_language,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     sizeof(rend->language) - langlen - 2);
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/hlsenc.o
+CC	libavformat/hlsproto.o
+CC	libavformat/hnm.o
+CC	libavformat/http.o
+CC	libavformat/httpauth.o
+CC	libavformat/icecast.o
+CC	libavformat/icodec.o
+CC	libavformat/icoenc.o
+CC	libavformat/id3v1.o
+CC	libavformat/id3v2.o
+CC	libavformat/id3v2enc.o
+CC	libavformat/idcin.o
+CC	libavformat/idroqdec.o
+CC	libavformat/idroqenc.o
+CC	libavformat/iff.o
+CC	libavformat/ilbc.o
+CC	libavformat/img2.o
+CC	libavformat/img2_alias_pix.o
+CC	libavformat/img2_brender_pix.o
+CC	libavformat/img2dec.o
+CC	libavformat/img2enc.o
+libavformat/img2enc.c: In function 'write_packet':
+libavformat/img2enc.c:112:59: warning: '.tmp' directive output may be truncated writing 4 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+             snprintf(img->tmp[i], sizeof(img->tmp[i]), "%s.tmp", filename);
+                                                           ^~~~
+libavformat/img2enc.c:112:13: note: 'snprintf' output between 5 and 1028 bytes into a destination of size 1024
+             snprintf(img->tmp[i], sizeof(img->tmp[i]), "%s.tmp", filename);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/ingenientdec.o
+CC	libavformat/ipmovie.o
+CC	libavformat/ircam.o
+CC	libavformat/ircamdec.o
+CC	libavformat/ircamenc.o
+CC	libavformat/isom.o
+CC	libavformat/iss.o
+CC	libavformat/iv8.o
+CC	libavformat/ivfdec.o
+CC	libavformat/ivfenc.o
+CC	libavformat/jacosubdec.o
+CC	libavformat/jacosubenc.o
+CC	libavformat/jvdec.o
+CC	libavformat/latmenc.o
+CC	libavformat/lmlm4.o
+CC	libavformat/loasdec.o
+CC	libavformat/log2_tab.o
+CC	libavformat/lrc.o
+CC	libavformat/lrcdec.o
+CC	libavformat/lrcenc.o
+CC	libavformat/lvfdec.o
+CC	libavformat/lxfdec.o
+CC	libavformat/m4vdec.o
+CC	libavformat/matroska.o
+CC	libavformat/matroskadec.o
+libavformat/matroskadec.c: In function 'webm_dash_manifest_cues':
+libavformat/matroskadec.c:3909:13: warning: 'strncat' specified bound 1 equals source length [-Wstringop-overflow=]
+             strncat(buf, ",", sizeof(char));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/matroskaenc.o
+libavformat/matroskaenc.c: In function 'mkv_write_trailer':
+libavformat/matroskaenc.c:2616:62: warning: '%012.9f' directive output may be truncated writing between 12 and 320 bytes into a region of size between 8 and 14 [-Wformat-truncation=]
+                     snprintf(duration_string, 20, "%02d:%02d:%012.9f",
+                                                              ^~~~~~~
+libavformat/matroskaenc.c:2616:21: note: 'snprintf' output between 19 and 333 bytes into a destination of size 20
+                     snprintf(duration_string, 20, "%02d:%02d:%012.9f",
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              (int) duration_sec / 3600, ((int) duration_sec / 60) % 60,
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              fmod(duration_sec, 60));
+                              ~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/md5proto.o
+CC	libavformat/metadata.o
+CC	libavformat/mgsts.o
+CC	libavformat/microdvddec.o
+CC	libavformat/microdvdenc.o
+CC	libavformat/mj2kdec.o
+CC	libavformat/mkvtimestamp_v2.o
+CC	libavformat/mlpdec.o
+CC	libavformat/mlvdec.o
+libavformat/mlvdec.c: In function 'read_header':
+libavformat/mlvdec.c:353:63: warning: 'snprintf' output may be truncated before the last format character [-Wformat-truncation=]
+             snprintf(filename + strlen(filename) - 2, 3, "%02d", i);
+                                                               ^
+libavformat/mlvdec.c:353:13: note: 'snprintf' output between 3 and 4 bytes into a destination of size 3
+             snprintf(filename + strlen(filename) - 2, 3, "%02d", i);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/mm.o
+CC	libavformat/mmf.o
+CC	libavformat/mms.o
+CC	libavformat/mmsh.o
+CC	libavformat/mmst.o
+CC	libavformat/mov.o
+CC	libavformat/mov_chan.o
+CC	libavformat/movenc.o
+libavformat/movenc.c: In function 'handle_eac3':
+libavformat/movenc.c:453:9: warning: 'av_copy_packet_side_data' is deprecated [-Wdeprecated-declarations]
+         if ((ret = av_copy_packet_side_data(&info->pkt, pkt)) < 0)
+         ^~
+In file included from libavformat/avformat.h:319,
+                 from libavformat/movenc.h:27,
+                 from libavformat/movenc.c:27:
+./libavcodec/avcodec.h:4640:5: note: declared here
+ int av_copy_packet_side_data(AVPacket *dst, const AVPacket *src);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/movenccenc.o
+CC	libavformat/movenchint.o
+CC	libavformat/mp3dec.o
+CC	libavformat/mp3enc.o
+CC	libavformat/mpc.o
+CC	libavformat/mpc8.o
+CC	libavformat/mpeg.o
+CC	libavformat/mpegenc.o
+CC	libavformat/mpegts.o
+CC	libavformat/mpegtsenc.o
+CC	libavformat/mpegvideodec.o
+CC	libavformat/mpjpeg.o
+CC	libavformat/mpjpegdec.o
+CC	libavformat/mpl2dec.o
+CC	libavformat/mpsubdec.o
+CC	libavformat/msf.o
+CC	libavformat/msnwc_tcp.o
+CC	libavformat/mtaf.o
+CC	libavformat/mtv.o
+CC	libavformat/musx.o
+CC	libavformat/mux.o
+CC	libavformat/mvdec.o
+CC	libavformat/mvi.o
+CC	libavformat/mxf.o
+CC	libavformat/mxfdec.o
+CC	libavformat/mxfenc.o
+CC	libavformat/mxg.o
+CC	libavformat/ncdec.o
+CC	libavformat/network.o
+CC	libavformat/nistspheredec.o
+CC	libavformat/nsvdec.o
+CC	libavformat/nullenc.o
+CC	libavformat/nut.o
+CC	libavformat/nutdec.o
+CC	libavformat/nutenc.o
+CC	libavformat/nuv.o
+CC	libavformat/oggdec.o
+CC	libavformat/oggenc.o
+CC	libavformat/oggparsecelt.o
+CC	libavformat/oggparsedaala.o
+CC	libavformat/oggparsedirac.o
+CC	libavformat/oggparseflac.o
+CC	libavformat/oggparseogm.o
+CC	libavformat/oggparseopus.o
+CC	libavformat/oggparseskeleton.o
+CC	libavformat/oggparsespeex.o
+CC	libavformat/oggparsetheora.o
+CC	libavformat/oggparsevorbis.o
+CC	libavformat/oggparsevp8.o
+CC	libavformat/oma.o
+CC	libavformat/omadec.o
+CC	libavformat/omaenc.o
+CC	libavformat/options.o
+CC	libavformat/os_support.o
+CC	libavformat/paf.o
+CC	libavformat/pcm.o
+CC	libavformat/pcmdec.o
+CC	libavformat/pcmenc.o
+CC	libavformat/pjsdec.o
+CC	libavformat/pmpdec.o
+CC	libavformat/prompeg.o
+CC	libavformat/protocols.o
+libavformat/protocols.c: In function 'avio_enum_protocols':
+libavformat/protocols.c:100:7: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     p = p ? p + 1 : url_protocols;
+       ^
+CC	libavformat/psxstr.o
+CC	libavformat/pva.o
+CC	libavformat/pvfdec.o
+CC	libavformat/qcp.o
+CC	libavformat/qtpalette.o
+CC	libavformat/r3d.o
+CC	libavformat/rawdec.o
+CC	libavformat/rawenc.o
+CC	libavformat/rawutils.o
+CC	libavformat/rawvideodec.o
+CC	libavformat/rdt.o
+CC	libavformat/realtextdec.o
+CC	libavformat/redspark.o
+CC	libavformat/replaygain.o
+CC	libavformat/riff.o
+CC	libavformat/riffdec.o
+CC	libavformat/riffenc.o
+CC	libavformat/rl2.o
+CC	libavformat/rm.o
+CC	libavformat/rmdec.o
+CC	libavformat/rmenc.o
+CC	libavformat/rmsipr.o
+CC	libavformat/rpl.o
+CC	libavformat/rsd.o
+CC	libavformat/rso.o
+CC	libavformat/rsodec.o
+CC	libavformat/rsoenc.o
+CC	libavformat/rtmphttp.o
+CC	libavformat/rtmppkt.o
+CC	libavformat/rtmpproto.o
+CC	libavformat/rtp.o
+CC	libavformat/rtpdec.o
+CC	libavformat/rtpdec_ac3.o
+CC	libavformat/rtpdec_amr.o
+CC	libavformat/rtpdec_asf.o
+CC	libavformat/rtpdec_dv.o
+CC	libavformat/rtpdec_g726.o
+CC	libavformat/rtpdec_h261.o
+CC	libavformat/rtpdec_h263.o
+CC	libavformat/rtpdec_h263_rfc2190.o
+CC	libavformat/rtpdec_h264.o
+CC	libavformat/rtpdec_hevc.o
+CC	libavformat/rtpdec_ilbc.o
+CC	libavformat/rtpdec_jpeg.o
+CC	libavformat/rtpdec_latm.o
+CC	libavformat/rtpdec_mpa_robust.o
+CC	libavformat/rtpdec_mpeg12.o
+CC	libavformat/rtpdec_mpeg4.o
+CC	libavformat/rtpdec_mpegts.o
+CC	libavformat/rtpdec_qcelp.o
+CC	libavformat/rtpdec_qdm2.o
+CC	libavformat/rtpdec_qt.o
+CC	libavformat/rtpdec_rfc4175.o
+CC	libavformat/rtpdec_svq3.o
+CC	libavformat/rtpdec_vc2hq.o
+CC	libavformat/rtpdec_vp8.o
+CC	libavformat/rtpdec_vp9.o
+CC	libavformat/rtpdec_xiph.o
+CC	libavformat/rtpenc.o
+CC	libavformat/rtpenc_aac.o
+CC	libavformat/rtpenc_amr.o
+CC	libavformat/rtpenc_chain.o
+CC	libavformat/rtpenc_h261.o
+CC	libavformat/rtpenc_h263.o
+CC	libavformat/rtpenc_h263_rfc2190.o
+CC	libavformat/rtpenc_h264_hevc.o
+CC	libavformat/rtpenc_jpeg.o
+CC	libavformat/rtpenc_latm.o
+CC	libavformat/rtpenc_mpegts.o
+CC	libavformat/rtpenc_mpv.o
+CC	libavformat/rtpenc_vc2hq.o
+CC	libavformat/rtpenc_vp8.o
+CC	libavformat/rtpenc_vp9.o
+CC	libavformat/rtpenc_xiph.o
+CC	libavformat/rtpproto.o
+CC	libavformat/rtsp.o
+libavformat/rtsp.c: In function 'rtp_read_header':
+libavformat/rtsp.c:2480:32: warning: '%s' directive output may be truncated writing up to 499 bytes into a region of size 486 [-Wformat-truncation=]
+              "v=0\r\nc=IN IP%d %s\r\nm=%s %d RTP/AVP %d\r\n",
+                                ^~
+              addr.ss_family == AF_INET ? 4 : 6, host,
+                                                 ~~~~
+libavformat/rtsp.c:2480:14: note: directive argument in the range [0, 127]
+              "v=0\r\nc=IN IP%d %s\r\nm=%s %d RTP/AVP %d\r\n",
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/rtsp.c:2479:5: note: 'snprintf' output between 38 and 555 bytes into a destination of size 500
+     snprintf(sdp, sizeof(sdp),
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+              "v=0\r\nc=IN IP%d %s\r\nm=%s %d RTP/AVP %d\r\n",
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              addr.ss_family == AF_INET ? 4 : 6, host,
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              par->codec_type == AVMEDIA_TYPE_DATA  ? "application" :
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              par->codec_type == AVMEDIA_TYPE_VIDEO ? "video" : "audio",
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              port, payload_type);
+              ~~~~~~~~~~~~~~~~~~~
+libavformat/rtsp.c: In function 'ff_rtsp_make_setup_request':
+libavformat/rtsp.c:1530:30: warning: '%s' directive output may be truncated writing up to 2047 bytes into a region of size 2037 [-Wformat-truncation=]
+                  "Transport: %s\r\n",
+                              ^~
+                  transport);
+                  ~~~~~~~~~    
+libavformat/rtsp.c:1529:9: note: 'snprintf' output between 14 and 2061 bytes into a destination of size 2048
+         snprintf(cmd, sizeof(cmd),
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                  "Transport: %s\r\n",
+                  ~~~~~~~~~~~~~~~~~~~~
+                  transport);
+                  ~~~~~~~~~~
+CC	libavformat/rtspdec.o
+libavformat/rtspdec.c: In function 'rtsp_read_packet':
+libavformat/rtspdec.c:831:40: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size 1011 [-Wformat-truncation=]
+                          "Unsubscribe: %s\r\n",
+                                        ^~
+libavformat/rtspdec.c:830:17: note: 'snprintf' output between 16 and 1039 bytes into a destination of size 1024
+                 snprintf(cmd, sizeof(cmd),
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                          "Unsubscribe: %s\r\n",
+                          ~~~~~~~~~~~~~~~~~~~~~~
+                          rt->last_subscription);
+                          ~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/rtspenc.o
+CC	libavformat/s337m.o
+CC	libavformat/samidec.o
+CC	libavformat/sapdec.o
+CC	libavformat/sapenc.o
+CC	libavformat/sauce.o
+CC	libavformat/sbgdec.o
+CC	libavformat/sccdec.o
+CC	libavformat/sccenc.o
+CC	libavformat/sdp.o
+libavformat/sdp.c: In function 'sdp_write_media_attributes':
+libavformat/sdp.c:700:13: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+             if (st->codec) {
+             ^~
+In file included from libavformat/sdp.c:29:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/sdp.c:704:17: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+                 if (st->codec->flags & AV_CODEC_FLAG_QSCALE)
+                 ^~
+In file included from libavformat/sdp.c:29:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/sdp.c:706:17: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+                 else if (!av_opt_get_int(st->codec, "vad", AV_OPT_FLAG_ENCODING_PARAM, &vad_option) && vad_option)
+                 ^~~~
+In file included from libavformat/sdp.c:29:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+CC	libavformat/sdr2.o
+CC	libavformat/sdsdec.o
+CC	libavformat/sdxdec.o
+CC	libavformat/segafilm.o
+CC	libavformat/segment.o
+CC	libavformat/shortendec.o
+CC	libavformat/sierravmd.o
+CC	libavformat/siff.o
+CC	libavformat/smacker.o
+CC	libavformat/smjpeg.o
+CC	libavformat/smjpegdec.o
+CC	libavformat/smjpegenc.o
+CC	libavformat/smoothstreamingenc.o
+libavformat/smoothstreamingenc.c: In function 'write_manifest':
+libavformat/smoothstreamingenc.c:224:45: warning: '/Manifest' directive output may be truncated writing 9 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+     snprintf(filename, sizeof(filename), "%s/Manifest", s->filename);
+                                             ^~~~~~~~~
+libavformat/smoothstreamingenc.c:224:5: note: 'snprintf' output between 10 and 1033 bytes into a destination of size 1024
+     snprintf(filename, sizeof(filename), "%s/Manifest", s->filename);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c:225:55: warning: '/Manifest.tmp' directive output may be truncated writing 13 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+     snprintf(temp_filename, sizeof(temp_filename), "%s/Manifest.tmp", s->filename);
+                                                       ^~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c:225:5: note: 'snprintf' output between 14 and 1037 bytes into a destination of size 1024
+     snprintf(temp_filename, sizeof(temp_filename), "%s/Manifest.tmp", s->filename);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c: In function 'ism_flush':
+libavformat/smoothstreamingenc.c:528:49: warning: '/temp' directive output may be truncated writing 5 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(filename, sizeof(filename), "%s/temp", os->dirname);
+                                                 ^~~~~
+libavformat/smoothstreamingenc.c:528:9: note: 'snprintf' output between 6 and 1029 bytes into a destination of size 1024
+         snprintf(filename, sizeof(filename), "%s/temp", os->dirname);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c:544:63: warning: '/FragmentInfo(' directive output may be truncated writing 14 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(header_filename, sizeof(header_filename), "%s/FragmentInfo(%s=%"PRIu64")", os->dirname, os->stream_type_tag, start_ts);
+                                                               ^~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c:544:9: note: 'snprintf' output 18 or more bytes (assuming 1041) into a destination of size 1024
+         snprintf(header_filename, sizeof(header_filename), "%s/FragmentInfo(%s=%"PRIu64")", os->dirname, os->stream_type_tag, start_ts);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c:545:63: warning: '/Fragments(' directive output may be truncated writing 11 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(target_filename, sizeof(target_filename), "%s/Fragments(%s=%"PRIu64")", os->dirname, os->stream_type_tag, start_ts);
+                                                               ^~~~~~~~~~~
+libavformat/smoothstreamingenc.c:545:9: note: 'snprintf' output 15 or more bytes (assuming 1038) into a destination of size 1024
+         snprintf(target_filename, sizeof(target_filename), "%s/Fragments(%s=%"PRIu64")", os->dirname, os->stream_type_tag, start_ts);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c: In function 'ism_write_trailer':
+libavformat/smoothstreamingenc.c:612:49: warning: '/Manifest' directive output may be truncated writing 9 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(filename, sizeof(filename), "%s/Manifest", s->filename);
+                                                 ^~~~~~~~~
+libavformat/smoothstreamingenc.c:612:9: note: 'snprintf' output between 10 and 1033 bytes into a destination of size 1024
+         snprintf(filename, sizeof(filename), "%s/Manifest", s->filename);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c: In function 'ism_write_header':
+libavformat/smoothstreamingenc.c:327:55: warning: '/QualityLevels(' directive output may be truncated writing 15 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+         snprintf(os->dirname, sizeof(os->dirname), "%s/QualityLevels(%"PRId64")", s->filename, s->streams[i]->codecpar->bit_rate);
+                                                       ^~~~~~~~~~~~~~~
+libavformat/smoothstreamingenc.c:327:9: note: 'snprintf' output between 18 and 1060 bytes into a destination of size 1024
+         snprintf(os->dirname, sizeof(os->dirname), "%s/QualityLevels(%"PRId64")", s->filename, s->streams[i]->codecpar->bit_rate);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavformat/smush.o
+CC	libavformat/sol.o
+CC	libavformat/soxdec.o
+CC	libavformat/soxenc.o
+CC	libavformat/spdif.o
+CC	libavformat/spdifdec.o
+CC	libavformat/spdifenc.o
+CC	libavformat/srtdec.o
+CC	libavformat/srtenc.o
+CC	libavformat/srtp.o
+CC	libavformat/srtpproto.o
+CC	libavformat/stldec.o
+CC	libavformat/subfile.o
+CC	libavformat/subtitles.o
+CC	libavformat/subviewer1dec.o
+CC	libavformat/subviewerdec.o
+CC	libavformat/supdec.o
+CC	libavformat/supenc.o
+CC	libavformat/svag.o
+CC	libavformat/swf.o
+CC	libavformat/swfdec.o
+CC	libavformat/swfenc.o
+CC	libavformat/takdec.o
+CC	libavformat/tcp.o
+CC	libavformat/tedcaptionsdec.o
+CC	libavformat/tee.o
+CC	libavformat/tee_common.o
+CC	libavformat/teeproto.o
+CC	libavformat/thp.o
+CC	libavformat/tiertexseq.o
+CC	libavformat/tls.o
+CC	libavformat/tls_gnutls.o
+CC	libavformat/tmv.o
+CC	libavformat/tta.o
+CC	libavformat/ttaenc.o
+CC	libavformat/tty.o
+CC	libavformat/txd.o
+CC	libavformat/udp.o
+CC	libavformat/uncodedframecrcenc.o
+CC	libavformat/unix.o
+CC	libavformat/url.o
+CC	libavformat/urldecode.o
+CC	libavformat/utils.o
+libavformat/utils.c: In function 'avformat_transfer_internal_stream_timing_info':
+libavformat/utils.c:5535:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     const AVCodecContext *dec_ctx = ist->codec;
+     ^~~~~
+In file included from libavformat/audiointerleave.h:27,
+                 from libavformat/utils.c:43:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+libavformat/utils.c:5536:5: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+     AVCodecContext       *enc_ctx = ost->codec;
+     ^~~~~~~~~~~~~~
+In file included from libavformat/audiointerleave.h:27,
+                 from libavformat/utils.c:43:
+libavformat/avformat.h:893:21: note: declared here
+     AVCodecContext *codec;
+                     ^~~~~
+CC	libavformat/v210.o
+CC	libavformat/vag.o
+CC	libavformat/vc1dec.o
+CC	libavformat/vc1test.o
+CC	libavformat/vc1testenc.o
+CC	libavformat/vivo.o
+CC	libavformat/voc.o
+CC	libavformat/voc_packet.o
+CC	libavformat/vocdec.o
+CC	libavformat/vocenc.o
+CC	libavformat/vorbiscomment.o
+CC	libavformat/vpcc.o
+CC	libavformat/vpk.o
+CC	libavformat/vplayerdec.o
+CC	libavformat/vqf.o
+CC	libavformat/w64.o
+CC	libavformat/wavdec.o
+CC	libavformat/wavenc.o
+CC	libavformat/wc3movie.o
+CC	libavformat/webm_chunk.o
+CC	libavformat/webmdashenc.o
+CC	libavformat/webpenc.o
+CC	libavformat/webvttdec.o
+CC	libavformat/webvttenc.o
+CC	libavformat/westwood_aud.o
+CC	libavformat/westwood_vqa.o
+CC	libavformat/wsddec.o
+CC	libavformat/wtv_common.o
+CC	libavformat/wtvdec.o
+CC	libavformat/wtvenc.o
+CC	libavformat/wv.o
+CC	libavformat/wvdec.o
+CC	libavformat/wvedec.o
+CC	libavformat/wvenc.o
+CC	libavformat/xa.o
+CC	libavformat/xmv.o
+CC	libavformat/xvag.o
+CC	libavformat/xwma.o
+CC	libavformat/yop.o
+CC	libavformat/yuv4mpegdec.o
+CC	libavformat/yuv4mpegenc.o
+GEN	libavformat/libavformat.ver
+CC	libavcodec/012v.o
+CC	libavcodec/4xm.o
+CC	libavcodec/8bps.o
+CC	libavcodec/8svx.o
+CC	libavcodec/a64multienc.o
+CC	libavcodec/aac_ac3_parser.o
+CC	libavcodec/aac_adtstoasc_bsf.o
+CC	libavcodec/aac_parser.o
+CC	libavcodec/aacadtsdec.o
+CC	libavcodec/aaccoder.o
+CC	libavcodec/aacdec.o
+CC	libavcodec/aacdec_fixed.o
+CC	libavcodec/aacenc.o
+CC	libavcodec/aacenc_is.o
+CC	libavcodec/aacenc_ltp.o
+CC	libavcodec/aacenc_pred.o
+CC	libavcodec/aacenc_tns.o
+CC	libavcodec/aacenctab.o
+CC	libavcodec/aacps_fixed.o
+CC	libavcodec/aacps_float.o
+CC	libavcodec/aacpsdsp_fixed.o
+CC	libavcodec/aacpsdsp_float.o
+CC	libavcodec/aacpsy.o
+CC	libavcodec/aacsbr.o
+CC	libavcodec/aacsbr_fixed.o
+CC	libavcodec/aactab.o
+CC	libavcodec/aandcttab.o
+CC	libavcodec/aasc.o
+CC	libavcodec/ac3.o
+CC	libavcodec/ac3_parser.o
+CC	libavcodec/ac3dec_data.o
+CC	libavcodec/ac3dec_fixed.o
+CC	libavcodec/ac3dec_float.o
+CC	libavcodec/ac3dsp.o
+CC	libavcodec/ac3enc.o
+CC	libavcodec/ac3enc_fixed.o
+CC	libavcodec/ac3enc_float.o
+CC	libavcodec/ac3tab.o
+CC	libavcodec/acelp_filters.o
+CC	libavcodec/acelp_pitch_delay.o
+CC	libavcodec/acelp_vectors.o
+CC	libavcodec/adpcm.o
+CC	libavcodec/adpcm_data.o
+CC	libavcodec/adpcmenc.o
+CC	libavcodec/adx.o
+CC	libavcodec/adx_parser.o
+CC	libavcodec/adxdec.o
+CC	libavcodec/adxenc.o
+CC	libavcodec/aic.o
+CC	libavcodec/alac.o
+CC	libavcodec/alac_data.o
+CC	libavcodec/alacdsp.o
+CC	libavcodec/alacenc.o
+CC	libavcodec/aliaspixdec.o
+CC	libavcodec/aliaspixenc.o
+CC	libavcodec/allcodecs.o
+CC	libavcodec/alsdec.o
+CC	libavcodec/amrnbdec.o
+CC	libavcodec/amrwbdec.o
+CC	libavcodec/anm.o
+CC	libavcodec/ansi.o
+CC	libavcodec/apedec.o
+CC	libavcodec/ass.o
+CC	libavcodec/ass_split.o
+CC	libavcodec/assdec.o
+CC	libavcodec/assenc.o
+CC	libavcodec/asv.o
+CC	libavcodec/asvdec.o
+CC	libavcodec/asvenc.o
+CC	libavcodec/atrac.o
+CC	libavcodec/atrac1.o
+CC	libavcodec/atrac3.o
+CC	libavcodec/atrac3plus.o
+CC	libavcodec/atrac3plusdec.o
+CC	libavcodec/atrac3plusdsp.o
+CC	libavcodec/audio_frame_queue.o
+CC	libavcodec/audioconvert.o
+CC	libavcodec/audiodsp.o
+CC	libavcodec/aura.o
+CC	libavcodec/avdct.o
+CC	libavcodec/avfft.o
+CC	libavcodec/avpacket.o
+CC	libavcodec/avpicture.o
+CC	libavcodec/avrndec.o
+libavcodec/avrndec.c: In function 'init':
+libavcodec/avrndec.c:59:9: warning: 'refcounted_frames' is deprecated [-Wdeprecated-declarations]
+         a->mjpeg_avctx->refcounted_frames = 1;
+         ^
+In file included from libavcodec/avrndec.c:22:
+libavcodec/avcodec.h:2694:9: note: declared here
+     int refcounted_frames;
+         ^~~~~~~~~~~~~~~~~
+libavcodec/avrndec.c: In function 'decode_frame':
+libavcodec/avrndec.c:110:9: warning: 'avcodec_decode_video2' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_decode_video2(a->mjpeg_avctx, data, got_frame, avpkt);
+         ^~~
+In file included from libavcodec/avrndec.c:22:
+libavcodec/avcodec.h:4993:5: note: declared here
+ int avcodec_decode_video2(AVCodecContext *avctx, AVFrame *picture,
+     ^~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/avs.o
+CC	libavcodec/avuidec.o
+CC	libavcodec/avuienc.o
+CC	libavcodec/bethsoftvideo.o
+CC	libavcodec/bfi.o
+CC	libavcodec/bgmc.o
+CC	libavcodec/bink.o
+CC	libavcodec/binkaudio.o
+CC	libavcodec/binkdsp.o
+CC	libavcodec/bintext.o
+CC	libavcodec/bitpacked.o
+CC	libavcodec/bitstream.o
+CC	libavcodec/bitstream_filter.o
+libavcodec/bitstream_filter.c: In function 'av_bitstream_filter_next':
+libavcodec/bitstream_filter.c:39:12: warning: return discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     return av_bsf_next(&opaque);
+            ^~~~~~~~~~~~~~~~~~~~
+libavcodec/bitstream_filter.c: In function 'av_bitstream_filter_filter':
+libavcodec/bitstream_filter.c:134:14: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     pkt.data = buf;
+              ^
+CC	libavcodec/bitstream_filters.o
+CC	libavcodec/blockdsp.o
+CC	libavcodec/bmp.o
+CC	libavcodec/bmp_parser.o
+CC	libavcodec/bmpenc.o
+CC	libavcodec/bmvaudio.o
+CC	libavcodec/bmvvideo.o
+CC	libavcodec/brenderpix.o
+CC	libavcodec/bsf.o
+CC	libavcodec/bswapdsp.o
+CC	libavcodec/c93.o
+CC	libavcodec/cabac.o
+CC	libavcodec/canopus.o
+CC	libavcodec/cavs.o
+CC	libavcodec/cavs_parser.o
+CC	libavcodec/cavsdata.o
+CC	libavcodec/cavsdec.o
+CC	libavcodec/cavsdsp.o
+CC	libavcodec/cbrt_data.o
+CC	libavcodec/cbrt_data_fixed.o
+CC	libavcodec/ccaption_dec.o
+CC	libavcodec/cdgraphics.o
+CC	libavcodec/cdxl.o
+CC	libavcodec/celp_filters.o
+CC	libavcodec/celp_math.o
+CC	libavcodec/cfhd.o
+libavcodec/cfhd.c: In function 'alloc_buffers':
+libavcodec/cfhd.c:165:5: warning: 'avcodec_get_chroma_sub_sample' is deprecated [-Wdeprecated-declarations]
+     avcodec_get_chroma_sub_sample(avctx->pix_fmt, &s->chroma_x_shift, &s->chroma_y_shift);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libavcodec/cfhd.c:32:
+libavcodec/avcodec.h:5703:6: note: declared here
+ void avcodec_get_chroma_sub_sample(enum AVPixelFormat pix_fmt, int *h_shift, int *v_shift);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/cfhddata.o
+CC	libavcodec/cga_data.o
+CC	libavcodec/chomp_bsf.o
+CC	libavcodec/cinepak.o
+CC	libavcodec/cinepakenc.o
+CC	libavcodec/clearvideo.o
+CC	libavcodec/cljrdec.o
+CC	libavcodec/cljrenc.o
+CC	libavcodec/cllc.o
+CC	libavcodec/cngdec.o
+CC	libavcodec/cngenc.o
+CC	libavcodec/codec_desc.o
+CC	libavcodec/cook.o
+CC	libavcodec/cook_parser.o
+CC	libavcodec/cpia.o
+CC	libavcodec/cscd.o
+CC	libavcodec/cyuv.o
+CC	libavcodec/d3d11va.o
+CC	libavcodec/dca.o
+CC	libavcodec/dca_core.o
+CC	libavcodec/dca_core_bsf.o
+CC	libavcodec/dca_exss.o
+CC	libavcodec/dca_lbr.o
+CC	libavcodec/dca_parser.o
+CC	libavcodec/dca_xll.o
+CC	libavcodec/dcaadpcm.o
+CC	libavcodec/dcadata.o
+CC	libavcodec/dcadct.o
+CC	libavcodec/dcadec.o
+CC	libavcodec/dcadsp.o
+CC	libavcodec/dcaenc.o
+CC	libavcodec/dcahuff.o
+CC	libavcodec/dct.o
+CC	libavcodec/dct32_fixed.o
+CC	libavcodec/dct32_float.o
+CC	libavcodec/dds.o
+CC	libavcodec/decode.o
+libavcodec/decode.c: In function 'compat_decode':
+libavcodec/decode.c:794:13: warning: 'refcounted_frames' is deprecated [-Wdeprecated-declarations]
+             if (!avctx->refcounted_frames) {
+             ^~
+In file included from libavcodec/decode.c:40:
+libavcodec/avcodec.h:2694:9: note: declared here
+     int refcounted_frames;
+         ^~~~~~~~~~~~~~~~~
+libavcodec/decode.c: In function 'avcodec_flush_buffers':
+libavcodec/decode.c:1748:5: warning: 'refcounted_frames' is deprecated [-Wdeprecated-declarations]
+     if (!avctx->refcounted_frames)
+     ^~
+In file included from libavcodec/decode.c:40:
+libavcodec/avcodec.h:2694:9: note: declared here
+     int refcounted_frames;
+         ^~~~~~~~~~~~~~~~~
+CC	libavcodec/dfa.o
+CC	libavcodec/dirac.o
+libavcodec/dirac.c: In function 'parse_source_parameters':
+libavcodec/dirac.c:272:5: warning: 'avcodec_get_chroma_sub_sample' is deprecated [-Wdeprecated-declarations]
+     avcodec_get_chroma_sub_sample(dsh->pix_fmt, &chroma_x_shift, &chroma_y_shift);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libavcodec/dirac.c:31:
+libavcodec/avcodec.h:5703:6: note: declared here
+ void avcodec_get_chroma_sub_sample(enum AVPixelFormat pix_fmt, int *h_shift, int *v_shift);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/dirac_arith.o
+CC	libavcodec/dirac_dwt.o
+CC	libavcodec/dirac_parser.o
+CC	libavcodec/dirac_vlc.o
+CC	libavcodec/diracdec.o
+libavcodec/diracdec.c: In function 'get_buffer_with_edge':
+libavcodec/diracdec.c:1930:5: warning: 'avcodec_get_chroma_sub_sample' is deprecated [-Wdeprecated-declarations]
+     avcodec_get_chroma_sub_sample(avctx->pix_fmt, &chroma_x_shift, &chroma_y_shift);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libavcodec/diracdec.c:30:
+libavcodec/avcodec.h:5703:6: note: declared here
+ void avcodec_get_chroma_sub_sample(enum AVPixelFormat pix_fmt, int *h_shift, int *v_shift);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libavcodec/diracdec.c: In function 'dirac_decode_data_unit':
+libavcodec/diracdec.c:2129:9: warning: 'avcodec_get_chroma_sub_sample' is deprecated [-Wdeprecated-declarations]
+         avcodec_get_chroma_sub_sample(avctx->pix_fmt, &s->chroma_x_shift, &s->chroma_y_shift);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libavcodec/diracdec.c:30:
+libavcodec/avcodec.h:5703:6: note: declared here
+ void avcodec_get_chroma_sub_sample(enum AVPixelFormat pix_fmt, int *h_shift, int *v_shift);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/diracdsp.o
+CC	libavcodec/diractab.o
+CC	libavcodec/dnxhd_parser.o
+CC	libavcodec/dnxhddata.o
+CC	libavcodec/dnxhddec.o
+CC	libavcodec/dnxhdenc.o
+CC	libavcodec/dolby_e.o
+CC	libavcodec/dpcm.o
+CC	libavcodec/dpx.o
+CC	libavcodec/dpx_parser.o
+CC	libavcodec/dpxenc.o
+CC	libavcodec/dsd.o
+CC	libavcodec/dsddec.o
+CC	libavcodec/dsicinaudio.o
+CC	libavcodec/dsicinvideo.o
+CC	libavcodec/dss_sp.o
+CC	libavcodec/dstdec.o
+CC	libavcodec/dump_extradata_bsf.o
+CC	libavcodec/dv.o
+CC	libavcodec/dv_profile.o
+CC	libavcodec/dvaudio_parser.o
+CC	libavcodec/dvaudiodec.o
+CC	libavcodec/dvbsub.o
+CC	libavcodec/dvbsub_parser.o
+CC	libavcodec/dvbsubdec.o
+CC	libavcodec/dvd_nav_parser.o
+CC	libavcodec/dvdata.o
+CC	libavcodec/dvdec.o
+CC	libavcodec/dvdsub_parser.o
+CC	libavcodec/dvdsubdec.o
+CC	libavcodec/dvdsubenc.o
+CC	libavcodec/dvenc.o
+CC	libavcodec/dxa.o
+CC	libavcodec/dxtory.o
+CC	libavcodec/dxv.o
+CC	libavcodec/eac3_data.o
+CC	libavcodec/eac3enc.o
+CC	libavcodec/eacmv.o
+CC	libavcodec/eaidct.o
+CC	libavcodec/eamad.o
+CC	libavcodec/eatgq.o
+CC	libavcodec/eatgv.o
+CC	libavcodec/eatqi.o
+CC	libavcodec/elbg.o
+CC	libavcodec/elsdec.o
+CC	libavcodec/encode.o
+libavcodec/encode.c: In function 'do_encode':
+libavcodec/encode.c:378:9: warning: 'avcodec_encode_video2' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_encode_video2(avctx, avctx->internal->buffer_pkt,
+         ^~~
+libavcodec/encode.c:267:25: note: declared here
+ int attribute_align_arg avcodec_encode_video2(AVCodecContext *avctx,
+                         ^~~~~~~~~~~~~~~~~~~~~
+libavcodec/encode.c:381:9: warning: 'avcodec_encode_audio2' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_encode_audio2(avctx, avctx->internal->buffer_pkt,
+         ^~~
+libavcodec/encode.c:118:25: note: declared here
+ int attribute_align_arg avcodec_encode_audio2(AVCodecContext *avctx,
+                         ^~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/error_resilience.o
+CC	libavcodec/escape124.o
+CC	libavcodec/escape130.o
+CC	libavcodec/evrcdec.o
+CC	libavcodec/exif.o
+CC	libavcodec/exr.o
+CC	libavcodec/exrdsp.o
+CC	libavcodec/extract_extradata_bsf.o
+CC	libavcodec/faandct.o
+CC	libavcodec/faanidct.o
+CC	libavcodec/faxcompr.o
+CC	libavcodec/fdctdsp.o
+CC	libavcodec/fft_fixed.o
+CC	libavcodec/fft_fixed_32.o
+CC	libavcodec/fft_float.o
+CC	libavcodec/fft_init_table.o
+CC	libavcodec/ffv1.o
+CC	libavcodec/ffv1dec.o
+CC	libavcodec/ffv1enc.o
+libavcodec/ffv1enc.c: In function 'encode_init':
+libavcodec/ffv1enc.c:757:5: warning: 'avcodec_get_chroma_sub_sample' is deprecated [-Wdeprecated-declarations]
+     avcodec_get_chroma_sub_sample(avctx->pix_fmt, &s->chroma_h_shift, &s->chroma_v_shift);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libavcodec/ffv1enc.c:36:
+libavcodec/avcodec.h:5703:6: note: declared here
+ void avcodec_get_chroma_sub_sample(enum AVPixelFormat pix_fmt, int *h_shift, int *v_shift);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/ffwavesynth.o
+CC	libavcodec/fic.o
+CC	libavcodec/fits.o
+CC	libavcodec/fitsdec.o
+CC	libavcodec/fitsenc.o
+CC	libavcodec/flac.o
+CC	libavcodec/flac_parser.o
+CC	libavcodec/flacdata.o
+CC	libavcodec/flacdec.o
+CC	libavcodec/flacdsp.o
+CC	libavcodec/flacenc.o
+CC	libavcodec/flashsv.o
+CC	libavcodec/flashsv2enc.o
+CC	libavcodec/flashsvenc.o
+CC	libavcodec/flicvideo.o
+CC	libavcodec/flvdec.o
+CC	libavcodec/flvenc.o
+CC	libavcodec/fmtconvert.o
+CC	libavcodec/fmvc.o
+CC	libavcodec/frame_thread_encoder.o
+libavcodec/frame_thread_encoder.c: In function 'worker':
+libavcodec/frame_thread_encoder.c:89:9: warning: 'avcodec_encode_video2' is deprecated [-Wdeprecated-declarations]
+         ret = avcodec_encode_video2(avctx, pkt, frame, &got_packet);
+         ^~~
+In file included from libavcodec/frame_thread_encoder.h:24,
+                 from libavcodec/frame_thread_encoder.c:23:
+libavcodec/avcodec.h:5508:5: note: declared here
+ int avcodec_encode_video2(AVCodecContext *avctx, AVPacket *avpkt,
+     ^~~~~~~~~~~~~~~~~~~~~
+libavcodec/frame_thread_encoder.c:95:13: warning: 'av_dup_packet' is deprecated [-Wdeprecated-declarations]
+             int ret2 = av_dup_packet(pkt);
+             ^~~
+In file included from libavcodec/frame_thread_encoder.h:24,
+                 from libavcodec/frame_thread_encoder.c:23:
+libavcodec/avcodec.h:4621:5: note: declared here
+ int av_dup_packet(AVPacket *pkt);
+     ^~~~~~~~~~~~~
+CC	libavcodec/fraps.o
+CC	libavcodec/frwu.o
+CC	libavcodec/g2meet.o
+CC	libavcodec/g722.o
+CC	libavcodec/g722dec.o
+CC	libavcodec/g722dsp.o
+CC	libavcodec/g722enc.o
+CC	libavcodec/g723_1.o
+CC	libavcodec/g723_1dec.o
+CC	libavcodec/g723_1enc.o
+CC	libavcodec/g726.o
+CC	libavcodec/g729_parser.o
+CC	libavcodec/g729dec.o
+CC	libavcodec/g729postfilter.o
+CC	libavcodec/gdv.o
+CC	libavcodec/gif.o
+CC	libavcodec/gifdec.o
+CC	libavcodec/golomb.o
+CC	libavcodec/gsm_parser.o
+CC	libavcodec/gsmdec.o
+CC	libavcodec/gsmdec_data.o
+CC	libavcodec/h261.o
+CC	libavcodec/h261_parser.o
+CC	libavcodec/h261data.o
+CC	libavcodec/h261dec.o
+CC	libavcodec/h261enc.o
+CC	libavcodec/h263.o
+CC	libavcodec/h263_parser.o
+CC	libavcodec/h263data.o
+CC	libavcodec/h263dec.o
+CC	libavcodec/h263dsp.o
+CC	libavcodec/h2645_parse.o
+CC	libavcodec/h264_cabac.o
+CC	libavcodec/h264_cavlc.o
+CC	libavcodec/h264_direct.o
+CC	libavcodec/h264_loopfilter.o
+CC	libavcodec/h264_mb.o
+CC	libavcodec/h264_mp4toannexb_bsf.o
+CC	libavcodec/h264_parse.o
+CC	libavcodec/h264_parser.o
+CC	libavcodec/h264_picture.o
+CC	libavcodec/h264_ps.o
+CC	libavcodec/h264_refs.o
+CC	libavcodec/h264_sei.o
+CC	libavcodec/h264_slice.o
+CC	libavcodec/h264chroma.o
+CC	libavcodec/h264data.o
+CC	libavcodec/h264dec.o
+CC	libavcodec/h264dsp.o
+CC	libavcodec/h264idct.o
+CC	libavcodec/h264pred.o
+CC	libavcodec/h264qpel.o
+CC	libavcodec/hap.o
+CC	libavcodec/hapdec.o
+CC	libavcodec/hevc_cabac.o
+CC	libavcodec/hevc_data.o
+CC	libavcodec/hevc_filter.o
+CC	libavcodec/hevc_mp4toannexb_bsf.o
+CC	libavcodec/hevc_mvs.o
+CC	libavcodec/hevc_parse.o
+CC	libavcodec/hevc_parser.o
+CC	libavcodec/hevc_ps.o
+CC	libavcodec/hevc_refs.o
+CC	libavcodec/hevc_sei.o
+CC	libavcodec/hevcdec.o
+CC	libavcodec/hevcdsp.o
+CC	libavcodec/hevcpred.o
+CC	libavcodec/hnm4video.o
+CC	libavcodec/hpeldsp.o
+CC	libavcodec/hq_hqa.o
+CC	libavcodec/hq_hqadata.o
+CC	libavcodec/hq_hqadsp.o
+CC	libavcodec/hqx.o
+CC	libavcodec/hqxdsp.o
+CC	libavcodec/hqxvlc.o
+CC	libavcodec/htmlsubtitles.o
+CC	libavcodec/huffman.o
+CC	libavcodec/huffyuv.o
+CC	libavcodec/huffyuvdec.o
+CC	libavcodec/huffyuvdsp.o
+CC	libavcodec/huffyuvenc.o
+CC	libavcodec/huffyuvencdsp.o
+CC	libavcodec/idcinvideo.o
+CC	libavcodec/idctdsp.o
+CC	libavcodec/iff.o
+CC	libavcodec/iirfilter.o
+CC	libavcodec/imc.o
+CC	libavcodec/imgconvert.o
+CC	libavcodec/imx_dump_header_bsf.o
+CC	libavcodec/indeo2.o
+CC	libavcodec/indeo3.o
+CC	libavcodec/indeo4.o
+CC	libavcodec/indeo5.o
+CC	libavcodec/intelh263dec.o
+CC	libavcodec/interplayacm.o
+CC	libavcodec/interplayvideo.o
+CC	libavcodec/intrax8.o
+CC	libavcodec/intrax8dsp.o
+CC	libavcodec/ituh263dec.o
+CC	libavcodec/ituh263enc.o
+CC	libavcodec/ivi.o
+CC	libavcodec/ivi_dsp.o
+CC	libavcodec/j2kenc.o
+libavcodec/j2kenc.c: In function 'j2kenc_init':
+libavcodec/j2kenc.c:1154:9: warning: 'avcodec_get_chroma_sub_sample' is deprecated [-Wdeprecated-declarations]
+         avcodec_get_chroma_sub_sample(avctx->pix_fmt,
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libavcodec/j2kenc.c:67:
+libavcodec/avcodec.h:5703:6: note: declared here
+ void avcodec_get_chroma_sub_sample(enum AVPixelFormat pix_fmt, int *h_shift, int *v_shift);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CC	libavcodec/jacosubdec.o
+CC	libavcodec/jfdctfst.o
+CC	libavcodec/jfdctint.o
+CC	libavcodec/jni.o
+CC	libavcodec/jpeg2000.o
+CC	libavcodec/jpeg2000dec.o
+CC	libavcodec/jpeg2000dsp.o
+CC	libavcodec/jpeg2000dwt.o
+CC	libavcodec/jpegls.o
+CC	libavcodec/jpeglsdec.o
+CC	libavcodec/jpeglsenc.o
+CC	libavcodec/jpegtables.o
+CC	libavcodec/jrevdct.o
+CC	libavcodec/jvdec.o
+CC	libavcodec/kbdwin.o
+CC	libavcodec/kgv1dec.o
+CC	libavcodec/kmvc.o
+CC	libavcodec/lagarith.o
+CC	libavcodec/lagarithrac.o
+CC	libavcodec/latm_parser.o
+CC	libavcodec/lcldec.o
+CC	libavcodec/lclenc.o
+CC	libavcodec/libfdk-aacdec.o
+CC	libavcodec/libfdk-aacenc.o
+libavcodec/libfdk-aacenc.c: In function 'aac_encode_init':
+libavcodec/libfdk-aacenc.c:289:35: error: 'AACENC_InfoStruct' {aka 'struct <anonymous>'} has no member named 'encoderDelay'; did you mean 'nDelay'?
+     avctx->initial_padding = info.encoderDelay;
+                                   ^~~~~~~~~~~~
+                                   nDelay
+make: *** [ffbuild/common.mak:60: libavcodec/libfdk-aacenc.o] Error 1
+=======> ERROR: Building '/usr/ports/contrib/ffmpeg3/ffmpeg3#3.4.2-1.pkg.tar.xz' failed.

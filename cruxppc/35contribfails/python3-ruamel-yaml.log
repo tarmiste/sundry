@@ -1,0 +1,49 @@
+prt-get: installing /usr/ports/contrib/python3-ruamel-yaml
+prt-get: starting build Sun Dec  6 05:05:14 2020
+=======> Building '/usr/ports/contrib/python3-ruamel-yaml/python3-ruamel-yaml#0.16.12-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/contrib/python3-ruamel-yaml/work/src -xf /sources/ruamel.yaml-0.16.12.tar.gz
++ build
++ cd ruamel.yaml-0.16.12
++ RUAMEL_NO_PIP_INSTALL_CHECK=False
++ /usr/bin/python3 setup.py build
+sys.argv ['setup.py', 'build']
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/ruamel
+copying .ruamel/__init__.py -> build/lib/ruamel
+creating build/lib/ruamel/yaml
+copying ./parser.py -> build/lib/ruamel/yaml
+copying ./nodes.py -> build/lib/ruamel/yaml
+copying ./scalarint.py -> build/lib/ruamel/yaml
+copying ./reader.py -> build/lib/ruamel/yaml
+copying ./anchor.py -> build/lib/ruamel/yaml
+copying ./scalarfloat.py -> build/lib/ruamel/yaml
+copying ./util.py -> build/lib/ruamel/yaml
+copying ./serializer.py -> build/lib/ruamel/yaml
+copying ./error.py -> build/lib/ruamel/yaml
+copying ./configobjwalker.py -> build/lib/ruamel/yaml
+copying ./comments.py -> build/lib/ruamel/yaml
+copying ./resolver.py -> build/lib/ruamel/yaml
+copying ./loader.py -> build/lib/ruamel/yaml
+copying ./constructor.py -> build/lib/ruamel/yaml
+copying ./dumper.py -> build/lib/ruamel/yaml
+copying ./scalarstring.py -> build/lib/ruamel/yaml
+copying ./timestamp.py -> build/lib/ruamel/yaml
+copying ./__init__.py -> build/lib/ruamel/yaml
+copying ./scalarbool.py -> build/lib/ruamel/yaml
+copying ./scanner.py -> build/lib/ruamel/yaml
+copying ./composer.py -> build/lib/ruamel/yaml
+copying ./tokens.py -> build/lib/ruamel/yaml
+copying ./emitter.py -> build/lib/ruamel/yaml
+copying ./compat.py -> build/lib/ruamel/yaml
+copying ./main.py -> build/lib/ruamel/yaml
+copying ./cyaml.py -> build/lib/ruamel/yaml
+copying ./events.py -> build/lib/ruamel/yaml
+copying ./representer.py -> build/lib/ruamel/yaml
+copying ./LICENSE -> build/lib/ruamel/yaml
+copying ./py.typed -> build/lib/ruamel/yaml
++ /usr/bin/python3 setup.py install --root=/usr/ports/contrib/python3-ruamel-yaml/work/pkg --optimize=1 --skip-build
+error: you have to install with "pip install ."
+=======> ERROR: Building '/usr/ports/contrib/python3-ruamel-yaml/python3-ruamel-yaml#0.16.12-1.pkg.tar.xz' failed.
